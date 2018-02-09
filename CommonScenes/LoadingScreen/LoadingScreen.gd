@@ -1,0 +1,64 @@
+extends CanvasLayer
+
+# I learned this in this link 
+# http://docs.godotengine.org/en/stable/learning/features/misc/background_loading.html
+
+var animation
+var progress_bar
+
+var loader
+var animation_loaded = false
+var time_max = 100 #msec
+
+func _ready():
+	animation = self.get_node("AnimationPlayer")
+	progress_bar = self.get_node("ColorFrame/TextureProgress")
+	pass
+
+func load_screen(path):
+	loader = ResourceLoader.load_interactive(path)
+	if loader == null:
+#		show_error()
+		return
+	
+	set_process(true)
+	animation.play("fade_in")
+
+func _process(delta):
+	if loader == null:
+		set_process(false)
+		return
+	
+	var t = OS.get_ticks_msec()
+	while OS.get_ticks_msec() < t + time_max and animation_loaded:
+		# poll your loader
+		var err = loader.poll()
+		
+		if err == ERR_FILE_EOF: # load finished
+			var resource = loader.get_resource()
+			loader = null
+			set_new_scene(resource)
+			break
+		elif err == OK:
+			update_progress()
+		else: # error during loading
+			show_error()
+			loader = null
+			break
+
+func update_progress():
+	var progress = (float(loader.get_stage()) / loader.get_stage_count())*100
+	# update your progress bar?
+	progress_bar.set_value(progress)
+
+
+func set_new_scene(scene_resource):
+	progress_bar.set_value(100)
+	
+	get_tree().change_scene_to(scene_resource)
+	
+	animation.play_backwards("fade_in")
+	animation_loaded = false
+
+func animation_ready():
+	animation_loaded = true
