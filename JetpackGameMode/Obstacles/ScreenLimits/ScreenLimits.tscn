@@ -1,19 +1,11 @@
 [gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Looper.gd" type="Script" id=1]
+[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/LimitWaves.tscn" type="PackedScene" id=2]
 
-[sub_resource type="SpriteFrames" id=1]
+[node name="ScreenLimits" type="StaticBody2D"]
 
-animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "waves",
-"speed": 60.0
-} ]
-
-[node name="BottomTentacles0" type="StaticBody2D"]
-
-transform/pos = Vector2( 0, 38 )
+transform/pos = Vector2( 140, 0 )
 input/pickable = false
 collision/layers = 1
 collision/mask = 1
@@ -25,11 +17,16 @@ script/script = ExtResource( 1 )
 
 [node name="EndPoint" type="Position2D" parent="."]
 
-transform/pos = Vector2( 1920, 1080 )
+transform/pos = Vector2( 1975, 0 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="LimitWaves" parent="." instance=ExtResource( 2 )]
 
-frames = SubResource( 1 )
-animation = "waves"
+[node name="LimitWaves1" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 790, 0 )
+
+[node name="LimitWaves2" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 1580, 0 )
 
 

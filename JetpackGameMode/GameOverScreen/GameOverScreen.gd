@@ -1,6 +1,10 @@
 extends Node2D
 
 var replay_btn
+var options_btn
+
+var last_focus
+
 var current_scene
 var score
 var label_score
@@ -8,9 +12,13 @@ var highscore
 var label_highscore
 var congratulations
 
+var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+
 
 func _ready():
 	replay_btn = self.get_node("Replay")
+	options_btn = self.get_node("Options")
+	
 	label_score = self.get_node("Score")
 	label_highscore = self.get_node("Highscore")
 	congratulations = self.get_node("HighscoreText")
@@ -59,3 +67,8 @@ func print_score(points, label):
 		points_str = str(points)
 	label.set_text(points_str)
 
+func _on_options_pressed():
+	var path = options_path
+	last_focus = options_btn.get_path()
+	
+	ScreenManager.load_above(path, last_focus, self)

@@ -10,10 +10,39 @@ var loader
 var animation_loaded = false
 var time_max = 100 #msec
 
+var scene_above
+
+var scene_below
+var previous_focus
+
 func _ready():
 	animation = self.get_node("AnimationPlayer")
 	progress_bar = self.get_node("ColorFrame/TextureProgress")
 	pass
+
+func load_above(path, focus_path, origin_scene):
+	if scene_above != null:
+		print("ERROR | Scene Above is not null")
+		return
+	
+	scene_below = origin_scene
+	previous_focus = focus_path
+	
+	scene_above = load(path).instance()
+	
+	get_tree().get_root().add_child(scene_above)
+	#scene_above.set_pos(scene_below.get_global_pos())
+
+func clear_above():
+	if scene_above == null:
+		print("ERROR | Scene Above is null")
+		return
+	
+	get_tree().get_root().remove_child(scene_above)
+	scene_above = null
+	
+	scene_below.get_node(previous_focus).grab_focus()
+	previous_focus = null
 
 func load_screen(path):
 	loader = ResourceLoader.load_interactive(path)

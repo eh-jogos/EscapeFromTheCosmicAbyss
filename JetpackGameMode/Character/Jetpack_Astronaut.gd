@@ -1,9 +1,8 @@
 extends KinematicBody2D
 
 # class member variables go here, for example:
-var bullet = preload("res://JetpackGameMode/Character/Bullet.tscn")
+var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 var bullet_spawn
-var bullet_layer
 
 var game
 var jet_particles
@@ -11,13 +10,16 @@ var overheat_bar
 var overheat_bar_animator
 var points_label
 var ammunition
-var animator
+var body_animator
+var arms_animator
 
 var points = 0
 
 var overheated = false
 var dashing = false
 var is_dead = false
+var falling = true
+var shooting = false
 
 const MAX_SPEED_X = 15.0
 var speed_x = 8.0
@@ -31,7 +33,6 @@ var unit = Vector2(97.0,89.0)
 var gravity_force = 40.0*unit.y
 var jetpack_force = -90.0*unit.y
 
-
 var speed = Vector2(0, 0)
 
 func _ready():
@@ -43,10 +44,14 @@ func _ready():
 	points_label = self.get_node("..").get_node("HUD/Points")
 	ammunition = self.get_node("..").get_node("HUD/TextureProgress/Ammunition")
 	
-	animator = self.get_node("AnimationPlayer")
+	body_animator = self.get_node("BodyAnimator")
+	arms_animator = self.get_node("ArmsAnimator")
 	bullet_spawn = self.get_node("BulletSpawn")
-	bullet_layer = self.get_node("..").get_node("Bullets")
 	
+	falling = true
+	body_animator.play("falling")
+	if not shooting:
+		arms_animator.play("falling")
 	
 	overheat_bar_animator.play("base")
 	
@@ -74,7 +79,14 @@ func _fixed_process(delta):
 	
 	if Input.is_action_pressed("boost") and not overheated:
 		jet_particles.set_emitting(true)
+		if falling: 
+			falling = false
+			body_animator.play("fall_to_rise")
+			if not shooting:
+				arms_animator.play("fall_to_rise")
+		
 		speed.y += jetpack_force*delta
+		
 		
 		heat += 2.3
 		if heat >= 100:
@@ -91,7 +103,7 @@ func _fixed_process(delta):
 		dashing = true
 		
 		speed.x = (10*unit.x)+(dash_force*delta)
-		print(speed.x)
+		#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
 		speed.y = 0
 		
 		heat += 25
@@ -119,7 +131,13 @@ func _fixed_process(delta):
 	game.set_overheat(heat)
 	
 	speed.y = clamp(speed.y, speed_y, gravity)
-#	print(speed.y)
+	#print(speed.y)
+	
+	if speed.y > 0 and not falling:
+		falling = true
+		body_animator.play("rise_to_fall")
+		if not shooting:
+			arms_animator.play("rise_to_fall")
 	
 	var motion = speed * delta
 	#print("Motion: %s"%[motion])
@@ -129,15 +147,15 @@ func _fixed_process(delta):
 	if self.is_colliding():
 		var collider = get_collider()
 		#print(collider.get_name())
-		if collider.is_in_group("pipes") and not is_dead:
+		if collider.is_in_group("enemy") and not is_dead:
 			is_dead = true
 			game.game_over = true
 			set_fixed_process(false)
 			set_process_input(false)
 			self.hide()
 			
-			var offset_y = self.get_pos().y - collider.get_pos().y
-			collider.emit_signal("kill_player", offset_y)
+			var offset = self.get_global_pos()
+			collider.kill_player(offset)
 #			queue_free()
 			pass
 		else: 
@@ -146,14 +164,36 @@ func _fixed_process(delta):
 			motion = self.move(motion)
 
 func _input(event):
-	if event.is_action_pressed("shoot") and ammunition.use_ammo():
+	if event.is_action_pressed("shoot") and ammunition.use_ammo() and not shooting:
 		#game.dash_score()
+		shooting = true
 		
+		arms_animator.play("shooting")
 		
-		var spawn_point = bullet_spawn.get_global_pos()
 		var new_bullet = bullet.instance()
+		bullet_spawn.add_child(new_bullet)
 		
-		new_bullet.set_pos(spawn_point)
-		bullet_layer.add_child(new_bullet)
-		
+		if not new_bullet.is_connected("laser_end",self, "stop_shooting"):
+			new_bullet.connect("laser_end", self, "stop_shooting")
 
+func stop_shooting():
+	shooting = false
+	arms_animator.play("reloading")
+	yield(arms_animator,"finished")
+	var current_anim = body_animator.get_current_animation()
+	var current_anim_pos = body_animator.get_current_animation_pos()
+	
+	arms_animator.set_current_animation(current_anim)
+	arms_animator.seek(current_anim_pos)
+	if not arms_animator.is_active():
+		arms_animator.set_active(true)
+
+func rise_to_fall():
+	body_animator.play("falling")
+	if not shooting:
+		arms_animator.play("falling")
+
+func fall_to_rise():
+	body_animator.play("rising")
+	if not shooting:
+		arms_animator.play("rising")

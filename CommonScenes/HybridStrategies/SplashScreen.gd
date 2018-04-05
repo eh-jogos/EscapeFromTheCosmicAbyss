@@ -1,6 +1,6 @@
 extends ColorFrame
 
-var next_screen_path = "res://JetpackGameMode/JetpackGame.tscn"
+var next_screen_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
 func _ready():
 	# Called every time the node is added to the scene.

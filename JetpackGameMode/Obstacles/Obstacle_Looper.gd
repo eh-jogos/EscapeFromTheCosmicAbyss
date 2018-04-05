@@ -1,13 +1,8 @@
-extends StaticBody2D
+extends Node2D
 
 var end_point
 var game
 var camera
-
-signal reset
-signal scored
-signal kill_player
-signal die
 
 func _ready():
 	end_point = self.get_node("EndPoint")
@@ -27,9 +22,4 @@ func _process(delta):
 #		print("Move Sprite!")
 		var new_pos = Vector2(self.get_pos().x + (2*(790+790+790)), self.get_pos().y)
 		self.set_pos(new_pos)
-		emit_signal("reset")
 	pass
-
-
-func _on_player_killed():
-	game.game_over()

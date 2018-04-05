@@ -2,12 +2,19 @@ extends Node2D
 
 # class member variables go here, for example:
 var resume_btn
+var options_btn
+
+var last_focus
+
 var current_scene
 var tutorial_screen
+var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 
 func _ready():
 	resume_btn = self.get_node("Resume")
 	resume_btn.grab_focus()
+	
+	options_btn = self.get_node("Options")
 	
 	current_scene = get_tree().get_root().get_node("JetpackGame")
 	tutorial_screen = current_scene.get_node("AboveScreen/TutorialScreen")
@@ -47,5 +54,10 @@ func _on_quit_pressed():
 func _on_tutorial_pressed():
 	tutorial_screen.play()
 	tutorial_screen.is_paused = true 
-	pass # replace with function body
 
+
+func _on_options_pressed():
+	var path = options_path
+	last_focus = options_btn.get_path()
+	
+	ScreenManager.load_above(path, last_focus, self)

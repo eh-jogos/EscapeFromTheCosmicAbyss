@@ -140,6 +140,7 @@ max_lines_visible = -1
 
 [node name="HighscoreText" type="Label" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
 material/material = SubResource( 3 )
 rect/scale = Vector2( 0.5, 0.5 )
@@ -245,7 +246,9 @@ max_lines_visible = -1
 
 [node name="Replay" type="Button" parent="."]
 
+focus_neighbour/left = NodePath("../Quit")
 focus_neighbour/right = NodePath("../Quit")
+focus_neighbour/bottom = NodePath("../Options")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -270,6 +273,8 @@ script/script = ExtResource( 4 )
 [node name="Quit" type="Button" parent="."]
 
 focus_neighbour/left = NodePath("../Replay")
+focus_neighbour/right = NodePath("../Replay")
+focus_neighbour/bottom = NodePath("../Options")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -291,8 +296,37 @@ text = "Quit"
 flat = false
 script/script = ExtResource( 4 )
 
+[node name="Options" type="Button" parent="."]
+
+focus_neighbour/left = NodePath("../Replay")
+focus_neighbour/top = NodePath("../Replay")
+focus_neighbour/right = NodePath("../Quit")
+focus_neighbour/bottom = NodePath("../Quit")
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 845.0
+margin/top = 949.0
+margin/right = 1075.0
+margin/bottom = 1028.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_hover = Color( 0, 0.960784, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Options"
+flat = false
+script/script = ExtResource( 4 )
+
 [connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 
 
