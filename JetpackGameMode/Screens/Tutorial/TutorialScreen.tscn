@@ -1,183 +1,212 @@
-[gd_scene load_steps=147 format=1]
+[gd_scene load_steps=152 format=1]
 
 [ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=4]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001642.png" type="Texture" id=5]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001644.png" type="Texture" id=6]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001646.png" type="Texture" id=7]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001648.png" type="Texture" id=8]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001650.png" type="Texture" id=9]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001652.png" type="Texture" id=10]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001654.png" type="Texture" id=11]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001656.png" type="Texture" id=12]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001658.png" type="Texture" id=13]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001660.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001662.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001664.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001666.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001668.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001670.png" type="Texture" id=19]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001672.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001674.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001676.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001678.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001680.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001682.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001684.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001686.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001688.png" type="Texture" id=28]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001690.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001692.png" type="Texture" id=30]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001694.png" type="Texture" id=31]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001696.png" type="Texture" id=32]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001343.png" type="Texture" id=33]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001345.png" type="Texture" id=34]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001347.png" type="Texture" id=35]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001349.png" type="Texture" id=36]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001351.png" type="Texture" id=37]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001353.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001355.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001357.png" type="Texture" id=40]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001359.png" type="Texture" id=41]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001361.png" type="Texture" id=42]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001363.png" type="Texture" id=43]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001365.png" type="Texture" id=44]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001367.png" type="Texture" id=45]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001369.png" type="Texture" id=46]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001371.png" type="Texture" id=47]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001373.png" type="Texture" id=48]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001375.png" type="Texture" id=49]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001377.png" type="Texture" id=50]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001379.png" type="Texture" id=51]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001381.png" type="Texture" id=52]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001383.png" type="Texture" id=53]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001385.png" type="Texture" id=54]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001387.png" type="Texture" id=55]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001389.png" type="Texture" id=56]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001391.png" type="Texture" id=57]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001393.png" type="Texture" id=58]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001395.png" type="Texture" id=59]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001397.png" type="Texture" id=60]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001399.png" type="Texture" id=61]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001401.png" type="Texture" id=62]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001403.png" type="Texture" id=63]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001405.png" type="Texture" id=64]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001407.png" type="Texture" id=65]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001409.png" type="Texture" id=66]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001411.png" type="Texture" id=67]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001413.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001415.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001417.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001419.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001421.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001423.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001425.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001427.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001429.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001431.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001433.png" type="Texture" id=78]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001435.png" type="Texture" id=79]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001437.png" type="Texture" id=80]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001439.png" type="Texture" id=81]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001441.png" type="Texture" id=82]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001443.png" type="Texture" id=83]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001445.png" type="Texture" id=84]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001447.png" type="Texture" id=85]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001449.png" type="Texture" id=86]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001451.png" type="Texture" id=87]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001453.png" type="Texture" id=88]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001455.png" type="Texture" id=89]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001457.png" type="Texture" id=90]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001459.png" type="Texture" id=91]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001461.png" type="Texture" id=92]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001463.png" type="Texture" id=93]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001465.png" type="Texture" id=94]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001467.png" type="Texture" id=95]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001469.png" type="Texture" id=96]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001471.png" type="Texture" id=97]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001473.png" type="Texture" id=98]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001475.png" type="Texture" id=99]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001477.png" type="Texture" id=100]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001479.png" type="Texture" id=101]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001481.png" type="Texture" id=102]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001483.png" type="Texture" id=103]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001485.png" type="Texture" id=104]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001487.png" type="Texture" id=105]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001489.png" type="Texture" id=106]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001491.png" type="Texture" id=107]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001493.png" type="Texture" id=108]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001495.png" type="Texture" id=109]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001497.png" type="Texture" id=110]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001499.png" type="Texture" id=111]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001501.png" type="Texture" id=112]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001503.png" type="Texture" id=113]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001505.png" type="Texture" id=114]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001507.png" type="Texture" id=115]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001509.png" type="Texture" id=116]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001511.png" type="Texture" id=117]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001513.png" type="Texture" id=118]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001515.png" type="Texture" id=119]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001517.png" type="Texture" id=120]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001519.png" type="Texture" id=121]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001521.png" type="Texture" id=122]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001523.png" type="Texture" id=123]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001525.png" type="Texture" id=124]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001527.png" type="Texture" id=125]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001529.png" type="Texture" id=126]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001531.png" type="Texture" id=127]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001533.png" type="Texture" id=128]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001535.png" type="Texture" id=129]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001537.png" type="Texture" id=130]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001539.png" type="Texture" id=131]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001541.png" type="Texture" id=132]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001543.png" type="Texture" id=133]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=134]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=135]
-[ext_resource path="res://JetpackGameMode/HUD/Ammo.tscn" type="PackedScene" id=136]
+[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=3]
+[ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=4]
+[ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=7]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001642.png" type="Texture" id=8]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001644.png" type="Texture" id=9]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001646.png" type="Texture" id=10]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001648.png" type="Texture" id=11]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001650.png" type="Texture" id=12]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001652.png" type="Texture" id=13]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001654.png" type="Texture" id=14]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001656.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001658.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001660.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001662.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001664.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001666.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001668.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001670.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001672.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001674.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001676.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001678.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001680.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001682.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001684.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001686.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001688.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001690.png" type="Texture" id=32]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001692.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001694.png" type="Texture" id=34]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Dashing/00001696.png" type="Texture" id=35]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001343.png" type="Texture" id=36]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001345.png" type="Texture" id=37]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001347.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001349.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001351.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001353.png" type="Texture" id=41]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001355.png" type="Texture" id=42]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001357.png" type="Texture" id=43]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001359.png" type="Texture" id=44]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001361.png" type="Texture" id=45]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001363.png" type="Texture" id=46]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001365.png" type="Texture" id=47]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001367.png" type="Texture" id=48]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001369.png" type="Texture" id=49]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001371.png" type="Texture" id=50]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001373.png" type="Texture" id=51]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001375.png" type="Texture" id=52]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001377.png" type="Texture" id=53]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001379.png" type="Texture" id=54]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001381.png" type="Texture" id=55]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001383.png" type="Texture" id=56]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001385.png" type="Texture" id=57]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001387.png" type="Texture" id=58]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001389.png" type="Texture" id=59]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001391.png" type="Texture" id=60]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001393.png" type="Texture" id=61]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001395.png" type="Texture" id=62]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001397.png" type="Texture" id=63]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001399.png" type="Texture" id=64]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001401.png" type="Texture" id=65]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001403.png" type="Texture" id=66]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001405.png" type="Texture" id=67]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001407.png" type="Texture" id=68]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001409.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001411.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001413.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001415.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001417.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001419.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001421.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001423.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001425.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001427.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001429.png" type="Texture" id=79]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001431.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001433.png" type="Texture" id=81]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001435.png" type="Texture" id=82]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001437.png" type="Texture" id=83]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001439.png" type="Texture" id=84]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001441.png" type="Texture" id=85]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001443.png" type="Texture" id=86]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001445.png" type="Texture" id=87]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001447.png" type="Texture" id=88]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001449.png" type="Texture" id=89]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001451.png" type="Texture" id=90]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001453.png" type="Texture" id=91]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001455.png" type="Texture" id=92]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001457.png" type="Texture" id=93]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001459.png" type="Texture" id=94]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001461.png" type="Texture" id=95]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001463.png" type="Texture" id=96]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001465.png" type="Texture" id=97]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001467.png" type="Texture" id=98]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001469.png" type="Texture" id=99]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001471.png" type="Texture" id=100]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001473.png" type="Texture" id=101]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001475.png" type="Texture" id=102]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001477.png" type="Texture" id=103]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001479.png" type="Texture" id=104]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001481.png" type="Texture" id=105]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001483.png" type="Texture" id=106]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001485.png" type="Texture" id=107]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001487.png" type="Texture" id=108]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001489.png" type="Texture" id=109]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001491.png" type="Texture" id=110]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001493.png" type="Texture" id=111]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001495.png" type="Texture" id=112]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001497.png" type="Texture" id=113]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001499.png" type="Texture" id=114]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001501.png" type="Texture" id=115]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001503.png" type="Texture" id=116]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001505.png" type="Texture" id=117]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001507.png" type="Texture" id=118]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001509.png" type="Texture" id=119]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001511.png" type="Texture" id=120]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001513.png" type="Texture" id=121]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001515.png" type="Texture" id=122]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001517.png" type="Texture" id=123]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001519.png" type="Texture" id=124]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001521.png" type="Texture" id=125]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001523.png" type="Texture" id=126]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001525.png" type="Texture" id=127]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001527.png" type="Texture" id=128]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001529.png" type="Texture" id=129]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001531.png" type="Texture" id=130]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001533.png" type="Texture" id=131]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001535.png" type="Texture" id=132]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001537.png" type="Texture" id=133]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001539.png" type="Texture" id=134]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001541.png" type="Texture" id=135]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/Flying/00001543.png" type="Texture" id=136]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=137]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=138]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=139]
+[ext_resource path="res://JetpackGameMode/HUD/Ammo.tscn" type="PackedScene" id=140]
 
-[sub_resource type="StyleBoxFlat" id=1]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-bg_color = Color( 0.25098, 0.0901961, 0.454902, 1 )
-light_color = Color( 0, 0.960784, 1, 1 )
-dark_color = Color( 0.25098, 0.0901961, 0.454902, 1 )
-border_size = 0
-border_blend = false
-draw_bg = true
-
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxTexture" id=16]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-bg_color = Color( 1, 0.227451, 0.172549, 1 )
-light_color = Color( 0, 0.960784, 1, 1 )
-dark_color = Color( 0.25098, 0.0901961, 0.454902, 1 )
-border_size = 0
-border_blend = false
-draw_bg = true
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="StyleBoxTexture" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 4 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=17]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 5 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="SpriteFrames" id=18]
 
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "dashing",
 "speed": 30.0
 }, {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ) ],
 "loop": true,
 "name": "flying",
 "speed": 30.0
 } ]
 
-[sub_resource type="CanvasItemShaderGraph" id=4]
+[sub_resource type="CanvasItemShaderGraph" id=19]
 
 _code = {
 "fragment": "uniform color Color=vec4(1,1,1,1);
@@ -195,13 +224,13 @@ _data = {
 "shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 721, 35 ), null, null, [ 0, 2, 0 ], 1, 0, Vector2( 138, 43 ), null, null, [  ], 2, 28, Vector2( 416, 34 ), "Color", Color( 1, 1, 1, 1 ), [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=20]
 
-shader/shader = SubResource( 4 )
+shader/shader = SubResource( 19 )
 shader/shading_mode = 0
 shader_param/Color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=11]
 
 length = 0.1
 loop = false
@@ -217,7 +246,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=12]
 
 length = 0.3
 loop = false
@@ -233,7 +262,7 @@ tracks/0/keys = {
 "values": [ Color( 0.25098, 0.0901961, 0.454902, 1 ), Color( 1, 0.227451, 0.172549, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=13]
 
 length = 0.3
 loop = false
@@ -249,9 +278,8 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.25098, 0.0901961, 0.454902, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=14]
 
-resource/name = "overheat_cooloff"
 length = 4.0
 loop = true
 step = 0.1
@@ -287,9 +315,8 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=15]
 
-resource/name = "ammo_cicle"
 length = 3.0
 loop = true
 step = 0.1
@@ -389,30 +416,30 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
 margin/left = 824.0
 margin/top = 920.0
 margin/right = 1097.0
 margin/bottom = 999.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_hover = Color( 0, 0.960784, 1, 1 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 17 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Close Tutorial"
 flat = false
-script/script = ExtResource( 4 )
+script/script = ExtResource( 7 )
 
 [node name="TutorialGifs" type="AnimatedSprite" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 275.279, 430.444 )
-frames = SubResource( 3 )
+frames = SubResource( 18 )
 animation = "flying"
-frame = 100
+frame = 76
 playing = true
 
 [node name="TutorialText" type="Label" parent="TutorialGifs"]
@@ -425,7 +452,7 @@ margin/left = -194.0
 margin/top = 222.0
 margin/right = 192.0
 margin/bottom = 447.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "Press the \"up arrow\" 
 or \"w\" key to use 
 your jetpack and 
@@ -439,9 +466,9 @@ max_lines_visible = -1
 [node name="TutorialGifs1" type="AnimatedSprite" parent="."]
 
 transform/pos = Vector2( 731.222, 430.444 )
-frames = SubResource( 3 )
+frames = SubResource( 18 )
 animation = "dashing"
-frame = 8
+frame = 14
 playing = true
 
 [node name="TutorialText1" type="Label" parent="TutorialGifs1"]
@@ -454,7 +481,7 @@ margin/left = -192.0
 margin/top = 222.0
 margin/right = 195.0
 margin/bottom = 447.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "Press the \"right arrow\" 
 or \"d\" key to dash! 
 Avoid Tentacles to 
@@ -480,7 +507,7 @@ margin/left = -57.0
 margin/top = 294.0
 margin/right = 347.0
 margin/bottom = 651.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "But be carefull not to 
 overheat your jetpack!
 You can only dash while
@@ -506,7 +533,7 @@ margin/left = 44.0
 margin/top = 88.0
 margin/right = 152.0
 margin/bottom = 125.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "Score:"
 percent_visible = 1.0
 lines_skipped = 0
@@ -522,7 +549,7 @@ margin/left = 160.0
 margin/top = 88.0
 margin/right = 260.0
 margin/bottom = 125.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -530,7 +557,7 @@ max_lines_visible = -1
 
 [node name="TextureProgress" type="TextureProgress" parent="HUD"]
 
-material/material = SubResource( 5 )
+material/material = SubResource( 20 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -547,8 +574,8 @@ range/value = 0.0
 range/exp_edit = false
 range/rounded = false
 texture/under = null
-texture/over = ExtResource( 134 )
-texture/progress = ExtResource( 135 )
+texture/over = ExtResource( 138 )
+texture/progress = ExtResource( 139 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
@@ -557,9 +584,9 @@ radial_fill/center_offset = Vector2( 0, 0 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 6 )
-anims/overheated = SubResource( 7 )
-anims/undashable = SubResource( 8 )
+anims/base = SubResource( 11 )
+anims/overheated = SubResource( 12 )
+anims/undashable = SubResource( 13 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -570,7 +597,7 @@ autoplay = ""
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/overheat_cooloff = SubResource( 9 )
+anims/overheat_cooloff = SubResource( 14 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -591,7 +618,7 @@ margin/left = -65.0
 margin/top = 216.0
 margin/right = 367.0
 margin/bottom = 573.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "Every five points you gain
 ammunition for your laser 
 bean. With it you can 
@@ -613,7 +640,7 @@ margin/left = 44.0
 margin/top = 88.0
 margin/right = 152.0
 margin/bottom = 125.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "Score:"
 percent_visible = 1.0
 lines_skipped = 0
@@ -629,7 +656,7 @@ margin/left = 160.0
 margin/top = 88.0
 margin/right = 260.0
 margin/bottom = 125.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 137 )
 text = "0006"
 percent_visible = 1.0
 lines_skipped = 0
@@ -653,8 +680,8 @@ range/value = 26.0544
 range/exp_edit = false
 range/rounded = false
 texture/under = null
-texture/over = ExtResource( 134 )
-texture/progress = ExtResource( 135 )
+texture/over = ExtResource( 138 )
+texture/progress = ExtResource( 139 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
@@ -664,7 +691,7 @@ radial_fill/center_offset = Vector2( 0, 0 )
 
 transform/pos = Vector2( 8, 77 )
 
-[node name="Ammo" parent="HUD2/TextureProgress/Ammunition/AmmoSlot1" instance=ExtResource( 136 )]
+[node name="Ammo" parent="HUD2/TextureProgress/Ammunition/AmmoSlot1" instance=ExtResource( 140 )]
 
 editor/display_folded = true
 visibility/visible = false
@@ -673,7 +700,7 @@ visibility/visible = false
 
 transform/pos = Vector2( 30, 77 )
 
-[node name="Ammo1" parent="HUD2/TextureProgress/Ammunition/AmmoSlot2" instance=ExtResource( 136 )]
+[node name="Ammo1" parent="HUD2/TextureProgress/Ammunition/AmmoSlot2" instance=ExtResource( 140 )]
 
 visibility/visible = false
 
@@ -682,7 +709,7 @@ visibility/visible = false
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/ammo_cicle = SubResource( 10 )
+anims/ammo_cicle = SubResource( 15 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]

@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=4]
+[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=4]
+[ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=5]
+[ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=6]
+[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=8]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -75,31 +79,56 @@ tracks/1/keys = {
 "values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxTexture" id=5]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-bg_color = Color( 0.25098, 0.0901961, 0.454902, 1 )
-light_color = Color( 0, 0.960784, 1, 1 )
-dark_color = Color( 0.25098, 0.0901961, 0.454902, 1 )
-border_size = 0
-border_blend = false
-draw_bg = true
+texture = ExtResource( 5 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxTexture" id=6]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
-bg_color = Color( 1, 0.227451, 0.172549, 1 )
-light_color = Color( 0, 0.960784, 1, 1 )
-dark_color = Color( 0.25098, 0.0901961, 0.454902, 1 )
-border_size = 0
-border_blend = false
-draw_bg = true
+texture = ExtResource( 6 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="Animation" id=7]
+
+resource/name = "fade out"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
 
 [node name="GameOverScreen" type="Node2D"]
 
@@ -113,10 +142,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1920.0
-margin/bottom = 1080.0
+margin/left = 2.0
+margin/top = 2.0
+margin/right = 1922.0
+margin/bottom = 1082.0
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="GameOver" type="Label" parent="."]
@@ -127,9 +156,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 622.0
-margin/top = 323.0
+margin/top = 163.0
 margin/right = 1073.0
-margin/bottom = 409.0
+margin/bottom = 249.0
 custom_fonts/font = ExtResource( 2 )
 text = "Game Over"
 align = 1
@@ -149,9 +178,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 714.0
-margin/top = 501.0
+margin/top = 341.0
 margin/right = 1698.0
-margin/bottom = 587.0
+margin/bottom = 427.0
 custom_fonts/font = ExtResource( 2 )
 text = "IT'S A NEW HIGHSCORE!"
 align = 1
@@ -178,9 +207,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 859.0
-margin/top = 526.0
+margin/top = 366.0
 margin/right = 1061.0
-margin/bottom = 612.0
+margin/bottom = 452.0
 custom_fonts/font = ExtResource( 3 )
 text = "You Scored:"
 align = 1
@@ -196,9 +225,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 840.0
-margin/top = 578.0
+margin/top = 418.0
 margin/right = 1080.0
-margin/bottom = 664.0
+margin/bottom = 504.0
 custom_fonts/font = ExtResource( 2 )
 text = "0000"
 align = 1
@@ -214,9 +243,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 732.0
-margin/top = 660.0
+margin/top = 500.0
 margin/right = 1178.0
-margin/bottom = 746.0
+margin/bottom = 586.0
 custom_fonts/font = ExtResource( 3 )
 text = "Your Previous Highscore:"
 align = 1
@@ -233,9 +262,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 876.0
-margin/top = 725.0
+margin/top = 565.0
 margin/right = 1116.0
-margin/bottom = 811.0
+margin/bottom = 651.0
 custom_fonts/font = ExtResource( 2 )
 text = "0000"
 align = 1
@@ -244,15 +273,54 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="UpgradeText" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 732.0
+margin/top = 620.0
+margin/right = 1178.0
+margin/bottom = 706.0
+custom_fonts/font = ExtResource( 3 )
+text = "Your Upgrade Points:"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="UpgradePoints" type="Label" parent="."]
+
+rect/scale = Vector2( 0.7, 0.7 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 876.0
+margin/top = 689.0
+margin/right = 1116.0
+margin/bottom = 775.0
+custom_fonts/font = ExtResource( 2 )
+text = "00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="Replay" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Quit")
-focus_neighbour/right = NodePath("../Quit")
+focus_neighbour/left = NodePath("../Upgrade")
+focus_neighbour/top = NodePath("../Options")
+focus_neighbour/right = NodePath("../Upgrade")
 focus_neighbour/bottom = NodePath("../Options")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 4 )
 margin/left = 702.0
 margin/top = 845.0
 margin/right = 932.0
@@ -260,25 +328,26 @@ margin/bottom = 924.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_hover = Color( 0, 0.960784, 1, 1 )
-custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Play Again"
 flat = false
-script/script = ExtResource( 4 )
+script/script = ExtResource( 8 )
 
-[node name="Quit" type="Button" parent="."]
+[node name="Upgrade" type="Button" parent="."]
 
 focus_neighbour/left = NodePath("../Replay")
+focus_neighbour/top = NodePath("../Quit")
 focus_neighbour/right = NodePath("../Replay")
-focus_neighbour/bottom = NodePath("../Options")
+focus_neighbour/bottom = NodePath("../Quit")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 4 )
 margin/left = 979.0
 margin/top = 845.0
 margin/right = 1209.0
@@ -287,46 +356,85 @@ custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_hover = Color( 0, 0.960784, 1, 1 )
-custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Quit"
+text = "Upgrade"
 flat = false
-script/script = ExtResource( 4 )
+script/script = ExtResource( 8 )
 
 [node name="Options" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Replay")
+focus_neighbour/left = NodePath("../Quit")
 focus_neighbour/top = NodePath("../Replay")
 focus_neighbour/right = NodePath("../Quit")
-focus_neighbour/bottom = NodePath("../Quit")
+focus_neighbour/bottom = NodePath("../Replay")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 845.0
+theme/theme = ExtResource( 4 )
+margin/left = 702.0
 margin/top = 949.0
-margin/right = 1075.0
+margin/right = 932.0
 margin/bottom = 1028.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_hover = Color( 0, 0.960784, 1, 1 )
 custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Options"
 flat = false
-script/script = ExtResource( 4 )
+script/script = ExtResource( 8 )
+
+[node name="Quit" type="Button" parent="."]
+
+focus_neighbour/left = NodePath("../Options")
+focus_neighbour/top = NodePath("../Upgrade")
+focus_neighbour/right = NodePath("../Options")
+focus_neighbour/bottom = NodePath("../Upgrade")
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 4 )
+margin/left = 979.0
+margin/top = 949.0
+margin/right = 1209.0
+margin/bottom = 1028.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Quit"
+flat = false
+script/script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+"anims/fade out" = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 [connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
 
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]
 
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 
 

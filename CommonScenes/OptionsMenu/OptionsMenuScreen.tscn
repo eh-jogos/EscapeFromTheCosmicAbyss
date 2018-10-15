@@ -1,10 +1,16 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=21 format=1]
 
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://CommonScenes/OptionsMenu/Options Scripts/FullscreenOption.gd" type="Script" id=3]
-[ext_resource path="res://CommonScenes/OptionsMenu/png/arrow.png" type="Texture" id=4]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/blue_screen.png" type="Texture" id=2]
+[ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=3]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://CommonScenes/OptionsMenu/Options Scripts/FullscreenOption.gd" type="Script" id=5]
+[ext_resource path="res://CommonScenes/OptionsMenu/png/arrow.png" type="Texture" id=6]
+[ext_resource path="res://CommonScenes/OptionsMenu/Options Scripts/BGMOption.gd" type="Script" id=7]
+[ext_resource path="res://CommonScenes/OptionsMenu/Options Scripts/BGM_VolumeOption.gd" type="Script" id=8]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=9]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=10]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -135,6 +141,119 @@ tracks/3/keys = {
 "values": [ 0.0, 1.0 ]
 }
 
+[sub_resource type="Animation" id=8]
+
+length = 2.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScanlineFx/ScanlineBright:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1, 1.5 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.1, 0.6, 0.3, 0.7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScanlineFx/ScanlineBright:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 960, 390 ), Vector2( 960, 930 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScanlineFx/ScanlineBright:region_rect")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 1920, 80 ), Rect2( 0, 1000, 1920, 80 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScanlineFx/ScanlineBright:region")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource/name = "close"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorFrame1:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.7, 0.7, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScreenBase:region_rect")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.3, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 1920, 615 ), Rect2( 0, 0, 1920, 615 ), Rect2( 0, 0, 1920, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TopEdge:rect/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 352 ), Vector2( 0, 352 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BottomEdge:rect/pos")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 952 ), Vector2( 0, 952 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuContainer:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.9, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ScanlineFx:visibility/opacity")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
 [node name="OptionsMenuScreen" type="CanvasLayer"]
 
 process/pause_mode = 2
@@ -146,7 +265,7 @@ script/script = ExtResource( 1 )
 
 [node name="ColorFrame1" type="ColorFrame" parent="."]
 
-visibility/opacity = 0.7
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -157,32 +276,17 @@ margin/right = 1920.0
 margin/bottom = 1080.0
 color = Color( 0.247059, 0.054902, 0.156863, 1 )
 
-[node name="ColorFrame" type="ColorFrame" parent="."]
+[node name="ScreenBase" type="Sprite" parent="."]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 352.0
-margin/right = 1920.0
-margin/bottom = 967.0
-color = Color( 1, 1, 1, 1 )
-
-[node name="ColorFrame2" type="ColorFrame" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 362.0
-margin/right = 1920.0
-margin/bottom = 957.0
-color = Color( 0.247059, 0.054902, 0.156863, 1 )
+transform/pos = Vector2( 960, 660 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 0, 0, 1920, 0 )
 
 [node name="MenuContainer" type="Control" parent="."]
 
+editor/display_folded = true
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -194,15 +298,17 @@ margin/bottom = 896.0
 
 [node name="FullscreenOption" type="Button" parent="MenuContainer"]
 
-editor/display_folded = true
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
+focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../OptionsExit")
-focus_neighbour/bottom = NodePath("../OptionsExit")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath("../BGM")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
 margin/left = 0.0
 margin/top = 43.0
 margin/right = 171.0
@@ -212,7 +318,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -221,11 +327,11 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Fullscreen: --"
 flat = false
-script/script = ExtResource( 3 )
+script/script = ExtResource( 5 )
 
 [node name="RightArrow" type="TextureButton" parent="MenuContainer/FullscreenOption"]
 
-visibility/opacity = 0.13153
+visibility/opacity = 0.201062
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -237,13 +343,13 @@ margin/bottom = 41.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
 [node name="LeftArrow" type="TextureButton" parent="MenuContainer/FullscreenOption"]
 
-visibility/opacity = 0.13153
+visibility/opacity = 0.201062
 rect/scale = Vector2( -1, 1 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -256,7 +362,7 @@ margin/bottom = 41.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-textures/normal = ExtResource( 4 )
+textures/normal = ExtResource( 6 )
 params/resize_mode = 0
 params/stretch_mode = 0
 
@@ -272,15 +378,182 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="OptionsExit" type="Button" parent="MenuContainer"]
+[node name="BGM" type="Button" parent="MenuContainer"]
 
+anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
+focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../FullscreenOption")
-focus_neighbour/bottom = NodePath("../StoryMode")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath("../BGM_volume")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
+margin/left = 0.0
+margin/top = 143.0
+margin/right = 171.0
+margin/bottom = 186.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "BGM: --"
+flat = false
+script/script = ExtResource( 7 )
+
+[node name="RightArrow" type="TextureButton" parent="MenuContainer/BGM"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 338.0
+margin/top = 6.0
+margin/right = 356.0
+margin/bottom = 41.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="LeftArrow" type="TextureButton" parent="MenuContainer/BGM"]
+
+visibility/opacity = 0.0
+rect/scale = Vector2( -1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 6.0
+margin/right = 18.0
+margin/bottom = 41.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="ArrowAnimator" type="AnimationPlayer" parent="MenuContainer/BGM"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/disabled = SubResource( 6 )
+anims/enabled = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="BGM_volume" type="Button" parent="MenuContainer"]
+
+anchor/right = 1
+rect/scale = Vector2( 1.5, 1.5 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath("../BGM")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath("../OptionsExit")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
+margin/left = 0.0
+margin/top = 243.0
+margin/right = 171.0
+margin/bottom = 286.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "BGM Volume: --"
+flat = false
+script/script = ExtResource( 8 )
+
+[node name="RightArrow" type="TextureButton" parent="MenuContainer/BGM_volume"]
+
+visibility/opacity = 0.0
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 338.0
+margin/top = 6.0
+margin/right = 356.0
+margin/bottom = 41.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="LeftArrow" type="TextureButton" parent="MenuContainer/BGM_volume"]
+
+visibility/opacity = 0.0
+rect/scale = Vector2( -1, 1 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 6.0
+margin/right = 18.0
+margin/bottom = 41.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 6 )
+params/resize_mode = 0
+params/stretch_mode = 0
+
+[node name="ArrowAnimator" type="AnimationPlayer" parent="MenuContainer/BGM_volume"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/disabled = SubResource( 6 )
+anims/enabled = SubResource( 7 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+[node name="OptionsExit" type="Button" parent="MenuContainer"]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/top = NodePath("../BGM")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath("../FullscreenOption")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
 margin/left = 0.0
 margin/top = 389.0
 margin/right = 338.0
@@ -290,7 +563,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -299,7 +572,85 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Exit Options"
 flat = false
-script/script = ExtResource( 5 )
+script/script = ExtResource( 9 )
+
+[node name="ScanlineFx" type="Node2D" parent="."]
+
+editor/display_folded = true
+visibility/opacity = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
+
+visibility/blend_mode = 2
+transform/pos = Vector2( 960, 660 )
+texture = ExtResource( 10 )
+region = true
+region_rect = Rect2( 0, 0, 1920, 615 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
+
+visibility/opacity = 0.339222
+visibility/blend_mode = 1
+transform/pos = Vector2( 960, 673.237 )
+texture = ExtResource( 11 )
+region = true
+region_rect = Rect2( 0, 524.514, 1920, 80 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("../..")
+"anims/scanline loop" = SubResource( 8 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "scanline loop"
+
+[node name="TopEdge" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2220.0
+margin/top = 652.0
+margin/right = -300.0
+margin/bottom = 667.0
+color = Color( 0, 0.921569, 1, 1 )
+
+[node name="BottomEdge" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2220.0
+margin/top = 652.0
+margin/right = -300.0
+margin/bottom = 667.0
+color = Color( 0, 0.921569, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/close = SubResource( 9 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 [connection signal="pressed" from="MenuContainer/FullscreenOption/RightArrow" to="MenuContainer/FullscreenOption" method="change_screen_mode"]
 

@@ -1,32 +1,27 @@
 extends Node2D
 
 # class member variables go here, for example:
-var countdown
-var countdown_label
 var game
 
 func _ready():
-	countdown = self.get_node("CountdownTimer")
-	countdown_label = self.get_node("CountdownLabel")
-	
 	game = self.get_parent().get_parent()
 	pass
 
 func play():
 	self.show()
-	set_process(true)
-	countdown.start()
+	#SoundManager.stop_bgm()
+	game.set_game_state("Start")
+	game.initialize_game_stats()
+	set_process_input(true)
 
-func _process(delta):
-	var time_left = int(countdown.get_time_left())
-	if time_left > 0:
-		countdown_label.set_text(str(time_left))
-	else:
-		countdown_label.set_text("START!")
-
-func _on_timeout():
-	game.set_game_state(false)
-	self.get_tree().set_pause(false)
-	self.hide()
-	self.set_process(false)
-	pass # replace with function body
+func _input(event):
+	if event.is_action_pressed("boost"):
+		game.set_game_state("Playing")
+		self.get_tree().set_pause(false)
+		self.hide()
+		self.set_process_input(false)
+		
+		#SoundManager.reset_track()
+		#SoundManager.bgm_set_loop(true)
+		if not SoundManager.bgm_stream.is_playing():
+			SoundManager.play_bgm()

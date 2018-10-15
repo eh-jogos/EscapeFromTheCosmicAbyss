@@ -14,10 +14,12 @@ func _ready():
 	animator.play("fire")
 	
 	idle_timer = self.get_node("IdleTimer")
-	idle_duration = 1.5
 	
 	set_fixed_process(true)
 	pass
+
+func set_laser_duration(duration):
+	idle_duration = duration - 0.3 - 0.5
 
 func _fixed_process(delta):
 	if self.is_colliding():
@@ -25,14 +27,12 @@ func _fixed_process(delta):
 		print(collider.get_name())
 		if collider.is_in_group("pipes"):
 			print("Bullet HIT")
-			collider.
 			collider.emit_signal("die")
 
 
 func start_idle_timer():
 	#print("Bullet Idle")
 	animator.play("idle")
-	idle_duration = idle_duration - 0.3 - 0.5
 	idle_timer.set_wait_time(idle_duration)
 	idle_timer.start()
 

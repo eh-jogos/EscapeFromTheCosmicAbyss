@@ -1,19 +1,25 @@
 extends Node2D
 
-
+# preloaded scenes
 var ammo = preload("res://JetpackGameMode/HUD/Ammo.tscn")
 
-const TOTAL_SLOTS = 10
+# outer nodes
+var game
 
+#member variables
 var current_slot = 0
-var initial_ammo = 5
+
+# Limits
+const TOTAL_SLOTS = 10
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	pass
+
+func initialize_ammo(initial_ammo):
 	for x in range(0,initial_ammo):
 		add_ammo()
-	pass
 
 func add_ammo():
 	if current_slot >= TOTAL_SLOTS: return

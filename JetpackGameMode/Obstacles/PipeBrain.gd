@@ -78,6 +78,7 @@ func _on_kill_player(offset_y):
 	pass # replace with function body
 
 func _on_PipeTentacles_Die():
+	#print("Signal 'Die' Received")
 	animation.play("die")
 	pass # replace with function body
 

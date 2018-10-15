@@ -35,6 +35,7 @@ func _on_button_pressed(identifier):
 	elif identifier == "speedrun":
 		path = speedrun_path
 	
+	Global.set_game_mode(identifier)
 	ScreenManager.load_screen(path)
 
 func _on_options_pressed():

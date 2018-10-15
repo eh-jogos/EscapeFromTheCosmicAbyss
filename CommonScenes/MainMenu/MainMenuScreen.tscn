@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=3]
-[ext_resource path="res://CommonScenes/LoadingScreen/pngs/Logo.png" type="Texture" id=4]
+[ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=2]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=4]
+[ext_resource path="res://CommonScenes/LoadingScreen/pngs/Logo.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -51,9 +53,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 705.0
-margin/top = 532.0
+margin/top = 489.0
 margin/right = 1214.0
-margin/bottom = 911.0
+margin/bottom = 868.0
 
 [node name="StoryMode" type="Button" parent="MenuContainer"]
 
@@ -65,6 +67,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 43.0
 margin/right = 171.0
@@ -74,7 +77,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -83,7 +86,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Story Mode"
 flat = false
-script/script = ExtResource( 3 )
+script/script = ExtResource( 4 )
 
 [node name="ArcadeMode" type="Button" parent="MenuContainer"]
 
@@ -95,6 +98,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 119.0
 margin/right = 171.0
@@ -104,7 +108,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_disabled = Color( 0.283842, 0.265869, 0.34375, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -114,7 +118,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Arcade Mode"
 flat = false
-script/script = ExtResource( 3 )
+script/script = ExtResource( 4 )
 
 [node name="SpeedrunMode" type="Button" parent="MenuContainer"]
 
@@ -125,6 +129,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 195.0
 margin/right = 338.0
@@ -134,7 +139,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_disabled = Color( 0.282353, 0.262745, 0.341176, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -144,7 +149,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Speedrun Mode"
 flat = false
-script/script = ExtResource( 3 )
+script/script = ExtResource( 4 )
 
 [node name="Options" type="Button" parent="MenuContainer"]
 
@@ -155,6 +160,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 271.0
 margin/right = 338.0
@@ -164,7 +170,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -173,7 +179,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Options"
 flat = false
-script/script = ExtResource( 3 )
+script/script = ExtResource( 4 )
 
 [node name="QuitGame" type="Button" parent="MenuContainer"]
 
@@ -184,6 +190,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 347.0
 margin/right = 338.0
@@ -193,7 +200,7 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_hover = Color( 0, 0.742188, 1, 1 )
@@ -202,12 +209,29 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Quit Game"
 flat = false
-script/script = ExtResource( 3 )
+script/script = ExtResource( 4 )
 
 [node name="Logo" type="Sprite" parent="."]
 
-transform/pos = Vector2( 960, 345 )
-texture = ExtResource( 4 )
+transform/pos = Vector2( 960, 302 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 3.0
+margin/top = 1024.0
+margin/right = 1916.0
+margin/bottom = 1061.0
+custom_fonts/font = ExtResource( 6 )
+text = "Game and Art by: Daniel Queiroz Porto          Music by: Sam Oz"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 [connection signal="pressed" from="MenuContainer/StoryMode" to="." method="_on_button_pressed" binds= [ "story" ]]
 

@@ -231,17 +231,17 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=17]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=18]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=19]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -293,17 +293,17 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=20]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=21]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -1131,13 +1131,13 @@ flip_v = true
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 17 )
+shapes/0/shape = SubResource( 3 )
 shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 18 )
+shapes/1/shape = SubResource( 4 )
 shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 19 )
+shapes/2/shape = SubResource( 5 )
 shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
 shapes/2/trigger = false
 collision/layers = 4
@@ -1193,13 +1193,13 @@ centered = false
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 20 )
+shapes/0/shape = SubResource( 9 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 21 )
+shapes/1/shape = SubResource( 10 )
 shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 22 )
+shapes/2/shape = SubResource( 11 )
 shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
 shapes/2/trigger = false
 collision/layers = 4

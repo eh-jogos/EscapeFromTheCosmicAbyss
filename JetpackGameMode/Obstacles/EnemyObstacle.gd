@@ -12,4 +12,5 @@ func kill_player(offset):
 	var offset_y = offset.y
 	pipe_brain._on_kill_player(offset_y)
 
-
+func die():
+	emit_signal("die")
