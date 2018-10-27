@@ -1,0 +1,17 @@
+{
+	"beats":
+	{
+		"tentacles" : 
+			"15"
+		,
+		"empty" :
+			"3"
+		,
+	},
+	"half-beats":
+	{
+		"tentacles":
+			"3"
+		,
+	},
+}

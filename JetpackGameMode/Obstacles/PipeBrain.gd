@@ -17,6 +17,16 @@ var tentacle_trigger
 signal player_killed
 
 func _ready():
+	initialize_node_variables()
+	
+	_on_PipeTentacles_Reset()
+	
+	if not tentacle_trigger.is_connected("body_enter",self,"_on_TentacleTrigger"):
+		tentacle_trigger.connect("body_enter",self,"_on_TentacleTrigger")
+	
+	randomize()
+
+func initialize_node_variables():
 	tentacle_pipe = self.get_parent()
 	collision_top = tentacle_pipe.get_node("TentaclePath/TentaclePosition/TentacleTopStatic")
 	collision_bottom = tentacle_pipe.get_node("TentaclePath/TentaclePosition/TentacleBottomStatic")
@@ -28,14 +38,6 @@ func _ready():
 	
 	tentacle_trigger = self.get_tree().get_root().get_node("JetpackGame/Camera2D/TentacleTrigger")
 #	print(tentacle_trigger.get_name())
-	
-	animation.play("hidden")
-	
-	if not tentacle_trigger.is_connected("body_enter",self,"_on_TentacleTrigger"):
-		tentacle_trigger.connect("body_enter",self,"_on_TentacleTrigger")
-	
-	randomize()
-	pass
 
 
 func _on_TentacleTrigger( body ):
@@ -48,13 +50,11 @@ func _on_TentacleTrigger( body ):
 func _on_PipeTentacles_Reset():
 	animation.play("hidden")
 	tentacle_position.set_unit_offset(0.5)
-	pass # replace with function body
 
 func _on_player_pass( body ):
 	if body.is_in_group("player"):
-		tentacle_pipe.emit_signal("scored")
+		tentacle_pipe.scored()
 		animation.play("die")
-	pass # replace with function body
 
 func _on_kill_player(offset_y):
 	#print(offset_y)
@@ -75,12 +75,15 @@ func _on_kill_player(offset_y):
 	animation.play("kill_player")
 	yield(animation, "finished")
 	tentacle_pipe._on_player_killed()
-	pass # replace with function body
 
 func _on_PipeTentacles_Die():
 	#print("Signal 'Die' Received")
 	animation.play("die")
-	pass # replace with function body
 
 func go_to_idle():
 	animation.play("idle")
+
+
+func _on_VisibilityNotifier2D_exit_screen():
+	#print("Kill")
+	tentacle_pipe.queue_free()
