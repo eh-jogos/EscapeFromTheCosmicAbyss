@@ -7,29 +7,41 @@ export(PackedScene) var pipe
 export(PackedScene) var double_pipe
 export(PackedScene) var triple_pipe
 export(PackedScene) var wall
+export(PackedScene) var laser_eye
+export(PackedScene) var shield_up
+export(PackedScene) var ammo_up
 
 var obstacles = []
 
 var obstacle_group
 var half_group
+var level_loader
+var level
 var half_countdown = 4
 
 func _ready():
 	obstacle_group = get_node(obstacle_parent)
 	half_group = get_node(obstacle_half_parent)
+	level_loader = get_node("LevelLoader")
 	obstacles = [
-		none,
-		pipe,
-		double_pipe,
-		triple_pipe,
-		wall
+		none, #0
+		pipe, #1
+		double_pipe, #2
+		triple_pipe, #3
+		wall, #4
+		laser_eye, #5
+		shield_up, #6
+		ammo_up #7
 	]
 	
-	spawn(1)
+	level = level_loader.load_level(1)
+	print(level)
+	
+	next_beat()
 	pass
 
-func spawn(obstacle_enum):
-	var obstacle = obstacles[obstacle_enum].instance()
+func spawn(obstacle_num):
+	var obstacle = obstacles[obstacle_num].instance()
 	var position = self.get_global_pos()
 	obstacle.set_pos(position)
 	obstacle_group.add_child(obstacle)
@@ -41,16 +53,19 @@ func half_spawn(obstacle_num):
 	half_group.add_child(obstacle)
 
 func next_beat():
-	spawn(1)
+	if level["half_beats"].size() > 0:
+		spawn(level["beats"][0])
+		level["beats"].pop_front()
+		#print(level)
+	else:
+		#end level
+		pass
 
 func next_half_beat():
-	print("half")
-	if half_countdown == 0:
-		print("halfcall")
-		half_spawn(1)
-		half_countdown = 4
-	else:
-		half_countdown -= 1
+	if level["half_beats"].size() > 0:
+		half_spawn(level["half_beats"][0])
+		level["half_beats"].pop_front()
+		#print(level)
 
 
 func _on_Beat_area_exit( area ):
