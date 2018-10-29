@@ -15,14 +15,12 @@ var obstacles = []
 
 var obstacle_group
 var half_group
-var level_loader
 var level
 var half_countdown = 4
 
 func _ready():
 	obstacle_group = get_node(obstacle_parent)
 	half_group = get_node(obstacle_half_parent)
-	level_loader = get_node("LevelLoader")
 	obstacles = [
 		none, #0
 		pipe, #1
@@ -33,12 +31,6 @@ func _ready():
 		shield_up, #6
 		ammo_up #7
 	]
-	
-	level = level_loader.load_level(1)
-	print(level)
-	
-	next_beat()
-	pass
 
 func spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
@@ -53,12 +45,12 @@ func half_spawn(obstacle_num):
 	half_group.add_child(obstacle)
 
 func next_beat():
-	if level["half_beats"].size() > 0:
+	if level["beats"].size() > 0:
 		spawn(level["beats"][0])
 		level["beats"].pop_front()
 		#print(level)
 	else:
-		#end level
+		print("ENDED")
 		pass
 
 func next_half_beat():
@@ -67,6 +59,11 @@ func next_half_beat():
 		level["half_beats"].pop_front()
 		#print(level)
 
+
+func set_level(level_dict):
+	level = level_dict
+	print(level)
+	next_beat()
 
 func _on_Beat_area_exit( area ):
 	if area.is_in_group("score") and not area.get_parent().get_parent() == half_group:

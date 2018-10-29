@@ -7,6 +7,8 @@ var points_label
 var upgrade_messager
 var ammunition
 var player
+var level_loader
+var object_spawner
 
 # Other "Game Screens"
 var game_over_screen
@@ -16,6 +18,7 @@ var tutorial
 # Game Mode "Stats" and Variables?
 var points = 0
 var cycles = 0
+var level_title
 var highscore = Global.savedata["story"]["highscore"]
 var initial_shield = Global.savedata["story"]["initial shield"]
 var initial_ammo = Global.savedata["story"]["initial ammo"]
@@ -49,8 +52,13 @@ func _ready():
 	points_label = self.get_node("HUD/Points")
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
 	player = self.get_node("Player")
+	level_loader = self.get_node("LevelLoader")
+	object_spawner = self.get_node("Camera2D/ObstacleSpawner")
+	
+	load_level(1)
 	
 	ammunition.initialize_ammo(initial_ammo)
+	
 	
 	self.get_tree().set_pause(true)
 	
@@ -77,6 +85,11 @@ func get_game_state():
 
 func set_game_state(string):
 	current_state = STATE[string]
+
+func load_level(num):
+	var level = level_loader.load_level(num)
+	object_spawner.set_level(level)
+	level_title = level.title
 
 func get_score():
 	return points
@@ -131,7 +144,7 @@ func dash_score():
 	update_score()
 
 func game_start():
-	countdown.play()
+	countdown.play(level_title)
 
 func tutorial_start():
 	tutorial.play()

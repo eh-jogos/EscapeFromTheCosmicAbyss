@@ -1,12 +1,12 @@
 [gd_scene load_steps=55 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/Camera/Camera.gd" type="Script" id=2]
-[ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" type="Script" id=3]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" type="PackedScene" id=4]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=6]
-[ext_resource path="res://Levels/Level1.gd" type="Script" id=7]
+[ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
+[ext_resource path="res://Levels/Level1.gd" type="Script" id=3]
+[ext_resource path="res://JetpackGameMode/Camera/Camera.gd" type="Script" id=4]
+[ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" type="Script" id=5]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" type="PackedScene" id=6]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" type="PackedScene" id=7]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=8]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=9]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=10]
@@ -286,6 +286,16 @@ tracks/3/keys = {
 
 script/script = ExtResource( 1 )
 
+[node name="LevelLoader" type="Node" parent="."]
+
+script/script = ExtResource( 2 )
+
+[node name="Level0" type="Node" parent="LevelLoader"]
+
+[node name="Level1" type="Node" parent="LevelLoader"]
+
+script/script = ExtResource( 3 )
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 transform/pos = Vector2( 960, 540 )
@@ -305,7 +315,7 @@ drag_margin/left = 0.0
 drag_margin/top = 0.0
 drag_margin/right = 0.0
 drag_margin/bottom = 0.0
-script/script = ExtResource( 2 )
+script/script = ExtResource( 4 )
 
 [node name="Limites" type="StaticBody2D" parent="Camera2D"]
 
@@ -398,27 +408,17 @@ _update_shape_index = 0
 [node name="ObstacleSpawner" type="Position2D" parent="Camera2D"]
 
 transform/pos = Vector2( 960, 0 )
-script/script = ExtResource( 3 )
+script/script = ExtResource( 5 )
 obstacle_parent = NodePath("../../Obstaculos/ObstacleBeat")
 obstacle_half_parent = NodePath("../../Obstaculos/ObstacleHalfBeat")
-none = ExtResource( 4 )
-pipe = ExtResource( 5 )
+none = ExtResource( 6 )
+pipe = ExtResource( 7 )
 double_pipe = null
 triple_pipe = null
 wall = null
 laser_eye = null
 shield_up = null
 ammo_up = null
-
-[node name="LevelLoader" type="Node" parent="Camera2D/ObstacleSpawner"]
-
-script/script = ExtResource( 6 )
-
-[node name="Level0" type="Node" parent="Camera2D/ObstacleSpawner/LevelLoader"]
-
-[node name="Level1" type="Node" parent="Camera2D/ObstacleSpawner/LevelLoader"]
-
-script/script = ExtResource( 7 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -589,6 +589,8 @@ transform/pos = Vector2( 960, 540 )
 [node name="Player" parent="." instance=ExtResource( 26 )]
 
 [node name="Obstaculos" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="Outlines" type="Node2D" parent="Obstaculos"]
 
@@ -795,7 +797,6 @@ autoplay = ""
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0
