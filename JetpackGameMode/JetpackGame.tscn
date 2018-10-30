@@ -286,6 +286,8 @@ tracks/3/keys = {
 [node name="JetpackGame" type="Node2D"]
 
 script/script = ExtResource( 1 )
+point_multiple = 5
+upgrade_multiple = 30
 
 [node name="LevelLoader" type="Node" parent="."]
 

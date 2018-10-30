@@ -16,7 +16,11 @@ var countdown
 var tutorial
 
 # Game Mode "Stats" and Variables?
+export var point_multiple = 5
+export var upgrade_multiple = 30
+
 var points = 0
+var points_level = 0
 var cycles = 0
 var level_title
 var highscore = Global.savedata["story"]["highscore"]
@@ -105,9 +109,12 @@ func game_over():
 	get_tree().set_pause(true)
 
 func _on_scored(num):
-	points += num
+	var last_point_level = points_level
 	
-	if points % 5 == 0:
+	points += num
+	points_level = int(points/point_multiple)
+	print(points_level)
+	if points_level > last_point_level:
 		ammunition.add_ammo()
 		
 		print("initial_speed: %s | max_speed: %s"%[player.speed_x, max_speed])
@@ -120,10 +127,10 @@ func _on_scored(num):
 				player.speed.x = player.speed_x* player.unit.x
 	#			print(player.speed.x)
 	
-	if points % 30 == 0:
-		upgrade_points += 1
-		upgrade_messager.play("text_anim")
-		Global.update_story_upgrade(upgrade_points)
+		if points_level % int(upgrade_multiple/point_multiple) == 0:
+			upgrade_points += 1
+			upgrade_messager.play("text_anim")
+			Global.update_story_upgrade(upgrade_points)
 	update_score()
 	pass # replace with function body
 
