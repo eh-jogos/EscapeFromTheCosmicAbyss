@@ -168,7 +168,7 @@ func _fixed_process(delta):
 	
 	if self.is_colliding():
 		var collider = get_collider()
-		#print(collider.get_name())
+		print(collider.get_name())
 		if collider.is_in_group("enemy") and not is_dead and shield_energy > 0:
 			#print("Shield Protected")
 			shield.decrease_energy(1)

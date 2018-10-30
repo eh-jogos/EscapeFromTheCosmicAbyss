@@ -104,8 +104,8 @@ func game_over():
 	game_over_screen.open()
 	get_tree().set_pause(true)
 
-func _on_scored():
-	points += 1
+func _on_scored(num):
+	points += num
 	
 	if points % 5 == 0:
 		ammunition.add_ammo()

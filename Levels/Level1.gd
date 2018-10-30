@@ -1,9 +1,9 @@
 extends Node
 
 var level_title = "Level 01"
-var intro_beats = [1,1,1,1,1]
-var intro_halfs = [0,0,1,0,0]
-var end_beat = 4
+var intro_beats = [2,2,2,2,2]
+var intro_halfs = [0,0,2,0,0]
+var end_beat = 1
 var boss = {
 	"boss_level": false,
 	"laser_countdown":0,
@@ -13,9 +13,9 @@ var boss = {
 }
 
 var beats = {
-	"none": 10,
-	"tentacles": 15,
-	"double_pipe":0,
+	"none": 0,
+	"tentacles": 0,
+	"double_pipe":25,
 	"triple_pipe":0,
 	"wall": 0,
 	"laser_eye": 0,
@@ -25,8 +25,8 @@ var beats = {
 
 var half_beats = {
 	"none": 18,
-	"tentacles": 7,
-	"double_pipe":0,
+	"tentacles": 0,
+	"double_pipe":7,
 	"triple_pipe":0,
 	"wall": 0,
 	"laser_eye": 0,
