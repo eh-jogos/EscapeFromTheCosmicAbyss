@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=1]
+[gd_scene load_steps=64 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -37,13 +37,14 @@
 [ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=35]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=36]
 [ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=37]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=40]
-[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=41]
-[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=42]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialScreen.tscn" type="PackedScene" id=43]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=44]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=38]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=41]
+[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=42]
+[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=43]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialScreen.tscn" type="PackedScene" id=44]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=45]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -289,10 +290,15 @@ tracks/3/keys = {
 "values": [ 0.0, 1.0, 1.0, 0.0 ]
 }
 
+[sub_resource type="ColorRamp" id=18]
+
+offsets = FloatArray( 0, 0.985915, 1 )
+colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
+
 [node name="JetpackGame" type="Node2D"]
 
 script/script = ExtResource( 1 )
-point_multiple = 10
+point_multiple = 5
 upgrade_multiple = 70
 
 [node name="LevelLoader" type="Node" parent="."]
@@ -814,7 +820,7 @@ margin/bottom = 1071.0
 use_top_left = false
 script/script = ExtResource( 37 )
 ending_cap = 35
-progress_barrier = null
+progress_barrier = ExtResource( 38 )
 
 [node name="ProgressBar" type="TextureFrame" parent="HUD/ProgressVisualization"]
 
@@ -826,12 +832,11 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1846.0
 margin/bottom = 46.0
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 stretch_mode = 0
 
 [node name="IconContainer" type="CenterContainer" parent="HUD/ProgressVisualization/ProgressBar"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -841,6 +846,32 @@ margin/top = 3.0
 margin/right = 30.0
 margin/bottom = 46.0
 use_top_left = false
+
+[node name="Particles2D" type="Particles2D" parent="HUD/ProgressVisualization/ProgressBar/IconContainer"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 15, 21 )
+config/amount = 1
+config/lifetime = 0.5
+config/process_mode = 1
+config/texture = ExtResource( 40 )
+params/direction = 0.0
+params/spread = 10.0
+params/linear_velocity = 0.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.8
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 18 )
 
 [node name="Icon" type="TextureFrame" parent="HUD/ProgressVisualization/ProgressBar/IconContainer"]
 
@@ -852,34 +883,36 @@ margin/left = 0.0
 margin/top = 6.0
 margin/right = 30.0
 margin/bottom = 36.0
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
+modulate = Color( 0, 1, 1, 1 )
 stretch_mode = 0
 
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 40 )]
+[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 41 )]
 
 visibility/visible = false
 
-[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 41 )]
+[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 42 )]
 
 visibility/visible = false
 
-[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 42 )]
+[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 43 )]
 
 visibility/visible = false
 
-[node name="TutorialScreen" parent="AboveScreen" instance=ExtResource( 43 )]
+[node name="TutorialScreen" parent="AboveScreen" instance=ExtResource( 44 )]
 
 visibility/visible = false
 
-[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 44 )]
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 45 )]
 
 visibility/visible = false
 

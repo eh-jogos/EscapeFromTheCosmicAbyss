@@ -17,7 +17,7 @@ var beats = {
 	"tentacles": 5,
 	"double_pipe":1,
 	"triple_pipe":1,
-	"wall": 0,
+	"wall": 1,
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
@@ -25,7 +25,7 @@ var beats = {
 
 var half_beats = {
 	"none": 5,
-	"tentacles": 0,
+	"tentacles": 1,
 	"double_pipe":1,
 	"triple_pipe":1,
 	"wall": 0,
