@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=1]
+[gd_scene load_steps=62 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -36,11 +36,14 @@
 [ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=34]
 [ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=35]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=36]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=37]
-[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=38]
-[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=39]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialScreen.tscn" type="PackedScene" id=40]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=41]
+[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=37]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=40]
+[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=41]
+[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=42]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialScreen.tscn" type="PackedScene" id=43]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=44]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -687,7 +690,6 @@ max_lines_visible = -1
 
 [node name="TextureProgress" type="TextureProgress" parent="HUD"]
 
-editor/display_folded = true
 material/material = SubResource( 10 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -770,7 +772,6 @@ autoplay = ""
 
 [node name="UpgradeLabel" type="Label" parent="HUD"]
 
-editor/display_folded = true
 visibility/opacity = 0.0
 material/material = SubResource( 16 )
 focus/ignore_mouse = true
@@ -800,6 +801,60 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
+[node name="ProgressVisualization" type="CenterContainer" parent="HUD"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 32.0
+margin/top = 1025.0
+margin/right = 1878.0
+margin/bottom = 1071.0
+use_top_left = false
+script/script = ExtResource( 37 )
+ending_cap = 35
+progress_barrier = null
+
+[node name="ProgressBar" type="TextureFrame" parent="HUD/ProgressVisualization"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1846.0
+margin/bottom = 46.0
+texture = ExtResource( 38 )
+stretch_mode = 0
+
+[node name="IconContainer" type="CenterContainer" parent="HUD/ProgressVisualization/ProgressBar"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 3.0
+margin/right = 30.0
+margin/bottom = 46.0
+use_top_left = false
+
+[node name="Icon" type="TextureFrame" parent="HUD/ProgressVisualization/ProgressBar/IconContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 6.0
+margin/right = 30.0
+margin/bottom = 36.0
+texture = ExtResource( 39 )
+stretch_mode = 0
+
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
@@ -808,23 +863,23 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 37 )]
+[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 40 )]
 
 visibility/visible = false
 
-[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 38 )]
+[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 41 )]
 
 visibility/visible = false
 
-[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 39 )]
+[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 42 )]
 
 visibility/visible = false
 
-[node name="TutorialScreen" parent="AboveScreen" instance=ExtResource( 40 )]
+[node name="TutorialScreen" parent="AboveScreen" instance=ExtResource( 43 )]
 
 visibility/visible = false
 
-[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 41 )]
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 44 )]
 
 visibility/visible = false
 
@@ -833,5 +888,9 @@ visibility/visible = false
 [connection signal="area_exit" from="Camera2D/HalfBeat" to="Camera2D/ObstacleSpawner" method="_on_HalfBeat_area_exit"]
 
 [connection signal="level_end" from="Camera2D/ObstacleSpawner" to="." method="_on_level_end"]
+
+[connection signal="level_ready" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
+
+[connection signal="update_visualization" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
 
 

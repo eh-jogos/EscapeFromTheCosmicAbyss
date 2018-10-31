@@ -9,6 +9,7 @@ func load_level(num):
 	build_boss()
 	build_beats()
 	build_half_beats()
+	level["total_count"] = level["beats"].size() + level["half_beats"].size()
 	return level
 
 func build_boss():
