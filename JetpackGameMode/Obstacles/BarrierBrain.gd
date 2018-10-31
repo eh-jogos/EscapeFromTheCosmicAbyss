@@ -10,6 +10,7 @@ var tentacle_position
 var animation
 
 var tentacle_trigger
+var is_alive = true
 
 signal player_killed
 
@@ -36,20 +37,13 @@ func initialize_node_variables():
 
 
 func _on_TentacleTrigger( body ):
-	if body.is_in_group("pipes") and (body == collision_top or body == collision_bottom):
-		animation.play("spawn")
-		tentacle_position.set_unit_offset(rand_range(0.0,1.0))
 	pass
 
 
 func _on_PipeTentacles_Reset():
-	animation.play("hidden")
+	animation.play("crush")
 	tentacle_position.set_unit_offset(0.5)
 
-func _on_player_pass( body ):
-	if body.is_in_group("player"):
-		tentacle_pipe.scored()
-		animation.play("die")
 
 func _on_kill_player(body, offset_y):
 	#print(offset_y)
@@ -79,10 +73,15 @@ func _on_kill_player(body, offset_y):
 
 func _on_PipeTentacles_Die():
 	#print("Signal 'Die' Received")
-	animation.play("die")
+	if is_alive:
+		is_alive = false
+		tentacle_pipe.scored()
+		animation.play_backwards("crush_backwards")
+		yield(animation, "finished")
+		animation.play("die")
 
-func go_to_idle():
-	animation.play("idle")
+func go_to_crush():
+	animation.play("crush")
 
 
 func _on_VisibilityNotifier2D_exit_screen():

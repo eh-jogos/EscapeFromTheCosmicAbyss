@@ -1,7 +1,7 @@
-[gd_scene load_steps=222 format=1]
+[gd_scene load_steps=212 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/Pipe_Looper.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/Obstacles/DoublePipeBrain.gd" type="Script" id=2]
+[ext_resource path="res://JetpackGameMode/Obstacles/BarrierBrain.gd" type="Script" id=2]
 [ext_resource path="res://JetpackGameMode/Obstacles/EnemyObstacle.gd" type="Script" id=3]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0000.png" type="Texture" id=4]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0001.png" type="Texture" id=5]
@@ -193,7 +193,6 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0049.png" type="Texture" id=191]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0050.png" type="Texture" id=192]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" type="Texture" id=193]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles_KillPlayerAnim.tres" type="Animation" id=194]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -202,17 +201,17 @@ _data = {
 "points": Vector2Array( 0, 0, 0, 0, 25, -200, 0, 0, 0, 0, 25, 200 )
 }
 
-[sub_resource type="ConvexPolygonShape2D" id=28]
+[sub_resource type="ConvexPolygonShape2D" id=31]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=32]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=33]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -293,52 +292,22 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=34]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=35]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=36]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=12]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=14]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=16]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=17]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
-
-[sub_resource type="SegmentShape2D" id=18]
+[sub_resource type="SegmentShape2D" id=12]
 
 custom_solver_bias = 0.0
 a = Vector2( 0, 0 )
@@ -346,9 +315,10 @@ b = Vector2( 0, 700 )
 
 [sub_resource type="Animation" id=19]
 
-length = 0.43
+resource/name = "crush"
+length = 0.87
 loop = false
-step = 0.43
+step = 0.87
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
 tracks/0/interp = 1
@@ -357,213 +327,17 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 950 ) ]
+"values": [ Vector2( 0, -150 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
+tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ "spawn" ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -950 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 75 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 75 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -875 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -875 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("ScoringArea:transform/pos")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 388.933, -1080 ) ]
-}
-
-[sub_resource type="Animation" id=20]
-
-length = 0.01
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -330 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 320 ) ]
+"values": [ Vector2( 0, 150 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
@@ -573,7 +347,7 @@ tracks/2/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -875 ) ]
+"values": [ Vector2( 0, -750 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
@@ -583,7 +357,7 @@ tracks/3/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -875 ) ]
+"values": [ Vector2( 0, -750 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
@@ -593,7 +367,7 @@ tracks/4/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 75 ) ]
+"values": [ Vector2( 0, -50 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
@@ -603,7 +377,7 @@ tracks/5/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 75 ) ]
+"values": [ Vector2( 0, -50 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
@@ -612,8 +386,195 @@ tracks/6/imported = false
 tracks/6/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"update": 0,
+"update": 1,
 "values": [ 0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "kill_player", "crush_idle" ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "kill_player", "crush_idle" ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "kill_player", "crush_idle" ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "kill_player", "crush_idle" ]
+}
+
+[sub_resource type="Animation" id=30]
+
+resource/name = "crush_backwards"
+length = 0.21
+loop = false
+step = 0.21
+tracks/0/type = "value"
+tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 900 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -900 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -750 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -750 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.21 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 13, 0 ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
@@ -633,17 +594,17 @@ tracks/8/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "spawn" ]
+"values": [ "kill_player" ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.21 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ 0 ]
+"values": [ 13, 0 ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
@@ -663,17 +624,17 @@ tracks/11/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "spawn" ]
+"values": [ "kill_player" ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.21 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ 0 ]
+"values": [ 13, 0 ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
@@ -693,17 +654,17 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "spawn" ]
+"values": [ "kill_player" ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.21 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ 0 ]
+"values": [ 13, 0 ]
 }
 tracks/16/type = "value"
 tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
@@ -723,7 +684,389 @@ tracks/17/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
+"values": [ "kill_player" ]
+}
+
+[sub_resource type="Animation" id=20]
+
+length = 0.43
+loop = false
+step = 0.43
+tracks/0/type = "value"
+tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
 "values": [ "spawn" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.43 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 26, 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.43 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 26, 0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.43 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 26, 0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 0.43 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 26, 0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -750 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -750 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -950 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 950 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("ScoringArea:transform/pos")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 388.933, -1080 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+
+[sub_resource type="Animation" id=21]
+
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ "spawn" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 75 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 75 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -875 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -875 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 320 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -330 ) ]
 }
 tracks/18/type = "value"
 tracks/18/path = NodePath("ScoringArea:transform/pos")
@@ -736,388 +1079,231 @@ tracks/18/keys = {
 "values": [ Vector2( 388.933, 0 ) ]
 }
 
-[sub_resource type="Animation" id=21]
-
-length = 0.01
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -75 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 75 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -875 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -875 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 75 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 75 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-
 [sub_resource type="Animation" id=22]
 
-length = 0.43
+resource/name = "PipeTentacles_KillPlayerAnim"
+length = 1.54
 loop = false
-step = 0.43
+step = 0.87
 tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop/DeadPlayer/DeadPlayerOutline:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 75 ) ]
+"values": [ 0, 51 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop/DeadPlayer:frame")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0, 0.87 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 320 ), Vector2( 0, 75 ) ]
+"values": [ 0, 51 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom/DeadPlayer/DeadPlayerOutline:frame")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0, 0.87 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -320 ), Vector2( 0, -75 ) ]
+"values": [ 0, 51 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom/DeadPlayer:frame")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 75 ) ]
+"values": [ 0, 51 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -875 ) ]
+"values": [ Vector2( 0, 950 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -875 ) ]
+"values": [ Vector2( 0, -950 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
+tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 0.87, 1.54 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0, 26 ]
+"values": [ Vector2( 0, -750 ), Vector2( 0, -750 ), Vector2( 0, -1750 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
+tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
+"times": FloatArray( 0, 0.87, 1.54 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -750 ), Vector2( 0, -750 ), Vector2( 0, -1750 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
+tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
+"times": FloatArray( 0, 0.87, 1.54 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ), Vector2( 0, -50 ), Vector2( 0, 950 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
+tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 0.87, 1.54 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0, 26 ]
+"values": [ Vector2( 0, -50 ), Vector2( 0, -50 ), Vector2( 0, 950 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
+tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ 0 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
+tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "spawn" ]
+"values": [ true ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0, 0.87 ),
 "transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 26 ]
+"update": 1,
+"values": [ "crush_idle", "crush_idle" ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ 0 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "spawn" ]
+"values": [ true ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0, 0.87 ),
 "transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 27 ]
+"update": 1,
+"values": [ "crush_idle", "crush_idle" ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ 0 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "spawn" ]
+"values": [ true ]
 }
-tracks/18/type = "method"
-tracks/18/path = NodePath("PipeBrain")
+tracks/18/type = "value"
+tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0.43 ),
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "crush_idle", "crush_idle" ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "go_to_idle"
-} ]
+"update": 1,
+"values": [ 0 ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
+tracks/20/interp = 1
+tracks/20/imported = false
+tracks/20/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0, 0.87 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "crush_idle", "crush_idle" ]
 }
 
 [sub_resource type="Animation" id=23]
@@ -1126,17 +1312,17 @@ length = 0.43
 loop = false
 step = 0.43
 tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:animation")
+tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"update": 1,
+"update": 0,
 "values": [ "spawn" ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:playing")
+tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
@@ -1146,812 +1332,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:frame")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:frame")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:playing")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:animation")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:animation")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:playing")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:frame")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:transform/pos")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:playing")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:frame")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 26, 0 ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:transform/pos")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:transform/pos")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:transform/pos")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/CollisionPolygon2D:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -950 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/CollisionPolygon2D:transform/pos")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 950 ) ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("ScoringArea:transform/pos")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 500, -1080 ) ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:animation")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-
-[sub_resource type="Animation" id=24]
-
-length = 0.01
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:playing")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:animation")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:animation")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:playing")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:frame")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:animation")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:playing")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:frame")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:animation")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:playing")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:transform/pos")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:frame")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:transform/pos")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:transform/pos")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/CollisionPolygon2D:transform/pos")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 320 ) ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/CollisionPolygon2D:transform/pos")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -330 ) ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("ScoringArea:transform/pos")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 600, 0 ) ]
-}
-
-[sub_resource type="Animation" id=25]
-
-length = 0.01
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:playing")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:animation")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:animation")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:playing")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:frame")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:animation")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:playing")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:frame")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:animation")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:playing")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:transform/pos")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:frame")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:transform/pos")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:transform/pos")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/CollisionPolygon2D:transform/pos")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ) ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/CollisionPolygon2D:transform/pos")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -75 ) ]
-}
-
-[sub_resource type="Animation" id=26]
-
-resource/name = "PipeTentacles_KillPlayerAnim"
-length = 1.54
-loop = false
-step = 0.87
-tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:playing")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:animation")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ "kill_player", "crush_idle" ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:animation")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ "kill_player", "crush_idle" ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:playing")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:frame")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:animation")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ "kill_player", "crush_idle" ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:playing")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:frame")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:animation")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ "kill_player", "crush_idle" ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:playing")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:transform/pos")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0, 0.87, 1.54 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ), Vector2( 121, -875 ), Vector2( 121, -1750 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:frame")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:transform/pos")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0, 0.87, 1.54 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ), Vector2( 121, 75 ), Vector2( 121, 950 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:transform/pos")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0, 0.87, 1.54 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 121, 75 ), Vector2( 121, 75 ), Vector2( 121, 950 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop/DeadPlayer/DeadPlayerOutline:frame")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 51 ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/CollisionPolygon2D:transform/pos")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -950 ) ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop/DeadPlayer:frame")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 51 ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:transform/pos")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0, 0.87, 1.54 ),
-"transitions": FloatArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ), Vector2( 121, -875 ), Vector2( 121, -1750 ) ]
-}
-tracks/19/type = "value"
-tracks/19/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/CollisionPolygon2D:transform/pos")
-tracks/19/interp = 1
-tracks/19/imported = false
-tracks/19/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, 950 ) ]
-}
-tracks/20/type = "value"
-tracks/20/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom/DeadPlayer:frame")
-tracks/20/interp = 1
-tracks/20/imported = false
-tracks/20/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 51 ]
-}
-tracks/21/type = "value"
-tracks/21/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom/DeadPlayer/DeadPlayerOutline:frame")
-tracks/21/interp = 1
-tracks/21/imported = false
-tracks/21/keys = {
-"times": FloatArray( 0, 0.87 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 51 ]
-}
-
-[sub_resource type="Animation" id=27]
-
-length = 0.43
-loop = false
-step = 0.43
-tracks/0/type = "value"
-tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:animation")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:playing")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:frame")
+tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
@@ -1961,17 +1342,17 @@ tracks/2/keys = {
 "values": [ 0, 27 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:frame")
+tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 26 ]
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "spawn" ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:playing")
+tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
@@ -1981,17 +1362,17 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:animation")
+tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
+"times": FloatArray( 0, 0.43 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 26 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:animation")
+tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
@@ -2001,7 +1382,7 @@ tracks/6/keys = {
 "values": [ "spawn" ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:playing")
+tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
@@ -2011,7 +1392,7 @@ tracks/7/keys = {
 "values": [ false ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:frame")
+tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
@@ -2021,7 +1402,7 @@ tracks/8/keys = {
 "values": [ 0, 26 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:animation")
+tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
@@ -2031,64 +1412,64 @@ tracks/9/keys = {
 "values": [ "spawn" ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop:transform/pos")
+tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 121, -875 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:playing")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
-tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:frame")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
+tracks/11/type = "value"
+tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
 "times": FloatArray( 0, 0.43 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 26 ]
 }
+tracks/12/type = "value"
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -875 ) ]
+}
 tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/OutlineTop:transform/pos")
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 121, -875 ) ]
+"values": [ Vector2( 0, -750 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/OutlineBottom:transform/pos")
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 121, 75 ) ]
+"values": [ Vector2( 0, -50 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom:transform/pos")
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 121, 75 ) ]
+"values": [ Vector2( 0, -50 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("PipeBrain")
@@ -2099,37 +1480,37 @@ tracks/16/keys = {
 "transitions": FloatArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "go_to_idle"
+"method": "go_to_crush"
 } ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic1/CollisionPolygon2D:transform/pos")
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
 "times": FloatArray( 0, 0.43 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 121, -320 ), Vector2( 121, -75 ) ]
+"values": [ Vector2( 0, -320 ), Vector2( 0, 50 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic1/CollisionPolygon2D:transform/pos")
+tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
 "times": FloatArray( 0, 0.43 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 121, 320 ), Vector2( 121, 75 ) ]
+"values": [ Vector2( 0, 320 ), Vector2( 0, -50 ) ]
 }
 
-[node name="DoubleTentacles" type="Node2D" groups=[
+[node name="BarrierTentacles" type="Node2D" groups=[
 "pipes",
 ]]
 
 transform/pos = Vector2( 1920, 540 )
 script/script = ExtResource( 1 )
-point_value = 2
+point_value = 3
 
 [node name="PipeBrain" type="Node" parent="."]
 
@@ -2156,14 +1537,14 @@ lookahead = 4.0
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 28 )
-shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
+shapes/0/shape = SubResource( 31 )
+shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, 150 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 3 )
-shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
+shapes/1/shape = SubResource( 32 )
+shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, 150 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 4 )
-shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
+shapes/2/shape = SubResource( 33 )
+shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, 150 )
 shapes/2/trigger = false
 collision/layers = 4
 collision/mask = 3
@@ -2175,7 +1556,7 @@ script/script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
 
-transform/pos = Vector2( 0, -75 )
+transform/pos = Vector2( 0, 150 )
 transform/scale = Vector2( 1, -1 )
 build_mode = 0
 polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
@@ -2184,20 +1565,22 @@ trigger = false
 
 [node name="OutlineTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
 
-transform/pos = Vector2( 0, -875 )
+transform/pos = Vector2( 0, -750 )
 frames = SubResource( 5 )
-animation = "spawn"
-frame = 26
+animation = "crush_idle"
+frame = 11
+playing = true
 centered = false
 flip_v = true
 
 [node name="TentacleTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
 
 editor/display_folded = true
-transform/pos = Vector2( 0, -875 )
+transform/pos = Vector2( 0, -750 )
 frames = SubResource( 6 )
-animation = "spawn"
-frame = 26
+animation = "crush_idle"
+frame = 11
+playing = true
 centered = false
 flip_v = true
 
@@ -2222,14 +1605,14 @@ frame = 51
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
+shapes/0/shape = SubResource( 34 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -150 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 10 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
+shapes/1/shape = SubResource( 35 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, -150 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 11 )
-shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
+shapes/2/shape = SubResource( 36 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, -150 )
 shapes/2/trigger = false
 collision/layers = 4
 collision/mask = 3
@@ -2241,7 +1624,7 @@ script/script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
 
-transform/pos = Vector2( 0, 75 )
+transform/pos = Vector2( 0, -150 )
 build_mode = 0
 polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 shape_range = Vector2( 0, 2 )
@@ -2249,19 +1632,21 @@ trigger = false
 
 [node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
 
-transform/pos = Vector2( 0, 75 )
+transform/pos = Vector2( 0, -50 )
 frames = SubResource( 5 )
-animation = "spawn"
-frame = 26
+animation = "crush_idle"
+frame = 11
+playing = true
 centered = false
 
 [node name="TentacleBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
 
 editor/display_folded = true
-transform/pos = Vector2( 0, 75 )
+transform/pos = Vector2( 0, -50 )
 frames = SubResource( 6 )
-animation = "spawn"
-frame = 26
+animation = "crush_idle"
+frame = 11
+playing = true
 centered = false
 
 [node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom"]
@@ -2279,148 +1664,14 @@ frames = SubResource( 8 )
 animation = "dying"
 frame = 51
 
-[node name="TentacleTopStatic1" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
-"pipes",
-"enemy",
-]]
-
-editor/display_folded = true
-transform/pos = Vector2( 100, 0 )
-input/pickable = false
-shapes/0/shape = SubResource( 12 )
-shapes/0/transform = Matrix32( 1, 0, 0, -1, 121, -75 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 13 )
-shapes/1/transform = Matrix32( 1, 0, 0, -1, 121, -75 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 14 )
-shapes/2/transform = Matrix32( 1, 0, 0, -1, 121, -75 )
-shapes/2/trigger = false
-collision/layers = 4
-collision/mask = 3
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-script/script = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic1"]
-
-transform/pos = Vector2( 121, -75 )
-transform/scale = Vector2( 1, -1 )
-build_mode = 0
-polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
-shape_range = Vector2( 0, 2 )
-trigger = false
-
-[node name="OutlineTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic1"]
-
-transform/pos = Vector2( 121, -875 )
-frames = SubResource( 5 )
-animation = "spawn"
-frame = 26
-centered = false
-flip_v = true
-
-[node name="TentacleTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic1"]
-
-editor/display_folded = true
-transform/pos = Vector2( 121, -875 )
-frames = SubResource( 6 )
-animation = "spawn"
-frame = 26
-centered = false
-flip_v = true
-
-[node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 215, -75 )
-frames = SubResource( 7 )
-animation = "dying"
-frame = 51
-
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop/DeadPlayer"]
-
-visibility/behind_parent = true
-frames = SubResource( 8 )
-animation = "dying"
-frame = 51
-
-[node name="TentacleBottomStatic1" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
-"pipes",
-"enemy",
-]]
-
-editor/display_folded = true
-transform/pos = Vector2( 100, 0 )
-input/pickable = false
-shapes/0/shape = SubResource( 15 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 121, 75 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 16 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 121, 75 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 17 )
-shapes/2/transform = Matrix32( 1, 0, 0, 1, 121, 75 )
-shapes/2/trigger = false
-collision/layers = 4
-collision/mask = 3
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-script/script = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1"]
-
-transform/pos = Vector2( 121, 75 )
-build_mode = 0
-polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
-shape_range = Vector2( 0, 2 )
-trigger = false
-
-[node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1"]
-
-transform/pos = Vector2( 121, 75 )
-frames = SubResource( 5 )
-animation = "spawn"
-frame = 26
-centered = false
-
-[node name="TentacleBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1"]
-
-transform/pos = Vector2( 121, 75 )
-frames = SubResource( 6 )
-animation = "spawn"
-frame = 26
-centered = false
-
-[node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 215, 875 )
-frames = SubResource( 7 )
-animation = "dying"
-frame = 51
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1/TentacleBottom/DeadPlayer"]
-
-visibility/behind_parent = true
-frames = SubResource( 8 )
-animation = "dying"
-frame = 51
-
 [node name="ScoringArea" type="Area2D" parent="." groups=[
 "score",
 ]]
 
-transform/pos = Vector2( 600, 0 )
+editor/display_folded = true
+transform/pos = Vector2( 388.933, -1080 )
 input/pickable = true
-shapes/0/shape = SubResource( 18 )
+shapes/0/shape = SubResource( 12 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -350 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -2431,7 +1682,7 @@ angular_damp = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea"]
 
 transform/pos = Vector2( 0, -350 )
-shape = SubResource( 18 )
+shape = SubResource( 12 )
 trigger = false
 _update_shape_index = 0
 
@@ -2440,26 +1691,12 @@ _update_shape_index = 0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/die = SubResource( 19 )
-anims/hidden = SubResource( 20 )
-anims/idle = SubResource( 21 )
-anims/kill_player = ExtResource( 194 )
-anims/spawn = SubResource( 22 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
-autoplay = ""
-
-[node name="AnimationPlayer1" type="AnimationPlayer" parent="."]
-
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/die = SubResource( 23 )
-anims/hidden = SubResource( 24 )
-anims/idle = SubResource( 25 )
-anims/kill_player = SubResource( 26 )
-anims/spawn = SubResource( 27 )
+anims/crush = SubResource( 19 )
+anims/crush_backwards = SubResource( 30 )
+anims/die = SubResource( 20 )
+anims/hidden = SubResource( 21 )
+anims/kill_player = SubResource( 22 )
+anims/spawn = SubResource( 23 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -2467,17 +1704,14 @@ autoplay = ""
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 53, 0 )
-transform/scale = Vector2( 28.3825, 1.62407 )
+transform/scale = Vector2( 17.35, 1.62407 )
 rect = Rect2( 0, -540, 20, 1080 )
 
 [connection signal="die" from="TentaclePath/TentaclePosition/TentacleTopStatic" to="PipeBrain" method="_on_PipeTentacles_Die"]
 
 [connection signal="die" from="TentaclePath/TentaclePosition/TentacleBottomStatic" to="PipeBrain" method="_on_PipeTentacles_Die"]
-
-[connection signal="die" from="TentaclePath/TentaclePosition/TentacleTopStatic1" to="PipeBrain" method="_on_PipeTentacles_Die"]
-
-[connection signal="die" from="TentaclePath/TentaclePosition/TentacleBottomStatic1" to="PipeBrain" method="_on_PipeTentacles_Die"]
 
 [connection signal="body_enter" from="ScoringArea" to="PipeBrain" method="_on_player_pass"]
 
