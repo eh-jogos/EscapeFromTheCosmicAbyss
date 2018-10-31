@@ -14,20 +14,20 @@ var boss = {
 
 var beats = {
 	"none": 0,
-	"tentacles": 25,
-	"double_pipe":12,
-	"triple_pipe":6,
-	"wall": 3,
+	"tentacles": 5,
+	"double_pipe":1,
+	"triple_pipe":1,
+	"wall": 0,
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
 }
 
 var half_beats = {
-	"none": 30,
-	"tentacles": 10,
-	"double_pipe":4,
-	"triple_pipe":2,
+	"none": 5,
+	"tentacles": 0,
+	"double_pipe":1,
+	"triple_pipe":1,
 	"wall": 0,
 	"laser_eye": 0,
 	"shield_up": 0,

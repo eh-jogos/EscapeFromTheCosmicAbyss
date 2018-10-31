@@ -12,6 +12,7 @@ var object_spawner
 
 # Other "Game Screens"
 var game_over_screen
+var level_complete_screen
 var countdown
 var tutorial
 
@@ -46,6 +47,7 @@ var current_state = STATE["Playing"]
 func _ready():
 	# Game Screens
 	game_over_screen = self.get_node("AboveScreen/GameOverScreen")
+	level_complete_screen = self.get_node("AboveScreen/LevelCompleteScreen")
 	countdown = self.get_node("AboveScreen/CountdownScreen")
 	tutorial = self.get_node("AboveScreen/TutorialScreen")
 	
@@ -113,7 +115,8 @@ func _on_scored(num):
 	
 	points += num
 	points_level = int(points/point_multiple)
-	print(points_level)
+	#print(points_level)
+	
 	if points_level > last_point_level:
 		ammunition.add_ammo()
 		
@@ -122,7 +125,7 @@ func _on_scored(num):
 			player.speed_x += 1.0
 			player.gravity += 10.0
 			player.speed_y -= 20.0
-			print("speed_x: %s | gravity: %s | speed_y: %s"%[player.speed_x, player.gravity, player.speed_y])
+			#print("speed_x: %s | gravity: %s | speed_y: %s"%[player.speed_x, player.gravity, player.speed_y])
 			if not player.dashing:
 				player.speed.x = player.speed_x* player.unit.x
 	#			print(player.speed.x)
@@ -155,3 +158,7 @@ func game_start():
 
 func tutorial_start():
 	tutorial.play()
+
+func _on_level_end():
+	level_complete_screen.open(level_title)
+	get_tree().set_pause(true)

@@ -18,6 +18,8 @@ var half_group
 var level
 var half_countdown = 4
 
+signal level_end
+
 func _ready():
 	obstacle_group = get_node(obstacle_parent)
 	half_group = get_node(obstacle_half_parent)
@@ -50,7 +52,7 @@ func next_beat():
 		level["beats"].pop_front()
 		#print(level)
 	else:
-		print("ENDED")
+		emit_signal("level_end")
 		pass
 
 func next_half_beat():
