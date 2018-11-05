@@ -6,8 +6,8 @@
 [ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=4]
 [ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=5]
 [ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=6]
-[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=7]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=8]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=7]
+[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=8]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -309,12 +309,12 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Replay" type="Button" parent="."]
+[node name="Next Level" type="Button" parent="."]
 
 focus_neighbour/left = NodePath("../Quit")
 focus_neighbour/top = NodePath("../Quit")
-focus_neighbour/right = NodePath("../Next Level")
-focus_neighbour/bottom = NodePath("../Options")
+focus_neighbour/right = NodePath("../Level Select")
+focus_neighbour/bottom = NodePath("../Replay")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -327,21 +327,22 @@ margin/bottom = 848.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Play Again"
+text = "Next Level"
 flat = false
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
-[node name="Next Level" type="Button" parent="."]
+[node name="Level Select" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Replay")
+focus_neighbour/left = NodePath("../Next Level")
 focus_neighbour/top = NodePath("../Quit")
-focus_neighbour/right = NodePath("../Upgrade")
-focus_neighbour/bottom = NodePath("../Level Select")
+focus_neighbour/right = NodePath("../Replay")
+focus_neighbour/bottom = NodePath("../Upgrade")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -360,15 +361,15 @@ disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Next Level"
+text = "Level Select"
 flat = false
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
-[node name="Upgrade" type="Button" parent="."]
+[node name="Replay" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Next Level")
-focus_neighbour/top = NodePath("../Replay")
-focus_neighbour/right = NodePath("../Level Select")
+focus_neighbour/left = NodePath("../Level Select")
+focus_neighbour/top = NodePath("../Next Level")
+focus_neighbour/right = NodePath("../Upgrade")
 focus_neighbour/bottom = NodePath("../Quit")
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -382,19 +383,19 @@ margin/bottom = 952.0
 custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Upgrade"
+text = "Play Again"
 flat = false
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
-[node name="Level Select" type="Button" parent="."]
+[node name="Upgrade" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Upgrade")
-focus_neighbour/top = NodePath("../Next Level")
+focus_neighbour/left = NodePath("../Replay")
+focus_neighbour/top = NodePath("../Level Select")
 focus_neighbour/right = NodePath("../Quit")
 focus_neighbour/bottom = NodePath("../Quit")
 focus/ignore_mouse = false
@@ -410,21 +411,20 @@ custom_styles/hover = SubResource( 5 )
 custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
-disabled = true
+custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Level Select"
+text = "Upgrade"
 flat = false
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
 [node name="Quit" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Level Select")
-focus_neighbour/top = NodePath("../Level Select")
-focus_neighbour/right = NodePath("../Replay")
-focus_neighbour/bottom = NodePath("../Replay")
+focus_neighbour/left = NodePath("../Upgrade")
+focus_neighbour/top = NodePath("../Upgrade")
+focus_neighbour/right = NodePath("../Next Level")
+focus_neighbour/bottom = NodePath("../Next Level")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -444,7 +444,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Quit"
 flat = false
-script/script = ExtResource( 8 )
+script/script = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -457,13 +457,13 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
-
 [connection signal="pressed" from="Next Level" to="." method="_on_Next_Level_pressed"]
 
-[connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]
-
 [connection signal="pressed" from="Level Select" to="." method="_on_Level_Select_pressed"]
+
+[connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
+
+[connection signal="pressed" from="Upgrade" to="." method="_on_upgrade_pressed"]
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 

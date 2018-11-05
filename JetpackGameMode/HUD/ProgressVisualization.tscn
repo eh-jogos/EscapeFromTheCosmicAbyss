@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=1]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=3]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=4]
+
+[sub_resource type="ColorRamp" id=1]
+
+offsets = FloatArray( 0, 0.985915, 1 )
+colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
+
+[node name="ProgressVisualization" type="CenterContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 32.0
+margin/top = 1025.0
+margin/right = 1878.0
+margin/bottom = 1071.0
+use_top_left = false
+script/script = ExtResource( 1 )
+ending_cap = 35
+progress_barrier = ExtResource( 2 )
+
+[node name="ProgressBar" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1846.0
+margin/bottom = 46.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="IconContainer" type="CenterContainer" parent="ProgressBar"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 3.0
+margin/right = 30.0
+margin/bottom = 46.0
+use_top_left = false
+
+[node name="Particles2D" type="Particles2D" parent="ProgressBar/IconContainer"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 15, 21 )
+config/amount = 1
+config/lifetime = 0.5
+config/process_mode = 1
+config/texture = ExtResource( 4 )
+params/direction = 0.0
+params/spread = 10.0
+params/linear_velocity = 0.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.8
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color_ramp = SubResource( 1 )
+
+[node name="Icon" type="TextureFrame" parent="ProgressBar/IconContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 6.0
+margin/right = 30.0
+margin/bottom = 36.0
+texture = ExtResource( 4 )
+modulate = Color( 0, 1, 1, 1 )
+stretch_mode = 0
+
+
