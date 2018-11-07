@@ -1,9 +1,9 @@
 extends Node
 
 export(String) var title = ""
-var intro_beats = [1,1,1,1,1]
-var intro_halfs = [0,0,0,0,0]
-var end_beat = 1
+var intro_beats = [1,1,1,1,1,4]
+var intro_halfs = [0,0,0,0,0,0]
+var end_beat = 4
 var boss = {
 	"boss_level": false,
 	"laser_countdown":0,
@@ -14,18 +14,18 @@ var boss = {
 
 var beats = {
 	"none": 0,
-	"tentacles": 25,
+	"tentacles": 27,
 	"double_pipe":0,
 	"triple_pipe":0,
-	"wall": 0,
+	"wall": 2,
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
 }
 
 var half_beats = {
-	"none": 25,
-	"tentacles": 0,
+	"none": 27,
+	"tentacles": 2,
 	"double_pipe":0,
 	"triple_pipe":0,
 	"wall": 0,

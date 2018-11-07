@@ -5,6 +5,7 @@ export(PackedScene) var progress_barrier
 
 var progress_bar
 var icon
+var icon_length
 var icon_position
 var total_length
 var increment
@@ -14,6 +15,7 @@ var progress_count = 0
 func _ready():
 	progress_bar = get_node("ProgressBar")
 	icon = get_node("ProgressBar/IconContainer")
+	icon_length = icon.get_node("Icon").get_texture().get_width()
 	icon_position = icon.get_pos()
 	
 	total_length = progress_bar.get_texture().get_width() - ending_cap
@@ -21,7 +23,7 @@ func _ready():
 
 func create_barrier(step):
 	var barrier = progress_barrier.instance()
-	var position = step * increment
+	var position = (step * increment) + icon_length
 	barrier.set_pos(Vector2(position, 4))
 	progress_bar.add_child(barrier)
 

@@ -5053,7 +5053,6 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 script/script = ExtResource( 1 )
-initial_btn_path = NodePath("Map/LevelButtons/LevelButton1")
 
 [node name="ScreenBase" type="Sprite" parent="."]
 
@@ -5127,11 +5126,12 @@ modulate = Color( 0.239216, 0.0784314, 0.298039, 1 )
 
 [node name="levels_path_unlocked" type="Sprite" parent="Map"]
 
+editor/display_folded = true
 transform/pos = Vector2( 40, 285.868 )
 texture = ExtResource( 6 )
 centered = false
 region = true
-region_rect = Rect2( 0, 0, 371, 600 )
+region_rect = Rect2( 0, 0, 654, 600 )
 
 [node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
 
@@ -5152,6 +5152,22 @@ margin/left = 162.0
 margin/top = 427.0
 margin/right = 202.0
 margin/bottom = 467.0
+
+[node name="TutorialButton" type="TextureButton" parent="Map/LevelButtons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+params/resize_mode = 0
+params/stretch_mode = 0
 
 [node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 8 )]
 
@@ -5181,6 +5197,7 @@ margin/left = 429.0
 margin/top = 196.0
 margin/right = 477.0
 margin/bottom = 244.0
+disabled = false
 level_num = 3
 level_name = "Double Trouble!"
 
@@ -5192,6 +5209,7 @@ margin/left = 507.0
 margin/top = 54.0
 margin/right = 555.0
 margin/bottom = 102.0
+disabled = false
 level_num = 4
 level_name = "Triple Trouble!"
 
@@ -5313,7 +5331,7 @@ anims/state12_transition = SubResource( 23 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
-autoplay = "state12_transition"
+autoplay = "state04"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 

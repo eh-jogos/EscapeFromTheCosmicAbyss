@@ -170,6 +170,7 @@ max_lines_visible = -1
 [node name="HighscoreText" type="Label" parent="."]
 
 editor/display_folded = true
+visibility/visible = false
 material/material = SubResource( 3 )
 rect/scale = Vector2( 0.5, 0.5 )
 focus/ignore_mouse = true
@@ -313,7 +314,7 @@ max_lines_visible = -1
 
 focus_neighbour/left = NodePath("../Quit")
 focus_neighbour/top = NodePath("../Quit")
-focus_neighbour/right = NodePath("../Level Select")
+focus_neighbour/right = NodePath("../LevelSelect")
 focus_neighbour/bottom = NodePath("../Replay")
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -329,7 +330,6 @@ custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
-disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -339,7 +339,7 @@ script/script = ExtResource( 7 )
 
 [node name="LevelSelect" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Next Level")
+focus_neighbour/left = NodePath("../NextLevel")
 focus_neighbour/top = NodePath("../Quit")
 focus_neighbour/right = NodePath("../Replay")
 focus_neighbour/bottom = NodePath("../Upgrade")
@@ -366,8 +366,8 @@ script/script = ExtResource( 7 )
 
 [node name="Replay" type="Button" parent="."]
 
-focus_neighbour/left = NodePath("../Level Select")
-focus_neighbour/top = NodePath("../Next Level")
+focus_neighbour/left = NodePath("../LevelSelect")
+focus_neighbour/top = NodePath("../NextLevel")
 focus_neighbour/right = NodePath("../Upgrade")
 focus_neighbour/bottom = NodePath("../Quit")
 focus/ignore_mouse = false
@@ -394,7 +394,7 @@ script/script = ExtResource( 7 )
 [node name="Upgrade" type="Button" parent="."]
 
 focus_neighbour/left = NodePath("../Replay")
-focus_neighbour/top = NodePath("../Level Select")
+focus_neighbour/top = NodePath("../LevelSelect")
 focus_neighbour/right = NodePath("../Quit")
 focus_neighbour/bottom = NodePath("../Quit")
 focus/ignore_mouse = false
@@ -422,8 +422,8 @@ script/script = ExtResource( 7 )
 
 focus_neighbour/left = NodePath("../Upgrade")
 focus_neighbour/top = NodePath("../Upgrade")
-focus_neighbour/right = NodePath("../Next Level")
-focus_neighbour/bottom = NodePath("../Next Level")
+focus_neighbour/right = NodePath("../NextLevel")
+focus_neighbour/bottom = NodePath("../NextLevel")
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2

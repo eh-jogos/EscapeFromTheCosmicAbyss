@@ -5,6 +5,7 @@ var level_info
 
 func load_level(num):
 	level_info = get_child(num)
+	level["title"] = level_info.title
 	build_boss()
 	build_beats()
 	build_half_beats()
@@ -78,3 +79,6 @@ func key_translator(string):
 		return 7
 	else:
 		return "ERROR"
+
+func get_max_levels():
+	return self.get_child_count()

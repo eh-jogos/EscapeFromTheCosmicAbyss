@@ -37,9 +37,6 @@ func _ready():
 	
 	game = get_parent().get_parent()
 	
-	replay_btn.grab_focus()
-	
-	
 	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")
 	
@@ -58,7 +55,6 @@ func open(msg):
 	
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
-	replay_btn.grab_focus()
 	
 	score = game.get_score()
 	print_score(score, label_score)
@@ -73,6 +69,13 @@ func open(msg):
 		congratulations.show()
 		game.highscore = score
 		Global.update_story_highscore(score)
+	
+	var last_level = game.level_loader.get_max_levels()-1
+	if Global.savedata["story"]["current level"] < last_level:
+		next_level_btn.grab_focus()
+	else:
+		next_level_btn.set_disabled(true)
+		level_select_btn.grab_focus()
 
 func _on_replay_pressed():
 	if game != null:
@@ -146,4 +149,5 @@ func _on_LevelSelect_pressed():
 
 
 func _on_NextLevel_pressed():
-	pass # replace with function body
+	Global.savedata["story"]["current level"] +=1 
+	_on_replay_pressed()

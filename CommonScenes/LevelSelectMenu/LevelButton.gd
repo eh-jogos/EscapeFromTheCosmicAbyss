@@ -23,7 +23,7 @@ func _on_mouse_enter():
 
 func _on_LevelButton_pressed():
 	var game_path = "res://JetpackGameMode/JetpackGame.tscn"
-	Global.set_current_story_level(level_num, level_name)
+	Global.set_current_story_level(level_num)
 	ScreenManager.reset_above_below()
 	ScreenManager.load_screen(game_path)
 

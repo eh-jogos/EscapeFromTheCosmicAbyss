@@ -23,7 +23,6 @@ var savedata = {
 		"upgrade points": 0,
 		"levels unlocked": 0,
 		"current level":0,
-		"level title":0,
 		},
 }
 
@@ -91,9 +90,8 @@ func update_story_unlocks(level):
 	savedata["story"]["levels unlocked"] = level
 	save()
 
-func set_current_story_level(level, title):
+func set_current_story_level(level):
 	savedata["story"]["current level"] = level
-	savedata["story"]["level title"] = title
 	save()
 
 func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade):

@@ -1,9 +1,7 @@
 extends Node2D
 
 #Menu Paths
-var story_path = "res://JetpackGameMode/JetpackGame.tscn"
-var arcade_path
-var speedrun_path
+var pregame_path = "res://CommonScenes/PreGameScreen/PreGame.tscn"
 var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 
 var story_btn
@@ -26,17 +24,8 @@ func _ready():
 
 
 func _on_button_pressed(identifier):
-	var path
-	
-	if identifier == "story":
-		path = story_path
-	elif identifier == "arcade":
-		path = arcade_path
-	elif identifier == "speedrun":
-		path = speedrun_path
-	
 	Global.set_game_mode(identifier)
-	ScreenManager.load_screen(path)
+	ScreenManager.load_screen(pregame_path)
 
 func _on_options_pressed():
 	var path = options_path

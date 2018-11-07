@@ -89,14 +89,21 @@ func set_game_state(string):
 
 func load_level():
 	var num = Global.savedata["story"]["current level"]
-	var title = Global.savedata["story"]["level title"]
-	var level = level_loader.load_level(1)
+	var level
+	
+	if num < level_loader.get_max_levels():
+		level = level_loader.load_level(num)
+	else:
+		print("ERROR | LEVEL OUT OF RANGE")
+		num = level_loader.get_max_levels()-1
+		level = level_loader.load_level(num)
+	
 	object_spawner.set_level(level)
 	if num < 10:
 		level_num = "Level 0%s"%[num]
 	else:
 		level_num = "Level %s"%[num]
-	level_title = title
+	level_title = level.title
 
 func get_score():
 	return points

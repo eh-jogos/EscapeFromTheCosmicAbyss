@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-export(NodePath) var initial_btn_path
+var level_buttons
 var initial_btn
 var animator
 
@@ -25,7 +25,9 @@ func _on_Close_pressed():
 ##################
 
 func _ready():
-	initial_btn = get_node(initial_btn_path)
+	var last_played_level = Global.savedata["story"]["current level"]
+	level_buttons = get_node("Map/LevelButtons")
+	initial_btn = level_buttons.get_child(last_played_level)
 	initial_btn.grab_focus()
 	
 	animator = self.get_node("AnimationPlayer")

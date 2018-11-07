@@ -3,8 +3,7 @@ extends ColorFrame
 var next_screen_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
+	
 	pass
 
 func change_scene():
