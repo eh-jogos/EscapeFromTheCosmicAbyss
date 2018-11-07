@@ -267,40 +267,40 @@ tracks/0/path = NodePath("ScreenBase:region")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.3, 0.5 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ true, true, true ]
+"values": [ true, true ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ScreenBase:region_rect")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.5 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 960, 540, 1800, 1080 ), Rect2( 960, 540, 1800, 1080 ), Rect2( 960, 540, 0, 1080 ) ]
+"values": [ Rect2( 960, 540, 1800, 1080 ), Rect2( 960, 540, 1800, 1080 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("ColorFrame1:rect/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ), Vector2( 967, -28 ), Vector2( 967, 150 ), Vector2( 967, -1500 ) ]
+"values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ColorFrame3:rect/pos")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 60, -28 ), Vector2( 60, -28 ), Vector2( 953, -28 ), Vector2( 953, 150 ), Vector2( 953, -1500 ) ]
+"values": [ Vector2( 60, -28 ), Vector2( 60, -28 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("ColorFrame1:rect/size")

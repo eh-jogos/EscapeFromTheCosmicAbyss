@@ -23,6 +23,7 @@ export var upgrade_multiple = 30
 var points = 0
 var points_level = 0
 var cycles = 0
+var level_num
 var level_title
 var highscore = Global.savedata["story"]["highscore"]
 var initial_shield = Global.savedata["story"]["initial shield"]
@@ -31,7 +32,7 @@ var initial_speed = Global.savedata["story"]["initial speed"]
 var max_speed = 4 + Global.savedata["story"]["max speed"]
 var laser_duration = Global.savedata["story"]["laser duration"]
 var upgrade_points = Global.savedata["story"]["upgrade points"]
-var checkpoints = Global.savedata["story"]["checkpoints"]
+var levels_unlocked = Global.savedata["story"]["levels unlocked"]
 var cooldown = Global.savedata["story"]["cooldown"]
 
 const STATE = {
@@ -49,7 +50,6 @@ func _ready():
 	game_over_screen = self.get_node("AboveScreen/GameOverScreen")
 	level_complete_screen = self.get_node("AboveScreen/LevelCompleteScreen")
 	countdown = self.get_node("AboveScreen/CountdownScreen")
-	tutorial = self.get_node("AboveScreen/TutorialScreen")
 	
 	# Nodes
 	overheat_bar = self.get_node("HUD/TextureProgress")
@@ -61,18 +61,13 @@ func _ready():
 	level_loader = self.get_node("LevelLoader")
 	object_spawner = self.get_node("Camera2D/ObstacleSpawner")
 	
-	load_level(1)
+	load_level()
 	
 	ammunition.initialize_ammo(initial_ammo)
 	
-	
 	self.get_tree().set_pause(true)
 	
-	if Global.savedata["how to play"]:
-		self.game_start()
-	else:
-		self.tutorial_start()
-	pass
+	self.game_start()
 
 
 func initialize_game_stats():
@@ -83,7 +78,7 @@ func initialize_game_stats():
 	var max_speed = 4 + Global.savedata["story"]["max speed"]
 	var laser_duration = Global.savedata["story"]["laser duration"]
 	var upgrade_points = Global.savedata["story"]["upgrade points"]
-	var checkpoints = Global.savedata["story"]["checkpoints"]
+	var levels_unlocked = Global.savedata["story"]["levels unlocked"]
 	var cooldown = Global.savedata["story"]["cooldown"]
 
 func get_game_state():
@@ -92,10 +87,16 @@ func get_game_state():
 func set_game_state(string):
 	current_state = STATE[string]
 
-func load_level(num):
-	var level = level_loader.load_level(num)
+func load_level():
+	var num = Global.savedata["story"]["current level"]
+	var title = Global.savedata["story"]["level title"]
+	var level = level_loader.load_level(1)
 	object_spawner.set_level(level)
-	level_title = level.title
+	if num < 10:
+		level_num = "Level 0%s"%[num]
+	else:
+		level_num = "Level %s"%[num]
+	level_title = title
 
 func get_score():
 	return points
@@ -154,11 +155,11 @@ func dash_score():
 	update_score()
 
 func game_start():
-	countdown.play(level_title)
+	countdown.play(level_num, level_title)
 
 func tutorial_start():
 	tutorial.play()
 
 func _on_level_end():
-	level_complete_screen.open(level_title)
+	level_complete_screen.open(level_num)
 	get_tree().set_pause(true)

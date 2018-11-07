@@ -9,7 +9,6 @@ var animator
 var last_focus
 
 var game
-var tutorial_screen
 var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 
 func _ready():
@@ -22,7 +21,6 @@ func _ready():
 	tutorial_btn = self.get_node("Tutorial")
 	
 	game = self.get_parent().get_parent()
-	tutorial_screen = game.get_node("AboveScreen/TutorialScreen")
 	
 	if not options_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		options_btn.connect("focus_enter",self,"_on_focus_enter")
@@ -73,9 +71,6 @@ func _on_replay_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
-
-func _on_tutorial_pressed():
-	tutorial_screen.play(tutorial_btn)
 
 
 func _on_options_pressed():

@@ -44,6 +44,16 @@ func clear_above():
 	scene_below.get_node(previous_focus).grab_focus()
 	previous_focus = null
 
+func reset_above_below():
+	if scene_above == null:
+		print("ERROR | Scene Above is null")
+		return
+	
+	get_tree().get_root().remove_child(scene_above)
+	scene_above = null
+	scene_below = null
+	previous_focus = null
+
 func load_screen(path):
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null:

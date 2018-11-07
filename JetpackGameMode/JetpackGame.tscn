@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=1]
+[gd_scene load_steps=63 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -43,8 +43,7 @@
 [ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=41]
 [ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=42]
 [ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=43]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialScreen.tscn" type="PackedScene" id=44]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=45]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=44]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -890,7 +889,6 @@ stretch_mode = 0
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -908,11 +906,7 @@ visibility/visible = false
 
 visibility/visible = false
 
-[node name="TutorialScreen" parent="AboveScreen" instance=ExtResource( 44 )]
-
-visibility/visible = false
-
-[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 45 )]
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 44 )]
 
 visibility/visible = false
 

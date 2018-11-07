@@ -1,6 +1,5 @@
 extends Node
 
-var level_title = "Level 01"
 var intro_beats = [1,1,1,1,1]
 var intro_halfs = [0,0,0,0,0]
 var end_beat = 4

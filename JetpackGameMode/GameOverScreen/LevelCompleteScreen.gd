@@ -20,12 +20,13 @@ var congratulations
 
 var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 func _ready():
 	replay_btn = self.get_node("Replay")
-	next_level_btn = self.get_node("Next Level")
+	next_level_btn = self.get_node("NextLevel")
 	upgrade_btn = self.get_node("Upgrade")
-	level_select_btn = self.get_node("Level Select")
+	level_select_btn = self.get_node("LevelSelect")
 	animator = self.get_node("AnimationPlayer")
 	
 	label_message = self.get_node("CompleteText")
@@ -134,9 +135,15 @@ func _on_focus_enter():
 		print_decimal(upgrade_points, label_upgrade)
 		
 
-func _on_Level_Select_pressed():
-	pass # replace with function body
+func _on_LevelSelect_pressed():
+	var path = level_select_path
+	last_focus = level_select_btn.get_path()
+	animator.play("fade out")
+	yield(animator, "finished")
+	
+	self.hide()
+	ScreenManager.load_above(path, last_focus, self)
 
 
-func _on_Next_Level_pressed():
+func _on_NextLevel_pressed():
 	pass # replace with function body

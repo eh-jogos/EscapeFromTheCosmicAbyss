@@ -3,6 +3,7 @@ extends Node2D
 var replay_btn
 var options_btn
 var upgrade_btn
+var level_select_btn
 var animator
 
 var last_focus
@@ -18,11 +19,13 @@ var congratulations
 
 var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 func _ready():
 	replay_btn = self.get_node("Replay")
 	options_btn = self.get_node("Options")
 	upgrade_btn = self.get_node("Upgrade")
+	level_select_btn = self.get_node("LevelSelect")
 	animator = self.get_node("AnimationPlayer")
 	
 	label_score = self.get_node("Score")
@@ -137,3 +140,12 @@ func _on_focus_enter():
 		upgrade_points = Global.savedata["story"]["upgrade points"]
 		print_decimal(upgrade_points, label_upgrade)
 		
+
+func _on_LevelSelect_pressed():
+	var path = level_select_path
+	last_focus = level_select_btn.get_path()
+	animator.play("fade out")
+	yield(animator, "finished")
+	
+	self.hide()
+	ScreenManager.load_above(path, last_focus, self)
