@@ -40,6 +40,7 @@ level_name = "title"
 number_label = NodePath("../../LevelNumber")
 title_label = NodePath("../../LevelTitle")
 animator_path = NodePath("../../AnimationPlayer")
+menu_animator_path = NodePath("../../../AnimationPlayer")
 
 [node name="Particles2D" type="Particles2D" parent="."]
 

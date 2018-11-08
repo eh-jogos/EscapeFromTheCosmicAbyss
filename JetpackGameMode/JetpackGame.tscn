@@ -1,52 +1,53 @@
-[gd_scene load_steps=66 format=1]
+[gd_scene load_steps=67 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
-[ext_resource path="res://Levels/Level1.gd" type="Script" id=3]
-[ext_resource path="res://Levels/Level2.gd" type="Script" id=4]
-[ext_resource path="res://Levels/Level3.gd" type="Script" id=5]
-[ext_resource path="res://Levels/Level4.gd" type="Script" id=6]
-[ext_resource path="res://JetpackGameMode/Camera/Camera.gd" type="Script" id=7]
-[ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" type="Script" id=8]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" type="PackedScene" id=9]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" type="PackedScene" id=10]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" type="PackedScene" id=11]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" type="PackedScene" id=12]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" type="PackedScene" id=13]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_3.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_4.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/BG/BG_LooperH.gd" type="Script" id=19]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_0.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_1.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_2.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_3.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_4.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_0.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_1.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_2.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_3.png" type="Texture" id=28]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_4.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" type="Texture" id=30]
-[ext_resource path="res://JetpackGameMode/BG/BG_LooperH2.gd" type="Script" id=31]
-[ext_resource path="res://JetpackGameMode/Character/Player.tscn" type="PackedScene" id=32]
-[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" type="PackedScene" id=33]
-[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" type="PackedScene" id=34]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=35]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=36]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=37]
-[ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=38]
-[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=39]
-[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=40]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=41]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=42]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=43]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=44]
-[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=45]
-[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=46]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Levels/Level0.gd" type="Script" id=3]
+[ext_resource path="res://Levels/Level1.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Level2.gd" type="Script" id=5]
+[ext_resource path="res://Levels/Level3.gd" type="Script" id=6]
+[ext_resource path="res://Levels/Level4.gd" type="Script" id=7]
+[ext_resource path="res://JetpackGameMode/Camera/Camera.gd" type="Script" id=8]
+[ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" type="Script" id=9]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" type="PackedScene" id=10]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" type="PackedScene" id=11]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" type="PackedScene" id=12]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" type="PackedScene" id=13]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" type="PackedScene" id=14]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_3.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_4.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/BG/BG_LooperH.gd" type="Script" id=20]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_0.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_1.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_2.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_3.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_4.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_0.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_1.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_2.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_3.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_4.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/BG/BG_LooperH2.gd" type="Script" id=32]
+[ext_resource path="res://JetpackGameMode/Character/Player.tscn" type="PackedScene" id=33]
+[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" type="PackedScene" id=34]
+[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=36]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=37]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=39]
+[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=40]
+[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=41]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=42]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=43]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=44]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=45]
+[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=46]
+[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=47]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=48]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -64,34 +65,34 @@ extents = Vector2( 10, 629.357 )
 custom_solver_bias = 0.0
 extents = Vector2( 55.4252, 2224.51 )
 
-[sub_resource type="SpriteFrames" id=19]
+[sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
 } ]
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
 } ]
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=6]
 
 animations = [ {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
 } ]
 
-[sub_resource type="CanvasItemShader" id=22]
+[sub_resource type="CanvasItemShader" id=7]
 
 _code = {
 "fragment": "uniform float outline_width=2.0;
@@ -123,9 +124,9 @@ COLOR=mix(col,outline_color,maxa-mina);",
 "vertex_ofs": 0
 }
 
-[sub_resource type="CanvasItemMaterial" id=23]
+[sub_resource type="CanvasItemMaterial" id=8]
 
-shader/shader = SubResource( 22 )
+shader/shader = SubResource( 7 )
 shader/shading_mode = 0
 shader_param/outline_width = 6.0
 shader_param/outline_color = Color( 0.0745392, 0.0628662, 0.15625, 1 )
@@ -309,24 +310,27 @@ script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
 
+script/script = ExtResource( 3 )
+title = "How to Play"
+
 [node name="Level1" type="Node" parent="LevelLoader"]
 
-script/script = ExtResource( 3 )
-title = "Jetpack for your life!"
+script/script = ExtResource( 4 )
+title = ""
 
 [node name="Level2" type="Node" parent="LevelLoader"]
 
-script/script = ExtResource( 4 )
+script/script = ExtResource( 5 )
 title = "Pew pew!"
 
 [node name="Level3" type="Node" parent="LevelLoader"]
 
-script/script = ExtResource( 5 )
+script/script = ExtResource( 6 )
 title = "Double Trouble!"
 
 [node name="Level4" type="Node" parent="LevelLoader"]
 
-script/script = ExtResource( 6 )
+script/script = ExtResource( 7 )
 title = "Triple Trouble!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -348,7 +352,7 @@ drag_margin/left = 0.0
 drag_margin/top = 0.0
 drag_margin/right = 0.0
 drag_margin/bottom = 0.0
-script/script = ExtResource( 7 )
+script/script = ExtResource( 8 )
 
 [node name="Limites" type="StaticBody2D" parent="Camera2D"]
 
@@ -441,14 +445,14 @@ _update_shape_index = 0
 [node name="ObstacleSpawner" type="Position2D" parent="Camera2D"]
 
 transform/pos = Vector2( 960, 0 )
-script/script = ExtResource( 8 )
+script/script = ExtResource( 9 )
 obstacle_parent = NodePath("../../Obstaculos/ObstacleBeat")
 obstacle_half_parent = NodePath("../../Obstaculos/ObstacleHalfBeat")
-none = ExtResource( 9 )
-pipe = ExtResource( 10 )
-double_pipe = ExtResource( 11 )
-triple_pipe = ExtResource( 12 )
-wall = ExtResource( 13 )
+none = ExtResource( 10 )
+pipe = ExtResource( 11 )
+double_pipe = ExtResource( 12 )
+triple_pipe = ExtResource( 13 )
+wall = ExtResource( 14 )
 laser_eye = null
 shield_up = null
 ammo_up = null
@@ -481,9 +485,9 @@ __meta__ = {
 
 editor/display_folded = true
 transform/pos = Vector2( 1010, 540 )
-frames = SubResource( 19 )
+frames = SubResource( 4 )
 animation = "default"
-script/script = ExtResource( 19 )
+script/script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -497,10 +501,10 @@ transform/pos = Vector2( 1010, 540 )
 
 editor/display_folded = true
 transform/pos = Vector2( 3030, 540 )
-frames = SubResource( 19 )
+frames = SubResource( 4 )
 animation = "default"
 frame = 2
-script/script = ExtResource( 19 )
+script/script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -524,10 +528,10 @@ __meta__ = {
 
 editor/display_folded = true
 transform/pos = Vector2( 1010, 540 )
-frames = SubResource( 20 )
+frames = SubResource( 5 )
 animation = "default"
 frame = 1
-script/script = ExtResource( 19 )
+script/script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -541,10 +545,10 @@ transform/pos = Vector2( 1010, 540 )
 
 editor/display_folded = true
 transform/pos = Vector2( 3030, 540 )
-frames = SubResource( 20 )
+frames = SubResource( 5 )
 animation = "default"
 frame = 3
-script/script = ExtResource( 19 )
+script/script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -565,10 +569,10 @@ motion/mirroring = Vector2( 0, 0 )
 
 editor/display_folded = true
 transform/pos = Vector2( 1010, 540 )
-frames = SubResource( 21 )
+frames = SubResource( 6 )
 animation = "default"
 frame = 2
-script/script = ExtResource( 19 )
+script/script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -582,10 +586,10 @@ transform/pos = Vector2( 1010, 540 )
 
 editor/display_folded = true
 transform/pos = Vector2( 3030, 540 )
-frames = SubResource( 21 )
+frames = SubResource( 6 )
 animation = "default"
 frame = 4
-script/script = ExtResource( 19 )
+script/script = ExtResource( 20 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -606,10 +610,10 @@ motion/mirroring = Vector2( 0, 0 )
 
 editor/display_folded = true
 visibility/light_mask = 1024
-material/material = SubResource( 23 )
+material/material = SubResource( 8 )
 transform/pos = Vector2( 960, 540 )
-texture = ExtResource( 30 )
-script/script = ExtResource( 31 )
+texture = ExtResource( 31 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -619,7 +623,7 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( 960, 540 )
 
-[node name="Player" parent="." instance=ExtResource( 32 )]
+[node name="Player" parent="." instance=ExtResource( 33 )]
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -629,20 +633,20 @@ editor/display_folded = true
 
 editor/display_folded = true
 
-[node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 33 )]
+[node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 34 )]
 
 transform/pos = Vector2( 0, 1019 )
 
-[node name="BottomLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 33 )]
+[node name="BottomLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 34 )]
 
 transform/pos = Vector2( 2370, 1019 )
 
-[node name="TopLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 33 )]
+[node name="TopLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 34 )]
 
 transform/pos = Vector2( 0, 61 )
 transform/scale = Vector2( 1, -1 )
 
-[node name="TopLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 33 )]
+[node name="TopLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 34 )]
 
 transform/pos = Vector2( 2370, 61 )
 transform/scale = Vector2( 1, -1 )
@@ -655,20 +659,20 @@ transform/scale = Vector2( 1, -1 )
 
 editor/display_folded = true
 
-[node name="BottomScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 34 )]
+[node name="BottomScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 35 )]
 
 transform/pos = Vector2( 0, 1019 )
 
-[node name="BottomScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 34 )]
+[node name="BottomScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 35 )]
 
 transform/pos = Vector2( 2370, 1019 )
 
-[node name="TopScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 34 )]
+[node name="TopScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 35 )]
 
 transform/pos = Vector2( 0, 61 )
 transform/scale = Vector2( 1, -1 )
 
-[node name="TopScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 34 )]
+[node name="TopScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 35 )]
 
 transform/pos = Vector2( 2370, 61 )
 transform/scale = Vector2( 1, -1 )
@@ -690,7 +694,7 @@ margin/left = 44.0
 margin/top = 88.0
 margin/right = 152.0
 margin/bottom = 125.0
-custom_fonts/font = ExtResource( 35 )
+custom_fonts/font = ExtResource( 36 )
 text = "Score:"
 percent_visible = 1.0
 lines_skipped = 0
@@ -706,7 +710,7 @@ margin/left = 160.0
 margin/top = 88.0
 margin/right = 260.0
 margin/bottom = 125.0
-custom_fonts/font = ExtResource( 35 )
+custom_fonts/font = ExtResource( 36 )
 text = "0000"
 percent_visible = 1.0
 lines_skipped = 0
@@ -732,15 +736,15 @@ range/value = 0.0
 range/exp_edit = false
 range/rounded = false
 texture/under = null
-texture/over = ExtResource( 36 )
-texture/progress = ExtResource( 37 )
+texture/over = ExtResource( 37 )
+texture/progress = ExtResource( 38 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
 [node name="Ammunition" type="Node2D" parent="HUD/TextureProgress"]
 
 editor/display_folded = true
-script/script = ExtResource( 38 )
+script/script = ExtResource( 39 )
 
 [node name="AmmoSlot1" type="Position2D" parent="HUD/TextureProgress/Ammunition"]
 
@@ -807,7 +811,7 @@ margin/left = 492.0
 margin/top = 250.0
 margin/right = 1476.0
 margin/bottom = 336.0
-custom_fonts/font = ExtResource( 39 )
+custom_fonts/font = ExtResource( 40 )
 text = "+ UPGRADE POINT!"
 align = 1
 valign = 1
@@ -837,9 +841,9 @@ margin/top = 1025.0
 margin/right = 1878.0
 margin/bottom = 1071.0
 use_top_left = false
-script/script = ExtResource( 40 )
+script/script = ExtResource( 41 )
 ending_cap = 35
-progress_barrier = ExtResource( 41 )
+progress_barrier = ExtResource( 42 )
 
 [node name="ProgressBar" type="TextureFrame" parent="HUD/ProgressVisualization"]
 
@@ -851,7 +855,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1846.0
 margin/bottom = 46.0
-texture = ExtResource( 42 )
+texture = ExtResource( 43 )
 stretch_mode = 0
 
 [node name="IconContainer" type="CenterContainer" parent="HUD/ProgressVisualization/ProgressBar"]
@@ -873,7 +877,7 @@ transform/pos = Vector2( 15, 21 )
 config/amount = 1
 config/lifetime = 0.5
 config/process_mode = 1
-config/texture = ExtResource( 43 )
+config/texture = ExtResource( 44 )
 params/direction = 0.0
 params/spread = 10.0
 params/linear_velocity = 0.0
@@ -902,7 +906,7 @@ margin/left = 0.0
 margin/top = 6.0
 margin/right = 30.0
 margin/bottom = 36.0
-texture = ExtResource( 43 )
+texture = ExtResource( 44 )
 modulate = Color( 0, 1, 1, 1 )
 stretch_mode = 0
 
@@ -914,19 +918,19 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 44 )]
+[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 45 )]
 
 visibility/visible = false
 
-[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 45 )]
+[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 46 )]
 
 visibility/visible = false
 
-[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 46 )]
+[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 47 )]
 
 visibility/visible = false
 
-[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 47 )]
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 48 )]
 
 visibility/visible = false
 

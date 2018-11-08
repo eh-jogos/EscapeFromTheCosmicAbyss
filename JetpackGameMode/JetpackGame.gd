@@ -168,5 +168,10 @@ func tutorial_start():
 	tutorial.play()
 
 func _on_level_end():
+	player_end_level()
 	level_complete_screen.open(level_num)
 	get_tree().set_pause(true)
+
+func player_end_level():
+	player.gravity_force = 0
+	player.jetpack_force = 0

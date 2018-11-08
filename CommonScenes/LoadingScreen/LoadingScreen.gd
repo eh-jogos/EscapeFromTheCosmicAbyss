@@ -55,13 +55,14 @@ func reset_above_below():
 	previous_focus = null
 
 func load_screen(path):
+	animation.play("fade_in")
+	yield(animation, "finished")
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null:
 #		show_error()
 		return
 	
 	set_process(true)
-	animation.play("fade_in")
 
 func _process(delta):
 	if loader == null:
@@ -97,6 +98,8 @@ func set_new_scene(scene_resource):
 	get_tree().change_scene_to(scene_resource)
 	
 	animation.play_backwards("fade_in")
+	yield(animation, "finished")
+	progress_bar.set_value(0)
 	animation_loaded = false
 
 func animation_ready():

@@ -5,17 +5,20 @@ export(String) var level_name = "title"
 export(NodePath) var number_label
 export(NodePath) var title_label
 export(NodePath) var animator_path
+export(NodePath) var menu_animator_path
 
 var level_number
 var level_title
 var particle_fx
 var animator
+var menu_animator
 
 func _ready():
 	self.connect("mouse_enter",self,"_on_mouse_enter")
 	level_number = get_node(number_label)
 	level_title = get_node(title_label)
 	animator = get_node(animator_path)
+	menu_animator = get_node(menu_animator_path)
 	particle_fx = get_node("Particles2D")
 
 func _on_mouse_enter():
@@ -23,19 +26,20 @@ func _on_mouse_enter():
 
 func _on_LevelButton_pressed():
 	var game_path = "res://JetpackGameMode/JetpackGame.tscn"
+	
 	Global.set_current_story_level(level_num)
-	ScreenManager.reset_above_below()
 	ScreenManager.load_screen(game_path)
-
+	menu_animator.play("close")
+	
+	yield(menu_animator, "finished")
+	ScreenManager.reset_above_below()
 
 func _on_LevelButton_focus_enter():
 	var level_num_str
 	if level_num >= 10:
 		level_num_str = "Level %s"%[level_num]
-	elif level_num > 0:
-		level_num_str = "Level 0%s"%[level_num]
 	else:
-		level_num_str = "Tutorial"
+		level_num_str = "Level 0%s"%[level_num]
 	
 	level_number.set_text(level_num_str)
 	level_title.set_text(level_name)

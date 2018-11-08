@@ -102,7 +102,6 @@ script/script = ExtResource( 1 )
 
 [node name="Parallax3" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 motion/scale = Vector2( 0.25, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
@@ -126,26 +125,8 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( 1010, 540 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="Parallax3"]
-
-editor/display_folded = true
-transform/pos = Vector2( 3030, 540 )
-frames = SubResource( 1 )
-animation = "default"
-frame = 2
-script/script = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="EndPoint" type="Position2D" parent="Parallax3/Sprite1"]
-
-visibility/visible = false
-transform/pos = Vector2( 1010, 540 )
-
 [node name="Parallax2" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 motion/scale = Vector2( 0.4, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
@@ -170,26 +151,8 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( 1010, 540 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="Parallax2"]
-
-editor/display_folded = true
-transform/pos = Vector2( 3030, 540 )
-frames = SubResource( 2 )
-animation = "default"
-frame = 3
-script/script = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="EndPoint" type="Position2D" parent="Parallax2/Sprite1"]
-
-visibility/visible = false
-transform/pos = Vector2( 1010, 540 )
-
 [node name="Parallax1" type="ParallaxLayer" parent="."]
 
-editor/display_folded = true
 motion/scale = Vector2( 0.5, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
@@ -207,23 +170,6 @@ __meta__ = {
 }
 
 [node name="EndPoint" type="Position2D" parent="Parallax1/Sprite0"]
-
-visibility/visible = false
-transform/pos = Vector2( 1010, 540 )
-
-[node name="Sprite1" type="AnimatedSprite" parent="Parallax1"]
-
-editor/display_folded = true
-transform/pos = Vector2( 3030, 540 )
-frames = SubResource( 3 )
-animation = "default"
-frame = 4
-script/script = ExtResource( 7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="EndPoint" type="Position2D" parent="Parallax1/Sprite1"]
 
 visibility/visible = false
 transform/pos = Vector2( 1010, 540 )
