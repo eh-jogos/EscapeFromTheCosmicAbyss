@@ -1,0 +1,149 @@
+[gd_scene load_steps=8 format=1]
+
+[ext_resource path="res://JetpackGameMode/PowerUps/ShieldBrain.gd" type="Script" id=1]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=2]
+[ext_resource path="res://JetpackGameMode/PowerUps/ShieldBG.png" type="Texture" id=3]
+
+[sub_resource type="SegmentShape2D" id=1]
+
+custom_solver_bias = 0.0
+a = Vector2( 0, 0 )
+b = Vector2( 0, 700 )
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 0, 0, 219.995, -404.666, 0, 0, 0, 0, 220.383, 383.598 )
+}
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 50.4487
+
+[sub_resource type="ColorRamp" id=4]
+
+offsets = FloatArray( 0, 0.50237, 1 )
+colors = ColorArray( 1, 1, 1, 0.909804, 1, 1, 1, 0.896868, 0.239216, 0.0901961, 0.431373, 0 )
+
+[node name="ShieldUp" type="Node2D" groups=[
+"pipes",
+]]
+
+transform/pos = Vector2( 1920, 540 )
+
+[node name="ShieldBrain" type="Node" parent="."]
+
+script/script = ExtResource( 1 )
+position_range = NodePath("../Path2D/PositionRange")
+shield_icon = NodePath("../Path2D/PositionRange/ShieldIcon")
+shield_increment = 1
+
+[node name="ScoringArea" type="Area2D" parent="." groups=[
+"score",
+]]
+
+editor/display_folded = true
+transform/pos = Vector2( 388.933, -1080 )
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -350 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea"]
+
+transform/pos = Vector2( 0, -350 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+transform/pos = Vector2( 53, 0 )
+transform/scale = Vector2( 17.35, 1.62407 )
+rect = Rect2( 0, -540, 20, 1080 )
+
+[node name="Path2D" type="Path2D" parent="."]
+
+curve = SubResource( 2 )
+
+[node name="PositionRange" type="PathFollow2D" parent="Path2D"]
+
+transform/pos = Vector2( 220.189, -10.467 )
+transform/rot = -89.9724
+offset = 393.453
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="ShieldIcon" type="Area2D" parent="Path2D/PositionRange"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="Particles2D" type="Particles2D" parent="Path2D/PositionRange/ShieldIcon"]
+
+visibility/behind_parent = true
+transform/scale = Vector2( 0.607119, 0.607119 )
+config/amount = 1
+config/lifetime = 0.8
+config/process_mode = 1
+config/texture = ExtResource( 2 )
+params/direction = 0.0
+params/spread = 10.0
+params/linear_velocity = 0.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 0.0
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.5
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+color/color = Color( 1, 1, 1, 0.909804 )
+color/color_ramp = SubResource( 4 )
+
+[node name="Shield" type="Sprite" parent="Path2D/PositionRange/ShieldIcon"]
+
+transform/pos = Vector2( 0.196438, 0.196438 )
+transform/scale = Vector2( 0.607119, 0.607119 )
+texture = ExtResource( 2 )
+modulate = Color( 0, 0.960784, 1, 1 )
+
+[node name="BG" type="Sprite" parent="Path2D/PositionRange/ShieldIcon/Shield"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -0.323547, -0.323486 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PositionRange/ShieldIcon"]
+
+visibility/visible = false
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[connection signal="exit_screen" from="VisibilityNotifier2D" to="ShieldBrain" method="_on_VisibilityNotifier2D_exit_screen"]
+
+[connection signal="body_enter" from="Path2D/PositionRange/ShieldIcon" to="ShieldBrain" method="_on_ShieldIcon_body_enter"]
+
+

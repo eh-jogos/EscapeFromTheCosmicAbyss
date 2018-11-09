@@ -2789,8 +2789,6 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-monitoring = false
-monitorable = false
 script/script = ExtResource( 490 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
@@ -2802,7 +2800,6 @@ _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="Shield"]
 
-visibility/visible = false
 texture = ExtResource( 491 )
 modulate = Color( 0.835294, 0, 1, 1 )
 

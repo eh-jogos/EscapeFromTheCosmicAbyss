@@ -1,8 +1,9 @@
 extends Node2D
 
 #Menu Paths
-var pregame_path = "res://CommonScenes/PreGameScreen/PreGame.tscn"
-var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+export(String, FILE) var pregame_path = "res://CommonScenes/PreGameScreen/PreGame.tscn"
+export(String, FILE) var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+export(String, FILE) var game_path
 
 var story_btn
 var arcade_btn
@@ -25,7 +26,10 @@ func _ready():
 
 func _on_button_pressed(identifier):
 	Global.set_game_mode(identifier)
-	ScreenManager.load_screen(pregame_path)
+	if identifier == "story" and not has_completed_tutorial():
+		ScreenManager.load_screen(game_path)
+	else:
+		ScreenManager.load_screen(pregame_path)
 
 func _on_options_pressed():
 	var path = options_path
@@ -35,3 +39,9 @@ func _on_options_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+func has_completed_tutorial():
+	if Global.savedata["story"]["levels unlocked"] == 0:
+		return false
+	else:
+		return true

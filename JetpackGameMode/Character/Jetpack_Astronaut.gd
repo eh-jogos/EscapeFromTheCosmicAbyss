@@ -64,7 +64,7 @@ func _ready():
 	laser_duration = 1.5 + (0.5*game.laser_duration)
 	cooldown = 1.5 + (0.1 * game.cooldown)
 	
-	shield.increase_energy(shield_energy)
+	shield_up(shield_energy)
 	
 	falling = true
 	body_animator.play("falling")
@@ -188,7 +188,7 @@ func _fixed_process(delta):
 					#print("Rising | speed.y: %s"%[speed.y])
 			
 			self.move(final_motion)
-			pass
+			
 		elif collider.is_in_group("enemy") and not is_dead:
 			#print("Shield Energy at death: %s"%[shield_energy])
 			is_dead = true
@@ -200,7 +200,7 @@ func _fixed_process(delta):
 			var offset = self.get_global_pos()
 			collider.kill_player(offset)
 #			queue_free()
-			pass
+			
 		else: 
 			var normal = get_collision_normal()
 			motion = normal.slide(motion)
@@ -241,3 +241,7 @@ func fall_to_rise():
 	body_animator.play("rising")
 	if not shooting:
 		arms_animator.play("rising")
+
+func shield_up(increment):
+	shield.increase_energy(increment)
+	

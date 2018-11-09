@@ -21,6 +21,7 @@ var half_countdown = 4
 signal level_ready
 signal level_end
 signal update_visualization
+signal level_tutorial
 
 func _ready():
 	obstacle_group = get_node(obstacle_parent)
@@ -67,6 +68,8 @@ func next_half_beat():
 func set_level(level_dict):
 	level = level_dict
 	print(level)
+	if level.tutorial:
+		emit_signal("level_tutorial")
 	emit_signal("level_ready", level)
 	next_beat()
 
@@ -79,3 +82,7 @@ func _on_HalfBeat_area_exit( area ):
 	if area.is_in_group("score") and not area.get_parent().get_parent() == half_group:
 		next_half_beat()
 		emit_signal("update_visualization")
+
+func connect_tutorial_signal(object):
+	if not self.is_connected("update_visualization",object,"beat_countdown"):
+		self.connect("update_visualization",object,"beat_countdown")

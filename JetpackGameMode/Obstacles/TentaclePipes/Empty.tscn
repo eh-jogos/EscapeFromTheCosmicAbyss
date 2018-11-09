@@ -14,7 +14,7 @@ b = Vector2( 0, 700 )
 
 transform/pos = Vector2( 1920, 540 )
 
-[node name="PipeBrain" type="Node" parent="."]
+[node name="EmptyBrain" type="Node" parent="."]
 
 script/script = ExtResource( 1 )
 
@@ -42,11 +42,10 @@ _update_shape_index = 0
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-visibility/visible = false
 transform/pos = Vector2( 53, 0 )
 transform/scale = Vector2( 17.35, 1.62407 )
 rect = Rect2( 0, -540, 20, 1080 )
 
-[connection signal="exit_screen" from="VisibilityNotifier2D" to="PipeBrain" method="_on_VisibilityNotifier2D_exit_screen"]
+[connection signal="exit_screen" from="VisibilityNotifier2D" to="EmptyBrain" method="_on_VisibilityNotifier2D_exit_screen"]
 
 

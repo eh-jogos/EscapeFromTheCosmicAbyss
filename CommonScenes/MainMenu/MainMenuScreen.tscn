@@ -45,6 +45,9 @@ content_margin/bottom = -1.0
 [node name="MainMenuScreen" type="Node2D"]
 
 script/script = ExtResource( 1 )
+pregame_path = "res://CommonScenes/PreGameScreen/PreGame.tscn"
+options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
 [node name="MenuContainer" type="Control" parent="."]
 

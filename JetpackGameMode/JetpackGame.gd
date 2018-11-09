@@ -50,6 +50,7 @@ func _ready():
 	game_over_screen = self.get_node("AboveScreen/GameOverScreen")
 	level_complete_screen = self.get_node("AboveScreen/LevelCompleteScreen")
 	countdown = self.get_node("AboveScreen/CountdownScreen")
+	tutorial = self.get_node("AboveScreen/TutorialTipScreen")
 	
 	# Nodes
 	overheat_bar = self.get_node("HUD/TextureProgress")
@@ -162,7 +163,11 @@ func dash_score():
 	update_score()
 
 func game_start():
-	countdown.play(level_num, level_title)
+	if current_state == STATE["Tutorial"]:
+		tutorial.play(level_num, level_title)
+		object_spawner.connect_tutorial_signal(tutorial)
+	else:
+		countdown.play(level_num, level_title)
 
 func tutorial_start():
 	tutorial.play()
@@ -175,3 +180,6 @@ func _on_level_end():
 func player_end_level():
 	player.gravity_force = 0
 	player.jetpack_force = 0
+
+func _on_level_tutorial():
+	set_game_state("Tutorial")

@@ -6,6 +6,7 @@ var level_info
 func load_level(num):
 	level_info = get_child(num)
 	level["title"] = level_info.title
+	level["tutorial"] = level_info.tutorial
 	build_boss()
 	build_beats()
 	build_half_beats()

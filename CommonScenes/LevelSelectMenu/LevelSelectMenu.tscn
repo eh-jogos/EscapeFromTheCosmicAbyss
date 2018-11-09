@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=1]
+[gd_scene load_steps=43 format=1]
 
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelSelectMenu.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/blue_screen.png" type="Texture" id=2]
@@ -7,16 +7,13 @@
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" type="Texture" id=5]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" type="Texture" id=6]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" type="Texture" id=7]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_normal.png" type="Texture" id=8]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_pressed.png" type="Texture" id=9]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_hover.png" type="Texture" id=10]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.gd" type="Script" id=11]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" type="PackedScene" id=12]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_7.png" type="Texture" id=13]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=14]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=15]
-[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=16]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=17]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/TutorialButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_7.png" type="Texture" id=10]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=11]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=13]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=14]
 
 [sub_resource type="Animation" id=1]
 
@@ -2366,7 +2363,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ) ]
+"values": [ ExtResource( 10 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2567,7 +2564,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ) ]
+"values": [ ExtResource( 10 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2968,7 +2965,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ) ]
+"values": [ ExtResource( 10 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -5157,37 +5154,15 @@ margin/top = 427.0
 margin/right = 202.0
 margin/bottom = 467.0
 
-[node name="TutorialButton" type="TextureButton" parent="Map/LevelButtons"]
+[node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 8 )]
 
-focus_neighbour/left = NodePath("../LevelButton12")
-focus_neighbour/top = NodePath("../LevelButton1")
-focus_neighbour/right = NodePath("../LevelButton1")
-focus_neighbour/bottom = NodePath("../../../Buttons/Upgrade")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
 margin/left = -50.0
 margin/top = 220.0
 margin/right = 30.0
 margin/bottom = 312.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 8 )
-textures/pressed = ExtResource( 9 )
-textures/hover = ExtResource( 10 )
-params/resize_mode = 0
-params/stretch_mode = 0
-script/script = ExtResource( 11 )
-level_num = 0
 level_name = "How to Play"
-number_label = NodePath("../../LevelNumber")
-title_label = NodePath("../../LevelTitle")
-animator_path = NodePath("../../AnimationPlayer")
-menu_animator_path = NodePath("../../../AnimationPlayer")
 
-[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../TutorialButton")
 focus_neighbour/right = NodePath("../LevelButton2")
@@ -5196,7 +5171,7 @@ disabled = false
 level_num = 1
 level_name = "Jetpack for your life!"
 
-[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton1")
 focus_neighbour/right = NodePath("../LevelButton3")
@@ -5208,7 +5183,7 @@ disabled = false
 level_num = 2
 level_name = "Pew pew!"
 
-[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton2")
 focus_neighbour/right = NodePath("../LevelButton4")
@@ -5220,7 +5195,7 @@ disabled = false
 level_num = 3
 level_name = "Double Trouble!"
 
-[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton3")
 focus_neighbour/right = NodePath("../LevelButton5")
@@ -5232,7 +5207,7 @@ disabled = false
 level_num = 4
 level_name = "Triple Trouble!"
 
-[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton4")
 focus_neighbour/right = NodePath("../LevelButton6")
@@ -5243,7 +5218,7 @@ margin/bottom = 87.0
 level_num = 5
 level_name = "What was that sound?"
 
-[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton5")
 focus_neighbour/right = NodePath("../LevelButton7")
@@ -5254,7 +5229,7 @@ margin/bottom = -58.0
 level_num = 6
 level_name = "Dash like you mean it!"
 
-[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton6")
 focus_neighbour/right = NodePath("../LevelButton8")
@@ -5265,7 +5240,7 @@ margin/bottom = 158.0
 level_num = 7
 level_name = "I feel like I'm being watched!"
 
-[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton7")
 focus_neighbour/right = NodePath("../LevelButton9")
@@ -5276,7 +5251,7 @@ margin/bottom = 279.0
 level_num = 8
 level_name = "It's right behind me, isn't it?"
 
-[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton8")
 focus_neighbour/right = NodePath("../LevelButton10")
@@ -5287,7 +5262,7 @@ margin/bottom = 261.0
 level_num = 9
 level_name = "Almost there!"
 
-[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton9")
 focus_neighbour/right = NodePath("../LevelButton11")
@@ -5298,7 +5273,7 @@ margin/bottom = 351.0
 level_num = 10
 level_name = "Are we there yet?"
 
-[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton10")
 focus_neighbour/right = NodePath("../LevelButton12")
@@ -5309,7 +5284,7 @@ margin/bottom = 433.0
 level_num = 11
 level_name = "The Calm Before the Storm!"
 
-[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 12 )]
+[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 9 )]
 
 focus_neighbour/left = NodePath("../LevelButton11")
 focus_neighbour/right = NodePath("../TutorialButton")
@@ -5366,7 +5341,7 @@ __meta__ = {
 
 visibility/blend_mode = 2
 transform/pos = Vector2( 960, 540 )
-texture = ExtResource( 14 )
+texture = ExtResource( 11 )
 region = true
 region_rect = Rect2( 0, 0, 1800, 1080 )
 __meta__ = {
@@ -5378,7 +5353,7 @@ __meta__ = {
 visibility/opacity = 0.547357
 visibility/blend_mode = 1
 transform/pos = Vector2( 960, 694.598 )
-texture = ExtResource( 15 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 0, 654.598, 1800, 80 )
 __meta__ = {
@@ -5417,7 +5392,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 16 )
+theme/theme = ExtResource( 13 )
 margin/left = 110.0
 margin/top = 979.0
 margin/right = 302.0
@@ -5428,7 +5403,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Upgrade"
 flat = false
-script/script = ExtResource( 17 )
+script/script = ExtResource( 14 )
 
 [node name="Close" type="Button" parent="Buttons"]
 
@@ -5440,7 +5415,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 16 )
+theme/theme = ExtResource( 13 )
 margin/left = 1678.0
 margin/top = 979.0
 margin/right = 1812.0
@@ -5450,7 +5425,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Close"
 flat = false
-script/script = ExtResource( 17 )
+script/script = ExtResource( 14 )
 
 [node name="ColorFrame1" type="ColorFrame" parent="."]
 
@@ -5489,10 +5464,6 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
-
-[connection signal="focus_enter" from="Map/LevelButtons/TutorialButton" to="Map/LevelButtons/TutorialButton" method="_on_LevelButton_focus_enter"]
-
-[connection signal="pressed" from="Map/LevelButtons/TutorialButton" to="Map/LevelButtons/TutorialButton" method="_on_LevelButton_pressed"]
 
 [connection signal="pressed" from="Buttons/Close" to="." method="_on_Close_pressed"]
 
