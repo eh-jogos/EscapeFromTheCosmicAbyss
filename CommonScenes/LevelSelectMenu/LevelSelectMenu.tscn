@@ -5132,7 +5132,7 @@ transform/pos = Vector2( 40, 285.868 )
 texture = ExtResource( 6 )
 centered = false
 region = true
-region_rect = Rect2( 0, 0, 654, 600 )
+region_rect = Rect2( 0, 0, 146, 600 )
 
 [node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
 
@@ -5156,6 +5156,10 @@ margin/bottom = 467.0
 
 [node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 8 )]
 
+focus_neighbour/left = NodePath("../LevelButton12")
+focus_neighbour/top = NodePath("../LevelButton1")
+focus_neighbour/right = NodePath("../LevelButton1")
+focus_neighbour/bottom = NodePath("../../../Buttons/Upgrade")
 margin/left = -50.0
 margin/top = 220.0
 margin/right = 30.0
@@ -5179,7 +5183,6 @@ margin/left = 226.0
 margin/top = -116.0
 margin/right = 274.0
 margin/bottom = -68.0
-disabled = false
 level_num = 2
 level_name = "Pew pew!"
 
@@ -5191,7 +5194,6 @@ margin/left = 429.0
 margin/top = 196.0
 margin/right = 477.0
 margin/bottom = 244.0
-disabled = false
 level_num = 3
 level_name = "Double Trouble!"
 
@@ -5203,7 +5205,6 @@ margin/left = 507.0
 margin/top = 54.0
 margin/right = 555.0
 margin/bottom = 102.0
-disabled = false
 level_num = 4
 level_name = "Triple Trouble!"
 

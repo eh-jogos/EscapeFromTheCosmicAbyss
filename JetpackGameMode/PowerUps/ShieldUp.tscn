@@ -14,7 +14,7 @@ b = Vector2( 0, 700 )
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, 219.995, -404.666, 0, 0, 0, 0, 220.383, 383.598 )
+"points": Vector2Array( 0, 0, 0, 0, 219.084, -350.099, 0, 0, 0, 0, 219.295, 347.292 )
 }
 
 [sub_resource type="CircleShape2D" id=3]
@@ -74,8 +74,8 @@ curve = SubResource( 2 )
 
 [node name="PositionRange" type="PathFollow2D" parent="Path2D"]
 
-transform/pos = Vector2( 220.189, -10.467 )
-transform/rot = -89.9724
+transform/pos = Vector2( 219.203, 43.5079 )
+transform/rot = -89.983
 offset = 393.453
 h_offset = 0.0
 v_offset = 0.0
@@ -131,9 +131,11 @@ modulate = Color( 0, 0.960784, 1, 1 )
 
 [node name="BG" type="Sprite" parent="Path2D/PositionRange/ShieldIcon/Shield"]
 
+visibility/opacity = 0.4
 visibility/behind_parent = true
 transform/pos = Vector2( -0.323547, -0.323486 )
 texture = ExtResource( 3 )
+modulate = Color( 0, 0.956863, 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PositionRange/ShieldIcon"]
 

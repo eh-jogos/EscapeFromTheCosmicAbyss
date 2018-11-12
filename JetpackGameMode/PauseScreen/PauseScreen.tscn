@@ -148,31 +148,6 @@ text = "Replay"
 flat = false
 script/script = ExtResource( 7 )
 
-[node name="Tutorial" type="Button" parent="."]
-
-process/pause_mode = 2
-focus_neighbour/top = NodePath("../Replay")
-focus_neighbour/bottom = NodePath("../Options")
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
-margin/left = 845.0
-margin/top = 681.0
-margin/right = 1075.0
-margin/bottom = 757.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/font = ExtResource( 6 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Tutorial"
-flat = false
-script/script = ExtResource( 7 )
-
 [node name="Options" type="Button" parent="."]
 
 process/pause_mode = 2
@@ -184,9 +159,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 845.0
-margin/top = 785.0
+margin/top = 681.0
 margin/right = 1075.0
-margin/bottom = 861.0
+margin/bottom = 757.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
@@ -209,9 +184,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 845.0
-margin/top = 889.0
+margin/top = 785.0
 margin/right = 1075.0
-margin/bottom = 965.0
+margin/bottom = 861.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
@@ -238,8 +213,6 @@ autoplay = ""
 [connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
 
 [connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
-
-[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
 
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 

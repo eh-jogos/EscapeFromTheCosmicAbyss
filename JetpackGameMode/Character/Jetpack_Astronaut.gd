@@ -244,4 +244,6 @@ func fall_to_rise():
 
 func shield_up(increment):
 	shield.increase_energy(increment)
-	
+
+func score():
+	game._on_scored(5)

@@ -2,8 +2,8 @@ extends Node
 
 export(String) var title = ""
 var tutorial = true
-var intro_beats = [0,0,1,1,1,1,1,1,1]
-var intro_halfs = [0,0,0,0,0,6,0,0,0]
+var intro_beats = [0,0,1,1,1,1,6,1,1,1,0]
+var intro_halfs = [0,0,0,0,0,0,0,0,0,0,0]
 var end_beat = 4
 var boss = {
 	"boss_level": false,

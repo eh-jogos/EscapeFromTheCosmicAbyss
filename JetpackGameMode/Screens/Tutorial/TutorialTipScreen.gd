@@ -2,27 +2,37 @@ extends Node2D
 
 # class member variables go here, for example:
 var game
-var level_num
-var level_title
+export(NodePath) var level_num
+export(NodePath) var level_title
+export(NodePath) var tip_selector
+
+var tips_countdown = [0,3,7,2,8]
+var next_countdown = 0
+var countdown
 
 func _ready():
 	game = self.get_parent().get_parent()
-	level_num = self.get_node("LevelNum")
-	level_title = self.get_node("LevelTitle")
+	level_num = self.get_node(level_num)
+	level_title = self.get_node(level_title)
+	tip_selector = self.get_node(tip_selector)
 	pass
 
 func play(num, title):
 	self.show()
 	#SoundManager.stop_bgm()
-	game.set_game_state("Start")
 	game.initialize_game_stats()
 	level_num.set_text(num)
 	level_title.set_text(title)
-	set_process_input(true)
+	print("TUTORIAL TIP #%s"%[next_countdown])
+	load_next_tip()
+
+func show_tip():
+	self.get_tree().set_pause(true)
+	self.show()
+	load_next_tip()
 
 func _input(event):
 	if event.is_action_pressed("boost"):
-		game.set_game_state("Playing")
 		self.get_tree().set_pause(false)
 		self.hide()
 		self.set_process_input(false)
@@ -33,4 +43,18 @@ func _input(event):
 			SoundManager.play_bgm()
 
 func beat_countdown():
-	print("TUTORIAL COUNTDOWN")
+	countdown -= 1
+	if countdown == 0:
+		print("TUTORIAL TIP #%s"%[next_countdown])
+		show_tip()
+
+func load_next_tip():
+	tip_selector.play("TipScreen_%s"%[next_countdown])
+	next_countdown += 1
+	
+	if next_countdown >= tips_countdown.size():
+		print("END OF TIPS | Reseting tip settings")
+		next_countdown = 0
+		countdown = 0
+	else:
+		countdown = tips_countdown[next_countdown]

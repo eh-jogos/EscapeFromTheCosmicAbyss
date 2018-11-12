@@ -49,6 +49,7 @@ func modulate_shield():
 func increase_energy(increment):
 	if energy+increment > MAX_SHIELD:
 		energy = MAX_SHIELD
+		player.score()
 	elif energy+increment <= MAX_SHIELD:
 		energy += increment
 	else:
