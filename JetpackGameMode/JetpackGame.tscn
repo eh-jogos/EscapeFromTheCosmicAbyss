@@ -304,7 +304,7 @@ colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
 
 script/script = ExtResource( 1 )
 point_multiple = 5
-upgrade_multiple = 70
+upgrade_multiple = 30
 
 [node name="LevelLoader" type="Node" parent="."]
 
@@ -462,6 +462,7 @@ ammo_up = null
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0

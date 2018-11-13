@@ -1,14 +1,18 @@
 extends Node2D
 
+export(String, FILE) var main_menu_path
+export(String, FILE) var options_path
+export(String, FILE) var level_select_path
+
 # class member variables go here, for example:
 var resume_btn
 var options_btn
+var level_select_btn
 var animator
 
 var last_focus
 
 var game
-var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 
 func _ready():
 	animator = self.get_node("AnimationPlayer")
@@ -17,11 +21,15 @@ func _ready():
 	resume_btn.grab_focus()
 	
 	options_btn = self.get_node("Options")
+	level_select_btn = self.get_node("LevelSelect")
 	
 	game = self.get_parent().get_parent()
 	
 	if not options_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		options_btn.connect("focus_enter",self,"_on_focus_enter")
+	
+	if not level_select_btn.is_connected("focus_enter",self,"_on_focus_enter"):
+		level_select_btn.connect("focus_enter",self,"_on_focus_enter")
 	
 	set_process_input(true)
 	pass
@@ -91,3 +99,19 @@ func _on_focus_enter():
 		yield(animator, "finished")
 		
 		SoundManager.pause_bgm()
+
+
+func _on_LevelSelect_pressed():
+	var path = level_select_path
+	last_focus = level_select_btn.get_path()
+	
+	animator.play("fade out")
+	yield(animator, "finished")
+	
+	self.hide()
+	
+	ScreenManager.load_above(path, last_focus, self)
+
+
+func _on_QuitMainMenu_pressed():
+	ScreenManager.load_screen(main_menu_path)

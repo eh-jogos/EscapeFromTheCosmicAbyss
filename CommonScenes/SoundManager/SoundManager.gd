@@ -85,6 +85,8 @@ func change_bgm_volume(vol):
 	bgm_preview.set_volume(float(vol)/100)
 
 func fade_out_start():
+	if fade_in.is_active():
+		fade_in_stop()
 	initial_volume = bgm_stream.get_volume()
 	fade_out.set_active(true)
 	fade_out.start()
@@ -97,6 +99,8 @@ func fade_out_stop():
 	print("Stop Volume: %s"%[bgm_stream.get_volume()])
 
 func fade_in_start():
+	if fade_out.is_active():
+		fade_out_stop()
 	initial_volume = bgm_stream.get_volume()
 	fade_in.set_active(true)
 	fade_in.start()

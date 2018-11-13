@@ -2,7 +2,7 @@ extends Node
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
-var version = 0.5
+var version = 0.51
 var current_game_mode = null
 
 var savedata = {
@@ -23,6 +23,8 @@ var savedata = {
 		"upgrade points": 0,
 		"levels unlocked": 0,
 		"current level":0,
+		"last unlock": 0,
+		"story beaten": false
 		},
 }
 
@@ -88,6 +90,10 @@ func update_story_upgrade(points):
 
 func update_story_unlocks(level):
 	savedata["story"]["levels unlocked"] = level
+	save()
+
+func update_story_last_unlock(level):
+	savedata["story"]["last unlock"] = level
 	save()
 
 func set_current_story_level(level):

@@ -204,6 +204,207 @@ tracks/17/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="Animation" id=3]
+
+resource/name = "state01_transition"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelButtons/LevelButton12:disabled")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LevelButtons/LevelButton8:disabled")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelButtons/LevelButton7:disabled")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("LevelButtons/LevelButton1:disabled")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("levels_path_unlocked:region")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("levels_path_unlocked:region_rect")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 146, 600 ), Rect2( 0, 0, 371, 600 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("levels_path_unlocked:texture")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 285.868 ) ]
+}
+tracks/16/type = "method"
+tracks/16/path = NodePath("LevelButtons/LevelButton2")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 1 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [ "state02" ],
+"method": "transition_animation"
+} ]
+}
+tracks/17/type = "method"
+tracks/17/path = NodePath("LevelButtons/LevelButton1")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_mouse_enter"
+} ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
 [sub_resource type="Animation" id=2]
 
 resource/name = "state02"
@@ -405,10 +606,10 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 
 resource/name = "state02_transition"
-length = 1.0
+length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -509,7 +710,7 @@ tracks/9/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
@@ -546,10 +747,10 @@ tracks/13/path = NodePath("levels_path_unlocked:region_rect")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 1 ),
+"times": FloatArray( 0, 1.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 146, 600 ), Rect2( 0, 0, 371, 600 ) ]
+"values": [ Rect2( 0, 0, 371, 600 ), Rect2( 0, 0, 574, 600 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -572,19 +773,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton2")
+tracks/16/path = NodePath("LevelButtons/LevelButton3")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 1 ),
+"times": FloatArray( 1.5 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state02" ],
+"args": [ "state03" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton1")
+tracks/17/path = NodePath("LevelButtons/LevelButton2")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -806,10 +1007,10 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 
 resource/name = "state03_transition"
-length = 1.5
+length = 0.7
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -900,7 +1101,7 @@ tracks/8/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
@@ -947,10 +1148,10 @@ tracks/13/path = NodePath("levels_path_unlocked:region_rect")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 1.5 ),
+"times": FloatArray( 0, 0.7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 371, 600 ), Rect2( 0, 0, 574, 600 ) ]
+"values": [ Rect2( 0, 0, 574, 600 ), Rect2( 0, 0, 654, 600 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -973,19 +1174,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton3")
+tracks/16/path = NodePath("LevelButtons/LevelButton4")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 1.5 ),
+"times": FloatArray( 0.7 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state03" ],
+"args": [ "state04" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton2")
+tracks/17/path = NodePath("LevelButtons/LevelButton3")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -1207,7 +1408,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 
 resource/name = "state04_transition"
 length = 0.7
@@ -1291,7 +1492,7 @@ tracks/7/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
@@ -1351,7 +1552,7 @@ tracks/13/keys = {
 "times": FloatArray( 0, 0.7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 574, 600 ), Rect2( 0, 0, 654, 600 ) ]
+"values": [ Rect2( 0, 0, 654, 600 ), Rect2( 0, 0, 799, 600 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -1374,19 +1575,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton4")
+tracks/16/path = NodePath("LevelButtons/LevelButton5")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
 "times": FloatArray( 0.7 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state04" ],
+"args": [ "state05" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton3")
+tracks/17/path = NodePath("LevelButtons/LevelButton4")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -1608,10 +1809,10 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=11]
 
 resource/name = "state05_transition"
-length = 0.7
+length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -1682,7 +1883,7 @@ tracks/6/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
@@ -1749,10 +1950,10 @@ tracks/13/path = NodePath("levels_path_unlocked:region_rect")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 0.7 ),
+"times": FloatArray( 0, 1 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 654, 600 ), Rect2( 0, 0, 799, 600 ) ]
+"values": [ Rect2( 0, 0, 799, 600 ), Rect2( 0, 0, 978, 600 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -1775,19 +1976,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton5")
+tracks/16/path = NodePath("LevelButtons/LevelButton6")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0.7 ),
+"times": FloatArray( 1 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state05" ],
+"args": [ "state06" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton4")
+tracks/17/path = NodePath("LevelButtons/LevelButton5")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -2009,7 +2210,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=13]
 
 resource/name = "state06_transition"
 length = 1.0
@@ -2073,7 +2274,7 @@ tracks/5/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
@@ -2153,7 +2354,7 @@ tracks/13/keys = {
 "times": FloatArray( 0, 1 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 799, 600 ), Rect2( 0, 0, 978, 600 ) ]
+"values": [ Rect2( 0, 0, 938, 374 ), Rect2( 0, 0, 1168, 374 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -2163,7 +2364,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ) ]
+"values": [ ExtResource( 10 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2173,22 +2374,22 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 83, 304 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton6")
+tracks/16/path = NodePath("LevelButtons/LevelButton7")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
 "times": FloatArray( 1 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state06" ],
+"args": [ "state07" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton5")
+tracks/17/path = NodePath("LevelButtons/LevelButton6")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -2204,10 +2405,10 @@ tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visi
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ false, false ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -2410,410 +2611,9 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=13]
-
-resource/name = "state07_transition"
-length = 1.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("LevelButtons/LevelButton12:disabled")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("LevelButtons/LevelButton8:disabled")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("LevelButtons/LevelButton7:disabled")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("LevelButtons/LevelButton1:disabled")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("levels_path_unlocked:region")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("levels_path_unlocked:region_rect")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Rect2( 0, 0, 938, 374 ), Rect2( 0, 0, 1168, 374 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("levels_path_unlocked:texture")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 10 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 83, 304 ) ]
-}
-tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton7")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 1 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [ "state07" ],
-"method": "transition_animation"
-} ]
-}
-tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton6")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "_on_mouse_enter"
-} ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visible")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
-}
-
-[sub_resource type="Animation" id=14]
-
-length = 0.01
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("LevelButtons/LevelButton12:disabled")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("LevelButtons/LevelButton8:disabled")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("LevelButtons/LevelButton7:disabled")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("LevelButtons/LevelButton1:disabled")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("levels_path_unlocked:region")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("levels_path_unlocked:region_rect")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Rect2( 0, 0, 1168, 600 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("levels_path_unlocked:texture")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 7 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 84, 301 ) ]
-}
-tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton8")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [ true ],
-"method": "toggle_particle"
-} ]
-}
-tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton7")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [ false ],
-"method": "toggle_particle"
-} ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visible")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
 [sub_resource type="Animation" id=15]
 
-resource/name = "state08_transition"
+resource/name = "state07_transition"
 length = 0.7
 loop = false
 step = 0.1
@@ -3042,6 +2842,407 @@ tracks/21/keys = {
 "values": [ Vector2( 1037, 255 ) ]
 }
 
+[sub_resource type="Animation" id=14]
+
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelButtons/LevelButton12:disabled")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LevelButtons/LevelButton8:disabled")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelButtons/LevelButton7:disabled")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("LevelButtons/LevelButton1:disabled")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("levels_path_unlocked:region")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("levels_path_unlocked:region_rect")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 1168, 600 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("levels_path_unlocked:texture")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, 301 ) ]
+}
+tracks/16/type = "method"
+tracks/16/path = NodePath("LevelButtons/LevelButton8")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "toggle_particle"
+} ]
+}
+tracks/17/type = "method"
+tracks/17/path = NodePath("LevelButtons/LevelButton7")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [ false ],
+"method": "toggle_particle"
+} ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=17]
+
+resource/name = "state08_transition"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelButtons/LevelButton12:disabled")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LevelButtons/LevelButton8:disabled")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelButtons/LevelButton7:disabled")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("LevelButtons/LevelButton1:disabled")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("levels_path_unlocked:region")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("levels_path_unlocked:region_rect")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 1160, 600 ), Rect2( 0, 0, 1388, 600 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("levels_path_unlocked:texture")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 285.868 ) ]
+}
+tracks/16/type = "method"
+tracks/16/path = NodePath("LevelButtons/LevelButton9")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 1 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [ "state09" ],
+"method": "transition_animation"
+} ]
+}
+tracks/17/type = "method"
+tracks/17/path = NodePath("LevelButtons/LevelButton8")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_mouse_enter"
+} ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visible")
+tracks/18/interp = 1
+tracks/18/imported = false
+tracks/18/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
 [sub_resource type="Animation" id=16]
 
 length = 0.01
@@ -3242,10 +3443,10 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=19]
 
 resource/name = "state09_transition"
-length = 1.0
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -3276,7 +3477,7 @@ tracks/2/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
@@ -3383,10 +3584,10 @@ tracks/13/path = NodePath("levels_path_unlocked:region_rect")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 1 ),
+"times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 1160, 600 ), Rect2( 0, 0, 1388, 600 ) ]
+"values": [ Rect2( 0, 0, 1408, 400 ), Rect2( 0, 0, 1408, 465 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -3409,19 +3610,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton9")
+tracks/16/path = NodePath("LevelButtons/LevelButton10")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 1 ),
+"times": FloatArray( 0.5 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state09" ],
+"args": [ "state10" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton8")
+tracks/17/path = NodePath("LevelButtons/LevelButton9")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -3643,10 +3844,10 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=21]
 
 resource/name = "state10_transition"
-length = 0.5
+length = 0.7
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -3667,7 +3868,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
@@ -3784,10 +3985,10 @@ tracks/13/path = NodePath("levels_path_unlocked:region_rect")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 0.5 ),
+"times": FloatArray( 0, 0.7 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 1408, 400 ), Rect2( 0, 0, 1408, 465 ) ]
+"values": [ Rect2( 0, 0, 1408, 465 ), Rect2( 0, 0, 1513, 575 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -3810,19 +4011,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton10")
+tracks/16/path = NodePath("LevelButtons/LevelButton11")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0.5 ),
+"times": FloatArray( 0.7 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state10" ],
+"args": [ "state11" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton9")
+tracks/17/path = NodePath("LevelButtons/LevelButton10")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -4044,10 +4245,10 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=23]
 
 resource/name = "state11_transition"
-length = 0.7
+length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -4058,7 +4259,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
@@ -4185,10 +4386,10 @@ tracks/13/path = NodePath("levels_path_unlocked:region_rect")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0, 0.7 ),
+"times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 1408, 465 ), Rect2( 0, 0, 1513, 575 ) ]
+"values": [ Rect2( 0, 0, 1513, 575 ), Rect2( 0, 0, 1613, 575 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("levels_path_unlocked:texture")
@@ -4211,19 +4412,19 @@ tracks/15/keys = {
 "values": [ Vector2( 40, 285.868 ) ]
 }
 tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton11")
+tracks/16/path = NodePath("LevelButtons/LevelButton12")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0.7 ),
+"times": FloatArray( 0.5 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
-"args": [ "state11" ],
+"args": [ "state12" ],
 "method": "transition_animation"
 } ]
 }
 tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton10")
+tracks/17/path = NodePath("LevelButtons/LevelButton11")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -4432,207 +4633,6 @@ tracks/17/keys = {
 "values": [ {
 "args": [ false ],
 "method": "toggle_particle"
-} ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("levels_path_unlocked/level_8_path_fix:visibility/visible")
-tracks/18/interp = 1
-tracks/18/imported = false
-tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=23]
-
-resource/name = "state12_transition"
-length = 0.5
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("LevelButtons/LevelButton12:disabled")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LevelButtons/LevelButton11:disabled")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("LevelButtons/LevelButton10:disabled")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("LevelButtons/LevelButton9:disabled")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("LevelButtons/LevelButton8:disabled")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("LevelButtons/LevelButton7:disabled")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("LevelButtons/LevelButton6:disabled")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("LevelButtons/LevelButton5:disabled")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("LevelButtons/LevelButton4:disabled")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("LevelButtons/LevelButton3:disabled")
-tracks/9/interp = 1
-tracks/9/imported = false
-tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("LevelButtons/LevelButton2:disabled")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("LevelButtons/LevelButton1:disabled")
-tracks/11/interp = 1
-tracks/11/imported = false
-tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("levels_path_unlocked:region")
-tracks/12/interp = 1
-tracks/12/imported = false
-tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("levels_path_unlocked:region_rect")
-tracks/13/interp = 1
-tracks/13/imported = false
-tracks/13/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Rect2( 0, 0, 1513, 575 ), Rect2( 0, 0, 1613, 575 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("levels_path_unlocked:texture")
-tracks/14/interp = 1
-tracks/14/imported = false
-tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ ExtResource( 6 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
-}
-tracks/16/type = "method"
-tracks/16/path = NodePath("LevelButtons/LevelButton12")
-tracks/16/interp = 1
-tracks/16/imported = false
-tracks/16/keys = {
-"times": FloatArray( 0.5 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [ "state12" ],
-"method": "transition_animation"
-} ]
-}
-tracks/17/type = "method"
-tracks/17/path = NodePath("LevelButtons/LevelButton11")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "_on_mouse_enter"
 } ]
 }
 tracks/18/type = "value"
@@ -5132,7 +5132,7 @@ transform/pos = Vector2( 40, 285.868 )
 texture = ExtResource( 6 )
 centered = false
 region = true
-region_rect = Rect2( 0, 0, 146, 600 )
+region_rect = Rect2( 0, 0, 1613, 575 )
 
 [node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
 
@@ -5159,7 +5159,6 @@ margin/bottom = 467.0
 focus_neighbour/left = NodePath("../LevelButton12")
 focus_neighbour/top = NodePath("../LevelButton1")
 focus_neighbour/right = NodePath("../LevelButton1")
-focus_neighbour/bottom = NodePath("../../../Buttons/Upgrade")
 margin/left = -50.0
 margin/top = 220.0
 margin/right = 30.0
@@ -5183,6 +5182,7 @@ margin/left = 226.0
 margin/top = -116.0
 margin/right = 274.0
 margin/bottom = -68.0
+disabled = false
 level_num = 2
 level_name = "Pew pew!"
 
@@ -5194,6 +5194,7 @@ margin/left = 429.0
 margin/top = 196.0
 margin/right = 477.0
 margin/bottom = 244.0
+disabled = false
 level_num = 3
 level_name = "Double Trouble!"
 
@@ -5205,6 +5206,7 @@ margin/left = 507.0
 margin/top = 54.0
 margin/right = 555.0
 margin/bottom = 102.0
+disabled = false
 level_num = 4
 level_name = "Triple Trouble!"
 
@@ -5216,6 +5218,7 @@ margin/left = 653.0
 margin/top = 39.0
 margin/right = 701.0
 margin/bottom = 87.0
+disabled = false
 level_num = 5
 level_name = "What was that sound?"
 
@@ -5227,6 +5230,7 @@ margin/left = 832.0
 margin/top = -106.0
 margin/right = 880.0
 margin/bottom = -58.0
+disabled = false
 level_num = 6
 level_name = "Dash like you mean it!"
 
@@ -5238,6 +5242,7 @@ margin/left = 1029.0
 margin/top = 110.0
 margin/right = 1077.0
 margin/bottom = 158.0
+disabled = false
 level_num = 7
 level_name = "I feel like I'm being watched!"
 
@@ -5249,6 +5254,7 @@ margin/left = 963.0
 margin/top = 231.0
 margin/right = 1011.0
 margin/bottom = 279.0
+disabled = false
 level_num = 8
 level_name = "It's right behind me, isn't it?"
 
@@ -5260,6 +5266,7 @@ margin/left = 1256.0
 margin/top = 213.0
 margin/right = 1304.0
 margin/bottom = 261.0
+disabled = false
 level_num = 9
 level_name = "Almost there!"
 
@@ -5271,6 +5278,7 @@ margin/left = 1244.0
 margin/top = 303.0
 margin/right = 1292.0
 margin/bottom = 351.0
+disabled = false
 level_num = 10
 level_name = "Are we there yet?"
 
@@ -5282,6 +5290,7 @@ margin/left = 1363.0
 margin/top = 385.0
 margin/right = 1411.0
 margin/bottom = 433.0
+disabled = false
 level_num = 11
 level_name = "The Calm Before the Storm!"
 
@@ -5293,6 +5302,7 @@ margin/left = 1467.0
 margin/top = 375.0
 margin/right = 1515.0
 margin/bottom = 423.0
+disabled = false
 level_num = 12
 level_name = "If that was the 'Calm', what is the 'Storm'?!"
 
@@ -5302,32 +5312,32 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/state01 = SubResource( 1 )
+anims/state01_transition = SubResource( 3 )
 anims/state02 = SubResource( 2 )
-anims/state02_transition = SubResource( 3 )
+anims/state02_transition = SubResource( 5 )
 anims/state03 = SubResource( 4 )
-anims/state03_transition = SubResource( 5 )
+anims/state03_transition = SubResource( 7 )
 anims/state04 = SubResource( 6 )
-anims/state04_transition = SubResource( 7 )
+anims/state04_transition = SubResource( 9 )
 anims/state05 = SubResource( 8 )
-anims/state05_transition = SubResource( 9 )
+anims/state05_transition = SubResource( 11 )
 anims/state06 = SubResource( 10 )
-anims/state06_transition = SubResource( 11 )
+anims/state06_transition = SubResource( 13 )
 anims/state07 = SubResource( 12 )
-anims/state07_transition = SubResource( 13 )
+anims/state07_transition = SubResource( 15 )
 anims/state08 = SubResource( 14 )
-anims/state08_transition = SubResource( 15 )
+anims/state08_transition = SubResource( 17 )
 anims/state09 = SubResource( 16 )
-anims/state09_transition = SubResource( 17 )
+anims/state09_transition = SubResource( 19 )
 anims/state10 = SubResource( 18 )
-anims/state10_transition = SubResource( 19 )
+anims/state10_transition = SubResource( 21 )
 anims/state11 = SubResource( 20 )
-anims/state11_transition = SubResource( 21 )
+anims/state11_transition = SubResource( 23 )
 anims/state12 = SubResource( 22 )
-anims/state12_transition = SubResource( 23 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
-autoplay = "state04"
+autoplay = ""
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 
@@ -5383,34 +5393,11 @@ margin/top = 0.0
 margin/right = 40.0
 margin/bottom = 40.0
 
-[node name="Upgrade" type="Button" parent="Buttons"]
-
-focus_neighbour/left = NodePath("../Close")
-focus_neighbour/top = NodePath("../../Map/LevelButtons/TutorialButton")
-focus_neighbour/right = NodePath("../Close")
-focus_neighbour/bottom = NodePath("../../Map/LevelButtons/LevelButton1")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 13 )
-margin/left = 110.0
-margin/top = 979.0
-margin/right = 302.0
-margin/bottom = 1055.0
-disabled = true
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Upgrade"
-flat = false
-script/script = ExtResource( 14 )
-
 [node name="Close" type="Button" parent="Buttons"]
 
-focus_neighbour/left = NodePath("../Upgrade")
+focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../../Map/LevelButtons/LevelButton12")
-focus_neighbour/right = NodePath("../Upgrade")
+focus_neighbour/right = NodePath(".")
 focus_neighbour/bottom = NodePath("../../Map/LevelButtons/LevelButton1")
 focus/ignore_mouse = false
 focus/stop_mouse = true

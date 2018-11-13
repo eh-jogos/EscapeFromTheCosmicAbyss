@@ -71,7 +71,15 @@ func open(msg):
 		Global.update_story_highscore(score)
 	
 	var last_level = game.level_loader.get_max_levels()-1
-	if Global.savedata["story"]["current level"] < last_level:
+	var current_level = Global.savedata["story"]["current level"]
+	var unlocked_levels = Global.savedata["story"]["levels unlocked"]
+	
+	if current_level < last_level:
+		if current_level == unlocked_levels:
+			unlocked_levels = current_level + 1
+			Global.update_story_unlocks(unlocked_levels)
+			if unlocked_levels == 1:
+				Global.update_story_last_unlock(unlocked_levels)
 		next_level_btn.grab_focus()
 	else:
 		next_level_btn.set_disabled(true)
@@ -85,7 +93,7 @@ func _on_replay_pressed():
 		resume_game()
 #		ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn", self)
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
-		
+
 func _on_quit_pressed():
 	get_tree().quit()
 
@@ -149,5 +157,7 @@ func _on_LevelSelect_pressed():
 
 
 func _on_NextLevel_pressed():
-	Global.savedata["story"]["current level"] +=1 
+	var level = Global.savedata["story"]["current level"] + 1
+	Global.set_current_story_level(level)
+	 
 	_on_replay_pressed()

@@ -63,6 +63,9 @@ tracks/0/keys = {
 
 process/pause_mode = 2
 script/script = ExtResource( 1 )
+main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
+options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 [node name="ColorFrame" type="ColorFrame" parent="."]
 
@@ -87,9 +90,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 815.0
-margin/top = 337.0
+margin/top = 233.0
 margin/right = 1106.0
-margin/bottom = 423.0
+margin/bottom = 319.0
 custom_fonts/font = ExtResource( 2 )
 text = "PAUSE"
 align = 1
@@ -109,9 +112,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 845.0
-margin/top = 473.0
+margin/top = 369.0
 margin/right = 1075.0
-margin/bottom = 549.0
+margin/bottom = 445.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
@@ -127,16 +130,16 @@ script/script = ExtResource( 7 )
 
 process/pause_mode = 2
 focus_neighbour/top = NodePath("../Resume")
-focus_neighbour/bottom = NodePath("../Tutorial")
+focus_neighbour/bottom = NodePath("../LevelSelect")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 845.0
-margin/top = 577.0
+margin/top = 473.0
 margin/right = 1075.0
-margin/bottom = 653.0
+margin/bottom = 549.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
@@ -148,11 +151,36 @@ text = "Replay"
 flat = false
 script/script = ExtResource( 7 )
 
+[node name="LevelSelect" type="Button" parent="."]
+
+process/pause_mode = 2
+focus_neighbour/top = NodePath("../Replay")
+focus_neighbour/bottom = NodePath("../Options")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
+margin/left = 827.0
+margin/top = 577.0
+margin/right = 1094.0
+margin/bottom = 653.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Level Select"
+flat = false
+script/script = ExtResource( 7 )
+
 [node name="Options" type="Button" parent="."]
 
 process/pause_mode = 2
-focus_neighbour/top = NodePath("../Tutorial")
-focus_neighbour/bottom = NodePath("../Quit")
+focus_neighbour/top = NodePath("../LevelSelect")
+focus_neighbour/bottom = NodePath("../QuitMainMenu")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -173,10 +201,36 @@ text = "Options"
 flat = false
 script/script = ExtResource( 7 )
 
-[node name="Quit" type="Button" parent="."]
+[node name="QuitMainMenu" type="Button" parent="."]
 
 process/pause_mode = 2
 focus_neighbour/top = NodePath("../Options")
+focus_neighbour/bottom = NodePath("../Quit")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
+margin/left = 779.0
+margin/top = 785.0
+margin/right = 1142.0
+margin/bottom = 861.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back to Main Menu"
+flat = false
+script/script = ExtResource( 7 )
+
+[node name="Quit" type="Button" parent="."]
+
+process/pause_mode = 2
+focus_neighbour/top = NodePath("../QuitMainMenu")
 focus_neighbour/bottom = NodePath("../Resume")
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -184,9 +238,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 845.0
-margin/top = 785.0
+margin/top = 889.0
 margin/right = 1075.0
-margin/bottom = 861.0
+margin/bottom = 965.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/focus = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
@@ -214,7 +268,11 @@ autoplay = ""
 
 [connection signal="pressed" from="Replay" to="." method="_on_replay_pressed"]
 
+[connection signal="pressed" from="LevelSelect" to="." method="_on_LevelSelect_pressed"]
+
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+
+[connection signal="pressed" from="QuitMainMenu" to="." method="_on_QuitMainMenu_pressed"]
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 

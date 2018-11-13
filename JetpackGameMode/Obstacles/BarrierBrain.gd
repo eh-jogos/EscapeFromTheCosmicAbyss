@@ -54,11 +54,11 @@ func _on_kill_player(body, offset_y):
 	var relative_pos = offset_y - tentacle_position.get_global_pos().y
 	#print(relative_pos)
 	
-	if relative_pos > 0:
+	if body.get_name() == "TentacleBottomStatic":
 		tentacle_bottom = body.get_node("TentacleBottom")
 		dead_player = tentacle_bottom.get_node("DeadPlayer")
 		offset_y = relative_pos - tentacle_bottom.get_pos().y
-	else:
+	elif body.get_name() == "TentacleTopStatic":
 		tentacle_top = body.get_node("TentacleTop")
 		dead_player = tentacle_top.get_node("DeadPlayer")
 		offset_y = relative_pos - tentacle_top.get_pos().y
