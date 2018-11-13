@@ -462,7 +462,6 @@ ammo_up = null
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -719,6 +718,7 @@ max_lines_visible = -1
 
 [node name="TextureProgress" type="TextureProgress" parent="HUD"]
 
+editor/display_folded = true
 material/material = SubResource( 10 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -832,6 +832,7 @@ autoplay = ""
 
 [node name="ProgressVisualization" type="CenterContainer" parent="HUD"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

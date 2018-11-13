@@ -23,7 +23,6 @@ func play(num, title):
 	game.initialize_game_stats()
 	level_num.set_text(num)
 	level_title.set_text(title)
-	print("TUTORIAL TIP #%s"%[next_countdown])
 	load_next_tip()
 
 func show_tip():
@@ -45,7 +44,6 @@ func _input(event):
 func beat_countdown():
 	countdown -= 1
 	if countdown == 0:
-		print("TUTORIAL TIP #%s"%[next_countdown])
 		show_tip()
 
 func load_next_tip():
@@ -53,7 +51,7 @@ func load_next_tip():
 	next_countdown += 1
 	
 	if next_countdown >= tips_countdown.size():
-		print("END OF TIPS | Reseting tip settings")
+		#print("END OF TIPS | Reseting tip settings")
 		next_countdown = 0
 		countdown = 0
 	else:

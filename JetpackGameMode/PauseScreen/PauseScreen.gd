@@ -3,7 +3,6 @@ extends Node2D
 # class member variables go here, for example:
 var resume_btn
 var options_btn
-var tutorial_btn
 var animator
 
 var last_focus
@@ -18,7 +17,6 @@ func _ready():
 	resume_btn.grab_focus()
 	
 	options_btn = self.get_node("Options")
-	tutorial_btn = self.get_node("Tutorial")
 	
 	game = self.get_parent().get_parent()
 	
