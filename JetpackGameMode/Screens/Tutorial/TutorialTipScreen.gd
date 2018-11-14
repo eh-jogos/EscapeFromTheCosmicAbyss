@@ -36,8 +36,6 @@ func _input(event):
 		self.hide()
 		self.set_process_input(false)
 		
-		#SoundManager.reset_track()
-		#SoundManager.bgm_set_loop(true)
 		if not SoundManager.bgm_stream.is_playing():
 			SoundManager.play_bgm()
 

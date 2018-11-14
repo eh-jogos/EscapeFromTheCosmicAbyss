@@ -95,6 +95,7 @@ script/script = ExtResource( 1 )
 
 [node name="Logo" type="Sprite" parent="."]
 
+editor/display_folded = true
 material/material = SubResource( 2 )
 transform/pos = Vector2( 960, 540 )
 texture = ExtResource( 2 )

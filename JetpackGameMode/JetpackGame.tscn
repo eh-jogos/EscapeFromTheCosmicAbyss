@@ -802,6 +802,7 @@ autoplay = ""
 
 [node name="UpgradeLabel" type="Label" parent="HUD"]
 
+editor/display_folded = true
 visibility/opacity = 0.0
 material/material = SubResource( 16 )
 focus/ignore_mouse = true
