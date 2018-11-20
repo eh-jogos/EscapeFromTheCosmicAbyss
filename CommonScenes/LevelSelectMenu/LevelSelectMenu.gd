@@ -49,10 +49,6 @@ func unlock_levels():
 		print("ERROR | Last Unlocked Level > levels_unlocked")
 		print("Last Unlock: %s | Levels Unlocked: %s"%[last_unlocked_level, levels_unlocked])
 
-func _on_Close_pressed():
-	animator.play("close")
-	yield(animator,"finished")
-	ScreenManager.clear_above()
 
 ##################
 # Engine Methods #

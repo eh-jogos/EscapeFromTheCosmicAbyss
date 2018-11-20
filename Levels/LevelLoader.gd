@@ -30,7 +30,7 @@ func build_beats():
 	add_intro(level["beats"], level_info.intro_beats)
 	obstacle_pool = build_obstacle_pool(level_info["beats"])
 	build_random_level(level["beats"], obstacle_pool)
-	
+	check_barrier_positions()
 	level["beats"].append(level_info.end_beat)
 
 func build_half_beats():
@@ -60,6 +60,9 @@ func build_random_level(target_array, pool):
 		var random_integer = randi() % pool.size()
 		target_array.append(pool[random_integer])
 		pool.remove(random_integer)
+
+func check_barrier_positions():
+	pass
 
 func key_translator(string):
 	if string == "none":

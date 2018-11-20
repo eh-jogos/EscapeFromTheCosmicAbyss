@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=1]
+[gd_scene load_steps=41 format=1]
 
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelSelectMenu.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/blue_screen.png" type="Texture" id=2]
@@ -12,8 +12,6 @@
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_7.png" type="Texture" id=10]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=11]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=12]
-[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=13]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=14]
 
 [sub_resource type="Animation" id=1]
 
@@ -204,7 +202,7 @@ tracks/17/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource/name = "state01_transition"
 length = 1.0
@@ -405,9 +403,8 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource/name = "state02"
 length = 0.01
 loop = false
 step = 0.1
@@ -606,7 +603,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource/name = "state02_transition"
 length = 1.5
@@ -807,7 +804,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
 length = 0.01
 loop = false
@@ -1007,7 +1004,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 
 resource/name = "state03_transition"
 length = 0.7
@@ -1208,7 +1205,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 0.01
 loop = false
@@ -1408,7 +1405,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 
 resource/name = "state04_transition"
 length = 0.7
@@ -1609,7 +1606,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 0.01
 loop = false
@@ -1809,7 +1806,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=10]
 
 resource/name = "state05_transition"
 length = 1.0
@@ -2010,7 +2007,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 
 length = 0.01
 loop = false
@@ -2210,7 +2207,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 
 resource/name = "state06_transition"
 length = 1.0
@@ -2411,7 +2408,7 @@ tracks/18/keys = {
 "values": [ false, false ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 
 length = 0.01
 loop = false
@@ -2611,7 +2608,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=14]
 
 resource/name = "state07_transition"
 length = 0.7
@@ -2842,7 +2839,7 @@ tracks/21/keys = {
 "values": [ Vector2( 1037, 255 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 
 length = 0.01
 loop = false
@@ -3042,7 +3039,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 
 resource/name = "state08_transition"
 length = 1.0
@@ -3243,7 +3240,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 
 length = 0.01
 loop = false
@@ -3443,7 +3440,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=18]
 
 resource/name = "state09_transition"
 length = 0.5
@@ -3644,7 +3641,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=19]
 
 length = 0.01
 loop = false
@@ -3844,7 +3841,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=20]
 
 resource/name = "state10_transition"
 length = 0.7
@@ -4045,7 +4042,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=21]
 
 length = 0.01
 loop = false
@@ -4245,7 +4242,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=22]
 
 resource/name = "state11_transition"
 length = 0.5
@@ -4446,7 +4443,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=23]
 
 length = 0.01
 loop = false
@@ -4747,16 +4744,6 @@ tracks/4/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath("Buttons:visibility/opacity")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
 
 [sub_resource type="Animation" id=26]
 
@@ -4842,16 +4829,6 @@ tracks/7/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Buttons:visibility/opacity")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=27]
@@ -4939,16 +4916,6 @@ tracks/7/keys = {
 "update": 0,
 "values": [ 0.9, 0.9 ]
 }
-tracks/8/type = "value"
-tracks/8/path = NodePath("Buttons:visibility/opacity")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
 
 [sub_resource type="Animation" id=28]
 
@@ -5035,16 +5002,6 @@ tracks/7/keys = {
 "update": 0,
 "values": [ 0.9, 0.9 ]
 }
-tracks/8/type = "value"
-tracks/8/path = NodePath("Buttons:visibility/opacity")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
 
 [node name="LevelSelect" type="CanvasLayer"]
 
@@ -5064,6 +5021,7 @@ region_rect = Rect2( 960, 540, 1800, 1080 )
 
 [node name="Map" type="Control" parent="."]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -5145,6 +5103,7 @@ region_rect = Rect2( 1036, 258, 128, 153 )
 
 [node name="LevelButtons" type="Control" parent="Map"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -5312,28 +5271,28 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/state01 = SubResource( 1 )
-anims/state01_transition = SubResource( 3 )
-anims/state02 = SubResource( 2 )
-anims/state02_transition = SubResource( 5 )
-anims/state03 = SubResource( 4 )
-anims/state03_transition = SubResource( 7 )
-anims/state04 = SubResource( 6 )
-anims/state04_transition = SubResource( 9 )
-anims/state05 = SubResource( 8 )
-anims/state05_transition = SubResource( 11 )
-anims/state06 = SubResource( 10 )
-anims/state06_transition = SubResource( 13 )
-anims/state07 = SubResource( 12 )
-anims/state07_transition = SubResource( 15 )
-anims/state08 = SubResource( 14 )
-anims/state08_transition = SubResource( 17 )
-anims/state09 = SubResource( 16 )
-anims/state09_transition = SubResource( 19 )
-anims/state10 = SubResource( 18 )
-anims/state10_transition = SubResource( 21 )
-anims/state11 = SubResource( 20 )
-anims/state11_transition = SubResource( 23 )
-anims/state12 = SubResource( 22 )
+anims/state01_transition = SubResource( 2 )
+anims/state02 = SubResource( 3 )
+anims/state02_transition = SubResource( 4 )
+anims/state03 = SubResource( 5 )
+anims/state03_transition = SubResource( 6 )
+anims/state04 = SubResource( 7 )
+anims/state04_transition = SubResource( 8 )
+anims/state05 = SubResource( 9 )
+anims/state05_transition = SubResource( 10 )
+anims/state06 = SubResource( 11 )
+anims/state06_transition = SubResource( 12 )
+anims/state07 = SubResource( 13 )
+anims/state07_transition = SubResource( 14 )
+anims/state08 = SubResource( 15 )
+anims/state08_transition = SubResource( 16 )
+anims/state09 = SubResource( 17 )
+anims/state09_transition = SubResource( 18 )
+anims/state10 = SubResource( 19 )
+anims/state10_transition = SubResource( 20 )
+anims/state11 = SubResource( 21 )
+anims/state11_transition = SubResource( 22 )
+anims/state12 = SubResource( 23 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -5382,39 +5341,6 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "scanline loop"
 
-[node name="Buttons" type="Control" parent="."]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
-
-[node name="Close" type="Button" parent="Buttons"]
-
-focus_neighbour/left = NodePath(".")
-focus_neighbour/top = NodePath("../../Map/LevelButtons/LevelButton12")
-focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("../../Map/LevelButtons/LevelButton1")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 13 )
-margin/left = 1678.0
-margin/top = 979.0
-margin/right = 1812.0
-margin/bottom = 1055.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Close"
-flat = false
-script/script = ExtResource( 14 )
-
 [node name="ColorFrame1" type="ColorFrame" parent="."]
 
 focus/ignore_mouse = false
@@ -5452,7 +5378,5 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
-
-[connection signal="pressed" from="Buttons/Close" to="." method="_on_Close_pressed"]
 
 
