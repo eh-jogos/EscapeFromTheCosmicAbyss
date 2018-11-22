@@ -247,3 +247,6 @@ func shield_up(increment):
 
 func score():
 	game._on_scored(5)
+
+func reset_y():
+	speed.y = 0

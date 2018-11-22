@@ -32,6 +32,7 @@ func show_tip():
 
 func _input(event):
 	if event.is_action_pressed("boost"):
+		game.player_reset_y()
 		self.get_tree().set_pause(false)
 		self.hide()
 		self.set_process_input(false)

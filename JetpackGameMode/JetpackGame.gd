@@ -183,3 +183,7 @@ func player_end_level():
 
 func _on_level_tutorial():
 	set_game_state("Tutorial")
+
+func player_reset_y():
+	player.reset_y()
+	pass
