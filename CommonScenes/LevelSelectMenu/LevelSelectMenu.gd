@@ -47,6 +47,8 @@ func unlock_levels():
 	elif last_unlocked_level > levels_unlocked:
 		print("ERROR | Last Unlocked Level > levels_unlocked")
 		print("Last Unlock: %s | Levels Unlocked: %s"%[last_unlocked_level, levels_unlocked])
+	else:
+		initial_btn.grab_focus()
 
 
 ##################
@@ -68,7 +70,6 @@ func _ready():
 		last_played_level = last_unlocked_level
 	initial_btn = level_buttons.get_child(last_played_level)
 	print(initial_btn.get_name())
-	initial_btn.grab_focus()
 	
 	animator.play_backwards("close")
 	yield(animator,"finished")

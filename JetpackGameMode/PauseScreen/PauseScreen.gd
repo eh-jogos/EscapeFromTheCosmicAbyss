@@ -62,7 +62,7 @@ func resume_game():
 	
 	self.hide()
 	get_tree().set_pause(false)
-	
+	game.player_reset_y()
 	#SoundManager.pause_bgm()
 	SoundManager.fade_in_start()
 

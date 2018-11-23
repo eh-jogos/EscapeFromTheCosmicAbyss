@@ -44,6 +44,7 @@ content_margin/bottom = -1.0
 
 [node name="MainMenuScreen" type="Node2D"]
 
+process/pause_mode = 2
 script/script = ExtResource( 1 )
 pregame_path = "res://CommonScenes/PreGameScreen/PreGame.tscn"
 options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
@@ -65,7 +66,7 @@ margin/bottom = 948.0
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/top = NodePath("../QuitGame")
-focus_neighbour/bottom = NodePath("../ArcadeMode")
+focus_neighbour/bottom = NodePath("../NewGame")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -95,7 +96,7 @@ script/script = ExtResource( 4 )
 
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
-focus_neighbour/top = NodePath("../QuitGame")
+focus_neighbour/top = NodePath("../Continue")
 focus_neighbour/bottom = NodePath("../ArcadeMode")
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -126,7 +127,7 @@ script/script = ExtResource( 4 )
 
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
-focus_neighbour/top = NodePath("../StoryMode")
+focus_neighbour/top = NodePath("../NewGame")
 focus_neighbour/bottom = NodePath("../SpeedrunMode")
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -219,7 +220,7 @@ script/script = ExtResource( 4 )
 
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/top = NodePath("../Options")
-focus_neighbour/bottom = NodePath("../StoryMode")
+focus_neighbour/bottom = NodePath("../Continue")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

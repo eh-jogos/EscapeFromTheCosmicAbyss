@@ -214,5 +214,10 @@ func player_end_level():
 	player.jetpack_force = 0
 
 func player_reset_y():
+	var boost_timer = get_node("AutoBoost")
 	player.reset_y()
+	Input.action_press("boost")
+	boost_timer.start()
+	yield(boost_timer,"timeout")
+	Input.action_release("boost")
 	pass

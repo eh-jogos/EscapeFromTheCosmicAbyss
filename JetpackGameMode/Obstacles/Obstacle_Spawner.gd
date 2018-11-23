@@ -21,7 +21,6 @@ var half_countdown = 4
 signal level_ready
 signal level_end
 signal update_visualization
-signal level_tutorial
 
 func _ready():
 	obstacle_group = get_node(obstacle_parent)
@@ -68,8 +67,7 @@ func next_half_beat():
 func set_level(level_dict):
 	level = level_dict
 	print(level)
-	if level.tutorial:
-		emit_signal("level_tutorial")
+	
 	emit_signal("level_ready", level)
 	next_beat()
 

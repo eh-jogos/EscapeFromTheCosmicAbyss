@@ -386,6 +386,7 @@ texture = ExtResource( 3 )
 
 [node name="SectionLabels" type="Control" parent="."]
 
+editor/display_folded = true
 visibility/opacity = 0.9
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -431,7 +432,6 @@ max_lines_visible = -1
 
 [node name="Cooldown" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../../Buttons/SaveApply")
 focus_neighbour/right = NodePath(".")
@@ -457,7 +457,7 @@ script/script = ExtResource( 8 )
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown"]
 
 editor/display_folded = true
-transform/pos = Vector2( 50, 97 )
+transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
 
@@ -505,9 +505,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 300.0
+margin/left = 100.0
 margin/top = 70.0
-margin/right = 358.0
+margin/right = 158.0
 margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -521,7 +521,6 @@ params/stretch_mode = 0
 
 [node name="StartSpeed" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../Cooldown")
 focus_neighbour/right = NodePath(".")
@@ -547,7 +546,7 @@ script/script = ExtResource( 18 )
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartSpeed"]
 
 editor/display_folded = true
-transform/pos = Vector2( 50, 97 )
+transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 
@@ -643,9 +642,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 720.0
+margin/left = 100.0
 margin/top = 70.0
-margin/right = 778.0
+margin/right = 158.0
 margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -659,7 +658,6 @@ params/stretch_mode = 0
 
 [node name="MaxSpeed" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartSpeed")
 focus_neighbour/right = NodePath(".")
@@ -685,7 +683,7 @@ script/script = ExtResource( 19 )
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/MaxSpeed"]
 
 editor/display_folded = true
-transform/pos = Vector2( 50, 97 )
+transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 
@@ -781,9 +779,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 720.0
+margin/left = 100.0
 margin/top = 70.0
-margin/right = 778.0
+margin/right = 158.0
 margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -797,7 +795,6 @@ params/stretch_mode = 0
 
 [node name="LaserDuration" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../MaxSpeed")
 focus_neighbour/right = NodePath(".")
@@ -823,7 +820,7 @@ script/script = ExtResource( 20 )
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/LaserDuration"]
 
 editor/display_folded = true
-transform/pos = Vector2( 50, 97 )
+transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/LaserDuration/UpgradeBar" instance=ExtResource( 9 )]
 
@@ -879,9 +876,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 370.0
+margin/left = 100.0
 margin/top = 70.0
-margin/right = 428.0
+margin/right = 158.0
 margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -895,7 +892,6 @@ params/stretch_mode = 0
 
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../LaserDuration")
 focus_neighbour/right = NodePath(".")
@@ -921,7 +917,7 @@ script/script = ExtResource( 21 )
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartingAmmo"]
 
 editor/display_folded = true
-transform/pos = Vector2( 50, 97 )
+transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
 
@@ -989,9 +985,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 475.0
+margin/left = 100.0
 margin/top = 70.0
-margin/right = 533.0
+margin/right = 158.0
 margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -1005,7 +1001,6 @@ params/stretch_mode = 0
 
 [node name="Shields" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartingAmmo")
 focus_neighbour/right = NodePath(".")
@@ -1031,7 +1026,7 @@ script/script = ExtResource( 22 )
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Shields"]
 
 editor/display_folded = true
-transform/pos = Vector2( 50, 97 )
+transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
 
@@ -1071,9 +1066,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 230.0
+margin/left = 100.0
 margin/top = 70.0
-margin/right = 288.0
+margin/right = 158.0
 margin/bottom = 124.0
 toggle_mode = false
 enabled_focus_mode = 2

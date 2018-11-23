@@ -307,8 +307,16 @@ point_multiple = 5
 upgrade_multiple = 30
 level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
+[node name="AutoBoost" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = true
+autostart = false
+
 [node name="LevelLoader" type="Node" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -338,6 +346,7 @@ title = "Triple Trouble!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -680,6 +689,7 @@ transform/scale = Vector2( 1, -1 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -948,8 +958,6 @@ visibility/visible = false
 [connection signal="level_end" from="Camera2D/ObstacleSpawner" to="." method="_on_level_end"]
 
 [connection signal="level_ready" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
-
-[connection signal="level_tutorial" from="Camera2D/ObstacleSpawner" to="." method="_on_level_tutorial"]
 
 [connection signal="update_visualization" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
 

@@ -14,8 +14,6 @@ colors = ColorArray( 0.239216, 0.0901961, 0.431373, 0.909804, 0.239216, 0.090196
 
 [node name="LevelButton1" type="TextureButton"]
 
-focus_neighbour/top = NodePath("../../../Buttons/Close")
-focus_neighbour/bottom = NodePath("../../../Buttons/Close")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

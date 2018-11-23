@@ -27,15 +27,15 @@ func play(num, title):
 
 func _input(event):
 	if event.is_action_pressed("boost"):
+		self.set_process_input(false)
 		game.set_game_state("Playing")
-		self.get_tree().set_pause(false)
 		
 		animator.play_backwards("fade_in")
 		yield(animator,"finished")
 		
 		self.hide()
-		self.set_process_input(false)
-		
+		self.get_tree().set_pause(false)
+		game.player_reset_y()
 		#SoundManager.reset_track()
 		#SoundManager.bgm_set_loop(true)
 		if not SoundManager.bgm_stream.is_playing():
