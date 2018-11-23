@@ -2,8 +2,7 @@ extends Node
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
-var version = 0.51
-var current_game_mode = null
+var version = 0.54
 
 var savedata = {
 	"version" : version,
@@ -24,8 +23,13 @@ var savedata = {
 		"levels unlocked": 0,
 		"current level":0,
 		"last unlock": 0,
-		"story beaten": false
+		"story beaten": false,
+		"tutorial beaten": false,
 		},
+	"state": {
+		"game mode" : "story",
+		"sub-mode": "select level",
+	},
 }
 
 func _ready():
@@ -55,7 +59,7 @@ func read():
 		savefile.close()
 	else:
 		#print("SAVE ERROR")
-		if old_save.has("version") and old_save["version"] <= 0.5:
+		if old_save.has("version") and old_save["version"] < version:
 			savedata["story"]["highscore"] = old_save["story"]["highscore"]
 			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
 			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
@@ -98,7 +102,7 @@ func update_story_last_unlock(level):
 
 func set_current_story_level(level):
 	savedata["story"]["current level"] = level
-	save()
+	set_game_mode("story","level selected")
 
 func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade):
 	savedata["story"]["cooldown"] = cooldown
@@ -111,6 +115,19 @@ func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade
 	save()
 	pass
 
+func reset_story_progress():
+	savedata["story"]["highscore"] = 0
+	savedata["story"]["cooldown"] = 0
+	savedata["story"]["initial ammo"] = 0
+	savedata["story"]["initial shield"] = 0
+	savedata["story"]["initial speed"] = 4.0
+	savedata["story"]["max speed"] = 11.0
+	savedata["story"]["laser duration"] = 0
+	savedata["story"]["upgrade points"] = 0
+	savedata["story"]["levels unlocked"] = 0
+	savedata["story"]["current level"] = 0
+	savedata["story"]["last unlock"] = 0
+
 func update_option_fullscreen(option):
 	savedata["options"]["fullscreen"] = option
 
@@ -120,8 +137,14 @@ func update_option_track(option):
 func update_option_bgmvolume(option):
 	savedata["options"]["bgm volume"] = option
 
-func set_game_mode(game_mode):
-	current_game_mode = game_mode
+func set_game_mode(game_mode, category):
+	savedata["state"]["game mode"] = game_mode
+	savedata["state"]["sub-mode"] = category
+	save()
 
 func get_game_mode():
-	return current_game_mode
+	return savedata["state"]
+
+func tutorial_completed():
+	savedata["story"]["tutorial beaten"] = true
+	save()

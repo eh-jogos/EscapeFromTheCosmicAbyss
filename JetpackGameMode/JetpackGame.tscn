@@ -305,6 +305,7 @@ colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
 script/script = ExtResource( 1 )
 point_multiple = 5
 upgrade_multiple = 30
+level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 [node name="LevelLoader" type="Node" parent="."]
 
@@ -337,7 +338,6 @@ title = "Triple Trouble!"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false

@@ -3848,14 +3848,14 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
-"loop": false,
-"name": "crush",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 564 ) ],
 "loop": true,
 "name": "crush_idle",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
+"loop": false,
+"name": "crush",
 "speed": 60.0
 } ]
 
@@ -3877,14 +3877,14 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
-"loop": false,
-"name": "crush",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 607 ) ],
 "loop": true,
 "name": "crush_idle",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
+"loop": false,
+"name": "crush",
 "speed": 60.0
 } ]
 
@@ -5228,14 +5228,14 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
-"loop": false,
-"name": "crush",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 564 ) ],
 "loop": true,
 "name": "crush_idle",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
+"loop": false,
+"name": "crush",
 "speed": 60.0
 } ]
 
@@ -5257,14 +5257,14 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
-"loop": false,
-"name": "crush",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 607 ) ],
 "loop": true,
 "name": "crush_idle",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
+"loop": false,
+"name": "crush",
 "speed": 60.0
 } ]
 
@@ -5430,7 +5430,7 @@ curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#0/Path2D"]
 
-transform/pos = Vector2( 889.728, 437.091 )
+transform/pos = Vector2( 889.727, 437.091 )
 transform/rot = 56.1146
 offset = 281.486
 h_offset = 0.0
@@ -5615,21 +5615,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#0/Cena2/Limits"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#0/Cena2/Limits"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="Limits1" type="Node2D" parent="Tip#0/Cena2"]
@@ -5644,21 +5644,18 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 12
 playing = true
 
 [node name="Tip#1" type="Control" parent="."]
@@ -5746,7 +5743,7 @@ __meta__ = {
 editor/display_folded = true
 frames = SubResource( 7 )
 animation = "falling"
-frame = 10
+frame = 3
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -5754,21 +5751,21 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "falling"
-frame = 10
+frame = 3
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "falling"
-frame = 10
+frame = 3
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player"]
 
 frames = SubResource( 10 )
 animation = "falling"
-frame = 10
+frame = 3
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
@@ -5808,14 +5805,14 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "falling"
-frame = 10
+frame = 3
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "falling"
-frame = 10
+frame = 3
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player"]
@@ -5908,7 +5905,7 @@ transform/pos = Vector2( 150, -450 )
 material/material = SubResource( 39 )
 frames = SubResource( 40 )
 animation = "idle"
-frame = 30
+frame = 38
 playing = true
 centered = false
 flip_v = true
@@ -5918,7 +5915,7 @@ flip_v = true
 material/material = SubResource( 39 )
 frames = SubResource( 41 )
 animation = "idle"
-frame = 30
+frame = 38
 playing = true
 centered = false
 flip_v = true
@@ -5949,7 +5946,7 @@ transform/pos = Vector2( 150, 350 )
 material/material = SubResource( 39 )
 frames = SubResource( 40 )
 animation = "idle"
-frame = 30
+frame = 38
 playing = true
 centered = false
 
@@ -5959,7 +5956,7 @@ editor/display_folded = true
 material/material = SubResource( 39 )
 frames = SubResource( 41 )
 animation = "idle"
-frame = 30
+frame = 38
 playing = true
 centered = false
 
@@ -5995,21 +5992,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 4
+frame = 8
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#1/Limits/Limits"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 4
+frame = 8
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#1/Limits/Limits"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 4
+frame = 8
 playing = true
 
 [node name="Limits1" type="Node2D" parent="Tip#1/Limits"]
@@ -6025,21 +6022,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 15
+frame = 3
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#1/Limits/Limits1"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 15
+frame = 3
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#1/Limits/Limits1"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 15
+frame = 3
 playing = true
 
 [node name="Tip#2" type="Control" parent="."]
@@ -6129,7 +6126,7 @@ __meta__ = {
 editor/display_folded = true
 frames = SubResource( 7 )
 animation = "rising"
-frame = 1
+frame = 7
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -6137,21 +6134,21 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 1
+frame = 7
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "rising"
-frame = 1
+frame = 7
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player"]
 
 frames = SubResource( 10 )
 animation = "rising"
-frame = 1
+frame = 7
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
@@ -6190,14 +6187,14 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "rising"
-frame = 1
+frame = 7
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "rising"
-frame = 1
+frame = 7
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player"]
@@ -6290,7 +6287,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 40 )
 animation = "idle"
-frame = 14
+frame = 22
 playing = true
 centered = false
 flip_v = true
@@ -6302,7 +6299,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 41 )
 animation = "idle"
-frame = 14
+frame = 22
 playing = true
 centered = false
 flip_v = true
@@ -6334,7 +6331,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 40 )
 animation = "idle"
-frame = 14
+frame = 22
 playing = true
 centered = false
 
@@ -6345,7 +6342,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 41 )
 animation = "idle"
-frame = 14
+frame = 22
 playing = true
 centered = false
 
@@ -6384,21 +6381,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#2/Limits/Limits"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#2/Limits/Limits"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="Limits1" type="Node2D" parent="Tip#2/Limits"]
@@ -6413,21 +6410,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#2/Limits/Limits1"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#2/Limits/Limits1"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="HUD" type="Control" parent="Tip#2/Limits"]
@@ -6790,7 +6787,7 @@ __meta__ = {
 editor/display_folded = true
 frames = SubResource( 7 )
 animation = "rising"
-frame = 4
+frame = 10
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -6798,14 +6795,14 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 4
+frame = 10
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "rising"
-frame = 4
+frame = 10
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player"]
@@ -6813,7 +6810,7 @@ playing = true
 editor/display_folded = true
 frames = SubResource( 10 )
 animation = "rising"
-frame = 4
+frame = 10
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
@@ -6852,14 +6849,14 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "rising"
-frame = 4
+frame = 10
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "rising"
-frame = 4
+frame = 10
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player"]
@@ -7091,21 +7088,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#3/Cena2/Limits"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#3/Cena2/Limits"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="Limits1" type="Node2D" parent="Tip#3/Cena2"]
@@ -7121,21 +7118,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="HUD" type="Control" parent="Tip#3/Cena2"]
@@ -7602,7 +7599,7 @@ __meta__ = {
 editor/display_folded = true
 frames = SubResource( 7 )
 animation = "rising"
-frame = 2
+frame = 8
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -7610,14 +7607,14 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 2
+frame = 8
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "rising"
-frame = 2
+frame = 8
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player"]
@@ -7625,7 +7622,7 @@ playing = true
 editor/display_folded = true
 frames = SubResource( 10 )
 animation = "rising"
-frame = 2
+frame = 8
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
@@ -7664,14 +7661,14 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "rising"
-frame = 2
+frame = 8
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "rising"
-frame = 2
+frame = 8
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player"]
@@ -7951,21 +7948,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#4/Cena2/Limits"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#4/Cena2/Limits"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 
 [node name="Limits1" type="Node2D" parent="Tip#4/Cena2"]
@@ -7981,21 +7978,21 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="LimitsLight" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1"]
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="LimitsDark" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1"]
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 
 [node name="HUD" type="Control" parent="Tip#4/Cena2"]

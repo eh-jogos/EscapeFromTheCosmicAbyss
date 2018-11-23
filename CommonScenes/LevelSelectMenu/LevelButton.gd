@@ -12,6 +12,7 @@ var level_title
 var particle_fx
 var animator
 var menu_animator
+var game_settings
 
 func _ready():
 	self.connect("mouse_enter",self,"_on_mouse_enter")
@@ -20,11 +21,31 @@ func _ready():
 	animator = get_node(animator_path)
 	menu_animator = get_node(menu_animator_path)
 	particle_fx = get_node("Particles2D")
+	game_settings = Global.get_game_mode()
+
 
 func _on_mouse_enter():
 	self.grab_focus()
 
 func _on_LevelButton_pressed():
+	if game_settings["sub-mode"] == "select level":
+		set_level_and_close()
+	else:
+		set_level_and_reload()
+
+func set_level_and_close():
+	Global.set_current_story_level(level_num)
+	menu_animator.play("close")
+	yield(menu_animator, "finished")
+	
+	var game = get_tree().get_root().get_node("JetpackGame")
+	print(game.get_children())
+	print(game.get_name())
+	game.game_start()
+	
+	ScreenManager.reset_above_below()
+
+func set_level_and_reload():
 	var game_path = "res://JetpackGameMode/JetpackGame.tscn"
 	
 	Global.set_current_story_level(level_num)

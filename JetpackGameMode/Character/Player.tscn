@@ -2780,6 +2780,7 @@ transform/pos = Vector2( -430, -22 )
 
 [node name="Shield" type="Area2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( -485, 0 )
 input/pickable = false
 shapes/0/shape = SubResource( 21 )

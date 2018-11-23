@@ -10,7 +10,6 @@ var last_played_level
 var last_unlocked_level
 var levels_unlocked
 
-
 ####################
 # Internal Methods #
 ####################

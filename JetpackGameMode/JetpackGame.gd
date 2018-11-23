@@ -19,7 +19,10 @@ var tutorial
 # Game Mode "Stats" and Variables?
 export var point_multiple = 5
 export var upgrade_multiple = 30
+export(String, FILE) var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
+
+var game_settings
 var points = 0
 var points_level = 0
 var cycles = 0
@@ -46,13 +49,15 @@ const STATE = {
 var current_state = STATE["Playing"]
 
 func _ready():
-	# Game Screens
+	game_settings = Global.get_game_mode()
+	
+	#TODO? - Change the nodes according to game mode?
+	tutorial = self.get_node("AboveScreen/TutorialTipScreen")
 	game_over_screen = self.get_node("AboveScreen/GameOverScreen")
 	level_complete_screen = self.get_node("AboveScreen/LevelCompleteScreen")
-	countdown = self.get_node("AboveScreen/CountdownScreen")
-	tutorial = self.get_node("AboveScreen/TutorialTipScreen")
 	
 	# Nodes
+	countdown = self.get_node("AboveScreen/CountdownScreen")
 	overheat_bar = self.get_node("HUD/TextureProgress")
 	overheat_bar_animator = self.get_node("HUD/TextureProgress/AnimationPlayer")
 	ammunition = self.get_node("HUD/TextureProgress/Ammunition")
@@ -62,14 +67,37 @@ func _ready():
 	level_loader = self.get_node("LevelLoader")
 	object_spawner = self.get_node("Camera2D/ObstacleSpawner")
 	
-	load_level()
-	
 	ammunition.initialize_ammo(initial_ammo)
 	
-	self.get_tree().set_pause(true)
-	
-	self.game_start()
+	show_pre_game()
 
+func show_pre_game():
+	if game_settings["game mode"] == "story":
+		load_story_pregame()
+	elif game_settings["game mode"] == "arcade":
+		pass
+	elif game_settings["game mode"] == "speedrun":
+		pass
+	else:
+		print("ERROR | Invalid game mode: %s"%[game_settings["game mode"]])
+	
+	self.get_tree().set_pause(true)
+
+func load_story_pregame():
+	if not is_tutorial_completed():
+		Global.set_current_story_level(0)
+	
+	if game_settings["sub-mode"] == "level selected":
+		game_start()
+	elif game_settings["sub-mode"] == "select level":
+		var path = level_select_path
+		var last_focus = self
+		ScreenManager.load_above(path, last_focus, self)
+	else:
+		print("ERROR | Invalid sub-mode: %s"%[game_settings["sub-mode"]])
+
+func is_tutorial_completed():
+	return Global.savedata["story"]["tutorial beaten"]
 
 func initialize_game_stats():
 	var highscore = Global.savedata["story"]["highscore"]
@@ -98,6 +126,9 @@ func load_level():
 		print("ERROR | LEVEL OUT OF RANGE")
 		num = level_loader.get_max_levels()-1
 		level = level_loader.load_level(num)
+	
+	if level.tutorial:
+		set_game_state("Tutorial")
 	
 	object_spawner.set_level(level)
 	if num < 10:
@@ -163,6 +194,7 @@ func dash_score():
 	update_score()
 
 func game_start():
+	load_level()
 	if current_state == STATE["Tutorial"]:
 		tutorial.play(level_num, level_title)
 		object_spawner.connect_tutorial_signal(tutorial)
@@ -180,9 +212,6 @@ func _on_level_end():
 func player_end_level():
 	player.gravity_force = 0
 	player.jetpack_force = 0
-
-func _on_level_tutorial():
-	set_game_state("Tutorial")
 
 func player_reset_y():
 	player.reset_y()

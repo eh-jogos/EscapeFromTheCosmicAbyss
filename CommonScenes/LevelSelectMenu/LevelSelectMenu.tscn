@@ -5021,7 +5021,6 @@ region_rect = Rect2( 960, 540, 1800, 1080 )
 
 [node name="Map" type="Control" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -5103,7 +5102,6 @@ region_rect = Rect2( 1036, 258, 128, 153 )
 
 [node name="LevelButtons" type="Control" parent="Map"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2

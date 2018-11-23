@@ -30,7 +30,7 @@ func load_above(path, focus_path, origin_scene):
 	
 	scene_above = load(path).instance()
 	
-	get_tree().get_root().add_child(scene_above)
+	get_tree().get_root().call_deferred("add_child",scene_above)
 	#scene_above.set_pos(scene_below.get_global_pos())
 
 func clear_above():
@@ -41,8 +41,9 @@ func clear_above():
 	get_tree().get_root().remove_child(scene_above)
 	scene_above = null
 	
-	scene_below.get_node(previous_focus).grab_focus()
-	previous_focus = null
+	if previous_focus != null:
+		scene_below.get_node(previous_focus).grab_focus()
+		previous_focus = null
 
 func reset_above_below():
 	if scene_above == null:

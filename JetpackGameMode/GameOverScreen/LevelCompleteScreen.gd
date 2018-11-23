@@ -50,6 +50,9 @@ func open(msg):
 	label_message.set_text("%s Complete!"%[msg])
 	animator.play_backwards("fade out")
 	
+	if game.get_game_state() == 3:
+		Global.tutorial_completed()
+	
 	#SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
 	
@@ -90,17 +93,11 @@ func _on_replay_pressed():
 		animator.play("fade out")
 		yield(animator, "finished")
 		
-		resume_game()
 #		ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn", self)
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()
-
-
-func resume_game():
-	self.hide()
-	get_tree().set_pause(false)
 
 func print_score(points, label):
 	var points_str
