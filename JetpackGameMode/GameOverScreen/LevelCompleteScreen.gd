@@ -23,10 +23,10 @@ var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 func _ready():
-	replay_btn = self.get_node("Replay")
-	next_level_btn = self.get_node("NextLevel")
-	upgrade_btn = self.get_node("Upgrade")
-	level_select_btn = self.get_node("LevelSelect")
+	replay_btn = self.get_node("Buttons/Replay")
+	next_level_btn = self.get_node("Buttons/NextLevel")
+	upgrade_btn = self.get_node("Buttons/Upgrade")
+	level_select_btn = self.get_node("Buttons/LevelSelect")
 	animator = self.get_node("AnimationPlayer")
 	
 	label_message = self.get_node("CompleteText")

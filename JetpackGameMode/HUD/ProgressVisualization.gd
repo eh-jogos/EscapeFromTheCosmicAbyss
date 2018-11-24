@@ -30,6 +30,7 @@ func create_barrier(step):
 
 func generate_visualization(level_data):
 	total_count = level_data["total_count"]
+	progress_count = 0
 	increment = total_length/total_count
 	
 	var addition = 0

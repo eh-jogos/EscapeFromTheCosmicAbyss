@@ -1,9 +1,9 @@
 extends Node2D
 
 var replay_btn
-var options_btn
 var upgrade_btn
 var level_select_btn
+var quit_btn
 var animator
 
 var last_focus
@@ -14,22 +14,24 @@ var label_score
 var highscore
 var label_highscore
 var upgrade_points
+var text_upgrade
 var label_upgrade
 var congratulations
 
-var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
+var game_settings = Global.get_game_mode()
 
 func _ready():
-	replay_btn = self.get_node("Replay")
-	options_btn = self.get_node("Options")
-	upgrade_btn = self.get_node("Upgrade")
-	level_select_btn = self.get_node("LevelSelect")
+	replay_btn = self.get_node("Buttons/Replay")
+	upgrade_btn = self.get_node("Buttons/Upgrade")
+	level_select_btn = self.get_node("Buttons/LevelSelect")
+	quit_btn = self.get_node("Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
 	
 	label_score = self.get_node("Score")
 	label_highscore = self.get_node("Highscore")
+	text_upgrade = self.get_node("UpgradeText")
 	label_upgrade = self.get_node("UpgradePoints")
 	congratulations = self.get_node("HighscoreText")
 	
@@ -37,15 +39,54 @@ func _ready():
 	
 	replay_btn.grab_focus()
 	
-	if not options_btn.is_connected("focus_enter",self,"_on_focus_enter"):
-		options_btn.connect("focus_enter",self,"_on_focus_enter")
-	
 	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")
+	
+	
+	
+	if game_settings["game mode"] == "story":
+		replay_btn.show()
+		upgrade_btn.show()
+		level_select_btn.show()
+		quit_btn.show()
+	elif game_settings["game mode"] == "arcade":
+		replay_btn.show()
+		upgrade_btn.hide()
+		level_select_btn.hide()
+		quit_btn.show()
+		
+		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
+	elif game_settings["game mode"] == "speedrun":
+		replay_btn.show()
+		upgrade_btn.hide()
+		level_select_btn.hide()
+		quit_btn.show()
+		
+		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
 	
 	pass
 
 func open():
+	score = game.get_score()
+	print_score(score, label_score)
+	
+	highscore = game.highscore
+	print_score(highscore, label_highscore)
+	
+	if game_settings["game mode"] == "story":
+		upgrade_points = game.upgrade_points
+		print_decimal(upgrade_points, label_upgrade)
+	else:
+		text_upgrade.hide()
+		label_upgrade.hide()
+	
+	if score > highscore:
+		congratulations.show()
+		game.highscore = score
+		Global.update_story_highscore(score)
+	
 	self.show()
 	animator.play_backwards("fade out")
 	
@@ -55,20 +96,6 @@ func open():
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	replay_btn.grab_focus()
-	
-	score = game.get_score()
-	print_score(score, label_score)
-	
-	highscore = game.highscore
-	print_score(highscore, label_highscore)
-	
-	upgrade_points = game.upgrade_points
-	print_decimal(upgrade_points, label_upgrade)
-	
-	if score > highscore:
-		congratulations.show()
-		game.highscore = score
-		Global.update_story_highscore(score)
 
 func _on_replay_pressed():
 	if game != null:
@@ -107,15 +134,6 @@ func print_decimal(points, label):
 		points_str = str(points)
 	label.set_text(points_str)
 
-func _on_options_pressed():
-	var path = options_path
-	last_focus = options_btn.get_path()
-	animator.play("fade out")
-	yield(animator, "finished")
-	
-	ScreenManager.load_above(path, last_focus, self)
-	SoundManager.pause_bgm()
-	self.hide()
 
 func _on_upgrade_pressed():
 	var path = upgrade_path

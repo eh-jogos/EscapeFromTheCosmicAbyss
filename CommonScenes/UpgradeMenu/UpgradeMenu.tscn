@@ -386,7 +386,6 @@ texture = ExtResource( 3 )
 
 [node name="SectionLabels" type="Control" parent="."]
 
-editor/display_folded = true
 visibility/opacity = 0.9
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -433,7 +432,7 @@ max_lines_visible = -1
 [node name="Cooldown" type="Button" parent="SectionLabels"]
 
 focus_neighbour/left = NodePath(".")
-focus_neighbour/top = NodePath("../../Buttons/SaveApply")
+focus_neighbour/top = NodePath("../../Buttons/Close")
 focus_neighbour/right = NodePath(".")
 focus_neighbour/bottom = NodePath("../StartSpeed")
 focus/ignore_mouse = false
@@ -1004,7 +1003,7 @@ params/stretch_mode = 0
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartingAmmo")
 focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("../../Buttons/SaveApply")
+focus_neighbour/bottom = NodePath("../../Buttons/Close")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -1123,19 +1122,29 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "scanline loop"
 
-[node name="Buttons" type="Control" parent="."]
+[node name="Buttons" type="HBoxContainer" parent="."]
 
+anchor/left = 1
+anchor/top = 1
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+margin/left = 935.0
+margin/top = 97.0
+margin/right = 150.0
+margin/bottom = 25.0
+custom_constants/separation = 15
+alignment = 2
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Reset" type="Button" parent="Buttons"]
 
+rect/min_size = Vector2( 306, 72 )
 focus_neighbour/left = NodePath("../Close")
 focus_neighbour/top = NodePath("../../SectionLabels/Shields")
 focus_neighbour/right = NodePath("../SaveApply")
@@ -1145,10 +1154,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 25 )
-margin/left = 1031.0
-margin/top = 979.0
-margin/right = 1333.0
-margin/bottom = 1055.0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 306.0
+margin/bottom = 72.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1158,6 +1167,7 @@ script/script = ExtResource( 26 )
 
 [node name="SaveApply" type="Button" parent="Buttons"]
 
+rect/min_size = Vector2( 302, 72 )
 focus_neighbour/left = NodePath("../Reset")
 focus_neighbour/top = NodePath("../../SectionLabels/Shields")
 focus_neighbour/right = NodePath("../Close")
@@ -1167,10 +1177,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 25 )
-margin/left = 1345.0
-margin/top = 979.0
-margin/right = 1666.0
-margin/bottom = 1055.0
+margin/left = 321.0
+margin/top = 0.0
+margin/right = 623.0
+margin/bottom = 72.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -1180,6 +1190,7 @@ script/script = ExtResource( 26 )
 
 [node name="Close" type="Button" parent="Buttons"]
 
+rect/min_size = Vector2( 147, 72 )
 focus_neighbour/left = NodePath("../SaveApply")
 focus_neighbour/top = NodePath("../../SectionLabels/Shields")
 focus_neighbour/right = NodePath("../Reset")
@@ -1189,10 +1200,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 25 )
-margin/left = 1678.0
-margin/top = 979.0
-margin/right = 1812.0
-margin/bottom = 1055.0
+margin/left = 638.0
+margin/top = 0.0
+margin/right = 785.0
+margin/bottom = 72.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

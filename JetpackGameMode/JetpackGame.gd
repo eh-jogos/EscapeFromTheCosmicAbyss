@@ -4,6 +4,7 @@ extends Node2D
 var overheat_bar
 var overheat_bar_animator
 var points_label
+var upgrade_label
 var upgrade_messager
 var ammunition
 var player
@@ -20,23 +21,28 @@ var tutorial
 export var point_multiple = 5
 export var upgrade_multiple = 30
 export(String, FILE) var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
+export(String, FILE) var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 
 
-var game_settings
+var game_settings = Global.get_game_mode()
+var game_mode = game_settings["game mode"]
+var category = game_settings["sub-mode"]
+var last_level_choice
 var points = 0
 var points_level = 0
 var cycles = 0
 var level_num
 var level_title
-var highscore = Global.savedata["story"]["highscore"]
-var initial_shield = Global.savedata["story"]["initial shield"]
-var initial_ammo = Global.savedata["story"]["initial ammo"]
-var initial_speed = Global.savedata["story"]["initial speed"]
-var max_speed = 4 + Global.savedata["story"]["max speed"]
-var laser_duration = Global.savedata["story"]["laser duration"]
-var upgrade_points = Global.savedata["story"]["upgrade points"]
-var levels_unlocked = Global.savedata["story"]["levels unlocked"]
-var cooldown = Global.savedata["story"]["cooldown"]
+var highscore
+var initial_shield
+var initial_ammo
+var initial_speed
+var max_speed
+var laser_duration
+var upgrade_points
+var levels_unlocked
+var cooldown
+var multiplyer = 1
 
 const STATE = {
 	"Playing": 0,
@@ -49,8 +55,6 @@ const STATE = {
 var current_state = STATE["Playing"]
 
 func _ready():
-	game_settings = Global.get_game_mode()
-	
 	#TODO? - Change the nodes according to game mode?
 	tutorial = self.get_node("AboveScreen/TutorialTipScreen")
 	game_over_screen = self.get_node("AboveScreen/GameOverScreen")
@@ -62,80 +66,128 @@ func _ready():
 	overheat_bar_animator = self.get_node("HUD/TextureProgress/AnimationPlayer")
 	ammunition = self.get_node("HUD/TextureProgress/Ammunition")
 	points_label = self.get_node("HUD/Points")
+	upgrade_label = self.get_node("HUD/UpgradeLabel")
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
 	player = self.get_node("Player")
 	level_loader = self.get_node("LevelLoader")
 	object_spawner = self.get_node("Camera2D/ObstacleSpawner")
 	
-	ammunition.initialize_ammo(initial_ammo)
-	
 	show_pre_game()
 
 func show_pre_game():
-	if game_settings["game mode"] == "story":
+	if game_mode == "story":
 		load_story_pregame()
-	elif game_settings["game mode"] == "arcade":
-		pass
-	elif game_settings["game mode"] == "speedrun":
-		pass
+	elif game_mode == "arcade" or game_mode == "speedrun":
+		load_upgrade_pregame()
 	else:
-		print("ERROR | Invalid game mode: %s"%[game_settings["game mode"]])
+		print("ERROR | Invalid game mode: %s"%[game_settings])
 	
 	self.get_tree().set_pause(true)
 
 func load_story_pregame():
-	if not is_tutorial_completed():
-		Global.set_current_story_level(0)
+	#if not is_tutorial_completed():
+	#	Global.set_current_story_level(0)
 	
-	if game_settings["sub-mode"] == "level selected":
+	if category == "level selected":
 		game_start()
-	elif game_settings["sub-mode"] == "select level":
+	elif category == "select level":
 		var path = level_select_path
-		var last_focus = self
-		ScreenManager.load_above(path, last_focus, self)
+		ScreenManager.load_above(path, self, self)
 	else:
-		print("ERROR | Invalid sub-mode: %s"%[game_settings["sub-mode"]])
+		print("ERROR | Invalid sub-mode: %s"%[game_settings])
 
 func is_tutorial_completed():
 	return Global.savedata["story"]["tutorial beaten"]
 
-func initialize_game_stats():
-	var highscore = Global.savedata["story"]["highscore"]
-	var initial_shield = Global.savedata["story"]["initial shield"]
-	var initial_ammo = Global.savedata["story"]["initial ammo"]
-	var initial_speed = Global.savedata["story"]["initial speed"]
-	var max_speed = 4 + Global.savedata["story"]["max speed"]
-	var laser_duration = Global.savedata["story"]["laser duration"]
-	var upgrade_points = Global.savedata["story"]["upgrade points"]
-	var levels_unlocked = Global.savedata["story"]["levels unlocked"]
-	var cooldown = Global.savedata["story"]["cooldown"]
+func load_upgrade_pregame():
+	if category.is_valid_integer():
+		Global.reset_category_progress(game_settings)
+		
+		var path = upgrade_path
+		ScreenManager.load_above(path, self, self)
+	else:
+		print("ERROR | Invalid sub-mode: %s"%[game_settings])
 
-func get_game_state():
-	return current_state
+func game_start():
+	initialize_game_stats()
+	setup_game_mode_level()
+	if current_state == STATE["Tutorial"]:
+		tutorial.play(level_num, level_title)
+		object_spawner.connect_tutorial_signal(tutorial)
+	else:
+		countdown.play(level_num, level_title)
+
+#called from CountdownScreen, after any Pre Game has been cleared
+func initialize_game_stats(): 
+	if game_mode == "story":
+		highscore = Global.savedata[game_mode]["highscore"]
+		initial_shield = Global.savedata[game_mode]["initial shield"]
+		initial_ammo = Global.savedata[game_mode]["initial ammo"]
+		initial_speed = Global.savedata[game_mode]["initial speed"]
+		max_speed = 4 + Global.savedata[game_mode]["max speed"]
+		laser_duration = Global.savedata[game_mode]["laser duration"]
+		upgrade_points = Global.savedata[game_mode]["upgrade points"]
+		levels_unlocked = Global.savedata[game_mode]["levels unlocked"]
+		cooldown = Global.savedata[game_mode]["cooldown"]
+	
+	elif game_mode == "arcade" or game_mode == "speedrun":
+		highscore = Global.savedata[game_mode]["highscore"]
+		initial_shield = Global.savedata[game_mode]["initial shield"]
+		initial_ammo = Global.savedata[game_mode]["initial ammo"]
+		initial_speed = Global.savedata[game_mode]["initial speed"]
+		max_speed = 4 + Global.savedata[game_mode]["max speed"]
+		laser_duration = Global.savedata[game_mode]["laser duration"]
+		cooldown = Global.savedata[game_mode]["cooldown"]
+	
+	player.set_player_stats()
+	ammunition.initialize_ammo(initial_ammo)
+
+func setup_game_mode_level():
+	if game_mode == "story":
+		var num = Global.savedata["story"]["current level"]
+		
+		if not valid_level_choice():
+			print("ERROR | LEVEL OUT OF RANGE")
+			num = level_loader.get_max_levels()-1
+		
+		var level = load_level(num)
+		
+		if level.tutorial:
+			set_game_state("Tutorial")
+		
+		if num < 10:
+			level_num = "Level 0%s"%[num]
+		else:
+			level_num = "Level %s"%[num]
+		level_title = level.title
+	
+	elif game_mode == "arcade":
+		var num = 1
+		var level = load_level(num, true)
+		
+		level_num = "Arcade Arena!"
+		level_title = "How many laps can you survive?"
+	elif game_mode == "speedrun":
+		var num = 1
+		var level = load_level(num, true)
+		
+		level_num = "Speedrun Track!"
+		level_title = "Gotta Go Fast!"
+
+func valid_level_choice(level_to_check):
+	return level_to_check < level_loader.get_max_levels()
+
+func load_level(level_choice, load_all = false):
+	var level = level_loader.load_level(level_choice, load_all)
+	object_spawner.set_level(level)
+	return level
+
 
 func set_game_state(string):
 	current_state = STATE[string]
 
-func load_level():
-	var num = Global.savedata["story"]["current level"]
-	var level
-	
-	if num < level_loader.get_max_levels():
-		level = level_loader.load_level(num)
-	else:
-		print("ERROR | LEVEL OUT OF RANGE")
-		num = level_loader.get_max_levels()-1
-		level = level_loader.load_level(num)
-	
-	if level.tutorial:
-		set_game_state("Tutorial")
-	
-	object_spawner.set_level(level)
-	if num < 10:
-		level_num = "Level 0%s"%[num]
-	else:
-		level_num = "Level %s"%[num]
-	level_title = level.title
+func get_game_state():
+	return current_state
 
 func get_score():
 	return points
@@ -153,7 +205,7 @@ func game_over():
 func _on_scored(num):
 	var last_point_level = points_level
 	
-	points += num
+	points += (num*multiplyer)
 	points_level = int(points/point_multiple)
 	#print(points_level)
 	
@@ -171,9 +223,16 @@ func _on_scored(num):
 	#			print(player.speed.x)
 	
 		if points_level % int(upgrade_multiple/point_multiple) == 0:
-			upgrade_points += 1
-			upgrade_messager.play("text_anim")
-			Global.update_story_upgrade(upgrade_points)
+			if game_mode == "story":
+				upgrade_points += 1
+				upgrade_label.set_text("+ UPGRADE POINT!")
+				upgrade_messager.play("text_anim")
+				Global.update_story_upgrade(upgrade_points)
+			elif game_mode == "arcade" or game_mode == "speedrun":
+				multiplyer += 1
+				upgrade_label.set_text("%s Multiplyer"%[multiplyer])
+				upgrade_messager.play("text_anim")
+				pass
 	update_score()
 	pass # replace with function body
 
@@ -193,25 +252,22 @@ func dash_score():
 	points -= 5
 	update_score()
 
-func game_start():
-	load_level()
-	if current_state == STATE["Tutorial"]:
-		tutorial.play(level_num, level_title)
-		object_spawner.connect_tutorial_signal(tutorial)
-	else:
-		countdown.play(level_num, level_title)
-
 func tutorial_start():
 	tutorial.play()
 
 func _on_level_end():
-	player_end_level()
-	level_complete_screen.open(level_num)
-	get_tree().set_pause(true)
+	if game_mode == "story" or game_mode == "speedrun":
+		level_completed()
+	elif game_mode == "arcade":
+		load_level(1, true)
+	else:
+		printerr("ERROR | Invalid Game Mode: %s"%[game_settings])
 
-func player_end_level():
+func level_completed():
 	player.gravity_force = 0
 	player.jetpack_force = 0
+	level_complete_screen.open(level_num)
+	get_tree().set_pause(true)
 
 func player_reset_y():
 	var boost_timer = get_node("AutoBoost")

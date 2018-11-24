@@ -3,14 +3,29 @@ extends Node
 var level = {}
 var level_info
 
-func load_level(num):
-	level_info = get_child(num)
-	level["title"] = level_info.title
-	level["tutorial"] = level_info.tutorial
-	build_boss()
-	build_beats()
-	build_half_beats()
-	level["total_count"] = level["beats"].size() + level["half_beats"].size()
+func load_level(num, load_all):
+	if load_all:
+		for x in range(num, self.get_max_levels()):
+			level_info = get_child(x)
+			build_boss()
+			build_beats()
+			build_half_beats()
+			level["half_beats"].append(0)
+			level["beats"].append(6)
+			level["half_beats"].append(0)
+		level["beats_count"] = level["beats"].size()
+		level["half_count"] = level["half_beats"].size()
+		if level["beats_count"] == level["half_count"]:
+			level["half_beats"].pop_back()
+		level["total_count"] = level["beats"].size() + level["half_beats"].size()
+	else:
+		level_info = get_child(num)
+		level["title"] = level_info.title
+		level["tutorial"] = level_info.tutorial
+		build_boss()
+		build_beats()
+		build_half_beats()
+		level["total_count"] = level["beats"].size() + level["half_beats"].size()
 	return level
 
 func build_boss():
@@ -25,7 +40,8 @@ func build_boss():
 
 func build_beats():
 	var obstacle_pool = []
-	level["beats"] = []
+	if not level.has("beats"):
+		level["beats"] = []
 	
 	add_intro(level["beats"], level_info.intro_beats)
 	obstacle_pool = build_obstacle_pool(level_info["beats"])
@@ -35,7 +51,8 @@ func build_beats():
 
 func build_half_beats():
 	var obstacle_pool = []
-	level["half_beats"] = []
+	if not level.has("half_beats"): 
+		level["half_beats"] = []
 	
 	add_intro(level["half_beats"], level_info.intro_halfs)
 	obstacle_pool = build_obstacle_pool(level_info["half_beats"])

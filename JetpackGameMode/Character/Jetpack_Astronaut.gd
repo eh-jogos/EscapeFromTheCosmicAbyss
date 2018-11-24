@@ -58,14 +58,6 @@ func _ready():
 	bullet_spawn = self.get_node("BulletSpawn")
 	shield = self.get_node("Shield")
 	
-	# Stats
-	speed_x = 4 + game.initial_speed
-	shield_energy = game.initial_shield
-	laser_duration = 1.5 + (0.5*game.laser_duration)
-	cooldown = 1.5 + (0.1 * game.cooldown)
-	
-	shield_up(shield_energy)
-	
 	falling = true
 	body_animator.play("falling")
 	if not shooting:
@@ -246,7 +238,17 @@ func shield_up(increment):
 	shield.increase_energy(increment)
 
 func score():
+	
 	game._on_scored(5)
 
 func reset_y():
 	speed.y = 0
+
+func set_player_stats():
+	speed_x = 4 + game.initial_speed
+	shield_energy = game.initial_shield
+	laser_duration = 1.5 + (0.5*game.laser_duration)
+	cooldown = 1.5 + (0.1 * game.cooldown)
+	
+	print("SHIELD UP: %s"%[shield_energy])
+	shield_up(shield_energy)

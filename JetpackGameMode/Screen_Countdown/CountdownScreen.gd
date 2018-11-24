@@ -17,7 +17,6 @@ func play(num, title):
 	self.show()
 	#SoundManager.stop_bgm()
 	game.set_game_state("Start")
-	game.initialize_game_stats()
 	level_num.set_text(num)
 	level_title.set_text(title)
 	

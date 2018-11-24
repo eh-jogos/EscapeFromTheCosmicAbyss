@@ -1,7 +1,10 @@
 extends CanvasLayer
 
 var initial_btn
+var save_btn
+var close_btn
 var animator
+var store
 
 # Stats Variables imported from savedata
 var cooldown
@@ -44,14 +47,14 @@ func init_bar(bar_node, bar_stat):
 		print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), bar_stat, max_stats])
 	pass
 
-func init_story_store():
-	cooldown = Global.savedata["story"]["cooldown"]
-	initial_shield = Global.savedata["story"]["initial shield"]
-	initial_ammo = Global.savedata["story"]["initial ammo"]
-	initial_speed = Global.savedata["story"]["initial speed"]
-	max_speed = Global.savedata["story"]["max speed"]
-	laser_duration = Global.savedata["story"]["laser duration"]
-	upgrade_points = Global.savedata["story"]["upgrade points"]
+func init_store(game_mode):
+	cooldown = Global.savedata[game_mode]["cooldown"]
+	initial_shield = Global.savedata[game_mode]["initial shield"]
+	initial_ammo = Global.savedata[game_mode]["initial ammo"]
+	initial_speed = Global.savedata[game_mode]["initial speed"]
+	max_speed = Global.savedata[game_mode]["max speed"]
+	laser_duration = Global.savedata[game_mode]["laser duration"]
+	upgrade_points = Global.savedata[game_mode]["upgrade points"]
 	
 	#upgrade_points -= 30
 	#upgrade_points = clamp(upgrade_points, 0, 59)
@@ -64,11 +67,6 @@ func init_story_store():
 	init_bar(max_speed_bar, max_speed)
 	init_bar(laser_bar, laser_duration)
 
-func init_arcade_store():
-	pass
-
-func init_speedrun_store():
-	pass
 
 func _on_SaveApply_pressed():
 	init_bar(cooldown_bar, cooldown)
@@ -78,35 +76,61 @@ func _on_SaveApply_pressed():
 	init_bar(max_speed_bar, max_speed)
 	init_bar(laser_bar, laser_duration)
 	
-	Global.update_story_stats(cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_duration, upgrade_points)
+	if is_story_mode():
+		Global.update_story_stats(cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_duration, upgrade_points)
+	elif is_extra_mode():
+		Global.update_category_stats(store["game mode"], cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_duration, upgrade_points)
+	else:
+		print("ERROR | Unexpected Store Mode: %s"%[store])
 
 func _on_Reset_pressed():
-	var store_mode = Global.get_game_mode()
-	if store_mode == "story":
-		init_story_store()
-	elif store_mode == "arcade":
-		init_arcade_store()
-	elif store_mode == "speedrun":
-		init_speedrun_store()
+	if is_story_mode() or is_extra_mode():
+		init_store(store["game mode"])
 	else:
-		print("ERROR | Unexpected Store Mode: %s"%[store_mode])
-		init_story_store()
+		print("ERROR | Unexpected Store Mode: %s"%[store])
+		init_store("story")
 
 func _on_Close_pressed():
-	_on_Reset_pressed()
+	_on_SaveApply_pressed()
+	
 	animator.play("close")
 	yield(animator,"finished")
-	ScreenManager.clear_above()
+	
+	
+	if is_story_mode():
+		ScreenManager.clear_above()
+	elif is_extra_mode():
+		var game = get_tree().get_root().get_node("JetpackGame")
+		game.game_start()
+
+func is_extra_mode():
+	return store["game mode"] == "arcade" or store["game mode"] == "speedrun"
+
+func is_story_mode():
+	return store["game mode"] == "story"
 
 ##################
 # Engine Methods #
 ##################
 
 func _ready():
+	store = Global.get_game_mode()
+	
+	close_btn = get_node("Buttons/Close")
+	save_btn = get_node("Buttons/SaveApply")
 	initial_btn = get_node("SectionLabels/Cooldown")
 	initial_btn.grab_focus()
 	
 	animator = self.get_node("AnimationPlayer")
+	
+	if is_extra_mode():
+		close_btn.set_text("Start")
+		save_btn.set_disabled(true)
+		save_btn.hide()
+	else:
+		close_btn.set_text("Close")
+		save_btn.set_disabled(false)
+		save_btn.show()
 	
 	cooldown_bar = get_node("SectionLabels/Cooldown/UpgradeBar")
 	shield_bar = get_node("SectionLabels/Shields/UpgradeBar")

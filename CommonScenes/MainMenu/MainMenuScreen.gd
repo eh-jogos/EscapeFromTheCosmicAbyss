@@ -1,7 +1,6 @@
 extends Node2D
 
 #Menu Paths
-export(String, FILE) var pregame_path = "res://CommonScenes/PreGameScreen/PreGame.tscn"
 export(String, FILE) var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 export(String, FILE) var game_path
 

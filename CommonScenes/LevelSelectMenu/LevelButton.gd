@@ -28,6 +28,7 @@ func _on_mouse_enter():
 	self.grab_focus()
 
 func _on_LevelButton_pressed():
+	print("%s | Level Num: %s"%[self.get_name(),level_num])
 	if game_settings["sub-mode"] == "select level":
 		set_level_and_close()
 	else:
