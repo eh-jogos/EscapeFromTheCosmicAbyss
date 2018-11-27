@@ -328,3 +328,9 @@ func player_reset_y():
 
 func set_laps(lap_count):
 	time_laps_label.set_text("Laps: %s"%[lap_count])
+
+func is_last_stage():
+	if current_level == level_loader.get_max_levels()-1:
+		return true
+	else:
+		return false

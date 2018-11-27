@@ -88,6 +88,9 @@ func open(msg):
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
+	if game.is_last_stage():
+		Global.story_completed()
+	
 	#SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
 	

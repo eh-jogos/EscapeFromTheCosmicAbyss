@@ -98,6 +98,9 @@ func toggle_menuitems(game_mode):
 			new_game_btn.set_focus_neighbour(MARGIN_TOP, quit_btn.get_path())
 			quit_btn.set_focus_neighbour(MARGIN_BOTTOM, new_game_btn.get_path())
 		
+		arcade_btn.set_focus_neighbour(MARGIN_TOP, "")
+		speedrun_btn.set_focus_neighbour(MARGIN_TOP, "")
+		
 		cat15_btn.hide()
 		cat30_btn.hide()
 		cat40_btn.hide()
