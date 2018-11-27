@@ -4,38 +4,55 @@ var replay_btn
 var next_level_btn
 var upgrade_btn
 var level_select_btn
+var quit_btn
 var animator
 
 var last_focus
 
 var game
+var game_mode
 var label_message
-var score
+
+var score_results
 var label_score
-var highscore
 var label_highscore
 var upgrade_points
+var upgrade_container
 var label_upgrade
-var congratulations
+var score_congrats
+
+var time_results
+var label_time
+var label_hightime
+var time_congrats
 
 var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 func _ready():
-	replay_btn = self.get_node("Buttons/Replay")
-	next_level_btn = self.get_node("Buttons/NextLevel")
-	upgrade_btn = self.get_node("Buttons/Upgrade")
-	level_select_btn = self.get_node("Buttons/LevelSelect")
+	replay_btn = self.get_node("ResultsContainer/Buttons/Replay")
+	next_level_btn = self.get_node("ResultsContainer/Buttons/NextLevel")
+	upgrade_btn = self.get_node("ResultsContainer/Buttons/Upgrade")
+	level_select_btn = self.get_node("ResultsContainer/Buttons/LevelSelect")
+	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
-	
 	label_message = self.get_node("CompleteText")
-	label_score = self.get_node("Score")
-	label_highscore = self.get_node("Highscore")
-	label_upgrade = self.get_node("UpgradePoints")
-	congratulations = self.get_node("HighscoreText")
+	
+	score_results = self.get_node("ResultsContainer/ScoreResults")
+	label_score = score_results.get_node("ScoreContainer/Score")
+	label_highscore = score_results.get_node("HighScoreContainer/Highscore")
+	upgrade_container = score_results.get_node("UpgradeContainer")
+	label_upgrade = score_results.get_node("UpgradeContainer/UpgradePoints")
+	score_congrats = score_results.get_node("ScoreContainer/HighscoreText")
+	
+	time_results = self.get_node("ResultsContainer/TimeResults")
+	label_time = time_results.get_node("TimeContainer/Time")
+	label_hightime = time_results.get_node("HighTimeContainer/HighTime")
+	time_congrats = time_results.get_node("TimeContainer/HightimeText")
 	
 	game = get_parent().get_parent()
+	game_mode = game.game_mode
 	
 	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")
@@ -43,13 +60,31 @@ func _ready():
 	if not level_select_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		level_select_btn.connect("focus_enter",self,"_on_focus_enter")
 	
-	pass
+	
+	if game_mode == "story":
+		replay_btn.show()
+		upgrade_btn.show()
+		next_level_btn.show()
+		level_select_btn.show()
+		quit_btn.show()
+		
+		score_results.show()
+		time_results.hide()
+	elif game_mode == "speedrun":
+		replay_btn.show()
+		upgrade_btn.hide()
+		level_select_btn.hide()
+		next_level_btn.hide()
+		quit_btn.show()
+		
+		score_results.show()
+		time_results.show()
+		
+		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
+
 
 func open(msg):
-	self.show()
-	label_message.set_text("%s Complete!"%[msg])
-	animator.play_backwards("fade out")
-	
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
@@ -59,34 +94,55 @@ func open(msg):
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	
-	score = game.get_score()
+	var score = game.get_score()
 	print_score(score, label_score)
 	
-	highscore = game.highscore
+	var highscore = game.highscore
 	print_score(highscore, label_highscore)
 	
-	upgrade_points = game.upgrade_points
-	print_decimal(upgrade_points, label_upgrade)
-	
 	if score > highscore:
-		congratulations.show()
+		score_congrats.show()
 		game.highscore = score
-		Global.update_story_highscore(score)
+		Global.update_highscore(game_mode, score)
 	
-	var last_level = game.level_loader.get_max_levels()-1
-	var current_level = Global.savedata["story"]["current level"]
-	var unlocked_levels = Global.savedata["story"]["levels unlocked"]
+	if game_mode == "story":
+		upgrade_container.show()
+		upgrade_points = game.upgrade_points
+		print_decimal(upgrade_points, label_upgrade)
+		
+		var last_level = game.level_loader.get_max_levels()-1
+		var current_level = Global.savedata["story"]["current level"]
+		var unlocked_levels = Global.savedata["story"]["levels unlocked"]
+		
+		if current_level < last_level:
+			if current_level == unlocked_levels:
+				unlocked_levels = current_level + 1
+				Global.update_story_unlocks(unlocked_levels)
+				if unlocked_levels == 1:
+					Global.update_story_last_unlock(unlocked_levels)
+			next_level_btn.grab_focus()
+		else:
+			next_level_btn.set_disabled(true)
+			level_select_btn.grab_focus()
+	elif game_mode == "speedrun":
+		upgrade_container.hide()
+		replay_btn.grab_focus()
+		
+		var time = game.get_time()
+		print_time(time, label_time)
+		
+		var hightime = game.hightime
+		print_time(hightime, label_hightime)
+		
+		if time < hightime or hightime == 0:
+			time_congrats.show()
+			game.hightime = time
+			Global.update_hightime(time)
 	
-	if current_level < last_level:
-		if current_level == unlocked_levels:
-			unlocked_levels = current_level + 1
-			Global.update_story_unlocks(unlocked_levels)
-			if unlocked_levels == 1:
-				Global.update_story_last_unlock(unlocked_levels)
-		next_level_btn.grab_focus()
-	else:
-		next_level_btn.set_disabled(true)
-		level_select_btn.grab_focus()
+	self.show()
+	label_message.set_text("%s Complete!"%[msg])
+	animator.play_backwards("fade out")
+
 
 func _on_replay_pressed():
 	if game != null:
@@ -118,6 +174,18 @@ func print_decimal(points, label):
 	else:
 		points_str = str(points)
 	label.set_text(points_str)
+
+func print_time(runtime, label):
+	var minutes = int(runtime/60)
+	var seconds = int(runtime%60)
+	
+	if minutes < 10:
+		minutes = "0%s"%[minutes]
+	
+	if seconds < 10:
+		seconds = "0%s"%[seconds]
+	
+	label.set_text("%s:%s"%[minutes,seconds])
 
 func _on_upgrade_pressed():
 	var path = upgrade_path

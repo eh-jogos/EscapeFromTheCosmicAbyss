@@ -35,7 +35,10 @@ func init_bar(bar_node, bar_stat):
 		for stat in range(0,max_stats):
 			var slot = bar_node.get_child(stat)
 			if stat < bar_stat:
-				slot.apply_upgrade()
+				if is_extra_mode():
+					slot.pending_upgrade()
+				else:
+					slot.apply_upgrade()
 			else:
 				slot.base_slot()
 	else:
@@ -102,6 +105,7 @@ func _on_Close_pressed():
 	elif is_extra_mode():
 		var game = get_tree().get_root().get_node("JetpackGame")
 		game.game_start()
+		ScreenManager.clear_above()
 
 func is_extra_mode():
 	return store["game mode"] == "arcade" or store["game mode"] == "speedrun"

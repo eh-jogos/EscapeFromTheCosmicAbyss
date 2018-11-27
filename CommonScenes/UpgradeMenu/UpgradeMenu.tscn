@@ -455,7 +455,6 @@ script/script = ExtResource( 8 )
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown"]
 
-editor/display_folded = true
 transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]

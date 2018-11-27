@@ -3,20 +3,22 @@ extends Node
 var level = {}
 var level_info
 
-func load_level(num, load_all):
+func load_level(num, load_all, loop):
 	if load_all:
 		for x in range(num, self.get_max_levels()):
 			level_info = get_child(x)
 			build_boss()
 			build_beats()
 			build_half_beats()
-			level["half_beats"].append(0)
-			level["beats"].append(6)
-			level["half_beats"].append(0)
+			if x != self.get_max_levels()-1:
+				level["half_beats"].append(0)
+				level["beats"].append(6)
+				level["half_beats"].append(0)
+			elif x == self.get_max_levels()-1 and loop:
+				level["half_beats"].append(0)
+				level["beats"].append(6)
 		level["beats_count"] = level["beats"].size()
 		level["half_count"] = level["half_beats"].size()
-		if level["beats_count"] == level["half_count"]:
-			level["half_beats"].pop_back()
 		level["total_count"] = level["beats"].size() + level["half_beats"].size()
 	else:
 		level_info = get_child(num)

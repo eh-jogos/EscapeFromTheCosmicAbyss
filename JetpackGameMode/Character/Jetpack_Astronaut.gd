@@ -48,7 +48,7 @@ func _ready():
 	game = self.get_parent()
 	overheat_bar = game.get_node("HUD/TextureProgress")
 	overheat_bar_animator = game.get_node("HUD/TextureProgress/AnimationPlayer")
-	points_label = game.get_node("HUD/Points")
+	points_label = game.get_node("HUD/CenterArea/Points")
 	ammunition = game.get_node("HUD/TextureProgress/Ammunition")
 	
 	# Inside Nodes

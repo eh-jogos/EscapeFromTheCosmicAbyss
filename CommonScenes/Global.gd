@@ -2,7 +2,7 @@ extends Node
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
-var version = 0.55
+var version = 0.56
 
 var savedata = {
 	"version" : version,
@@ -12,7 +12,21 @@ var savedata = {
 		"bgm volume": 60
 	},
 	"story": {
-		"highscore": 0,
+		"highscore": [
+				0, #0
+				0, #1
+				0, #2
+				0, #3
+				0, #4
+				0, #5
+				0, #6
+				0, #7
+				0, #8
+				0, #9
+				0, #10
+				0, #11
+				0, #12
+		],
 		"cooldown": 0,
 		"initial ammo": 0,
 		"initial shield": 0,
@@ -27,6 +41,7 @@ var savedata = {
 		"tutorial beaten": false,
 		},
 	"arcade": {
+		"highlaps": 0,
 		"highscore": 0,
 		"cooldown": 0,
 		"initial ammo": 0,
@@ -37,7 +52,7 @@ var savedata = {
 		"upgrade points": 0,
 		},
 	"speedrun": {
-		"time": 0,
+		"hightime": 0,
 		"highscore": 0,
 		"cooldown": 0,
 		"initial ammo": 0,
@@ -75,12 +90,12 @@ func save():
 func read():
 	savefile.open(savepath,File.READ)
 	var old_save = savefile.get_var()
-	if old_save.has("version") and old_save["version"] > version:
+	if old_save.has("version") and old_save["version"] >= version:
 		savedata = old_save
 		savefile.close()
 	else:
 		#print("SAVE ERROR")
-		if old_save.has("version") and old_save["version"] <= version:
+		if old_save.has("version") and old_save["version"] < version:
 			savedata["story"]["highscore"] = old_save["story"]["highscore"]
 			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
 			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
@@ -106,7 +121,21 @@ func read():
 		save()
 
 func update_highscore(game_mode, points):
-	savedata[game_mode]["highscore"] = points
+	if game_mode == "story":
+		var index = savedata[game_mode]["current level"]
+		savedata[game_mode]["highscore"][index] = points
+	elif game_mode == "arcade" or game_mode == "speedrun":
+		savedata[game_mode]["highscore"] = points
+	else:
+		print("ERROR SAVING HIGHSCORE | Invalid game_mode: %s"%[game_mode]) 
+	save()
+
+func update_hightime(time_duration):
+	savedata["speedrun"]["hightime"] = time_duration
+	save()
+
+func update_highlaps(total_laps):
+	savedata["arcade"]["highlaps"] = total_laps
 	save()
 
 func update_story_upgrade(points):
@@ -191,3 +220,13 @@ func get_game_mode():
 func tutorial_completed():
 	savedata["story"]["tutorial beaten"] = true
 	save()
+
+func story_completed():
+	savedata["story"]["story beaten"] = true
+	save()
+
+func is_tutorial_completed():
+	return savedata["story"]["tutorial beaten"]
+
+func is_story_completed():
+	return savedata["story"]["story beaten"]

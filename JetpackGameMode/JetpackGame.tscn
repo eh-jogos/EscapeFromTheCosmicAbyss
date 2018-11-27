@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=1]
+[gd_scene load_steps=70 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -37,19 +37,20 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" type="PackedScene" id=35]
 [ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=37]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=40]
-[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=41]
-[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=42]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=43]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=44]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=45]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=46]
-[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=47]
-[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=48]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=49]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=38]
+[ext_resource path="res://JetpackGameMode/HUD/SpeedrunTime.gd" type="Script" id=39]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=41]
+[ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=42]
+[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=43]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=44]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=45]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=46]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=47]
+[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=48]
+[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=49]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=50]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" type="PackedScene" id=51]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -693,37 +694,103 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="Score" type="Label" parent="HUD"]
+[node name="CenterArea" type="VBoxContainer" parent="HUD"]
 
+editor/display_folded = true
+anchor/left = 3
+anchor/right = 3
+rect/min_size = Vector2( 750, 150 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 375.0
+margin/top = 75.0
+margin/right = -375.0
+margin/bottom = 225.0
+custom_constants/separation = -5
+alignment = 0
+
+[node name="Score" type="Label" parent="HUD/CenterArea"]
+
+rect/min_size = Vector2( 108, 37 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 44.0
-margin/top = 88.0
-margin/right = 152.0
-margin/bottom = 125.0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 750.0
+margin/bottom = 37.0
 custom_fonts/font = ExtResource( 37 )
 text = "Score:"
+align = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Points" type="Label" parent="HUD"]
+[node name="Points" type="Label" parent="HUD/CenterArea"]
+
+rect/min_size = Vector2( 500, 86 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 32.0
+margin/right = 750.0
+margin/bottom = 118.0
+custom_fonts/font = ExtResource( 38 )
+text = "0000"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TimeLaps" type="Label" parent="HUD/CenterArea"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 160.0
-margin/top = 88.0
-margin/right = 260.0
-margin/bottom = 125.0
+margin/left = 0.0
+margin/top = 113.0
+margin/right = 750.0
+margin/bottom = 150.0
 custom_fonts/font = ExtResource( 37 )
-text = "0000"
+text = "Time: "
+align = 1
+valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="RunTime" type="Label" parent="HUD/CenterArea"]
+
+editor/display_folded = true
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 145.0
+margin/right = 750.0
+margin/bottom = 182.0
+custom_fonts/font = ExtResource( 37 )
+text = "00:00"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 39 )
+
+[node name="Timer" type="Timer" parent="HUD/CenterArea/RunTime"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 [node name="TextureProgress" type="TextureProgress" parent="HUD"]
 
@@ -741,19 +808,19 @@ range/min = 0.0
 range/max = 100.0
 range/step = 1.0
 range/page = 0.0
-range/value = 90.0
+range/value = 0.0
 range/exp_edit = false
 range/rounded = false
 texture/under = null
-texture/over = ExtResource( 38 )
-texture/progress = ExtResource( 39 )
+texture/over = ExtResource( 40 )
+texture/progress = ExtResource( 41 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
 [node name="Ammunition" type="Node2D" parent="HUD/TextureProgress"]
 
 editor/display_folded = true
-script/script = ExtResource( 40 )
+script/script = ExtResource( 42 )
 
 [node name="AmmoSlot1" type="Position2D" parent="HUD/TextureProgress/Ammunition"]
 
@@ -810,6 +877,7 @@ autoplay = ""
 
 [node name="UpgradeLabel" type="Label" parent="HUD"]
 
+editor/display_folded = true
 visibility/opacity = 0.0
 material/material = SubResource( 16 )
 focus/ignore_mouse = true
@@ -820,7 +888,7 @@ margin/left = 492.0
 margin/top = 400.0
 margin/right = 1476.0
 margin/bottom = 486.0
-custom_fonts/font = ExtResource( 41 )
+custom_fonts/font = ExtResource( 38 )
 text = "+ UPGRADE POINT!"
 align = 1
 valign = 1
@@ -851,9 +919,9 @@ margin/top = 1025.0
 margin/right = 1878.0
 margin/bottom = 1071.0
 use_top_left = false
-script/script = ExtResource( 42 )
+script/script = ExtResource( 43 )
 ending_cap = 35
-progress_barrier = ExtResource( 43 )
+progress_barrier = ExtResource( 44 )
 
 [node name="ProgressBar" type="TextureFrame" parent="HUD/ProgressVisualization"]
 
@@ -865,7 +933,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1846.0
 margin/bottom = 46.0
-texture = ExtResource( 44 )
+texture = ExtResource( 45 )
 stretch_mode = 0
 
 [node name="IconContainer" type="CenterContainer" parent="HUD/ProgressVisualization/ProgressBar"]
@@ -887,7 +955,7 @@ transform/pos = Vector2( 15, 21 )
 config/amount = 1
 config/lifetime = 0.5
 config/process_mode = 1
-config/texture = ExtResource( 45 )
+config/texture = ExtResource( 46 )
 params/direction = 0.0
 params/spread = 10.0
 params/linear_velocity = 0.0
@@ -916,7 +984,7 @@ margin/left = 0.0
 margin/top = 6.0
 margin/right = 30.0
 margin/bottom = 36.0
-texture = ExtResource( 45 )
+texture = ExtResource( 46 )
 modulate = Color( 0, 1, 1, 1 )
 stretch_mode = 0
 
@@ -928,23 +996,23 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 46 )]
+[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 47 )]
 
 visibility/visible = false
 
-[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 47 )]
+[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 48 )]
 
 visibility/visible = false
 
-[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 48 )]
+[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 49 )]
 
 visibility/visible = false
 
-[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 49 )]
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 50 )]
 
 visibility/visible = false
 
-[node name="TutorialTipScreen" parent="AboveScreen" instance=ExtResource( 50 )]
+[node name="TutorialTipScreen" parent="AboveScreen" instance=ExtResource( 51 )]
 
 visibility/visible = false
 
@@ -957,5 +1025,7 @@ visibility/visible = false
 [connection signal="level_ready" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
 
 [connection signal="update_visualization" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
+
+[connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
 
 

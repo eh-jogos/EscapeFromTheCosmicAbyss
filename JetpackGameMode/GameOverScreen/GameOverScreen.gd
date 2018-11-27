@@ -9,83 +9,132 @@ var animator
 var last_focus
 
 var game
-var score
+var game_mode
+
+var score_results
 var label_score
-var highscore
 var label_highscore
 var upgrade_points
-var text_upgrade
+var upgrade_container
 var label_upgrade
-var congratulations
+var score_congrats
+
+var time_results
+var label_time
+var label_hightime
+var time_congrats
+
+var laps_results
+var label_laps
+var label_highlaps
+var laps_congrats
 
 var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
-var game_settings = Global.get_game_mode()
 
 func _ready():
-	replay_btn = self.get_node("Buttons/Replay")
-	upgrade_btn = self.get_node("Buttons/Upgrade")
-	level_select_btn = self.get_node("Buttons/LevelSelect")
-	quit_btn = self.get_node("Buttons/Quit")
+	replay_btn = self.get_node("ResultsContainer/Buttons/Replay")
+	upgrade_btn = self.get_node("ResultsContainer/Buttons/Upgrade")
+	level_select_btn = self.get_node("ResultsContainer/Buttons/LevelSelect")
+	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
 	
-	label_score = self.get_node("Score")
-	label_highscore = self.get_node("Highscore")
-	text_upgrade = self.get_node("UpgradeText")
-	label_upgrade = self.get_node("UpgradePoints")
-	congratulations = self.get_node("HighscoreText")
+	score_results = self.get_node("ResultsContainer/ScoreResults")
+	label_score = score_results.get_node("ScoreContainer/Score")
+	label_highscore = score_results.get_node("HighScoreContainer/Highscore")
+	upgrade_container = score_results.get_node("UpgradeContainer")
+	label_upgrade = score_results.get_node("UpgradeContainer/UpgradePoints")
+	score_congrats = score_results.get_node("ScoreContainer/HighscoreText")
+	
+	time_results = self.get_node("ResultsContainer/TimeResults")
+	label_time = time_results.get_node("TimeContainer/Time")
+	label_hightime = time_results.get_node("HighTimeContainer/HighTime")
+	time_congrats = time_results.get_node("TimeContainer/HightimeText")
+	
+	laps_results = self.get_node("ResultsContainer/LapsResults")
+	label_laps = laps_results.get_node("LapsContainer/Laps")
+	label_highlaps = laps_results.get_node("HighLapsContainer/HighLaps")
+	laps_congrats = laps_results.get_node("LapsContainer/HighlapsText")
 	
 	game = get_parent().get_parent()
-	
+	game_mode = game.game_mode
 	replay_btn.grab_focus()
 	
 	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")
 	
-	
-	
-	if game_settings["game mode"] == "story":
+	if game_mode == "story":
 		replay_btn.show()
 		upgrade_btn.show()
 		level_select_btn.show()
 		quit_btn.show()
-	elif game_settings["game mode"] == "arcade":
+		
+		score_results.show()
+		time_results.hide()
+		laps_results.hide()
+	elif game_mode == "arcade":
 		replay_btn.show()
 		upgrade_btn.hide()
 		level_select_btn.hide()
 		quit_btn.show()
 		
+		score_results.show()
+		time_results.hide()
+		laps_results.show()
+		
 		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
 		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
-	elif game_settings["game mode"] == "speedrun":
+	elif game_mode == "speedrun":
 		replay_btn.show()
 		upgrade_btn.hide()
 		level_select_btn.hide()
 		quit_btn.show()
 		
+		score_results.show()
+		time_results.show()
+		laps_results.hide()
+		
 		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
 		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
-	
-	pass
+
 
 func open():
-	score = game.get_score()
+	var score = game.get_score()
 	print_score(score, label_score)
 	
-	highscore = game.highscore
+	var highscore = game.highscore
 	print_score(highscore, label_highscore)
 	
-	if game_settings["game mode"] == "story":
+	if score > highscore:
+		score_congrats.show()
+		game.highscore = score
+		Global.update_highscore(game_mode, score)
+	
+	if game_mode == "story":
+		upgrade_container.show()
 		upgrade_points = game.upgrade_points
 		print_decimal(upgrade_points, label_upgrade)
-	else:
-		text_upgrade.hide()
-		label_upgrade.hide()
-	
-	if score > highscore:
-		congratulations.show()
-		game.highscore = score
-		Global.update_story_highscore(score)
+	elif game_mode == "speedrun":
+		upgrade_container.hide()
+		
+		var time = game.get_time()
+		print_time(time, label_time)
+		
+		var hightime = game.hightime
+		print_time(hightime, label_hightime)
+	elif game_mode == "arcade":
+		upgrade_container.hide()
+		
+		var laps = game.get_laps()
+		print_decimal(laps, label_laps)
+		
+		var highlaps = game.highlaps
+		print_decimal(highlaps, label_highlaps)
+		
+		if laps > highlaps:
+			laps_congrats.show()
+			game.highlaps = laps
+			Global.update_highlaps(laps)
 	
 	self.show()
 	animator.play_backwards("fade out")
@@ -103,9 +152,9 @@ func _on_replay_pressed():
 		yield(animator, "finished")
 		
 		resume_game()
-#		ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn", self)
+		#ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn")
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
-		
+
 func _on_quit_pressed():
 	get_tree().quit()
 
@@ -134,6 +183,17 @@ func print_decimal(points, label):
 		points_str = str(points)
 	label.set_text(points_str)
 
+func print_time(runtime, label):
+	var minutes = int(runtime/60)
+	var seconds = int(runtime%60)
+	
+	if minutes < 10:
+		minutes = "0%s"%[minutes]
+	
+	if seconds < 10:
+		seconds = "0%s"%[seconds]
+	
+	label.set_text("%s:%s"%[minutes,seconds])
 
 func _on_upgrade_pressed():
 	var path = upgrade_path
