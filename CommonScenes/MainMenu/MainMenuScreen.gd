@@ -36,7 +36,7 @@ func _ready():
 
 func _on_options_pressed():
 	var path = options_path
-	last_focus = options_btn.get_path()
+	last_focus = options_btn
 	
 	ScreenManager.load_above(path, last_focus, self)
 
@@ -52,7 +52,7 @@ func _on_NewGame_pressed():
 	if Global.is_tutorial_completed():
 		Global.set_game_mode("story", "select level")
 	else:
-		Global.set_game_mode("story", "level_selected")
+		Global.set_game_mode("story", "level selected")
 	
 	#TO DO - Load Intro instead of game.
 	ScreenManager.load_screen(game_path)

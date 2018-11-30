@@ -2,7 +2,7 @@ extends Node
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
-var version = 0.56
+var version = 0.61
 
 var savedata = {
 	"version" : version,
@@ -37,7 +37,7 @@ var savedata = {
 		"levels unlocked": 0,
 		"current level":0,
 		"last unlock": 0,
-		"story beaten": false,
+		"story beaten": true,
 		"tutorial beaten": false,
 		},
 	"arcade": {
@@ -49,7 +49,7 @@ var savedata = {
 		"initial speed": 0,
 		"max speed": 0,
 		"laser duration": 0,
-		"upgrade points": 0,
+		"upgrade points": 15,
 		},
 	"speedrun": {
 		"hightime": 0,
@@ -96,7 +96,6 @@ func read():
 	else:
 		#print("SAVE ERROR")
 		if old_save.has("version") and old_save["version"] < version:
-			savedata["story"]["highscore"] = old_save["story"]["highscore"]
 			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
 			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
 			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
@@ -109,12 +108,9 @@ func read():
 			savedata["options"]["track"] = old_save["options"]["track"]
 			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
 		elif old_save.has("version") and old_save["version"] <= 0.34:
-			savedata["story"]["highscore"] = old_save["highscore"]
 			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
 			savedata["options"]["track"] = old_save["options"]["track"]
 			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
-		else:
-			savedata["story"]["highscore"] = old_save["highscore"]
 		
 		savefile.close()
 		
@@ -165,7 +161,22 @@ func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade
 	save()
 
 func reset_story_progress():
-	savedata["story"]["highscore"] = 0
+	savedata["story"]["highscore"] = [
+			0, #0
+			0, #1
+			0, #2
+			0, #3
+			0, #4
+			0, #5
+			0, #6
+			0, #7
+			0, #8
+			0, #9
+			0, #10
+			0, #11
+			0, #12
+	]
+	
 	savedata["story"]["cooldown"] = 0
 	savedata["story"]["initial ammo"] = 0
 	savedata["story"]["initial shield"] = 0

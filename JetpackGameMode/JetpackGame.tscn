@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=1]
+[gd_scene load_steps=73 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -301,6 +301,146 @@ tracks/3/keys = {
 offsets = FloatArray( 0, 0.985915, 1 )
 colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
 
+[sub_resource type="Animation" id=19]
+
+resource/name = "base"
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterArea:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureProgress:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("UpgradeLabel:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ProgressVisualization:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=20]
+
+resource/name = "editor"
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterArea:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureProgress:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("UpgradeLabel:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ProgressVisualization:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=21]
+
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterArea:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureProgress:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("UpgradeLabel:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ProgressVisualization:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+
 [node name="JetpackGame" type="Node2D"]
 
 script/script = ExtResource( 1 )
@@ -318,6 +458,7 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -689,6 +830,7 @@ transform/scale = Vector2( 1, -1 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
+process/pause_mode = 2
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -767,7 +909,6 @@ max_lines_visible = -1
 
 [node name="RunTime" type="Label" parent="HUD/CenterArea"]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -909,7 +1050,6 @@ autoplay = ""
 
 [node name="ProgressVisualization" type="CenterContainer" parent="HUD"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -987,6 +1127,19 @@ margin/bottom = 36.0
 texture = ExtResource( 46 )
 modulate = Color( 0, 1, 1, 1 )
 stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/base = SubResource( 19 )
+anims/editor = SubResource( 20 )
+anims/fade_out = SubResource( 21 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "base"
 
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 

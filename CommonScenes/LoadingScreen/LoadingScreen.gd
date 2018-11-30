@@ -42,10 +42,7 @@ func clear_above():
 	scene_above = null
 	
 	if previous_focus != null and previous_focus.has_method("grab_focus"):
-		if scene_below == previous_focus:
-			previous_focus.grab_focus()
-		else:
-			scene_below.get_node(previous_focus).grab_focus()
+		previous_focus.grab_focus()
 	else:
 		print("Scene Below: %s | Previous Focus: %s | grab_focus(): %s"%[
 				scene_below.get_name(),

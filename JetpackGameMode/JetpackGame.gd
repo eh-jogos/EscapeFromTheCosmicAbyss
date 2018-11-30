@@ -10,6 +10,7 @@ var runtime_label
 var upgrade_label
 var upgrade_messager
 var ammunition
+var hud_animator
 var player
 var level_loader
 var object_spawner
@@ -80,6 +81,7 @@ func _ready():
 	runtime_label = self.get_node("HUD/CenterArea/RunTime")
 	upgrade_label = self.get_node("HUD/UpgradeLabel")
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
+	hud_animator = self.get_node("HUD/AnimationPlayer")
 	player = self.get_node("Player")
 	level_loader = self.get_node("LevelLoader")
 	object_spawner = self.get_node("Camera2D/ObstacleSpawner")
@@ -98,7 +100,6 @@ func show_pre_game():
 		elif game_mode == "speedrun":
 			time_laps_label.show()
 			runtime_label.show()
-			runtime_label.get_node("Timer").start()
 		load_upgrade_pregame()
 	else:
 		print("ERROR | Invalid game mode: %s"%[game_settings])
@@ -169,7 +170,7 @@ func initialize_game_stats():
 
 func setup_game_mode_level():
 	if game_mode == "story":
-		if not valid_level_choice():
+		if not valid_level_choice(current_level):
 			print("ERROR | LEVEL OUT OF RANGE")
 			current_level = level_loader.get_max_levels()-1
 		
@@ -233,13 +234,14 @@ func set_overheat(value):
 	overheat_bar.set_value(value)
 
 func game_over():
+	hud_animator.play("fade_out")
 	game_over_screen.open()
 	get_tree().set_pause(true)
 
 func _on_scored(num):
 	var last_point_level = points_level
 	var last_multiple_level = multiples_level
-	print("LPL: %s | LML: %s"%[last_point_level, last_multiple_level])
+	#print("LPL: %s | LML: %s"%[last_point_level, last_multiple_level])
 	
 	points += (num*multiplyer)
 	points_level = int(points/(point_multiple*multiplyer))
@@ -247,7 +249,7 @@ func _on_scored(num):
 		multiples_level = int(points/(upgrade_multiple))
 	else:
 		multiples_level = int(points/(upgrade_multiple+(upgrade_multiple*multiplyer)))
-	print("PL: %s | ML: %s"%[points_level, multiples_level])
+	#print("PL: %s | ML: %s"%[points_level, multiples_level])
 	
 	if points_level > last_point_level:
 		ammunition.add_ammo()
@@ -307,6 +309,7 @@ func _on_level_end():
 		printerr("ERROR | Invalid Game Mode: %s"%[game_settings])
 
 func level_completed():
+	hud_animator.play("fade_out")
 	player.gravity_force = 0
 	player.jetpack_force = 0
 	if game_mode == "story":
@@ -318,14 +321,15 @@ func level_completed():
 	get_tree().set_pause(true)
 
 func player_reset_y():
-	var boost_timer = get_node("AutoBoost")
+	hud_animator.play_backwards("fade_out")
 	player.reset_y()
+	
+	var boost_timer = get_node("AutoBoost")
 	Input.action_press("boost")
 	boost_timer.start()
 	yield(boost_timer,"timeout")
 	Input.action_release("boost")
-	pass
-
+	
 func set_laps(lap_count):
 	time_laps_label.set_text("Laps: %s"%[lap_count])
 

@@ -1,5 +1,7 @@
 extends Node2D
 
+export(String, FILE) var main_menu_path
+
 var replay_btn
 var upgrade_btn
 var level_select_btn
@@ -156,7 +158,7 @@ func _on_replay_pressed():
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
 
 func _on_quit_pressed():
-	get_tree().quit()
+	ScreenManager.load_screen(main_menu_path)
 
 
 func resume_game():
@@ -197,7 +199,7 @@ func print_time(runtime, label):
 
 func _on_upgrade_pressed():
 	var path = upgrade_path
-	last_focus = upgrade_btn.get_path()
+	last_focus = upgrade_btn
 	animator.play("fade out")
 	yield(animator, "finished")
 	

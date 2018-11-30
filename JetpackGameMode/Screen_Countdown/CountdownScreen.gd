@@ -32,6 +32,9 @@ func _input(event):
 		animator.play_backwards("fade_in")
 		yield(animator,"finished")
 		
+		if game.game_mode == "speedrun":
+			game.runtime_label.get_node("Timer").start()
+		
 		self.hide()
 		self.get_tree().set_pause(false)
 		game.player_reset_y()

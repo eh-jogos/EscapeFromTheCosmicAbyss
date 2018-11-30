@@ -12,7 +12,7 @@
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=10]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=11]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=1]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -20,6 +20,13 @@ content_margin/top = -1.0
 content_margin/bottom = -1.0
 
 [sub_resource type="StyleBoxEmpty" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=3]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -40,14 +47,7 @@ content_margin/right = -1.0
 content_margin/top = -1.0
 content_margin/bottom = -1.0
 
-[sub_resource type="StyleBoxEmpty" id=6]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 
 length = 0.1
 loop = false
@@ -93,7 +93,7 @@ tracks/3/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 
 length = 1.0
 loop = true
@@ -139,7 +139,7 @@ tracks/3/keys = {
 "values": [ 0.0, 1.0 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 
 length = 2.0
 loop = true
@@ -185,7 +185,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 
 length = 1.0
 loop = false
@@ -262,7 +262,7 @@ script/script = ExtResource( 1 )
 
 [node name="ColorFrame1" type="ColorFrame" parent="."]
 
-visibility/opacity = 0.0
+visibility/opacity = 0.7
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -278,11 +278,11 @@ color = Color( 0.247059, 0.054902, 0.156863, 1 )
 transform/pos = Vector2( 960, 660 )
 texture = ExtResource( 2 )
 region = true
-region_rect = Rect2( 0, 0, 1920, 0 )
+region_rect = Rect2( 0, 0, 1920, 615 )
 
 [node name="MenuContainer" type="Control" parent="."]
 
-visibility/opacity = 0.0
+visibility/opacity = 0.9
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -294,26 +294,26 @@ margin/bottom = 896.0
 
 [node name="FullscreenOption" type="Button" parent="MenuContainer"]
 
+editor/display_folded = true
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../OptionsExit")
 focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("../BGM")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 0.0
-margin/top = 43.0
+margin/top = 45.0
 margin/right = 171.0
-margin/bottom = 86.0
-custom_styles/hover = SubResource( 3 )
+margin/bottom = 88.0
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -367,8 +367,8 @@ params/stretch_mode = 0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/disabled = SubResource( 7 )
-anims/enabled = SubResource( 8 )
+anims/disabled = SubResource( 6 )
+anims/enabled = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -380,9 +380,7 @@ editor/display_folded = true
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/left = NodePath(".")
-focus_neighbour/top = NodePath("../FullscreenOption")
 focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("../BGM_volume")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -392,11 +390,11 @@ margin/left = 0.0
 margin/top = 143.0
 margin/right = 171.0
 margin/bottom = 186.0
-custom_styles/hover = SubResource( 3 )
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -450,8 +448,8 @@ params/stretch_mode = 0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/disabled = SubResource( 7 )
-anims/enabled = SubResource( 8 )
+anims/disabled = SubResource( 6 )
+anims/enabled = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -463,9 +461,7 @@ editor/display_folded = true
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/left = NodePath(".")
-focus_neighbour/top = NodePath("../BGM")
 focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("../OptionsExit")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -475,11 +471,11 @@ margin/left = 0.0
 margin/top = 243.0
 margin/right = 171.0
 margin/bottom = 286.0
-custom_styles/hover = SubResource( 3 )
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -533,15 +529,16 @@ params/stretch_mode = 0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/disabled = SubResource( 7 )
-anims/enabled = SubResource( 8 )
+anims/disabled = SubResource( 6 )
+anims/enabled = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="OptionsExit" type="Button" parent="MenuContainer"]
+[node name="Restart" type="Button" parent="MenuContainer"]
 
+visibility/visible = false
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../BGM")
@@ -553,14 +550,45 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 3 )
 margin/left = 0.0
-margin/top = 389.0
+margin/top = 333.0
 margin/right = 338.0
-margin/bottom = 432.0
-custom_styles/hover = SubResource( 3 )
+margin/bottom = 376.0
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.239216, 0.0901961, 0.431373, 1 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Restart"
+flat = false
+script/script = ExtResource( 9 )
+
+[node name="OptionsExit" type="Button" parent="MenuContainer"]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus_neighbour/left = NodePath(".")
+focus_neighbour/right = NodePath(".")
+focus_neighbour/bottom = NodePath("../FullscreenOption")
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 3 )
+margin/left = 0.0
+margin/top = 449.0
+margin/right = 338.0
+margin/bottom = 492.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_disabled = Color( 0.184521, 0.17308, 0.222656, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -575,7 +603,6 @@ script/script = ExtResource( 9 )
 [node name="ScanlineFx" type="Node2D" parent="."]
 
 editor/display_folded = true
-visibility/opacity = 0.0
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
@@ -609,7 +636,7 @@ __meta__ = {
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("../..")
-"anims/scanline loop" = SubResource( 9 )
+"anims/scanline loop" = SubResource( 8 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -621,10 +648,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2220.0
-margin/top = 652.0
-margin/right = -300.0
-margin/bottom = 667.0
+margin/left = 0.0
+margin/top = 352.0
+margin/right = 1920.0
+margin/bottom = 367.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="BottomEdge" type="ColorFrame" parent="."]
@@ -633,10 +660,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2220.0
-margin/top = 652.0
-margin/right = -300.0
-margin/bottom = 667.0
+margin/left = 0.0
+margin/top = 952.0
+margin/right = 1920.0
+margin/bottom = 967.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -644,7 +671,7 @@ color = Color( 0, 0.921569, 1, 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/close = SubResource( 10 )
+anims/close = SubResource( 9 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -653,6 +680,8 @@ autoplay = ""
 [connection signal="pressed" from="MenuContainer/FullscreenOption/RightArrow" to="MenuContainer/FullscreenOption" method="change_screen_mode"]
 
 [connection signal="pressed" from="MenuContainer/FullscreenOption/LeftArrow" to="MenuContainer/FullscreenOption" method="change_screen_mode"]
+
+[connection signal="pressed" from="MenuContainer/Restart" to="." method="_on_Restart_pressed"]
 
 [connection signal="pressed" from="MenuContainer/OptionsExit" to="." method="_on_options_exit_pressed"]
 

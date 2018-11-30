@@ -43,6 +43,7 @@ func _input(event):
 
 func pause_game():
 	game.set_game_state("Pause")
+	game.hud_animator.play("fade_out")
 	self.show()
 	get_tree().set_pause(true)
 	
@@ -81,7 +82,7 @@ func _on_quit_pressed():
 
 func _on_options_pressed():
 	var path = options_path
-	last_focus = options_btn.get_path()
+	last_focus = options_btn
 	
 	animator.play("fade out")
 	yield(animator, "finished")

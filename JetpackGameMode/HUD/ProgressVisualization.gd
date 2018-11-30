@@ -23,7 +23,7 @@ func _ready():
 
 func create_barrier(step):
 	var barrier = progress_barrier.instance()
-	var position = (step * increment) + icon_length
+	var position = (step * increment)
 	barrier.set_pos(Vector2(position, 4))
 	progress_bar.add_child(barrier)
 
@@ -31,7 +31,14 @@ func create_barrier(step):
 func generate_visualization(level_data):
 	total_count = level_data["total_count"]
 	progress_count = 0
-	increment = total_length/total_count
+	increment = float(total_length)/total_count
+	
+	print("Total Count: %s | increment: %s | TCxI: %s | TLength: %s"%[
+			total_count,
+			increment,
+			total_count*increment,
+			total_length
+	])
 	
 	var addition = 0
 	var step = 0

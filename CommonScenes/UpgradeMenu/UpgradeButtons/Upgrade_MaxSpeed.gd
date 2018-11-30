@@ -91,7 +91,9 @@ func _on_mouse_enter():
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
 	set_process_input(true)
+	self.get_node("AnimationPlayer").play("blink")
 
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
+	self.get_node("AnimationPlayer").play("base")

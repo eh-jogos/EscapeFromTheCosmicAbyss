@@ -28,10 +28,12 @@ func play(num, title):
 func show_tip():
 	self.get_tree().set_pause(true)
 	self.show()
+	game.hud_animator.play("fade_out")
 	load_next_tip()
 
 func _input(event):
 	if event.is_action_pressed("boost"):
+		game.hud_animator.play_backwards("fade_out")
 		game.player_reset_y()
 		self.get_tree().set_pause(false)
 		self.hide()

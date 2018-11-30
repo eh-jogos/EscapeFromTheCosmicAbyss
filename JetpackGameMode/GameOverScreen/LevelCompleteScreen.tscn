@@ -1,9 +1,9 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=20 format=1]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://Fonts/OrbitronBlack30.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=6]
 [ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=7]
@@ -81,7 +81,101 @@ tracks/1/keys = {
 "values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="Animation" id=5]
+
+resource/name = "base"
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Arcade:rect/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 125 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Speedrun:rect/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 196 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Speedrun:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Arcade:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource/name = "unlock"
+length = 0.8
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Arcade:rect/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3, 0.6, 0.8 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 125 ), Vector2( 0, 125 ), Vector2( 0, -25 ), Vector2( 0, 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Arcade:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.3, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Speedrun:rect/pos")
+tracks/2/interp = 2
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.3, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 196 ), Vector2( 0, 46 ), Vector2( 0, 96 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Speedrun:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="StyleBoxTexture" id=7]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -98,7 +192,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=8]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -115,9 +209,8 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=9]
 
-resource/name = "fade out"
 length = 0.5
 loop = false
 step = 0.1
@@ -136,6 +229,7 @@ tracks/0/keys = {
 
 process/pause_mode = 2
 script/script = ExtResource( 1 )
+main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
 [node name="ColorFrame" type="ColorFrame" parent="."]
 
@@ -182,22 +276,108 @@ margin/bottom = 1006.0
 custom_constants/separation = 50
 alignment = 2
 
-[node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
+[node name="ModeUnlock" type="VBoxContainer" parent="ResultsContainer"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 199.0
+margin/top = 206.0
 margin/right = 1920.0
 margin/bottom = 348.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="Arcade" type="Label" parent="ResultsContainer/ModeUnlock"]
+
+editor/display_folded = true
+material/material = SubResource( 3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1920.0
+margin/bottom = 71.0
+custom_fonts/font = ExtResource( 3 )
+text = "ARCADE MODE UNLOCKED!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="ResultsContainer/ModeUnlock/Arcade"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/text_anim = SubResource( 4 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "text_anim"
+
+[node name="Speedrun" type="Label" parent="ResultsContainer/ModeUnlock"]
+
+editor/display_folded = true
+material/material = SubResource( 3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 71.0
+margin/right = 1920.0
+margin/bottom = 142.0
+custom_fonts/font = ExtResource( 3 )
+text = "SPEEDRUN MODE UNLOCKED!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="ResultsContainer/ModeUnlock/Speedrun"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/text_anim = SubResource( 4 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "text_anim"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/ModeUnlock"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/base = SubResource( 5 )
+anims/unlock = SubResource( 6 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "base"
+
+[node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 398.0
+margin/right = 1920.0
+margin/bottom = 547.0
 custom_constants/separation = 50
 alignment = 1
 
 [node name="HighScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 426, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -220,7 +400,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 426.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Best Score:"
 align = 1
 valign = 1
@@ -238,7 +418,7 @@ margin/left = 0.0
 margin/top = 35.0
 margin/right = 426.0
 margin/bottom = 106.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
 text = "0000"
 align = 1
 valign = 1
@@ -248,7 +428,6 @@ max_lines_visible = -1
 
 [node name="ScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 416, 149 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -274,7 +453,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 416.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Scored:"
 align = 1
 valign = 1
@@ -302,7 +481,6 @@ max_lines_visible = -1
 
 [node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 
-editor/display_folded = true
 visibility/visible = false
 material/material = SubResource( 3 )
 focus/ignore_mouse = true
@@ -357,7 +535,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 351.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Upgrade Points:"
 align = 1
 valign = 1
@@ -375,7 +553,7 @@ margin/left = 0.0
 margin/top = 35.0
 margin/right = 351.0
 margin/bottom = 106.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
 text = "00"
 align = 1
 valign = 1
@@ -386,6 +564,7 @@ max_lines_visible = -1
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
 
 editor/display_folded = true
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -421,7 +600,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 426.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Best Time:"
 align = 1
 valign = 1
@@ -439,7 +618,7 @@ margin/left = 0.0
 margin/top = 35.0
 margin/right = 426.0
 margin/bottom = 106.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
 text = "0000"
 align = 1
 valign = 1
@@ -474,7 +653,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 416.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "Time:"
 align = 1
 valign = 1
@@ -554,14 +733,14 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
-margin/left = 414.0
+margin/left = 399.0
 margin/top = 0.0
-margin/right = 647.0
+margin/right = 632.0
 margin/bottom = 79.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -578,14 +757,14 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
-margin/left = 662.0
+margin/left = 647.0
 margin/top = 0.0
-margin/right = 924.0
+margin/right = 909.0
 margin/bottom = 79.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -602,13 +781,13 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
-margin/left = 939.0
+margin/left = 924.0
 margin/top = 0.0
-margin/right = 1167.0
+margin/right = 1152.0
 margin/bottom = 79.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
@@ -626,14 +805,14 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
-margin/left = 1182.0
+margin/left = 1167.0
 margin/top = 0.0
-margin/right = 1374.0
+margin/right = 1359.0
 margin/bottom = 79.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -644,25 +823,25 @@ script/script = ExtResource( 9 )
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
 
-rect/min_size = Vector2( 116, 79 )
+rect/min_size = Vector2( 147, 79 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
-margin/left = 1389.0
+margin/left = 1374.0
 margin/top = 0.0
-margin/right = 1505.0
+margin/right = 1521.0
 margin/bottom = 79.0
-custom_styles/hover = SubResource( 6 )
-custom_styles/focus = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Quit"
+text = "Home"
 flat = false
 script/script = ExtResource( 9 )
 
@@ -671,7 +850,7 @@ script/script = ExtResource( 9 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-"anims/fade out" = SubResource( 5 )
+"anims/fade out" = SubResource( 9 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]

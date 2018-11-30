@@ -1,5 +1,7 @@
 extends Node2D
 
+export(String, FILE) var main_menu_path
+
 var replay_btn
 var next_level_btn
 var upgrade_btn
@@ -88,8 +90,10 @@ func open(msg):
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
-	if game.is_last_stage():
+	if game.is_last_stage() and not Global.is_story_completed():
 		Global.story_completed()
+		var unlock_animator = get_node("ResultsContainer/ModeUnlock/AnimationPlayer")
+		unlock_animator.play("unlock")
 	
 	#SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
@@ -156,7 +160,7 @@ func _on_replay_pressed():
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
 
 func _on_quit_pressed():
-	get_tree().quit()
+	ScreenManager.load_screen(main_menu_path)
 
 func print_score(points, label):
 	var points_str
@@ -192,7 +196,7 @@ func print_time(runtime, label):
 
 func _on_upgrade_pressed():
 	var path = upgrade_path
-	last_focus = upgrade_btn.get_path()
+	last_focus = upgrade_btn
 	animator.play("fade out")
 	yield(animator, "finished")
 	

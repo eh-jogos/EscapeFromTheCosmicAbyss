@@ -87,7 +87,7 @@ func change_bgm_volume(vol):
 func fade_out_start():
 	if fade_in.is_active():
 		fade_in_stop()
-	initial_volume = bgm_stream.get_volume()
+	initial_volume = Global.savedata["options"]["bgm volume"]*0.01
 	fade_out.set_active(true)
 	fade_out.start()
 	
@@ -114,7 +114,9 @@ func fade_in_stop():
 
 func _on_FadeOutTimer_timeout():
 	print("fade out!")
-	var current_vol = (Global.savedata["options"]["bgm volume"]*0.01) - 0.2
+	var current_vol = bgm_stream.get_volume()
+	current_vol -= 0.02
+	
 	if current_vol < 0:
 		current_vol = 0
 	
@@ -131,16 +133,19 @@ func _on_FadeOutTimer_timeout():
 
 func _on_FadeInTimer_timeout():
 	print("fade in!")
-	var current_vol = (Global.savedata["options"]["bgm volume"]*0.01)
+	var current_vol = bgm_stream.get_volume()
+	current_vol += 0.02
 	
-	if initial_volume + 0.3 <= 1:
-		if current_vol < initial_volume + 0.3:
+	if initial_volume + 0.3 <= Global.savedata["options"]["bgm volume"]*0.01:
+		if current_vol < Global.savedata["options"]["bgm volume"]*0.01:
 			bgm_stream.set_volume(current_vol)
 		else:
+			bgm_stream.set_volume(Global.savedata["options"]["bgm volume"]*0.01)
 			fade_in_stop()
 	else:
-		if current_vol < 1:
+		if current_vol < Global.savedata["options"]["bgm volume"]*0.01:
 			bgm_stream.set_volume(current_vol)
 		else:
+			bgm_stream.set_volume(Global.savedata["options"]["bgm volume"]*0.01)
 			fade_in_stop()
 

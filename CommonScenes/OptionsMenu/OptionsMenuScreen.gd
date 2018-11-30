@@ -22,3 +22,8 @@ func _on_options_exit_pressed():
 	yield(animator,"finished")
 	
 	ScreenManager.clear_above()
+
+
+func _on_Restart_pressed():
+	get_tree().change_scene("res://CommonScenes/HybridStrategies/SplashScreen.tscn")
+	ScreenManager.reset_above_below()

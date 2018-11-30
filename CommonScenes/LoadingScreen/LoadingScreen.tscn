@@ -297,14 +297,16 @@ texture = ExtResource( 4 )
 
 visibility/opacity = 0.0
 material/material = SubResource( 4 )
-transform/pos = Vector2( 0, -23 )
+transform/pos = Vector2( -0.752403, -21.3358 )
+transform/scale = Vector2( 0.968862, 0.953509 )
 texture = ExtResource( 3 )
 
 [node name="AbyssMask" type="Sprite" parent="ColorFrame/LogoFlat"]
 
 visibility/opacity = 0.0
 material/material = SubResource( 5 )
-transform/pos = Vector2( 5, 80.3597 )
+transform/pos = Vector2( 4.69713, 78.3653 )
+transform/scale = Vector2( 0.972033, 0.948372 )
 texture = ExtResource( 5 )
 
 [node name="LogoLoop" type="AnimationPlayer" parent="ColorFrame/LogoFlat"]
