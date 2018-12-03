@@ -202,17 +202,17 @@ _data = {
 "points": Vector2Array( 0, 0, 0, 0, 25, -200, 0, 0, 0, 0, 25, 200 )
 }
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -293,17 +293,17 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -1123,13 +1123,13 @@ lookahead = 4.0
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 17 )
 shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 3 )
+shapes/1/shape = SubResource( 18 )
 shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 4 )
+shapes/2/shape = SubResource( 19 )
 shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
 shapes/2/trigger = false
 collision/layers = 4
@@ -1153,19 +1153,23 @@ trigger = false
 
 transform/pos = Vector2( 0, -875 )
 frames = SubResource( 5 )
-animation = "spawn"
-frame = 26
+animation = "idle"
+frame = 37
+playing = true
 centered = false
 flip_v = true
+modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 
 [node name="TentacleTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
 
 transform/pos = Vector2( 0, -875 )
 frames = SubResource( 6 )
-animation = "spawn"
-frame = 26
+animation = "idle"
+frame = 37
+playing = true
 centered = false
 flip_v = true
+modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 
 [node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop"]
 
@@ -1188,13 +1192,13 @@ frame = 51
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 9 )
+shapes/0/shape = SubResource( 20 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 10 )
+shapes/1/shape = SubResource( 21 )
 shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 11 )
+shapes/2/shape = SubResource( 22 )
 shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
 shapes/2/trigger = false
 collision/layers = 4
@@ -1217,18 +1221,22 @@ trigger = false
 
 transform/pos = Vector2( 0, 75 )
 frames = SubResource( 5 )
-animation = "spawn"
-frame = 26
+animation = "idle"
+frame = 37
+playing = true
 centered = false
+modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 
 [node name="TentacleBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
 
 editor/display_folded = true
 transform/pos = Vector2( 0, 75 )
 frames = SubResource( 6 )
-animation = "spawn"
-frame = 26
+animation = "idle"
+frame = 37
+playing = true
 centered = false
+modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 
 [node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom"]
 
@@ -1250,7 +1258,7 @@ frame = 51
 ]]
 
 editor/display_folded = true
-transform/pos = Vector2( 388.933, 0 )
+transform/pos = Vector2( 388.933, -1080 )
 input/pickable = true
 shapes/0/shape = SubResource( 12 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -350 )
@@ -1284,6 +1292,7 @@ autoplay = ""
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
+visibility/visible = false
 transform/pos = Vector2( 53, 0 )
 transform/scale = Vector2( 17.35, 1.62407 )
 rect = Rect2( 0, -540, 20, 1080 )
