@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+signal mid_transition_reached
+signal transition_ended
+signal loading_started
+
 # I learned this in this link 
 # http://docs.godotengine.org/en/stable/learning/features/misc/background_loading.html
 
@@ -18,7 +22,11 @@ var previous_focus
 func _ready():
 	animation = self.get_node("AnimationPlayer")
 	progress_bar = self.get_node("ColorFrame/TextureProgress")
-	pass
+	reset()
+
+func reset():
+	progress_bar.set_value(0)
+	animation_loaded = false
 
 func load_above(path, focus_path, origin_scene):
 	if scene_above != null:
@@ -109,8 +117,19 @@ func set_new_scene(scene_resource):
 	
 	animation.play_backwards("fade_in")
 	yield(animation, "finished")
-	progress_bar.set_value(0)
-	animation_loaded = false
+	reset()
 
 func animation_ready():
 	animation_loaded = true
+	emit_signal("loading_started")
+
+func black_transition(path, focus_path, origin_scene):
+	animation.play("black_transition")
+	yield(animation, "finished")
+	emit_signal("mid_transition_reached")
+	load_above(path, focus_path, origin_scene)
+	animation.play_backwards("black_transition")
+	yield(animation, "finished")
+	reset()
+	emit_signal("transition_ended")
+	

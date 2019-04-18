@@ -1,6 +1,9 @@
 extends Node
 
 export(String) var title = ""
+export(String, FILE) var intro_cutscene
+export(String, FILE) var end_cutscene
+
 var tutorial = true
 var intro_beats = [0,0,1,1,1,1,6,1,1,1,0]
 var intro_halfs = [0,0,0,0,0,0,0,0,0,0,0]

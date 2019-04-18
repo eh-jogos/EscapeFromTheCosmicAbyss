@@ -1,0 +1,209 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=2]
+[ext_resource path="res://Cutscenes/pngs/8.png" type="Texture" id=3]
+[ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=4]
+[ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "00_base"
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "01_fade_in"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="StyleBoxTexture" id=3]
+
+content_margin/left = 20.0
+content_margin/right = 20.0
+content_margin/top = 10.0
+content_margin/bottom = 10.0
+texture = ExtResource( 5 )
+margin/left = 0.0
+margin/right = 0.0
+margin/top = 0.0
+margin/bottom = 0.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[node name="Cutscene1" type="ColorFrame"]
+
+process/pause_mode = 2
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 1 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+color = Color( 0, 0, 0, 1 )
+script/script = ExtResource( 2 )
+
+[node name="Scenes" type="Control" parent="."]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="Scene1" type="Control" parent="Scenes"]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 960.0
+margin/top = 540.0
+margin/right = -960.0
+margin/bottom = -540.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/00_base = SubResource( 1 )
+anims/01_fade_in = SubResource( 2 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "00_base"
+
+[node name="TextureFrame" type="TextureFrame" parent="Scenes/Scene1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+
+anchor/left = 3
+anchor/top = 1
+anchor/right = 3
+anchor/bottom = 1
+rect/min_size = Vector2( 0, 40 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 2
+theme/theme = ExtResource( 4 )
+margin/left = 920.0
+margin/top = 63.0
+margin/right = -920.0
+margin/bottom = 6.0
+alignment = 1
+
+[node name="Next" type="Button" parent="Buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 840.0
+margin/top = 0.0
+margin/right = 919.0
+margin/bottom = 57.0
+custom_colors/font_color = Color( 0, 0, 0, 0.690196 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Next"
+flat = false
+
+[node name="Skip" type="Button" parent="Buttons"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 929.0
+margin/top = 0.0
+margin/right = 999.0
+margin/bottom = 57.0
+custom_styles/focus = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 0.693961 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Skip"
+flat = false
+
+[connection signal="pressed" from="Buttons/Next" to="." method="_on_Next_pressed"]
+
+[connection signal="pressed" from="Buttons/Skip" to="." method="_on_Skip_pressed"]
+
+

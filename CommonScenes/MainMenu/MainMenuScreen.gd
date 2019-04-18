@@ -18,6 +18,7 @@ var quit_btn
 
 var game_mode = "story"
 var last_focus
+var intro_cutscene = preload("res://Cutscenes/Cutscene1.tscn")
 
 func _ready():
 	continue_btn = get_node("MenuContainer/Continue")
@@ -54,7 +55,6 @@ func _on_NewGame_pressed():
 	else:
 		Global.set_game_mode("story", "level selected")
 	
-	#TO DO - Load Intro instead of game.
 	ScreenManager.load_screen(game_path)
 
 

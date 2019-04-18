@@ -8,10 +8,10 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin/left = 20.0
+content_margin/right = 20.0
+content_margin/top = 10.0
+content_margin/bottom = 10.0
 texture = ExtResource( 1 )
 margin/left = 0.0
 margin/right = 0.0
@@ -25,10 +25,10 @@ draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=2]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin/left = 20.0
+content_margin/right = 20.0
+content_margin/top = 10.0
+content_margin/bottom = 10.0
 texture = ExtResource( 2 )
 margin/left = 0.0
 margin/right = 0.0
@@ -42,10 +42,10 @@ draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=3]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin/left = 20.0
+content_margin/right = 20.0
+content_margin/top = 10.0
+content_margin/bottom = 10.0
 texture = ExtResource( 3 )
 margin/left = 0.0
 margin/right = 0.0
@@ -59,10 +59,10 @@ draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=4]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin/left = 20.0
+content_margin/right = 20.0
+content_margin/top = 10.0
+content_margin/bottom = 10.0
 texture = ExtResource( 4 )
 margin/left = 0.0
 margin/right = 0.0

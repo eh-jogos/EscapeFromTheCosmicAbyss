@@ -38,6 +38,8 @@ var multiples_level = 0
 var arcade_laps = 0
 var level_num
 var level_title
+var level_intro_cutscene = null
+var level_end_cutscene = null
 
 var current_level
 var highscore
@@ -131,11 +133,27 @@ func load_upgrade_pregame():
 func game_start():
 	initialize_game_stats()
 	setup_game_mode_level()
+	if level_intro_cutscene != null:
+		ScreenManager.black_transition(level_intro_cutscene, null, self)
+		if not ScreenManager.is_connected("transition_ended", self, "_on_intro_cutscene_loaded"):
+			 ScreenManager.connect("transition_ended", self, "_on_intro_cutscene_loaded")
+	else:
+		start_countdown()
+
+
+func _on_intro_cutscene_loaded():
+	var cutscene = ScreenManager.scene_above
+	if not cutscene.is_connected("cutscene_ended", self, "start_countdown"):
+			 cutscene.connect("cutscene_ended", self, "start_countdown")
+
+
+func start_countdown():
 	if current_state == STATE["Tutorial"]:
 		tutorial.play(level_num, level_title)
 		object_spawner.connect_tutorial_signal(tutorial)
 	else:
 		countdown.play(level_num, level_title)
+
 
 #called from CountdownScreen, after any Pre Game has been cleared
 func initialize_game_stats(): 
@@ -176,14 +194,22 @@ func setup_game_mode_level():
 		
 		var level = load_level(current_level)
 		
-		if level.tutorial:
-			set_game_state("Tutorial")
-		
 		if current_level < 10:
 			level_num = "Level 0%s"%[current_level]
 		else:
 			level_num = "Level %s"%[current_level]
 		level_title = level.title
+		
+		if level.tutorial:
+			set_game_state("Tutorial")
+		
+		if level.intro_cutscene:
+			level_intro_cutscene = level.intro_cutscene
+		#print("JetPackGame.gd | Intro? %s"%[level_intro_cutscene])
+		
+		if level.end_cutscene:
+			level_end_cutscene = level.end_cutscene
+		#print("JetPackGame.gd | End? %s"%[level_end_cutscene])
 	
 	elif game_mode == "arcade":
 		var num = 1

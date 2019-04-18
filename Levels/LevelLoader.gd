@@ -24,6 +24,8 @@ func load_level(num, load_all, loop):
 		level_info = get_child(num)
 		level["title"] = level_info.title
 		level["tutorial"] = level_info.tutorial
+		level["intro_cutscene"] = level_info.intro_cutscene
+		level["end_cutscene"] = level_info.end_cutscene
 		build_boss()
 		build_beats()
 		build_half_beats()

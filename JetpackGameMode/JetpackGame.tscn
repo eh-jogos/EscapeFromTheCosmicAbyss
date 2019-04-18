@@ -458,33 +458,42 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
-editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 3 )
 title = "How to Play"
+intro_cutscene = "res://Cutscenes/Cutscene1.tscn"
+end_cutscene = null
 
 [node name="Level1" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 4 )
 title = ""
+intro_cutscene = null
+end_cutscene = null
 
 [node name="Level2" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 5 )
 title = "Pew pew!"
+intro_cutscene = null
+end_cutscene = null
 
 [node name="Level3" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 6 )
 title = "Double Trouble!"
+intro_cutscene = null
+end_cutscene = null
 
 [node name="Level4" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 7 )
 title = "Triple Trouble!"
+intro_cutscene = "res://Cutscenes/Cutscene3.tscn"
+end_cutscene = "res://Cutscenes/Cutscene4.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -831,6 +840,7 @@ transform/scale = Vector2( 1, -1 )
 [node name="HUD" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
