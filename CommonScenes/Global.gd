@@ -4,6 +4,8 @@ var savefile = File.new()
 var savepath = "user://savegame.save"
 var version = 0.61
 
+var is_retry = false
+
 var savedata = {
 	"version" : version,
 	"options": {

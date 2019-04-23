@@ -69,7 +69,9 @@ func _ready():
 	set_process_input(true)
 	pass
 
-func _fixed_process(delta):	
+func _fixed_process(delta):
+	if game.get_game_state() != 0:
+		return
 	
 	var heat = game.get_overheat()
 	heat -= cooldown if heat >= cooldown else 0
@@ -159,6 +161,7 @@ func _fixed_process(delta):
 	
 	
 	if self.is_colliding():
+		
 		var collider = get_collider()
 		#print(collider.get_name())
 		if collider.is_in_group("enemy") and not is_dead and shield_energy > 0:
@@ -199,6 +202,9 @@ func _fixed_process(delta):
 			motion = self.move(motion)
 
 func _input(event):
+	if game.get_game_state() != 0:
+		return
+	
 	if event.is_action_pressed("shoot") and ammunition.use_ammo() and not shooting:
 		#game.dash_score()
 		shooting = true

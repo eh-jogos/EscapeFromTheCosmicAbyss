@@ -90,6 +90,9 @@ func open(msg):
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
+	game.set_game_state("GameOver")
+	get_tree().set_pause(true)
+	
 	if game.is_last_stage() and not Global.is_story_completed():
 		Global.story_completed()
 		var unlock_animator = get_node("ResultsContainer/ModeUnlock/AnimationPlayer")
@@ -97,9 +100,6 @@ func open(msg):
 	
 	#SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
-	
-	game.set_game_state("GameOver")
-	get_tree().set_pause(true)
 	
 	var score = game.get_score()
 	print_score(score, label_score)
@@ -158,6 +158,7 @@ func _on_replay_pressed():
 		
 #		ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn", self)
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
+		Global.is_retry = true
 
 func _on_quit_pressed():
 	ScreenManager.load_screen(main_menu_path)
@@ -229,6 +230,7 @@ func _on_LevelSelect_pressed():
 
 
 func _on_NextLevel_pressed():
+	Global.is_retry = false
 	var level = Global.savedata["story"]["current level"] + 1
 	Global.set_current_story_level(level)
 	 

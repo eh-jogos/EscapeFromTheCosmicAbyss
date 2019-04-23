@@ -151,11 +151,8 @@ func open():
 func _on_replay_pressed():
 	if game != null:
 		animator.play("fade out")
-		yield(animator, "finished")
-		
-		resume_game()
-		#ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn")
-		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
+		ScreenManager.black_transition_replace("res://JetpackGameMode/JetpackGame.tscn")
+		Global.is_retry = true
 
 func _on_quit_pressed():
 	ScreenManager.load_screen(main_menu_path)

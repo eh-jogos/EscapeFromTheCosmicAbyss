@@ -472,7 +472,7 @@ end_cutscene = null
 script/script = ExtResource( 4 )
 title = ""
 intro_cutscene = null
-end_cutscene = null
+end_cutscene = "res://Cutscenes/Cutscene4.tscn"
 
 [node name="Level2" type="Node" parent="LevelLoader"]
 
@@ -497,6 +497,7 @@ end_cutscene = "res://Cutscenes/Cutscene4.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -788,8 +789,6 @@ transform/pos = Vector2( 960, 540 )
 [node name="Player" parent="." instance=ExtResource( 34 )]
 
 [node name="Obstaculos" type="Node2D" parent="."]
-
-editor/display_folded = true
 
 [node name="Outlines" type="Node2D" parent="Obstaculos"]
 
@@ -1154,6 +1153,7 @@ autoplay = "base"
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0

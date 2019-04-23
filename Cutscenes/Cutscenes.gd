@@ -1,4 +1,4 @@
-extends ColorFrame
+extends CanvasLayer
 
 signal cutscene_ended
 
@@ -12,12 +12,14 @@ var animator_steps #array of animations, 0 mus always be "00_base" and 1 must al
 var current_step
 
 func _ready():
+	get_tree().set_pause(true)
 	set_process_input(true)
 	
 	scenes = get_node("Scenes").get_children()
 	buttons = get_node("Buttons").get_children()
 	current_scene = 0
 	setup_next_scene_animator()
+	
 
 
 func _input(event):
@@ -28,6 +30,7 @@ func _input(event):
 
 
 func setup_next_scene_animator():
+	print("Cutscenes.gd | Setup Next scene animator: %s"%current_scene)
 	current_animator = scenes[current_scene].get_node("AnimationPlayer")
 	animator_steps = current_animator.get_animation_list()
 	current_step = 1
@@ -35,6 +38,7 @@ func setup_next_scene_animator():
 
 
 func _on_Next_pressed():
+	print("Cutscenes.gd | NEXT PRESSED")
 	if current_animator.is_playing():
 		skip_current_animation_step()
 	elif scene_has_more_steps():
@@ -71,10 +75,11 @@ func has_more_scenes():
 
 
 func close():
-	ScreenManager.reset_above_below()
+	get_tree().set_pause(false)
 	emit_signal("cutscene_ended")
-	queue_free()
+	ScreenManager.black_transition_from_above()
 
 
 func _on_Skip_pressed():
+	print("Cutscenes.gd | SKIP PRESSED")
 	close()

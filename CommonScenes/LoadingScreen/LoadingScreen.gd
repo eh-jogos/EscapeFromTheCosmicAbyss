@@ -4,6 +4,8 @@ signal mid_transition_reached
 signal transition_ended
 signal loading_started
 
+signal scene_above_loaded(scene_node)
+
 # I learned this in this link 
 # http://docs.godotengine.org/en/stable/learning/features/misc/background_loading.html
 
@@ -37,6 +39,7 @@ func load_above(path, focus_path, origin_scene):
 	previous_focus = focus_path
 	
 	scene_above = load(path).instance()
+	emit_signal("scene_above_loaded", scene_above)
 	
 	get_tree().get_root().call_deferred("add_child",scene_above)
 	#scene_above.set_pos(scene_below.get_global_pos())
@@ -128,6 +131,26 @@ func black_transition(path, focus_path, origin_scene):
 	yield(animation, "finished")
 	emit_signal("mid_transition_reached")
 	load_above(path, focus_path, origin_scene)
+	animation.play_backwards("black_transition")
+	yield(animation, "finished")
+	reset()
+	emit_signal("transition_ended")
+
+func black_transition_replace(path):
+	animation.play("black_transition")
+	yield(animation, "finished")
+	emit_signal("mid_transition_reached")
+	get_tree().change_scene(path)
+	animation.play_backwards("black_transition")
+	yield(animation, "finished")
+	reset()
+	emit_signal("transition_ended")
+
+func black_transition_from_above():
+	animation.play("black_transition")
+	yield(animation, "finished")
+	emit_signal("mid_transition_reached")
+	reset_above_below()
 	animation.play_backwards("black_transition")
 	yield(animation, "finished")
 	reset()
