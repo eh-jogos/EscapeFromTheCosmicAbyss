@@ -13,6 +13,7 @@
 process/pause_mode = 2
 script/script = ExtResource( 1 )
 options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+extras_path = "res://CommonScenes/OptionsMenu/ExtrasMenuScreen.tscn"
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
@@ -72,7 +73,9 @@ margin/top = 292.0
 margin/right = 610.0
 margin/bottom = 352.0
 
-[node name="Continue" type="Button" parent="MenuContainer"]
+[node name="Continue" type="Button" parent="MenuContainer" groups=[
+"mainmenu",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -90,7 +93,9 @@ text = "Continue"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="NewGame" type="Button" parent="MenuContainer"]
+[node name="NewGame" type="Button" parent="MenuContainer" groups=[
+"mainmenu",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -144,7 +149,9 @@ text = "Speedrun Mode"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Category15" type="Button" parent="MenuContainer"]
+[node name="Category15" type="Button" parent="MenuContainer" groups=[
+"categorymenu",
+]]
 
 visibility/visible = false
 focus/ignore_mouse = false
@@ -153,9 +160,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
 margin/left = 0.0
-margin/top = 244.0
-margin/right = 509.0
-margin/bottom = 300.0
+margin/top = 601.0
+margin/right = 610.0
+margin/bottom = 638.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -163,7 +170,9 @@ text = "15 Upgrade Points"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Category30" type="Button" parent="MenuContainer"]
+[node name="Category30" type="Button" parent="MenuContainer" groups=[
+"categorymenu",
+]]
 
 visibility/visible = false
 focus/ignore_mouse = false
@@ -172,9 +181,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
 margin/left = 0.0
-margin/top = 305.0
-margin/right = 509.0
-margin/bottom = 361.0
+margin/top = 643.0
+margin/right = 610.0
+margin/bottom = 680.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -182,7 +191,9 @@ text = "30 Upgrade Points"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Category40" type="Button" parent="MenuContainer"]
+[node name="Category40" type="Button" parent="MenuContainer" groups=[
+"categorymenu",
+]]
 
 visibility/visible = false
 focus/ignore_mouse = false
@@ -191,9 +202,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
 margin/left = 0.0
-margin/top = 366.0
-margin/right = 509.0
-margin/bottom = 422.0
+margin/top = 685.0
+margin/right = 610.0
+margin/bottom = 722.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -201,7 +212,9 @@ text = "40 Upgrade Points"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Unlimited" type="Button" parent="MenuContainer"]
+[node name="Unlimited" type="Button" parent="MenuContainer" groups=[
+"categorymenu",
+]]
 
 visibility/visible = false
 focus/ignore_mouse = false
@@ -210,9 +223,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 6 )
 margin/left = 0.0
-margin/top = 427.0
-margin/right = 509.0
-margin/bottom = 483.0
+margin/top = 727.0
+margin/right = 610.0
+margin/bottom = 764.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -220,7 +233,9 @@ text = "Unlimited"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Back" type="Button" parent="MenuContainer"]
+[node name="Back" type="Button" parent="MenuContainer" groups=[
+"categorymenu",
+]]
 
 visibility/visible = false
 focus/ignore_mouse = false
@@ -229,9 +244,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 4 )
 margin/left = 0.0
-margin/top = 305.0
-margin/right = 126.0
-margin/bottom = 361.0
+margin/top = 769.0
+margin/right = 610.0
+margin/bottom = 825.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -239,7 +254,9 @@ text = "Back"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Options" type="Button" parent="MenuContainer"]
+[node name="Options" type="Button" parent="MenuContainer" groups=[
+"mainmenu",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -257,7 +274,9 @@ text = "Options"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="Extras" type="Button" parent="MenuContainer"]
+[node name="Extras" type="Button" parent="MenuContainer" groups=[
+"mainmenu",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -275,7 +294,9 @@ text = "Extras"
 flat = false
 script/script = ExtResource( 5 )
 
-[node name="QuitGame" type="Button" parent="MenuContainer"]
+[node name="QuitGame" type="Button" parent="MenuContainer" groups=[
+"mainmenu",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -329,6 +350,8 @@ max_lines_visible = -1
 [connection signal="pressed" from="MenuContainer/Back" to="." method="_on_Back_pressed"]
 
 [connection signal="pressed" from="MenuContainer/Options" to="." method="_on_options_pressed"]
+
+[connection signal="pressed" from="MenuContainer/Extras" to="." method="_on_Extras_pressed"]
 
 [connection signal="pressed" from="MenuContainer/QuitGame" to="." method="_on_quit_pressed"]
 

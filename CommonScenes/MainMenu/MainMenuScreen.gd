@@ -2,44 +2,45 @@ extends Node2D
 
 #Menu Paths
 export(String, FILE) var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
+export(String, FILE) var extras_path = "res://CommonScenes/OptionsMenu/ExtrasMenuScreen.tscn"
 export(String, FILE) var game_path
 
 var continue_btn
 var new_game_btn
 var arcade_btn
 var speedrun_btn
-var cat15_btn
-var cat30_btn
-var cat40_btn
-var catU_btn
 var back_btn
 var options_btn
+var extras_btn
 var quit_btn
 
 var game_mode = "story"
 var last_focus
 var intro_cutscene = preload("res://Cutscenes/Cutscene1.tscn")
 
+onready var options_scene = load(options_path)
+onready var extras_scene = load(extras_path)
+
 func _ready():
+	
 	continue_btn = get_node("MenuContainer/Continue")
 	new_game_btn = get_node("MenuContainer/NewGame")
 	arcade_btn = get_node("MenuContainer/ArcadeMode")
 	speedrun_btn = get_node("MenuContainer/SpeedrunMode")
-	cat15_btn = get_node("MenuContainer/Category15")
-	cat30_btn = get_node("MenuContainer/Category30")
-	cat40_btn = get_node("MenuContainer/Category40")
-	catU_btn = get_node("MenuContainer/Unlimited")
 	back_btn = get_node("MenuContainer/Back")
 	options_btn = get_node("MenuContainer/Options")
+	extras_btn = get_node("MenuContainer/Extras")
 	quit_btn = get_node("MenuContainer/QuitGame")
 	
 	toggle_menuitems(game_mode)
 
 func _on_options_pressed():
-	var path = options_path
 	last_focus = options_btn
-	
-	ScreenManager.load_above(path, last_focus, self)
+	ScreenManager.load_above_node(options_scene, last_focus, self)
+
+func _on_Extras_pressed():
+	last_focus = extras_btn
+	ScreenManager.load_above_node(extras_scene, last_focus, self)
 
 func _on_quit_pressed():
 	get_tree().quit()
@@ -72,18 +73,18 @@ func _on_Back_pressed():
 
 func toggle_menuitems(game_mode):
 	if game_mode == "story":
+		get_tree().call_group(0,"categorymenu", "hide")
+		get_tree().call_group(0,"mainmenu", "show")
+		
+		arcade_btn.show()
+		speedrun_btn.show()
+		
 		if Global.is_story_completed():
 			arcade_btn.set_disabled(false)
 			speedrun_btn.set_disabled(false)
 		else:
 			arcade_btn.set_disabled(true)
 			speedrun_btn.set_disabled(true)
-		
-		new_game_btn.show()
-		arcade_btn.show()
-		speedrun_btn.show()
-		options_btn.show()
-		quit_btn.show()
 		
 		if Global.is_tutorial_completed():
 			continue_btn.show()
@@ -101,12 +102,10 @@ func toggle_menuitems(game_mode):
 		arcade_btn.set_focus_neighbour(MARGIN_TOP, "")
 		speedrun_btn.set_focus_neighbour(MARGIN_TOP, "")
 		
-		cat15_btn.hide()
-		cat30_btn.hide()
-		cat40_btn.hide()
-		catU_btn.hide()
-		back_btn.hide()
 	elif game_mode == "arcade" or game_mode == "speedrun":
+		get_tree().call_group(0,"categorymenu", "show")
+		get_tree().call_group(0,"mainmenu", "hide")
+		
 		if game_mode == "arcade":
 			arcade_btn.show()
 			speedrun_btn.hide()
@@ -119,24 +118,13 @@ func toggle_menuitems(game_mode):
 			
 			speedrun_btn.set_focus_neighbour(MARGIN_TOP, back_btn.get_path())
 			back_btn.set_focus_neighbour(MARGIN_BOTTOM, speedrun_btn.get_path())
-		
-		continue_btn.hide()
-		new_game_btn.hide()
-		options_btn.hide()
-		quit_btn.hide()
-		cat15_btn.show()
-		cat30_btn.show()
-		cat40_btn.show()
-		catU_btn.show()
-		back_btn.show()
 
 
-
-func _on_Category_pressed(upgrade_point):
+func _on_Category_pressed(upgrade_points):
 	var game_settings = {
 			"game mode": game_mode, 
-			"sub-mode": String(upgrade_point)
+			"sub-mode": String(upgrade_points)
 	}
 	Global.reset_category_progress(game_settings)
-	Global.set_game_mode(game_mode, String(upgrade_point))
+	Global.set_game_mode(game_mode, String(upgrade_points))
 	ScreenManager.load_screen(game_path)

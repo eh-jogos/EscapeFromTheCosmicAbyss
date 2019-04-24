@@ -39,10 +39,39 @@ func load_above(path, focus_path, origin_scene):
 	previous_focus = focus_path
 	
 	scene_above = load(path).instance()
+	
 	emit_signal("scene_above_loaded", scene_above)
 	
 	get_tree().get_root().call_deferred("add_child",scene_above)
 	#scene_above.set_pos(scene_below.get_global_pos())
+
+
+func load_above_node(node, focus_path, origin_scene):
+	if scene_above != null:
+		print("ERROR | Scene Above is not null")
+		return
+	
+	scene_below = origin_scene
+	previous_focus = focus_path
+	
+	scene_above = node.instance()
+	
+	emit_signal("scene_above_loaded", scene_above)
+	
+	get_tree().get_root().call_deferred("add_child",scene_above)
+	#scene_above.set_pos(scene_below.get_global_pos())
+
+
+func background_loading(path):
+	var loader = ResourceLoader.load_interactive(path)
+	while not loader.poll() == ERR_FILE_EOF:
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+		yield(get_tree(), "idle_frame")
+	return loader.get_resource()
+
 
 func clear_above():
 	if scene_above == null:
