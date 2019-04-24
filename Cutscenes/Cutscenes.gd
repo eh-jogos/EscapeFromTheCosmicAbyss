@@ -8,7 +8,7 @@ var current_scene
 var buttons
 
 var current_animator
-var animator_steps #array of animations, 0 mus always be "00_base" and 1 must always be "01_fade_in"
+var animator_steps #array of animations, 0 must always be "00_base" and 1 must always be "01_fade_in"
 var current_step
 
 func _ready():
@@ -30,7 +30,7 @@ func _input(event):
 
 
 func setup_next_scene_animator():
-	print("Cutscenes.gd | Setup Next scene animator: %s"%current_scene)
+	#print("Cutscenes.gd | Setup Next scene animator: %s"%current_scene)
 	current_animator = scenes[current_scene].get_node("AnimationPlayer")
 	animator_steps = current_animator.get_animation_list()
 	current_step = 1
@@ -38,7 +38,7 @@ func setup_next_scene_animator():
 
 
 func _on_Next_pressed():
-	print("Cutscenes.gd | NEXT PRESSED")
+	#print("Cutscenes.gd | NEXT PRESSED")
 	if current_animator.is_playing():
 		skip_current_animation_step()
 	elif scene_has_more_steps():
@@ -77,7 +77,11 @@ func has_more_scenes():
 func close():
 	get_tree().set_pause(false)
 	emit_signal("cutscene_ended")
-	ScreenManager.black_transition_from_above()
+	if get_tree().get_current_scene() == self:
+		for child in get_children():
+			child.hide()
+	else:
+		ScreenManager.black_transition_from_above()
 
 
 func _on_Skip_pressed():
