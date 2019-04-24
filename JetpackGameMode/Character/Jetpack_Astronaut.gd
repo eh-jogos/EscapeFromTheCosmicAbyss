@@ -70,7 +70,7 @@ func _ready():
 	pass
 
 func _fixed_process(delta):
-	if game.get_game_state() != 0:
+	if game.get_game_state() != 0 and game.get_game_state() != 3:
 		return
 	
 	var heat = game.get_overheat()
@@ -202,7 +202,7 @@ func _fixed_process(delta):
 			motion = self.move(motion)
 
 func _input(event):
-	if game.get_game_state() != 0:
+	if game.get_game_state() != 0 and game.get_game_state() != 3:
 		return
 	
 	if event.is_action_pressed("shoot") and ammunition.use_ammo() and not shooting:

@@ -152,13 +152,16 @@ func open(msg):
 
 
 func _on_replay_pressed():
+	Global.is_retry = true
+	restart_game()
+
+func restart_game():
 	if game != null:
 		animator.play("fade out")
 		yield(animator, "finished")
 		
 #		ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn", self)
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
-		Global.is_retry = true
 
 func _on_quit_pressed():
 	ScreenManager.load_screen(main_menu_path)
@@ -234,4 +237,4 @@ func _on_NextLevel_pressed():
 	var level = Global.savedata["story"]["current level"] + 1
 	Global.set_current_story_level(level)
 	 
-	_on_replay_pressed()
+	restart_game()

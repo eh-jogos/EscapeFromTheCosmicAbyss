@@ -18,6 +18,7 @@ func _ready():
 	pass
 
 func play(num, title):
+	self.get_tree().set_pause(true)
 	self.show()
 	#SoundManager.stop_bgm()
 	game.initialize_game_stats()

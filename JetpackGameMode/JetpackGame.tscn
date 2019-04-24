@@ -470,9 +470,9 @@ end_cutscene = null
 [node name="Level1" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 4 )
-title = ""
+title = "Jetpack for Your Life!"
 intro_cutscene = null
-end_cutscene = "res://Cutscenes/Cutscene4.tscn"
+end_cutscene = null
 
 [node name="Level2" type="Node" parent="LevelLoader"]
 
@@ -1153,7 +1153,6 @@ autoplay = "base"
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0

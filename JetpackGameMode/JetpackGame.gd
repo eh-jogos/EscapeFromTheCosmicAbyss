@@ -66,7 +66,7 @@ const STATE = {
 	"Cutscene": 5
 }
 
-var current_state = STATE["Playing"]
+var current_state = STATE["Start"]
 
 func _ready():
 	#TODO? - Change the nodes according to game mode?
@@ -141,20 +141,22 @@ func game_start():
 	if level_intro_cutscene != null and not Global.is_retry:
 		set_game_state("Cutscene")
 		ScreenManager.black_transition(level_intro_cutscene, null, self)
-		if not ScreenManager.is_connected("transition_ended", self, "_on_intro_cutscene_loaded"):
-			 ScreenManager.connect("transition_ended", self, "_on_intro_cutscene_loaded")
+		if not ScreenManager.is_connected("scene_above_loaded", self, "_on_intro_cutscene_loaded"):
+			 ScreenManager.connect("scene_above_loaded", self, "_on_intro_cutscene_loaded")
 	else:
 		start_countdown()
 
 
-func _on_intro_cutscene_loaded():
-	var cutscene = ScreenManager.scene_above
-	if not cutscene.is_connected("cutscene_ended", self, "start_countdown"):
-		cutscene.connect("cutscene_ended", self, "start_countdown")
+func _on_intro_cutscene_loaded(loaded_cutscene):
+	if not loaded_cutscene.is_connected("cutscene_ended", self, "_on_intro_cutscene_finished"):
+		loaded_cutscene.connect("cutscene_ended", self, "_on_intro_cutscene_finished")
 
+
+func _on_intro_cutscene_finished():
+	if not ScreenManager.is_connected("transition_ended", self, "start_countdown"):
+		ScreenManager.connect("transition_ended", self, "start_countdown", [], CONNECT_ONESHOT)
 
 func start_countdown():
-	set_game_state("Playing")
 	if is_tutorial:
 		set_game_state("Tutorial")
 		tutorial.play(level_num, level_title)
