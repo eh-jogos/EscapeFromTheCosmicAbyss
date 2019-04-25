@@ -18,8 +18,8 @@ var time_max = 100 #msec
 
 var scene_above
 
-var scene_below
-var previous_focus
+var scenes_bellow = []
+var previous_focuses = []
 
 func _ready():
 	animation = self.get_node("AnimationPlayer")
@@ -30,36 +30,24 @@ func reset():
 	progress_bar.set_value(0)
 	animation_loaded = false
 
-func load_above(path, focus_path, origin_scene):
-	if scene_above != null:
-		print("ERROR | Scene Above is not null")
-		return
+func load_above(path, focus_path, origin_scene, path_is_node = false):
+	scenes_bellow.append(origin_scene)
+	previous_focuses.append(focus_path)
 	
-	scene_below = origin_scene
-	previous_focus = focus_path
-	
-	scene_above = load(path).instance()
-	
-	emit_signal("scene_above_loaded", scene_above)
-	
-	get_tree().get_root().call_deferred("add_child",scene_above)
-	#scene_above.set_pos(scene_below.get_global_pos())
-
-
-func load_above_node(node, focus_path, origin_scene):
-	if scene_above != null:
-		print("ERROR | Scene Above is not null")
-		return
-	
-	scene_below = origin_scene
-	previous_focus = focus_path
-	
-	scene_above = node.instance()
+	if path_is_node:
+		scene_above = path.instance()
+	else:
+		scene_above = load(path).instance()
 	
 	emit_signal("scene_above_loaded", scene_above)
 	
 	get_tree().get_root().call_deferred("add_child",scene_above)
-	#scene_above.set_pos(scene_below.get_global_pos())
+	#scene_above.set_pos(scenes_bellow.get_global_pos())
+	
+	print("Scenes Below: %s | Previous Focuses%s"%[
+			scenes_bellow,
+			previous_focuses
+	])
 
 
 func background_loading(path):
@@ -75,34 +63,52 @@ func background_loading(path):
 
 func clear_above():
 	if scene_above == null:
-		print("ERROR | Scene Above is null")
+		print("CLEAR ABOVE ERROR | Scene Above is null | Scenes Below: %s | Previous Focuses: %s"%[
+				scenes_bellow,
+				previous_focuses
+		])
 		return
 	
+	var previous_focus
+	var scene_below
+	
 	get_tree().get_root().remove_child(scene_above)
-	scene_above = null
+	
+	if previous_focuses.size() > 0:
+		previous_focus = previous_focuses[previous_focuses.size()-1]
+		previous_focuses.pop_back()
+	
+	if scenes_bellow.size() > 0:
+		scene_below = scenes_bellow[scenes_bellow.size()-1]
+		if scenes_bellow.size() > 1:
+			scene_above = scene_below
+		else:
+			scene_above = null
+		
+		scenes_bellow.pop_back()
 	
 	if previous_focus != null and previous_focus.has_method("grab_focus"):
 		previous_focus.grab_focus()
-	else:
-		print("Scene Below: %s | Previous Focus: %s | grab_focus(): %s"%[
-				scene_below.get_name(),
-				previous_focus.get_name(),
-				previous_focus.has_method("grab_focus"),
-		])
-		pass
 	
-	previous_focus = null
-	scene_below = null
+	print("Scenes Below: %s | Scene Below: %s | Previous Focus: %s "%[
+			scenes_bellow,
+			scene_below,
+			previous_focus,
+	])
+	
 
 func reset_above_below():
 	if scene_above == null:
-		print("ERROR | Scene Above is null")
+		print("RESET ABOVE BELOW ERROR | Scene Above is null | Scenes Below: %s | Previous Focuses: %s"%[
+				scenes_bellow,
+				previous_focuses
+		])
 		return
 	
 	get_tree().get_root().remove_child(scene_above)
 	scene_above = null
-	scene_below = null
-	previous_focus = null
+	scenes_bellow = []
+	previous_focuses = []
 
 func load_screen(path):
 	animation.play("fade_in")
@@ -179,7 +185,7 @@ func black_transition_from_above():
 	animation.play("black_transition")
 	yield(animation, "finished")
 	emit_signal("mid_transition_reached")
-	reset_above_below()
+	clear_above()
 	animation.play_backwards("black_transition")
 	yield(animation, "finished")
 	reset()

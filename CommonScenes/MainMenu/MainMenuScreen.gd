@@ -2,7 +2,7 @@ extends Node2D
 
 #Menu Paths
 export(String, FILE) var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
-export(String, FILE) var extras_path = "res://CommonScenes/OptionsMenu/ExtrasMenuScreen.tscn"
+export(String, FILE) var extras_path = "res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn"
 export(String, FILE) var game_path
 
 var continue_btn
@@ -36,11 +36,11 @@ func _ready():
 
 func _on_options_pressed():
 	last_focus = options_btn
-	ScreenManager.load_above_node(options_scene, last_focus, self)
+	ScreenManager.load_above(options_scene, last_focus, self, true)
 
 func _on_Extras_pressed():
 	last_focus = extras_btn
-	ScreenManager.load_above_node(extras_scene, last_focus, self)
+	ScreenManager.load_above(extras_scene, last_focus, self, true)
 
 func _on_quit_pressed():
 	get_tree().quit()
