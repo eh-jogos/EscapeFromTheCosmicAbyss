@@ -13,7 +13,7 @@
 process/pause_mode = 2
 script/script = ExtResource( 1 )
 options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
-extras_path = "res://CommonScenes/OptionsMenu/ExtrasMenuScreen.tscn"
+extras_path = "res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn"
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
