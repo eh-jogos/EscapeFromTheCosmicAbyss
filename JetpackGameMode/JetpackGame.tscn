@@ -448,6 +448,8 @@ point_multiple = 5
 upgrade_multiple = 30
 level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+test_mode = "arcade"
+test_level_or_points = 3
 
 [node name="AutoBoost" type="Timer" parent="."]
 
@@ -492,8 +494,8 @@ end_cutscene = null
 
 script/script = ExtResource( 7 )
 title = "Triple Trouble!"
-intro_cutscene = "res://Cutscenes/Cutscene3.tscn"
-end_cutscene = "res://Cutscenes/Cutscene4.tscn"
+intro_cutscene = null
+end_cutscene = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

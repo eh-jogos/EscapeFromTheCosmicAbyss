@@ -65,12 +65,12 @@ var savedata = {
 		"upgrade points": 0,
 		},
 	"state": {
-		"game mode" : "arcade",
+		"game mode" : "test_mode",
 		"sub-mode": "15",
 	},
 }
 
-func _ready():
+func check_savefile():
 	if not savefile.file_exists(savepath):
 		save()
 	

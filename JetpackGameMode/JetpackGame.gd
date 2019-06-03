@@ -26,6 +26,8 @@ export var point_multiple = 5
 export var upgrade_multiple = 30
 export(String, FILE) var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 export(String, FILE) var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+export(String, "story", "arcade", "speedrun") var test_mode = "story"
+export(int) var test_level_or_points = 0
 
 
 var game_settings = Global.get_game_mode()
@@ -94,7 +96,20 @@ func _ready():
 	
 
 func show_pre_game():
-	print("JetpackGame.gd | Is Retry: %s"%Global.is_retry)
+	print("JetpackGame.gd | Game Mode: %s | Is Retry: %s"%[game_mode, Global.is_retry])
+	
+	if game_mode == "test_mode":
+		print("JetpackGame.gd | Test Mode: %s | Test Sub: %s"%[test_mode, test_level_or_points])
+		game_mode = test_mode
+		Global.savedata["state"]["game mode"] = test_mode
+		if test_mode == "story":
+			category = "level selected"
+			Global.savedata["story"]["current level"] = test_level_or_points
+		else:
+			category = String(test_level_or_points)
+			Global.savedata["state"]["sub-mode"] = String(test_level_or_points)
+			Global.reset_category_progress(Global.savedata.state)
+	
 	if game_mode == "story":
 		time_laps_label.hide()
 		runtime_label.hide()
@@ -108,7 +123,7 @@ func show_pre_game():
 			runtime_label.show()
 		load_upgrade_pregame()
 	else:
-		print("ERROR | Invalid game mode: %s"%[game_settings])
+		print("ERROR | Invalid game mode: %s"%[game_mode])
 	
 	self.get_tree().set_pause(true)
 
@@ -129,8 +144,7 @@ func is_tutorial_completed():
 
 func load_upgrade_pregame():
 	if category.is_valid_integer():
-		var path = upgrade_path
-		ScreenManager.load_above(path, self, self)
+		ScreenManager.load_above(upgrade_path, self, self)
 	else:
 		print("ERROR | Invalid sub-mode: %s"%[game_settings])
 
@@ -198,6 +212,7 @@ func initialize_game_stats():
 
 func setup_game_mode_level():
 	if game_mode == "story":
+		print("JetpackGame.gd | current level: %s"%current_level)
 		if not valid_level_choice(current_level):
 			print("ERROR | LEVEL OUT OF RANGE")
 			current_level = level_loader.get_max_levels()-1
