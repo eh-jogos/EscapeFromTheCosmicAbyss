@@ -164,6 +164,7 @@ func restart_game():
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
 
 func _on_quit_pressed():
+	SoundManager.stop_bgm()
 	ScreenManager.load_screen(main_menu_path)
 
 func print_score(points, label):

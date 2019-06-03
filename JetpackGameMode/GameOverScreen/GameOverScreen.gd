@@ -155,6 +155,7 @@ func _on_replay_pressed():
 		Global.is_retry = true
 
 func _on_quit_pressed():
+	SoundManager.stop_bgm()
 	ScreenManager.load_screen(main_menu_path)
 
 

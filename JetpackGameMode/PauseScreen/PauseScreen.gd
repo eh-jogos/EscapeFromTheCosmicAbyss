@@ -115,4 +115,5 @@ func _on_LevelSelect_pressed():
 
 
 func _on_QuitMainMenu_pressed():
+	SoundManager.stop_bgm()
 	ScreenManager.load_screen(main_menu_path)
