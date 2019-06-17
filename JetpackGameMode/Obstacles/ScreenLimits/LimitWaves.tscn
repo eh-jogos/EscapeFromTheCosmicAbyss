@@ -56,6 +56,7 @@ animations = [ {
 
 [node name="LimitsLight" type="AnimatedSprite" parent="."]
 
+z/relative = false
 frames = SubResource( 1 )
 animation = "waves"
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -63,6 +64,8 @@ script/script = ExtResource( 17 )
 
 [node name="LimitsDark" type="AnimatedSprite" parent="."]
 
+z/z = 2
+z/relative = false
 frames = SubResource( 2 )
 animation = "waves"
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )

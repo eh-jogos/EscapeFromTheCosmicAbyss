@@ -1,0 +1,166 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_eye.png" type="Texture" id=1]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_body.png" type="Texture" id=2]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_outline.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "charging"
+length = 3.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("EyeColor:modulate")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.4, 0.8, 1.2, 1.6, 1.9, 2.2, 2.5, 2.8, 3, 3.2, 3.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource/name = "shooting"
+length = 0.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorFrame:rect/size")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 162, 40 ), Vector2( 162, 1106 ), Vector2( 162, 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorFrame:rect/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.3, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -76, 0 ), Vector2( -76, 0 ), Vector2( -76, 1093 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorFrame/ColorFrame:rect/size")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.3, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 122, 40 ), Vector2( 122, 1106 ), Vector2( 122, 13 ) ]
+}
+
+[node name="LaserEye" type="Node2D"]
+
+[node name="ColorFrame" type="ColorFrame" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -76.0
+margin/top = 1093.0
+margin/right = 86.0
+margin/bottom = 1106.0
+color = Color( 0.780392, 0.223529, 0.211765, 1 )
+
+[node name="ColorFrame" type="ColorFrame" parent="ColorFrame"]
+
+anchor/left = 3
+anchor/right = 3
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 61.0
+margin/top = 0.0
+margin/right = -61.0
+margin/bottom = 0.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="EyeColor1" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 0, 6 )
+z/z = -1
+z/relative = false
+frames = SubResource( 1 )
+animation = "idle"
+modulate = Color( 0.00784314, 0.113725, 0.0980392, 1 )
+
+[node name="EyeColor" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 0, -4 )
+frames = SubResource( 1 )
+animation = "idle"
+modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
+
+[node name="BodyColor1" type="AnimatedSprite" parent="."]
+
+transform/pos = Vector2( 0, 10 )
+z/z = -1
+z/relative = false
+frames = SubResource( 2 )
+animation = "idle"
+modulate = Color( 0.00796509, 0.113281, 0.0995444, 1 )
+
+[node name="BodyColor" type="AnimatedSprite" parent="."]
+
+frames = SubResource( 2 )
+animation = "idle"
+modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
+
+[node name="Outline" type="AnimatedSprite" parent="."]
+
+visibility/visible = false
+frames = SubResource( 3 )
+animation = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/charging = SubResource( 4 )
+anims/shooting = SubResource( 5 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
+
