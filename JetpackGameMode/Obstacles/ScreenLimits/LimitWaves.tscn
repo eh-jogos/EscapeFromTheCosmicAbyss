@@ -64,7 +64,7 @@ script/script = ExtResource( 17 )
 
 [node name="LimitsDark" type="AnimatedSprite" parent="."]
 
-z/z = 2
+z/z = 3
 z/relative = false
 frames = SubResource( 2 )
 animation = "waves"

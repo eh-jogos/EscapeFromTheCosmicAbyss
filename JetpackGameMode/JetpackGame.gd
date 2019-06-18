@@ -104,6 +104,7 @@ func show_pre_game():
 		Global.savedata["state"]["game mode"] = test_mode
 		if test_mode == "story":
 			category = "level selected"
+			Global.savedata["state"]["sub-mode"] = "level selected"
 			Global.savedata["story"]["current level"] = test_level_or_points
 		else:
 			category = String(test_level_or_points)
