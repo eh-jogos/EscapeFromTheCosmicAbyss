@@ -463,6 +463,7 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -522,10 +523,10 @@ drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
 smoothing/speed = 25.0
-drag_margin/left = 0.0
-drag_margin/top = 0.0
+drag_margin/left = 0.5
+drag_margin/top = 1.0
 drag_margin/right = 0.0
-drag_margin/bottom = 0.0
+drag_margin/bottom = 1.0
 script/script = ExtResource( 9 )
 
 [node name="Tween" type="Tween" parent="Camera2D"]
@@ -645,6 +646,7 @@ z/z = 3
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = -2
 offset = Vector2( 0, 0 )
 rotation = 0.0

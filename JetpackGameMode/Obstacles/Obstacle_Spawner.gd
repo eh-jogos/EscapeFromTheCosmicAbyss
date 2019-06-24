@@ -1,5 +1,7 @@
 extends Position2D
 
+signal setup_laser_eye(laser_eye_marker)
+
 export(NodePath) var obstacle_parent
 export(NodePath) var obstacle_half_parent
 export(PackedScene) var none
@@ -41,12 +43,20 @@ func spawn(obstacle_num):
 	var position = self.get_global_pos()
 	obstacle.set_pos(position)
 	obstacle_group.add_child(obstacle)
+	
+	if obstacle_num == 5:
+		emit_signal("setup_laser_eye", obstacle)
 
 func half_spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
 	var position = self.get_global_pos()
 	obstacle.set_pos(position)
 	half_group.add_child(obstacle)
+	
+	if obstacle_num == 5:
+		emit_signal("setup_laser_eye", obstacle)
+
+
 
 func next_beat():
 	if level["beats"].size() > 0:

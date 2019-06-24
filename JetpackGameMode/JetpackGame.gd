@@ -13,6 +13,7 @@ var ammunition
 var hud_animator
 var player
 var level_loader
+var camera
 var object_spawner
 
 # Other "Game Screens"
@@ -90,7 +91,8 @@ func _ready():
 	hud_animator = self.get_node("HUD/AnimationPlayer")
 	player = self.get_node("Player")
 	level_loader = self.get_node("LevelLoader")
-	object_spawner = self.get_node("Camera2D/ObstacleSpawner")
+	camera = self.get_node("Camera2D")
+	object_spawner = camera.get_node("ObstacleSpawner")
 	
 	show_pre_game()
 	
