@@ -19,7 +19,7 @@ func _fixed_process(delta):
 
 func start():
 	animator.play("enter")
-	is_tracking = false
+	is_tracking = true
 	set_fixed_process(is_tracking)
 
 

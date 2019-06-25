@@ -523,7 +523,7 @@ drag_margin/h_enabled = true
 drag_margin/v_enabled = true
 smoothing/enable = true
 smoothing/speed = 25.0
-drag_margin/left = 0.5
+drag_margin/left = 0.0
 drag_margin/top = 1.0
 drag_margin/right = 0.0
 drag_margin/bottom = 1.0
@@ -1207,6 +1207,8 @@ visibility/visible = false
 [connection signal="level_ready" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
 
 [connection signal="update_visualization" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
+
+[connection signal="dashing" from="Player" to="Camera2D" method="_on_Player_dashing"]
 
 [connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
 

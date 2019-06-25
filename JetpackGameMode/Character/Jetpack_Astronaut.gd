@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal dashing(boolean)
+
 # OTHER SCENES TO BE PRELOADED
 var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 
@@ -81,10 +83,8 @@ func _fixed_process(delta):
 		overheat_bar_animator.play_backwards("overheated")
 	
 	if heat <= 50 and dashing:
-		dashing = false
 		overheat_bar_animator.play_backwards("undashable")
 	elif heat > 50 and not dashing:
-		dashing = true
 		overheat_bar_animator.play("undashable")
 	
 	speed.y += delta * gravity_force
@@ -113,6 +113,7 @@ func _fixed_process(delta):
 	if Input.is_action_pressed("dash") and not dashing and not overheated:
 #		print("DASH!")
 		dashing = true
+		emit_signal("dashing", dashing)
 		
 		speed.x = (10*unit.x)+(dash_force*delta)
 		#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
@@ -132,6 +133,8 @@ func _fixed_process(delta):
 			speed.y = 0
 			heat+=1.75
 		else:
+			dashing = false
+			emit_signal("dashing", dashing)
 			speed.x += speed_x*unit.x*delta
 			speed.x = clamp(speed.x, 0, speed_x*unit.x)
 	else:

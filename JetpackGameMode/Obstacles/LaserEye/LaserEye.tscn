@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_eye.png" type="Texture" id=2]
@@ -43,6 +43,35 @@ tracks/0/path = NodePath("Root/EyeColor:modulate")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
+"times": FloatArray( 0, 0.5, 1, 1.4, 1.8, 2.1, 2.4, 2.6, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 3 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "stop_tracking"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource/name = "charging"
+length = 3.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Root/EyeColor:modulate")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
 "times": FloatArray( 0, 0.4, 0.8, 1.1, 1.4, 1.7, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.1, 3.2, 3.3, 3.4 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
@@ -53,7 +82,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 1.1 ),
+"times": FloatArray( 3 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -307,11 +336,13 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/charging = SubResource( 4 )
+"anims/charging (copy)" = SubResource( 9 )
 anims/enter = SubResource( 5 )
 anims/hidden = SubResource( 6 )
 anims/hide = SubResource( 7 )
 anims/shooting = SubResource( 8 )
 next/charging = "shooting"
+"next/charging (copy)" = "shooting"
 next/enter = "charging"
 next/hide = "hidden"
 next/shooting = "hide"
