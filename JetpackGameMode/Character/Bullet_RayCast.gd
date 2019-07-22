@@ -24,7 +24,7 @@ func set_laser_duration(duration):
 func _fixed_process(delta):
 	if self.is_colliding():
 		var collider = self.get_collider()
-		print(collider.get_name())
+		#print(collider.get_name())
 		if collider.is_in_group("pipes"):
 			print("Bullet HIT")
 			collider.emit_signal("die")
