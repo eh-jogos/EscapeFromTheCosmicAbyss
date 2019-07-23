@@ -4,7 +4,6 @@ signal start_laser_eye
 
 func _ready():
 	emit_signal("start_laser_eye")
-	print("LASER EYE FIRE AWAY")
 
 func _on_VisibilityNotifier2D_exit_screen():
 	#print("Kill")

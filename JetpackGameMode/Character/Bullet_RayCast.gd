@@ -26,7 +26,7 @@ func _fixed_process(delta):
 		var collider = self.get_collider()
 		#print(collider.get_name())
 		if collider.is_in_group("pipes"):
-			print("Bullet HIT")
+			#print("Bullet HIT")
 			collider.emit_signal("die")
 
 

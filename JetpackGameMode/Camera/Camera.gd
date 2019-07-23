@@ -24,7 +24,7 @@ func _fixed_process(delta):
 func set_camera_offset_x(value, seconds, easing = Tween.EASE_IN):
 	base_offset = camera_offset_x
 	target_offset_x = (abs(base_offset) + value)
-	print("base: %s | target: %s"%[base_offset, target_offset_x])
+	#print("base: %s | target: %s"%[base_offset, target_offset_x])
 	tween.interpolate_method(self,"animate_camera_horizontally", 0.01, 1.00, 
 			seconds, Tween.TRANS_SINE, easing)
 	tween.start()
@@ -41,7 +41,7 @@ func _on_setup_laser_eye(marker):
 
 
 func _on_Player_dashing( boolean ):
-	print("Camera.gd | Dashing: %s | Camera Offset: %s"%[boolean, camera_offset_x])
+	#print("Camera.gd | Dashing: %s | Camera Offset: %s"%[boolean, camera_offset_x])
 	if boolean:
 		set_camera_offset_x(-300,0.2, Tween.EASE_OUT)
 	else:
