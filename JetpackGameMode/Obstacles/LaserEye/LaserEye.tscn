@@ -297,6 +297,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 65, 4 ) ]
 }
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0.5 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_cycle_ended"
+} ]
+}
 
 [sub_resource type="Animation" id=9]
 
@@ -407,6 +419,7 @@ tracks/9/keys = {
 [node name="LaserEye" type="Node2D"]
 
 script/script = ExtResource( 1 )
+point_value = 5
 
 [node name="Root" type="Node2D" parent="."]
 
@@ -481,29 +494,35 @@ animation = "idle"
 
 [node name="Raycasts" type="Node2D" parent="Root"]
 
-[node name="Left" type="RayCast2D" parent="Root/Raycasts"]
+[node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
+"enemy",
+]]
 
-transform/pos = Vector2( -55, 1084 )
-enabled = false
+transform/pos = Vector2( -55, 4 )
+enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
-type_mask = 15
+type_mask = 2
 
-[node name="Middle" type="RayCast2D" parent="Root/Raycasts"]
+[node name="Middle" type="RayCast2D" parent="Root/Raycasts" groups=[
+"enemy",
+]]
 
-transform/pos = Vector2( 5, 1084 )
-enabled = false
+transform/pos = Vector2( 5, 4 )
+enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
-type_mask = 15
+type_mask = 2
 
-[node name="Right" type="RayCast2D" parent="Root/Raycasts"]
+[node name="Right" type="RayCast2D" parent="Root/Raycasts" groups=[
+"enemy",
+]]
 
-transform/pos = Vector2( 65, 1084 )
-enabled = false
+transform/pos = Vector2( 65, 4 )
+enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
-type_mask = 15
+type_mask = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

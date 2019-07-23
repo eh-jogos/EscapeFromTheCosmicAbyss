@@ -5,8 +5,8 @@ export(String, FILE) var intro_cutscene
 export(String, FILE) var end_cutscene
 
 var tutorial = false
-var intro_beats = [0,5,1,1,1]
-var intro_halfs = [0,0,0,0,0]
+var intro_beats = [0,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1]
+var intro_halfs = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 var end_beat = 4
 var boss = {
 	"boss_level": false,
