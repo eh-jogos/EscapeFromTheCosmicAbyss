@@ -5,35 +5,39 @@ export(String, FILE) var intro_cutscene
 export(String, FILE) var end_cutscene
 
 var tutorial = false
-var intro_beats = [0,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1,5,1,1]
-var intro_halfs = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+var intro_beats = [1,1,5,1,3]
+var intro_halfs =  [0,0,0,0,0]
 var end_beat = 4
 var boss = {
 	"boss_level": false,
-	"laser_countdown":0,
-	"scream": false,
-	"countdown": 0,
-	"sequence": []
+	"laser": false,
+	"laser_countdown":[0],
+	"scream": true,
+	"countdown": [20],
+	"sequence_beats": [[2,3,4,2,2,1,3]],
+	"sequence_halfs": [[1,1,1,6,5,1,1]] ,
+	"animations": ["awaken", "back_scream"],
+	"animations_countdowns": [10,19],
 }
 
 var beats = {
 	"none": 0,
-	"tentacles": 0,
-	"double_pipe": 0,
-	"triple_pipe": 0,
-	"wall": 0,
-	"laser_eye": 0,
+	"tentacles": 20,
+	"double_pipe": 10,
+	"triple_pipe": 5,
+	"wall": 5,
+	"laser_eye": 5,
 	"shield_up": 0,
 	"ammo_up": 0
 }
 
 var half_beats = {
-	"none": 0,
-	"tentacles": 0,
-	"double_pipe": 0,
+	"none": 30,
+	"tentacles": 10,
+	"double_pipe": 4,
 	"triple_pipe": 0,
 	"wall": 0,
 	"laser_eye": 0,
-	"shield_up": 0,
+	"shield_up": 1,
 	"ammo_up": 0
 }
