@@ -15,8 +15,9 @@ var boss = {
 	"scream": true,
 	"countdown": [20],
 	"sequence_beats": [[2,3,4,2,2,1,3]],
-	"sequence_halfs": [[1,1,1,6,5,1,1]] ,
-	"animations": ["awaken", "back_scream"],
+	"sequence_halfs":  [[1,1,1,6,5,1,1]],
+	"boss_node": "BackRowBoss",
+	"animations": ["awaken", "scream"],
 	"animations_countdowns": [10,19],
 }
 

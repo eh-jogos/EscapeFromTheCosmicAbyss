@@ -15,7 +15,8 @@ var boss = {
 	"scream": false,
 	"countdown": [],
 	"sequence_beats": [],
-	"sequence_halfs": [] ,
+	"sequence_halfs": [],
+	"boss_node": null,
 	"animations": [],
 	"animations_countdowns": [],
 }

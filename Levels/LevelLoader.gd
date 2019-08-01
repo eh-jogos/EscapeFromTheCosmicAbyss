@@ -30,6 +30,13 @@ func load_level(num, load_all, loop):
 		level["end_cutscene"] = level_info.end_cutscene
 		level["beats"] = []
 		level["half_beats"] = []
+		level["bg_bosses"] = {}
+		
+		if level_info.boss.animations.size() > 0:
+			level["bg_bosses"][level_info.boss.boss_node] = {
+				"animations" : level_info.boss.animations,
+				"animations_countdowns" : level_info.boss.animations_countdowns,
+			}
 		
 		build_level_procedurally()
 		
