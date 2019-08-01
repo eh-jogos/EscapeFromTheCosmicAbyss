@@ -12,8 +12,6 @@ onready var obstacle_spawner = get_node("ObstacleSpawner")
 
 func _ready():
 	set_fixed_process(true)
-	if not obstacle_spawner.is_connected("setup_laser_eye", self, "_on_setup_laser_eye"):
-		obstacle_spawner.connect("setup_laser_eye", self, "_on_setup_laser_eye")
 
 
 func _fixed_process(delta):
@@ -35,14 +33,15 @@ func animate_camera_horizontally(progress):
 	camera_offset_x = base_offset + interpolated_offset
 
 
-func _on_setup_laser_eye(marker):
-	var laser_eye = get_node("LaserEye")
-	laser_eye.start()
-
-
 func _on_Player_dashing( boolean ):
 	#print("Camera.gd | Dashing: %s | Camera Offset: %s"%[boolean, camera_offset_x])
 	if boolean:
 		set_camera_offset_x(-300,0.2, Tween.EASE_OUT)
 	else:
 		set_camera_offset_x(0,0.4)
+
+
+func _on_ObstacleSpawner_setup_laser_eye():
+	var laser_eye = get_node("LaserEye")
+	laser_eye.start()
+

@@ -1,6 +1,10 @@
 extends Position2D
 
-signal setup_laser_eye(laser_eye_marker)
+signal setup_laser_eye
+signal level_ready
+signal level_end
+signal update_visualization
+
 
 export(NodePath) var obstacle_parent
 export(NodePath) var obstacle_half_parent
@@ -19,10 +23,6 @@ var obstacle_group
 var half_group
 var level
 var half_countdown = 4
-
-signal level_ready
-signal level_end
-signal update_visualization
 
 func _ready():
 	obstacle_group = get_node(obstacle_parent)
@@ -45,7 +45,7 @@ func spawn(obstacle_num):
 	obstacle_group.add_child(obstacle)
 	
 	if obstacle_num == 5:
-		emit_signal("setup_laser_eye", obstacle)
+		emit_signal("setup_laser_eye")
 
 func half_spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
@@ -54,7 +54,7 @@ func half_spawn(obstacle_num):
 	half_group.add_child(obstacle)
 	
 	if obstacle_num == 5:
-		emit_signal("setup_laser_eye", obstacle)
+		emit_signal("setup_laser_eye")
 
 
 
