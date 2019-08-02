@@ -4,7 +4,8 @@ signal setup_laser_eye
 signal level_ready
 signal level_end
 signal update_visualization
-
+signal beat_spawned
+signal half_beat_spawned
 
 export(NodePath) var obstacle_parent
 export(NodePath) var obstacle_half_parent
@@ -47,6 +48,7 @@ func spawn(obstacle_num):
 	if obstacle_num == 5:
 		emit_signal("setup_laser_eye")
 
+
 func half_spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
 	var position = self.get_global_pos()
@@ -57,11 +59,11 @@ func half_spawn(obstacle_num):
 		emit_signal("setup_laser_eye")
 
 
-
 func next_beat():
 	if level["beats"].size() > 0:
 		spawn(level["beats"][0])
 		level["beats"].pop_front()
+		emit_signal("beat_spawned")
 		#print(level)
 	else:
 		emit_signal("level_end")
@@ -71,6 +73,7 @@ func next_half_beat():
 	if level["half_beats"].size() > 0:
 		half_spawn(level["half_beats"][0])
 		level["half_beats"].pop_front()
+		emit_signal("half_beat_spawned")
 		#print(level)
 
 

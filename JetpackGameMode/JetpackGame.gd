@@ -15,6 +15,7 @@ var player
 var level_loader
 var camera
 var object_spawner
+var parallax_background
 
 # Other "Game Screens"
 var game_over_screen
@@ -93,9 +94,10 @@ func _ready():
 	level_loader = self.get_node("LevelLoader")
 	camera = self.get_node("Camera2D")
 	object_spawner = camera.get_node("ObstacleSpawner")
+	parallax_background = self.get_node("ParallaxBackground")
 	
 	show_pre_game()
-	
+
 
 func show_pre_game():
 	print("JetpackGame.gd | Game Mode: %s | Is Retry: %s"%[game_mode, Global.is_retry])
@@ -258,6 +260,8 @@ func valid_level_choice(level_to_check):
 func load_level(level_choice, load_all = false, loop = false):
 	var level = level_loader.load_level(level_choice, load_all, loop)
 	object_spawner.set_level(level)
+	
+	parallax_background.set_background_bosses(level.bg_bosses, object_spawner)
 	
 	if game_mode == "arcade":
 		set_laps(arcade_laps)

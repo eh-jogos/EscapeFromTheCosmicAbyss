@@ -35,7 +35,7 @@ func load_level(num, load_all, loop):
 		if level_info.boss.animations.size() > 0:
 			level["bg_bosses"][level_info.boss.boss_node] = {
 				"animations" : level_info.boss.animations,
-				"animations_countdowns" : level_info.boss.animations_countdowns,
+				"countdowns" : level_info.boss.animations_countdowns,
 			}
 		
 		build_level_procedurally()
