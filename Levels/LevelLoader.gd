@@ -30,12 +30,14 @@ func load_level(num, load_all, loop):
 		level["end_cutscene"] = level_info.end_cutscene
 		level["beats"] = []
 		level["half_beats"] = []
-		level["bg_bosses"] = {}
+		level["bosses_nodes"] = {}
 		
-		if level_info.boss.animations.size() > 0:
-			level["bg_bosses"][level_info.boss.boss_node] = {
+		if level_info.boss.boss_node != null:
+			level["bosses_nodes"][level_info.boss.boss_node] = {
+				"is_a_boss_level" : level_info.boss.boss_level,
 				"animations" : level_info.boss.animations,
-				"countdowns" : level_info.boss.animations_countdowns,
+				"animation_countdowns" : level_info.boss.animations_countdowns,
+				"laser_countdowns" : level_info.boss.laser_countdowns,
 			}
 		
 		build_level_procedurally()
@@ -317,14 +319,6 @@ func build_available_slots_array(level_array, initial_slot):
 		available_slots.erase(slot)
 	
 	return available_slots
-
-
-func build_boss():
-	if level_info.boss["boss_level"]:
-		pass
-	else:
-		level["boss_level"] = false
-		level["boss_scream"] = false
 
 
 func add_intro(target_array, intro_array):

@@ -11,7 +11,7 @@ var end_beat = 1
 var boss = {
 	"boss_level": false,
 	"laser": false,
-	"laser_countdown":[],
+	"laser_countdowns":[],
 	"scream": false,
 	"countdown": [],
 	"sequence_beats": [],

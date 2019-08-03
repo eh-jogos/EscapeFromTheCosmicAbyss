@@ -19,6 +19,8 @@ var level_loader
 var camera
 var object_spawner
 var parallax_background
+var active_background_bosses = []
+
 
 # Other "Game Screens"
 var game_over_screen
@@ -196,7 +198,7 @@ func initialize_game_stats():
 		initial_shield = Global.savedata[game_mode]["initial shield"]
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
-		max_speed = Global.savedata[game_mode]["max speed"]
+		max_speed = 4 + Global.savedata[game_mode]["max speed"]
 		laser_duration = Global.savedata[game_mode]["laser duration"]
 		upgrade_points = Global.savedata[game_mode]["upgrade points"]
 		levels_unlocked = Global.savedata[game_mode]["levels unlocked"]
@@ -212,7 +214,7 @@ func initialize_game_stats():
 		initial_shield = Global.savedata[game_mode]["initial shield"]
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
-		max_speed = Global.savedata[game_mode]["max speed"]
+		max_speed = 4 + Global.savedata[game_mode]["max speed"]
 		laser_duration = Global.savedata[game_mode]["laser duration"]
 		cooldown = Global.savedata[game_mode]["cooldown"]
 	
@@ -261,11 +263,38 @@ func setup_game_mode_level():
 func valid_level_choice(level_to_check):
 	return level_to_check < level_loader.get_max_levels()
 
+
+func reset_background_bosses_list():
+	active_background_bosses = []
+
+
+func restart_background_bosses_count():
+	for boss in active_background_bosses:
+		boss.restart_count()
+
+
 func load_level(level_choice, load_all = false, loop = false):
 	var level = level_loader.load_level(level_choice, load_all, loop)
 	object_spawner.set_level(level)
 	
-	parallax_background.set_background_bosses(level.bg_bosses, object_spawner)
+	reset_background_bosses_list()
+	if level.bosses_nodes.keys().size() > 0:
+		for key in level.bosses_nodes.keys():
+			var boss_node
+			var laser_countdowns = level.bosses_nodes[key].laser_countdowns
+			var animation_countdowns = level.bosses_nodes[key].animation_countdowns
+			var animations = level.bosses_nodes[key].animations
+			
+			if level.bosses_nodes[key].is_a_boss_level:
+				boss_node = get_node("Camera2D/FinalBoss/Boss")
+				boss_node.set_boss_data(laser_countdowns, animation_countdowns, animations)
+			else:
+				boss_node = parallax_background.set_background_bosses(key, laser_countdowns, animation_countdowns, animations)
+				
+			if boss_node != null:
+				if not object_spawner.is_connected("beat_spawned", boss_node, "_on_beat_spawned"):
+					object_spawner.connect("beat_spawned", boss_node, "_on_beat_spawned")
+				active_background_bosses.append(boss_node)
 	
 	if game_mode == "arcade":
 		set_laps(arcade_laps)
@@ -380,6 +409,7 @@ func _on_level_end():
 		arcade_laps += 1
 		max_speed += MAX_SPEED_INCREMENT_PER_LAP
 		speed_messager.play_max_speed_increased_message()
+		restart_background_bosses_count()
 		load_level(1, true)
 	else:
 		printerr("ERROR | Invalid Game Mode: %s"%[game_settings])
