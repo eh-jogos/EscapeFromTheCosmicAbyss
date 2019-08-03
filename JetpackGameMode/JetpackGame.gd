@@ -1,5 +1,7 @@
 extends Node2D
 
+const MAX_SPEED_INCREMENT_PER_LAP = 5
+
 # Nodes this script will interact with
 var overheat_bar
 var overheat_bar_animator
@@ -9,6 +11,7 @@ var time_laps_label
 var runtime_label
 var upgrade_label
 var upgrade_messager
+var speed_messager
 var ammunition
 var hud_animator
 var player
@@ -89,6 +92,7 @@ func _ready():
 	runtime_label = self.get_node("HUD/CenterArea/RunTime")
 	upgrade_label = self.get_node("HUD/UpgradeLabel")
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
+	speed_messager = self.get_node("HUD/SpeedLabel")
 	hud_animator = self.get_node("HUD/AnimationPlayer")
 	player = self.get_node("Player")
 	level_loader = self.get_node("LevelLoader")
@@ -192,7 +196,7 @@ func initialize_game_stats():
 		initial_shield = Global.savedata[game_mode]["initial shield"]
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
-		max_speed = 4 + Global.savedata[game_mode]["max speed"]
+		max_speed = Global.savedata[game_mode]["max speed"]
 		laser_duration = Global.savedata[game_mode]["laser duration"]
 		upgrade_points = Global.savedata[game_mode]["upgrade points"]
 		levels_unlocked = Global.savedata[game_mode]["levels unlocked"]
@@ -208,7 +212,7 @@ func initialize_game_stats():
 		initial_shield = Global.savedata[game_mode]["initial shield"]
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
-		max_speed = 4 + Global.savedata[game_mode]["max speed"]
+		max_speed = Global.savedata[game_mode]["max speed"]
 		laser_duration = Global.savedata[game_mode]["laser duration"]
 		cooldown = Global.savedata[game_mode]["cooldown"]
 	
@@ -317,6 +321,10 @@ func _on_scored(num):
 			player.speed_x += 1.0
 			player.gravity += 10.0
 			player.speed_y -= 20.0
+			if player.speed_x == max_speed:
+				speed_messager.play_max_speed_message()
+			else:
+				speed_messager.play_accelerating_message()
 			#print("speed_x: %s | gravity: %s | speed_y: %s"%[player.speed_x, player.gravity, player.speed_y])
 			if not player.dashing:
 				player.speed.x = player.speed_x* player.unit.x
@@ -370,6 +378,8 @@ func _on_level_end():
 		level_completed()
 	elif game_mode == "arcade":
 		arcade_laps += 1
+		max_speed += MAX_SPEED_INCREMENT_PER_LAP
+		speed_messager.play_max_speed_increased_message()
 		load_level(1, true)
 	else:
 		printerr("ERROR | Invalid Game Mode: %s"%[game_settings])

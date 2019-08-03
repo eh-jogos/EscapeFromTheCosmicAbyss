@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=1]
+[gd_scene load_steps=106 format=1]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -8,58 +8,63 @@
 [ext_resource path="res://Levels/Level3.gd" type="Script" id=6]
 [ext_resource path="res://Levels/Level4.gd" type="Script" id=7]
 [ext_resource path="res://Levels/Level5.gd" type="Script" id=8]
-[ext_resource path="res://JetpackGameMode/Camera/Camera.gd" type="Script" id=9]
-[ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" type="Script" id=10]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" type="PackedScene" id=11]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" type="PackedScene" id=12]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" type="PackedScene" id=13]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" type="PackedScene" id=14]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" type="PackedScene" id=15]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeMarker.tscn" type="PackedScene" id=16]
-[ext_resource path="res://JetpackGameMode/PowerUps/ShieldUp.tscn" type="PackedScene" id=17]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" type="PackedScene" id=18]
-[ext_resource path="res://JetpackGameMode/Boss/ParallaxBackground.gd" type="Script" id=19]
-[ext_resource path="res://JetpackGameMode/Boss/BackRow/boss_bg3_scream.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Boss/BackRow/boss_bg3_eye.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Boss/BackgroundBoss.gd" type="Script" id=22]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_3.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_4.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/BG/BG_LooperH.gd" type="Script" id=28]
-[ext_resource path="res://JetpackGameMode/Boss/MiddleBackRow/boss_bg2.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_0.png" type="Texture" id=30]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_1.png" type="Texture" id=31]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_2.png" type="Texture" id=32]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_3.png" type="Texture" id=33]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_4.png" type="Texture" id=34]
-[ext_resource path="res://JetpackGameMode/Boss/MiddleFrontRow/boss_bg1.png" type="Texture" id=35]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_0.png" type="Texture" id=36]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_1.png" type="Texture" id=37]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_2.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_3.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_4.png" type="Texture" id=40]
-[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" type="Texture" id=41]
-[ext_resource path="res://JetpackGameMode/BG/BG_LooperH2.gd" type="Script" id=42]
-[ext_resource path="res://JetpackGameMode/Character/Player.tscn" type="PackedScene" id=43]
-[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" type="PackedScene" id=44]
-[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=46]
-[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=47]
-[ext_resource path="res://JetpackGameMode/HUD/SpeedrunTime.gd" type="Script" id=48]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=49]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=50]
-[ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=51]
-[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=52]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=53]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=54]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=55]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=56]
-[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=57]
-[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=58]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=59]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" type="PackedScene" id=60]
+[ext_resource path="res://Levels/Level6.gd" type="Script" id=9]
+[ext_resource path="res://JetpackGameMode/Camera/Camera.gd" type="Script" id=10]
+[ext_resource path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" type="Script" id=11]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" type="PackedScene" id=12]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" type="PackedScene" id=13]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" type="PackedScene" id=14]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" type="PackedScene" id=15]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" type="PackedScene" id=16]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeMarker.tscn" type="PackedScene" id=17]
+[ext_resource path="res://JetpackGameMode/PowerUps/ShieldUp.tscn" type="PackedScene" id=18]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" type="PackedScene" id=19]
+[ext_resource path="res://JetpackGameMode/Boss/FrontRow/boss_eye.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Boss/FrontRow/boss_scream.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Boss/ForegroundBoss.gd" type="Script" id=22]
+[ext_resource path="res://JetpackGameMode/Boss/ParallaxBackground.gd" type="Script" id=23]
+[ext_resource path="res://JetpackGameMode/Boss/BackRow/boss_bg3_scream.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Boss/BackRow/boss_bg3_eye.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Boss/BackgroundBoss.gd" type="Script" id=26]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_3.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_4.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/BG/BG_LooperH.gd" type="Script" id=32]
+[ext_resource path="res://JetpackGameMode/Boss/MiddleBackRow/boss_bg2.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_0.png" type="Texture" id=34]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_1.png" type="Texture" id=35]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_2.png" type="Texture" id=36]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_3.png" type="Texture" id=37]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_4.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/Boss/MiddleFrontRow/boss_bg1.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_0.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_1.png" type="Texture" id=41]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_2.png" type="Texture" id=42]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_3.png" type="Texture" id=43]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_1_4.png" type="Texture" id=44]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" type="Texture" id=45]
+[ext_resource path="res://JetpackGameMode/BG/BG_LooperH2.gd" type="Script" id=46]
+[ext_resource path="res://JetpackGameMode/Character/Player.tscn" type="PackedScene" id=47]
+[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" type="PackedScene" id=48]
+[ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=50]
+[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=51]
+[ext_resource path="res://JetpackGameMode/HUD/SpeedrunTime.gd" type="Script" id=52]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=53]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=54]
+[ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=55]
+[ext_resource path="res://JetpackGameMode/HUD/SpeedMessager.gd" type="Script" id=56]
+[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=57]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=58]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=59]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=60]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" type="PackedScene" id=61]
+[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" type="PackedScene" id=62]
+[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=63]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=64]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" type="PackedScene" id=65]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -77,15 +82,418 @@ extents = Vector2( 10, 629.357 )
 custom_solver_bias = 0.0
 extents = Vector2( 55.4252, 2224.51 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=33]
 
 animations = [ {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "scream",
+"name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ) ],
+"loop": false,
+"name": "scream",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=34]
+
+resource/name = "base"
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( -140, -500 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("RayCast2D1:cast_to")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("RayCast2D2:cast_to")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("LaserMargins:rect/size")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, 389 ) ]
+}
+
+[sub_resource type="Animation" id=35]
+
+resource/name = "entrance"
+length = 1.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 1 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "scream", "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -140, -500 ), Vector2( 256, -500 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=39]
+
+resource/name = "laser_charge_down"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 256, -180 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5, 1, 1.4, 1.8, 2.1, 2.4, 2.6, 2.8, 2.9, 3 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ) ]
+}
+
+[sub_resource type="Animation" id=40]
+
+resource/name = "laser_charge_up"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 256, -590 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5, 1, 1.4, 1.8, 2.1, 2.4, 2.6, 2.8, 2.9, 3 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ) ]
+}
+
+[sub_resource type="Animation" id=36]
+
+resource/name = "last_scream"
+length = 2.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5, 1.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "scream", "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.9, 2.2, 2.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 256, -500 ), Vector2( -24, -470 ), Vector2( 256, -500 ), Vector2( 256, -540 ), Vector2( 256, -500 ), Vector2( 256, -550 ), Vector2( 256, -500 ), Vector2( 166, -550 ), Vector2( 86, -480 ), Vector2( -34, -540 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=37]
+
+resource/name = "scream"
+length = 1.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.5, 1.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "scream", "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 256, -500 ), Vector2( 216, -500 ), Vector2( 256, -500 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=38]
+
+resource/name = "tired_retreat"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:playing")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:transform/pos")
+tracks/2/interp = 2
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 256, -500 ), Vector2( 236, -550 ), Vector2( 216, -450 ), Vector2( 196, -500 ), Vector2( 176, -450 ), Vector2( 156, -500 ), Vector2( 136, -450 ), Vector2( 116, -500 ), Vector2( 96, -450 ), Vector2( -24, -560 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "scream",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
 "loop": true,
 "name": "awaken",
 "speed": 5.0
@@ -265,7 +673,7 @@ tracks/4/keys = {
 [sub_resource type="SpriteFrames" id=8]
 
 animations = [ {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
@@ -279,7 +687,7 @@ animations = [ {
 "name": "base",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 29 ) ],
+"frames": [ ExtResource( 33 ) ],
 "loop": true,
 "name": "blur",
 "speed": 5.0
@@ -382,7 +790,7 @@ tracks/3/keys = {
 [sub_resource type="SpriteFrames" id=12]
 
 animations = [ {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
@@ -396,7 +804,7 @@ animations = [ {
 "name": "base",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 35 ) ],
+"frames": [ ExtResource( 39 ) ],
 "loop": true,
 "name": "blur",
 "speed": 5.0
@@ -499,7 +907,7 @@ tracks/3/keys = {
 [sub_resource type="SpriteFrames" id=16]
 
 animations = [ {
-"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
@@ -657,8 +1065,8 @@ _data = {
 
 shader/shader = SubResource( 25 )
 shader/shading_mode = 0
-shader_param/Start = Color( 1, 0.819608, 0, 1 )
-shader_param/End = Color( 1, 0.266667, 0.486275, 1 )
+shader_param/Start = Color( 0.242188, 1, 0, 1 )
+shader_param/End = Color( 1, 0.902604, 0.266667, 1 )
 
 [sub_resource type="Animation" id=27]
 
@@ -706,56 +1114,56 @@ tracks/3/keys = {
 "values": [ 0.0, 1.0, 1.0, 0.0 ]
 }
 
-[sub_resource type="ColorRamp" id=28]
+[sub_resource type="Animation" id=28]
 
-offsets = FloatArray( 0, 0.985915, 1 )
-colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
-
-[sub_resource type="Animation" id=29]
-
-length = 0.01
+length = 1.2
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("CenterArea:visibility/opacity")
+tracks/0/path = NodePath(".:material/material:shader_param/Start")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.2, 0.4, 0.4, 0.6, 0.6, 0.8, 0.8, 1, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Color( 1, 0.819608, 0, 1 ), Color( 0.242188, 1, 0, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0.640625, 0, 1, 1 ), Color( 0.640625, 0, 1, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0.819608, 0, 1 ), Color( 1, 0.819608, 0, 1 ), Color( 0.242188, 1, 0, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0.640625, 0, 1, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0.819608, 0, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TextureProgress:visibility/opacity")
+tracks/1/path = NodePath(".:material/material:shader_param/End")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.2, 0.4, 0.4, 0.6, 0.6, 0.8, 0.8, 1, 1, 1.2, 1.4, 1.6, 1.8, 2 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("UpgradeLabel:visibility/opacity")
-tracks/2/interp = 1
+tracks/2/path = NodePath(".:rect/pos")
+tracks/2/interp = 2
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.3, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Vector2( 0, 400 ), Vector2( 0, 200 ), Vector2( 0, 250 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ProgressVisualization:visibility/opacity")
-tracks/3/interp = 1
+tracks/3/path = NodePath(".:visibility/opacity")
+tracks/3/interp = 2
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.2, 1, 1.2 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 0.0, 1.0, 1.0, 0.0 ]
 }
+
+[sub_resource type="ColorRamp" id=29]
+
+offsets = FloatArray( 0, 0.985915, 1 )
+colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
 
 [sub_resource type="Animation" id=30]
 
@@ -770,6 +1178,52 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureProgress:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("UpgradeLabel:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ProgressVisualization:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=31]
+
+length = 0.01
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterArea:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
 "values": [ 1.0 ]
 }
 tracks/1/type = "value"
@@ -803,7 +1257,7 @@ tracks/3/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=32]
 
 length = 0.5
 loop = false
@@ -857,7 +1311,7 @@ upgrade_multiple = 30
 level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 test_mode = "story"
-test_level_or_points = 5
+test_level_or_points = 6
 
 [node name="AutoBoost" type="Timer" parent="."]
 
@@ -908,6 +1362,13 @@ end_cutscene = null
 [node name="Level5" type="Node" parent="LevelLoader"]
 
 script/script = ExtResource( 8 )
+title = ""
+intro_cutscene = null
+end_cutscene = null
+
+[node name="Level6" type="Node" parent="LevelLoader"]
+
+script/script = ExtResource( 9 )
 title = "What was that sound?"
 intro_cutscene = null
 end_cutscene = null
@@ -931,7 +1392,7 @@ drag_margin/left = 0.0
 drag_margin/top = 1.0
 drag_margin/right = 0.0
 drag_margin/bottom = 1.0
-script/script = ExtResource( 9 )
+script/script = ExtResource( 10 )
 
 [node name="Tween" type="Tween" parent="Camera2D"]
 
@@ -1038,22 +1499,124 @@ _update_shape_index = 0
 [node name="ObstacleSpawner" type="Position2D" parent="Camera2D"]
 
 transform/pos = Vector2( 960, 0 )
-script/script = ExtResource( 10 )
+script/script = ExtResource( 11 )
 obstacle_parent = NodePath("../../Obstaculos/ObstacleBeat")
 obstacle_half_parent = NodePath("../../Obstaculos/ObstacleHalfBeat")
-none = ExtResource( 11 )
-pipe = ExtResource( 12 )
-double_pipe = ExtResource( 13 )
-triple_pipe = ExtResource( 14 )
-wall = ExtResource( 15 )
-laser_eye = ExtResource( 16 )
-shield_up = ExtResource( 17 )
+none = ExtResource( 12 )
+pipe = ExtResource( 13 )
+double_pipe = ExtResource( 14 )
+triple_pipe = ExtResource( 15 )
+wall = ExtResource( 16 )
+laser_eye = ExtResource( 17 )
+shield_up = ExtResource( 18 )
 ammo_up = null
 
-[node name="LaserEye" parent="Camera2D" instance=ExtResource( 18 )]
+[node name="LaserEye" parent="Camera2D" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( -550, -472 )
 z/z = 3
+
+[node name="FinalBoss" type="Node2D" parent="Camera2D"]
+
+transform/pos = Vector2( -1220, -40 )
+
+[node name="Boss" type="AnimatedSprite" parent="Camera2D/FinalBoss"]
+
+transform/pos = Vector2( 256, -590 )
+frames = SubResource( 33 )
+animation = "idle"
+centered = false
+modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
+script/script = ExtResource( 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/FinalBoss/Boss"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/base = SubResource( 34 )
+anims/entrance = SubResource( 35 )
+anims/laser_charge_down = SubResource( 39 )
+anims/laser_charge_up = SubResource( 40 )
+anims/last_scream = SubResource( 36 )
+anims/scream = SubResource( 37 )
+anims/tired_retreat = SubResource( 38 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "base"
+
+[node name="LaserMargins" type="ColorFrame" parent="Camera2D/FinalBoss/Boss"]
+
+visibility/behind_parent = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 230.0
+margin/right = 10.0
+margin/bottom = 619.0
+color = Color( 0.780392, 0.223529, 0.211765, 1 )
+
+[node name="LaserCenter" type="ColorFrame" parent="Camera2D/FinalBoss/Boss/LaserMargins"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 62.0
+margin/right = 0.0
+margin/bottom = 62.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="RayCast2D1" type="RayCast2D" parent="Camera2D/FinalBoss/Boss"]
+
+transform/pos = Vector2( 0, 292 )
+transform/rot = 90.0
+enabled = false
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D2" type="RayCast2D" parent="Camera2D/FinalBoss/Boss"]
+
+transform/pos = Vector2( 0, 353 )
+transform/rot = 90.0
+enabled = false
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D3" type="RayCast2D" parent="Camera2D/FinalBoss/Boss"]
+
+transform/pos = Vector2( 4.80825e-07, 425 )
+transform/rot = 90.0
+enabled = false
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D4" type="RayCast2D" parent="Camera2D/FinalBoss/Boss"]
+
+transform/pos = Vector2( 0, 495 )
+transform/rot = 90.0
+enabled = false
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D5" type="RayCast2D" parent="Camera2D/FinalBoss/Boss"]
+
+transform/pos = Vector2( 0, 556 )
+transform/rot = 90.0
+enabled = false
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -1067,16 +1630,15 @@ scroll/base_scale = Vector2( 1, 1 )
 scroll/limit_begin = Vector2( 0, 0 )
 scroll/limit_end = Vector2( 0, 0 )
 scroll/ignore_camera_zoom = true
-script/script = ExtResource( 19 )
+script/script = ExtResource( 23 )
 
 [node name="BackRowBoss" type="AnimatedSprite" parent="ParallaxBackground"]
 
-visibility/visible = false
-visibility/opacity = 0.0
 transform/pos = Vector2( 650, 540 )
 frames = SubResource( 4 )
 animation = "awaken"
-script/script = ExtResource( 22 )
+playing = true
+script/script = ExtResource( 26 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/BackRowBoss"]
 
@@ -1106,7 +1668,7 @@ editor/display_folded = true
 transform/pos = Vector2( 1010, 540 )
 frames = SubResource( 8 )
 animation = "default"
-script/script = ExtResource( 28 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1123,7 +1685,7 @@ transform/pos = Vector2( 3030, 540 )
 frames = SubResource( 8 )
 animation = "default"
 frame = 2
-script/script = ExtResource( 28 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1169,7 +1731,7 @@ transform/pos = Vector2( 1010, 540 )
 frames = SubResource( 12 )
 animation = "default"
 frame = 1
-script/script = ExtResource( 28 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1186,7 +1748,7 @@ transform/pos = Vector2( 3030, 540 )
 frames = SubResource( 12 )
 animation = "default"
 frame = 3
-script/script = ExtResource( 28 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1198,10 +1760,10 @@ transform/pos = Vector2( 1010, 540 )
 
 [node name="MidFrontRowBoss" type="AnimatedSprite" parent="ParallaxBackground/Parallax2"]
 
-transform/pos = Vector2( -728.206, 540 )
+visibility/visible = false
+transform/pos = Vector2( 2600, 540 )
 frames = SubResource( 13 )
-animation = "blur"
-playing = true
+animation = "base"
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/Parallax2/MidFrontRowBoss"]
@@ -1230,7 +1792,7 @@ transform/pos = Vector2( 1010, 540 )
 frames = SubResource( 16 )
 animation = "default"
 frame = 2
-script/script = ExtResource( 28 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1247,7 +1809,7 @@ transform/pos = Vector2( 3030, 540 )
 frames = SubResource( 16 )
 animation = "default"
 frame = 4
-script/script = ExtResource( 28 )
+script/script = ExtResource( 32 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1270,8 +1832,8 @@ editor/display_folded = true
 visibility/light_mask = 1024
 material/material = SubResource( 18 )
 transform/pos = Vector2( 960, 540 )
-texture = ExtResource( 41 )
-script/script = ExtResource( 42 )
+texture = ExtResource( 45 )
+script/script = ExtResource( 46 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1281,26 +1843,28 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( 960, 540 )
 
-[node name="Player" parent="." instance=ExtResource( 43 )]
+[node name="Player" parent="." instance=ExtResource( 47 )]
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="Outlines" type="Node2D" parent="Obstaculos"]
 
-[node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 44 )]
+[node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 48 )]
 
 transform/pos = Vector2( 0, 1019 )
 
-[node name="BottomLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 44 )]
+[node name="BottomLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 48 )]
 
 transform/pos = Vector2( 2370, 1019 )
 
-[node name="TopLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 44 )]
+[node name="TopLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 48 )]
 
 transform/pos = Vector2( 0, 61 )
 transform/scale = Vector2( 1, -1 )
 
-[node name="TopLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 44 )]
+[node name="TopLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 48 )]
 
 transform/pos = Vector2( 2370, 61 )
 transform/scale = Vector2( 1, -1 )
@@ -1311,20 +1875,20 @@ transform/scale = Vector2( 1, -1 )
 
 [node name="ScreenLimits" type="Node2D" parent="Obstaculos"]
 
-[node name="BottomScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 45 )]
+[node name="BottomScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 49 )]
 
 transform/pos = Vector2( 0, 1019 )
 
-[node name="BottomScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 45 )]
+[node name="BottomScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 49 )]
 
 transform/pos = Vector2( 2370, 1019 )
 
-[node name="TopScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 45 )]
+[node name="TopScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 49 )]
 
 transform/pos = Vector2( 0, 61 )
 transform/scale = Vector2( 1, -1 )
 
-[node name="TopScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 45 )]
+[node name="TopScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 49 )]
 
 transform/pos = Vector2( 2370, 61 )
 transform/scale = Vector2( 1, -1 )
@@ -1332,6 +1896,7 @@ transform/scale = Vector2( 1, -1 )
 [node name="HUD" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -1364,7 +1929,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 750.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 46 )
+custom_fonts/font = ExtResource( 50 )
 text = "Score:"
 align = 1
 percent_visible = 1.0
@@ -1382,7 +1947,7 @@ margin/left = 0.0
 margin/top = 32.0
 margin/right = 750.0
 margin/bottom = 118.0
-custom_fonts/font = ExtResource( 47 )
+custom_fonts/font = ExtResource( 51 )
 text = "0000"
 align = 1
 percent_visible = 1.0
@@ -1399,7 +1964,7 @@ margin/left = 0.0
 margin/top = 113.0
 margin/right = 750.0
 margin/bottom = 150.0
-custom_fonts/font = ExtResource( 46 )
+custom_fonts/font = ExtResource( 50 )
 text = "Time: "
 align = 1
 valign = 1
@@ -1417,14 +1982,14 @@ margin/left = 0.0
 margin/top = 145.0
 margin/right = 750.0
 margin/bottom = 182.0
-custom_fonts/font = ExtResource( 46 )
+custom_fonts/font = ExtResource( 50 )
 text = "00:00"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script/script = ExtResource( 48 )
+script/script = ExtResource( 52 )
 
 [node name="Timer" type="Timer" parent="HUD/CenterArea/RunTime"]
 
@@ -1453,15 +2018,15 @@ range/value = 0.0
 range/exp_edit = false
 range/rounded = false
 texture/under = null
-texture/over = ExtResource( 49 )
-texture/progress = ExtResource( 50 )
+texture/over = ExtResource( 53 )
+texture/progress = ExtResource( 54 )
 radial_fill/fill_degrees = 360.0
 radial_fill/center_offset = Vector2( 0, 0 )
 
 [node name="Ammunition" type="Node2D" parent="HUD/TextureProgress"]
 
 editor/display_folded = true
-script/script = ExtResource( 51 )
+script/script = ExtResource( 55 )
 
 [node name="AmmoSlot1" type="Position2D" parent="HUD/TextureProgress/Ammunition"]
 
@@ -1518,7 +2083,6 @@ autoplay = ""
 
 [node name="UpgradeLabel" type="Label" parent="HUD"]
 
-editor/display_folded = true
 visibility/opacity = 0.0
 material/material = SubResource( 26 )
 focus/ignore_mouse = true
@@ -1526,10 +2090,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 492.0
-margin/top = 400.0
+margin/top = 250.0
 margin/right = 1476.0
-margin/bottom = 486.0
-custom_fonts/font = ExtResource( 47 )
+margin/bottom = 336.0
+custom_fonts/font = ExtResource( 51 )
 text = "+ UPGRADE POINT!"
 align = 1
 valign = 1
@@ -1548,6 +2112,41 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
+[node name="SpeedLabel" type="Label" parent="HUD"]
+
+visibility/opacity = 0.0
+material/material = SubResource( 26 )
+anchor/top = 3
+anchor/right = 1
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 290.0
+margin/right = 0.0
+margin/bottom = 204.0
+custom_fonts/font = ExtResource( 51 )
+text = "MAX SPEED INCREASED!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = ExtResource( 56 )
+
+[node name="Messager" type="AnimationPlayer" parent="HUD/SpeedLabel"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/text_anim = SubResource( 28 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
+
 [node name="ProgressVisualization" type="CenterContainer" parent="HUD"]
 
 focus/ignore_mouse = false
@@ -1559,9 +2158,9 @@ margin/top = 1025.0
 margin/right = 1878.0
 margin/bottom = 1071.0
 use_top_left = false
-script/script = ExtResource( 52 )
+script/script = ExtResource( 57 )
 ending_cap = 35
-progress_barrier = ExtResource( 53 )
+progress_barrier = ExtResource( 58 )
 
 [node name="ProgressBar" type="TextureFrame" parent="HUD/ProgressVisualization"]
 
@@ -1573,7 +2172,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1846.0
 margin/bottom = 46.0
-texture = ExtResource( 54 )
+texture = ExtResource( 59 )
 stretch_mode = 0
 
 [node name="IconContainer" type="CenterContainer" parent="HUD/ProgressVisualization/ProgressBar"]
@@ -1595,7 +2194,7 @@ transform/pos = Vector2( 15, 21 )
 config/amount = 1
 config/lifetime = 0.5
 config/process_mode = 1
-config/texture = ExtResource( 55 )
+config/texture = ExtResource( 60 )
 params/direction = 0.0
 params/spread = 10.0
 params/linear_velocity = 0.0
@@ -1612,7 +2211,7 @@ params/final_size = 1.8
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 28 )
+color/color_ramp = SubResource( 29 )
 
 [node name="Icon" type="TextureFrame" parent="HUD/ProgressVisualization/ProgressBar/IconContainer"]
 
@@ -1624,7 +2223,7 @@ margin/left = 0.0
 margin/top = 6.0
 margin/right = 30.0
 margin/bottom = 36.0
-texture = ExtResource( 55 )
+texture = ExtResource( 60 )
 modulate = Color( 0, 1, 1, 1 )
 stretch_mode = 0
 
@@ -1633,9 +2232,9 @@ stretch_mode = 0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 29 )
-anims/editor = SubResource( 30 )
-anims/fade_out = SubResource( 31 )
+anims/base = SubResource( 30 )
+anims/editor = SubResource( 31 )
+anims/fade_out = SubResource( 32 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -1644,28 +2243,29 @@ autoplay = "base"
 [node name="AboveScreen" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 layer = 3
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 
-[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 56 )]
+[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 61 )]
 
 visibility/visible = false
 
-[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 57 )]
+[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 62 )]
 
 visibility/visible = false
 
-[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 58 )]
+[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 63 )]
 
 visibility/visible = false
 
-[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 59 )]
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 64 )]
 
 visibility/visible = false
 
-[node name="TutorialTipScreen" parent="AboveScreen" instance=ExtResource( 60 )]
+[node name="TutorialTipScreen" parent="AboveScreen" instance=ExtResource( 65 )]
 
 visibility/visible = false
 
