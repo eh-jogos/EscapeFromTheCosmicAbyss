@@ -143,7 +143,12 @@ func laser_eye_draw_step(level_array, beats_pool, half_beats_pool):
 
 
 func draw_laser_eye(level_array, obstacle_pool, initial_slot):
-	var available_slots = build_available_slots_array(level_array, initial_slot)
+	var available_slots
+	
+	if level_info.get_name() == "Level5":
+		available_slots = get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot)
+	else:
+		available_slots = build_available_slots_array(level_array, initial_slot)
 	
 	for _x in range(available_slots.size()):
 		if obstacle_pool.has(key_translator("laser_eye")):
@@ -172,6 +177,22 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 			break
 	
 	return level_array
+
+
+func get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot):
+	var available_slots
+	if initial_slot % 2 == 0:
+		if level_info.boss.animations_countdowns[0] % 2 == 0:
+			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0])
+		else:
+			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0]+1)
+	else:
+		if level_info.boss.animations_countdowns[0] % 2 != 0:
+			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0])
+		else:
+			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0]+1)
+	
+	return available_slots
 
 
 func replace_remaining_laser_eyes(obstacle_pool):

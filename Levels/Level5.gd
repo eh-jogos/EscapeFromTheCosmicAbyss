@@ -5,13 +5,13 @@ export(String, FILE) var intro_cutscene
 export(String, FILE) var end_cutscene
 
 var tutorial = false
-var intro_beats = [1,1,5,1,3]
+var intro_beats = [1,1,2,1,3]
 var intro_halfs =  [0,0,0,0,0]
 var end_beat = 4
 var boss = {
 	"boss_level": false,
 	"laser": false,
-	"laser_countdown":[0],
+	"laser_countdown":[],
 	"scream": true,
 	"countdown": [20],
 	"sequence_beats": [[2,3,4,2,2,1,3]],
