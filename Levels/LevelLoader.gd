@@ -60,7 +60,7 @@ func build_level_procedurally():
 	complete_level = laser_eye_draw_step(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	complete_level = tentacle_barrier_draw_step(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	complete_level = standard_draw_step(complete_level, beat_obstacles_pool, half_obstacles_pool)
-	print("LevelLoader.gd | build_level_procedurally | beats_pool: %s | half_beats_pool: %s | complete_level: %s"%[beat_obstacles_pool, half_obstacles_pool, complete_level])
+	#print("LevelLoader.gd | build_level_procedurally | beats_pool: %s | half_beats_pool: %s | complete_level: %s"%[beat_obstacles_pool, half_obstacles_pool, complete_level])
 	
 	for x in range(complete_level.size()):
 		if x % 2 == 0:
@@ -147,6 +147,7 @@ func laser_eye_draw_step(level_array, beats_pool, half_beats_pool):
 func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 	var available_slots
 	
+	print("LevelLoader | Level name: %s"%[level_info.get_name()])
 	if level_info.get_name() == "Level5":
 		available_slots = get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot)
 	else:
@@ -183,16 +184,7 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 
 func get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot):
 	var available_slots
-	if initial_slot % 2 == 0:
-		if level_info.boss.animations_countdowns[0] % 2 == 0:
-			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0])
-		else:
-			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0]+1)
-	else:
-		if level_info.boss.animations_countdowns[0] % 2 != 0:
-			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0])
-		else:
-			available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0]+1)
+	available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0]+2)
 	
 	return available_slots
 
