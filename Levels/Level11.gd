@@ -5,8 +5,8 @@ export(String, FILE) var intro_cutscene
 export(String, FILE) var end_cutscene
 
 var tutorial = false
-var intro_beats = [1,1,2,2,3]
-var intro_halfs =  [0,0,0,1,0]
+var intro_beats = [1,1,3,4,2]
+var intro_halfs =  [0,2,2,1,3]
 var end_beat = 4
 var boss = {
 	"boss_level": false,
@@ -23,22 +23,22 @@ var boss = {
 
 var beats = {
 	"none": 0,
-	"tentacles": 5,
-	"double_pipe": 16,
-	"triple_pipe": 16,
-	"wall": 3,
-	"laser_eye": 2,
+	"tentacles": 10,
+	"double_pipe": 20,
+	"triple_pipe": 14,
+	"wall": 5,
+	"laser_eye": 3,
 	"shield_up": 2,
 	"ammo_up": 0
 }
 
 var half_beats = {
-	"none": 12,
-	"tentacles": 20,
-	"double_pipe": 5,
-	"triple_pipe": 5,
+	"none": 4,
+	"tentacles": 16,
+	"double_pipe": 18,
+	"triple_pipe": 12,
 	"wall": 2,
 	"laser_eye": 0,
-	"shield_up": 0,
+	"shield_up": 2,
 	"ammo_up": 0
 }
