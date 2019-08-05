@@ -33,8 +33,8 @@ var beats = {
 }
 
 var half_beats = {
-	"none": 12,
-	"tentacles": 20,
+	"none": 20,
+	"tentacles": 12,
 	"double_pipe": 5,
 	"triple_pipe": 5,
 	"wall": 2,

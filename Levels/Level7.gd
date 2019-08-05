@@ -27,18 +27,18 @@ var beats = {
 	"double_pipe": 12,
 	"triple_pipe": 10,
 	"wall": 4,
-	"laser_eye": 6,
-	"shield_up": 2,
+	"laser_eye": 4,
+	"shield_up": 4,
 	"ammo_up": 0
 }
 
 var half_beats = {
-	"none": 32,
+	"none": 40,
 	"tentacles": 10,
-	"double_pipe": 5,
-	"triple_pipe": 3,
+	"double_pipe": 0,
+	"triple_pipe": 0,
 	"wall": 1,
-	"laser_eye": 1,
-	"shield_up": 2,
+	"laser_eye": 3,
+	"shield_up": 0,
 	"ammo_up": 0
 }
