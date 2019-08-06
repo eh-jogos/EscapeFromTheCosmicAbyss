@@ -2,12 +2,16 @@ extends "res://JetpackGameMode/Boss/BackgroundBoss.gd"
 
 var has_killed_player = false
 var raycasts
+
 var game
+var collision_timer
 
 func _ready():
 	raycasts = get_node("LaserMargins/LaserCenter/Raycasts").get_children()
 	game = get_tree().get_root().get_node("JetpackGame")
+	collision_timer = get_node("CollisionTimer")
 	
+	animator.play("base")
 	set_fixed_process(true)
 
 
@@ -22,12 +26,13 @@ func handle_collision(raycast):
 	print("Boss | Raycast: %s | Collider: %s" %[raycast.get_name(), collider.get_name()])
 	if collider.is_in_group("player"):
 		set_fixed_process(false)
+		collision_timer.start()
 		if not collider.is_dead and collider.shield_energy > 0:
 			collider.shield.decrease_energy(1)
 		elif not collider.is_dead:
 			var player_global_position = collider.get_global_pos()
-			kill_player(player_global_position)
 			has_killed_player = true
+			kill_player(player_global_position)
 
 
 func kill_player(player_global_position):
@@ -41,6 +46,5 @@ func _on_player_killed():
 		set_fixed_process(true)
 
 
-func _on_laser_shot_animation_end():
-	pass
-
+func _on_CollisionTimer_timeout():
+	set_fixed_process(true)

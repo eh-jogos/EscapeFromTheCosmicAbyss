@@ -185,8 +185,8 @@ tracks/3/keys = {
 [sub_resource type="Animation" id=4]
 
 resource/name = "idle"
-length = 0.01
-loop = false
+length = 0.5
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:playing")
@@ -213,10 +213,10 @@ tracks/2/path = NodePath(".:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 256, -500 ) ]
+"values": [ Vector2( 256, -500 ), Vector2( 256, -530 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath(".:visibility/visible")
@@ -519,23 +519,11 @@ tracks/9/keys = {
 "update": 0,
 "values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
 }
-tracks/10/type = "method"
-tracks/10/path = NodePath(".")
-tracks/10/interp = 1
-tracks/10/imported = false
-tracks/10/keys = {
-"times": FloatArray( 2.1 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "_on_laser_shot_animation_end"
-} ]
-}
 
 [sub_resource type="Animation" id=8]
 
 resource/name = "last_scream"
-length = 2.5
+length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -563,10 +551,10 @@ tracks/2/path = NodePath(".:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.9, 2.2, 2.5 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 256, -500 ), Vector2( -24, -470 ), Vector2( 256, -500 ), Vector2( 256, -540 ), Vector2( 256, -500 ), Vector2( 256, -550 ), Vector2( 256, -500 ), Vector2( 166, -550 ), Vector2( 86, -480 ), Vector2( -34, -540 ) ]
+"values": [ Vector2( 256, -500 ), Vector2( -24, -470 ), Vector2( 256, -500 ), Vector2( 256, -540 ), Vector2( 256, -500 ), Vector2( 256, -550 ), Vector2( 256, -500 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath(".:visibility/visible")
@@ -702,10 +690,10 @@ tracks/1/keys = {
 
 [node name="Boss" type="AnimatedSprite"]
 
-visibility/visible = false
-transform/pos = Vector2( -140, -500 )
+transform/pos = Vector2( 256, -500 )
 frames = SubResource( 1 )
 animation = "idle"
+playing = true
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 script/script = ExtResource( 3 )
@@ -724,12 +712,16 @@ anims/laser_shot = SubResource( 7 )
 anims/last_scream = SubResource( 8 )
 anims/scream = SubResource( 9 )
 anims/tired_retreat = SubResource( 10 )
+next/entrance = "idle"
 next/laser_charge_down = "laser_shot"
 next/laser_charge_up = "laser_shot"
 next/laser_shot = "idle"
+next/last_scream = "idle"
+next/scream = "idle"
+next/tired_retreat = "base"
 playback/active = true
 playback/speed = 1.0
-blend_times = [ "laser_charge_down", "laser_shot", 0.05, "laser_charge_up", "laser_shot", 0.05, "laser_shot", "idle", 0.05 ]
+blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot", 0.05, "laser_charge_up", "laser_shot", 0.05, "laser_shot", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
 autoplay = "base"
 
 [node name="CollisionTimer" type="Timer" parent="."]
@@ -830,5 +822,7 @@ enabled = true
 cast_to = Vector2( 0, 10 )
 layer_mask = 1
 type_mask = 2
+
+[connection signal="timeout" from="CollisionTimer" to="." method="_on_CollisionTimer_timeout"]
 
 

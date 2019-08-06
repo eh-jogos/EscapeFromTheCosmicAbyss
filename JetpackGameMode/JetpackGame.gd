@@ -143,7 +143,13 @@ func load_story_pregame():
 	#	Global.set_current_story_level(0)
 	
 	if category == "level selected":
-		game_start()
+		if level_intro_cutscene != null and not Global.is_retry:
+			set_game_state("Cutscene")
+			ScreenManager.black_transition(level_intro_cutscene, null, self)
+			if not ScreenManager.is_connected("scene_above_loaded", self, "_on_intro_cutscene_loaded"):
+				 ScreenManager.connect("scene_above_loaded", self, "_on_intro_cutscene_loaded", [], CONNECT_ONESHOT)
+		else:
+			game_start()
 	elif category == "select level":
 		var path = level_select_path
 		ScreenManager.load_above(path, self, self)
@@ -162,24 +168,17 @@ func load_upgrade_pregame():
 func game_start():
 	initialize_game_stats()
 	setup_game_mode_level()
-	
-	if level_intro_cutscene != null and not Global.is_retry:
-		set_game_state("Cutscene")
-		ScreenManager.black_transition(level_intro_cutscene, null, self)
-		if not ScreenManager.is_connected("scene_above_loaded", self, "_on_intro_cutscene_loaded"):
-			 ScreenManager.connect("scene_above_loaded", self, "_on_intro_cutscene_loaded")
-	else:
-		start_countdown()
+	start_countdown()
 
 
 func _on_intro_cutscene_loaded(loaded_cutscene):
 	if not loaded_cutscene.is_connected("cutscene_ended", self, "_on_intro_cutscene_finished"):
-		loaded_cutscene.connect("cutscene_ended", self, "_on_intro_cutscene_finished")
+		loaded_cutscene.connect("cutscene_ended", self, "_on_intro_cutscene_finished", [], CONNECT_ONESHOT)
 
 
 func _on_intro_cutscene_finished():
 	if not ScreenManager.is_connected("transition_ended", self, "start_countdown"):
-		ScreenManager.connect("transition_ended", self, "start_countdown", [], CONNECT_ONESHOT)
+		ScreenManager.connect("transition_ended", self, "game_start", [], CONNECT_ONESHOT)
 
 func start_countdown():
 	if is_tutorial:
@@ -394,8 +393,8 @@ func dash_score():
 func tutorial_start():
 	tutorial.play()
 
-func _on_level_end():
-	if game_mode == "story":
+func _on_ObstacleSpawner_level_end():
+	if game_mode == "story" or "speedrun":
 		if level_end_cutscene != null:
 			set_game_state("Cutscene")
 			ScreenManager.black_transition(level_end_cutscene, null, self)
@@ -403,8 +402,6 @@ func _on_level_end():
 				ScreenManager.connect("scene_above_loaded", self, "_on_end_cutscene_loaded", [], CONNECT_ONESHOT)
 		else:
 			level_completed()
-	elif game_mode == "speedrun":
-		level_completed()
 	elif game_mode == "arcade":
 		arcade_laps += 1
 		max_speed += MAX_SPEED_INCREMENT_PER_LAP
@@ -418,13 +415,13 @@ func _on_level_end():
 func _on_end_cutscene_loaded(loaded_cutscene):
 	if not loaded_cutscene.is_connected("cutscene_ended", self, "_on_end_cutscene_finished"):
 		loaded_cutscene.connect("cutscene_ended", self, "_on_end_cutscene_finished", [], CONNECT_ONESHOT)
-	print("JetpackGame.gd | CUTSCENE LOADED | END SIGNAL CONNECTED")
+	#print("JetpackGame.gd | CUTSCENE LOADED | END SIGNAL CONNECTED")
 
 
 func _on_end_cutscene_finished():
 	if not ScreenManager.is_connected("transition_ended", self, "level_completed"):
 		ScreenManager.connect("transition_ended", self, "level_completed", [], CONNECT_ONESHOT)
-	print("JetpackGame.gd | CUTSCENE ENDED | TRANSITION SIGNAL CONNECTED")
+	#print("JetpackGame.gd | CUTSCENE ENDED | TRANSITION SIGNAL CONNECTED")
 	player.gravity_force = 0
 	player.jetpack_force = 0
 
@@ -437,6 +434,7 @@ func level_completed():
 		var exclamation_pos = level_num.length()-1
 		level_num.erase(exclamation_pos,1)
 		level_complete_screen.open(level_num)
+
 
 func player_reset_y():
 	hud_animator.play_backwards("fade_out")

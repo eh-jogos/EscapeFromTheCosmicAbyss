@@ -1816,7 +1816,7 @@ visibility/visible = false
 
 [connection signal="area_exit" from="Camera2D/HalfBeat" to="Camera2D/ObstacleSpawner" method="_on_HalfBeat_area_exit"]
 
-[connection signal="level_end" from="Camera2D/ObstacleSpawner" to="." method="_on_level_end"]
+[connection signal="level_end" from="Camera2D/ObstacleSpawner" to="." method="_on_ObstacleSpawner_level_end"]
 
 [connection signal="level_ready" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
 

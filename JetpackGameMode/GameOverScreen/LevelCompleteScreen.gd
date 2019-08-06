@@ -155,13 +155,12 @@ func _on_replay_pressed():
 	Global.is_retry = true
 	restart_game()
 
+
 func restart_game():
 	if game != null:
 		animator.play("fade out")
-		yield(animator, "finished")
-		
-#		ScreenManager.load_screen("res://JetpackGameMode/JetpackGame.tscn", self)
-		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
+		ScreenManager.black_transition_replace("res://JetpackGameMode/JetpackGame.tscn")
+
 
 func _on_quit_pressed():
 	SoundManager.stop_bgm()
