@@ -9,10 +9,10 @@ var stat_value
 # Custom Methods #
 ##################
 func get_stat_value():
-	return upgrade_brain.laser_duration
+	return upgrade_brain.laser_strength
 
 func set_stat_value(value):
-	upgrade_brain.laser_duration = value
+	upgrade_brain.laser_strength = value
 
 
 func increase_bar(bar_node):
@@ -52,6 +52,14 @@ func decrease_bar(bar_node):
 		print("ERROR | Saved Stat is Maxed Out")
 		print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), stat_value, max_stats])
 
+
+func validate_stat_value():
+	var stat_value = get_stat_value()
+	var max_value = stat_bar.get_child_count()
+	if stat_value > max_value:
+		set_stat_value(max_value)
+	elif stat_value < 0:
+		set_stat_value(0)
 
 
 ###########################

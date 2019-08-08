@@ -2,13 +2,13 @@ extends Node
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
-var version = 0.62
+var version = 0.63
 
 var is_retry = false
 
 #total sum of points that can be distributed in the player build in the base savedata
 var base_stats = 15
-var max_upgrade_level = 37
+var max_upgrade_level = 42
 var base_upgrade = 30
 
 var savedata = {
@@ -39,7 +39,7 @@ var savedata = {
 		"initial shield": 0,
 		"initial speed": 4.0,
 		"max speed": 11.0,
-		"laser duration": 0,
+		"laser strength": 0,
 		"upgrade level": 1,
 		"next upgrade": base_upgrade,
 		"upgrade points": 0,
@@ -57,7 +57,7 @@ var savedata = {
 		"initial shield": 0,
 		"initial speed": 0,
 		"max speed": 0,
-		"laser duration": 0,
+		"laser strength": 0,
 		"upgrade points": 15,
 		},
 	"speedrun": {
@@ -68,7 +68,7 @@ var savedata = {
 		"initial shield": 0,
 		"initial speed": 0,
 		"max speed": 0,
-		"laser duration": 0,
+		"laser strength": 0,
 		"upgrade points": 0,
 		},
 	"state": {
@@ -110,6 +110,18 @@ func read():
 			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
 			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
 			savedata["story"]["max speed"] = old_save["story"]["max speed"]
+			savedata["story"]["laser strength"] = old_save["story"]["laser duration"]
+			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
+			
+			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
+			savedata["options"]["track"] = old_save["options"]["track"]
+			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
+		elif old_save.has("version") and old_save["version"] <= 0.62:
+			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
+			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
+			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
+			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
+			savedata["story"]["max speed"] = old_save["story"]["max speed"]
 			savedata["story"]["laser duration"] = old_save["story"]["laser duration"]
 			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
 			
@@ -146,16 +158,15 @@ func update_highlaps(total_laps):
 func update_story_upgrade(points):
 	savedata["story"]["upgrade points"] = points
 	savedata["story"]["upgrade level"] += 1
-	calculate_next_upgrade()
+	savedata["story"]["next upgrade"] = calculate_next_upgrade()
 	save()
 
 
 func calculate_next_upgrade():
 	var next_upgrade = 0
-	if savedata["upgrade level"] < max_upgrade_level:
-		next_upgrade = savedata["upgrade level"] * 0.5 * base_upgrade
-	
-	savedata["next upgrade"] = next_upgrade
+	if savedata["story"]["upgrade level"] < max_upgrade_level:
+		next_upgrade = savedata["story"]["upgrade level"] * 0.5 * base_upgrade
+	return next_upgrade
 
 
 func update_story_next_upgrade(countdown):
@@ -181,7 +192,7 @@ func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade
 	savedata["story"]["initial shield"] = shield
 	savedata["story"]["initial speed"] = i_speed
 	savedata["story"]["max speed"] = m_speed
-	savedata["story"]["laser duration"] = laser
+	savedata["story"]["laser strength"] = laser
 	savedata["story"]["upgrade points"] = upgrade
 	save()
 
@@ -207,7 +218,7 @@ func reset_story_progress():
 	savedata["story"]["initial shield"] = 0
 	savedata["story"]["initial speed"] = 4.0
 	savedata["story"]["max speed"] = 11.0
-	savedata["story"]["laser duration"] = 0
+	savedata["story"]["laser strength"] = 0
 	savedata["story"]["upgrade points"] = 0
 	savedata["story"]["levels unlocked"] = 0
 	savedata["story"]["current level"] = 0
@@ -222,7 +233,7 @@ func reset_category_progress(game_mode_dict):
 	savedata[game_mode]["initial shield"] = 0
 	savedata[game_mode]["initial speed"] = 0
 	savedata[game_mode]["max speed"] = 0
-	savedata[game_mode]["laser duration"] = 0
+	savedata[game_mode]["laser strength"] = 0
 	savedata[game_mode]["upgrade points"] = points
 	save()
 
@@ -232,7 +243,7 @@ func update_category_stats(game_mode, cooldown, ammo, shield, i_speed, m_speed, 
 	savedata[game_mode]["initial shield"] = shield
 	savedata[game_mode]["initial speed"] = i_speed
 	savedata[game_mode]["max speed"] = m_speed
-	savedata[game_mode]["laser duration"] = laser
+	savedata[game_mode]["laser strength"] = laser
 	savedata[game_mode]["upgrade points"] = upgrade
 	save()
 

@@ -690,10 +690,10 @@ tracks/1/keys = {
 
 [node name="Boss" type="AnimatedSprite"]
 
-transform/pos = Vector2( 256, -500 )
+visibility/visible = false
+transform/pos = Vector2( -140, -500 )
 frames = SubResource( 1 )
 animation = "idle"
-playing = true
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 script/script = ExtResource( 3 )

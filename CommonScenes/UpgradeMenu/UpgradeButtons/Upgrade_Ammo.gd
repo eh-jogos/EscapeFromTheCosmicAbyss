@@ -31,6 +31,7 @@ func increase_bar(bar_node):
 			set_stat_value(stat_value)
 			print("Node Name: %s | Stat: %s"%[bar_node.get_parent().get_name(), stat_value])
 		else:
+			validate_stat_value()
 			print("ERROR | Saved Stat is Maxed Out")
 			print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), stat_value, max_stats])
 
@@ -49,9 +50,18 @@ func decrease_bar(bar_node):
 		var slot = bar_node.get_child(stat_value)
 		slot.base_slot()
 	else:
-		print("ERROR | Saved Stat is Maxed Out")
+		validate_stat_value()
+		print("ERROR | Saved Stat is Zeroed Out")
 		print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), stat_value, max_stats])
 
+
+func validate_stat_value():
+	var stat_value = get_stat_value()
+	var max_value = stat_bar.get_child_count()
+	if stat_value > max_value:
+		set_stat_value(max_value)
+	elif stat_value < 0:
+		set_stat_value(0)
 
 
 ###########################

@@ -34,7 +34,7 @@ var speed_y = -900.0
 var dash_modifier = 90.0
 var speed_x 
 var shield_energy
-var laser_duration
+var laser_strength
 var cooldown
 
 # My base character sprite. Will serve as units for the forces
@@ -216,7 +216,7 @@ func _input(event):
 		
 		var new_bullet = bullet.instance()
 		bullet_spawn.add_child(new_bullet)
-		new_bullet.set_laser_duration(laser_duration)
+		new_bullet.set_laser_strength(laser_strength)
 		
 		if not new_bullet.is_connected("laser_end",self, "stop_shooting"):
 			new_bullet.connect("laser_end", self, "stop_shooting")
@@ -256,7 +256,7 @@ func reset_y():
 func set_player_stats():
 	speed_x = 4 + game.initial_speed
 	shield_energy = game.initial_shield
-	laser_duration = 1.5 + (0.5*game.laser_duration)
+	laser_strength = 1.5 + (0.5*game.laser_strength)
 	cooldown = 1.5 + (0.1 * game.cooldown)
 	
 	print("SHIELD UP: %s"%[shield_energy])

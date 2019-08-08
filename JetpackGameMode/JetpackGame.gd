@@ -60,7 +60,7 @@ var initial_shield
 var initial_ammo
 var initial_speed
 var max_speed
-var laser_duration
+var laser_strength
 var next_upgrade
 var upgrade_points
 var levels_unlocked
@@ -199,7 +199,7 @@ func initialize_game_stats():
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
 		max_speed = 4 + Global.savedata[game_mode]["max speed"]
-		laser_duration = Global.savedata[game_mode]["laser duration"]
+		laser_strength = Global.savedata[game_mode]["laser strength"]
 		next_upgrade = Global.savedata[game_mode]["next upgrade"]
 		upgrade_points = Global.savedata[game_mode]["upgrade points"]
 		levels_unlocked = Global.savedata[game_mode]["levels unlocked"]
@@ -216,7 +216,7 @@ func initialize_game_stats():
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
 		max_speed = 4 + Global.savedata[game_mode]["max speed"]
-		laser_duration = Global.savedata[game_mode]["laser duration"]
+		laser_strength = Global.savedata[game_mode]["laser strength"]
 		cooldown = Global.savedata[game_mode]["cooldown"]
 	
 	player.set_player_stats()
@@ -372,12 +372,12 @@ func _on_scored(num):
 	
 	if game_mode == "story":
 		next_upgrade -= num
-		if next_upgrade <= 0 and Global.savedata["upgrade level"] < Global.max_upgrade_level:
+		if next_upgrade <= 0 and Global.savedata["story"]["upgrade level"] < Global.max_upgrade_level:
 			upgrade_points += 1
 			upgrade_label.set_text("+ UPGRADE POINT!")
 			upgrade_messager.play("text_anim")
 			Global.update_story_upgrade(upgrade_points)
-			next_upgrade = Global.savedata["next upgrade"]
+			next_upgrade = Global.savedata["story"]["next upgrade"]
 	
 	update_score()
 	pass # replace with function body

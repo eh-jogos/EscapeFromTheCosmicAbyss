@@ -6,8 +6,6 @@ var raycast_bottom
 var raycasts
 
 var animator
-var idle_timer
-var idle_duration
 var parent
 
 signal laser_end
@@ -21,16 +19,12 @@ func _ready():
 	animator = self.get_node("AnimationPlayer")
 	animator.play("fire")
 	
-	idle_timer = self.get_node("IdleTimer")
-	
 	set_fixed_process(true)
 
 
-func set_laser_duration(duration):
+func set_laser_strength(duration):
 	var new_height = Vector2(1,1)
 	new_height.y += duration
-	
-	idle_duration = duration - 0.3 - 0.5
 	self.set_scale(new_height)
 
 
@@ -44,15 +38,7 @@ func _fixed_process(delta):
 				collider.emit_signal("die")
 
 
-func start_idle_timer():
-	#print("Bullet Idle")
-	animator.play("idle")
-	idle_timer.set_wait_time(idle_duration)
-	idle_timer.start()
-
-func _on_IdleTimer_timeout():
-	animator.play("fadeout")
-	yield(animator, "finished")
+func _on_AnimationPlayer_fadeout_finished():
 	emit_signal("laser_end")
 	#print("Bullet Fade")
 	self.queue_free()

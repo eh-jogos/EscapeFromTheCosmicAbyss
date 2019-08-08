@@ -53,6 +53,14 @@ func decrease_bar(bar_node):
 		print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), stat_value, max_stats])
 
 
+func validate_stat_value():
+	var stat_value = get_stat_value()
+	var max_value = stat_bar.get_child_count()
+	if stat_value > max_value:
+		set_stat_value(max_value)
+	elif stat_value < 0:
+		set_stat_value(0)
+
 
 ###########################
 # Engine Standard Methods #

@@ -3,6 +3,7 @@ extends CanvasLayer
 var initial_btn
 var save_btn
 var close_btn
+var upgrade_progress
 var animator
 var store
 
@@ -12,7 +13,7 @@ var initial_shield
 var initial_ammo
 var initial_speed
 var max_speed
-var laser_duration
+var laser_strength
 var upgrade_points
 
 # Stats Bars
@@ -22,7 +23,10 @@ var ammo_bar
 var initial_speed_bar
 var max_speed_bar
 var laser_bar
+var stat_bars = []
+
 var up_label
+
 
 ####################
 # Internal Methods #
@@ -56,19 +60,21 @@ func init_store(game_mode):
 	initial_ammo = Global.savedata[game_mode]["initial ammo"]
 	initial_speed = Global.savedata[game_mode]["initial speed"]
 	max_speed = Global.savedata[game_mode]["max speed"]
-	laser_duration = Global.savedata[game_mode]["laser duration"]
+	laser_strength = Global.savedata[game_mode]["laser strength"]
 	upgrade_points = Global.savedata[game_mode]["upgrade points"]
 	
 	#upgrade_points -= 30
 	#upgrade_points = clamp(upgrade_points, 0, 59)
 	up_label.set_text(str(upgrade_points))
 	
+	get_node("SectionLabels/StartingAmmo").validate_stat_value()
+	
 	init_bar(cooldown_bar, cooldown)
 	init_bar(shield_bar, initial_shield)
 	init_bar(ammo_bar, initial_ammo)
 	init_bar(initial_speed_bar, initial_speed)
 	init_bar(max_speed_bar, max_speed)
-	init_bar(laser_bar, laser_duration)
+	init_bar(laser_bar, laser_strength)
 
 
 func _on_SaveApply_pressed():
@@ -77,17 +83,25 @@ func _on_SaveApply_pressed():
 	init_bar(ammo_bar, initial_ammo)
 	init_bar(initial_speed_bar, initial_speed)
 	init_bar(max_speed_bar, max_speed)
-	init_bar(laser_bar, laser_duration)
+	init_bar(laser_bar, laser_strength)
 	
 	if is_story_mode():
-		Global.update_story_stats(cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_duration, upgrade_points)
+		Global.update_story_stats(cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_strength, upgrade_points)
 	elif is_extra_mode():
-		Global.update_category_stats(store["game mode"], cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_duration, upgrade_points)
+		Global.update_category_stats(store["game mode"], cooldown, initial_ammo, initial_shield, initial_speed, max_speed, laser_strength, upgrade_points)
 	else:
 		print("ERROR | Unexpected Store Mode: %s"%[store])
 
 func _on_Reset_pressed():
-	if is_story_mode() or is_extra_mode():
+	if is_story_mode():
+		var max_progress_value = Global.calculate_next_upgrade()
+		var current_progress_value = max_progress_value - Global.savedata["story"]["next upgrade"]
+		upgrade_progress.show()
+		upgrade_progress.set_max(max_progress_value)
+		upgrade_progress.set_value(current_progress_value)
+		init_store(store["game mode"])
+	elif is_extra_mode():
+		upgrade_progress.hide()
 		init_store(store["game mode"])
 	else:
 		print("ERROR | Unexpected Store Mode: %s"%[store])
@@ -120,6 +134,7 @@ func is_story_mode():
 func _ready():
 	store = Global.get_game_mode()
 	
+	upgrade_progress = get_node("SectionLabels/ProgressBar")
 	close_btn = get_node("Buttons/Close")
 	save_btn = get_node("Buttons/SaveApply")
 	initial_btn = get_node("SectionLabels/Cooldown")
@@ -137,11 +152,23 @@ func _ready():
 		save_btn.show()
 	
 	cooldown_bar = get_node("SectionLabels/Cooldown/UpgradeBar")
+	stat_bars.append(cooldown_bar)
+	
 	shield_bar = get_node("SectionLabels/Shields/UpgradeBar")
+	stat_bars.append(shield_bar)
+	
 	ammo_bar = get_node("SectionLabels/StartingAmmo/UpgradeBar")
+	stat_bars.append(ammo_bar)
+	
 	initial_speed_bar = get_node("SectionLabels/StartSpeed/UpgradeBar")
+	stat_bars.append(initial_speed_bar)
+	
 	max_speed_bar = get_node("SectionLabels/MaxSpeed/UpgradeBar")
-	laser_bar = get_node("SectionLabels/LaserDuration/UpgradeBar")
+	stat_bars.append(max_speed_bar)
+	
+	laser_bar = get_node("SectionLabels/LaserStrength/UpgradeBar")
+	stat_bars.append(laser_bar)
+	
 	up_label = get_node("SectionLabels/PointsNumber")
 	
 	_on_Reset_pressed()
