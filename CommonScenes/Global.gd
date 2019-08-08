@@ -2,9 +2,14 @@ extends Node
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
-var version = 0.61
+var version = 0.62
 
 var is_retry = false
+
+#total sum of points that can be distributed in the player build in the base savedata
+var base_stats = 15
+var max_upgrade_level = 37
+var base_upgrade = 30
 
 var savedata = {
 	"version" : version,
@@ -35,11 +40,13 @@ var savedata = {
 		"initial speed": 4.0,
 		"max speed": 11.0,
 		"laser duration": 0,
+		"upgrade level": 1,
+		"next upgrade": base_upgrade,
 		"upgrade points": 0,
 		"levels unlocked": 0,
 		"current level":0,
 		"last unlock": 0,
-		"story beaten": true,
+		"story beaten": false,
 		"tutorial beaten": false,
 		},
 	"arcade": {
@@ -138,7 +145,23 @@ func update_highlaps(total_laps):
 
 func update_story_upgrade(points):
 	savedata["story"]["upgrade points"] = points
+	savedata["story"]["upgrade level"] += 1
+	calculate_next_upgrade()
 	save()
+
+
+func calculate_next_upgrade():
+	var next_upgrade = 0
+	if savedata["upgrade level"] < max_upgrade_level:
+		next_upgrade = savedata["upgrade level"] * 0.5 * base_upgrade
+	
+	savedata["next upgrade"] = next_upgrade
+
+
+func update_story_next_upgrade(countdown):
+	savedata["story"]["next upgrade"] = countdown
+	save()
+
 
 func update_story_unlocks(level):
 	savedata["story"]["levels unlocked"] = level

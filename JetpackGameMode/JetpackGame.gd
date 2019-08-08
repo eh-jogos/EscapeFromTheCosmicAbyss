@@ -61,6 +61,7 @@ var initial_ammo
 var initial_speed
 var max_speed
 var laser_duration
+var next_upgrade
 var upgrade_points
 var levels_unlocked
 var cooldown
@@ -199,6 +200,7 @@ func initialize_game_stats():
 		initial_speed = Global.savedata[game_mode]["initial speed"]
 		max_speed = 4 + Global.savedata[game_mode]["max speed"]
 		laser_duration = Global.savedata[game_mode]["laser duration"]
+		next_upgrade = Global.savedata[game_mode]["next upgrade"]
 		upgrade_points = Global.savedata[game_mode]["upgrade points"]
 		levels_unlocked = Global.savedata[game_mode]["levels unlocked"]
 		cooldown = Global.savedata[game_mode]["cooldown"]
@@ -324,6 +326,8 @@ func set_overheat(value):
 	overheat_bar.set_value(value)
 
 func game_over():
+	if game_mode == "story":
+		Global.update_story_next_upgrade(next_upgrade)
 	hud_animator.play("fade_out")
 	game_over_screen.open()
 	get_tree().set_pause(true)
@@ -332,7 +336,6 @@ func _on_scored(num):
 	var last_point_level = points_level
 	var last_multiple_level = multiples_level
 	#print("LPL: %s | LML: %s"%[last_point_level, last_multiple_level])
-	
 	points += (num*multiplyer)
 	points_level = int(points/(point_multiple*multiplyer))
 	if multiplyer <= 1:
@@ -359,18 +362,23 @@ func _on_scored(num):
 	#			print(player.speed.x)
 	
 		if multiples_level > last_multiple_level:
-			if game_mode == "story":
-				upgrade_points += 1
-				upgrade_label.set_text("+ UPGRADE POINT!")
-				upgrade_messager.play("text_anim")
-				Global.update_story_upgrade(upgrade_points)
-			elif game_mode == "arcade" or game_mode == "speedrun":
+			if game_mode == "arcade" or game_mode == "speedrun":
 				multiplyer += 1
 				
 				score_label.set_text("Score %sx"%[multiplyer])
 				upgrade_label.set_text("%sx Multiplyer"%[multiplyer])
 				upgrade_messager.play("text_anim")
 				pass
+	
+	if game_mode == "story":
+		next_upgrade -= num
+		if next_upgrade <= 0 and Global.savedata["upgrade level"] < Global.max_upgrade_level:
+			upgrade_points += 1
+			upgrade_label.set_text("+ UPGRADE POINT!")
+			upgrade_messager.play("text_anim")
+			Global.update_story_upgrade(upgrade_points)
+			next_upgrade = Global.savedata["next upgrade"]
+	
 	update_score()
 	pass # replace with function body
 
@@ -394,7 +402,7 @@ func tutorial_start():
 	tutorial.play()
 
 func _on_ObstacleSpawner_level_end():
-	if game_mode == "story" or "speedrun":
+	if game_mode == "story":
 		if level_end_cutscene != null:
 			set_game_state("Cutscene")
 			ScreenManager.black_transition(level_end_cutscene, null, self)
@@ -402,6 +410,8 @@ func _on_ObstacleSpawner_level_end():
 				ScreenManager.connect("scene_above_loaded", self, "_on_end_cutscene_loaded", [], CONNECT_ONESHOT)
 		else:
 			level_completed()
+	elif game_mode == "speedrun":
+		level_completed()
 	elif game_mode == "arcade":
 		arcade_laps += 1
 		max_speed += MAX_SPEED_INCREMENT_PER_LAP
@@ -427,6 +437,8 @@ func _on_end_cutscene_finished():
 
 
 func level_completed():
+	if game_mode == "story":
+		Global.update_story_next_upgrade(next_upgrade)
 	hud_animator.play("fade_out")
 	if game_mode == "story":
 		level_complete_screen.open(level_num)
