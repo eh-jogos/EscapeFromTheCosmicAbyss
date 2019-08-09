@@ -8,7 +8,7 @@ var is_retry = false
 
 #total sum of points that can be distributed in the player build in the base savedata
 var base_stats = 15
-var max_upgrade_level = 42
+var max_upgrade_level = 40
 var base_upgrade = 30
 
 var savedata = {

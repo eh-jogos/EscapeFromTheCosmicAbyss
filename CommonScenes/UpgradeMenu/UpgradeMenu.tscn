@@ -1358,7 +1358,6 @@ autoplay = "base"
 
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../LaserStrength")
 focus_neighbour/right = NodePath(".")
@@ -1396,14 +1395,6 @@ transform/pos = Vector2( 110, 0 )
 [node name="UpgradeSlot3" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 145, 0 )
-
-[node name="UpgradeSlot4" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 180, 0 )
-
-[node name="UpgradeSlot5" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
-
-transform/pos = Vector2( 215, 0 )
 
 [node name="Minus" type="TextureButton" parent="SectionLabels/StartingAmmo"]
 
