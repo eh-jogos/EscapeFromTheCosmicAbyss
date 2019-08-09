@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 signal dashing(boolean)
 
+export(int) var min_speed = 4
+
 # OTHER SCENES TO BE PRELOADED
 var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 
@@ -72,7 +74,7 @@ func _ready():
 	pass
 
 func _fixed_process(delta):
-	if game.get_game_state() != 0 and game.get_game_state() != 3:
+	if game.get_game_state() != game.STATE.Playing and game.get_game_state() != game.STATE.Tutorial:
 		return
 	
 	var heat = game.get_overheat()
@@ -254,7 +256,7 @@ func reset_y():
 	speed.y = 0
 
 func set_player_stats():
-	speed_x = 4 + game.initial_speed
+	speed_x = min_speed + game.initial_speed
 	shield_energy = game.initial_shield
 	laser_strength = 1.5 + (0.5*game.laser_strength)
 	cooldown = 1.5 + (0.1 * game.cooldown)

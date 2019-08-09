@@ -1011,6 +1011,7 @@ end_cutscene = "res://Cutscenes/Cutscene4.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -1160,6 +1161,7 @@ transform/pos = Vector2( -1220, -40 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = -2
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -1389,6 +1391,8 @@ visibility/visible = false
 transform/pos = Vector2( 960, 540 )
 
 [node name="Player" parent="." instance=ExtResource( 51 )]
+
+min_speed = 4
 
 [node name="Obstaculos" type="Node2D" parent="."]
 

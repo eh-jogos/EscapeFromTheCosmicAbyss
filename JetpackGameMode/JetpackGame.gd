@@ -198,7 +198,7 @@ func initialize_game_stats():
 		initial_shield = Global.savedata[game_mode]["initial shield"]
 		initial_ammo = Global.savedata[game_mode]["initial ammo"]
 		initial_speed = Global.savedata[game_mode]["initial speed"]
-		max_speed = 4 + Global.savedata[game_mode]["max speed"]
+		max_speed = player.min_speed + Global.savedata[game_mode]["max speed"]
 		laser_strength = Global.savedata[game_mode]["laser strength"]
 		next_upgrade = Global.savedata[game_mode]["next upgrade"]
 		upgrade_points = Global.savedata[game_mode]["upgrade points"]
