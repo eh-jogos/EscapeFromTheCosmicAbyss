@@ -8,7 +8,10 @@ var current_scene
 var buttons
 
 var current_animator
-var animator_steps #array of animations, 0 must always be "00_base" and 1 must always be "01_fade_in"
+
+# array of animations, 0 must always be "00_base" and 1 must always be "01_fade"
+# and the fade in step should only animate the opacity of the parent node so it can be used both for fade ins or outs
+var animator_steps
 var current_step
 
 func _ready():
@@ -35,6 +38,8 @@ func setup_next_scene_animator():
 	animator_steps = current_animator.get_animation_list()
 	current_step = 1
 	current_animator.play(animator_steps[current_step])
+	#add 1 because the fade anmation automatically transitions to the next one
+	current_step += 1
 
 
 func _on_Next_pressed():

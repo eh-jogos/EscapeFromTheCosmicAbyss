@@ -1,0 +1,20 @@
+[gd_resource type="Theme" load_steps=3 format=1]
+
+[ext_resource path="res://Fonts/Cutscenes/Astro/Kalam-Bold40.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://Fonts/Cutscenes/Astro/Kalam-Regular40.fnt" type="BitmapFont" id=2]
+
+[resource]
+
+RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
+RichTextLabel/colors/font_color_selected = Color( 1, 1, 1, 1 )
+RichTextLabel/colors/selection_color = Color( 0.1, 0.1, 1, 0.8 )
+RichTextLabel/constants/line_separation = 10
+RichTextLabel/constants/table_hseparation = 3
+RichTextLabel/constants/table_vseparation = 3
+RichTextLabel/fonts/bold_font = ExtResource( 1 )
+RichTextLabel/fonts/bold_italics_font = null
+RichTextLabel/fonts/italics_font = null
+RichTextLabel/fonts/mono_font = null
+RichTextLabel/fonts/normal_font = ExtResource( 2 )
+RichTextLabel/styles/focus = null
+
