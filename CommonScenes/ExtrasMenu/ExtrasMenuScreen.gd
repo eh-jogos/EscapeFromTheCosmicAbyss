@@ -3,14 +3,12 @@ extends CanvasLayer
 export(String, FILE, "*.tscn") var credits_scene_path
 export(String, FILE, "*.tscn") var cutscene_intro_path
 export(String, FILE, "*.tscn") var cutscene_level5_path
-export(String, FILE, "*.tscn") var cutscene_almost_path
 export(String, FILE, "*.tscn") var cutscene_ending_path
 
 # node variables
 var credits
 var intro
 var level5
-var almost
 var ending
 var back
 var animator
@@ -37,9 +35,6 @@ func _ready():
 	if last_unlocked_level > 5:
 		level5.set_disabled(false)
 	
-	if last_unlocked_level == 12:
-		almost.set_disabled(false)
-	
 	if Global.is_story_completed():
 		ending.set_disabled(false)
 	
@@ -61,8 +56,6 @@ func _on_button_pressed(node):
 		path = cutscene_intro_path
 	elif node == level5:
 		path = cutscene_level5_path
-	elif node == almost:
-		path = cutscene_almost_path
 	elif node == ending:
 		path = cutscene_ending_path
 	else:

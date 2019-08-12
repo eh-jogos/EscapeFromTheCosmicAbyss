@@ -1006,8 +1006,8 @@ end_cutscene = null
 
 script/script = ExtResource( 15 )
 title = "If that was the 'Calm', what is the 'Storm'?!"
-intro_cutscene = "res://Cutscenes/Cutscene3.tscn"
-end_cutscene = "res://Cutscenes/Cutscene4.tscn"
+intro_cutscene = null
+end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
