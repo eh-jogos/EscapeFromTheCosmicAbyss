@@ -5,9 +5,8 @@ signal cutscene_ended
 var scenes
 var current_scene
 
-var buttons
-
 var current_animator
+var next_button
 
 # array of animations, 0 must always be "00_base" and 1 must always be "01_fade"
 # and the fade in step should only animate the opacity of the parent node so it can be used both for fade ins or outs
@@ -18,18 +17,14 @@ func _ready():
 	get_tree().set_pause(true)
 	set_process_input(true)
 	
+	next_button = get_node("Buttons/Next")
+	next_button.grab_focus()
+	
 	scenes = get_node("Scenes").get_children()
-	buttons = get_node("Buttons").get_children()
 	current_scene = 0
 	setup_next_scene_animator()
 	
-
-
-func _input(event):
-	if event.is_action_pressed("ui_accept"):
-		_on_Next_pressed()
-	elif event.is_action_pressed("ui_cancel"):
-		_on_Skip_pressed()
+	
 
 
 func setup_next_scene_animator():
@@ -67,16 +62,21 @@ func go_to_next_animation_step():
 
 
 func go_to_next_scene():
-	current_scene += 1
 	if has_more_scenes():
-		current_animator.play_backwards(animator_steps[1])
+		fade_out_current_scene()
+		current_scene += 1
 		setup_next_scene_animator()
 	else:
 		close()
 
+func fade_out_current_scene():
+	var fade_out_scene = scenes[current_scene]
+	current_animator.play_backwards(animator_steps[1])
+	yield(current_animator, "finished")
+	fade_out_scene.hide()
 
 func has_more_scenes():
-	return current_scene < scenes.size()
+	return current_scene + 1 < scenes.size()
 
 
 func close():
