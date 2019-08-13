@@ -19,11 +19,10 @@ func _ready():
 	credits = get_node("MenuContainer/Credits")
 	intro = get_node("MenuContainer/Intro")
 	level5 = get_node("MenuContainer/Level5")
-	almost = get_node("MenuContainer/Almost")
 	ending = get_node("MenuContainer/Ending")
 	back = get_node("MenuContainer/Back")
 	
-	var buttons = [credits, intro, level5, almost, ending]
+	var buttons = [credits, intro, level5, ending]
 	for button in buttons:
 		button.set_disabled(true)
 		if not button.is_connected("pressed", self, "_on_button_pressed"):
