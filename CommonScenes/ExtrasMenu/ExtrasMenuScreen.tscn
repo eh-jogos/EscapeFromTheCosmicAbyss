@@ -131,7 +131,7 @@ script/script = ExtResource( 1 )
 credits_scene_path = null
 cutscene_intro_path = "res://Cutscenes/Cutscene1.tscn"
 cutscene_level5_path = "res://Cutscenes/Cutscene2.tscn"
-cutscene_ending_path = "res://Cutscenes/Cutscene4.tscn"
+cutscene_ending_path = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

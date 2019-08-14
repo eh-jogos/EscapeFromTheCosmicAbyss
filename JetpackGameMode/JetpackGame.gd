@@ -144,13 +144,7 @@ func load_story_pregame():
 	#	Global.set_current_story_level(0)
 	
 	if category == "level selected":
-		if level_intro_cutscene != null and not Global.is_retry:
-			set_game_state("Cutscene")
-			ScreenManager.black_transition(level_intro_cutscene, null, self)
-			if not ScreenManager.is_connected("scene_above_loaded", self, "_on_intro_cutscene_loaded"):
-				 ScreenManager.connect("scene_above_loaded", self, "_on_intro_cutscene_loaded", [], CONNECT_ONESHOT)
-		else:
-			game_start()
+		game_start()
 	elif category == "select level":
 		var path = level_select_path
 		ScreenManager.load_above(path, self, self)
@@ -169,7 +163,14 @@ func load_upgrade_pregame():
 func game_start():
 	initialize_game_stats()
 	setup_game_mode_level()
-	start_countdown()
+	
+	if level_intro_cutscene != null and not Global.is_retry:
+		set_game_state("Cutscene")
+		ScreenManager.black_transition(level_intro_cutscene, null, self)
+		if not ScreenManager.is_connected("scene_above_loaded", self, "_on_intro_cutscene_loaded"):
+			 ScreenManager.connect("scene_above_loaded", self, "_on_intro_cutscene_loaded", [], CONNECT_ONESHOT)
+	else:
+		start_countdown()
 
 
 func _on_intro_cutscene_loaded(loaded_cutscene):
@@ -179,7 +180,7 @@ func _on_intro_cutscene_loaded(loaded_cutscene):
 
 func _on_intro_cutscene_finished():
 	if not ScreenManager.is_connected("transition_ended", self, "start_countdown"):
-		ScreenManager.connect("transition_ended", self, "game_start", [], CONNECT_ONESHOT)
+		ScreenManager.connect("transition_ended", self, "start_countdown", [], CONNECT_ONESHOT)
 
 func start_countdown():
 	if is_tutorial:
