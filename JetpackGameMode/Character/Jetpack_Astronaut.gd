@@ -4,6 +4,8 @@ signal dashing(boolean)
 
 export(int) var min_speed = 4
 
+const OVERHEAT_THRESHOLD = 80
+
 # OTHER SCENES TO BE PRELOADED
 var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 
@@ -23,6 +25,7 @@ var shield
 
 # Player FLAGS?
 var overheated = false
+var undashable = false
 var dashing = false
 var is_dead = false
 var falling = true
@@ -34,6 +37,8 @@ var is_bouncing = false
 var gravity = 1200.0
 var speed_y = -900.0
 var dash_modifier = 90.0
+var base_dash_cost = 65.0
+var dash_cost
 var speed_x 
 var shield_energy
 var laser_strength
@@ -78,62 +83,32 @@ func _fixed_process(delta):
 		return
 	
 	var heat = game.get_overheat()
-	heat -= cooldown if heat >= cooldown else 0
+	if not dashing:
+		heat -= cooldown if heat >= cooldown else 0
 	
-	if heat <= 80 and overheated:
-		overheated = false
-		overheat_bar_animator.play_backwards("overheated")
-	
-	if heat <= 50 and dashing:
-		overheat_bar_animator.play_backwards("undashable")
-	elif heat > 50 and not dashing:
-		overheat_bar_animator.play("undashable")
+	handle_overheat_bar_color(heat)
 	
 	speed.y += delta * gravity_force
 	
 	if Input.is_action_pressed("boost") and not overheated:
-		jet_particles.set_emitting(true)
-		if falling: 
-			falling = false
-			body_animator.play("fall_to_rise")
-			if not shooting:
-				arms_animator.play("fall_to_rise")
-		
-		speed.y += jetpack_force*delta
-		
-		
-		heat += 2.3
-		if heat >= 100:
-			heat = 100
-			overheated = true
-			overheat_bar_animator.play("overheated")
+		heat = handle_boost(delta, heat)
 	else:
 		jet_particles.set_emitting(false)
 	
 	var dash_force = speed_x*dash_modifier*unit.x
 	
-	if Input.is_action_pressed("dash") and not dashing and not overheated:
-#		print("DASH!")
-		dashing = true
-		emit_signal("dashing", dashing)
-		
-		speed.x = (10*unit.x)+(dash_force*delta)
-		#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
-		speed.y = 0
-		
-		heat += 25
-		overheat_bar_animator.play("undashable")
-		if heat >= 100:
-			heat = 100
-			overheated = true
-			overheat_bar_animator.play("overheated")
+	if Input.is_action_pressed("dash"):
+		if can_dash(heat):
+	#		print("DASH!")
+			heat = handle_dash(delta, dash_force, heat)
+		elif not overheated and not dashing:
+			heat = handle_boost(delta, heat)
 	
 	if dashing:
 		if speed.x > speed_x*unit.x:
 			speed.x -= (dash_force/20)*delta
 #			print(speed.x)
 			speed.y = 0
-			heat+=1.75
 		else:
 			dashing = false
 			emit_signal("dashing", dashing)
@@ -142,8 +117,6 @@ func _fixed_process(delta):
 	else:
 		speed.x += speed_x*unit.x*delta
 		speed.x = clamp(speed.x, 0, speed_x*unit.x)
-	
-	
 	
 	game.set_overheat(heat)
 	
@@ -206,6 +179,57 @@ func _fixed_process(delta):
 			motion = normal.slide(motion)
 			motion = self.move(motion)
 
+
+func handle_overheat_bar_color(heat): 
+	var is_already_playing = overheat_bar_animator.is_playing()
+	if overheated and not is_already_playing:
+		overheat_bar_animator.play("overheated")
+	elif heat <= OVERHEAT_THRESHOLD and overheated and not is_already_playing:
+		overheated = false
+		overheat_bar_animator.play_backwards("overheated")
+	elif heat > OVERHEAT_THRESHOLD-dash_cost and not undashable and not is_already_playing:
+		overheat_bar_animator.play("undashable")
+		undashable = true
+	elif heat <= OVERHEAT_THRESHOLD-dash_cost and undashable and not is_already_playing:
+		overheat_bar_animator.play_backwards("undashable")
+		undashable = false
+
+
+func handle_boost(delta, heat):
+	jet_particles.set_emitting(true)
+	if falling: 
+		falling = false
+		body_animator.play("fall_to_rise")
+		if not shooting:
+			arms_animator.play("fall_to_rise")
+	
+	speed.y += jetpack_force*delta
+	
+	heat += 2.3
+	if heat >= 100:
+		heat = 100
+		overheated = true
+	
+	return heat
+
+
+func handle_dash(delta, dash_force, heat):
+	dashing = true
+	emit_signal("dashing", dashing)
+	
+	speed.x = (10*unit.x)+(dash_force*delta)
+	#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
+	speed.y = 0
+	
+	heat += dash_cost
+	if heat >= 100:
+		heat = 100
+		overheated = true
+	
+	return heat
+
+
+
 func _input(event):
 	if game.get_game_state() != 0 and game.get_game_state() != 3:
 		return
@@ -255,11 +279,17 @@ func score():
 func reset_y():
 	speed.y = 0
 
+
+func can_dash(heat):
+	return not dashing and not overheated and heat < OVERHEAT_THRESHOLD-dash_cost
+
+
 func set_player_stats():
 	speed_x = min_speed + game.initial_speed
 	shield_energy = game.initial_shield
 	laser_strength = 1.5 + (0.5*game.laser_strength)
 	cooldown = 1.5 + (0.1 * game.cooldown)
+	dash_cost = base_dash_cost - (base_dash_cost * 0.15 * game.cooldown)
 	
 	print("SHIELD UP: %s"%[shield_energy])
 	shield_up(shield_energy)
