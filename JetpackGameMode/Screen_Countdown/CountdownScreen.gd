@@ -11,7 +11,10 @@ func _ready():
 	animator = self.get_node("AnimationPlayer")
 	level_num = self.get_node("LevelNum")
 	level_title = self.get_node("LevelTitle")
-	pass
+	
+	animator.set_current_animation("base")
+	animator.seek(0,true)
+
 
 func play(num, title):
 	self.show()

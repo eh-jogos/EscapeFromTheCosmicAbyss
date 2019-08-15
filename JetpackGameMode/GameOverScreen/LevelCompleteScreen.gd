@@ -41,6 +41,9 @@ func _ready():
 	animator = self.get_node("AnimationPlayer")
 	label_message = self.get_node("CompleteText")
 	
+	animator.set_current_animation("base")
+	animator.seek(0,true)
+	
 	score_results = self.get_node("ResultsContainer/ScoreResults")
 	label_score = score_results.get_node("ScoreContainer/Score")
 	label_highscore = score_results.get_node("HighScoreContainer/Highscore")

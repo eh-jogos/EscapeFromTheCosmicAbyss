@@ -57,8 +57,11 @@ func unlock_levels():
 
 func _ready():
 	level_buttons = get_node("Map/LevelButtons")
-	animator = self.get_node("AnimationPlayer")
 	map_animator = self.get_node("Map/AnimationPlayer")
+	
+	animator = self.get_node("AnimationPlayer")
+	animator.set_current_animation("base")
+	animator.seek(0, true)
 	
 	last_played_level = Global.savedata["story"]["current level"]
 	last_unlocked_level = Global.savedata["story"]["last unlock"]
