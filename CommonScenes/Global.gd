@@ -219,10 +219,13 @@ func reset_story_progress():
 	savedata["story"]["initial speed"] = 4.0
 	savedata["story"]["max speed"] = 11.0
 	savedata["story"]["laser strength"] = 0
+	savedata["story"]["upgrade level"] = 1
+	savedata["story"]["next upgrade"] = base_upgrade
 	savedata["story"]["upgrade points"] = 0
 	savedata["story"]["levels unlocked"] = 0
 	savedata["story"]["current level"] = 0
 	savedata["story"]["last unlock"] = 0
+	savedata["story"]["tutorial beaten"] = false
 
 func reset_category_progress(game_mode_dict):
 	var game_mode = game_mode_dict["game mode"]

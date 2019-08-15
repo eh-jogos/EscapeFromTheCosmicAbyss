@@ -51,10 +51,7 @@ func _on_Continue_pressed():
 
 func _on_NewGame_pressed():
 	Global.reset_story_progress()
-	if Global.is_tutorial_completed():
-		Global.set_game_mode("story", "select level")
-	else:
-		Global.set_game_mode("story", "level selected")
+	Global.set_game_mode("story", "level selected")
 	
 	ScreenManager.load_screen(game_path)
 

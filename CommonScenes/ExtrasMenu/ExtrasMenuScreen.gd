@@ -28,10 +28,10 @@ func _ready():
 		if not button.is_connected("pressed", self, "_on_button_pressed"):
 			button.connect("pressed", self, "_on_button_pressed", [button])
 	
-	if Global.is_tutorial_completed():
+	if Global.is_tutorial_completed() or Global.is_story_completed():
 		intro.set_disabled(false)
 	
-	if last_unlocked_level > 5:
+	if last_unlocked_level > 5 or Global.is_story_completed():
 		level5.set_disabled(false)
 	
 	if Global.is_story_completed():
