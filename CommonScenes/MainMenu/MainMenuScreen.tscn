@@ -33,6 +33,7 @@ stretch_mode = 0
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 
+editor/display_folded = true
 rect/min_size = Vector2( 509, 356 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -323,7 +324,7 @@ margin/top = 1024.0
 margin/right = 1916.0
 margin/bottom = 1061.0
 custom_fonts/font = ExtResource( 7 )
-text = "Game and Art by: Daniel Queiroz Porto          Music by: Sam Oz"
+text = "Game, Art and Animations by: Daniel Queiroz Porto          Music by: Sam Oz          Cutscene Art by: Filipe Stonoga"
 align = 1
 percent_visible = 1.0
 lines_skipped = 0

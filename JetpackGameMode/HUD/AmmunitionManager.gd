@@ -28,6 +28,14 @@ func add_ammo():
 	slot.add_child(instance)
 	current_slot += 1
 
+
+func has_ammo():
+	if current_slot == 0: 
+		return false
+	else:
+		return true
+
+
 func use_ammo():
 	if current_slot == 0 : return false
 	var slot = self.get_child(current_slot-1)

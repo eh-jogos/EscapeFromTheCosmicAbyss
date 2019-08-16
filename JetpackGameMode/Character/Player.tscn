@@ -2665,6 +2665,7 @@ collision/layers = 4097
 collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
+min_speed = 4
 
 [node name="BodyOutline" type="AnimatedSprite" parent="."]
 

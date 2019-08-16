@@ -25,9 +25,9 @@ var beats = {
 	"none": 0,
 	"tentacles": 20,
 	"double_pipe": 10,
-	"triple_pipe": 7,
-	"wall": 3,
-	"laser_eye": 5,
+	"triple_pipe": 8,
+	"wall": 5,
+	"laser_eye": 2,
 	"shield_up": 0,
 	"ammo_up": 0
 }

@@ -6,7 +6,7 @@
 [ext_resource path="res://CommonScenes/LoadingScreen/pngs/Logo_Flat.png" type="Texture" id=4]
 [ext_resource path="res://CommonScenes/LoadingScreen/pngs/Logo_AbyssMask.png" type="Texture" id=5]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=1]
 
 resource/name = "base"
 length = 0.1
@@ -81,8 +81,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("ColorFrame/TextureProgress:visibility/opacity")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=2]
 
 resource/name = "black_transition"
 length = 0.3
@@ -157,8 +167,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("ColorFrame/TextureProgress:visibility/opacity")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=3]
 
 length = 0.8
 loop = false
@@ -235,8 +255,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("ColorFrame/TextureProgress:visibility/opacity")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
-[sub_resource type="CanvasItemShaderGraph" id=1]
+[sub_resource type="CanvasItemShaderGraph" id=4]
 
 _code = {
 "default_tex": [ "Tex", ExtResource( 3 ) ],
@@ -272,18 +302,17 @@ _data = {
 "shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 796, 82 ), null, null, [ 0, 4, 0, 1, 8, 0 ], 1, 0, Vector2( 21, 313 ), null, null, [  ], 2, 28, Vector2( 77, 157 ), "BaseColor", Color( 0, 0.960784, 1, 1 ), [  ], 3, 28, Vector2( 110, 32 ), "Transparency", Color( 0, 0.960784, 1, 0 ), [  ], 4, 23, Vector2( 312, 21 ), null, null, [ 0, 3, 0, 1, 2, 0, 2, 5, 1, 2147483647, 0, null, 2147483647, 1, null, 2147483647, 2, null ], 5, 18, Vector2( 168, 283 ), null, null, [ 0, 1, 2, 2147483647, 0, null ], 6, 22, Vector2( 507, 166 ), null, null, [ 0, 3, 1, 1, 2, 1, 2, 9, 0, 2147483647, 0, null, 2147483647, 1, null, 2147483647, 2, null ], 7, 30, Vector2( 478, 333 ), "Tex", ExtResource( 3 ), [ 0, 1, 2, 2147483647, 0, null ], 8, 7, Vector2( 668, 312 ), 2, null, [ 0, 6, 0, 1, 7, 1, 2147483647, 0, null, 2147483647, 1, null ], 9, 7, Vector2( 345, 222 ), 5, null, [ 0, 5, 1, 1, 10, 0, 2147483647, 0, null, 2147483647, 1, null ], 10, 26, Vector2( 180, 395 ), "Scalar", 4.0, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=2]
+[sub_resource type="CanvasItemMaterial" id=5]
 
-shader/shader = SubResource( 1 )
+shader/shader = SubResource( 4 )
 shader/shading_mode = 0
 shader_param/Transparency = Color( 0.835294, 0, 1, 0 )
 shader_param/BaseColor = Color( 0, 0.960784, 1, 0 )
 shader_param/Scalar = 2.90254
 shader_param/Tex = ExtResource( 2 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=6]
 
-resource/name = "fireloop"
 length = 1.6
 loop = true
 step = 0.1
@@ -298,25 +327,25 @@ tracks/0/keys = {
 "values": [ 4.0, 1.0, 4.0 ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=4]
+[sub_resource type="CanvasItemMaterial" id=7]
 
-shader/shader = SubResource( 1 )
+shader/shader = SubResource( 4 )
 shader/shading_mode = 0
 shader_param/Transparency = Color( 0.835294, 0, 1, 0 )
 shader_param/BaseColor = Color( 0, 0.960784, 1, 0 )
 shader_param/Scalar = 3.18555
 shader_param/Tex = ExtResource( 3 )
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=8]
 
-shader/shader = SubResource( 1 )
+shader/shader = SubResource( 4 )
 shader/shading_mode = 0
 shader_param/Transparency = Color( 0.835294, 0, 1, 0 )
 shader_param/BaseColor = Color( 0, 0.960784, 1, 0 )
 shader_param/Scalar = 2.07061
 shader_param/Tex = ExtResource( 5 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=9]
 
 length = 1.6
 loop = true
@@ -356,22 +385,9 @@ script/script = ExtResource( 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 7 )
-anims/black_transition = SubResource( 9 )
-anims/fade_in = SubResource( 8 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
-autoplay = "base"
-
-[node name="AnimationPlayer1" type="AnimationPlayer" parent="."]
-
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/base = SubResource( 7 )
-anims/black_transition = SubResource( 9 )
-anims/fade_in = SubResource( 8 )
+anims/base = SubResource( 1 )
+anims/black_transition = SubResource( 2 )
+anims/fade_in = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -388,10 +404,11 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1920.0
 margin/bottom = 1080.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="TextureProgress" type="TextureProgress" parent="ColorFrame"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -415,7 +432,7 @@ radial_fill/center_offset = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="ColorFrame/TextureProgress"]
 
-material/material = SubResource( 2 )
+material/material = SubResource( 5 )
 texture = ExtResource( 2 )
 centered = false
 modulate = Color( 0, 0.0859375, 1, 1 )
@@ -425,7 +442,7 @@ modulate = Color( 0, 0.0859375, 1, 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/fireloop = SubResource( 3 )
+anims/fireloop = SubResource( 6 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -433,14 +450,13 @@ autoplay = "fireloop"
 
 [node name="LogoFlat" type="Sprite" parent="ColorFrame"]
 
-visibility/visible = false
 transform/pos = Vector2( 1570.19, 768.209 )
 texture = ExtResource( 4 )
 
 [node name="CosmicMask" type="Sprite" parent="ColorFrame/LogoFlat"]
 
 visibility/opacity = 0.0
-material/material = SubResource( 4 )
+material/material = SubResource( 7 )
 transform/pos = Vector2( -0.752403, -21.3358 )
 transform/scale = Vector2( 0.968862, 0.953509 )
 texture = ExtResource( 3 )
@@ -448,7 +464,7 @@ texture = ExtResource( 3 )
 [node name="AbyssMask" type="Sprite" parent="ColorFrame/LogoFlat"]
 
 visibility/opacity = 0.0
-material/material = SubResource( 5 )
+material/material = SubResource( 8 )
 transform/pos = Vector2( 4.69713, 78.3653 )
 transform/scale = Vector2( 0.972033, 0.948372 )
 texture = ExtResource( 5 )
@@ -458,7 +474,7 @@ texture = ExtResource( 5 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/fireloop = SubResource( 6 )
+anims/fireloop = SubResource( 9 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]

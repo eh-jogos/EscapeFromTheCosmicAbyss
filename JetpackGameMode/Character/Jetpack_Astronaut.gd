@@ -234,10 +234,10 @@ func _input(event):
 	if game.get_game_state() != 0 and game.get_game_state() != 3:
 		return
 	
-	if event.is_action_pressed("shoot") and ammunition.use_ammo() and not shooting:
+	if event.is_action_pressed("shoot") and ammunition.has_ammo() and not shooting:
 		#game.dash_score()
 		shooting = true
-		
+		ammunition.use_ammo()
 		arms_animator.play("shooting")
 		
 		var new_bullet = bullet.instance()

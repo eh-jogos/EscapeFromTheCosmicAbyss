@@ -15,7 +15,10 @@ func _ready():
 	level_num = self.get_node(level_num)
 	level_title = self.get_node(level_title)
 	tip_selector = self.get_node(tip_selector)
-	pass
+	
+	tip_selector.set_current_animation("TipScreen_0")
+	tip_selector.seek(0, true)
+	
 
 func play(num, title):
 	self.get_tree().set_pause(true)

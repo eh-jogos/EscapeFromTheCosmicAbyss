@@ -1042,7 +1042,6 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
-editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -1541,8 +1540,6 @@ transform/pos = Vector2( 960, 540 )
 
 [node name="Player" parent="." instance=ExtResource( 53 )]
 
-min_speed = 4
-
 [node name="Obstaculos" type="Node2D" parent="."]
 
 editor/display_folded = true
@@ -1594,7 +1591,6 @@ transform/scale = Vector2( 1, -1 )
 [node name="HUD" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -1698,7 +1694,6 @@ autostart = false
 
 [node name="TextureProgress" type="TextureProgress" parent="HUD"]
 
-editor/display_folded = true
 material/material = SubResource( 22 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
