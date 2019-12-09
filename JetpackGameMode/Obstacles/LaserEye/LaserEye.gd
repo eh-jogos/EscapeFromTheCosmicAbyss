@@ -21,6 +21,9 @@ func _ready():
 	
 	set_fixed_process(false)
 	
+	animator.set_current_animation("hidden")
+	animator.seek(0,true)
+	
 	raycast_left = get_node("Root/Raycasts/Left")
 	raycast_middle = get_node("Root/Raycasts/Middle")
 	raycast_right = get_node("Root/Raycasts/Right")
@@ -47,7 +50,7 @@ func handle_collision(raycast):
 		set_fixed_process(false)
 		should_score = false
 		if not collider.is_dead and collider.shield_energy > 0:
-			collider.shield.decrease_energy(1)
+			collider.take_hit()
 		elif not collider.is_dead:
 			var offset = collider.get_global_pos()
 			kill_player(offset)

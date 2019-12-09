@@ -3,6 +3,7 @@ extends KinematicBody2D
 signal dashing(boolean)
 
 export(int) var min_speed = 4
+export(bool) var is_invincible = false
 
 const OVERHEAT_THRESHOLD = 80
 
@@ -76,7 +77,11 @@ func _ready():
 	
 	set_fixed_process(true)
 	set_process_input(true)
-	pass
+	
+	if not OS.is_debug_build():
+		is_invincible = false
+	
+
 
 func _fixed_process(delta):
 	if game.get_game_state() != game.STATE.Playing and game.get_game_state() != game.STATE.Tutorial:
@@ -144,7 +149,8 @@ func _fixed_process(delta):
 		#print(collider.get_name())
 		if collider.is_in_group("enemy") and not is_dead and shield_energy > 0:
 			#print("Shield Protected")
-			shield.decrease_energy(1)
+			if not is_invincible:
+				shield.decrease_energy(1)
 			
 			var normal = self.get_collision_normal()
 			var final_motion = normal.slide(motion)
@@ -162,7 +168,7 @@ func _fixed_process(delta):
 			
 			self.move(final_motion)
 			
-		elif collider.is_in_group("enemy") and not is_dead:
+		elif collider.is_in_group("enemy") and not is_dead and not is_invincible:
 			#print("Shield Energy at death: %s"%[shield_energy])
 			is_dead = true
 			game.set_game_state("GameOver")
@@ -291,5 +297,15 @@ func set_player_stats():
 	cooldown = 1.5 + (0.1 * game.cooldown)
 	dash_cost = base_dash_cost - (base_dash_cost * 0.15 * game.cooldown)
 	
+	if is_invincible:
+			shield_energy = 1
+	
 	print("SHIELD UP: %s"%[shield_energy])
 	shield_up(shield_energy)
+
+
+func take_hit():
+	if is_invincible:
+		return
+	
+	shield.decrease_energy(1)
