@@ -1,156 +1,118 @@
-[gd_scene load_steps=14 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_eye.png" type="Texture" id=2]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_body.png" type="Texture" id=3]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/laser_eye_outline.png" type="Texture" id=4]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=2]
 
-[sub_resource type="SpriteFrames" id=1]
-
-animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": false,
-"name": "idle",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
-
-animations = [ {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=3]
-
-animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-} ]
-
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 
 resource/name = "charging"
-length = 3.4
+length = 2.2
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Root/EyeColor:modulate")
+tracks/0/path = NodePath("Root/LaseEyeSkin:warning_color_1")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.5, 1, 1.4, 1.8, 2.1, 2.4, 2.6, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 1, 1.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ) ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
+tracks/1/type = "value"
+tracks/1/path = NodePath("Root/LaseEyeSkin:warning_color_2")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 3 ),
+"times": FloatArray( 0, 1.5, 1.9 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Root/LaseEyeSkin:warning_color_3")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 1.9, 2.2 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 1.9 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "stop_tracking"
 } ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("Root/Raycasts/Middle:cast_to")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 60 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Root/Raycasts/Middle:transform/pos")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 5, 3.83282 ) ]
-}
 tracks/4/type = "value"
-tracks/4/path = NodePath("Root/Raycasts/Left:transform/pos")
+tracks/4/path = NodePath("Root/Raycasts/Middle:cast_to")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -55, 3.83282 ) ]
+"values": [ Vector2( 0, 60 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Root/Raycasts/Right:transform/pos")
+tracks/5/path = NodePath("Root/Raycasts/Middle:transform/pos")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 65, 3.83282 ) ]
+"values": [ Vector2( 5, 3.83282 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Root/Raycasts/Right:cast_to")
+tracks/6/path = NodePath("Root/Raycasts/Left:transform/pos")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 60 ) ]
+"values": [ Vector2( -55, 3.83282 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Root/Raycasts/Left:cast_to")
+tracks/7/path = NodePath("Root/Raycasts/Right:transform/pos")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
+"values": [ Vector2( 65, 3.83282 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Root/Raycasts/Right:cast_to")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 60 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Root/Raycasts/Left:cast_to")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
 "values": [ Vector2( 0, 60 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-
-resource/name = "charging"
-length = 3.4
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Root/EyeColor:modulate")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.4, 0.8, 1.1, 1.4, 1.7, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.1, 3.2, 3.3, 3.4 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ) ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 3 ),
-"transitions": FloatArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "stop_tracking"
-} ]
-}
-
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=2]
 
 length = 0.5
 loop = false
@@ -165,18 +127,8 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, -150 ), Vector2( 0, 0 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("Root/EyeColor:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0, 1, 0.764706, 1 ) ]
-}
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=3]
 
 length = 0.01
 loop = false
@@ -212,107 +164,147 @@ tracks/2/keys = {
 "values": [ Vector2( 122, 40 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Root/EyeColor:modulate")
+tracks/3/path = NodePath("Root:transform/pos")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Color( 0, 1, 0.764706, 1 ) ]
+"values": [ Vector2( 0, -150 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Root:transform/pos")
+tracks/4/path = NodePath("Root/ColorFrame:visibility/visible")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -150 ) ]
+"update": 1,
+"values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Root/ColorFrame:visibility/visible")
+tracks/5/path = NodePath("Root/LaseEyeSkin:warning_color_1")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Root/LaseEyeSkin:warning_color_2")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Root/LaseEyeSkin:warning_color_3")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 
-length = 0.5
+length = 0.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Root:transform/pos")
-tracks/0/interp = 1
+tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 0.3, 0.6 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -150 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -40 ), Vector2( 0, -150 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Root/EyeColor:modulate")
+tracks/1/path = NodePath("Root/Raycasts/Middle:transform/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0, 1, 0.764706, 1 ) ]
+"values": [ Vector2( 5, 4 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Root/Raycasts/Middle:transform/pos")
+tracks/2/path = NodePath("Root/Raycasts/Left:transform/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 5, 4 ) ]
+"values": [ Vector2( -55, 4 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Root/Raycasts/Left:transform/pos")
+tracks/3/path = NodePath("Root/Raycasts/Right:transform/pos")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -55, 4 ) ]
+"values": [ Vector2( 65, 4 ) ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath("Root/Raycasts/Right:transform/pos")
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 65, 4 ) ]
-}
-tracks/5/type = "method"
-tracks/5/path = NodePath(".")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0.5 ),
+"times": FloatArray( 0.6 ),
 "transitions": FloatArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "_on_cycle_ended"
 } ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Root/LaseEyeSkin:warning_color_3")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Root/LaseEyeSkin:warning_color_2")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.1, 0.4 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Root/LaseEyeSkin:warning_color_1")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.2, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 
-length = 0.9
+length = 0.7
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -320,7 +312,7 @@ tracks/0/path = NodePath("Root/ColorFrame:rect/size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 162, 40 ), Vector2( 162, 1106 ), Vector2( 162, 13 ) ]
@@ -330,17 +322,17 @@ tracks/1/path = NodePath("Root/ColorFrame:rect/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -76, 0 ), Vector2( -76, 0 ), Vector2( -76, 1093 ) ]
+"values": [ Vector2( -81, 0 ), Vector2( -81, 0 ), Vector2( -81, 1093 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Root/ColorFrame/ColorFrame:rect/size")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 122, 40 ), Vector2( 122, 1106 ), Vector2( 122, 13 ) ]
@@ -350,7 +342,7 @@ tracks/3/path = NodePath("Root/ColorFrame:visibility/visible")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0, 0.6 ),
+"times": FloatArray( 0, 0.4 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -360,7 +352,7 @@ tracks/4/path = NodePath("Root/Raycasts/Middle:cast_to")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ), Vector2( 0, 1105 ), Vector2( 0, 60 ) ]
@@ -370,7 +362,7 @@ tracks/5/path = NodePath("Root/Raycasts/Middle:transform/pos")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 5, 3.83282 ), Vector2( 5, 3.83282 ), Vector2( 5, 1084 ) ]
@@ -380,7 +372,7 @@ tracks/6/path = NodePath("Root/Raycasts/Left:transform/pos")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -55, 3.83282 ), Vector2( -55, 3.83282 ), Vector2( -55, 1084 ) ]
@@ -390,7 +382,7 @@ tracks/7/path = NodePath("Root/Raycasts/Left:cast_to")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ), Vector2( 0, 1105 ), Vector2( 0, 60 ) ]
@@ -400,7 +392,7 @@ tracks/8/path = NodePath("Root/Raycasts/Right:transform/pos")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 65, 3.83282 ), Vector2( 65, 3.83282 ), Vector2( 65, 1084 ) ]
@@ -410,10 +402,40 @@ tracks/9/path = NodePath("Root/Raycasts/Right:cast_to")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
-"times": FloatArray( 0, 0.3, 0.6 ),
+"times": FloatArray( 0, 0.2, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ), Vector2( 0, 1105 ), Vector2( 0, 60 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Root/LaseEyeSkin:warning_color_1")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Root/LaseEyeSkin:warning_color_2")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Root/LaseEyeSkin:warning_color_3")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
 }
 
 [node name="LaserEye" type="Node2D"]
@@ -421,22 +443,40 @@ tracks/9/keys = {
 script/script = ExtResource( 1 )
 point_value = 5
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/charging = SubResource( 1 )
+anims/enter = SubResource( 2 )
+anims/hidden = SubResource( 3 )
+anims/hide = SubResource( 4 )
+anims/shooting = SubResource( 5 )
+next/charging = "shooting"
+next/enter = "charging"
+next/hide = "hidden"
+next/shooting = "hide"
+playback/active = true
+playback/speed = 1.0
+blend_times = [ "charging", "shooting", 0.005, "enter", "charging", 0.005, "shooting", "hide", 0.005 ]
+autoplay = "hidden"
+
 [node name="Root" type="Node2D" parent="."]
 
 transform/pos = Vector2( 0, -150 )
 
 [node name="ColorFrame" type="ColorFrame" parent="Root"]
 
-editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -76.0
-margin/top = 1093.0
+margin/top = 0.0
 margin/right = 86.0
-margin/bottom = 1106.0
+margin/bottom = 40.0
 color = Color( 0.780392, 0.223529, 0.211765, 1 )
 
 [node name="ColorFrame" type="ColorFrame" parent="Root/ColorFrame"]
@@ -454,51 +494,19 @@ margin/right = -61.0
 margin/bottom = 0.0
 color = Color( 1, 1, 1, 1 )
 
-[node name="EyeColor1" type="AnimatedSprite" parent="Root"]
+[node name="LaseEyeSkin" parent="Root" instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 0, 16 )
-z/z = -1
-z/relative = false
-frames = SubResource( 1 )
-animation = "idle"
-modulate = Color( 0.00784314, 0.113725, 0.0980392, 1 )
-
-[node name="EyeColor" type="AnimatedSprite" parent="Root"]
-
-transform/pos = Vector2( 0, 6 )
-frames = SubResource( 1 )
-animation = "idle"
-modulate = Color( 0, 1, 0.764706, 1 )
-
-[node name="BodyColor1" type="AnimatedSprite" parent="Root"]
-
-transform/pos = Vector2( 6, 20 )
-z/z = -1
-z/relative = false
-frames = SubResource( 2 )
-animation = "idle"
-modulate = Color( 0.00796509, 0.113281, 0.0995444, 1 )
-
-[node name="BodyColor" type="AnimatedSprite" parent="Root"]
-
-transform/pos = Vector2( 6, 10 )
-frames = SubResource( 2 )
-animation = "idle"
-modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
-
-[node name="Outline" type="AnimatedSprite" parent="Root"]
-
-transform/pos = Vector2( 7, 11 )
-frames = SubResource( 3 )
-animation = "idle"
+transform/pos = Vector2( 0, 14 )
 
 [node name="Raycasts" type="Node2D" parent="Root"]
+
+transform/pos = Vector2( -5, 0 )
 
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
 
-transform/pos = Vector2( -55, 4 )
+transform/pos = Vector2( -55, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
@@ -508,7 +516,7 @@ type_mask = 2
 "enemy",
 ]]
 
-transform/pos = Vector2( 5, 4 )
+transform/pos = Vector2( 5, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
@@ -518,31 +526,10 @@ type_mask = 2
 "enemy",
 ]]
 
-transform/pos = Vector2( 65, 4 )
+transform/pos = Vector2( 65, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
 type_mask = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/charging = SubResource( 4 )
-"anims/charging (copy)" = SubResource( 5 )
-anims/enter = SubResource( 6 )
-anims/hidden = SubResource( 7 )
-anims/hide = SubResource( 8 )
-anims/shooting = SubResource( 9 )
-next/charging = "shooting"
-"next/charging (copy)" = "shooting"
-next/enter = "charging"
-next/hide = "hidden"
-next/shooting = "hide"
-playback/active = true
-playback/speed = 1.0
-blend_times = [ "charging", "shooting", 0.005, "enter", "charging", 0.005, "shooting", "hide", 0.005 ]
-autoplay = "hidden"
 
 
