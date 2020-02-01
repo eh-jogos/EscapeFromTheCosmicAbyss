@@ -1031,7 +1031,7 @@ upgrade_multiple = 30
 level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 test_mode = "story"
-test_level_or_points = 6
+test_level_or_points = 12
 
 [node name="AutoBoost" type="Timer" parent="."]
 
@@ -1539,6 +1539,8 @@ visibility/visible = false
 transform/pos = Vector2( 960, 540 )
 
 [node name="Player" parent="." instance=ExtResource( 53 )]
+
+is_invincible = false
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
