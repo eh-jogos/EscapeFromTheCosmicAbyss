@@ -5,7 +5,7 @@ export(String, FILE) var intro_cutscene
 export(String, FILE) var end_cutscene
 
 var tutorial = false
-var intro_beats = [1,2,4,1,2]
+var intro_beats = [1,2,1,2,4]
 var intro_halfs =  [0,0,1,1,1]
 var end_beat = 4
 var boss = {
@@ -18,7 +18,7 @@ var boss = {
 	"sequence_halfs":  [[2,2,6,2,3,2,5,2,2,6,4]],
 	"boss_node": "MidBackRowBoss",
 	"animations": ["scream"],
-	"animations_countdowns": [5],
+	"animations_countdowns": [30],
 }
 
 var beats = {

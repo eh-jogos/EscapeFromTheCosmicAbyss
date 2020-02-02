@@ -1,4 +1,4 @@
-extends AnimatedSprite
+extends Node2D
 
 var animator
 
