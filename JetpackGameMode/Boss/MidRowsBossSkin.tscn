@@ -1,0 +1,290 @@
+[gd_scene load_steps=46 format=1]
+
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/bg2_boss_body.png" type="Texture" id=1]
+[ext_resource path="res://JetpackGameMode/Boss/BackgroundBoss.gd" type="Script" id=2]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_shape_01.png" type="Texture" id=3]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_shape_02.png" type="Texture" id=4]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_shape_03.png" type="Texture" id=5]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_shape_04.png" type="Texture" id=6]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_shape_05.png" type="Texture" id=7]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_shape_01.png" type="Texture" id=8]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_shape_02.png" type="Texture" id=9]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_shape_03.png" type="Texture" id=10]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_shape_04.png" type="Texture" id=11]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_shape_05.png" type="Texture" id=12]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_outline_01.png" type="Texture" id=13]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_outline_02.png" type="Texture" id=14]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_outline_03.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_outline_04.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/iris_outline_05.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_outline_01.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_outline_02.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_outline_03.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_outline_04.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/eye/eye_outline_05.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_outline_01.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_outline_02.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_outline_03.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_outline_04.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_outline_05.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_shape_01.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_shape_02.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_shape_03.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_shape_04.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_shape_05.png" type="Texture" id=32]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_teeth_01.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_teeth_02.png" type="Texture" id=34]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_teeth_03.png" type="Texture" id=35]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_teeth_04.png" type="Texture" id=36]
+[ext_resource path="res://JetpackGameMode/Boss/bg2_boss/mouth/mouth_teeth_05.png" type="Texture" id=37]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "idle"
+length = 0.7
+loop = true
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Eye/EyeShape:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Eye/Iris/IrisShape:frame")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Eye/Iris/IrisOutline:frame")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Eye/EyeOutline:frame")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Mouth/MouthOutline:frame")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Mouth/MouthOutline/MouthShape:frame")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Mouth/MouthOutline/MouthTeeth:frame")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.7 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0, 7 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Eye/EyeOutline:transform/pos")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.49, 0.6, 0.69 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 6, 0 ), Vector2( -9, -11 ), Vector2( 3, -5 ), Vector2( -6, -9 ), Vector2( -3, -3 ), Vector2( -6, -9 ), Vector2( 3, -5 ), Vector2( 6, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Mouth/MouthOutline/MouthTeeth:transform/pos")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.3, 0.69 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 1, 0 ), Vector2( -4, 2 ), Vector2( 1, 0 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="MidRowsBossSkin" type="Sprite"]
+
+transform/pos = Vector2( -430, 620 )
+texture = ExtResource( 1 )
+modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
+script/script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/idle = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "idle"
+
+[node name="Eye" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -580.326, -66.3229 )
+
+[node name="EyeShape" type="AnimatedSprite" parent="Eye"]
+
+frames = SubResource( 2 )
+animation = "default"
+frame = 5
+modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
+
+[node name="Iris" type="Node2D" parent="Eye"]
+
+transform/pos = Vector2( -20.3567, 12.9543 )
+
+[node name="IrisShape" type="AnimatedSprite" parent="Eye/Iris"]
+
+transform/pos = Vector2( 30, 20 )
+frames = SubResource( 3 )
+animation = "default"
+frame = 5
+modulate = Color( 0, 1, 0.764706, 1 )
+
+[node name="IrisOutline" type="AnimatedSprite" parent="Eye/Iris"]
+
+transform/pos = Vector2( 30, 20 )
+frames = SubResource( 4 )
+animation = "default"
+frame = 5
+modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
+
+[node name="EyeOutline" type="AnimatedSprite" parent="Eye"]
+
+transform/pos = Vector2( -6, -9 )
+frames = SubResource( 5 )
+animation = "default"
+frame = 5
+modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+
+[node name="Mouth" type="Node2D" parent="."]
+
+transform/pos = Vector2( -580.326, -66.3229 )
+
+[node name="MouthOutline" type="AnimatedSprite" parent="Mouth"]
+
+transform/pos = Vector2( 182.499, 299.38 )
+frames = SubResource( 6 )
+animation = "default"
+frame = 5
+modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+
+[node name="MouthShape" type="AnimatedSprite" parent="Mouth/MouthOutline"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( 2, 2 )
+transform/scale = Vector2( 1.01, 1.01 )
+frames = SubResource( 7 )
+animation = "default"
+frame = 5
+modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+
+[node name="MouthTeeth" type="AnimatedSprite" parent="Mouth/MouthOutline"]
+
+visibility/behind_parent = true
+transform/pos = Vector2( -4, 2 )
+frames = SubResource( 8 )
+animation = "default"
+frame = 5
+modulate = Color( 0, 1, 0.764706, 1 )
+
+
