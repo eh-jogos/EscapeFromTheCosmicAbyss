@@ -1,4 +1,4 @@
-[gd_scene load_steps=172 format=1]
+[gd_scene load_steps=173 format=1]
 
 [ext_resource path="res://JetpackGameMode/Boss/FrontRow/boss_eye.png" type="Texture" id=1]
 [ext_resource path="res://JetpackGameMode/Boss/FrontRow/boss_scream.png" type="Texture" id=2]
@@ -9,23 +9,23 @@
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_03.png" type="Texture" id=7]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_04.png" type="Texture" id=8]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_05.png" type="Texture" id=9]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_01.png" type="Texture" id=10]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_02.png" type="Texture" id=11]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_03.png" type="Texture" id=12]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_04.png" type="Texture" id=13]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_01.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_02.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_03.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_01.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_03.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_05.png" type="Texture" id=19]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_06.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_01.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_02.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_03.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_01.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_02.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_03.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_01.png" type="Texture" id=10]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_02.png" type="Texture" id=11]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_03.png" type="Texture" id=12]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_01.png" type="Texture" id=13]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_03.png" type="Texture" id=14]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_05.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_06.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_01.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_02.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_03.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_01.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_02.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_03.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_01.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_02.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_03.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_04.png" type="Texture" id=26]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_01.png" type="Texture" id=27]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_02.png" type="Texture" id=28]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_03.png" type="Texture" id=29]
@@ -60,24 +60,24 @@
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_03.png" type="Texture" id=58]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_04.png" type="Texture" id=59]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_05.png" type="Texture" id=60]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_01.png" type="Texture" id=61]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_02.png" type="Texture" id=62]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_03.png" type="Texture" id=63]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_04.png" type="Texture" id=64]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_01.png" type="Texture" id=65]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_02.png" type="Texture" id=66]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_03.png" type="Texture" id=67]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_01.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_02.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_03.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_05.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_06.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_01.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_02.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_03.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_01.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_02.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_03.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_01.png" type="Texture" id=61]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_02.png" type="Texture" id=62]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_03.png" type="Texture" id=63]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_01.png" type="Texture" id=64]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_02.png" type="Texture" id=65]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_03.png" type="Texture" id=66]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_05.png" type="Texture" id=67]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_06.png" type="Texture" id=68]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_01.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_02.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_03.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_01.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_02.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_03.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_01.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_02.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_03.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_04.png" type="Texture" id=78]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_01.png" type="Texture" id=79]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_02.png" type="Texture" id=80]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_03.png" type="Texture" id=81]
@@ -87,22 +87,22 @@
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_03.png" type="Texture" id=85]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_04.png" type="Texture" id=86]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_05.png" type="Texture" id=87]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_01.png" type="Texture" id=88]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_02.png" type="Texture" id=89]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_03.png" type="Texture" id=90]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_04.png" type="Texture" id=91]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_01.png" type="Texture" id=92]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_02.png" type="Texture" id=93]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_03.png" type="Texture" id=94]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_01.png" type="Texture" id=95]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_02.png" type="Texture" id=96]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_03.png" type="Texture" id=97]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_04.png" type="Texture" id=98]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_05.png" type="Texture" id=99]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_06.png" type="Texture" id=100]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_01.png" type="Texture" id=101]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_02.png" type="Texture" id=102]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_03.png" type="Texture" id=103]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_01.png" type="Texture" id=88]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_02.png" type="Texture" id=89]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_03.png" type="Texture" id=90]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_01.png" type="Texture" id=91]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_02.png" type="Texture" id=92]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_03.png" type="Texture" id=93]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_04.png" type="Texture" id=94]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_05.png" type="Texture" id=95]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_06.png" type="Texture" id=96]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_01.png" type="Texture" id=97]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_02.png" type="Texture" id=98]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_03.png" type="Texture" id=99]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_01.png" type="Texture" id=100]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_02.png" type="Texture" id=101]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_03.png" type="Texture" id=102]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_04.png" type="Texture" id=103]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_03.png" type="Texture" id=104]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_04.png" type="Texture" id=105]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_05.png" type="Texture" id=106]
@@ -113,23 +113,23 @@
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_03.png" type="Texture" id=111]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_04.png" type="Texture" id=112]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_05.png" type="Texture" id=113]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_01.png" type="Texture" id=114]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_02.png" type="Texture" id=115]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_03.png" type="Texture" id=116]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_04.png" type="Texture" id=117]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_01.png" type="Texture" id=118]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_02.png" type="Texture" id=119]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_03.png" type="Texture" id=120]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_01.png" type="Texture" id=121]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_03.png" type="Texture" id=122]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_05.png" type="Texture" id=123]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_06.png" type="Texture" id=124]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_01.png" type="Texture" id=125]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_02.png" type="Texture" id=126]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_03.png" type="Texture" id=127]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_01.png" type="Texture" id=128]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_02.png" type="Texture" id=129]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_03.png" type="Texture" id=130]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_01.png" type="Texture" id=114]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_02.png" type="Texture" id=115]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_03.png" type="Texture" id=116]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_01.png" type="Texture" id=117]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_03.png" type="Texture" id=118]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_05.png" type="Texture" id=119]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_06.png" type="Texture" id=120]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_01.png" type="Texture" id=121]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_02.png" type="Texture" id=122]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_03.png" type="Texture" id=123]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_01.png" type="Texture" id=124]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_02.png" type="Texture" id=125]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_03.png" type="Texture" id=126]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_01.png" type="Texture" id=127]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_02.png" type="Texture" id=128]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_03.png" type="Texture" id=129]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_04.png" type="Texture" id=130]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_01.png" type="Texture" id=131]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_02.png" type="Texture" id=132]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_03.png" type="Texture" id=133]
@@ -163,7 +163,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -140, -500 ) ]
+"values": [ Vector2( -500, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:visibility/visible")
@@ -176,27 +176,27 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath(".:modulate")
+tracks/2/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins:rect/size")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ) ]
+"values": [ Vector2( 10, 389 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("LaserMargins:rect/size")
+tracks/3/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 10, 389 ) ]
+"values": [ Vector2( 0, 10 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
+tracks/4/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
@@ -206,7 +206,7 @@ tracks/4/keys = {
 "values": [ Vector2( 0, 10 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
+tracks/5/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
@@ -216,7 +216,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, 10 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
+tracks/6/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
@@ -226,362 +226,412 @@ tracks/6/keys = {
 "values": [ Vector2( 0, 10 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
+tracks/7/path = NodePath("FinalBossSkin:warning_color_3")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 10 ) ]
+"values": [ 0.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D5:cast_to")
+tracks/8/path = NodePath("FinalBossSkin:warning_color_2")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 10 ) ]
-}
-
-[sub_resource type="Animation" id=3]
-
-resource/name = "entrance"
-length = 1.5
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:playing")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:animation")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ "scream", "idle" ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:transform/pos")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -140, -500 ), Vector2( 256, -500 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath(".:visibility/visible")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-
-[sub_resource type="Animation" id=4]
-
-resource/name = "idle"
-length = 0.5
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:playing")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:animation")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath(".:transform/pos")
-tracks/2/interp = 1
-tracks/2/imported = false
-tracks/2/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 256, -500 ), Vector2( 256, -530 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath(".:visibility/visible")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath(".:modulate")
-tracks/4/interp = 1
-tracks/4/imported = false
-tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("LaserMargins:rect/size")
-tracks/5/interp = 1
-tracks/5/imported = false
-tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 10, 389 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
-tracks/6/interp = 1
-tracks/6/imported = false
-tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
-tracks/7/interp = 1
-tracks/7/imported = false
-tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ) ]
+"values": [ 0.0 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
+tracks/9/path = NodePath("FinalBossSkin:warning_color_1")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "entrance"
+length = 1.36
+loop = false
+step = 0.08
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.96 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 2,
+"values": [ "scream", "from_scream" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FinalBossSkin:warning_color_3")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FinalBossSkin:warning_color_2")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FinalBossSkin:warning_color_1")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "idle"
+length = 0.64
+loop = true
+step = 0.08
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.32 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -30 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visibility/visible")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "idle" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins:rect/size")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 10, 389 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
 "values": [ Vector2( 0, 10 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("FinalBossSkin:warning_color_3")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("FinalBossSkin:warning_color_2")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 tracks/10/type = "value"
-tracks/10/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D5:cast_to")
+tracks/10/path = NodePath("FinalBossSkin:warning_color_1")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 10 ) ]
+"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=5]
 
 resource/name = "laser_charge_down"
-length = 3.0
+length = 2.0
 loop = false
-step = 0.1
+step = 0.08
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:playing")
-tracks/0/interp = 1
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
+"times": FloatArray( 0, 0.48 ),
+"transitions": FloatArray( 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 350 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:animation")
+tracks/1/path = NodePath(".:visibility/visible")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "idle" ]
+"values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath(".:transform/pos")
+tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 256, -180 ) ]
+"times": FloatArray( 0, 0.24 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 2,
+"values": [ "to_laser", "idle_laser" ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/path = NodePath("FinalBossSkin:warning_color_1")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": FloatArray( 0, 0.64, 1.04 ),
+"transitions": FloatArray( 0, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath(".:modulate")
+tracks/4/path = NodePath("FinalBossSkin:warning_color_2")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0, 0.5, 1, 1.4, 1.8, 2.1, 2.4, 2.6, 2.8, 2.9, 3 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 1.12, 1.52 ),
+"transitions": FloatArray( 0, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ) ]
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FinalBossSkin:warning_color_3")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 1.6, 2 ),
+"transitions": FloatArray( 0, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=6]
 
 resource/name = "laser_charge_up"
-length = 3.0
+length = 2.0
 loop = false
-step = 0.1
+step = 0.08
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:playing")
-tracks/0/interp = 1
+tracks/0/path = NodePath(".:transform/pos")
+tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
+"times": FloatArray( 0, 0.24, 0.48 ),
+"transitions": FloatArray( 1, 1, 0.25 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 150 ), Vector2( 0, -30 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:animation")
+tracks/1/path = NodePath(".:visibility/visible")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "idle" ]
+"values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath(".:transform/pos")
+tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 256, -590 ) ]
+"times": FloatArray( 0, 0.24 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 2,
+"values": [ "", "idle_laser" ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:visibility/visible")
+tracks/3/path = NodePath("FinalBossSkin:warning_color_1")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": FloatArray( 0, 0.64, 1.04 ),
+"transitions": FloatArray( 0, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath(".:modulate")
+tracks/4/path = NodePath("FinalBossSkin:warning_color_2")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0, 0.5, 1, 1.4, 1.8, 2.1, 2.4, 2.6, 2.8, 2.9, 3 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 1.12, 1.52 ),
+"transitions": FloatArray( 0, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ), Color( 0.780392, 0.223529, 0.211765, 1 ), Color( 0.121569, 0.392157, 0.356863, 1 ) ]
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FinalBossSkin:warning_color_3")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 1.6, 2 ),
+"transitions": FloatArray( 0, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=7]
 
-resource/name = "laser_shot"
-length = 2.1
+resource/name = "laser_shot_down"
+length = 2.32
 loop = false
-step = 0.1
+step = 0.08
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:playing")
+tracks/0/path = NodePath(".:visibility/visible")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:animation")
-tracks/1/interp = 1
+tracks/1/path = NodePath(".:transform/pos")
+tracks/1/interp = 2
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "idle" ]
+"times": FloatArray( 0, 2, 2.32 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 350 ), Vector2( 0, 350 ), Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath(".:visibility/visible")
+tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": FloatArray( 0, 2.16 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 2,
+"values": [ "idle_laser", "from_laser" ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("LaserMargins:rect/size")
+tracks/3/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins:rect/size")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
 "times": FloatArray( 0, 0.2, 1.8, 2, 2.1 ),
 "transitions": FloatArray( 1, 1, 1, 0, 1 ),
 "update": 0,
-"values": [ Vector2( 10, 389 ), Vector2( 1930, 389 ), Vector2( 1930, 389 ), Vector2( 10, 389 ), Vector2( 10, 389 ) ]
+"values": [ Vector2( 10, 260 ), Vector2( 1930, 260 ), Vector2( 1930, 260 ), Vector2( 10, 260 ), Vector2( 10, 260 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("LaserMargins:rect/pos")
+tracks/4/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins:rect/pos")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
 "times": FloatArray( 0, 1.8, 2, 2.1 ),
 "transitions": FloatArray( 1, 1, 0, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 230 ), Vector2( 0, 230 ), Vector2( 1930, 230 ), Vector2( 0, 230 ) ]
+"values": [ Vector2( 0, -100 ), Vector2( 0, -100 ), Vector2( 1930, -100 ), Vector2( 0, -100 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
+tracks/5/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
@@ -591,7 +641,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
+tracks/6/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
@@ -601,7 +651,7 @@ tracks/6/keys = {
 "values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
+tracks/7/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
@@ -611,7 +661,7 @@ tracks/7/keys = {
 "values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
+tracks/8/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
@@ -621,14 +671,161 @@ tracks/8/keys = {
 "values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("LaserMargins/LaserCenter/Raycasts/RayCast2D5:cast_to")
+tracks/9/path = NodePath("FinalBossSkin:warning_color_3")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
+"times": FloatArray( 0, 1.92, 2.16 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("FinalBossSkin:warning_color_2")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 2, 2.24 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("FinalBossSkin:warning_color_1")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 2.08, 2.32 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=39]
+
+resource/name = "laser_shot_up"
+length = 2.32
+loop = false
+step = 0.08
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:transform/pos")
+tracks/1/interp = 2
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 2, 2.32 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -30 ), Vector2( 0, -30 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 2.16 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 2,
+"values": [ "idle_laser", "from_laser" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins:rect/size")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.2, 1.8, 2, 2.1 ),
+"transitions": FloatArray( 1, 1, 1, 0, 1 ),
+"update": 0,
+"values": [ Vector2( 10, 260 ), Vector2( 1930, 260 ), Vector2( 1930, 260 ), Vector2( 10, 260 ), Vector2( 10, 260 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins:rect/pos")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 1.8, 2, 2.1 ),
+"transitions": FloatArray( 1, 1, 0, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -100 ), Vector2( 0, -100 ), Vector2( 1930, -100 ), Vector2( 0, -100 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
 "times": FloatArray( 0, 0.2, 1.8, 2, 2.1 ),
 "transitions": FloatArray( 1, 1, 1, 0, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.2, 1.8, 2, 2.1 ),
+"transitions": FloatArray( 1, 1, 1, 0, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.2, 1.8, 2, 2.1 ),
+"transitions": FloatArray( 1, 1, 1, 0, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.2, 1.8, 2, 2.1 ),
+"transitions": FloatArray( 1, 1, 1, 0, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("FinalBossSkin:warning_color_1")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0, 2.08, 2.32 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("FinalBossSkin:warning_color_2")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 2, 2.24 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("FinalBossSkin:warning_color_3")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 1.92, 2.16 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -681,9 +878,9 @@ tracks/3/keys = {
 [sub_resource type="Animation" id=9]
 
 resource/name = "scream"
-length = 1.5
+length = 1.54
 loop = false
-step = 0.1
+step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:playing")
 tracks/0/interp = 1
@@ -706,13 +903,13 @@ tracks/1/keys = {
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath(".:transform/pos")
-tracks/2/interp = 1
+tracks/2/interp = 2
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5, 0.8 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": FloatArray( 0, 0.32, 0.8 ),
+"transitions": FloatArray( 0.25, 0.25, 1 ),
 "update": 0,
-"values": [ Vector2( 256, -500 ), Vector2( 216, -500 ), Vector2( 256, -500 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( -90, 100 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath(".:visibility/visible")
@@ -723,6 +920,46 @@ tracks/3/keys = {
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.48, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 2,
+"values": [ "to_scream", "first_scream", "scream" ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FinalBossSkin:warning_color_1")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FinalBossSkin:warning_color_2")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("FinalBossSkin:warning_color_3")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -772,34 +1009,7 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=11]
-
-resource/name = "loop"
-length = 0.4
-loop = true
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect/scale")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.2 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1.15 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect/pos")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.2 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 62 ), Vector2( 0, 42.125 ) ]
-}
-
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=40]
 
 resource/name = "first_scream"
 length = 0.24
@@ -980,10 +1190,10 @@ tracks/17/path = NodePath("BodyOutline/Tongue:transform/pos")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": FloatArray( 0, 0.24 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 476, 982 ) ]
+"values": [ Vector2( 476, 982 ), Vector2( 476, 982 ) ]
 }
 tracks/18/type = "value"
 tracks/18/path = NodePath("BodyOutline/Gengiva:frame")
@@ -1020,10 +1230,10 @@ tracks/21/path = NodePath("BodyOutline/Perdigotos:transform/pos")
 tracks/21/interp = 1
 tracks/21/imported = false
 tracks/21/keys = {
-"times": FloatArray( 0, 0.08, 0.16 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": FloatArray( 0, 0.08, 0.16, 0.24 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 716.634, 919.854 ), Vector2( 727.634, 932.854 ), Vector2( 753.634, 943.854 ) ]
+"values": [ Vector2( 716.634, 919.854 ), Vector2( 727.634, 932.854 ), Vector2( 753.634, 943.854 ), Vector2( 753.634, 943.854 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("BodyOutline/EyeOutline:transform/pos")
@@ -1065,8 +1275,18 @@ tracks/25/keys = {
 "update": 0,
 "values": [ 0.0, 2.20057, -2.2 ]
 }
+tracks/26/type = "value"
+tracks/26/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=41]
 
 resource/name = "from_angry"
 length = 0.16
@@ -1202,8 +1422,58 @@ tracks/12/keys = {
 "update": 0,
 "values": [ Vector2( 481, 763 ), Vector2( 471.3, 742.87 ) ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/Tongue:animation")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=14]
 
 resource/name = "from_laser"
 length = 0.16
@@ -1349,8 +1619,48 @@ tracks/13/keys = {
 "update": 1,
 "values": [ Vector2( 1.1, 1.1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ) ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/Tongue:animation")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=15]
 
 resource/name = "from_scream"
 length = 0.4
@@ -1606,10 +1916,19 @@ tracks/24/keys = {
 "update": 1,
 "values": [ 1, 0 ]
 }
+tracks/25/type = "value"
+tracks/25/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/25/interp = 1
+tracks/25/imported = false
+tracks/25/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=16]
 
-resource/name = "idle"
 length = 0.64
 loop = true
 step = 0.08
@@ -1743,8 +2062,58 @@ tracks/12/keys = {
 "update": 0,
 "values": [ Vector2( 471.3, 742.87 ), Vector2( 476, 734.935 ), Vector2( 476, 727 ), Vector2( 471.15, 734.935 ), Vector2( 471.3, 742.87 ) ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("BodyOutline/Tongue:animation")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=17]
 
 resource/name = "idle_angry"
 length = 0.4
@@ -1890,8 +2259,48 @@ tracks/13/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Tongue:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=42]
 
 resource/name = "idle_laser"
 length = 0.4
@@ -2037,8 +2446,48 @@ tracks/13/keys = {
 "update": 1,
 "values": [ Vector2( 1.1, 1.1 ), Vector2( 1.13333, 1.13333 ), Vector2( 1.16667, 1.16667 ), Vector2( 1.2, 1.2 ), Vector2( 1.15, 1.15 ), Vector2( 1.1, 1.1 ) ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/Tongue:animation")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=43]
 
 resource/name = "scream"
 length = 0.24
@@ -2304,8 +2753,18 @@ tracks/25/keys = {
 "update": 0,
 "values": [ 0.0, 2.20057, -2.2 ]
 }
+tracks/26/type = "value"
+tracks/26/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/26/interp = 1
+tracks/26/imported = false
+tracks/26/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=44]
 
 resource/name = "to_angry"
 length = 0.16
@@ -2441,8 +2900,58 @@ tracks/12/keys = {
 "update": 0,
 "values": [ Vector2( 471.3, 742.87 ), Vector2( 481, 763 ) ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/Tongue:animation")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=21]
 
 resource/name = "to_laser"
 length = 0.16
@@ -2588,8 +3097,48 @@ tracks/13/keys = {
 "update": 1,
 "values": [ Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1.1, 1.1 ) ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("BodyOutline/EyeOutline:transform/rot")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BodyOutline/Perdigotos:animation")
+tracks/15/interp = 1
+tracks/15/imported = false
+tracks/15/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/16/interp = 1
+tracks/16/imported = false
+tracks/16/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BodyOutline/Tongue:animation")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=22]
 
 resource/name = "to_scream"
 length = 0.4
@@ -2710,10 +3259,10 @@ tracks/11/path = NodePath("BodyOutline/EyeLines:transform/pos")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
-"times": FloatArray( 0, 0.16, 0.32, 0.4 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.16, 0.32, 0.4, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 505, 602 ), Vector2( 489, 571 ), Vector2( 477, 534 ), Vector2( 530, 493 ) ]
+"values": [ Vector2( 505, 602 ), Vector2( 489, 571 ), Vector2( 477, 534 ), Vector2( 518, 492 ), Vector2( 530, 493 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("BodyOutline/Teeth:frame")
@@ -2733,7 +3282,7 @@ tracks/13/keys = {
 "times": FloatArray( 0, 0.32, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 462.182, 1085.19 ), Vector2( 543.182, 933.19 ), Vector2( 602.182, 890.19 ) ]
+"values": [ Vector2( 462.182, 1085.19 ), Vector2( 543.182, 933.19 ), Vector2( 602.182, 893.19 ) ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("BodyOutline/Tongue:frame")
@@ -2753,7 +3302,7 @@ tracks/15/keys = {
 "times": FloatArray( 0, 0.32, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 473, 1011 ), Vector2( 473, 1011 ), Vector2( 476, 982 ) ]
+"values": [ Vector2( 473, 1011 ), Vector2( 473, 1011 ), Vector2( 473, 982 ) ]
 }
 tracks/16/type = "value"
 tracks/16/path = NodePath("BodyOutline/EyeOutline:transform/pos")
@@ -2762,8 +3311,8 @@ tracks/16/imported = false
 tracks/16/keys = {
 "times": FloatArray( 0, 0.08, 0.16, 0.24, 0.32, 0.4 ),
 "transitions": FloatArray( 1, 0, 1, 0, 4, 1 ),
-"update": 0,
-"values": [ Vector2( 481, 763 ), Vector2( 481, 763 ), Vector2( 511.5, 703 ), Vector2( 511.5, 703 ), Vector2( 517, 623 ), Vector2( 582, 603 ) ]
+"update": 1,
+"values": [ Vector2( 481, 763 ), Vector2( 481, 763 ), Vector2( 511.5, 703 ), Vector2( 511.5, 703 ), Vector2( 517, 623 ), Vector2( 592, 603 ) ]
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("BodyOutline/EyeOutline:transform/rot")
@@ -2803,10 +3352,30 @@ tracks/20/keys = {
 "times": FloatArray( 0, 0.32, 0.4 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0, 0 ), Vector2( 599.927, 987.943 ), Vector2( 676, 680 ) ]
+"values": [ Vector2( 600, 985 ), Vector2( 600, 985 ), Vector2( 677, 979 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("BodyOutline/EyeOutline:transform/scale")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("BodyOutline/Gengiva:animation")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ "default" ]
 }
 
-[sub_resource type="SpriteFrames" id=13]
+[sub_resource type="SpriteFrames" id=45]
 
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ],
@@ -2814,29 +3383,29 @@ animations = [ {
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "idle_angry",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "to_laser",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": false,
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
-"loop": false,
-"name": "to_laser",
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 28 ) ],
@@ -2845,7 +3414,34 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=38]
+[sub_resource type="Animation" id=11]
+
+resource/name = "loop"
+length = 0.4
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect/scale")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1.15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 62 ), Vector2( 0, 42.125 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=24]
 
 animations = [ {
 "frames": [ null ],
@@ -2859,7 +3455,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=25]
 
 resource/name = "BASE"
 length = 0.01
@@ -2873,7 +3469,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "change_color" ]
+"values": [ "default" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:frame")
@@ -2906,7 +3502,7 @@ tracks/3/keys = {
 "values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
 }
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=26]
 
 resource/name = "charging"
 length = 0.4
@@ -2953,7 +3549,7 @@ tracks/3/keys = {
 "values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ), Color( 0.28125, 0.28125, 0.28125, 1 ) ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=27]
 
 resource/name = "BASE"
 length = 0.01
@@ -2967,7 +3563,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "change_color" ]
+"values": [ "default" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:frame")
@@ -3000,7 +3596,7 @@ tracks/3/keys = {
 "values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
 }
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=28]
 
 resource/name = "charging"
 length = 0.4
@@ -3047,7 +3643,7 @@ tracks/3/keys = {
 "values": [ Color( 0.28125, 0.28125, 0.28125, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ) ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=29]
 
 resource/name = "BASE"
 length = 0.01
@@ -3061,7 +3657,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ "change_color" ]
+"values": [ "default" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:frame")
@@ -3081,7 +3677,7 @@ tracks/2/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Color( 0.558594, 0.558594, 0.558594, 1 ) ]
+"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../IrisOutline/Iris/Pupil:modulate")
@@ -3094,7 +3690,7 @@ tracks/3/keys = {
 "values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=30]
 
 resource/name = "charging"
 length = 0.4
@@ -3141,7 +3737,7 @@ tracks/3/keys = {
 "values": [ Color( 0.558594, 0.558594, 0.558594, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=39]
+[sub_resource type="SpriteFrames" id=31]
 
 animations = [ {
 "frames": [ null ],
@@ -3160,7 +3756,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=40]
+[sub_resource type="SpriteFrames" id=32]
 
 animations = [ {
 "frames": [ ExtResource( 47 ) ],
@@ -3179,7 +3775,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=41]
+[sub_resource type="SpriteFrames" id=33]
 
 animations = [ {
 "frames": [ null ],
@@ -3193,7 +3789,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=34]
 
 animations = [ {
 "frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ) ],
@@ -3201,29 +3797,29 @@ animations = [ {
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 62 ) ],
-"loop": true,
-"name": "idle_angry",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 66 ) ],
+"frames": [ ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 62 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
+"frames": [ ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
+"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ) ],
+"loop": false,
+"name": "to_laser",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ) ],
 "loop": false,
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ) ],
-"loop": false,
-"name": "to_laser",
+"frames": [ ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 77 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 81 ), ExtResource( 80 ) ],
@@ -3232,7 +3828,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=19]
+[sub_resource type="SpriteFrames" id=35]
 
 animations = [ {
 "frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 84 ) ],
@@ -3240,28 +3836,28 @@ animations = [ {
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 89 ) ],
-"loop": true,
-"name": "idle_angry",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 93 ) ],
+"frames": [ ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 89 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"frames": [ ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ) ],
+"frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ) ],
 "loop": false,
 "name": "to_angry",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 101 ) ],
+"loop": true,
+"name": "idle_angry",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=23]
+[sub_resource type="SpriteFrames" id=36]
 
 animations = [ {
 "frames": [ null ],
@@ -3280,7 +3876,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="SpriteFrames" id=37]
 
 animations = [ {
 "frames": [ ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 112 ), ExtResource( 111 ), ExtResource( 110 ) ],
@@ -3288,29 +3884,29 @@ animations = [ {
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 116 ), ExtResource( 115 ) ],
-"loop": true,
-"name": "idle_angry",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 119 ) ],
+"frames": [ ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 115 ) ],
 "loop": true,
 "name": "scream",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 121 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ) ],
+"frames": [ ExtResource( 117 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ) ],
+"frames": [ ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ) ],
+"loop": false,
+"name": "to_laser",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ) ],
 "loop": false,
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ) ],
-"loop": false,
-"name": "to_laser",
+"frames": [ ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 129 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 133 ), ExtResource( 132 ) ],
@@ -3322,9 +3918,10 @@ animations = [ {
 [node name="Boss" type="AnimatedSprite"]
 
 visibility/self_opacity = 0.0
-transform/pos = Vector2( -140, -500 )
+transform/pos = Vector2( -90, 100 )
 frames = SubResource( 1 )
 animation = "idle"
+playing = true
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 script/script = ExtResource( 3 )
@@ -3339,21 +3936,23 @@ anims/entrance = SubResource( 3 )
 anims/idle = SubResource( 4 )
 anims/laser_charge_down = SubResource( 5 )
 anims/laser_charge_up = SubResource( 6 )
-anims/laser_shot = SubResource( 7 )
+anims/laser_shot_down = SubResource( 7 )
+anims/laser_shot_up = SubResource( 39 )
 anims/last_scream = SubResource( 8 )
 anims/scream = SubResource( 9 )
 anims/tired_retreat = SubResource( 10 )
 next/entrance = "idle"
-next/laser_charge_down = "laser_shot"
-next/laser_charge_up = "laser_shot"
-next/laser_shot = "idle"
+next/laser_charge_down = "laser_shot_down"
+next/laser_charge_up = "laser_shot_up"
+next/laser_shot_down = "idle"
+next/laser_shot_up = "idle"
 next/last_scream = "idle"
 next/scream = "idle"
 next/tired_retreat = "base"
 playback/active = true
 playback/speed = 1.0
-blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot", 0.05, "laser_charge_up", "laser_shot", 0.05, "laser_shot", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
-autoplay = "base"
+blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down", 0.05, "laser_charge_up", "laser_shot_down", 0.05, "laser_shot_down", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
+autoplay = ""
 
 [node name="CollisionTimer" type="Timer" parent="."]
 
@@ -3362,100 +3961,10 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="LaserMargins" type="ColorFrame" parent="."]
-
-editor/display_folded = true
-visibility/behind_parent = true
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 230.0
-margin/right = 10.0
-margin/bottom = 619.0
-color = Color( 0.780392, 0.223529, 0.211765, 1 )
-
-[node name="LaserCenter" type="ColorFrame" parent="LaserMargins"]
-
-anchor/right = 1
-anchor/bottom = 1
-rect/scale = Vector2( 1, 1.07586 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 51.9484
-margin/right = 4.0
-margin/bottom = 68.0516
-color = Color( 1, 1, 1, 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LaserMargins/LaserCenter"]
-
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 11 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
-autoplay = "loop"
-
-[node name="Raycasts" type="Node2D" parent="LaserMargins/LaserCenter"]
-
-[node name="RayCast2D1" type="RayCast2D" parent="LaserMargins/LaserCenter/Raycasts"]
-
-transform/pos = Vector2( 0, 16.6963 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.873991, 1 )
-enabled = true
-cast_to = Vector2( 0, 10 )
-layer_mask = 1
-type_mask = 2
-
-[node name="RayCast2D2" type="RayCast2D" parent="LaserMargins/LaserCenter/Raycasts"]
-
-transform/pos = Vector2( 0, 70.0097 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.873991, 1 )
-enabled = true
-cast_to = Vector2( 0, 10 )
-layer_mask = 1
-type_mask = 2
-
-[node name="RayCast2D3" type="RayCast2D" parent="LaserMargins/LaserCenter/Raycasts"]
-
-transform/pos = Vector2( 0, 132.937 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.873991, 1 )
-enabled = true
-cast_to = Vector2( 0, 10 )
-layer_mask = 1
-type_mask = 2
-
-[node name="RayCast2D4" type="RayCast2D" parent="LaserMargins/LaserCenter/Raycasts"]
-
-transform/pos = Vector2( 0, 194.116 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.873991, 1 )
-enabled = true
-cast_to = Vector2( 0, 10 )
-layer_mask = 1
-type_mask = 2
-
-[node name="RayCast2D5" type="RayCast2D" parent="LaserMargins/LaserCenter/Raycasts"]
-
-transform/pos = Vector2( 0, 247.43 )
-transform/rot = 90.0
-transform/scale = Vector2( 0.873991, 1 )
-enabled = true
-cast_to = Vector2( 0, 10 )
-layer_mask = 1
-type_mask = 2
-
 [node name="FinalBossSkin" type="Node2D" parent="."]
 
+visibility/behind_parent = true
+transform/pos = Vector2( -480, 0 )
 script/script = ExtResource( 4 )
 warning_color_1 = 0.0
 warning_color_2 = 0.0
@@ -3466,17 +3975,17 @@ warning_color_3 = 0.0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/first_scream = SubResource( 24 )
-anims/from_angry = SubResource( 28 )
-anims/from_laser = SubResource( 29 )
-anims/from_scream = SubResource( 27 )
-anims/idle = SubResource( 12 )
-anims/idle_angry = SubResource( 21 )
-anims/idle_laser = SubResource( 30 )
-anims/scream = SubResource( 25 )
-anims/to_angry = SubResource( 22 )
-anims/to_laser = SubResource( 31 )
-anims/to_scream = SubResource( 26 )
+anims/first_scream = SubResource( 40 )
+anims/from_angry = SubResource( 41 )
+anims/from_laser = SubResource( 14 )
+anims/from_scream = SubResource( 15 )
+anims/idle = SubResource( 16 )
+anims/idle_angry = SubResource( 17 )
+anims/idle_laser = SubResource( 42 )
+anims/scream = SubResource( 43 )
+anims/to_angry = SubResource( 44 )
+anims/to_laser = SubResource( 21 )
+anims/to_scream = SubResource( 22 )
 next/first_scream = "scream"
 next/from_angry = "idle"
 next/from_laser = "idle"
@@ -3492,19 +4001,102 @@ autoplay = ""
 
 [node name="BodyOutline" type="AnimatedSprite" parent="FinalBossSkin"]
 
-frames = SubResource( 13 )
-animation = "to_laser"
+transform/pos = Vector2( 0, -901 )
+frames = SubResource( 45 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
 [node name="EyeOutline" type="Sprite" parent="FinalBossSkin/BodyOutline"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 471.3, 742.87 )
+transform/pos = Vector2( 632, 603 )
+transform/rot = 0.633245
 texture = ExtResource( 31 )
 centered = false
 offset = Vector2( -40, -162 )
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
+
+[node name="LaserMargins" type="ColorFrame" parent="FinalBossSkin/BodyOutline/EyeOutline"]
+
+visibility/behind_parent = true
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = -100.0
+margin/right = 10.0
+margin/bottom = 160.0
+color = Color( 0.780392, 0.223529, 0.211765, 1 )
+
+[node name="LaserCenter" type="ColorFrame" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 62.0
+margin/right = 4.0
+margin/bottom = 58.0
+color = Color( 1, 1, 1, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/loop = SubResource( 11 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "loop"
+
+[node name="Raycasts" type="Node2D" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter"]
+
+[node name="RayCast2D1" type="RayCast2D" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
+
+transform/pos = Vector2( -3e-06, -45 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.873991, 1 )
+enabled = true
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D2" type="RayCast2D" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
+
+transform/pos = Vector2( -3e-06, 35 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.873991, 1 )
+enabled = true
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D3" type="RayCast2D" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
+
+transform/pos = Vector2( -4e-06, 115 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.873991, 1 )
+enabled = true
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
+
+[node name="RayCast2D4" type="RayCast2D" parent="FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
+
+transform/pos = Vector2( 0, 190 )
+transform/rot = 90.0
+transform/scale = Vector2( 0.873991, 1 )
+enabled = true
+cast_to = Vector2( 0, 10 )
+layer_mask = 1
+type_mask = 2
 
 [node name="Eye" type="Sprite" parent="FinalBossSkin/BodyOutline/EyeOutline"]
 
@@ -3515,8 +4107,8 @@ modulate = Color( 0, 1, 0.764706, 1 )
 
 [node name="ColorChange1" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline/EyeOutline/Eye"]
 
-frames = SubResource( 38 )
-animation = "change_color"
+frames = SubResource( 24 )
+animation = "default"
 centered = false
 offset = Vector2( -30, -152 )
 modulate = Color( 0.78125, 1, 0, 1 )
@@ -3526,8 +4118,8 @@ modulate = Color( 0.78125, 1, 0, 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/BASE = SubResource( 32 )
-anims/charging = SubResource( 33 )
+anims/BASE = SubResource( 25 )
+anims/charging = SubResource( 26 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -3535,8 +4127,8 @@ autoplay = ""
 
 [node name="ColorChange2" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline/EyeOutline/Eye"]
 
-frames = SubResource( 38 )
-animation = "change_color"
+frames = SubResource( 24 )
+animation = "default"
 centered = false
 offset = Vector2( -30, -152 )
 modulate = Color( 1, 0.515625, 0, 1 )
@@ -3546,8 +4138,8 @@ modulate = Color( 1, 0.515625, 0, 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/BASE = SubResource( 34 )
-anims/charging = SubResource( 35 )
+anims/BASE = SubResource( 27 )
+anims/charging = SubResource( 28 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -3555,8 +4147,8 @@ autoplay = ""
 
 [node name="ColorChange3" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline/EyeOutline/Eye"]
 
-frames = SubResource( 38 )
-animation = "change_color"
+frames = SubResource( 24 )
+animation = "default"
 centered = false
 offset = Vector2( -30, -152 )
 modulate = Color( 1, 0, 0.257812, 1 )
@@ -3566,8 +4158,8 @@ modulate = Color( 1, 0, 0.257812, 1 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/BASE = SubResource( 36 )
-anims/charging = SubResource( 37 )
+anims/BASE = SubResource( 29 )
+anims/charging = SubResource( 30 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -3575,7 +4167,8 @@ autoplay = ""
 
 [node name="IrisOutline" type="Sprite" parent="FinalBossSkin/BodyOutline/EyeOutline/Eye"]
 
-transform/pos = Vector2( 291, 15 )
+transform/pos = Vector2( 290.993, 15.6299 )
+transform/rot = -0.277201
 texture = ExtResource( 39 )
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
@@ -3594,18 +4187,20 @@ modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 [node name="Tongue" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 473, 1014 )
-frames = SubResource( 39 )
-animation = "to_scream"
+transform/pos = Vector2( 476, 982 )
+frames = SubResource( 31 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 
 [node name="Teeth" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 457.182, 1081.19 )
-frames = SubResource( 40 )
-animation = "default"
+transform/pos = Vector2( 659.182, 836.19 )
+frames = SubResource( 32 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0, 1, 0.764706, 1 )
 
@@ -3613,40 +4208,44 @@ modulate = Color( 0, 1, 0.764706, 1 )
 
 visibility/behind_parent = true
 transform/pos = Vector2( 597.804, 843.095 )
-frames = SubResource( 41 )
-animation = ""
+frames = SubResource( 33 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0.152941, 0.309804, 0.270588, 1 )
 
 [node name="Body" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]
 
 transform/pos = Vector2( 8, 9 )
-frames = SubResource( 18 )
-animation = "to_laser"
+frames = SubResource( 34 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0.137255, 0.4, 0.364706, 1 )
 
 [node name="MouthLines" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]
 
-transform/pos = Vector2( 587.153, 1130.54 )
-frames = SubResource( 19 )
-animation = "to_angry"
+transform/pos = Vector2( 672.153, 873.54 )
+frames = SubResource( 35 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
 [node name="Perdigotos" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]
 
 transform/pos = Vector2( 716.634, 919.854 )
-frames = SubResource( 23 )
+frames = SubResource( 36 )
 animation = "default"
 centered = false
 modulate = Color( 0, 1, 0.764706, 1 )
 
 [node name="EyeLines" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]
 
-transform/pos = Vector2( 505, 602 )
-frames = SubResource( 20 )
-animation = "to_laser"
+transform/pos = Vector2( 559, 487 )
+frames = SubResource( 37 )
+animation = "scream"
+frame = 2
 centered = false
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
