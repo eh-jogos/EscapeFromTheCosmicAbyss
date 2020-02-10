@@ -13,12 +13,12 @@ var boss = {
 	"laser": false,
 	"laser_countdowns":[],
 	"scream": true,
-	"countdown": [65],
+	"countdown": [10],
 	"sequence_beats": [[3,2,2,4,3,6,5,2,3,2,5,3,2,6,2]],
 	"sequence_halfs":  [[2,4,5,2,2,3,2,4,6,2,3,2,2,3,4]],
 	"boss_node": "MidFrontRowBoss",
 	"animations": ["scream"],
-	"animations_countdowns": [65],
+	"animations_countdowns": [10],
 }
 
 var beats = {
@@ -34,10 +34,10 @@ var beats = {
 
 var half_beats = {
 	"none": 30,
-	"tentacles": 10,
+	"tentacles": 13,
 	"double_pipe": 14,
 	"triple_pipe": 6,
-	"wall": 3,
+	"wall": 0,
 	"laser_eye": 0,
 	"shield_up": 1,
 	"ammo_up": 0

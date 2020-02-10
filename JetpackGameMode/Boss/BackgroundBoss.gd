@@ -13,10 +13,12 @@ var animations = []
 var current_laser_target
 var current_animation_target
 var current_animation
+var up_down_count = 0
 
 
 func _ready():
 	animator = get_node("AnimationPlayer")
+	up_down_count = randi()%2
 
 
 func set_boss_data(laser_targets, animation_targets, animations):
@@ -63,12 +65,13 @@ func _on_beat_spawned():
 		if animation_index < animation_targets.size():
 			set_current_animation_variables()
 	elif current_laser_target != null and count == current_laser_target:
-		var is_up = randi()%2
+		var is_up = up_down_count % 2
 		if is_up:
 			animator.play("laser_charge_up")
 		else:
 			animator.play("laser_charge_down")
 		
+		up_down_count += 1
 		laser_index += 1
 		if laser_index < laser_targets.size():
 			set_current_laser()
