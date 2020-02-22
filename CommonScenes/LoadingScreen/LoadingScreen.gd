@@ -45,7 +45,7 @@ func load_above(path, focus_path, origin_scene, path_is_node = false):
 	#scene_above.set_pos(scenes_bellow.get_global_pos())
 	
 	print("Scenes Below: %s | Previous Focuses%s"%[
-			scenes_bellow,
+			_get_scenes_below_names(),
 			previous_focuses
 	])
 
@@ -64,7 +64,7 @@ func background_loading(path):
 func clear_above():
 	if scene_above == null:
 		print("CLEAR ABOVE ERROR | Scene Above is null | Scenes Below: %s | Previous Focuses: %s"%[
-				scenes_bellow,
+				_get_scenes_below_names(),
 				previous_focuses
 		])
 		return
@@ -91,8 +91,8 @@ func clear_above():
 		previous_focus.grab_focus()
 	
 	print("Scenes Below: %s | Scene Below: %s | Previous Focus: %s "%[
-			scenes_bellow,
-			scene_below,
+			_get_scenes_below_names(),
+			scene_below.get_name(),
 			previous_focus,
 	])
 	
@@ -100,7 +100,7 @@ func clear_above():
 func reset_above_below():
 	if scene_above == null:
 		print("RESET ABOVE BELOW ERROR | Scene Above is null | Scenes Below: %s | Previous Focuses: %s"%[
-				scenes_bellow,
+				_get_scenes_below_names(),
 				previous_focuses
 		])
 		return
@@ -190,4 +190,12 @@ func black_transition_from_above():
 	yield(animation, "finished")
 	reset()
 	emit_signal("transition_ended")
+
+
+func _get_scenes_below_names():
+	var names_array = []
+	if scenes_bellow.size() > 0:
+		for scene in scenes_bellow:
+			names_array.append(scene.get_name())
 	
+	return names_array
