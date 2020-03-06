@@ -43,6 +43,9 @@ func _on_Extras_pressed():
 	ScreenManager.load_above(extras_scene, last_focus, self, true)
 
 func _on_quit_pressed():
+	var quit_timer = get_node("MenuContainer/QuitGame/Timer")
+	quit_timer.start()
+	yield(quit_timer, "timeout")
 	get_tree().quit()
 
 func _on_Continue_pressed():

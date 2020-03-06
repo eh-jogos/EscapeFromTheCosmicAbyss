@@ -739,7 +739,6 @@ texture = ExtResource( 3 )
 
 [node name="SectionLabels" type="Control" parent="."]
 
-editor/display_folded = true
 visibility/opacity = 0.9
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -822,9 +821,8 @@ percent/visible = false
 
 [node name="Cooldown" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
-focus_neighbour/top = NodePath("../../Buttons/Close")
+focus_neighbour/top = NodePath("../../Buttons/Confirm")
 focus_neighbour/right = NodePath(".")
 focus_neighbour/bottom = NodePath("../StartSpeed")
 focus/ignore_mouse = false
@@ -847,7 +845,6 @@ script/script = ExtResource( 8 )
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown"]
 
-editor/display_folded = true
 transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
@@ -1372,6 +1369,7 @@ autoplay = "base"
 
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../LaserStrength")
 focus_neighbour/right = NodePath(".")
@@ -1475,7 +1473,7 @@ editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartingAmmo")
 focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("../../Buttons/Close")
+focus_neighbour/bottom = NodePath("../../Buttons/Confirm")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -1616,7 +1614,6 @@ autoplay = "scanline loop"
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 
-editor/display_folded = true
 anchor/left = 1
 anchor/top = 1
 anchor/right = 1
@@ -1638,18 +1635,18 @@ __meta__ = {
 [node name="Reset" type="Button" parent="Buttons"]
 
 rect/min_size = Vector2( 306, 72 )
-focus_neighbour/left = NodePath("../Close")
+focus_neighbour/left = NodePath("../Confirm")
 focus_neighbour/top = NodePath("../../SectionLabels/Shields")
-focus_neighbour/right = NodePath("../SaveApply")
+focus_neighbour/right = NodePath("../Confirm")
 focus_neighbour/bottom = NodePath("../../SectionLabels/Cooldown")
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 29 )
-margin/left = 0.0
+margin/left = 293.0
 margin/top = 0.0
-margin/right = 306.0
+margin/right = 599.0
 margin/bottom = 72.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -1657,34 +1654,12 @@ shortcut = null
 text = "Reset Changes"
 flat = false
 script/script = ExtResource( 30 )
+pressed_sfx = "ui_change"
 
-[node name="SaveApply" type="Button" parent="Buttons"]
-
-rect/min_size = Vector2( 302, 72 )
-focus_neighbour/left = NodePath("../Reset")
-focus_neighbour/top = NodePath("../../SectionLabels/Shields")
-focus_neighbour/right = NodePath("../Close")
-focus_neighbour/bottom = NodePath("../../SectionLabels/Cooldown")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 29 )
-margin/left = 321.0
-margin/top = 0.0
-margin/right = 623.0
-margin/bottom = 72.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Apply Changes"
-flat = false
-script/script = ExtResource( 30 )
-
-[node name="Close" type="Button" parent="Buttons"]
+[node name="Confirm" type="Button" parent="Buttons"]
 
 rect/min_size = Vector2( 147, 72 )
-focus_neighbour/left = NodePath("../SaveApply")
+focus_neighbour/left = NodePath("../Reset")
 focus_neighbour/top = NodePath("../../SectionLabels/Shields")
 focus_neighbour/right = NodePath("../Reset")
 focus_neighbour/bottom = NodePath("../../SectionLabels/Cooldown")
@@ -1693,16 +1668,17 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 theme/theme = ExtResource( 29 )
-margin/left = 638.0
+margin/left = 614.0
 margin/top = 0.0
 margin/right = 785.0
 margin/bottom = 72.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Close"
+text = "Confirm"
 flat = false
 script/script = ExtResource( 30 )
+pressed_sfx = "ui_confirm"
 
 [node name="ColorFrame1" type="ColorFrame" parent="."]
 
@@ -1754,8 +1730,6 @@ color = Color( 0, 0.924107, 1, 1 )
 
 [connection signal="pressed" from="Buttons/Reset" to="." method="_on_Reset_pressed"]
 
-[connection signal="pressed" from="Buttons/SaveApply" to="." method="_on_SaveApply_pressed"]
-
-[connection signal="pressed" from="Buttons/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="Buttons/Confirm" to="." method="_on_Close_pressed"]
 
 

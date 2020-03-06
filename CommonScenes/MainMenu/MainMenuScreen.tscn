@@ -33,7 +33,6 @@ stretch_mode = 0
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 
-editor/display_folded = true
 rect/min_size = Vector2( 509, 356 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -91,6 +90,7 @@ shortcut = null
 text = "Continue"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
 
 [node name="NewGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
@@ -111,6 +111,7 @@ shortcut = null
 text = "New Game"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
 
 [node name="ArcadeMode" type="Button" parent="MenuContainer"]
 
@@ -129,6 +130,7 @@ shortcut = null
 text = "Arcade Mode"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_change"
 
 [node name="SpeedrunMode" type="Button" parent="MenuContainer"]
 
@@ -147,6 +149,7 @@ shortcut = null
 text = "Speedrun Mode"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_change"
 
 [node name="Category15" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -168,6 +171,7 @@ shortcut = null
 text = "15 Upgrade Points"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
 
 [node name="Category30" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -189,6 +193,7 @@ shortcut = null
 text = "30 Upgrade Points"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
 
 [node name="Category40" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -210,6 +215,7 @@ shortcut = null
 text = "40 Upgrade Points"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
 
 [node name="Unlimited" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -231,6 +237,7 @@ shortcut = null
 text = "Unlimited"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
 
 [node name="Back" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -252,6 +259,7 @@ shortcut = null
 text = "Back"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_change"
 
 [node name="Options" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
@@ -272,6 +280,7 @@ shortcut = null
 text = "Options"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_change"
 
 [node name="Extras" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
@@ -292,6 +301,7 @@ shortcut = null
 text = "Extras"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_change"
 
 [node name="QuitGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
@@ -312,6 +322,14 @@ shortcut = null
 text = "Quit Game"
 flat = false
 script/script = ExtResource( 5 )
+pressed_sfx = "ui_confirm"
+
+[node name="Timer" type="Timer" parent="MenuContainer/QuitGame"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
 
 [node name="Label" type="Label" parent="."]
 

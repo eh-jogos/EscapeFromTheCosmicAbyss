@@ -23,11 +23,13 @@ func _ready():
 	track = Global.savedata["options"]["track"]
 	self.set_text("BGM: "+track)
 
+
 func _input(event):
 	if event.is_action_pressed("ui_right"):
 		change_bgm_track(true)
 	elif event.is_action_pressed("ui_left"):
 		change_bgm_track(false)
+
 
 func change_bgm_track(direction):
 	var go_down = direction
@@ -36,6 +38,8 @@ func change_bgm_track(direction):
 	
 	var current_index = track_values.find(track)
 	var next_index
+	
+	SoundManager.play_sfx("ui_change", true)
 	
 	if current_index == -1:
 		print("ERROR | TRACK NOT FOUND")
@@ -72,3 +76,4 @@ func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	arrows_animator.play("disabled")
+	SoundManager.play_sfx("ui_select")

@@ -21,6 +21,7 @@ func increase_bar(bar_node):
 		stat_value = get_stat_value()
 		
 		if stat_value+1 <= max_stats:
+			SoundManager.play_sfx("ui_change")
 			upgrade_brain.upgrade_points -= 1
 			upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
 			
@@ -40,6 +41,7 @@ func decrease_bar(bar_node):
 	stat_value = get_stat_value()
 	
 	if stat_value-1 >= 0:
+		SoundManager.play_sfx("ui_change")
 		upgrade_brain.upgrade_points += 1
 		upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
 		
@@ -105,4 +107,5 @@ func _on_focus_enter():
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
+	SoundManager.play_sfx("ui_select")
 	self.get_node("AnimationPlayer").play("base")

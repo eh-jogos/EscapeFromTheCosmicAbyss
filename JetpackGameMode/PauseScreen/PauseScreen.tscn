@@ -125,6 +125,7 @@ shortcut = null
 text = "Resume"
 flat = false
 script/script = ExtResource( 7 )
+pressed_sfx = "ui_change"
 
 [node name="Replay" type="Button" parent="."]
 
@@ -150,6 +151,7 @@ shortcut = null
 text = "Replay"
 flat = false
 script/script = ExtResource( 7 )
+pressed_sfx = "ui_confirm"
 
 [node name="LevelSelect" type="Button" parent="."]
 
@@ -175,6 +177,7 @@ shortcut = null
 text = "Level Select"
 flat = false
 script/script = ExtResource( 7 )
+pressed_sfx = "ui_change"
 
 [node name="Options" type="Button" parent="."]
 
@@ -200,6 +203,7 @@ shortcut = null
 text = "Options"
 flat = false
 script/script = ExtResource( 7 )
+pressed_sfx = "ui_change"
 
 [node name="QuitMainMenu" type="Button" parent="."]
 
@@ -226,6 +230,7 @@ shortcut = null
 text = "Back to Main Menu"
 flat = false
 script/script = ExtResource( 7 )
+pressed_sfx = "ui_confirm"
 
 [node name="Quit" type="Button" parent="."]
 
@@ -252,6 +257,7 @@ shortcut = null
 text = "Quit"
 flat = false
 script/script = ExtResource( 7 )
+pressed_sfx = "ui_change"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

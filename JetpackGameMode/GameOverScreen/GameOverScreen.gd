@@ -63,7 +63,7 @@ func _ready():
 	
 	game = get_parent().get_parent()
 	game_mode = game.game_mode
-	replay_btn.grab_focus()
+#	replay_btn.grab_focus()
 	
 	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
 		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")

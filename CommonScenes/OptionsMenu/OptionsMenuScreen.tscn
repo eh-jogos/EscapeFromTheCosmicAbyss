@@ -294,7 +294,6 @@ margin/bottom = 896.0
 
 [node name="FullscreenOption" type="Button" parent="MenuContainer"]
 
-editor/display_folded = true
 anchor/right = 1
 rect/scale = Vector2( 1.5, 1.5 )
 focus_neighbour/left = NodePath(".")
@@ -568,6 +567,7 @@ shortcut = null
 text = "Restart"
 flat = false
 script/script = ExtResource( 9 )
+pressed_sfx = "ui_confirm"
 
 [node name="OptionsExit" type="Button" parent="MenuContainer"]
 
@@ -599,6 +599,7 @@ shortcut = null
 text = "Exit Options"
 flat = false
 script/script = ExtResource( 9 )
+pressed_sfx = "ui_confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 

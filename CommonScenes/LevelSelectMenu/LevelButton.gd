@@ -16,6 +16,9 @@ var game_settings
 
 func _ready():
 	self.connect("mouse_enter",self,"_on_mouse_enter")
+	if not self.is_connected("focus_enter", self, "_on_focus_enter"):
+		self.connect("focus_enter", self, "_on_focus_enter")
+	
 	level_number = get_node(number_label)
 	level_title = get_node(title_label)
 	animator = get_node(animator_path)
@@ -27,7 +30,23 @@ func _ready():
 func _on_mouse_enter():
 	self.grab_focus()
 
+func _on_focus_enter():
+	if not self.is_connected("focus_exit", self, "_on_focus_exit"):
+		self.connect("focus_exit", self, "_on_focus_exit")
+	if not self.is_connected("pressed", self, "_on_pressed"):
+		self.connect("pressed", self, "_on_pressed")
+
+
+func _on_focus_exit():
+	SoundManager.play_sfx("ui_select")
+
+
 func _on_LevelButton_pressed():
+	if self.is_connected("focus_exit", self, "_on_focus_exit"):
+		self.disconnect("focus_exit", self, "_on_focus_exit")
+	
+	SoundManager.play_sfx_with_reverb("ui_confirm")
+	
 	print("%s | Level Num: %s"%[self.get_name(),level_num])
 	Global.is_retry = false
 	if game_settings["sub-mode"] == "select level":

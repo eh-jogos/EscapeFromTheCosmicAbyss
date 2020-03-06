@@ -18,7 +18,7 @@ func _ready():
 	animator = self.get_node("AnimationPlayer")
 	
 	resume_btn = self.get_node("Resume")
-	resume_btn.grab_focus()
+#	resume_btn.grab_focus()
 	
 	options_btn = self.get_node("Options")
 	level_select_btn = self.get_node("LevelSelect")

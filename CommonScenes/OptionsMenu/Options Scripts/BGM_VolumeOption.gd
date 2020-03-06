@@ -32,6 +32,8 @@ func _input(event):
 func change_bgm_volume(direction):
 	var go_up = direction
 	
+	SoundManager.play_sfx("ui_change", true)
+	
 	if go_up:
 		if track_volume < 100:
 			track_volume += 10
@@ -56,3 +58,4 @@ func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	arrows_animator.play("disabled")
+	SoundManager.play_sfx("ui_select")

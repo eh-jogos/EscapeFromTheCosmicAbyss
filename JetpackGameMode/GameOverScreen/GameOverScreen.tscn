@@ -747,6 +747,7 @@ shortcut = null
 text = "Play Again"
 flat = false
 script/script = ExtResource( 10 )
+pressed_sfx = "ui_confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
 
@@ -771,6 +772,7 @@ shortcut = null
 text = "Upgrade"
 flat = false
 script/script = ExtResource( 10 )
+pressed_sfx = "ui_change"
 
 [node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
 
@@ -795,6 +797,7 @@ shortcut = null
 text = "Level Select"
 flat = false
 script/script = ExtResource( 10 )
+pressed_sfx = "ui_change"
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
 
@@ -819,6 +822,7 @@ shortcut = null
 text = "Home"
 flat = false
 script/script = ExtResource( 10 )
+pressed_sfx = "ui_confirm"
 
 [connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
 

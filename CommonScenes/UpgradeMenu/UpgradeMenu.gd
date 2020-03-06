@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 var initial_btn
-var save_btn
 var close_btn
 var upgrade_progress
 var animator
@@ -135,8 +134,7 @@ func _ready():
 	store = Global.get_game_mode()
 	
 	upgrade_progress = get_node("SectionLabels/ProgressBar")
-	close_btn = get_node("Buttons/Close")
-	save_btn = get_node("Buttons/SaveApply")
+	close_btn = get_node("Buttons/Confirm")
 	initial_btn = get_node("SectionLabels/Cooldown")
 	initial_btn.grab_focus()
 	
@@ -146,12 +144,8 @@ func _ready():
 	
 	if is_extra_mode():
 		close_btn.set_text("Start")
-		save_btn.set_disabled(true)
-		save_btn.hide()
 	else:
-		close_btn.set_text("Close")
-		save_btn.set_disabled(false)
-		save_btn.show()
+		close_btn.set_text("Confirm")
 	
 	cooldown_bar = get_node("SectionLabels/Cooldown/UpgradeBar")
 	stat_bars.append(cooldown_bar)
@@ -176,5 +170,6 @@ func _ready():
 	_on_Reset_pressed()
 	
 	animator.play_backwards("close")
+	
 	
 	pass
