@@ -1,8 +1,8 @@
 extends Node
 
-var bgm1 = preload("res://CommonScenes/SoundManager/Musique 1.ogg")
-var bgm2 = preload("res://CommonScenes/SoundManager/Musique 2.ogg")
-var bgm3 = preload("res://CommonScenes/SoundManager/Musique electro.ogg")
+var bgm1 = preload("res://CommonScenes/SoundManager/bgm/Musique 1.ogg")
+var bgm2 = preload("res://CommonScenes/SoundManager/bgm/Musique 2.ogg")
+var bgm3 = preload("res://CommonScenes/SoundManager/bgm/Musique electro.ogg")
 var track_list = {
 	"1" : bgm1,
 	"2" : bgm2,
@@ -12,6 +12,7 @@ var track_offset
 
 var bgm_stream
 var bgm_preview
+var sfx_player
 var fade_out
 var fade_in
 
@@ -20,11 +21,21 @@ var initial_volume
 func _ready():
 	bgm_stream = self.get_node("BGMPlayer")
 	bgm_preview = self.get_node("PreviewPlayer")
+	sfx_player = self.get_node("SfxPlayer")
 	
 	fade_out = self.get_node("FadeOutTimer")
 	fade_in = self.get_node("FadeInTimer")
 	
 	track_offset = 0
+
+
+func play_sfx(sfx_name, is_unique = false):
+	sfx_player.play(sfx_name, is_unique)
+
+
+func play_sfx_with_reverb(sfx_name, is_unique = false, reverb_size = SamplePlayer.REVERB_HALL, reverb_strenght = 0.5):
+	sfx_player.set_reverb(sfx_player.play(sfx_name, is_unique), reverb_size, reverb_strenght)
+
 
 func play_bgm():
 	var track = Global.savedata["options"]["track"]
