@@ -306,6 +306,9 @@ func load_level(level_choice, load_all = false, loop = false):
 
 func set_game_state(string):
 	current_state = STATE[string]
+	if current_state != STATE.Playing:
+		player.stop_all_sfx()
+		get_tree().call_group(0, "pipes", "stop_all_sfx")
 
 func get_game_state():
 	return current_state
