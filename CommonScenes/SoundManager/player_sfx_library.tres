@@ -1,17 +1,14 @@
-[gd_resource type="SampleLibrary" load_steps=8 format=1]
+[gd_resource type="SampleLibrary" load_steps=5 format=1]
 
 [ext_resource path="res://CommonScenes/SoundManager/sfx/jetpack_noise.wav" type="Sample" id=1]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/player_death_by_crushing.wav" type="Sample" id=2]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/shield_pop.wav" type="Sample" id=3]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/shield_up.wav" type="Sample" id=4]
-[ext_resource path="res://CommonScenes/SoundManager/sfx/ui_change.wav" type="Sample" id=5]
-[ext_resource path="res://CommonScenes/SoundManager/sfx/ui_confirm.wav" type="Sample" id=6]
-[ext_resource path="res://CommonScenes/SoundManager/sfx/ui_select.wav" type="Sample" id=7]
 
 [resource]
 
 samples/jetpack_noise = {
-"db": -8.0,
+"db": 10.0,
 "pitch": 0.5,
 "priority": 0,
 "sample": ExtResource( 1 )
@@ -23,7 +20,7 @@ samples/player_death_by_crushing = {
 "sample": ExtResource( 2 )
 }
 samples/shield_pop = {
-"db": 0.0,
+"db": 10.0,
 "pitch": 1.75,
 "priority": 0,
 "sample": ExtResource( 3 )
@@ -33,23 +30,5 @@ samples/shield_up = {
 "pitch": 2.0,
 "priority": 0,
 "sample": ExtResource( 4 )
-}
-samples/ui_change = {
-"db": 0.0,
-"pitch": 2.0,
-"priority": 0,
-"sample": ExtResource( 5 )
-}
-samples/ui_confirm = {
-"db": 0.0,
-"pitch": 2.75,
-"priority": 0,
-"sample": ExtResource( 6 )
-}
-samples/ui_select = {
-"db": 0.0,
-"pitch": 3.0,
-"priority": 0,
-"sample": ExtResource( 7 )
 }
 

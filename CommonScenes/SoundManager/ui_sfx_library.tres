@@ -1,0 +1,27 @@
+[gd_resource type="SampleLibrary" load_steps=4 format=1]
+
+[ext_resource path="res://CommonScenes/SoundManager/sfx/ui_change.wav" type="Sample" id=1]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/ui_confirm.wav" type="Sample" id=2]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/ui_select.wav" type="Sample" id=3]
+
+[resource]
+
+samples/ui_change = {
+"db": 10.0,
+"pitch": 2.0,
+"priority": 0,
+"sample": ExtResource( 1 )
+}
+samples/ui_confirm = {
+"db": 0.0,
+"pitch": 2.75,
+"priority": 0,
+"sample": ExtResource( 2 )
+}
+samples/ui_select = {
+"db": 0.0,
+"pitch": 3.0,
+"priority": 0,
+"sample": ExtResource( 3 )
+}
+

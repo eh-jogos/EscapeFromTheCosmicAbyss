@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://CommonScenes/SoundManager/SoundManager.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/SoundManager/sfx_library.tres" type="SampleLibrary" id=2]
+[ext_resource path="res://CommonScenes/SoundManager/ui_sfx_library.tres" type="SampleLibrary" id=2]
 [ext_resource path="res://CommonScenes/SoundManager/Musique 2.ogg" type="AudioStream" id=3]
+
 
 [node name="SoundManager" type="Node"]
 

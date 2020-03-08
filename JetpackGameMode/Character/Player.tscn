@@ -1,4 +1,4 @@
-[gd_scene load_steps=518 format=1]
+[gd_scene load_steps=519 format=1]
 
 [ext_resource path="res://JetpackGameMode/Character/Jetpack_Astronaut.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/Body/falling_body_outline0000.png" type="Texture" id=2]
@@ -65,26 +65,26 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/Body/rising_body_outline0010.png" type="Texture" id=63]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/Body/rising_body_outline0011.png" type="Texture" id=64]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/Body/rising_body_outline0012.png" type="Texture" id=65]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0000.png" type="Texture" id=66]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0001.png" type="Texture" id=67]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0002.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0003.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0004.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0005.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0006.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0000.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0001.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0002.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0003.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0004.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0005.png" type="Texture" id=78]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0006.png" type="Texture" id=79]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0007.png" type="Texture" id=80]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0008.png" type="Texture" id=81]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0009.png" type="Texture" id=82]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0010.png" type="Texture" id=83]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0011.png" type="Texture" id=84]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0012.png" type="Texture" id=85]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0000.png" type="Texture" id=66]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0001.png" type="Texture" id=67]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0002.png" type="Texture" id=68]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0003.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0004.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0005.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0006.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0007.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0008.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0009.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0010.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0011.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0012.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0000.png" type="Texture" id=79]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0001.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0002.png" type="Texture" id=81]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0003.png" type="Texture" id=82]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0004.png" type="Texture" id=83]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0005.png" type="Texture" id=84]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0006.png" type="Texture" id=85]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmBack/rise_to_fall_armback_outline0000.png" type="Texture" id=86]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmBack/rise_to_fall_armback_outline0001.png" type="Texture" id=87]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmBack/rise_to_fall_armback_outline0002.png" type="Texture" id=88]
@@ -155,26 +155,26 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0010.png" type="Texture" id=153]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0011.png" type="Texture" id=154]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0012.png" type="Texture" id=155]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0000.png" type="Texture" id=156]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0001.png" type="Texture" id=157]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0002.png" type="Texture" id=158]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0003.png" type="Texture" id=159]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0004.png" type="Texture" id=160]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0005.png" type="Texture" id=161]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0006.png" type="Texture" id=162]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0000.png" type="Texture" id=163]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0001.png" type="Texture" id=164]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0002.png" type="Texture" id=165]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0003.png" type="Texture" id=166]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0004.png" type="Texture" id=167]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0005.png" type="Texture" id=168]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0006.png" type="Texture" id=169]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0007.png" type="Texture" id=170]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0008.png" type="Texture" id=171]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0009.png" type="Texture" id=172]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0010.png" type="Texture" id=173]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0011.png" type="Texture" id=174]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0012.png" type="Texture" id=175]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0000.png" type="Texture" id=156]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0001.png" type="Texture" id=157]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0002.png" type="Texture" id=158]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0003.png" type="Texture" id=159]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0004.png" type="Texture" id=160]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0005.png" type="Texture" id=161]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0006.png" type="Texture" id=162]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0007.png" type="Texture" id=163]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0008.png" type="Texture" id=164]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0009.png" type="Texture" id=165]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0010.png" type="Texture" id=166]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0011.png" type="Texture" id=167]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0012.png" type="Texture" id=168]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0000.png" type="Texture" id=169]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0001.png" type="Texture" id=170]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0002.png" type="Texture" id=171]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0003.png" type="Texture" id=172]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0004.png" type="Texture" id=173]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0005.png" type="Texture" id=174]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0006.png" type="Texture" id=175]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmFront/rise_to_fall_armfront_outline0000.png" type="Texture" id=176]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmFront/rise_to_fall_armfront_outline0001.png" type="Texture" id=177]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmFront/rise_to_fall_armfront_outline0002.png" type="Texture" id=178]
@@ -245,252 +245,253 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0010.png" type="Texture" id=243]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0011.png" type="Texture" id=244]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0012.png" type="Texture" id=245]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_00.png" type="Texture" id=246]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_01.png" type="Texture" id=247]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_02.png" type="Texture" id=248]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_03.png" type="Texture" id=249]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_04.png" type="Texture" id=250]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_05.png" type="Texture" id=251]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_06.png" type="Texture" id=252]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_07.png" type="Texture" id=253]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_08.png" type="Texture" id=254]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_09.png" type="Texture" id=255]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_10.png" type="Texture" id=256]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_11.png" type="Texture" id=257]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_12.png" type="Texture" id=258]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_00.png" type="Texture" id=259]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_01.png" type="Texture" id=260]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_02.png" type="Texture" id=261]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_03.png" type="Texture" id=262]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_04.png" type="Texture" id=263]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_05.png" type="Texture" id=264]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_06.png" type="Texture" id=265]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_07.png" type="Texture" id=266]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_08.png" type="Texture" id=267]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_09.png" type="Texture" id=268]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_10.png" type="Texture" id=269]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_11.png" type="Texture" id=270]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_12.png" type="Texture" id=271]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_00.png" type="Texture" id=272]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_01.png" type="Texture" id=273]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_02.png" type="Texture" id=274]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_03.png" type="Texture" id=275]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_04.png" type="Texture" id=276]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_05.png" type="Texture" id=277]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_06.png" type="Texture" id=278]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_07.png" type="Texture" id=279]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_08.png" type="Texture" id=280]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_09.png" type="Texture" id=281]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_10.png" type="Texture" id=282]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_11.png" type="Texture" id=283]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_12.png" type="Texture" id=284]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_13.png" type="Texture" id=285]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_14.png" type="Texture" id=286]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_15.png" type="Texture" id=287]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_16.png" type="Texture" id=288]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_17.png" type="Texture" id=289]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_18.png" type="Texture" id=290]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_19.png" type="Texture" id=291]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_20.png" type="Texture" id=292]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_21.png" type="Texture" id=293]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_22.png" type="Texture" id=294]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_23.png" type="Texture" id=295]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_24.png" type="Texture" id=296]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_00.png" type="Texture" id=297]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_01.png" type="Texture" id=298]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_02.png" type="Texture" id=299]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_03.png" type="Texture" id=300]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_04.png" type="Texture" id=301]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_05.png" type="Texture" id=302]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_06.png" type="Texture" id=303]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_07.png" type="Texture" id=304]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_08.png" type="Texture" id=305]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_09.png" type="Texture" id=306]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_10.png" type="Texture" id=307]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_11.png" type="Texture" id=308]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_12.png" type="Texture" id=309]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_00.png" type="Texture" id=310]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_01.png" type="Texture" id=311]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_02.png" type="Texture" id=312]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_03.png" type="Texture" id=313]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_04.png" type="Texture" id=314]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_05.png" type="Texture" id=315]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_06.png" type="Texture" id=316]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_00.png" type="Texture" id=317]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_01.png" type="Texture" id=318]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_02.png" type="Texture" id=319]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_03.png" type="Texture" id=320]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_04.png" type="Texture" id=321]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_05.png" type="Texture" id=322]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_06.png" type="Texture" id=323]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_07.png" type="Texture" id=324]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_08.png" type="Texture" id=325]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_09.png" type="Texture" id=326]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_10.png" type="Texture" id=327]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_11.png" type="Texture" id=328]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_12.png" type="Texture" id=329]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_00.png" type="Texture" id=330]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_01.png" type="Texture" id=331]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_02.png" type="Texture" id=332]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_03.png" type="Texture" id=333]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_04.png" type="Texture" id=334]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_05.png" type="Texture" id=335]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_06.png" type="Texture" id=336]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_07.png" type="Texture" id=337]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_08.png" type="Texture" id=338]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_09.png" type="Texture" id=339]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_10.png" type="Texture" id=340]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_11.png" type="Texture" id=341]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_12.png" type="Texture" id=342]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_00.png" type="Texture" id=343]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_01.png" type="Texture" id=344]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_02.png" type="Texture" id=345]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_03.png" type="Texture" id=346]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_04.png" type="Texture" id=347]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_05.png" type="Texture" id=348]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_06.png" type="Texture" id=349]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_07.png" type="Texture" id=350]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_08.png" type="Texture" id=351]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_09.png" type="Texture" id=352]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_10.png" type="Texture" id=353]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_11.png" type="Texture" id=354]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_12.png" type="Texture" id=355]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_13.png" type="Texture" id=356]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_14.png" type="Texture" id=357]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_15.png" type="Texture" id=358]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_16.png" type="Texture" id=359]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_17.png" type="Texture" id=360]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_18.png" type="Texture" id=361]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_19.png" type="Texture" id=362]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_20.png" type="Texture" id=363]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_21.png" type="Texture" id=364]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_22.png" type="Texture" id=365]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_23.png" type="Texture" id=366]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_24.png" type="Texture" id=367]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_00.png" type="Texture" id=368]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_01.png" type="Texture" id=369]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_02.png" type="Texture" id=370]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_03.png" type="Texture" id=371]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_04.png" type="Texture" id=372]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_05.png" type="Texture" id=373]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_06.png" type="Texture" id=374]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_07.png" type="Texture" id=375]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_08.png" type="Texture" id=376]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_09.png" type="Texture" id=377]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_10.png" type="Texture" id=378]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_11.png" type="Texture" id=379]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_12.png" type="Texture" id=380]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_13.png" type="Texture" id=381]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_14.png" type="Texture" id=382]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_15.png" type="Texture" id=383]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_16.png" type="Texture" id=384]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_17.png" type="Texture" id=385]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_18.png" type="Texture" id=386]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_00.png" type="Texture" id=387]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_01.png" type="Texture" id=388]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_02.png" type="Texture" id=389]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_03.png" type="Texture" id=390]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_04.png" type="Texture" id=391]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_05.png" type="Texture" id=392]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_06.png" type="Texture" id=393]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_07.png" type="Texture" id=394]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_08.png" type="Texture" id=395]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_09.png" type="Texture" id=396]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_10.png" type="Texture" id=397]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_11.png" type="Texture" id=398]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_12.png" type="Texture" id=399]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_00.png" type="Texture" id=400]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_01.png" type="Texture" id=401]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_02.png" type="Texture" id=402]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_03.png" type="Texture" id=403]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_04.png" type="Texture" id=404]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_05.png" type="Texture" id=405]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_06.png" type="Texture" id=406]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_00.png" type="Texture" id=407]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_01.png" type="Texture" id=408]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_02.png" type="Texture" id=409]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_03.png" type="Texture" id=410]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_04.png" type="Texture" id=411]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_05.png" type="Texture" id=412]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_06.png" type="Texture" id=413]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_07.png" type="Texture" id=414]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_08.png" type="Texture" id=415]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_09.png" type="Texture" id=416]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_10.png" type="Texture" id=417]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_11.png" type="Texture" id=418]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_12.png" type="Texture" id=419]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_00.png" type="Texture" id=420]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_01.png" type="Texture" id=421]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_02.png" type="Texture" id=422]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_03.png" type="Texture" id=423]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_04.png" type="Texture" id=424]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_05.png" type="Texture" id=425]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_06.png" type="Texture" id=426]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_07.png" type="Texture" id=427]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_08.png" type="Texture" id=428]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_09.png" type="Texture" id=429]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_10.png" type="Texture" id=430]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_11.png" type="Texture" id=431]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_12.png" type="Texture" id=432]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_00.png" type="Texture" id=433]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_01.png" type="Texture" id=434]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_02.png" type="Texture" id=435]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_03.png" type="Texture" id=436]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_04.png" type="Texture" id=437]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_05.png" type="Texture" id=438]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_06.png" type="Texture" id=439]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_07.png" type="Texture" id=440]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_08.png" type="Texture" id=441]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_09.png" type="Texture" id=442]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_10.png" type="Texture" id=443]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_11.png" type="Texture" id=444]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_12.png" type="Texture" id=445]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_13.png" type="Texture" id=446]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_14.png" type="Texture" id=447]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_15.png" type="Texture" id=448]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_16.png" type="Texture" id=449]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_17.png" type="Texture" id=450]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_18.png" type="Texture" id=451]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_19.png" type="Texture" id=452]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_20.png" type="Texture" id=453]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_21.png" type="Texture" id=454]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_22.png" type="Texture" id=455]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_23.png" type="Texture" id=456]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_24.png" type="Texture" id=457]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_00.png" type="Texture" id=458]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_01.png" type="Texture" id=459]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_02.png" type="Texture" id=460]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_03.png" type="Texture" id=461]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_04.png" type="Texture" id=462]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_05.png" type="Texture" id=463]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_06.png" type="Texture" id=464]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_07.png" type="Texture" id=465]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_08.png" type="Texture" id=466]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_09.png" type="Texture" id=467]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_10.png" type="Texture" id=468]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_11.png" type="Texture" id=469]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_12.png" type="Texture" id=470]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_13.png" type="Texture" id=471]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_14.png" type="Texture" id=472]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_15.png" type="Texture" id=473]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_16.png" type="Texture" id=474]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_17.png" type="Texture" id=475]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_18.png" type="Texture" id=476]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_00.png" type="Texture" id=477]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_01.png" type="Texture" id=478]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_02.png" type="Texture" id=479]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_03.png" type="Texture" id=480]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_04.png" type="Texture" id=481]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_05.png" type="Texture" id=482]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_06.png" type="Texture" id=483]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_07.png" type="Texture" id=484]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_08.png" type="Texture" id=485]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_09.png" type="Texture" id=486]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_10.png" type="Texture" id=487]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_11.png" type="Texture" id=488]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_12.png" type="Texture" id=489]
-[ext_resource path="res://JetpackGameMode/Character/Shield.gd" type="Script" id=490]
-[ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=491]
+[ext_resource path="res://CommonScenes/SoundManager/player_sfx_library.tres" type="SampleLibrary" id=246]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_00.png" type="Texture" id=247]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_01.png" type="Texture" id=248]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_02.png" type="Texture" id=249]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_03.png" type="Texture" id=250]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_04.png" type="Texture" id=251]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_05.png" type="Texture" id=252]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_06.png" type="Texture" id=253]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_07.png" type="Texture" id=254]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_08.png" type="Texture" id=255]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_09.png" type="Texture" id=256]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_10.png" type="Texture" id=257]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_11.png" type="Texture" id=258]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_12.png" type="Texture" id=259]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_00.png" type="Texture" id=260]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_01.png" type="Texture" id=261]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_02.png" type="Texture" id=262]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_03.png" type="Texture" id=263]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_04.png" type="Texture" id=264]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_05.png" type="Texture" id=265]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_06.png" type="Texture" id=266]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_07.png" type="Texture" id=267]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_08.png" type="Texture" id=268]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_09.png" type="Texture" id=269]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_10.png" type="Texture" id=270]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_11.png" type="Texture" id=271]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/Body/Armature_rise_to_fall_12.png" type="Texture" id=272]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_00.png" type="Texture" id=273]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_01.png" type="Texture" id=274]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_02.png" type="Texture" id=275]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_03.png" type="Texture" id=276]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_04.png" type="Texture" id=277]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_05.png" type="Texture" id=278]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_06.png" type="Texture" id=279]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_07.png" type="Texture" id=280]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_08.png" type="Texture" id=281]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_09.png" type="Texture" id=282]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_10.png" type="Texture" id=283]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_11.png" type="Texture" id=284]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_12.png" type="Texture" id=285]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_13.png" type="Texture" id=286]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_14.png" type="Texture" id=287]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_15.png" type="Texture" id=288]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_16.png" type="Texture" id=289]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_17.png" type="Texture" id=290]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_18.png" type="Texture" id=291]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_19.png" type="Texture" id=292]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_20.png" type="Texture" id=293]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_21.png" type="Texture" id=294]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_22.png" type="Texture" id=295]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_23.png" type="Texture" id=296]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/Body/Armature_fall_to_rise_24.png" type="Texture" id=297]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_00.png" type="Texture" id=298]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_01.png" type="Texture" id=299]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_02.png" type="Texture" id=300]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_03.png" type="Texture" id=301]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_04.png" type="Texture" id=302]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_05.png" type="Texture" id=303]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_06.png" type="Texture" id=304]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_07.png" type="Texture" id=305]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_08.png" type="Texture" id=306]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_09.png" type="Texture" id=307]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_10.png" type="Texture" id=308]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_11.png" type="Texture" id=309]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_12.png" type="Texture" id=310]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_00.png" type="Texture" id=311]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_01.png" type="Texture" id=312]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_02.png" type="Texture" id=313]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_03.png" type="Texture" id=314]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_04.png" type="Texture" id=315]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_05.png" type="Texture" id=316]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_06.png" type="Texture" id=317]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_07.png" type="Texture" id=318]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_08.png" type="Texture" id=319]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_09.png" type="Texture" id=320]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_10.png" type="Texture" id=321]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_11.png" type="Texture" id=322]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_12.png" type="Texture" id=323]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_00.png" type="Texture" id=324]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_01.png" type="Texture" id=325]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_02.png" type="Texture" id=326]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_03.png" type="Texture" id=327]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_04.png" type="Texture" id=328]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_05.png" type="Texture" id=329]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_06.png" type="Texture" id=330]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_00.png" type="Texture" id=331]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_01.png" type="Texture" id=332]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_02.png" type="Texture" id=333]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_03.png" type="Texture" id=334]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_04.png" type="Texture" id=335]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_05.png" type="Texture" id=336]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_06.png" type="Texture" id=337]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_07.png" type="Texture" id=338]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_08.png" type="Texture" id=339]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_09.png" type="Texture" id=340]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_10.png" type="Texture" id=341]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_11.png" type="Texture" id=342]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_12.png" type="Texture" id=343]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_00.png" type="Texture" id=344]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_01.png" type="Texture" id=345]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_02.png" type="Texture" id=346]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_03.png" type="Texture" id=347]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_04.png" type="Texture" id=348]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_05.png" type="Texture" id=349]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_06.png" type="Texture" id=350]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_07.png" type="Texture" id=351]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_08.png" type="Texture" id=352]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_09.png" type="Texture" id=353]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_10.png" type="Texture" id=354]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_11.png" type="Texture" id=355]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_12.png" type="Texture" id=356]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_13.png" type="Texture" id=357]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_14.png" type="Texture" id=358]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_15.png" type="Texture" id=359]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_16.png" type="Texture" id=360]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_17.png" type="Texture" id=361]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_18.png" type="Texture" id=362]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_19.png" type="Texture" id=363]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_20.png" type="Texture" id=364]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_21.png" type="Texture" id=365]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_22.png" type="Texture" id=366]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_23.png" type="Texture" id=367]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_24.png" type="Texture" id=368]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_00.png" type="Texture" id=369]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_01.png" type="Texture" id=370]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_02.png" type="Texture" id=371]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_03.png" type="Texture" id=372]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_04.png" type="Texture" id=373]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_05.png" type="Texture" id=374]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_06.png" type="Texture" id=375]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_07.png" type="Texture" id=376]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_08.png" type="Texture" id=377]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_09.png" type="Texture" id=378]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_10.png" type="Texture" id=379]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_11.png" type="Texture" id=380]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_12.png" type="Texture" id=381]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_13.png" type="Texture" id=382]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_14.png" type="Texture" id=383]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_15.png" type="Texture" id=384]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_16.png" type="Texture" id=385]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_17.png" type="Texture" id=386]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_18.png" type="Texture" id=387]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_00.png" type="Texture" id=388]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_01.png" type="Texture" id=389]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_02.png" type="Texture" id=390]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_03.png" type="Texture" id=391]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_04.png" type="Texture" id=392]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_05.png" type="Texture" id=393]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_06.png" type="Texture" id=394]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_07.png" type="Texture" id=395]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_08.png" type="Texture" id=396]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_09.png" type="Texture" id=397]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_10.png" type="Texture" id=398]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_11.png" type="Texture" id=399]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_12.png" type="Texture" id=400]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_00.png" type="Texture" id=401]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_01.png" type="Texture" id=402]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_02.png" type="Texture" id=403]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_03.png" type="Texture" id=404]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_04.png" type="Texture" id=405]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_05.png" type="Texture" id=406]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_06.png" type="Texture" id=407]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_07.png" type="Texture" id=408]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_08.png" type="Texture" id=409]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_09.png" type="Texture" id=410]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_10.png" type="Texture" id=411]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_11.png" type="Texture" id=412]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_12.png" type="Texture" id=413]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_00.png" type="Texture" id=414]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_01.png" type="Texture" id=415]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_02.png" type="Texture" id=416]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_03.png" type="Texture" id=417]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_04.png" type="Texture" id=418]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_05.png" type="Texture" id=419]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_06.png" type="Texture" id=420]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_00.png" type="Texture" id=421]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_01.png" type="Texture" id=422]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_02.png" type="Texture" id=423]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_03.png" type="Texture" id=424]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_04.png" type="Texture" id=425]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_05.png" type="Texture" id=426]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_06.png" type="Texture" id=427]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_07.png" type="Texture" id=428]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_08.png" type="Texture" id=429]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_09.png" type="Texture" id=430]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_10.png" type="Texture" id=431]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_11.png" type="Texture" id=432]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_12.png" type="Texture" id=433]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_00.png" type="Texture" id=434]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_01.png" type="Texture" id=435]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_02.png" type="Texture" id=436]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_03.png" type="Texture" id=437]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_04.png" type="Texture" id=438]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_05.png" type="Texture" id=439]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_06.png" type="Texture" id=440]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_07.png" type="Texture" id=441]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_08.png" type="Texture" id=442]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_09.png" type="Texture" id=443]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_10.png" type="Texture" id=444]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_11.png" type="Texture" id=445]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_12.png" type="Texture" id=446]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_13.png" type="Texture" id=447]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_14.png" type="Texture" id=448]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_15.png" type="Texture" id=449]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_16.png" type="Texture" id=450]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_17.png" type="Texture" id=451]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_18.png" type="Texture" id=452]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_19.png" type="Texture" id=453]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_20.png" type="Texture" id=454]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_21.png" type="Texture" id=455]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_22.png" type="Texture" id=456]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_23.png" type="Texture" id=457]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_24.png" type="Texture" id=458]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_00.png" type="Texture" id=459]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_01.png" type="Texture" id=460]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_02.png" type="Texture" id=461]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_03.png" type="Texture" id=462]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_04.png" type="Texture" id=463]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_05.png" type="Texture" id=464]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_06.png" type="Texture" id=465]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_07.png" type="Texture" id=466]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_08.png" type="Texture" id=467]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_09.png" type="Texture" id=468]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_10.png" type="Texture" id=469]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_11.png" type="Texture" id=470]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_12.png" type="Texture" id=471]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_13.png" type="Texture" id=472]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_14.png" type="Texture" id=473]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_15.png" type="Texture" id=474]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_16.png" type="Texture" id=475]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_17.png" type="Texture" id=476]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_18.png" type="Texture" id=477]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_00.png" type="Texture" id=478]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_01.png" type="Texture" id=479]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_02.png" type="Texture" id=480]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_03.png" type="Texture" id=481]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_04.png" type="Texture" id=482]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_05.png" type="Texture" id=483]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_06.png" type="Texture" id=484]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_07.png" type="Texture" id=485]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_08.png" type="Texture" id=486]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_09.png" type="Texture" id=487]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_10.png" type="Texture" id=488]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_11.png" type="Texture" id=489]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_12.png" type="Texture" id=490]
+[ext_resource path="res://JetpackGameMode/Character/Shield.gd" type="Script" id=491]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=492]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -524,14 +525,14 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ) ],
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "shooting",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ) ],
@@ -558,14 +559,14 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
-"frames": [ ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
+"frames": [ ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
+"loop": true,
+"name": "shooting",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ) ],
@@ -597,22 +598,22 @@ colors = ColorArray( 0, 0, 0, 1, 0.0265961, 0.839617, 0.972656, 1, 1, 0.644287, 
 [sub_resource type="SpriteFrames" id=6]
 
 animations = [ {
-"frames": [ ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ), ExtResource( 249 ), ExtResource( 250 ), ExtResource( 251 ), ExtResource( 252 ), ExtResource( 253 ), ExtResource( 254 ), ExtResource( 255 ), ExtResource( 256 ), ExtResource( 257 ), ExtResource( 258 ) ],
+"frames": [ ExtResource( 247 ), ExtResource( 248 ), ExtResource( 249 ), ExtResource( 250 ), ExtResource( 251 ), ExtResource( 252 ), ExtResource( 253 ), ExtResource( 254 ), ExtResource( 255 ), ExtResource( 256 ), ExtResource( 257 ), ExtResource( 258 ), ExtResource( 259 ) ],
 "loop": true,
 "name": "falling",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 259 ), ExtResource( 260 ), ExtResource( 261 ), ExtResource( 262 ), ExtResource( 263 ), ExtResource( 264 ), ExtResource( 265 ), ExtResource( 266 ), ExtResource( 267 ), ExtResource( 268 ), ExtResource( 269 ), ExtResource( 270 ), ExtResource( 271 ) ],
+"frames": [ ExtResource( 260 ), ExtResource( 261 ), ExtResource( 262 ), ExtResource( 263 ), ExtResource( 264 ), ExtResource( 265 ), ExtResource( 266 ), ExtResource( 267 ), ExtResource( 268 ), ExtResource( 269 ), ExtResource( 270 ), ExtResource( 271 ), ExtResource( 272 ) ],
 "loop": false,
 "name": "rise_to_fall",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 272 ), ExtResource( 273 ), ExtResource( 274 ), ExtResource( 275 ), ExtResource( 276 ), ExtResource( 277 ), ExtResource( 278 ), ExtResource( 279 ), ExtResource( 280 ), ExtResource( 281 ), ExtResource( 282 ), ExtResource( 283 ), ExtResource( 284 ), ExtResource( 285 ), ExtResource( 286 ), ExtResource( 287 ), ExtResource( 288 ), ExtResource( 289 ), ExtResource( 290 ), ExtResource( 291 ), ExtResource( 292 ), ExtResource( 293 ), ExtResource( 294 ), ExtResource( 295 ), ExtResource( 296 ) ],
+"frames": [ ExtResource( 273 ), ExtResource( 274 ), ExtResource( 275 ), ExtResource( 276 ), ExtResource( 277 ), ExtResource( 278 ), ExtResource( 279 ), ExtResource( 280 ), ExtResource( 281 ), ExtResource( 282 ), ExtResource( 283 ), ExtResource( 284 ), ExtResource( 285 ), ExtResource( 286 ), ExtResource( 287 ), ExtResource( 288 ), ExtResource( 289 ), ExtResource( 290 ), ExtResource( 291 ), ExtResource( 292 ), ExtResource( 293 ), ExtResource( 294 ), ExtResource( 295 ), ExtResource( 296 ), ExtResource( 297 ) ],
 "loop": false,
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 297 ), ExtResource( 298 ), ExtResource( 299 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 305 ), ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 309 ) ],
+"frames": [ ExtResource( 298 ), ExtResource( 299 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 305 ), ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 309 ), ExtResource( 310 ) ],
 "loop": true,
 "name": "rising",
 "speed": 60.0
@@ -621,32 +622,32 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=7]
 
 animations = [ {
-"frames": [ ExtResource( 310 ), ExtResource( 311 ), ExtResource( 312 ), ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ), ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ) ],
+"frames": [ ExtResource( 311 ), ExtResource( 312 ), ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ) ],
 "loop": true,
 "name": "falling",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ), ExtResource( 339 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 342 ) ],
+"frames": [ ExtResource( 324 ), ExtResource( 325 ), ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ) ],
+"loop": true,
+"name": "shooting",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 331 ), ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ), ExtResource( 339 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 342 ), ExtResource( 343 ) ],
 "loop": false,
 "name": "rise_to_fall",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 343 ), ExtResource( 344 ), ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 366 ), ExtResource( 367 ) ],
+"frames": [ ExtResource( 344 ), ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 366 ), ExtResource( 367 ), ExtResource( 368 ) ],
 "loop": false,
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 368 ), ExtResource( 369 ), ExtResource( 370 ), ExtResource( 371 ), ExtResource( 372 ), ExtResource( 373 ), ExtResource( 374 ), ExtResource( 375 ), ExtResource( 376 ), ExtResource( 377 ), ExtResource( 378 ), ExtResource( 379 ), ExtResource( 380 ), ExtResource( 381 ), ExtResource( 382 ), ExtResource( 383 ), ExtResource( 384 ), ExtResource( 385 ), ExtResource( 386 ) ],
+"frames": [ ExtResource( 369 ), ExtResource( 370 ), ExtResource( 371 ), ExtResource( 372 ), ExtResource( 373 ), ExtResource( 374 ), ExtResource( 375 ), ExtResource( 376 ), ExtResource( 377 ), ExtResource( 378 ), ExtResource( 379 ), ExtResource( 380 ), ExtResource( 381 ), ExtResource( 382 ), ExtResource( 383 ), ExtResource( 384 ), ExtResource( 385 ), ExtResource( 386 ), ExtResource( 387 ) ],
 "loop": true,
 "name": "reloading",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 387 ), ExtResource( 388 ), ExtResource( 389 ), ExtResource( 390 ), ExtResource( 391 ), ExtResource( 392 ), ExtResource( 393 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ) ],
+"frames": [ ExtResource( 388 ), ExtResource( 389 ), ExtResource( 390 ), ExtResource( 391 ), ExtResource( 392 ), ExtResource( 393 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ), ExtResource( 400 ) ],
 "loop": true,
 "name": "rising",
 "speed": 60.0
@@ -655,32 +656,32 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=8]
 
 animations = [ {
-"frames": [ ExtResource( 400 ), ExtResource( 401 ), ExtResource( 402 ), ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 407 ), ExtResource( 408 ), ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ), ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ) ],
+"frames": [ ExtResource( 401 ), ExtResource( 402 ), ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ), ExtResource( 407 ), ExtResource( 408 ), ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ) ],
 "loop": true,
 "name": "falling",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ), ExtResource( 429 ), ExtResource( 430 ), ExtResource( 431 ), ExtResource( 432 ) ],
+"frames": [ ExtResource( 414 ), ExtResource( 415 ), ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ) ],
+"loop": true,
+"name": "shooting",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 421 ), ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ), ExtResource( 429 ), ExtResource( 430 ), ExtResource( 431 ), ExtResource( 432 ), ExtResource( 433 ) ],
 "loop": false,
 "name": "rise_to_fall",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 433 ), ExtResource( 434 ), ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ), ExtResource( 454 ), ExtResource( 455 ), ExtResource( 456 ), ExtResource( 457 ) ],
+"frames": [ ExtResource( 434 ), ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ), ExtResource( 454 ), ExtResource( 455 ), ExtResource( 456 ), ExtResource( 457 ), ExtResource( 458 ) ],
 "loop": false,
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 458 ), ExtResource( 459 ), ExtResource( 460 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 463 ), ExtResource( 464 ), ExtResource( 465 ), ExtResource( 466 ), ExtResource( 467 ), ExtResource( 468 ), ExtResource( 469 ), ExtResource( 470 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 474 ), ExtResource( 475 ), ExtResource( 476 ) ],
+"frames": [ ExtResource( 459 ), ExtResource( 460 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 463 ), ExtResource( 464 ), ExtResource( 465 ), ExtResource( 466 ), ExtResource( 467 ), ExtResource( 468 ), ExtResource( 469 ), ExtResource( 470 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 474 ), ExtResource( 475 ), ExtResource( 476 ), ExtResource( 477 ) ],
 "loop": true,
 "name": "reloading",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 477 ), ExtResource( 478 ), ExtResource( 479 ), ExtResource( 480 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 483 ), ExtResource( 484 ), ExtResource( 485 ), ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ) ],
+"frames": [ ExtResource( 478 ), ExtResource( 479 ), ExtResource( 480 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 483 ), ExtResource( 484 ), ExtResource( 485 ), ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ), ExtResource( 490 ) ],
 "loop": true,
 "name": "rising",
 "speed": 60.0
@@ -2450,6 +2451,16 @@ tracks/5/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "shield_pop" ]
+}
 
 [sub_resource type="Animation" id=24]
 
@@ -2651,6 +2662,16 @@ tracks/5/keys = {
 "update": 1,
 "values": [ true ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "shield_up" ]
+}
 
 [node name="Player" type="KinematicBody2D" groups=[
 "player",
@@ -2666,6 +2687,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 min_speed = 4
+is_invincible = false
 
 [node name="BodyOutline" type="AnimatedSprite" parent="."]
 
@@ -2715,6 +2737,23 @@ randomness/spin_velocity = 10.0
 randomness/hue_variation = 0.03
 color/color = Color( 1, 1, 1, 0 )
 color/color_ramp = SubResource( 5 )
+
+[node name="SamplePlayer" type="SamplePlayer" parent="JetParticles"]
+
+config/polyphony = 1
+config/samples = ExtResource( 246 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
 
 [node name="Body" type="AnimatedSprite" parent="."]
 
@@ -2790,7 +2829,9 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
-script/script = ExtResource( 490 )
+monitoring = false
+monitorable = false
+script/script = ExtResource( 491 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
 
@@ -2801,8 +2842,9 @@ _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="Shield"]
 
-visibility/visible = false
-texture = ExtResource( 491 )
+visibility/opacity = 0.0
+transform/scale = Vector2( 1.69482, 1.69482 )
+texture = ExtResource( 492 )
 modulate = Color( 0.835294, 0, 1, 1 )
 
 [node name="ShieldAnimator" type="AnimationPlayer" parent="Shield"]
@@ -2819,5 +2861,22 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = "disabled"
+
+[node name="SamplePlayer" type="SamplePlayer" parent="Shield"]
+
+config/polyphony = 1
+config/samples = ExtResource( 246 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
 
 

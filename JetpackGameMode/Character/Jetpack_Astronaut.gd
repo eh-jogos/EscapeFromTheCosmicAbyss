@@ -19,6 +19,7 @@ var ammunition
 
 # Inside Nodes I'll interact with
 var jet_particles
+var jet_sfx
 var body_animator
 var arms_animator
 var bullet_spawn
@@ -63,6 +64,7 @@ func _ready():
 	
 	# Inside Nodes
 	jet_particles = self.get_node("JetParticles")
+	jet_sfx = jet_particles.get_node("SamplePlayer")
 	body_animator = self.get_node("BodyAnimator")
 	arms_animator = self.get_node("ArmsAnimator")
 	bullet_spawn = self.get_node("BulletSpawn")
@@ -99,6 +101,7 @@ func _fixed_process(delta):
 		heat = handle_boost(delta, heat)
 	else:
 		jet_particles.set_emitting(false)
+		jet_sfx.stop_all()
 	
 	var dash_force = speed_x*dash_modifier*unit.x
 	
@@ -203,6 +206,8 @@ func handle_overheat_bar_color(heat):
 
 func handle_boost(delta, heat):
 	jet_particles.set_emitting(true)
+	jet_sfx.play("jetpack_noise")
+	
 	if falling: 
 		falling = false
 		body_animator.play("fall_to_rise")
