@@ -53,8 +53,6 @@ func _on_PipeTentacles_Reset():
 func _on_player_pass( body ):
 	if body.is_in_group("player"):
 		tentacle_pipe.scored()
-		animation.play("die")
-		animation1.play("die")
 
 func _on_kill_player(body, offset_y):
 	#print(offset_y)

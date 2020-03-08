@@ -231,14 +231,14 @@ animations = [ {
 "name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "crush_idle",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
@@ -260,14 +260,14 @@ animations = [ {
 "name": "kill_player",
 "speed": 59.999
 }, {
-"frames": [ ExtResource( 77 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 68 ) ],
 "loop": true,
 "name": "crush_idle",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
@@ -472,44 +472,44 @@ tracks/14/keys = {
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
 "times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, -950 ) ]
+"update": 1,
+"values": [ "spawn" ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0.24 ),
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -950 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/17/interp = 1
+tracks/17/imported = false
+tracks/17/keys = {
+"times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 950 ) ]
 }
-tracks/17/type = "value"
-tracks/17/path = NodePath("ScoringArea:transform/pos")
-tracks/17/interp = 1
-tracks/17/imported = false
-tracks/17/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( 388.933, -1080 ) ]
-}
 tracks/18/type = "value"
-tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
+tracks/18/path = NodePath("ScoringArea:transform/pos")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0.24 ),
+"times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ "spawn" ]
+"update": 0,
+"values": [ Vector2( 388.933, -1080 ) ]
 }
 tracks/19/type = "value"
 tracks/19/path = NodePath("SamplePlayer:play/play")
@@ -1177,6 +1177,7 @@ trigger = false
 transform/pos = Vector2( 0, -875 )
 frames = SubResource( 5 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
@@ -1186,6 +1187,7 @@ modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 transform/pos = Vector2( 0, -875 )
 frames = SubResource( 6 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
@@ -1241,6 +1243,7 @@ trigger = false
 transform/pos = Vector2( 0, 75 )
 frames = SubResource( 5 )
 animation = "spawn"
+frame = 26
 centered = false
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 
@@ -1250,6 +1253,7 @@ editor/display_folded = true
 transform/pos = Vector2( 0, 75 )
 frames = SubResource( 6 )
 animation = "spawn"
+frame = 26
 centered = false
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 
