@@ -101,7 +101,8 @@ func _fixed_process(delta):
 		heat = handle_boost(delta, heat)
 	else:
 		jet_particles.set_emitting(false)
-		jet_sfx.stop_all()
+		if jet_sfx.is_active():
+			jet_sfx.stop_all()
 	
 	var dash_force = speed_x*dash_modifier*unit.x
 	
@@ -206,7 +207,8 @@ func handle_overheat_bar_color(heat):
 
 func handle_boost(delta, heat):
 	jet_particles.set_emitting(true)
-	jet_sfx.play("jetpack_noise")
+	if not jet_sfx.is_active():
+		jet_sfx.play("jetpack_noise")
 	
 	if falling: 
 		falling = false
@@ -314,3 +316,9 @@ func take_hit():
 		return
 	
 	shield.decrease_energy(1)
+
+
+func stop_all_sfx():
+	var shield_sfx = shield.get_node("SamplePlayer")
+	jet_sfx.stop_all()
+	shield_sfx.stop_all()
