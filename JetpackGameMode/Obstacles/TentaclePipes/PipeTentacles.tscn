@@ -1,4 +1,4 @@
-[gd_scene load_steps=211 format=1]
+[gd_scene load_steps=212 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/Pipe_Looper.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/PipeBrain.gd" type="Script" id=2]
@@ -14,38 +14,38 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0014.png" type="Texture" id=12]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0017.png" type="Texture" id=13]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0020.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0000.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0003.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0006.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0008.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0010.png" type="Texture" id=19]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0012.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0014.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0016.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0018.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0020.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0022.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0024.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0026.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0000.png" type="Texture" id=28]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0002.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0004.png" type="Texture" id=30]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0006.png" type="Texture" id=31]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0008.png" type="Texture" id=32]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0009.png" type="Texture" id=33]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0010.png" type="Texture" id=34]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0011.png" type="Texture" id=35]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0012.png" type="Texture" id=36]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0000.png" type="Texture" id=37]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0001.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0003.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0005.png" type="Texture" id=40]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0007.png" type="Texture" id=41]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0010.png" type="Texture" id=42]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0013.png" type="Texture" id=43]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0016.png" type="Texture" id=44]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0018.png" type="Texture" id=45]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0020.png" type="Texture" id=46]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0000.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0002.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0004.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0006.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0008.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0009.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0010.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0011.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0012.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0000.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0001.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0003.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0005.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0007.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0010.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0013.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0016.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0018.png" type="Texture" id=32]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0020.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0000.png" type="Texture" id=34]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0003.png" type="Texture" id=35]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0006.png" type="Texture" id=36]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0008.png" type="Texture" id=37]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0010.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0012.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0014.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0016.png" type="Texture" id=41]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0018.png" type="Texture" id=42]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0020.png" type="Texture" id=43]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0022.png" type="Texture" id=44]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0024.png" type="Texture" id=45]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0026.png" type="Texture" id=46]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0000.png" type="Texture" id=47]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0001.png" type="Texture" id=48]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0002.png" type="Texture" id=49]
@@ -57,38 +57,38 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0014.png" type="Texture" id=55]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0017.png" type="Texture" id=56]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0020.png" type="Texture" id=57]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0000.png" type="Texture" id=58]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0003.png" type="Texture" id=59]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0006.png" type="Texture" id=60]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0008.png" type="Texture" id=61]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0010.png" type="Texture" id=62]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0012.png" type="Texture" id=63]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0014.png" type="Texture" id=64]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0016.png" type="Texture" id=65]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0018.png" type="Texture" id=66]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0020.png" type="Texture" id=67]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0022.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0024.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0026.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0000.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0002.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0004.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0006.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0008.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0009.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0010.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0011.png" type="Texture" id=78]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0012.png" type="Texture" id=79]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0000.png" type="Texture" id=80]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0001.png" type="Texture" id=81]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0003.png" type="Texture" id=82]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0005.png" type="Texture" id=83]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0007.png" type="Texture" id=84]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0010.png" type="Texture" id=85]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0013.png" type="Texture" id=86]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0016.png" type="Texture" id=87]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0018.png" type="Texture" id=88]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0020.png" type="Texture" id=89]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0000.png" type="Texture" id=58]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0002.png" type="Texture" id=59]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0004.png" type="Texture" id=60]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0006.png" type="Texture" id=61]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0008.png" type="Texture" id=62]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0009.png" type="Texture" id=63]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0010.png" type="Texture" id=64]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0011.png" type="Texture" id=65]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0012.png" type="Texture" id=66]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0000.png" type="Texture" id=67]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0001.png" type="Texture" id=68]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0003.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0005.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0007.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0010.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0013.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0016.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0018.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0020.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0000.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0003.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0006.png" type="Texture" id=79]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0008.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0010.png" type="Texture" id=81]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0012.png" type="Texture" id=82]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0014.png" type="Texture" id=83]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0016.png" type="Texture" id=84]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0018.png" type="Texture" id=85]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0020.png" type="Texture" id=86]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0022.png" type="Texture" id=87]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0024.png" type="Texture" id=88]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0026.png" type="Texture" id=89]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Die/Armature_dying_00.png" type="Texture" id=90]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Die/Armature_dying_01.png" type="Texture" id=91]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Die/Armature_dying_02.png" type="Texture" id=92]
@@ -194,6 +194,7 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0050.png" type="Texture" id=192]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" type="Texture" id=193]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles_KillPlayerAnim.tres" type="Animation" id=194]
+[ext_resource path="res://CommonScenes/SoundManager/tentacle_sfx_library.tres" type="SampleLibrary" id=195]
 
 [sub_resource type="Curve2D" id=1]
 
@@ -202,17 +203,17 @@ _data = {
 "points": Vector2Array( 0, 0, 0, 0, 25, -200, 0, 0, 0, 0, 25, 200 )
 }
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=17]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=18]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=19]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -225,22 +226,22 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 25 ) ],
 "loop": false,
 "name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"frames": [ ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"loop": false,
+"name": "spawn",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "crush_idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": false,
 "name": "crush",
 "speed": 60.0
@@ -254,22 +255,22 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 81 ) ],
+"frames": [ ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 68 ) ],
 "loop": false,
 "name": "kill_player",
 "speed": 59.999
 }, {
-"frames": [ ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 81 ) ],
+"frames": [ ExtResource( 77 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ) ],
+"loop": false,
+"name": "spawn",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 68 ) ],
 "loop": true,
 "name": "crush_idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ) ],
+"frames": [ ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
 "loop": false,
 "name": "crush",
 "speed": 60.0
@@ -293,17 +294,17 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
+[sub_resource type="ConvexPolygonShape2D" id=20]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=21]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
 
-[sub_resource type="ConvexPolygonShape2D" id=11]
+[sub_resource type="ConvexPolygonShape2D" id=22]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
@@ -316,15 +317,16 @@ b = Vector2( 0, 700 )
 
 [sub_resource type="Animation" id=13]
 
-length = 0.43
+resource/name = "die"
+length = 0.72
 loop = false
-step = 0.43
+step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
@@ -334,7 +336,7 @@ tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Outlin
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ false ]
@@ -344,7 +346,7 @@ tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Outlin
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0.24, 0.72 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
@@ -354,7 +356,7 @@ tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Tentac
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
@@ -364,7 +366,7 @@ tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Tentac
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ false ]
@@ -374,7 +376,7 @@ tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Tentac
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0.24, 0.72 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
@@ -384,7 +386,7 @@ tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Ten
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
@@ -394,7 +396,7 @@ tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Ten
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ false ]
@@ -404,7 +406,7 @@ tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Ten
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0.24, 0.72 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
@@ -414,7 +416,7 @@ tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Out
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ false ]
@@ -424,7 +426,7 @@ tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Ou
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
-"times": FloatArray( 0, 0.43 ),
+"times": FloatArray( 0.24, 0.72 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
@@ -434,7 +436,7 @@ tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Outli
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
@@ -444,7 +446,7 @@ tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Tenta
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
@@ -454,7 +456,7 @@ tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Ou
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
@@ -464,7 +466,7 @@ tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Te
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
@@ -474,7 +476,7 @@ tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/Colli
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -950 ) ]
@@ -484,7 +486,7 @@ tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Co
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 950 ) ]
@@ -494,7 +496,7 @@ tracks/17/path = NodePath("ScoringArea:transform/pos")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
 "values": [ Vector2( 388.933, -1080 ) ]
@@ -504,10 +506,20 @@ tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/Ou
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
-"times": FloatArray( 0 ),
+"times": FloatArray( 0.24 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("SamplePlayer:play/play")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "enemy_death_by_laser" ]
 }
 
 [sub_resource type="Animation" id=14]
@@ -894,6 +906,7 @@ tracks/17/keys = {
 
 [sub_resource type="Animation" id=16]
 
+resource/name = "spawn"
 length = 0.43
 loop = false
 step = 0.43
@@ -1089,6 +1102,16 @@ tracks/18/keys = {
 "update": 0,
 "values": [ Vector2( 0, 320 ), Vector2( 0, 75 ) ]
 }
+tracks/19/type = "value"
+tracks/19/path = NodePath("SamplePlayer:play/play")
+tracks/19/interp = 1
+tracks/19/imported = false
+tracks/19/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "enemy_spawn" ]
+}
 
 [node name="Tentacles" type="Node2D" groups=[
 "pipes",
@@ -1123,14 +1146,14 @@ lookahead = 4.0
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
+shapes/0/shape = SubResource( 17 )
+shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, -950 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 3 )
-shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
+shapes/1/shape = SubResource( 18 )
+shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, -950 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 4 )
-shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, -75 )
+shapes/2/shape = SubResource( 19 )
+shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, -950 )
 shapes/2/trigger = false
 collision/layers = 4
 collision/mask = 3
@@ -1142,7 +1165,7 @@ script/script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
 
-transform/pos = Vector2( 0, -75 )
+transform/pos = Vector2( 0, -950 )
 transform/scale = Vector2( 1, -1 )
 build_mode = 0
 polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
@@ -1153,9 +1176,7 @@ trigger = false
 
 transform/pos = Vector2( 0, -875 )
 frames = SubResource( 5 )
-animation = "idle"
-frame = 15
-playing = true
+animation = "spawn"
 centered = false
 flip_v = true
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
@@ -1164,9 +1185,7 @@ modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 
 transform/pos = Vector2( 0, -875 )
 frames = SubResource( 6 )
-animation = "idle"
-frame = 15
-playing = true
+animation = "spawn"
 centered = false
 flip_v = true
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
@@ -1192,14 +1211,14 @@ frame = 51
 ]]
 
 input/pickable = false
-shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
+shapes/0/shape = SubResource( 20 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 950 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 10 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
+shapes/1/shape = SubResource( 21 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 950 )
 shapes/1/trigger = false
-shapes/2/shape = SubResource( 11 )
-shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 75 )
+shapes/2/shape = SubResource( 22 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 950 )
 shapes/2/trigger = false
 collision/layers = 4
 collision/mask = 3
@@ -1211,7 +1230,7 @@ script/script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
 
-transform/pos = Vector2( 0, 75 )
+transform/pos = Vector2( 0, 950 )
 build_mode = 0
 polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 shape_range = Vector2( 0, 2 )
@@ -1221,9 +1240,7 @@ trigger = false
 
 transform/pos = Vector2( 0, 75 )
 frames = SubResource( 5 )
-animation = "idle"
-frame = 15
-playing = true
+animation = "spawn"
 centered = false
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 
@@ -1232,9 +1249,7 @@ modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 editor/display_folded = true
 transform/pos = Vector2( 0, 75 )
 frames = SubResource( 6 )
-animation = "idle"
-frame = 15
-playing = true
+animation = "spawn"
 centered = false
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 
@@ -1296,6 +1311,23 @@ visibility/visible = false
 transform/pos = Vector2( 53, 0 )
 transform/scale = Vector2( 17.35, 1.62407 )
 rect = Rect2( 0, -540, 20, 1080 )
+
+[node name="SamplePlayer" type="SamplePlayer" parent="."]
+
+config/polyphony = 1
+config/samples = ExtResource( 195 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
 
 [connection signal="die" from="TentaclePath/TentaclePosition/TentacleTopStatic" to="PipeBrain" method="_on_PipeTentacles_Die"]
 

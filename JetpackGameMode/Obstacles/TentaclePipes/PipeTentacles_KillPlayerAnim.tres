@@ -2,10 +2,10 @@
 
 [resource]
 
-resource/name = "PipeTentacles_KillPlayerAnim"
+resource/name = "kill_player"
 length = 1.54
 loop = false
-step = 0.87
+step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop/DeadPlayer/DeadPlayerOutline:frame")
 tracks/0/interp = 1
@@ -225,5 +225,15 @@ tracks/21/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ "kill_player", "crush_idle" ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("SamplePlayer:play/play")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
+"times": FloatArray( 0.16 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "player_death_by_crushing" ]
 }
 
