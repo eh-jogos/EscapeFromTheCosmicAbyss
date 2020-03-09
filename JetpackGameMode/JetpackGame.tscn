@@ -1456,8 +1456,6 @@ transform/pos = Vector2( 960, 540 )
 
 [node name="Player" parent="." instance=ExtResource( 52 )]
 
-is_invincible = true
-
 [node name="Obstaculos" type="Node2D" parent="."]
 
 [node name="Outlines" type="Node2D" parent="Obstaculos"]
