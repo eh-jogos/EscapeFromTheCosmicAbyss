@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CommonScenes/SoundManager/laser_eye_sfx_library.tres" type="SampleLibrary" id=2]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 
@@ -111,6 +112,16 @@ tracks/9/keys = {
 "update": 0,
 "values": [ Vector2( 0, 60 ) ]
 }
+tracks/10/type = "value"
+tracks/10/path = NodePath("SamplePlayer:play/play")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 1.2, 1.6, 1.9 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 2,
+"values": [ "enemy_laser_charging", "enemy_laser_charging", "enemy_laser_charging" ]
+}
 
 [sub_resource type="Animation" id=2]
 
@@ -126,6 +137,16 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, -150 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SamplePlayer:play/play")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray(  ),
+"transitions": FloatArray(  ),
+"update": 2,
+"values": [  ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -437,8 +458,20 @@ tracks/12/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath("SamplePlayer:play/play")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 2,
+"values": [ "enemy_laser_shooting" ]
+}
 
-[node name="LaserEye" type="Node2D"]
+[node name="LaserEye" type="Node2D" groups=[
+"enemy",
+]]
 
 script/script = ExtResource( 1 )
 point_value = 5
@@ -462,9 +495,24 @@ playback/speed = 1.0
 blend_times = [ "charging", "shooting", 0.005, "enter", "charging", 0.005, "shooting", "hide", 0.005 ]
 autoplay = "hidden"
 
-[node name="Root" type="Node2D" parent="."]
+[node name="SamplePlayer" type="SamplePlayer" parent="."]
 
-transform/pos = Vector2( 0, -150 )
+config/polyphony = 1
+config/samples = ExtResource( 2 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="Root" type="Node2D" parent="."]
 
 [node name="ColorFrame" type="ColorFrame" parent="Root"]
 
@@ -473,10 +521,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -76.0
-margin/top = 0.0
-margin/right = 86.0
-margin/bottom = 40.0
+margin/left = -81.0
+margin/top = 1093.0
+margin/right = 81.0
+margin/bottom = 1106.0
 color = Color( 0.780392, 0.223529, 0.211765, 1 )
 
 [node name="ColorFrame" type="ColorFrame" parent="Root/ColorFrame"]
@@ -494,19 +542,23 @@ margin/right = -61.0
 margin/bottom = 0.0
 color = Color( 1, 1, 1, 1 )
 
-[node name="LaseEyeSkin" parent="Root" instance=ExtResource( 2 )]
+[node name="LaseEyeSkin" parent="Root" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 0, 14 )
+warning_color_1 = 1.0
+warning_color_2 = 1.0
+warning_color_3 = 1.0
 
 [node name="Raycasts" type="Node2D" parent="Root"]
 
+editor/display_folded = true
 transform/pos = Vector2( -5, 0 )
 
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
 
-transform/pos = Vector2( -55, 3.83282 )
+transform/pos = Vector2( -55, 1084 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
@@ -516,7 +568,7 @@ type_mask = 2
 "enemy",
 ]]
 
-transform/pos = Vector2( 5, 3.83282 )
+transform/pos = Vector2( 5, 1084 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
@@ -526,7 +578,7 @@ type_mask = 2
 "enemy",
 ]]
 
-transform/pos = Vector2( 65, 3.83282 )
+transform/pos = Vector2( 65, 1084 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1

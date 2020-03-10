@@ -79,3 +79,8 @@ func _on_cycle_ended():
 	set_fixed_process(false)
 	if should_score:
 		game._on_scored(point_value)
+
+
+func stop_all_sfx():
+	var sfx_player = get_node("SamplePlayer")
+	sfx_player.stop_all()
