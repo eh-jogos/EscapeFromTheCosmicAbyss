@@ -13,6 +13,7 @@ func _ready():
 	collision_timer = get_node("CollisionTimer")
 	
 	animator.play("base")
+	animator.seek(0, true)
 	set_fixed_process(true)
 
 
