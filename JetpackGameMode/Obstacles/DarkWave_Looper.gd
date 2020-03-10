@@ -39,3 +39,8 @@ func kill_player(offset):
 
 func _on_player_killed():
 	game.game_over()
+
+
+func stop_all_sfx():
+	var sfx_player = get_node("SamplePlayer")
+	sfx_player.stop_all()

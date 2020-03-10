@@ -231,7 +231,7 @@ tracks/22/path = NodePath("SamplePlayer:play/play")
 tracks/22/interp = 1
 tracks/22/imported = false
 tracks/22/keys = {
-"times": FloatArray( 0.16 ),
+"times": FloatArray( 0.32 ),
 "transitions": FloatArray( 1 ),
 "update": 2,
 "values": [ "player_death_by_crushing" ]
