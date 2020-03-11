@@ -153,8 +153,7 @@ func _fixed_process(delta):
 		#print(collider.get_name())
 		if collider.is_in_group("enemy") and not is_dead and shield_energy > 0:
 			#print("Shield Protected")
-			if not is_invincible:
-				shield.decrease_energy(1)
+			take_hit()
 			
 			var normal = self.get_collision_normal()
 			var final_motion = normal.slide(motion)
@@ -282,8 +281,8 @@ func fall_to_rise():
 	if not shooting:
 		arms_animator.play("rising")
 
-func shield_up(increment):
-	shield.increase_energy(increment)
+func shield_up(increment, should_mute = false):
+	shield.increase_energy(increment, should_mute)
 
 func score():
 	
@@ -304,15 +303,15 @@ func set_player_stats():
 	cooldown = 1.5 + (0.1 * game.cooldown)
 	dash_cost = base_dash_cost - (base_dash_cost * 0.15 * game.cooldown)
 	
-	if is_invincible:
+	if is_invincible and shield_energy == 0:
 			shield_energy = 1
 	
 	print("SHIELD UP: %s"%[shield_energy])
-	shield_up(shield_energy)
+	shield_up(shield_energy, true)
 
 
 func take_hit():
-	if is_invincible:
+	if is_invincible and shield_energy <= 1:
 		return
 	
 	shield.decrease_energy(1)

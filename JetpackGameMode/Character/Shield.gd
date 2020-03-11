@@ -18,35 +18,33 @@ func _ready():
 	
 	shield_animator.play("disabled")
 
-func modulate_shield():
+func modulate_shield(should_mute = false):
 	var animation = shield_animator.get_current_animation()
 	#print("MODULATE SHIELD | Energy:%s"%[energy])
+	
+	if not should_mute and energy != 0:
+		var sfx_player = get_node("SamplePlayer")
+		sfx_player.play("shield_up")
 	
 	if energy == 0:
 		shield_animator.play("disabled")
 	elif energy == 1:
 		shield_sprite.set_modulate(Color(0,0.96,1,1))
 		shield_animator.play("open")
-		yield(shield_animator,"finished")
-		shield_animator.play("idle")
 	elif energy == 2:
 		shield_sprite.set_modulate(Color(0.6,0.27,1,1))
 		if animation == "burst" or animation == "disabled":
 			shield_animator.play("open")
-			yield(shield_animator,"finished")
-			shield_animator.play("idle")
 	elif energy == 3:
 		shield_sprite.set_modulate(Color(0.84,0,1,1))
 		if animation == "burst" or animation == "disabled":
 			shield_animator.play("open")
-			yield(shield_animator,"finished")
-			shield_animator.play("idle")
 	else:
 		print("SHIELD ERROR | UNKNOW VALUE OF ENERGY: %s"%[energy])
 	
 	player.shield_energy = energy
 
-func increase_energy(increment):
+func increase_energy(increment, should_mute = false):
 	if energy+increment > MAX_SHIELD:
 		energy = MAX_SHIELD
 		player.score()
@@ -57,7 +55,7 @@ func increase_energy(increment):
 	
 	print("Shield Energy: %s | Incremet: %s"%[energy,increment])
 	
-	modulate_shield()
+	modulate_shield(should_mute)
 
 func decrease_energy(increment):
 	if energy-increment < 0:
