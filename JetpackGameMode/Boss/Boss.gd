@@ -50,3 +50,8 @@ func _on_player_killed():
 
 func _on_CollisionTimer_timeout():
 	set_fixed_process(true)
+
+
+func stop_all_sfx():
+	var sfx_player = get_node("SamplePlayer")
+	sfx_player.stop_all()

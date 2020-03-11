@@ -77,3 +77,8 @@ func _on_beat_spawned():
 			set_current_laser()
 		
 		print("BackgroundBoss | _on_beat_spawned | LASER! | is_up: %s"%[is_up])
+
+
+func stop_all_sfx():
+	var sfx_player = get_node("SamplePlayer")
+	sfx_player.stop_all()

@@ -1199,7 +1199,9 @@ z/z = 3
 
 transform/pos = Vector2( -960, 0 )
 
-[node name="Boss" parent="Camera2D/FinalBoss" instance=ExtResource( 26 )]
+[node name="Boss" parent="Camera2D/FinalBoss" groups=[
+"boss",
+] instance=ExtResource( 26 )]
 
 [node name="WarningCutscene" type="Node2D" parent="Camera2D"]
 
@@ -1246,7 +1248,9 @@ scroll/limit_end = Vector2( 0, 0 )
 scroll/ignore_camera_zoom = true
 script/script = ExtResource( 29 )
 
-[node name="BackRowBoss" type="Node2D" parent="ParallaxBackground"]
+[node name="BackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
+"boss",
+]]
 
 visibility/visible = false
 visibility/opacity = 0.0
@@ -1347,7 +1351,9 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( 1010, 540 )
 
-[node name="MidBackRowBoss" type="Node2D" parent="ParallaxBackground"]
+[node name="MidBackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
+"boss",
+]]
 
 visibility/visible = false
 transform/pos = Vector2( -430, 620 )
@@ -1431,7 +1437,9 @@ __meta__ = {
 visibility/visible = false
 transform/pos = Vector2( 1010, 540 )
 
-[node name="MidFrontRowBoss" type="Node2D" parent="ParallaxBackground"]
+[node name="MidFrontRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
+"boss",
+]]
 
 visibility/visible = false
 transform/pos = Vector2( 2600, 540 )
