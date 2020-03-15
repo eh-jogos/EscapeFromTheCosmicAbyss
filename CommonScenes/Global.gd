@@ -1,5 +1,14 @@
 extends Node
 
+const DEFAULT_SILHOUETTE_COLOR = Color(0.019608,0.078431,0.070588)
+const DEFAULT_ENEMY_COLOR = Color(0.12549,0.392157,0.356863)
+const DEFAULT_EYE_COLOR = Color(1,1,1,1)
+const DEFAULT_EYE_CHARGE1_COLOR = Color(1,1,1,1)
+const DEFAULT_EYE_CHARGE2_COLOR = Color(1,1,1,1)
+const DEFAULT_EYE_CHARGE3_COLOR = Color(1,1,1,1)
+const DEFAULT_ENEMY_LASER_COLOR = Color(1,1,1,1)
+
+
 var savefile = File.new()
 var savepath = "user://savegame.save"
 var version = 0.63
@@ -21,18 +30,18 @@ var savedata = {
 	"story": {
 		"highscore": [
 				0, #0
-				0, #1
-				0, #2
-				0, #3
-				0, #4
-				0, #5
-				0, #6
-				0, #7
-				0, #8
-				0, #9
-				0, #10
-				0, #11
-				0, #12
+				25, #1
+				38, #2
+				60, #3
+				85, #4
+				120, #5
+				130, #6
+				110, #7
+				199, #8
+				90, #9
+				220, #10
+				175, #11
+				380, #12
 		],
 		"cooldown": 0,
 		"initial ammo": 0,
@@ -199,18 +208,18 @@ func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade
 func reset_story_progress():
 	savedata["story"]["highscore"] = [
 			0, #0
-			0, #1
-			0, #2
-			0, #3
-			0, #4
-			0, #5
-			0, #6
-			0, #7
-			0, #8
-			0, #9
-			0, #10
-			0, #11
-			0, #12
+			25, #1
+			38, #2
+			60, #3
+			85, #4
+			120, #5
+			130, #6
+			110, #7
+			199, #8
+			90, #9
+			220, #10
+			175, #11
+			380, #12
 	]
 	
 	savedata["story"]["cooldown"] = 0
