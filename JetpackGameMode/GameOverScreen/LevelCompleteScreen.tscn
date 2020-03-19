@@ -1,15 +1,24 @@
-[gd_scene load_steps=21 format=1]
+[gd_scene load_steps=27 format=1]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://Fonts/OrbitronBlack30.fnt" type="BitmapFont" id=5]
-[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=6]
-[ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=7]
-[ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=8]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=9]
-[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/textures/cleared_smear_effect.png" type="Texture" id=2]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/textures/background_glow.png" type="Texture" id=3]
+[ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=4]
+[ext_resource path="res://Fonts/OrbitronMedium60.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/textures/end_screen_divisor_line.png" type="Texture" id=6]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/textures/cleared_text.png" type="Texture" id=7]
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=8]
+[ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=9]
+[ext_resource path="res://Fonts/OrbitronBlack30.fnt" type="BitmapFont" id=10]
+[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=11]
+[ext_resource path="res://CommonScenes/Buttons/icons/home_icon.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=13]
+[ext_resource path="res://CommonScenes/Buttons/icons/upgrade_icon.png" type="Texture" id=14]
+[ext_resource path="res://CommonScenes/Buttons/icons/retry_icon.png" type="Texture" id=15]
+[ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture" id=16]
+[ext_resource path="res://CommonScenes/Buttons/icons/play_icon.png" type="Texture" id=17]
+[ext_resource path="res://CommonScenes/pallet.png" type="Texture" id=18]
+
 
 [sub_resource type="Animation" id=1]
 
@@ -85,8 +94,8 @@ _data = {
 
 shader/shader = SubResource( 4 )
 shader/shading_mode = 0
-shader_param/Start = Color( 0.579202, 0.0958803, 0.968539, 1 )
-shader_param/End = Color( 0.308415, 1, 0.929688, 1 )
+shader_param/Start = Color( 0.699568, 0, 0.932087, 1 )
+shader_param/End = Color( 0.386945, 0.947378, 0.879722, 1 )
 
 [sub_resource type="Animation" id=6]
 
@@ -206,40 +215,6 @@ tracks/3/keys = {
 "values": [ 0.0, 1.0 ]
 }
 
-[sub_resource type="StyleBoxTexture" id=9]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 7 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="StyleBoxTexture" id=10]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 8 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
 [node name="LevelCompleteScreen" type="Node2D"]
 
 process/pause_mode = 2
@@ -265,30 +240,157 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 2.0
-margin/right = 1920.0
-margin/bottom = 1082.0
+margin/left = 12.0
+margin/top = -13.0
+margin/right = 1932.0
+margin/bottom = 1067.0
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
-[node name="CompleteText" type="Label" parent="."]
+[node name="StageClearedContainer" type="Control" parent="."]
 
-rect/scale = Vector2( 1.5, 1.5 )
+anchor/top = 3
+anchor/right = 1
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 32.0
+margin/right = -1856.0
+margin/bottom = -483.0
+
+[node name="ClearedSmear" type="TextureFrame" parent="StageClearedContainer"]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 644.0
+margin/top = 56.5
+margin/right = -636.0
+margin/bottom = -189.5
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="BackLight" type="TextureFrame" parent="StageClearedContainer"]
+
+anchor/left = 3
+anchor/right = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 370.0
+margin/top = 0.0
+margin/right = -386.0
+margin/bottom = 836.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="LevelText" type="HBoxContainer" parent="StageClearedContainer"]
+
+editor/display_folded = true
+visibility/opacity = 0.8
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 125.0
+margin/right = 1920.0
+margin/bottom = 196.0
+custom_constants/separation = 30
+alignment = 1
+
+[node name="StageNumber" type="Label" parent="StageClearedContainer/LevelText"]
+
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 0.0
-margin/top = 95.0
-margin/right = 1280.0
-margin/bottom = 181.0
-custom_fonts/font = ExtResource( 2 )
-text = "Level Complete"
+margin/left = 122.0
+margin/top = 0.0
+margin/right = 455.0
+margin/bottom = 71.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+text = "STAGE 12"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="StageName" type="Label" parent="StageClearedContainer/LevelText"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 485.0
+margin/top = 0.0
+margin/right = 1797.0
+margin/bottom = 71.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+text = "If that was the 'Calm', what is the 'Storm'?!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="DivisorLineTop" type="TextureFrame" parent="StageClearedContainer"]
+
+anchor/left = 3
+anchor/right = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 520.0
+margin/top = 101.0
+margin/right = -549.0
+margin/bottom = 112.0
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="DivisorLineBottom" type="TextureFrame" parent="StageClearedContainer"]
+
+anchor/left = 3
+anchor/right = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 520.0
+margin/top = 421.0
+margin/right = -549.0
+margin/bottom = 432.0
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="Cleared" type="TextureFrame" parent="StageClearedContainer"]
+
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 584.0
+margin/top = 84.5
+margin/right = -580.0
+margin/bottom = -161.5
+texture = ExtResource( 7 )
+stretch_mode = 0
 
 [node name="ResultsContainer" type="VBoxContainer" parent="."]
 
@@ -297,39 +399,39 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 330.0
+margin/top = 503.0
 margin/right = 1920.0
-margin/bottom = 1006.0
+margin/bottom = 1004.0
 custom_constants/separation = 50
 alignment = 2
 
 [node name="ModeUnlock" type="VBoxContainer" parent="ResultsContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 206.0
+margin/top = 0.0
 margin/right = 1920.0
-margin/bottom = 348.0
+margin/bottom = 142.0
 custom_constants/separation = 0
 alignment = 1
 
 [node name="Arcade" type="Label" parent="ResultsContainer/ModeUnlock"]
 
 editor/display_folded = true
+visibility/opacity = 0.0
 material/material = SubResource( 5 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 0.0
+margin/top = 125.0
 margin/right = 1920.0
-margin/bottom = 71.0
-custom_fonts/font = ExtResource( 3 )
+margin/bottom = 196.0
+custom_fonts/font = ExtResource( 4 )
 text = "ARCADE MODE UNLOCKED!"
 align = 1
 percent_visible = 1.0
@@ -350,16 +452,17 @@ autoplay = "text_anim"
 [node name="Speedrun" type="Label" parent="ResultsContainer/ModeUnlock"]
 
 editor/display_folded = true
+visibility/opacity = 0.0
 material/material = SubResource( 5 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
-margin/top = 71.0
+margin/top = 196.0
 margin/right = 1920.0
-margin/bottom = 142.0
-custom_fonts/font = ExtResource( 3 )
+margin/bottom = 267.0
+custom_fonts/font = ExtResource( 4 )
 text = "SPEEDRUN MODE UNLOCKED!"
 align = 1
 percent_visible = 1.0
@@ -391,15 +494,14 @@ autoplay = "base"
 
 [node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 398.0
+margin/top = 192.0
 margin/right = 1920.0
-margin/bottom = 547.0
+margin/bottom = 341.0
 custom_constants/separation = 50
 alignment = 1
 
@@ -427,7 +529,8 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 426.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Score:"
 align = 1
 valign = 1
@@ -445,7 +548,8 @@ margin/left = 0.0
 margin/top = 35.0
 margin/right = 426.0
 margin/bottom = 106.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
@@ -455,6 +559,7 @@ max_lines_visible = -1
 
 [node name="ScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 
+editor/display_folded = true
 rect/min_size = Vector2( 416, 149 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -480,7 +585,8 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 416.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Scored:"
 align = 1
 valign = 1
@@ -498,7 +604,8 @@ margin/left = 0.0
 margin/top = 32.0
 margin/right = 416.0
 margin/bottom = 118.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
@@ -508,7 +615,6 @@ max_lines_visible = -1
 
 [node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 
-visibility/visible = false
 material/material = SubResource( 5 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -518,7 +624,7 @@ margin/left = 0.0
 margin/top = 113.0
 margin/right = 416.0
 margin/bottom = 149.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 10 )
 text = "IT'S A NEW HIGHSCORE!"
 align = 1
 valign = 1
@@ -539,7 +645,6 @@ autoplay = "text_anim"
 
 [node name="UpgradeContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 351, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -562,7 +667,8 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 351.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Upgrade Points:"
 align = 1
 valign = 1
@@ -580,7 +686,8 @@ margin/left = 0.0
 margin/top = 35.0
 margin/right = 351.0
 margin/bottom = 106.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
@@ -627,7 +734,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 426.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 8 )
 text = "Best Time:"
 align = 1
 valign = 1
@@ -645,7 +752,7 @@ margin/left = 0.0
 margin/top = 35.0
 margin/right = 426.0
 margin/bottom = 106.0
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 4 )
 text = "0000"
 align = 1
 valign = 1
@@ -680,7 +787,7 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 416.0
 margin/bottom = 37.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 8 )
 text = "Time:"
 align = 1
 valign = 1
@@ -698,7 +805,7 @@ margin/left = 0.0
 margin/top = 32.0
 margin/right = 416.0
 margin/bottom = 118.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 9 )
 text = "0000"
 align = 1
 valign = 1
@@ -719,7 +826,7 @@ margin/left = 0.0
 margin/top = 113.0
 margin/right = 416.0
 margin/bottom = 149.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 10 )
 text = "IT'S A NEW RECORD!"
 align = 1
 valign = 1
@@ -740,151 +847,136 @@ autoplay = "text_anim"
 
 [node name="Buttons" type="HBoxContainer" parent="ResultsContainer"]
 
-rect/min_size = Vector2( 0, 79 )
+rect/min_size = Vector2( 0, 110 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 11 )
 margin/left = 0.0
-margin/top = 597.0
+margin/top = 391.0
 margin/right = 1920.0
-margin/bottom = 676.0
-custom_constants/separation = 15
+margin/bottom = 501.0
 alignment = 1
 
-[node name="NextLevel" type="Button" parent="ResultsContainer/Buttons"]
+[node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
 
-rect/min_size = Vector2( 233, 79 )
+rect/min_size = Vector2( 192, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 399.0
+margin/left = 86.0
 margin/top = 0.0
-margin/right = 632.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
+margin/right = 431.0
+margin/bottom = 110.0
+custom_constants/hseparation = 15
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Next Level"
+text = "Main Menu"
+icon = ExtResource( 12 )
 flat = false
-script/script = ExtResource( 9 )
-pressed_sfx = "ui_confirm"
-
-[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-
-rect/min_size = Vector2( 262, 79 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 647.0
-margin/top = 0.0
-margin/right = 909.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Level Select"
-flat = false
-script/script = ExtResource( 9 )
-pressed_sfx = "ui_change"
-
-[node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-
-rect/min_size = Vector2( 228, 79 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 924.0
-margin/top = 0.0
-margin/right = 1152.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 10 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Play Again"
-flat = false
-script/script = ExtResource( 9 )
+script/script = ExtResource( 13 )
 pressed_sfx = "ui_confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
 
-rect/min_size = Vector2( 192, 79 )
+rect/min_size = Vector2( 192, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 1167.0
+margin/left = 435.0
 margin/top = 0.0
-margin/right = 1359.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
+margin/right = 734.0
+margin/bottom = 110.0
+custom_constants/hseparation = 15
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Upgrade"
+icon = ExtResource( 14 )
 flat = false
-script/script = ExtResource( 9 )
+script/script = ExtResource( 13 )
 pressed_sfx = "ui_change"
 
-[node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
+[node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
 
-rect/min_size = Vector2( 147, 79 )
+rect/min_size = Vector2( 192, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 1374.0
+margin/left = 738.0
 margin/top = 0.0
-margin/right = 1521.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/normal = SubResource( 10 )
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
+margin/right = 1088.0
+margin/bottom = 110.0
+custom_constants/hseparation = 15
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Home"
+text = "Play Again"
+icon = ExtResource( 15 )
 flat = false
-script/script = ExtResource( 9 )
+script/script = ExtResource( 13 )
 pressed_sfx = "ui_confirm"
 
-[connection signal="pressed" from="ResultsContainer/Buttons/NextLevel" to="." method="_on_NextLevel_pressed"]
+[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
 
-[connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
+rect/min_size = Vector2( 192, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1092.0
+margin/top = 0.0
+margin/right = 1480.0
+margin/bottom = 110.0
+custom_constants/hseparation = 15
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Level Select"
+icon = ExtResource( 16 )
+flat = false
+script/script = ExtResource( 13 )
+pressed_sfx = "ui_change"
 
-[connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
+[node name="NextLevel" type="Button" parent="ResultsContainer/Buttons"]
+
+rect/min_size = Vector2( 192, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 1484.0
+margin/top = 0.0
+margin/right = 1834.0
+margin/bottom = 110.0
+custom_constants/hseparation = 15
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Next Level"
+icon = ExtResource( 17 )
+flat = false
+script/script = ExtResource( 13 )
+pressed_sfx = "ui_confirm"
+
+[node name="pallet" type="Sprite" parent="."]
+
+transform/pos = Vector2( 939.719, 1266.79 )
+texture = ExtResource( 18 )
+
+[connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
 
 [connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
 
-[connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
+
+[connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
+
+[connection signal="pressed" from="ResultsContainer/Buttons/NextLevel" to="." method="_on_NextLevel_pressed"]
 
 
