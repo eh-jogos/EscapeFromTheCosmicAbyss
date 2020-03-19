@@ -28,8 +28,9 @@
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" type="Texture" id=26]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=27]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=28]
-[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=29]
+[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=29]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=30]
+
 
 [sub_resource type="Animation" id=1]
 

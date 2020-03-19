@@ -2,11 +2,12 @@
 
 [ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=3]
+[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=3]
 [ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=4]
 [ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=7]
+
 
 [sub_resource type="StyleBoxTexture" id=1]
 

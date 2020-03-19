@@ -1,7 +1,7 @@
 [gd_scene load_steps=86 format=1]
 
 [ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/Buttons/RedTheme.tres" type="Theme" id=2]
+[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=2]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/backgroun_space.png" type="Texture" id=3]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/spaceship.png" type="Texture" id=4]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/rift.png" type="Texture" id=5]
@@ -50,6 +50,7 @@
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page05/frame3/balloons/ballons1_blank.png" type="Texture" id=48]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page05/frame3/balloons/balloons2_blank.png" type="Texture" id=49]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=50]
+
 
 [sub_resource type="Animation" id=1]
 
