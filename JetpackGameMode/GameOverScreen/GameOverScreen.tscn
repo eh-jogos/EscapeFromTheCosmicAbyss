@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=1]
+[gd_scene load_steps=16 format=1]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=2]
@@ -6,11 +6,9 @@
 [ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://Fonts/OrbitronBlack30.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=6]
-[ext_resource path="res://CommonScenes/Buttons/btn_dark_hover.png" type="Texture" id=7]
-[ext_resource path="res://CommonScenes/Buttons/btn_red_normal.png" type="Texture" id=8]
-[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=9]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=10]
-
+[ext_resource path="res://CommonScenes/Buttons/LeftmostBlueScreen110Theme.tres" type="Theme" id=7]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=8]
+[ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -114,40 +112,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
-
-[sub_resource type="StyleBoxTexture" id=7]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 7 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
-
-[sub_resource type="StyleBoxTexture" id=8]
-
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
-texture = ExtResource( 8 )
-margin/left = 0.0
-margin/right = 0.0
-margin/top = 0.0
-margin/bottom = 0.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
-draw_center = true
 
 [node name="GameOverScreen" type="Node2D"]
 
@@ -718,87 +682,12 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
+theme/theme = ExtResource( 6 )
 margin/left = 0.0
 margin/top = 597.0
 margin/right = 1920.0
 margin/bottom = 676.0
-custom_constants/separation = 15
 alignment = 1
-
-[node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-
-rect/min_size = Vector2( 228, 79 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 523.0
-margin/top = 0.0
-margin/right = 751.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Play Again"
-flat = false
-script/script = ExtResource( 10 )
-pressed_sfx = "ui_confirm"
-
-[node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
-
-rect/min_size = Vector2( 192, 79 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 766.0
-margin/top = 0.0
-margin/right = 958.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Upgrade"
-flat = false
-script/script = ExtResource( 10 )
-pressed_sfx = "ui_change"
-
-[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-
-rect/min_size = Vector2( 262, 79 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 973.0
-margin/top = 0.0
-margin/right = 1235.0
-margin/bottom = 79.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_pressed = Color( 0, 0.960784, 1, 1 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Level Select"
-flat = false
-script/script = ExtResource( 10 )
-pressed_sfx = "ui_change"
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
 
@@ -807,30 +696,83 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 1250.0
+theme/theme = ExtResource( 7 )
+margin/left = 381.0
 margin/top = 0.0
-margin/right = 1397.0
+margin/right = 597.0
 margin/bottom = 79.0
-custom_styles/hover = SubResource( 7 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color_pressed = Color( 0, 0.956863, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Home"
 flat = false
-script/script = ExtResource( 10 )
+script/script = ExtResource( 8 )
 pressed_sfx = "ui_confirm"
 
-[connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
+[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
 
-[connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
+rect/min_size = Vector2( 262, 79 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 612.0
+margin/top = 0.0
+margin/right = 948.0
+margin/bottom = 79.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Level Select"
+flat = false
+script/script = ExtResource( 8 )
+pressed_sfx = "ui_change"
+
+[node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
+
+rect/min_size = Vector2( 192, 79 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 963.0
+margin/top = 0.0
+margin/right = 1225.0
+margin/bottom = 79.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Upgrade"
+flat = false
+script/script = ExtResource( 8 )
+pressed_sfx = "ui_change"
+
+[node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
+
+rect/min_size = Vector2( 228, 79 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 9 )
+margin/left = 1240.0
+margin/top = 0.0
+margin/right = 1538.0
+margin/bottom = 79.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Play Again"
+flat = false
+script/script = ExtResource( 8 )
+pressed_sfx = "ui_confirm"
+
+[connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
 
 [connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 
-[connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
+
+[connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
 
 
