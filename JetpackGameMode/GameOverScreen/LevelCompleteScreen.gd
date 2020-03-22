@@ -13,7 +13,8 @@ var last_focus
 
 var game
 var game_mode
-var label_message
+var stage_number
+var stage_name
 
 var score_results
 var label_score
@@ -23,6 +24,7 @@ var upgrade_container
 var label_upgrade
 var score_congrats
 
+var unlock_results
 var time_results
 var label_time
 var label_hightime
@@ -39,7 +41,8 @@ func _ready():
 	level_select_btn = self.get_node("ResultsContainer/Buttons/LevelSelect")
 	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
-	label_message = self.get_node("CompleteText")
+	stage_number = self.get_node("StageClearedContainer/LevelText/StageNumber")
+	stage_name = self.get_node("StageClearedContainer/LevelText/StageName")
 	
 	animator.set_current_animation("base")
 	animator.seek(0,true)
@@ -51,6 +54,7 @@ func _ready():
 	label_upgrade = score_results.get_node("UpgradeContainer/UpgradePoints")
 	score_congrats = score_results.get_node("ScoreContainer/HighscoreText")
 	
+	unlock_results = self.get_node("ResultsContainer/ModeUnlock")
 	time_results = self.get_node("ResultsContainer/TimeResults")
 	label_time = time_results.get_node("TimeContainer/Time")
 	label_hightime = time_results.get_node("HighTimeContainer/HighTime")
@@ -74,6 +78,7 @@ func _ready():
 		quit_btn.show()
 		
 		score_results.show()
+		unlock_results.show()
 		time_results.hide()
 	elif game_mode == "speedrun":
 		replay_btn.show()
@@ -84,12 +89,13 @@ func _ready():
 		
 		score_results.show()
 		time_results.show()
+		unlock_results.hide()
 		
 		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
 		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
 
 
-func open(msg):
+func open(level_number, level_name):
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
@@ -132,11 +138,11 @@ func open(msg):
 					Global.update_story_last_unlock(unlocked_levels)
 			next_level_btn.grab_focus()
 		else:
-			next_level_btn.set_disabled(true)
+			next_level_btn.hide()
 			level_select_btn.grab_focus()
 	elif game_mode == "speedrun":
 		upgrade_container.hide()
-		replay_btn.grab_focus()
+		upgrade_btn.hide()
 		
 		var time = game.get_time()
 		print_time(time, label_time)
@@ -148,9 +154,15 @@ func open(msg):
 			time_congrats.show()
 			game.hightime = time
 			Global.update_hightime(time)
+		
+		replay_btn.grab_focus()
 	
 	self.show()
-	label_message.set_text("%s Complete!"%[msg])
+	if level_number > 0:
+		stage_number.set_text("STAGE %02d"%[level_number])
+	else:
+		stage_number.hide()
+	stage_name.set_text(level_name)
 	animator.play_backwards("fade out")
 
 
