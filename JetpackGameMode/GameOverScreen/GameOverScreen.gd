@@ -142,7 +142,7 @@ func open():
 			Global.update_highlaps(laps)
 	
 	self.show()
-	animator.play_backwards("fade out")
+	animator.play("open")
 	
 	#SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
