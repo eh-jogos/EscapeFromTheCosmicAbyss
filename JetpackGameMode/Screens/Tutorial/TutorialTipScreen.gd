@@ -25,7 +25,7 @@ func play(num, title):
 	self.show()
 	#SoundManager.stop_bgm()
 	game.initialize_game_stats()
-	level_num.set_text(num)
+	level_num.set_text(str(num))
 	level_title.set_text(title)
 	load_next_tip()
 

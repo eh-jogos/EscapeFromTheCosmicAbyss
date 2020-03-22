@@ -955,7 +955,7 @@ point_multiple = 5
 upgrade_multiple = 30
 level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
-test_mode = "story"
+test_mode = "speedrun"
 test_level_or_points = 10
 
 [node name="AutoBoost" type="Timer" parent="."]
@@ -967,7 +967,6 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
-editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -1063,6 +1062,7 @@ end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -1236,6 +1236,7 @@ texture = ExtResource( 28 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
+editor/display_folded = true
 layer = -2
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -1598,6 +1599,7 @@ transform/scale = Vector2( 1, -1 )
 [node name="HUD" type="CanvasLayer" parent="."]
 
 process/pause_mode = 2
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0

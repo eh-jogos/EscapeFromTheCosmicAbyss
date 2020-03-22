@@ -231,11 +231,7 @@ func setup_game_mode_level():
 			current_level = level_loader.get_max_levels()-1
 		
 		var level = load_level(current_level)
-		
-		if current_level < 10:
-			level_num = "Level 0%s"%[current_level]
-		else:
-			level_num = "Level %s"%[current_level]
+		level_num = current_level
 		level_title = level.title
 		
 		if level.tutorial:
@@ -280,7 +276,7 @@ func load_level(level_choice, load_all = false, loop = false):
 	object_spawner.set_level(level)
 	
 	reset_background_bosses_list()
-	if level.bosses_nodes.keys().size() > 0:
+	if level.has("bosses_nodes") and level.bosses_nodes.keys().size() > 0:
 		for key in level.bosses_nodes.keys():
 			var boss_node
 			var laser_countdowns = level.bosses_nodes[key].laser_countdowns
@@ -452,11 +448,9 @@ func level_completed():
 		Global.update_story_next_upgrade(next_upgrade)
 	hud_animator.play("fade_out")
 	if game_mode == "story":
-		level_complete_screen.open(level_num)
+		level_complete_screen.open(level_num, level_title)
 	elif game_mode == "speedrun":
-		var exclamation_pos = level_num.length()-1
-		level_num.erase(exclamation_pos,1)
-		level_complete_screen.open(level_num)
+		level_complete_screen.open(-1, level_num)
 
 
 func player_reset_y():
