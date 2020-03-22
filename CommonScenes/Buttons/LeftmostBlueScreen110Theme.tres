@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=10 format=1]
 
-[ext_resource path="res://CommonScenes/Buttons/textures/slanted_button_normal.png" type="Texture" id=1]
-[ext_resource path="res://CommonScenes/Buttons/textures/slanted_button_hover.png" type="Texture" id=2]
-[ext_resource path="res://CommonScenes/Buttons/textures/slanted_button_pressed.png" type="Texture" id=3]
+[ext_resource path="res://CommonScenes/Buttons/textures/leftmost_button_normal.png" type="Texture" id=1]
+[ext_resource path="res://CommonScenes/Buttons/textures/leftmost_button_hover.png" type="Texture" id=2]
+[ext_resource path="res://CommonScenes/Buttons/textures/leftmost_button_pressed.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
@@ -12,7 +12,7 @@ content_margin/right = 0.0
 content_margin/top = 0.0
 content_margin/bottom = 0.0
 texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 414, 110 )
+region_rect = Rect2( 0, 0, 304, 110 )
 margin/left = 45.0
 margin/right = 45.0
 margin/top = 25.0
@@ -37,7 +37,7 @@ content_margin/right = 0.0
 content_margin/top = 0.0
 content_margin/bottom = 0.0
 texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 414, 110 )
+region_rect = Rect2( 0, 0, 304, 110 )
 margin/left = 45.0
 margin/right = 45.0
 margin/top = 25.0
@@ -55,7 +55,7 @@ content_margin/right = 60.0
 content_margin/top = 0.0
 content_margin/bottom = 0.0
 texture = ExtResource( 1 )
-region_rect = Rect2( 0, 0, 414, 110 )
+region_rect = Rect2( 0, 0, 304, 110 )
 margin/left = 45.0
 margin/right = 45.0
 margin/top = 25.0
@@ -73,7 +73,7 @@ content_margin/right = 0.0
 content_margin/top = 0.0
 content_margin/bottom = 0.0
 texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 414, 110 )
+region_rect = Rect2( 0, 0, 304, 110 )
 margin/left = 45.0
 margin/right = 45.0
 margin/top = 25.0
