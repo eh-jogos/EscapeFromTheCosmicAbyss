@@ -102,11 +102,6 @@ func open(level_number, level_name):
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	
-	if game.is_last_stage() and not Global.is_story_completed():
-		Global.story_completed()
-		var unlock_animator = get_node("ResultsContainer/ModeUnlock/AnimationPlayer")
-		unlock_animator.play("unlock")
-	
 	#SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
 	
@@ -163,7 +158,17 @@ func open(level_number, level_name):
 	else:
 		stage_number.hide()
 	stage_name.set_text(level_name)
-	animator.play_backwards("fade out")
+	animator.play("open")
+
+
+func play_unlock_animations():
+	"""
+	Called at the end of "open" animation
+	"""
+	if game.is_last_stage() and not Global.is_story_completed():
+		Global.story_completed()
+		var unlock_animator = get_node("ResultsContainer/ModeUnlock/AnimationPlayer")
+		unlock_animator.play("unlock")
 
 
 func _on_replay_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=1]
+[gd_scene load_steps=29 format=1]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/GameOverScreen/textures/cleared_smear_effect.png" type="Texture" id=2]
@@ -36,6 +36,136 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("StageClearedContainer/ClearedSmear:rect/pos")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 316, 201 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StageClearedContainer/ClearedSmear:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StageClearedContainer/BackLight:visibility/opacity")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("StageClearedContainer/LevelText:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("StageClearedContainer/DivisorLineTop:visibility/opacity")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("StageClearedContainer/DivisorLineTop:rect/pos")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 440, 101 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("StageClearedContainer/DivisorLineBottom:visibility/opacity")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("StageClearedContainer/DivisorLineBottom:rect/pos")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 440, 421 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("StageClearedContainer/Cleared:visibility/opacity")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("StageClearedContainer/Cleared:rect/pos")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ Vector2( 376, 173 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("ResultsContainer/ScoreResults:visibility/opacity")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("ResultsContainer/TimeResults:visibility/opacity")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("ResultsContainer/Buttons:visibility/opacity")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=2]
 
@@ -53,7 +183,166 @@ tracks/0/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="ImageTexture" id=3]
+[sub_resource type="Animation" id=3]
+
+resource/name = "open"
+length = 1.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("StageClearedContainer/LevelText:visibility/opacity")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0, 0.2, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("StageClearedContainer/DivisorLineTop:visibility/opacity")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.5, 0.7 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("StageClearedContainer/DivisorLineTop:rect/pos")
+tracks/3/interp = 1
+tracks/3/imported = false
+tracks/3/keys = {
+"times": FloatArray( 0, 0.5, 0.7 ),
+"transitions": FloatArray( 0.25, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 240, 101 ), Vector2( 240, 101 ), Vector2( 440, 101 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("StageClearedContainer/DivisorLineBottom:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0, 0.5, 0.7 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("StageClearedContainer/DivisorLineBottom:rect/pos")
+tracks/5/interp = 1
+tracks/5/imported = false
+tracks/5/keys = {
+"times": FloatArray( 0, 0.5, 0.7 ),
+"transitions": FloatArray( 1, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 640, 421 ), Vector2( 640, 421 ), Vector2( 440, 421 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("StageClearedContainer/ClearedSmear:rect/pos")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.5, 0.9 ),
+"transitions": FloatArray( 0.25, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 616, 201 ), Vector2( 616, 201 ), Vector2( 316, 201 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("StageClearedContainer/ClearedSmear:visibility/opacity")
+tracks/7/interp = 1
+tracks/7/imported = false
+tracks/7/keys = {
+"times": FloatArray( 0, 0.5, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("StageClearedContainer/Cleared:visibility/opacity")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
+"times": FloatArray( 0, 0.5, 0.8 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("StageClearedContainer/Cleared:rect/pos")
+tracks/9/interp = 1
+tracks/9/imported = false
+tracks/9/keys = {
+"times": FloatArray( 0, 0.5, 0.9 ),
+"transitions": FloatArray( 1, 0.25, 1 ),
+"update": 0,
+"values": [ Vector2( 76, 173 ), Vector2( 76, 173 ), Vector2( 376, 173 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("StageClearedContainer/BackLight:visibility/opacity")
+tracks/10/interp = 1
+tracks/10/imported = false
+tracks/10/keys = {
+"times": FloatArray( 0, 0.9, 1.2 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("ResultsContainer/ScoreResults:visibility/opacity")
+tracks/11/interp = 1
+tracks/11/imported = false
+tracks/11/keys = {
+"times": FloatArray( 0, 1, 1.3 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("ResultsContainer/TimeResults:visibility/opacity")
+tracks/12/interp = 1
+tracks/12/imported = false
+tracks/12/keys = {
+"times": FloatArray( 0, 1.1, 1.4 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("ResultsContainer/Buttons:visibility/opacity")
+tracks/13/interp = 1
+tracks/13/imported = false
+tracks/13/keys = {
+"times": FloatArray( 0, 1.2, 1.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/14/type = "method"
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/imported = false
+tracks/14/keys = {
+"times": FloatArray( 1.5 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_unlock_animations"
+} ]
+}
+
+[sub_resource type="ImageTexture" id=4]
 
 flags = 5
 image = Image( 256, 1, 0, GRAYSCALE, 0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 11, 12, 13, 14, 15, 16, 16, 17, 18, 19, 20, 21, 22, 23, 23, 24, 25, 26, 27, 28, 29, 30, 30, 31, 32, 33, 34, 35, 36, 37, 38, 38, 39, 40, 41, 42, 43, 44, 45, 45, 46, 47, 48, 49, 50, 51, 52, 53, 53, 54, 55, 56, 57, 58, 59, 60, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 69, 70, 71, 72, 73, 74, 75, 76, 77, 77, 78, 79, 80, 81, 82, 83, 84, 85, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 146, 148, 148, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 173, 174, 175, 176, 177, 178, 179, 180, 181, 183, 184, 185, 186, 187, 188, 190, 191, 192, 193, 194, 195, 197, 198, 199, 200, 201, 203, 204, 205, 206, 207, 209, 210, 211, 212, 214, 215, 216, 217, 219, 220, 221, 223, 224, 225, 226, 228, 229, 230, 231, 233, 234, 235, 237, 238, 239, 241, 242, 243, 244, 246, 247, 248, 249, 251, 252, 253, 254, 255 )
@@ -61,10 +350,10 @@ size = Vector2( 256, 1 )
 storage = 0
 lossy_quality = 0.7
 
-[sub_resource type="CanvasItemShaderGraph" id=4]
+[sub_resource type="CanvasItemShaderGraph" id=5]
 
 _code = {
-"default_tex": [ "cmap_3", SubResource( 3 ) ],
+"default_tex": [ "cmap_3", SubResource( 4 ) ],
 "fragment": "vec3 nd1sl3=vec3(SCREEN_UV,0);
 uniform color Start=vec4(1,0.819608,0,1);
 vec3 nd5sl0=Start.rgb;
@@ -90,14 +379,14 @@ _data = {
 "shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 757, 113 ), null, null, [ 0, 4, 0 ], 1, 0, Vector2( -52, 123 ), null, null, [  ], 2, 18, Vector2( 89.197, 255 ), null, null, [ 0, 1, 3, 2147483647, 0, null ], 3, 25, Vector2( 323, 274 ), Vector2Array( 0.65625, 0.59375 ), null, [ 0, 2, 0, 2147483647, 0, null ], 4, 23, Vector2( 502, 50 ), null, null, [ 0, 5, 0, 1, 6, 0, 2, 3, 0, 2147483647, 0, null, 2147483647, 1, null, 2147483647, 2, null ], 5, 28, Vector2( 155.197, 5 ), "Start", Color( 1, 0.819608, 0, 1 ), [  ], 6, 28, Vector2( 182, 139 ), "End", Color( 1, 0.266667, 0.490196, 1 ), [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=6]
 
-shader/shader = SubResource( 4 )
+shader/shader = SubResource( 5 )
 shader/shading_mode = 0
 shader_param/Start = Color( 0.699568, 0, 0.932087, 1 )
 shader_param/End = Color( 0.386945, 0.947378, 0.879722, 1 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 1.0
 loop = true
@@ -123,7 +412,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 
 length = 0.01
 loop = false
@@ -169,7 +458,7 @@ tracks/3/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 0.8
 loop = false
@@ -228,6 +517,7 @@ playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/base = SubResource( 1 )
 "anims/fade out" = SubResource( 2 )
+anims/open = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -354,7 +644,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 520.0
 margin/top = 101.0
-margin/right = -549.0
+margin/right = -551.0
 margin/bottom = 112.0
 texture = ExtResource( 6 )
 stretch_mode = 0
@@ -369,7 +659,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 520.0
 margin/top = 421.0
-margin/right = -549.0
+margin/right = -553.0
 margin/bottom = 432.0
 texture = ExtResource( 6 )
 stretch_mode = 0
@@ -386,7 +676,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 584.0
 margin/top = 84.5
-margin/right = -580.0
+margin/right = -582.0
 margin/bottom = -161.5
 texture = ExtResource( 7 )
 stretch_mode = 0
@@ -423,7 +713,7 @@ alignment = 1
 
 editor/display_folded = true
 visibility/opacity = 0.0
-material/material = SubResource( 5 )
+material/material = SubResource( 6 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -444,7 +734,7 @@ max_lines_visible = -1
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/text_anim = SubResource( 6 )
+anims/text_anim = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -454,7 +744,7 @@ autoplay = "text_anim"
 
 editor/display_folded = true
 visibility/opacity = 0.0
-material/material = SubResource( 5 )
+material/material = SubResource( 6 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -475,7 +765,7 @@ max_lines_visible = -1
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/text_anim = SubResource( 6 )
+anims/text_anim = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -486,8 +776,8 @@ autoplay = "text_anim"
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 7 )
-anims/unlock = SubResource( 8 )
+anims/base = SubResource( 8 )
+anims/unlock = SubResource( 9 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -615,7 +905,7 @@ max_lines_visible = -1
 
 [node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 
-material/material = SubResource( 5 )
+material/material = SubResource( 6 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -637,7 +927,7 @@ max_lines_visible = -1
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/text_anim = SubResource( 6 )
+anims/text_anim = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -697,7 +987,6 @@ max_lines_visible = -1
 
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -734,6 +1023,7 @@ margin/top = 0.0
 margin/right = 426.0
 margin/bottom = 37.0
 custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Time:"
 align = 1
 valign = 1
@@ -752,6 +1042,7 @@ margin/top = 35.0
 margin/right = 426.0
 margin/bottom = 106.0
 custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
@@ -787,6 +1078,7 @@ margin/top = 0.0
 margin/right = 416.0
 margin/bottom = 37.0
 custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Time:"
 align = 1
 valign = 1
@@ -805,6 +1097,7 @@ margin/top = 32.0
 margin/right = 416.0
 margin/bottom = 118.0
 custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
@@ -814,9 +1107,7 @@ max_lines_visible = -1
 
 [node name="HightimeText" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
 
-editor/display_folded = true
-visibility/visible = false
-material/material = SubResource( 5 )
+material/material = SubResource( 6 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -838,7 +1129,7 @@ max_lines_visible = -1
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/text_anim = SubResource( 6 )
+anims/text_anim = SubResource( 7 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
