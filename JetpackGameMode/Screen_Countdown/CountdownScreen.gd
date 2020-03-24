@@ -20,7 +20,8 @@ func play(num, title):
 	self.show()
 	#SoundManager.stop_bgm()
 	game.set_game_state("Start")
-	level_num.set_text(str(num))
+	var stage_text = "%02d"%[num]
+	level_num.set_text(stage_text)
 	level_title.set_text(title)
 	
 	animator.play("fade_in")
