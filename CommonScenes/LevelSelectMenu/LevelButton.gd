@@ -77,11 +77,7 @@ func set_level_and_reload():
 	ScreenManager.reset_above_below()
 
 func _on_LevelButton_focus_enter():
-	var level_num_str
-	if level_num >= 10:
-		level_num_str = "Level %s"%[level_num]
-	else:
-		level_num_str = "Level 0%s"%[level_num]
+	var level_num_str = "Stage %02d"%[level_num]
 	
 	level_number.set_text(level_num_str)
 	level_title.set_text(level_name)
