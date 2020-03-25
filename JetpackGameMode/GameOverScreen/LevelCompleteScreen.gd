@@ -115,6 +115,8 @@ func open(level_number, level_name):
 		score_congrats.show()
 		game.highscore = score
 		Global.update_highscore(game_mode, score)
+	else:
+		score_congrats.hide()
 	
 	if game_mode == "story":
 		upgrade_container.show()
@@ -149,6 +151,8 @@ func open(level_number, level_name):
 			time_congrats.show()
 			game.hightime = time
 			Global.update_hightime(time)
+		else:
+			time_congrats.hide()
 		
 		replay_btn.grab_focus()
 	
