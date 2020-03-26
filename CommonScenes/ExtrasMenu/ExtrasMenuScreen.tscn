@@ -1,12 +1,11 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/blue_screen.png" type="Texture" id=2]
-[ext_resource path="res://CommonScenes/Buttons/PureText_Upgrade.tres" type="Theme" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=4]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=6]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=7]
+[ext_resource path="res://CommonScenes/Buttons/PureText_Upgrade.tres" type="Theme" id=2]
+[ext_resource path="res://Fonts/OrbitronBlack60.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=4]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=5]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -21,57 +20,67 @@ tracks/0/keys = {
 "times": FloatArray( 0, 0.5, 1 ),
 "transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.7, 0.7, 0.0 ]
+"values": [ 0.9, 0.9, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBase:region_rect")
+tracks/1/path = NodePath("TopEdge:rect/pos")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.5 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 1920, 615 ), Rect2( 0, 0, 1920, 615 ), Rect2( 0, 0, 1920, 0 ) ]
+"values": [ Vector2( 0, 352 ), Vector2( 0, 352 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TopEdge:rect/pos")
+tracks/2/path = NodePath("BottomEdge:rect/pos")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
 "times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
 "transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 352 ), Vector2( 0, 352 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
+"values": [ Vector2( 0, 952 ), Vector2( 0, 952 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("BottomEdge:rect/pos")
+tracks/3/path = NodePath("MenuContainer:visibility/opacity")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.3 ),
+"transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 952 ), Vector2( 0, 952 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
+"values": [ 0.9, 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("MenuContainer:visibility/opacity")
+tracks/4/path = NodePath("ScanlineFx:visibility/opacity")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
 "times": FloatArray( 0, 0.3 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
-"values": [ 0.9, 0.0 ]
+"values": [ 1.0, 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ScanlineFx:visibility/opacity")
+tracks/5/path = NodePath("ColorFrame2:rect/pos")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
+"times": FloatArray( 0, 0.3, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [ Vector2( 0, 360 ), Vector2( 0, 360 ), Vector2( 0, 660 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ColorFrame2:rect/size")
+tracks/6/interp = 1
+tracks/6/imported = false
+tracks/6/keys = {
+"times": FloatArray( 0, 0.3, 0.5 ),
+"transitions": FloatArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1920, 604 ), Vector2( 1920, 604 ), Vector2( 1920, 0 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -146,7 +155,7 @@ autoplay = ""
 
 [node name="ColorFrame1" type="ColorFrame" parent="."]
 
-visibility/opacity = 0.7
+visibility/opacity = 0.9
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -157,12 +166,18 @@ margin/right = 1920.0
 margin/bottom = 1080.0
 color = Color( 0.247059, 0.054902, 0.156863, 1 )
 
-[node name="ScreenBase" type="Sprite" parent="."]
+[node name="ColorFrame2" type="ColorFrame" parent="."]
 
-transform/pos = Vector2( 960, 660 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 0, 0, 1920, 615 )
+visibility/opacity = 0.6
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 360.0
+margin/right = 1920.0
+margin/bottom = 964.0
+color = Color( 0.266667, 0.65098, 1, 0.6 )
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 
@@ -176,7 +191,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 3 )
+theme/theme = ExtResource( 2 )
 margin/left = 521.0
 margin/top = 153.0
 margin/right = -224.0
@@ -196,7 +211,8 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 745.0
 margin/bottom = 71.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "EXTRAS"
 align = 1
 percent_visible = 1.0
@@ -219,7 +235,8 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Credits"
 flat = false
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
+pressed_sfx = "ui_change"
 
 [node name="Intro" type="Button" parent="MenuContainer"]
 
@@ -237,7 +254,8 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Intro Cutscene"
 flat = false
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
+pressed_sfx = "ui_change"
 
 [node name="Level5" type="Button" parent="MenuContainer"]
 
@@ -255,7 +273,8 @@ enabled_focus_mode = 2
 shortcut = null
 text = "The Guardian Sees You"
 flat = false
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
+pressed_sfx = "ui_change"
 
 [node name="Ending" type="Button" parent="MenuContainer"]
 
@@ -273,7 +292,8 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Ending Cutscene"
 flat = false
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
+pressed_sfx = "ui_change"
 
 [node name="Back" type="Button" parent="MenuContainer"]
 
@@ -291,7 +311,8 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Back"
 flat = false
-script/script = ExtResource( 5 )
+script/script = ExtResource( 4 )
+pressed_sfx = "ui_change"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 
@@ -305,7 +326,7 @@ __meta__ = {
 
 visibility/blend_mode = 2
 transform/pos = Vector2( 960, 660 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 region = true
 region_rect = Rect2( 0, 0, 1920, 615 )
 __meta__ = {
@@ -317,7 +338,7 @@ __meta__ = {
 visibility/opacity = 0.339222
 visibility/blend_mode = 1
 transform/pos = Vector2( 960, 673.237 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 0, 524.514, 1920, 80 )
 __meta__ = {
