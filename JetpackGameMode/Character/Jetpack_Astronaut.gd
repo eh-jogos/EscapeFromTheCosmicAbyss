@@ -80,9 +80,12 @@ func _ready():
 	set_fixed_process(true)
 	set_process_input(true)
 	
-	if not OS.is_debug_build():
-		is_invincible = false
-	
+	Global.connect("update_invincibility", self, "_on_update_invincibility")
+	if OS.is_debug_build():
+		if Global.is_invincible:
+			is_invincible = Global.is_invincible
+	else:
+		is_invincible = Global.is_invincible
 
 
 func _fixed_process(delta):
@@ -321,3 +324,9 @@ func stop_all_sfx():
 	var shield_sfx = shield.get_node("SamplePlayer")
 	jet_sfx.stop_all()
 	shield_sfx.stop_all()
+
+
+func _on_update_invincibility():
+	is_invincible = Global.is_invincible
+	if is_invincible and shield.energy == 0:
+		shield_up(1)
