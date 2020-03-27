@@ -33,6 +33,8 @@ func _ready():
 	quit_btn = get_node("MenuContainer/QuitGame")
 	
 	toggle_menuitems(game_mode)
+	
+	Global.connect("update_main_menu", self, "_on_Global_update_main_menu")
 
 func _on_options_pressed():
 	last_focus = options_btn
@@ -71,7 +73,7 @@ func _on_Back_pressed():
 	game_mode = "story"
 	toggle_menuitems(game_mode)
 
-func toggle_menuitems(game_mode):
+func toggle_menuitems(game_mode, should_grab_focus = true):
 	if game_mode == "story":
 		get_tree().call_group(0,"categorymenu", "hide")
 		get_tree().call_group(0,"mainmenu", "show")
@@ -88,14 +90,18 @@ func toggle_menuitems(game_mode):
 		
 		if Global.is_tutorial_completed():
 			continue_btn.show()
-			continue_btn.grab_focus()
+			if should_grab_focus:
+				continue_btn.grab_focus()
 			
 			continue_btn.set_focus_neighbour(MARGIN_TOP, quit_btn.get_path())
+			new_game_btn.set_focus_neighbour(MARGIN_TOP, "")
 			quit_btn.set_focus_neighbour(MARGIN_BOTTOM, continue_btn.get_path())
 		else:
 			continue_btn.hide()
-			new_game_btn.grab_focus()
+			if should_grab_focus:
+				new_game_btn.grab_focus()
 			
+			continue_btn.set_focus_neighbour(MARGIN_TOP, "")
 			new_game_btn.set_focus_neighbour(MARGIN_TOP, quit_btn.get_path())
 			quit_btn.set_focus_neighbour(MARGIN_BOTTOM, new_game_btn.get_path())
 		
@@ -128,3 +134,8 @@ func _on_Category_pressed(upgrade_points):
 	Global.reset_category_progress(game_settings)
 	Global.set_game_mode(game_mode, String(upgrade_points))
 	ScreenManager.load_screen(game_path)
+
+
+func _on_Global_update_main_menu():
+	game_mode = "story"
+	toggle_menuitems(game_mode, false)

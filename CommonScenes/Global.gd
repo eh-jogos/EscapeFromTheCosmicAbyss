@@ -1,5 +1,7 @@
 extends Node
 
+signal update_main_menu
+
 const DEFAULT_SILHOUETTE_COLOR = Color(0.019608,0.078431,0.070588)
 const DEFAULT_ENEMY_COLOR = Color(0.12549,0.392157,0.356863)
 const DEFAULT_EYE_COLOR = Color(1,1,1,1)
@@ -11,6 +13,7 @@ const DEFAULT_ENEMY_LASER_COLOR = Color(1,1,1,1)
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
+var savedata = {}
 var version = 0.63
 
 var is_retry = false
@@ -20,7 +23,7 @@ var base_stats = 15
 var max_upgrade_level = 40
 var base_upgrade = 30
 
-var savedata = {
+var base_savedata = {
 	"version" : version,
 	"options": {
 		"fullscreen": true,
@@ -88,7 +91,7 @@ var savedata = {
 
 func check_savefile():
 	if not savefile.file_exists(savepath):
-		save()
+		reset_savefile()
 	
 	read()
 	
@@ -99,6 +102,9 @@ func check_savefile():
 	
 	print(savedata)
 
+func reset_savefile():
+	savedata = base_savedata
+	save()
 
 func save():
 	savefile.open(savepath,File.WRITE)
