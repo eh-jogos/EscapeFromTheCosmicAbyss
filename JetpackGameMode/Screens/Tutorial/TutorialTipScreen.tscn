@@ -1,4 +1,4 @@
-[gd_scene load_steps=825 format=1]
+[gd_scene load_steps=831 format=1]
 
 [ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.fnt" type="BitmapFont" id=2]
@@ -68,26 +68,26 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/Body/rising_body_outline0010.png" type="Texture" id=66]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/Body/rising_body_outline0011.png" type="Texture" id=67]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/Body/rising_body_outline0012.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0000.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0001.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0002.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0003.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0004.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0005.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0006.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0000.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0001.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0002.png" type="Texture" id=78]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0003.png" type="Texture" id=79]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0004.png" type="Texture" id=80]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0005.png" type="Texture" id=81]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0006.png" type="Texture" id=82]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0007.png" type="Texture" id=83]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0008.png" type="Texture" id=84]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0009.png" type="Texture" id=85]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0010.png" type="Texture" id=86]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0011.png" type="Texture" id=87]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0012.png" type="Texture" id=88]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0000.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0001.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0002.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0003.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0004.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0005.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0006.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0007.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0008.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0009.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0010.png" type="Texture" id=79]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0011.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmBack/falling_armback_outline0012.png" type="Texture" id=81]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0000.png" type="Texture" id=82]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0001.png" type="Texture" id=83]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0002.png" type="Texture" id=84]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0003.png" type="Texture" id=85]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0004.png" type="Texture" id=86]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0005.png" type="Texture" id=87]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmBack/shooting_arm_back_outline0006.png" type="Texture" id=88]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmBack/rise_to_fall_armback_outline0000.png" type="Texture" id=89]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmBack/rise_to_fall_armback_outline0001.png" type="Texture" id=90]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmBack/rise_to_fall_armback_outline0002.png" type="Texture" id=91]
@@ -126,58 +126,58 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Fall_to_Rise/ArmBack/fall_to_rise_armback_outline0022.png" type="Texture" id=124]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Fall_to_Rise/ArmBack/fall_to_rise_armback_outline0023.png" type="Texture" id=125]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Fall_to_Rise/ArmBack/fall_to_rise_armback_outline0024.png" type="Texture" id=126]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0000.png" type="Texture" id=127]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0001.png" type="Texture" id=128]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0002.png" type="Texture" id=129]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0003.png" type="Texture" id=130]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0004.png" type="Texture" id=131]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0005.png" type="Texture" id=132]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0006.png" type="Texture" id=133]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0007.png" type="Texture" id=134]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0008.png" type="Texture" id=135]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0009.png" type="Texture" id=136]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0010.png" type="Texture" id=137]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0011.png" type="Texture" id=138]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0012.png" type="Texture" id=139]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0013.png" type="Texture" id=140]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0014.png" type="Texture" id=141]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0015.png" type="Texture" id=142]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0016.png" type="Texture" id=143]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0017.png" type="Texture" id=144]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0018.png" type="Texture" id=145]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0000.png" type="Texture" id=146]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0001.png" type="Texture" id=147]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0002.png" type="Texture" id=148]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0003.png" type="Texture" id=149]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0004.png" type="Texture" id=150]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0005.png" type="Texture" id=151]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0006.png" type="Texture" id=152]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0007.png" type="Texture" id=153]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0008.png" type="Texture" id=154]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0009.png" type="Texture" id=155]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0010.png" type="Texture" id=156]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0011.png" type="Texture" id=157]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0012.png" type="Texture" id=158]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0000.png" type="Texture" id=159]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0001.png" type="Texture" id=160]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0002.png" type="Texture" id=161]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0003.png" type="Texture" id=162]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0004.png" type="Texture" id=163]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0005.png" type="Texture" id=164]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0006.png" type="Texture" id=165]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0000.png" type="Texture" id=166]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0001.png" type="Texture" id=167]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0002.png" type="Texture" id=168]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0003.png" type="Texture" id=169]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0004.png" type="Texture" id=170]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0005.png" type="Texture" id=171]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0006.png" type="Texture" id=172]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0007.png" type="Texture" id=173]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0008.png" type="Texture" id=174]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0009.png" type="Texture" id=175]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0010.png" type="Texture" id=176]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0011.png" type="Texture" id=177]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0012.png" type="Texture" id=178]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0000.png" type="Texture" id=127]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0001.png" type="Texture" id=128]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0002.png" type="Texture" id=129]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0003.png" type="Texture" id=130]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0004.png" type="Texture" id=131]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0005.png" type="Texture" id=132]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0006.png" type="Texture" id=133]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0007.png" type="Texture" id=134]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0008.png" type="Texture" id=135]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0009.png" type="Texture" id=136]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0010.png" type="Texture" id=137]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0011.png" type="Texture" id=138]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmBack/rising_armback_outline0012.png" type="Texture" id=139]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0000.png" type="Texture" id=140]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0001.png" type="Texture" id=141]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0002.png" type="Texture" id=142]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0003.png" type="Texture" id=143]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0004.png" type="Texture" id=144]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0005.png" type="Texture" id=145]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0006.png" type="Texture" id=146]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0007.png" type="Texture" id=147]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0008.png" type="Texture" id=148]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0009.png" type="Texture" id=149]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0010.png" type="Texture" id=150]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0011.png" type="Texture" id=151]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0012.png" type="Texture" id=152]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0013.png" type="Texture" id=153]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0014.png" type="Texture" id=154]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0015.png" type="Texture" id=155]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0016.png" type="Texture" id=156]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0017.png" type="Texture" id=157]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmBack/reloading_armback_outline0018.png" type="Texture" id=158]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0000.png" type="Texture" id=159]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0001.png" type="Texture" id=160]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0002.png" type="Texture" id=161]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0003.png" type="Texture" id=162]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0004.png" type="Texture" id=163]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0005.png" type="Texture" id=164]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0006.png" type="Texture" id=165]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0007.png" type="Texture" id=166]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0008.png" type="Texture" id=167]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0009.png" type="Texture" id=168]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0010.png" type="Texture" id=169]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0011.png" type="Texture" id=170]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/ArmFront/falling_armfront_outline0012.png" type="Texture" id=171]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0000.png" type="Texture" id=172]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0001.png" type="Texture" id=173]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0002.png" type="Texture" id=174]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0003.png" type="Texture" id=175]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0004.png" type="Texture" id=176]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0005.png" type="Texture" id=177]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Shooting/ArmFront/shooting_arm_back_outline0006.png" type="Texture" id=178]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmFront/rise_to_fall_armfront_outline0000.png" type="Texture" id=179]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmFront/rise_to_fall_armfront_outline0001.png" type="Texture" id=180]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/ArmFront/rise_to_fall_armfront_outline0002.png" type="Texture" id=181]
@@ -216,38 +216,38 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Fall_to_Rise/ArmFront/fall_to_rise_armfront_outline0022.png" type="Texture" id=214]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Fall_to_Rise/ArmFront/fall_to_rise_armfront_outline0023.png" type="Texture" id=215]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Fall_to_Rise/ArmFront/fall_to_rise_armfront_outline0024.png" type="Texture" id=216]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0000.png" type="Texture" id=217]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0001.png" type="Texture" id=218]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0002.png" type="Texture" id=219]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0003.png" type="Texture" id=220]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0004.png" type="Texture" id=221]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0005.png" type="Texture" id=222]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0006.png" type="Texture" id=223]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0007.png" type="Texture" id=224]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0008.png" type="Texture" id=225]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0009.png" type="Texture" id=226]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0010.png" type="Texture" id=227]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0011.png" type="Texture" id=228]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0012.png" type="Texture" id=229]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0013.png" type="Texture" id=230]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0014.png" type="Texture" id=231]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0015.png" type="Texture" id=232]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0016.png" type="Texture" id=233]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0017.png" type="Texture" id=234]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0018.png" type="Texture" id=235]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0000.png" type="Texture" id=236]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0001.png" type="Texture" id=237]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0002.png" type="Texture" id=238]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0003.png" type="Texture" id=239]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0004.png" type="Texture" id=240]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0005.png" type="Texture" id=241]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0006.png" type="Texture" id=242]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0007.png" type="Texture" id=243]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0008.png" type="Texture" id=244]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0009.png" type="Texture" id=245]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0010.png" type="Texture" id=246]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0011.png" type="Texture" id=247]
-[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0012.png" type="Texture" id=248]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0000.png" type="Texture" id=217]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0001.png" type="Texture" id=218]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0002.png" type="Texture" id=219]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0003.png" type="Texture" id=220]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0004.png" type="Texture" id=221]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0005.png" type="Texture" id=222]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0006.png" type="Texture" id=223]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0007.png" type="Texture" id=224]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0008.png" type="Texture" id=225]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0009.png" type="Texture" id=226]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0010.png" type="Texture" id=227]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0011.png" type="Texture" id=228]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Rising/ArmFront/rising_armfront_outline0012.png" type="Texture" id=229]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0000.png" type="Texture" id=230]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0001.png" type="Texture" id=231]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0002.png" type="Texture" id=232]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0003.png" type="Texture" id=233]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0004.png" type="Texture" id=234]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0005.png" type="Texture" id=235]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0006.png" type="Texture" id=236]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0007.png" type="Texture" id=237]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0008.png" type="Texture" id=238]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0009.png" type="Texture" id=239]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0010.png" type="Texture" id=240]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0011.png" type="Texture" id=241]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0012.png" type="Texture" id=242]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0013.png" type="Texture" id=243]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0014.png" type="Texture" id=244]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0015.png" type="Texture" id=245]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0016.png" type="Texture" id=246]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0017.png" type="Texture" id=247]
+[ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Reloading/ArmFront/reloading_armfront_outline0018.png" type="Texture" id=248]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_00.png" type="Texture" id=249]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_01.png" type="Texture" id=250]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Falling/Body/Armature_falling_02.png" type="Texture" id=251]
@@ -312,26 +312,26 @@
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_10.png" type="Texture" id=310]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_11.png" type="Texture" id=311]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rising/Body/Armature_rising_12.png" type="Texture" id=312]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_00.png" type="Texture" id=313]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_01.png" type="Texture" id=314]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_02.png" type="Texture" id=315]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_03.png" type="Texture" id=316]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_04.png" type="Texture" id=317]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_05.png" type="Texture" id=318]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_06.png" type="Texture" id=319]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_00.png" type="Texture" id=320]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_01.png" type="Texture" id=321]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_02.png" type="Texture" id=322]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_03.png" type="Texture" id=323]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_04.png" type="Texture" id=324]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_05.png" type="Texture" id=325]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_06.png" type="Texture" id=326]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_07.png" type="Texture" id=327]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_08.png" type="Texture" id=328]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_09.png" type="Texture" id=329]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_10.png" type="Texture" id=330]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_11.png" type="Texture" id=331]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_12.png" type="Texture" id=332]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_00.png" type="Texture" id=313]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_01.png" type="Texture" id=314]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_02.png" type="Texture" id=315]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_03.png" type="Texture" id=316]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_04.png" type="Texture" id=317]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_05.png" type="Texture" id=318]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_06.png" type="Texture" id=319]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_07.png" type="Texture" id=320]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_08.png" type="Texture" id=321]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_09.png" type="Texture" id=322]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_10.png" type="Texture" id=323]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_11.png" type="Texture" id=324]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmBack/Armature_arm_back_falling_12.png" type="Texture" id=325]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_00.png" type="Texture" id=326]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_01.png" type="Texture" id=327]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_02.png" type="Texture" id=328]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_03.png" type="Texture" id=329]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_04.png" type="Texture" id=330]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_05.png" type="Texture" id=331]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmBack/Armature_arm_back_shooting_06.png" type="Texture" id=332]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_00.png" type="Texture" id=333]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_01.png" type="Texture" id=334]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_02.png" type="Texture" id=335]
@@ -370,58 +370,58 @@
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_22.png" type="Texture" id=368]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_23.png" type="Texture" id=369]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmBack/Armature_arm_back_fall_to_rise_24.png" type="Texture" id=370]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_00.png" type="Texture" id=371]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_01.png" type="Texture" id=372]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_02.png" type="Texture" id=373]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_03.png" type="Texture" id=374]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_04.png" type="Texture" id=375]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_05.png" type="Texture" id=376]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_06.png" type="Texture" id=377]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_07.png" type="Texture" id=378]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_08.png" type="Texture" id=379]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_09.png" type="Texture" id=380]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_10.png" type="Texture" id=381]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_11.png" type="Texture" id=382]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_12.png" type="Texture" id=383]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_13.png" type="Texture" id=384]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_14.png" type="Texture" id=385]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_15.png" type="Texture" id=386]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_16.png" type="Texture" id=387]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_17.png" type="Texture" id=388]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_18.png" type="Texture" id=389]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_00.png" type="Texture" id=390]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_01.png" type="Texture" id=391]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_02.png" type="Texture" id=392]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_03.png" type="Texture" id=393]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_04.png" type="Texture" id=394]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_05.png" type="Texture" id=395]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_06.png" type="Texture" id=396]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_07.png" type="Texture" id=397]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_08.png" type="Texture" id=398]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_09.png" type="Texture" id=399]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_10.png" type="Texture" id=400]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_11.png" type="Texture" id=401]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_12.png" type="Texture" id=402]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_00.png" type="Texture" id=403]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_01.png" type="Texture" id=404]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_02.png" type="Texture" id=405]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_03.png" type="Texture" id=406]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_04.png" type="Texture" id=407]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_05.png" type="Texture" id=408]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_06.png" type="Texture" id=409]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_00.png" type="Texture" id=410]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_01.png" type="Texture" id=411]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_02.png" type="Texture" id=412]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_03.png" type="Texture" id=413]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_04.png" type="Texture" id=414]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_05.png" type="Texture" id=415]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_06.png" type="Texture" id=416]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_07.png" type="Texture" id=417]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_08.png" type="Texture" id=418]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_09.png" type="Texture" id=419]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_10.png" type="Texture" id=420]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_11.png" type="Texture" id=421]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_12.png" type="Texture" id=422]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_00.png" type="Texture" id=371]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_01.png" type="Texture" id=372]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_02.png" type="Texture" id=373]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_03.png" type="Texture" id=374]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_04.png" type="Texture" id=375]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_05.png" type="Texture" id=376]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_06.png" type="Texture" id=377]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_07.png" type="Texture" id=378]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_08.png" type="Texture" id=379]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_09.png" type="Texture" id=380]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_10.png" type="Texture" id=381]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_11.png" type="Texture" id=382]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmBack/Armature_arm_back_rising_12.png" type="Texture" id=383]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_00.png" type="Texture" id=384]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_01.png" type="Texture" id=385]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_02.png" type="Texture" id=386]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_03.png" type="Texture" id=387]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_04.png" type="Texture" id=388]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_05.png" type="Texture" id=389]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_06.png" type="Texture" id=390]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_07.png" type="Texture" id=391]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_08.png" type="Texture" id=392]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_09.png" type="Texture" id=393]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_10.png" type="Texture" id=394]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_11.png" type="Texture" id=395]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_12.png" type="Texture" id=396]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_13.png" type="Texture" id=397]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_14.png" type="Texture" id=398]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_15.png" type="Texture" id=399]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_16.png" type="Texture" id=400]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_17.png" type="Texture" id=401]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmBack/Armature_arm_back_reload_18.png" type="Texture" id=402]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_00.png" type="Texture" id=403]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_01.png" type="Texture" id=404]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_02.png" type="Texture" id=405]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_03.png" type="Texture" id=406]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_04.png" type="Texture" id=407]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_05.png" type="Texture" id=408]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_06.png" type="Texture" id=409]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_07.png" type="Texture" id=410]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_08.png" type="Texture" id=411]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_09.png" type="Texture" id=412]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_10.png" type="Texture" id=413]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_11.png" type="Texture" id=414]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Falling/ArmFront/Armature_arm_front_falling_12.png" type="Texture" id=415]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_00.png" type="Texture" id=416]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_01.png" type="Texture" id=417]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_02.png" type="Texture" id=418]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_03.png" type="Texture" id=419]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_04.png" type="Texture" id=420]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_05.png" type="Texture" id=421]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Shooting/ArmFront/Armature_arm_front_shooting_06.png" type="Texture" id=422]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_00.png" type="Texture" id=423]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_01.png" type="Texture" id=424]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmFront/Armature_arm_front_to_fall_02.png" type="Texture" id=425]
@@ -460,38 +460,38 @@
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_22.png" type="Texture" id=458]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_23.png" type="Texture" id=459]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_24.png" type="Texture" id=460]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_00.png" type="Texture" id=461]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_01.png" type="Texture" id=462]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_02.png" type="Texture" id=463]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_03.png" type="Texture" id=464]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_04.png" type="Texture" id=465]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_05.png" type="Texture" id=466]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_06.png" type="Texture" id=467]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_07.png" type="Texture" id=468]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_08.png" type="Texture" id=469]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_09.png" type="Texture" id=470]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_10.png" type="Texture" id=471]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_11.png" type="Texture" id=472]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_12.png" type="Texture" id=473]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_13.png" type="Texture" id=474]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_14.png" type="Texture" id=475]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_15.png" type="Texture" id=476]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_16.png" type="Texture" id=477]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_17.png" type="Texture" id=478]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_18.png" type="Texture" id=479]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_00.png" type="Texture" id=480]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_01.png" type="Texture" id=481]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_02.png" type="Texture" id=482]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_03.png" type="Texture" id=483]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_04.png" type="Texture" id=484]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_05.png" type="Texture" id=485]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_06.png" type="Texture" id=486]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_07.png" type="Texture" id=487]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_08.png" type="Texture" id=488]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_09.png" type="Texture" id=489]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_10.png" type="Texture" id=490]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_11.png" type="Texture" id=491]
-[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_12.png" type="Texture" id=492]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_00.png" type="Texture" id=461]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_01.png" type="Texture" id=462]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_02.png" type="Texture" id=463]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_03.png" type="Texture" id=464]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_04.png" type="Texture" id=465]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_05.png" type="Texture" id=466]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_06.png" type="Texture" id=467]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_07.png" type="Texture" id=468]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_08.png" type="Texture" id=469]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_09.png" type="Texture" id=470]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_10.png" type="Texture" id=471]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_11.png" type="Texture" id=472]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Rising/ArmFront/Armature_arm_front_rising_12.png" type="Texture" id=473]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_00.png" type="Texture" id=474]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_01.png" type="Texture" id=475]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_02.png" type="Texture" id=476]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_03.png" type="Texture" id=477]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_04.png" type="Texture" id=478]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_05.png" type="Texture" id=479]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_06.png" type="Texture" id=480]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_07.png" type="Texture" id=481]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_08.png" type="Texture" id=482]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_09.png" type="Texture" id=483]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_10.png" type="Texture" id=484]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_11.png" type="Texture" id=485]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_12.png" type="Texture" id=486]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_13.png" type="Texture" id=487]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_14.png" type="Texture" id=488]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_15.png" type="Texture" id=489]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_16.png" type="Texture" id=490]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_17.png" type="Texture" id=491]
+[ext_resource path="res://JetpackGameMode/Character/Animations/Reloading/ArmFront/Armature_arm_front_reload_18.png" type="Texture" id=492]
 [ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=493]
 [ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/limits_outline/limits_outline0000.png" type="Texture" id=494]
 [ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/limits_outline/limits_outline0002.png" type="Texture" id=495]
@@ -735,17 +735,18 @@
 [ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=733]
 [ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_over.png" type="Texture" id=734]
 [ext_resource path="res://JetpackGameMode/HUD/pngs/stamina_progress.png" type="Texture" id=735]
-[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=736]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=737]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBar.png" type="Texture" id=738]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=739]
-[ext_resource path="res://JetpackGameMode/PowerUps/ShieldBG.png" type="Texture" id=740]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ammo.png" type="Texture" id=741]
-[ext_resource path="res://JetpackGameMode/Character/Fxs/FullLaser.png" type="Texture" id=742]
-[ext_resource path="res://JetpackGameMode/Character/Fxs/LaserParticle.png" type="Texture" id=743]
-[ext_resource path="res://JetpackGameMode/Screens/Tutorial/Pngs/ProgressBarMini.png" type="Texture" id=744]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressBarrier.png" type="Texture" id=745]
-[ext_resource path="res://Fonts/OrbitronBold40.fnt" type="BitmapFont" id=746]
+[ext_resource path="res://JetpackGameMode/PowerUps/ShieldBG.png" type="Texture" id=736]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ammo.png" type="Texture" id=737]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/FullLaser.png" type="Texture" id=738]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/LaserParticle.png" type="Texture" id=739]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_base.png" type="Texture" id=740]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_fill.png" type="Texture" id=741]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/finish_line_block.png" type="Texture" id=742]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_outline.png" type="Texture" id=743]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/player_marker.png" type="Texture" id=744]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=745]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=746]
+[ext_resource path="res://Fonts/OrbitronBold40.fnt" type="BitmapFont" id=747]
 
 [sub_resource type="Animation" id=1]
 
@@ -1526,14 +1527,14 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=8]
 
 animations = [ {
-"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "shooting",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ) ],
@@ -1546,28 +1547,28 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ) ],
+"frames": [ ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=9]
 
 animations = [ {
-"frames": [ ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ) ],
+"frames": [ ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ) ],
+"loop": true,
+"name": "shooting",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ) ],
@@ -1580,14 +1581,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 234 ), ExtResource( 235 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 240 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ) ],
+"frames": [ ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 240 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -1623,14 +1624,14 @@ colors = ColorArray( 0, 0, 0, 1, 0.0265961, 0.839617, 0.972656, 1, 1, 0.644287, 
 [sub_resource type="SpriteFrames" id=12]
 
 animations = [ {
-"frames": [ ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ), ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ) ],
+"frames": [ ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ) ],
+"loop": true,
+"name": "shooting",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ), ExtResource( 339 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 342 ), ExtResource( 343 ), ExtResource( 344 ), ExtResource( 345 ) ],
@@ -1643,28 +1644,28 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 371 ), ExtResource( 372 ), ExtResource( 373 ), ExtResource( 374 ), ExtResource( 375 ), ExtResource( 376 ), ExtResource( 377 ), ExtResource( 378 ), ExtResource( 379 ), ExtResource( 380 ), ExtResource( 381 ), ExtResource( 382 ), ExtResource( 383 ), ExtResource( 384 ), ExtResource( 385 ), ExtResource( 386 ), ExtResource( 387 ), ExtResource( 388 ), ExtResource( 389 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 390 ), ExtResource( 391 ), ExtResource( 392 ), ExtResource( 393 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ), ExtResource( 400 ), ExtResource( 401 ), ExtResource( 402 ) ],
+"frames": [ ExtResource( 371 ), ExtResource( 372 ), ExtResource( 373 ), ExtResource( 374 ), ExtResource( 375 ), ExtResource( 376 ), ExtResource( 377 ), ExtResource( 378 ), ExtResource( 379 ), ExtResource( 380 ), ExtResource( 381 ), ExtResource( 382 ), ExtResource( 383 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 384 ), ExtResource( 385 ), ExtResource( 386 ), ExtResource( 387 ), ExtResource( 388 ), ExtResource( 389 ), ExtResource( 390 ), ExtResource( 391 ), ExtResource( 392 ), ExtResource( 393 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ), ExtResource( 400 ), ExtResource( 401 ), ExtResource( 402 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=13]
 
 animations = [ {
-"frames": [ ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ), ExtResource( 407 ), ExtResource( 408 ), ExtResource( 409 ) ],
-"loop": true,
-"name": "shooting",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ), ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ) ],
+"frames": [ ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ), ExtResource( 407 ), ExtResource( 408 ), ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ) ],
+"loop": true,
+"name": "shooting",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ), ExtResource( 429 ), ExtResource( 430 ), ExtResource( 431 ), ExtResource( 432 ), ExtResource( 433 ), ExtResource( 434 ), ExtResource( 435 ) ],
@@ -1677,14 +1678,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 461 ), ExtResource( 462 ), ExtResource( 463 ), ExtResource( 464 ), ExtResource( 465 ), ExtResource( 466 ), ExtResource( 467 ), ExtResource( 468 ), ExtResource( 469 ), ExtResource( 470 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 474 ), ExtResource( 475 ), ExtResource( 476 ), ExtResource( 477 ), ExtResource( 478 ), ExtResource( 479 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 480 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 483 ), ExtResource( 484 ), ExtResource( 485 ), ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 491 ), ExtResource( 492 ) ],
+"frames": [ ExtResource( 461 ), ExtResource( 462 ), ExtResource( 463 ), ExtResource( 464 ), ExtResource( 465 ), ExtResource( 466 ), ExtResource( 467 ), ExtResource( 468 ), ExtResource( 469 ), ExtResource( 470 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 474 ), ExtResource( 475 ), ExtResource( 476 ), ExtResource( 477 ), ExtResource( 478 ), ExtResource( 479 ), ExtResource( 480 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 483 ), ExtResource( 484 ), ExtResource( 485 ), ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 491 ), ExtResource( 492 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -3843,9 +3844,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
+"frames": [ ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 584 ), ExtResource( 585 ) ],
 "loop": false,
-"name": "crush",
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 564 ) ],
@@ -3853,9 +3854,9 @@ animations = [ {
 "name": "crush_idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 584 ), ExtResource( 585 ) ],
+"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
 "loop": false,
-"name": "spawn",
+"name": "crush",
 "speed": 60.0
 } ]
 
@@ -3872,9 +3873,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 59.999
 }, {
-"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
+"frames": [ ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 627 ), ExtResource( 628 ) ],
 "loop": false,
-"name": "crush",
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 607 ) ],
@@ -3882,9 +3883,9 @@ animations = [ {
 "name": "crush_idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 627 ), ExtResource( 628 ) ],
+"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
 "loop": false,
-"name": "spawn",
+"name": "crush",
 "speed": 60.0
 } ]
 
@@ -4072,19 +4073,14 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.25098, 0.0901961, 0.454902, 1 ) ]
 }
 
-[sub_resource type="ColorRamp" id=53]
-
-offsets = FloatArray( 0, 0.985915, 1 )
-colors = ColorArray( 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0 )
-
-[sub_resource type="Curve2D" id=54]
+[sub_resource type="Curve2D" id=79]
 
 bake_interval = 5.0
 _data = {
 "points": Vector2Array( 0, 0, 0, 0, 664.597, 573.424, -94.2742, -3.0411, 133.406, -1.02707, 854.907, 431.216, -101.877, 0, 107.959, -3.0411, 1119.24, 679.863, 0, 0, 0, 0, 1295.63, 562.78 )
 }
 
-[sub_resource type="Animation" id=55]
+[sub_resource type="Animation" id=54]
 
 length = 1.5
 loop = true
@@ -4250,12 +4246,12 @@ tracks/15/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="ColorRamp" id=56]
+[sub_resource type="ColorRamp" id=55]
 
 offsets = FloatArray( 0, 0.50237, 1 )
 colors = ColorArray( 1, 1, 1, 0.909804, 1, 1, 1, 0.896868, 0.239216, 0.0901961, 0.431373, 0 )
 
-[sub_resource type="CanvasItemShaderGraph" id=57]
+[sub_resource type="CanvasItemShaderGraph" id=56]
 
 _code = {
 "default_tex": [ "Tex", ExtResource( 542 ) ],
@@ -4282,21 +4278,21 @@ _data = {
 "shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 589, 70 ), null, null, [ 1, 4, 0 ], 1, 0, Vector2( -116, -28 ), null, null, [  ], 2, 32, Vector2( 56, -92.7249 ), null, null, [ 0, 1, 2, 2147483647, 0, null ], 3, 30, Vector2( 128, 55.2751 ), "Tex", ExtResource( 542 ), [ 0, 5, 0, 2147483647, 0, null ], 4, 7, Vector2( 316, -49.7249 ), 2, null, [ 0, 2, 1, 1, 3, 1, 2147483647, 0, null, 2147483647, 1, 0.0 ], 5, 8, Vector2( 10, 154.275 ), 0, null, [ 0, 1, 2, 1, 6, 0, 2147483647, 0, null, 2147483647, 1, null ], 6, 27, Vector2( -151, 176.275 ), "Vec3", Vector3( 1, 0.4, 0 ), [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=58]
+[sub_resource type="CanvasItemMaterial" id=57]
 
-shader/shader = SubResource( 57 )
+shader/shader = SubResource( 56 )
 shader/shading_mode = 0
 shader_param/Vec3 = Vector3( 1, 0.6, 0 )
 shader_param/Tex = ExtResource( 542 )
 
-[sub_resource type="CanvasItemMaterial" id=59]
+[sub_resource type="CanvasItemMaterial" id=58]
 
-shader/shader = SubResource( 57 )
+shader/shader = SubResource( 56 )
 shader/shading_mode = 0
 shader_param/Vec3 = Vector3( 1, 0.15, 0 )
 shader_param/Tex = ExtResource( 542 )
 
-[sub_resource type="Animation" id=60]
+[sub_resource type="Animation" id=59]
 
 length = 0.1
 loop = false
@@ -4312,7 +4308,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=61]
+[sub_resource type="Animation" id=60]
 
 length = 0.3
 loop = false
@@ -4328,7 +4324,7 @@ tracks/0/keys = {
 "values": [ Color( 0.25098, 0.0901961, 0.454902, 1 ), Color( 1, 0.227451, 0.172549, 1 ) ]
 }
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=61]
 
 length = 0.3
 loop = false
@@ -4344,7 +4340,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.25098, 0.0901961, 0.454902, 1 ) ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=62]
 
 length = 0.1
 loop = false
@@ -4380,7 +4376,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=63]
 
 length = 0.7
 loop = false
@@ -4416,7 +4412,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 80 ), Vector2( 0, -12 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=64]
 
 length = 0.5
 loop = false
@@ -4452,7 +4448,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=66]
+[sub_resource type="Animation" id=65]
 
 length = 3.0
 loop = true
@@ -4528,12 +4524,12 @@ tracks/6/keys = {
 "values": [ "[stop]", "intro" ]
 }
 
-[sub_resource type="ColorRamp" id=67]
+[sub_resource type="ColorRamp" id=66]
 
 offsets = FloatArray( 0, 0.0807692, 0.946154, 0.996154, 1 )
 colors = ColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.107692, 1, 1, 1, 0 )
 
-[sub_resource type="Animation" id=68]
+[sub_resource type="Animation" id=67]
 
 length = 0.5
 loop = false
@@ -4639,7 +4635,7 @@ tracks/9/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=69]
+[sub_resource type="Animation" id=68]
 
 length = 0.3
 loop = false
@@ -4765,7 +4761,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=70]
+[sub_resource type="Animation" id=69]
 
 length = 0.4
 loop = true
@@ -4871,7 +4867,7 @@ tracks/9/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=71]
+[sub_resource type="Animation" id=70]
 
 length = 0.01
 loop = false
@@ -4977,7 +4973,7 @@ tracks/9/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=72]
+[sub_resource type="Animation" id=71]
 
 length = 1.5
 loop = true
@@ -5043,37 +5039,37 @@ tracks/5/keys = {
 "values": [ "base" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../Cena2/HUD/ProgressVisualization/ProgressBar/IconContainer:rect/pos")
+tracks/6/path = NodePath("../Cena2/HUD/ProgressVisualization2/BarBase/IconContainer:rect/pos")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
 "times": FloatArray( 0, 1 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 346, 3 ), Vector2( 406, 0 ) ]
+"values": [ Vector2( 344, 0 ), Vector2( 381, 0 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("PathFollow2D/Player/BulletSpawn/Bullet/AnimationPlayer:playback/play")
+tracks/7/path = NodePath("../Cena2/HUD/ProgressVisualization2/BarBase/BarrierContainer:visibility/opacity")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
+"times": FloatArray( 0, 0.9, 1.2, 1.5 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 1.0, 0.0, 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("PathFollow2D/Player/BulletSpawn/Bullet/AnimationPlayer:playback/play")
+tracks/8/interp = 1
+tracks/8/imported = false
+tracks/8/keys = {
 "times": FloatArray( 0, 0.2, 0.4, 0.8 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 2,
 "values": [ "inactive", "fire", "idle", "fadeout" ]
 }
-tracks/8/type = "value"
-tracks/8/path = NodePath("../Tentacles/TentacleTop/OutlineTop:animation")
-tracks/8/interp = 1
-tracks/8/imported = false
-tracks/8/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 1,
-"values": [ "crush_idle", "spawn" ]
-}
 tracks/9/type = "value"
-tracks/9/path = NodePath("../Tentacles/TentacleTop/TentacleTop:animation")
+tracks/9/path = NodePath("../Tentacles/TentacleTop/OutlineTop:animation")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
@@ -5083,7 +5079,7 @@ tracks/9/keys = {
 "values": [ "crush_idle", "spawn" ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../Tentacles/TentacleBottom/OutlineBottom:animation")
+tracks/10/path = NodePath("../Tentacles/TentacleTop/TentacleTop:animation")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
@@ -5093,7 +5089,7 @@ tracks/10/keys = {
 "values": [ "crush_idle", "spawn" ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../Tentacles/TentacleBottom/TentacleBottom:animation")
+tracks/11/path = NodePath("../Tentacles/TentacleBottom/OutlineBottom:animation")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
@@ -5103,17 +5099,17 @@ tracks/11/keys = {
 "values": [ "crush_idle", "spawn" ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../Tentacles/TentacleTop/OutlineTop:frame")
+tracks/12/path = NodePath("../Tentacles/TentacleBottom/TentacleBottom:animation")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
-"times": FloatArray( 0, 0.4, 0.5, 1.1 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0, 25, 26, 0 ]
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 1,
+"values": [ "crush_idle", "spawn" ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../Tentacles/TentacleTop/TentacleTop:frame")
+tracks/13/path = NodePath("../Tentacles/TentacleTop/OutlineTop:frame")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
@@ -5123,7 +5119,7 @@ tracks/13/keys = {
 "values": [ 0, 25, 26, 0 ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("../Tentacles/TentacleBottom/OutlineBottom:frame")
+tracks/14/path = NodePath("../Tentacles/TentacleTop/TentacleTop:frame")
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
@@ -5133,7 +5129,7 @@ tracks/14/keys = {
 "values": [ 0, 25, 26, 0 ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("../Tentacles/TentacleBottom/TentacleBottom:frame")
+tracks/15/path = NodePath("../Tentacles/TentacleBottom/OutlineBottom:frame")
 tracks/15/interp = 1
 tracks/15/imported = false
 tracks/15/keys = {
@@ -5143,17 +5139,17 @@ tracks/15/keys = {
 "values": [ 0, 25, 26, 0 ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("../Tentacles/TentacleTop/OutlineTop:playing")
+tracks/16/path = NodePath("../Tentacles/TentacleBottom/TentacleBottom:frame")
 tracks/16/interp = 1
 tracks/16/imported = false
 tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 1,
-"values": [ false ]
+"times": FloatArray( 0, 0.4, 0.5, 1.1 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 25, 26, 0 ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("../Tentacles/TentacleTop/TentacleTop:playing")
+tracks/17/path = NodePath("../Tentacles/TentacleTop/OutlineTop:playing")
 tracks/17/interp = 1
 tracks/17/imported = false
 tracks/17/keys = {
@@ -5163,7 +5159,7 @@ tracks/17/keys = {
 "values": [ false ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("../Tentacles/TentacleBottom/OutlineBottom:playing")
+tracks/18/path = NodePath("../Tentacles/TentacleTop/TentacleTop:playing")
 tracks/18/interp = 1
 tracks/18/imported = false
 tracks/18/keys = {
@@ -5173,7 +5169,7 @@ tracks/18/keys = {
 "values": [ false ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("../Tentacles/TentacleBottom/TentacleBottom:playing")
+tracks/19/path = NodePath("../Tentacles/TentacleBottom/OutlineBottom:playing")
 tracks/19/interp = 1
 tracks/19/imported = false
 tracks/19/keys = {
@@ -5183,34 +5179,44 @@ tracks/19/keys = {
 "values": [ false ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("../Cena2/HUD/TextureProgress/Ammunition/AmmoSlot3/Ammo/AnimationPlayer:playback/play")
+tracks/20/path = NodePath("../Tentacles/TentacleBottom/TentacleBottom:playing")
 tracks/20/interp = 1
 tracks/20/imported = false
 tracks/20/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../Cena2/HUD/TextureProgress/Ammunition/AmmoSlot3/Ammo/AnimationPlayer:playback/play")
+tracks/21/interp = 1
+tracks/21/imported = false
+tracks/21/keys = {
 "times": FloatArray( 0, 0.2 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 2,
 "values": [ "Base", "shoot" ]
 }
-tracks/21/type = "value"
-tracks/21/path = NodePath("../Cena2/HUD/Points:text")
-tracks/21/interp = 1
-tracks/21/imported = false
-tracks/21/keys = {
+tracks/22/type = "value"
+tracks/22/path = NodePath("../Cena2/HUD/Points:text")
+tracks/22/interp = 1
+tracks/22/imported = false
+tracks/22/keys = {
 "times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 1,
 "values": [ "0015", "0018" ]
 }
 
-[sub_resource type="CanvasItemMaterial" id=73]
+[sub_resource type="CanvasItemMaterial" id=72]
 
 shader/shader = SubResource( 37 )
 shader/shading_mode = 0
 shader_param/Vec3 = Vector3( 1, 0.35, 0 )
 shader_param/Tex = SubResource( 38 )
 
-[sub_resource type="SpriteFrames" id=74]
+[sub_resource type="SpriteFrames" id=73]
 
 animations = [ {
 "frames": [ ExtResource( 543 ), ExtResource( 544 ), ExtResource( 545 ), ExtResource( 545 ), ExtResource( 546 ), ExtResource( 546 ), ExtResource( 546 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 548 ), ExtResource( 549 ), ExtResource( 550 ), ExtResource( 550 ), ExtResource( 551 ), ExtResource( 551 ), ExtResource( 551 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 551 ), ExtResource( 551 ), ExtResource( 550 ), ExtResource( 549 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 546 ), ExtResource( 546 ), ExtResource( 545 ), ExtResource( 544 ) ],
@@ -5223,9 +5229,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
+"frames": [ ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 584 ), ExtResource( 585 ) ],
 "loop": false,
-"name": "crush",
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 568 ), ExtResource( 567 ), ExtResource( 567 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 564 ) ],
@@ -5233,13 +5239,13 @@ animations = [ {
 "name": "crush_idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 584 ), ExtResource( 585 ) ],
+"frames": [ ExtResource( 554 ), ExtResource( 554 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 562 ) ],
 "loop": false,
-"name": "spawn",
+"name": "crush",
 "speed": 60.0
 } ]
 
-[sub_resource type="SpriteFrames" id=75]
+[sub_resource type="SpriteFrames" id=74]
 
 animations = [ {
 "frames": [ ExtResource( 586 ), ExtResource( 587 ), ExtResource( 588 ), ExtResource( 588 ), ExtResource( 589 ), ExtResource( 589 ), ExtResource( 589 ), ExtResource( 590 ), ExtResource( 590 ), ExtResource( 590 ), ExtResource( 591 ), ExtResource( 592 ), ExtResource( 593 ), ExtResource( 593 ), ExtResource( 594 ), ExtResource( 594 ), ExtResource( 594 ), ExtResource( 595 ), ExtResource( 595 ), ExtResource( 595 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 595 ), ExtResource( 595 ), ExtResource( 595 ), ExtResource( 594 ), ExtResource( 594 ), ExtResource( 593 ), ExtResource( 592 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 590 ), ExtResource( 590 ), ExtResource( 590 ), ExtResource( 589 ), ExtResource( 589 ), ExtResource( 588 ), ExtResource( 587 ) ],
@@ -5252,9 +5258,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 59.999
 }, {
-"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
+"frames": [ ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 627 ), ExtResource( 628 ) ],
 "loop": false,
-"name": "crush",
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 612 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 611 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 607 ) ],
@@ -5262,13 +5268,13 @@ animations = [ {
 "name": "crush_idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 627 ), ExtResource( 628 ) ],
+"frames": [ ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 605 ) ],
 "loop": false,
-"name": "spawn",
+"name": "crush",
 "speed": 60.0
 } ]
 
-[sub_resource type="SpriteFrames" id=76]
+[sub_resource type="SpriteFrames" id=75]
 
 animations = [ {
 "frames": [ ExtResource( 629 ), ExtResource( 630 ), ExtResource( 631 ), ExtResource( 632 ), ExtResource( 633 ), ExtResource( 634 ), ExtResource( 635 ), ExtResource( 636 ), ExtResource( 637 ), ExtResource( 638 ), ExtResource( 639 ), ExtResource( 640 ), ExtResource( 641 ), ExtResource( 642 ), ExtResource( 643 ), ExtResource( 644 ), ExtResource( 645 ), ExtResource( 646 ), ExtResource( 647 ), ExtResource( 648 ), ExtResource( 649 ), ExtResource( 650 ), ExtResource( 651 ), ExtResource( 652 ), ExtResource( 653 ), ExtResource( 654 ), ExtResource( 655 ), ExtResource( 656 ), ExtResource( 657 ), ExtResource( 658 ), ExtResource( 659 ), ExtResource( 660 ), ExtResource( 661 ), ExtResource( 662 ), ExtResource( 663 ), ExtResource( 664 ), ExtResource( 665 ), ExtResource( 666 ), ExtResource( 667 ), ExtResource( 668 ), ExtResource( 669 ), ExtResource( 670 ), ExtResource( 671 ), ExtResource( 672 ), ExtResource( 673 ), ExtResource( 674 ), ExtResource( 675 ), ExtResource( 676 ), ExtResource( 677 ), ExtResource( 678 ), ExtResource( 679 ), ExtResource( 680 ) ],
@@ -5277,7 +5283,7 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="SpriteFrames" id=77]
+[sub_resource type="SpriteFrames" id=76]
 
 animations = [ {
 "frames": [ ExtResource( 681 ), ExtResource( 682 ), ExtResource( 683 ), ExtResource( 684 ), ExtResource( 685 ), ExtResource( 686 ), ExtResource( 687 ), ExtResource( 688 ), ExtResource( 689 ), ExtResource( 690 ), ExtResource( 691 ), ExtResource( 692 ), ExtResource( 693 ), ExtResource( 694 ), ExtResource( 695 ), ExtResource( 696 ), ExtResource( 697 ), ExtResource( 698 ), ExtResource( 699 ), ExtResource( 700 ), ExtResource( 701 ), ExtResource( 702 ), ExtResource( 703 ), ExtResource( 704 ), ExtResource( 705 ), ExtResource( 706 ), ExtResource( 707 ), ExtResource( 708 ), ExtResource( 709 ), ExtResource( 710 ), ExtResource( 711 ), ExtResource( 712 ), ExtResource( 713 ), ExtResource( 714 ), ExtResource( 715 ), ExtResource( 716 ), ExtResource( 717 ), ExtResource( 718 ), ExtResource( 719 ), ExtResource( 720 ), ExtResource( 721 ), ExtResource( 722 ), ExtResource( 723 ), ExtResource( 724 ), ExtResource( 725 ), ExtResource( 726 ), ExtResource( 727 ), ExtResource( 728 ), ExtResource( 729 ), ExtResource( 730 ), ExtResource( 731 ), ExtResource( 732 ) ],
@@ -5285,6 +5291,96 @@ animations = [ {
 "name": "dying",
 "speed": 60.0
 } ]
+
+[sub_resource type="StyleBoxTexture" id=80]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 740 )
+margin/left = 20.0
+margin/right = 20.0
+margin/top = 20.0
+margin/bottom = 20.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=81]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 741 )
+margin/left = 20.0
+margin/right = 20.0
+margin/top = 20.0
+margin/bottom = 20.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="StyleBoxTexture" id=82]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 742 )
+margin/left = 20.0
+margin/right = 20.0
+margin/top = 20.0
+margin/bottom = 20.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="Animation" id=85]
+
+resource/name = "loop"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/interp = 2
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.4 ]
+}
+
+[sub_resource type="StyleBoxTexture" id=83]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+texture = ExtResource( 743 )
+margin/left = 20.0
+margin/right = 20.0
+margin/top = 20.0
+margin/bottom = 20.0
+expand_margin/left = 0.0
+expand_margin/right = 0.0
+expand_margin/top = 0.0
+expand_margin/bottom = 0.0
+draw_center = true
+
+[sub_resource type="ColorRamp" id=84]
+
+offsets = FloatArray( 0, 1 )
+colors = ColorArray( 0, 0.960784, 1, 1, 0.402344, 0.976563, 1, 0 )
 
 [sub_resource type="Animation" id=78]
 
@@ -5343,7 +5439,8 @@ __meta__ = {
 
 [node name="Tip#0" type="Control" parent="."]
 
-visibility/opacity = 0.0
+editor/display_folded = true
+visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -5431,9 +5528,9 @@ curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#0/Path2D"]
 
-transform/pos = Vector2( 869.507, 432.135 )
+transform/pos = Vector2( 1108.8, 678.966 )
 transform/rot = 56.1146
-offset = 260.656
+offset = 615.857
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -5458,27 +5555,31 @@ __meta__ = {
 
 editor/display_folded = true
 frames = SubResource( 7 )
-animation = "rise_to_fall"
-frame = 6
+animation = "falling"
+frame = 11
+playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline"]
 
 visibility/behind_parent = true
 frames = SubResource( 8 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
+frame = 11
+playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
+frame = 11
+playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player"]
 
 frames = SubResource( 10 )
-animation = "rise_to_fall"
-frame = 6
+animation = "falling"
+frame = 11
+playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 
@@ -5486,7 +5587,6 @@ visibility/behind_parent = true
 transform/pos = Vector2( -40, 12.8015 )
 config/amount = 24
 config/lifetime = 0.3
-config/emitting = false
 config/process_mode = 1
 config/local_space = false
 params/direction = 330.0
@@ -5516,14 +5616,16 @@ color/color_ramp = SubResource( 11 )
 
 visibility/behind_parent = true
 frames = SubResource( 12 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
+frame = 11
+playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
+frame = 11
+playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player"]
 
@@ -5616,7 +5718,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -5624,7 +5726,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -5632,7 +5734,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -5649,7 +5751,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 4
+frame = 13
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -5657,7 +5759,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 4
+frame = 13
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -5665,7 +5767,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 4
+frame = 13
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -5726,9 +5828,9 @@ curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#1/Path2D"]
 
-transform/pos = Vector2( 674.717, 559.18 )
+transform/pos = Vector2( 1242.23, 625.412 )
 transform/rot = 56.1146
-offset = 17.48
+offset = 763.55
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -5754,7 +5856,7 @@ __meta__ = {
 editor/display_folded = true
 frames = SubResource( 7 )
 animation = "rising"
-frame = 11
+frame = 3
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -5762,21 +5864,21 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 11
+frame = 3
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "rising"
-frame = 11
+frame = 3
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player"]
 
 frames = SubResource( 10 )
 animation = "rising"
-frame = 11
+frame = 3
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
@@ -5815,14 +5917,14 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "rising"
-frame = 11
+frame = 3
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "rising"
-frame = 11
+frame = 3
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player"]
@@ -5915,6 +6017,7 @@ transform/pos = Vector2( 150, -450 )
 material/material = SubResource( 39 )
 frames = SubResource( 40 )
 animation = "idle"
+frame = 3
 playing = true
 centered = false
 flip_v = true
@@ -5926,6 +6029,7 @@ editor/display_folded = true
 material/material = SubResource( 39 )
 frames = SubResource( 41 )
 animation = "idle"
+frame = 3
 playing = true
 centered = false
 flip_v = true
@@ -5957,6 +6061,7 @@ transform/pos = Vector2( 150, 350 )
 material/material = SubResource( 39 )
 frames = SubResource( 40 )
 animation = "idle"
+frame = 3
 playing = true
 centered = false
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
@@ -5967,6 +6072,7 @@ editor/display_folded = true
 material/material = SubResource( 39 )
 frames = SubResource( 41 )
 animation = "idle"
+frame = 3
 playing = true
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -6002,7 +6108,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
+frame = 5
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -6010,7 +6116,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
+frame = 5
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -6018,7 +6124,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 12
+frame = 5
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -6034,7 +6140,6 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 7
 playing = true
 flip_h = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
@@ -6043,7 +6148,6 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 7
 playing = true
 flip_h = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -6052,7 +6156,6 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 7
 playing = true
 flip_h = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -6119,9 +6222,9 @@ __meta__ = {
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#2/Path2D"]
 
 editor/display_folded = true
-transform/pos = Vector2( 1057.28, 485.047 )
+transform/pos = Vector2( 1210.71, 380.976 )
 transform/rot = 56.1146
-offset = 433.654
+offset = 637.639
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -6145,8 +6248,8 @@ __meta__ = {
 
 editor/display_folded = true
 frames = SubResource( 7 )
-animation = "falling"
-frame = 1
+animation = "rising"
+frame = 10
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -6154,21 +6257,21 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "falling"
-frame = 1
+frame = 10
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "falling"
-frame = 1
+frame = 10
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player"]
 
 frames = SubResource( 10 )
-animation = "falling"
-frame = 1
+animation = "rising"
+frame = 10
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
@@ -6177,7 +6280,6 @@ visibility/behind_parent = true
 transform/pos = Vector2( -40, 12.8015 )
 config/amount = 24
 config/lifetime = 0.3
-config/emitting = false
 config/process_mode = 1
 config/local_space = false
 params/direction = 330.0
@@ -6208,14 +6310,14 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "falling"
-frame = 1
+frame = 10
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "falling"
-frame = 1
+frame = 10
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player"]
@@ -6310,7 +6412,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 40 )
 animation = "idle"
-frame = 24
+frame = 27
 playing = true
 centered = false
 flip_v = true
@@ -6323,7 +6425,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 41 )
 animation = "idle"
-frame = 24
+frame = 27
 playing = true
 centered = false
 flip_v = true
@@ -6356,7 +6458,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 40 )
 animation = "idle"
-frame = 24
+frame = 27
 playing = true
 centered = false
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
@@ -6368,7 +6470,7 @@ visibility/light_mask = 2
 material/material = SubResource( 47 )
 frames = SubResource( 41 )
 animation = "idle"
-frame = 24
+frame = 27
 playing = true
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -6390,7 +6492,6 @@ frame = 51
 
 [node name="Limits" type="Node2D" parent="Tip#2"]
 
-editor/display_folded = true
 transform/pos = Vector2( 71, 847 )
 __meta__ = {
 "_edit_group_": true,
@@ -6409,7 +6510,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -6417,7 +6518,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -6425,7 +6526,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -6442,7 +6543,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -6450,7 +6551,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -6458,7 +6559,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -6500,7 +6601,7 @@ margin/top = 88.0
 margin/right = 260.0
 margin/bottom = 125.0
 custom_fonts/font = ExtResource( 733 )
-text = "0000"
+text = "0001"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -6520,7 +6621,7 @@ range/min = 0.0
 range/max = 100.0
 range/step = 1.0
 range/page = 0.0
-range/value = 53.769
+range/value = 48.6926
 range/exp_edit = false
 range/rounded = false
 texture/under = null
@@ -6541,88 +6642,6 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
-
-[node name="ProgressVisualization" type="CenterContainer" parent="Tip#2/Limits/HUD"]
-
-editor/display_folded = true
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 32.0
-margin/top = 1025.0
-margin/right = 1878.0
-margin/bottom = 1071.0
-use_top_left = false
-script/script = ExtResource( 736 )
-ending_cap = 35
-progress_barrier = ExtResource( 737 )
-
-[node name="ProgressBar" type="TextureFrame" parent="Tip#2/Limits/HUD/ProgressVisualization"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1846.0
-margin/bottom = 46.0
-texture = ExtResource( 738 )
-stretch_mode = 0
-
-[node name="IconContainer" type="CenterContainer" parent="Tip#2/Limits/HUD/ProgressVisualization/ProgressBar"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 3.0
-margin/right = 30.0
-margin/bottom = 46.0
-use_top_left = false
-
-[node name="Particles2D" type="Particles2D" parent="Tip#2/Limits/HUD/ProgressVisualization/ProgressBar/IconContainer"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 15, 21 )
-config/amount = 1
-config/lifetime = 0.5
-config/process_mode = 1
-config/texture = ExtResource( 739 )
-params/direction = 0.0
-params/spread = 10.0
-params/linear_velocity = 0.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 0.0
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 1.8
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 53 )
-
-[node name="Icon" type="TextureFrame" parent="Tip#2/Limits/HUD/ProgressVisualization/ProgressBar/IconContainer"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 6.0
-margin/right = 30.0
-margin/bottom = 36.0
-texture = ExtResource( 739 )
-modulate = Color( 0, 1, 1, 1 )
-stretch_mode = 0
 
 [node name="Tip#3" type="Control" parent="."]
 
@@ -6791,14 +6810,14 @@ max_lines_visible = -1
 [node name="Path2D" type="Path2D" parent="Tip#3"]
 
 editor/display_folded = true
-curve = SubResource( 54 )
+curve = SubResource( 79 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#3/Path2D"]
 
 editor/display_folded = true
-transform/pos = Vector2( 937.364, 468.832 )
+transform/pos = Vector2( 1179.9, 666.152 )
 transform/rot = 56.1146
-offset = 339.211
+offset = 688.824
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -6823,32 +6842,28 @@ __meta__ = {
 
 editor/display_folded = true
 frames = SubResource( 7 )
-animation = "falling"
-frame = 8
-playing = true
+animation = "fall_to_rise"
+frame = 24
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline"]
 
 visibility/behind_parent = true
 frames = SubResource( 8 )
-animation = "falling"
-frame = 8
+animation = "rising"
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
-animation = "falling"
-frame = 8
+animation = "rising"
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player"]
 
 editor/display_folded = true
 frames = SubResource( 10 )
-animation = "falling"
-frame = 8
-playing = true
+animation = "fall_to_rise"
+frame = 24
 
 [node name="JetParticles" type="Particles2D" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
 
@@ -6856,7 +6871,6 @@ visibility/behind_parent = true
 transform/pos = Vector2( -40, 12.8015 )
 config/amount = 24
 config/lifetime = 0.3
-config/emitting = false
 config/process_mode = 1
 config/local_space = false
 params/direction = 330.0
@@ -6886,15 +6900,13 @@ color/color_ramp = SubResource( 11 )
 
 visibility/behind_parent = true
 frames = SubResource( 12 )
-animation = "falling"
-frame = 8
+animation = "rising"
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
-animation = "falling"
-frame = 8
+animation = "rising"
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player"]
@@ -6937,9 +6949,13 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+monitoring = false
+monitorable = false
 
 [node name="Sprite" type="Sprite" parent="Tip#3/Path2D/PathFollow2D/Player/Shield"]
 
+visibility/opacity = 0.0
+transform/scale = Vector2( 1.69482, 1.69482 )
 texture = ExtResource( 493 )
 modulate = Color( 0, 0.956863, 1, 1 )
 
@@ -6963,7 +6979,7 @@ autoplay = "disabled"
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/tutorial = SubResource( 55 )
+anims/tutorial = SubResource( 54 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7006,7 +7022,7 @@ params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
 color/color = Color( 1, 1, 1, 0.909804 )
-color/color_ramp = SubResource( 56 )
+color/color_ramp = SubResource( 55 )
 
 [node name="Shield" type="Sprite" parent="Tip#3/ShieldUp"]
 
@@ -7021,7 +7037,7 @@ modulate = Color( 0, 0.960784, 1, 1 )
 visibility/opacity = 0.4
 visibility/behind_parent = true
 transform/pos = Vector2( -0.323547, -0.323486 )
-texture = ExtResource( 740 )
+texture = ExtResource( 736 )
 modulate = Color( 0, 0.956863, 1, 1 )
 
 [node name="Tentacles" type="Node2D" parent="Tip#3"]
@@ -7039,10 +7055,10 @@ transform/pos = Vector2( 150, -600 )
 [node name="OutlineTop" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop"]
 
 visibility/light_mask = 2
-material/material = SubResource( 58 )
+material/material = SubResource( 57 )
 frames = SubResource( 40 )
-animation = "idle"
-frame = 38
+animation = "spawn"
+frame = 14
 centered = false
 flip_v = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
@@ -7051,10 +7067,10 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 editor/display_folded = true
 visibility/light_mask = 2
-material/material = SubResource( 58 )
+material/material = SubResource( 57 )
 frames = SubResource( 41 )
-animation = "idle"
-frame = 38
+animation = "spawn"
+frame = 14
 centered = false
 flip_v = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -7084,10 +7100,10 @@ transform/pos = Vector2( 150, 150 )
 [node name="OutlineBottom" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom"]
 
 visibility/light_mask = 2
-material/material = SubResource( 59 )
+material/material = SubResource( 58 )
 frames = SubResource( 40 )
-animation = "idle"
-frame = 38
+animation = "spawn"
+frame = 14
 centered = false
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -7095,10 +7111,10 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 editor/display_folded = true
 visibility/light_mask = 2
-material/material = SubResource( 59 )
+material/material = SubResource( 58 )
 frames = SubResource( 41 )
-animation = "idle"
-frame = 38
+animation = "spawn"
+frame = 14
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -7119,7 +7135,6 @@ frame = 51
 
 [node name="Cena2" type="Node2D" parent="Tip#3"]
 
-editor/display_folded = true
 transform/pos = Vector2( 71, 847 )
 
 [node name="Limits" type="Node2D" parent="Tip#3/Cena2"]
@@ -7134,7 +7149,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -7142,7 +7157,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -7150,7 +7165,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -7167,7 +7182,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -7175,7 +7190,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -7183,7 +7198,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -7245,7 +7260,7 @@ range/min = 0.0
 range/max = 100.0
 range/step = 1.0
 range/page = 0.0
-range/value = 22.9449
+range/value = 33.0513
 range/exp_edit = false
 range/rounded = false
 texture/under = null
@@ -7259,100 +7274,16 @@ radial_fill/center_offset = Vector2( 0, 0 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 60 )
-anims/overheated = SubResource( 61 )
-anims/undashable = SubResource( 62 )
+anims/base = SubResource( 59 )
+anims/overheated = SubResource( 60 )
+anims/undashable = SubResource( 61 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
-[node name="ProgressVisualization" type="CenterContainer" parent="Tip#3/Cena2/HUD"]
-
-editor/display_folded = true
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 32.0
-margin/top = 1025.0
-margin/right = 1878.0
-margin/bottom = 1071.0
-use_top_left = false
-script/script = ExtResource( 736 )
-ending_cap = 35
-progress_barrier = ExtResource( 737 )
-
-[node name="ProgressBar" type="TextureFrame" parent="Tip#3/Cena2/HUD/ProgressVisualization"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1846.0
-margin/bottom = 46.0
-texture = ExtResource( 738 )
-stretch_mode = 0
-
-[node name="IconContainer" type="CenterContainer" parent="Tip#3/Cena2/HUD/ProgressVisualization/ProgressBar"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 3.0
-margin/right = 30.0
-margin/bottom = 46.0
-use_top_left = false
-
-[node name="Particles2D" type="Particles2D" parent="Tip#3/Cena2/HUD/ProgressVisualization/ProgressBar/IconContainer"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 15, 21 )
-config/amount = 1
-config/lifetime = 0.5
-config/process_mode = 1
-config/texture = ExtResource( 739 )
-params/direction = 0.0
-params/spread = 10.0
-params/linear_velocity = 0.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 0.0
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 1.8
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 53 )
-
-[node name="Icon" type="TextureFrame" parent="Tip#3/Cena2/HUD/ProgressVisualization/ProgressBar/IconContainer"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 6.0
-margin/right = 30.0
-margin/bottom = 36.0
-texture = ExtResource( 739 )
-modulate = Color( 0, 1, 1, 1 )
-stretch_mode = 0
-
 [node name="Tip#4" type="Control" parent="."]
 
-editor/display_folded = true
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -7494,9 +7425,9 @@ radial_fill/center_offset = Vector2( 0, 0 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 60 )
-anims/overheated = SubResource( 61 )
-anims/undashable = SubResource( 62 )
+anims/base = SubResource( 59 )
+anims/overheated = SubResource( 60 )
+anims/undashable = SubResource( 61 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7513,7 +7444,7 @@ transform/pos = Vector2( 8, 77 )
 [node name="Ammo" type="Sprite" parent="Tip#4/HUD1/TextureProgress/Ammunition/AmmoSlot1"]
 
 visibility/visible = false
-texture = ExtResource( 741 )
+texture = ExtResource( 737 )
 region = true
 region_rect = Rect2( 0, 0, 17, 26 )
 
@@ -7522,9 +7453,9 @@ region_rect = Rect2( 0, 0, 17, 26 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Base = SubResource( 63 )
-anims/intro = SubResource( 64 )
-anims/shoot = SubResource( 65 )
+anims/Base = SubResource( 62 )
+anims/intro = SubResource( 63 )
+anims/shoot = SubResource( 64 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7537,7 +7468,7 @@ transform/pos = Vector2( 30, 77 )
 [node name="Ammo" type="Sprite" parent="Tip#4/HUD1/TextureProgress/Ammunition/AmmoSlot2"]
 
 visibility/visible = false
-texture = ExtResource( 741 )
+texture = ExtResource( 737 )
 region = true
 region_rect = Rect2( 0, 0, 17, 26 )
 
@@ -7546,9 +7477,9 @@ region_rect = Rect2( 0, 0, 17, 26 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Base = SubResource( 63 )
-anims/intro = SubResource( 64 )
-anims/shoot = SubResource( 65 )
+anims/Base = SubResource( 62 )
+anims/intro = SubResource( 63 )
+anims/shoot = SubResource( 64 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7561,7 +7492,7 @@ transform/pos = Vector2( 52, 77 )
 [node name="Ammo" type="Sprite" parent="Tip#4/HUD1/TextureProgress/Ammunition/AmmoSlot3"]
 
 visibility/visible = false
-texture = ExtResource( 741 )
+texture = ExtResource( 737 )
 region = true
 region_rect = Rect2( 0, 0, 17, 26 )
 
@@ -7570,9 +7501,9 @@ region_rect = Rect2( 0, 0, 17, 26 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Base = SubResource( 63 )
-anims/intro = SubResource( 64 )
-anims/shoot = SubResource( 65 )
+anims/Base = SubResource( 62 )
+anims/intro = SubResource( 63 )
+anims/shoot = SubResource( 64 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7611,7 +7542,7 @@ transform/pos = Vector2( 206, 77 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/ammo_up = SubResource( 66 )
+anims/ammo_up = SubResource( 65 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7619,14 +7550,13 @@ autoplay = "ammo_up"
 
 [node name="Path2D" type="Path2D" parent="Tip#4"]
 
-editor/display_folded = true
-curve = SubResource( 54 )
+curve = SubResource( 79 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#4/Path2D"]
 
-transform/pos = Vector2( 708.572, 517.865 )
+transform/pos = Vector2( 1250.35, 617.864 )
 transform/rot = 56.1146
-offset = 70.8806
+offset = 774.599
 h_offset = 0.0
 v_offset = 0.0
 rotate = false
@@ -7651,7 +7581,6 @@ __meta__ = {
 editor/display_folded = true
 frames = SubResource( 7 )
 animation = "rising"
-frame = 8
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline"]
@@ -7659,14 +7588,12 @@ playing = true
 visibility/behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 8
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline"]
 
 frames = SubResource( 9 )
 animation = "rising"
-frame = 8
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player"]
@@ -7674,7 +7601,6 @@ playing = true
 editor/display_folded = true
 frames = SubResource( 10 )
 animation = "rising"
-frame = 8
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
@@ -7713,14 +7639,12 @@ color/color_ramp = SubResource( 11 )
 visibility/behind_parent = true
 frames = SubResource( 12 )
 animation = "rising"
-frame = 8
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
 
 frames = SubResource( 13 )
 animation = "rising"
-frame = 8
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player"]
@@ -7802,7 +7726,7 @@ z/z = 3
 visibility/opacity = 0.0
 transform/pos = Vector2( 8, 0 )
 transform/scale = Vector2( 1, 0.3 )
-texture = ExtResource( 742 )
+texture = ExtResource( 738 )
 region = true
 region_rect = Rect2( 0, 0, 16, 24 )
 
@@ -7811,7 +7735,7 @@ region_rect = Rect2( 0, 0, 16, 24 )
 visibility/opacity = 0.0
 transform/pos = Vector2( 23, 0 )
 transform/scale = Vector2( 1, 0.3 )
-texture = ExtResource( 742 )
+texture = ExtResource( 738 )
 region = true
 region_rect = Rect2( 1418, 0, 14, 24 )
 
@@ -7821,9 +7745,8 @@ visibility/opacity = 0.0
 transform/pos = Vector2( 0, -2 )
 config/amount = 15
 config/lifetime = 2.3
-config/emitting = false
 config/process_mode = 1
-config/texture = ExtResource( 743 )
+config/texture = ExtResource( 739 )
 params/direction = 90.0
 params/spread = 0.1
 params/linear_velocity = 600.0
@@ -7840,7 +7763,7 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 67 )
+color/color_ramp = SubResource( 66 )
 
 [node name="LaserParticlesBottom" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 
@@ -7848,9 +7771,8 @@ visibility/opacity = 0.0
 transform/pos = Vector2( 0, 1 )
 config/amount = 15
 config/lifetime = 2.3
-config/emitting = false
 config/process_mode = 1
-config/texture = ExtResource( 743 )
+config/texture = ExtResource( 739 )
 params/direction = 90.0
 params/spread = 0.1
 params/linear_velocity = 600.0
@@ -7867,17 +7789,17 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 67 )
+color/color_ramp = SubResource( 66 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/fadeout = SubResource( 68 )
-anims/fire = SubResource( 69 )
-anims/idle = SubResource( 70 )
-anims/inactive = SubResource( 71 )
+anims/fadeout = SubResource( 67 )
+anims/fire = SubResource( 68 )
+anims/idle = SubResource( 69 )
+anims/inactive = SubResource( 70 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7888,7 +7810,7 @@ autoplay = ""
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/tutorial = SubResource( 72 )
+anims/tutorial = SubResource( 71 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7908,11 +7830,10 @@ transform/pos = Vector2( 0, 350 )
 [node name="OutlineTop" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop"]
 
 visibility/light_mask = 2
-material/material = SubResource( 73 )
+material/material = SubResource( 72 )
 transform/pos = Vector2( 25, -750.066 )
-frames = SubResource( 74 )
-animation = "crush_idle"
-frame = 7
+frames = SubResource( 73 )
+animation = "spawn"
 centered = false
 flip_v = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
@@ -7921,11 +7842,10 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 editor/display_folded = true
 visibility/light_mask = 2
-material/material = SubResource( 73 )
+material/material = SubResource( 72 )
 transform/pos = Vector2( 25, -750.066 )
-frames = SubResource( 75 )
-animation = "crush_idle"
-frame = 7
+frames = SubResource( 74 )
+animation = "spawn"
 centered = false
 flip_v = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
@@ -7934,14 +7854,14 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 visibility/behind_parent = true
 transform/pos = Vector2( 215, -75 )
-frames = SubResource( 76 )
+frames = SubResource( 75 )
 animation = "dying"
 frame = 51
 
 [node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop/TentacleTop/DeadPlayer"]
 
 visibility/behind_parent = true
-frames = SubResource( 77 )
+frames = SubResource( 76 )
 animation = "dying"
 frame = 51
 
@@ -7954,11 +7874,10 @@ transform/pos = Vector2( 0, 350 )
 [node name="OutlineBottom" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom"]
 
 visibility/light_mask = 2
-material/material = SubResource( 73 )
+material/material = SubResource( 72 )
 transform/pos = Vector2( 25, -50.0661 )
-frames = SubResource( 74 )
-animation = "crush_idle"
-frame = 7
+frames = SubResource( 73 )
+animation = "spawn"
 centered = false
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -7966,11 +7885,10 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 editor/display_folded = true
 visibility/light_mask = 2
-material/material = SubResource( 73 )
+material/material = SubResource( 72 )
 transform/pos = Vector2( 25, -50.0661 )
-frames = SubResource( 75 )
-animation = "crush_idle"
-frame = 7
+frames = SubResource( 74 )
+animation = "spawn"
 centered = false
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -7978,20 +7896,19 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 visibility/behind_parent = true
 transform/pos = Vector2( 215, 875 )
-frames = SubResource( 76 )
+frames = SubResource( 75 )
 animation = "dying"
 frame = 51
 
 [node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer"]
 
 visibility/behind_parent = true
-frames = SubResource( 77 )
+frames = SubResource( 76 )
 animation = "dying"
 frame = 51
 
 [node name="Cena2" type="Node2D" parent="Tip#4"]
 
-editor/display_folded = true
 transform/pos = Vector2( 71, 847 )
 
 [node name="Limits" type="Node2D" parent="Tip#4/Cena2"]
@@ -8006,7 +7923,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -8014,7 +7931,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -8022,7 +7939,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 11
+frame = 4
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -8039,7 +7956,7 @@ __meta__ = {
 
 frames = SubResource( 33 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
@@ -8047,7 +7964,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 
 frames = SubResource( 34 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -8055,7 +7972,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
 frames = SubResource( 35 )
 animation = "waves"
-frame = 6
+frame = 15
 playing = true
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 
@@ -8097,7 +8014,7 @@ margin/top = 88.0
 margin/right = 260.0
 margin/bottom = 125.0
 custom_fonts/font = ExtResource( 733 )
-text = "0015"
+text = "0018"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -8117,7 +8034,7 @@ range/min = 0.0
 range/max = 100.0
 range/step = 1.0
 range/page = 0.0
-range/value = 29.1887
+range/value = 39.5685
 range/exp_edit = false
 range/rounded = false
 texture/under = null
@@ -8131,9 +8048,9 @@ radial_fill/center_offset = Vector2( 0, 0 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/base = SubResource( 60 )
-anims/overheated = SubResource( 61 )
-anims/undashable = SubResource( 62 )
+anims/base = SubResource( 59 )
+anims/overheated = SubResource( 60 )
+anims/undashable = SubResource( 61 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -8149,7 +8066,7 @@ transform/pos = Vector2( 8, 77 )
 
 [node name="Ammo" type="Sprite" parent="Tip#4/Cena2/HUD/TextureProgress/Ammunition/AmmoSlot1"]
 
-texture = ExtResource( 741 )
+texture = ExtResource( 737 )
 region = true
 region_rect = Rect2( 0, 0, 17, 26 )
 
@@ -8158,9 +8075,9 @@ region_rect = Rect2( 0, 0, 17, 26 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Base = SubResource( 63 )
-anims/intro = SubResource( 64 )
-anims/shoot = SubResource( 65 )
+anims/Base = SubResource( 62 )
+anims/intro = SubResource( 63 )
+anims/shoot = SubResource( 64 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -8172,7 +8089,7 @@ transform/pos = Vector2( 30, 77 )
 
 [node name="Ammo" type="Sprite" parent="Tip#4/Cena2/HUD/TextureProgress/Ammunition/AmmoSlot2"]
 
-texture = ExtResource( 741 )
+texture = ExtResource( 737 )
 region = true
 region_rect = Rect2( 0, 0, 17, 26 )
 
@@ -8181,9 +8098,9 @@ region_rect = Rect2( 0, 0, 17, 26 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Base = SubResource( 63 )
-anims/intro = SubResource( 64 )
-anims/shoot = SubResource( 65 )
+anims/Base = SubResource( 62 )
+anims/intro = SubResource( 63 )
+anims/shoot = SubResource( 64 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -8195,18 +8112,19 @@ transform/pos = Vector2( 52, 77 )
 
 [node name="Ammo" type="Sprite" parent="Tip#4/Cena2/HUD/TextureProgress/Ammunition/AmmoSlot3"]
 
-texture = ExtResource( 741 )
+texture = ExtResource( 737 )
+modulate = Color( 0, 0.960784, 1, 1 )
 region = true
-region_rect = Rect2( 0, 0, 17, 26 )
+region_rect = Rect2( 8, 0, 0, 26 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Cena2/HUD/TextureProgress/Ammunition/AmmoSlot3/Ammo"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Base = SubResource( 63 )
-anims/intro = SubResource( 64 )
-anims/shoot = SubResource( 65 )
+anims/Base = SubResource( 62 )
+anims/intro = SubResource( 63 )
+anims/shoot = SubResource( 64 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -8240,55 +8158,126 @@ transform/pos = Vector2( 184, 77 )
 
 transform/pos = Vector2( 206, 77 )
 
-[node name="ProgressVisualization" type="CenterContainer" parent="Tip#4/Cena2/HUD"]
+[node name="ProgressVisualization2" type="CenterContainer" parent="Tip#4/Cena2/HUD"]
 
+process/pause_mode = 2
+anchor/left = 1
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 32.0
-margin/top = 700.0
-margin/right = 784.0
-margin/bottom = 761.0
+margin/left = -30.0
+margin/top = 680.0
+margin/right = -782.0
+margin/bottom = -766.0
 use_top_left = false
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="ProgressBar" type="TextureFrame" parent="Tip#4/Cena2/HUD/ProgressVisualization"]
+[node name="BarBase" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2"]
 
+rect/min_size = Vector2( 752, 60 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 7.0
+margin/top = 13.0
 margin/right = 752.0
-margin/bottom = 53.0
-texture = ExtResource( 744 )
-stretch_mode = 0
+margin/bottom = 73.0
+custom_styles/panel = SubResource( 80 )
 
-[node name="IconContainer" type="CenterContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization/ProgressBar"]
+[node name="BarFill" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = 2.0
+margin/right = 2.0
+margin/bottom = 2.0
+custom_styles/panel = SubResource( 81 )
+
+[node name="BarFinish" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
+
+visibility/opacity = 0.434536
+anchor/left = 1
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 60.0
+margin/top = 2.0
+margin/right = 2.0
+margin/bottom = 2.0
+custom_styles/panel = SubResource( 82 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/BarFinish"]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/loop = SubResource( 85 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "loop"
+
+[node name="BarOutline" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 2.0
+margin/top = 2.0
+margin/right = 2.0
+margin/bottom = 2.0
+custom_styles/panel = SubResource( 83 )
+
+[node name="IconContainer" type="CenterContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
 
 editor/display_folded = true
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 346.0
-margin/top = 3.0
-margin/right = 376.0
-margin/bottom = 46.0
+margin/left = 381.0
+margin/top = 0.0
+margin/right = 420.0
+margin/bottom = 0.0
 use_top_left = false
 
-[node name="Particles2D" type="Particles2D" parent="Tip#4/Cena2/HUD/ProgressVisualization/ProgressBar/IconContainer"]
+[node name="Icon" type="TextureFrame" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/IconContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 8.0
+margin/top = 19.0
+margin/right = 30.0
+margin/bottom = 41.0
+texture = ExtResource( 744 )
+modulate = Color( 0, 1, 1, 1 )
+stretch_mode = 0
+
+[node name="Particles2D" type="Particles2D" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/IconContainer/Icon"]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 15, 21 )
+transform/pos = Vector2( 11, 11 )
 config/amount = 1
 config/lifetime = 0.5
 config/process_mode = 1
-config/texture = ExtResource( 739 )
+config/texture = ExtResource( 745 )
 params/direction = 0.0
 params/spread = 10.0
 params/linear_velocity = 0.0
@@ -8300,52 +8289,23 @@ params/radial_accel = 0.0
 params/tangential_accel = 0.0
 params/damping = 0.0
 params/initial_angle = 0.0
-params/initial_size = 1.0
+params/initial_size = 0.5
 params/final_size = 1.8
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 53 )
+color/color_ramp = SubResource( 84 )
 
-[node name="Icon" type="TextureFrame" parent="Tip#4/Cena2/HUD/ProgressVisualization/ProgressBar/IconContainer"]
+[node name="BarrierContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" instance=ExtResource( 746 )]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 6.0
-margin/right = 30.0
-margin/bottom = 36.0
-texture = ExtResource( 739 )
-modulate = Color( 0, 1, 1, 1 )
-stretch_mode = 0
-
-[node name="BarrierContainer" type="CenterContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization/ProgressBar"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 390.0
-margin/top = 0.0
-margin/right = 397.0
-margin/bottom = 42.0
-use_top_left = false
-
-[node name="BarrierIcon" type="TextureFrame" parent="Tip#4/Cena2/HUD/ProgressVisualization/ProgressBar/BarrierContainer"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 7.0
-margin/bottom = 42.0
-texture = ExtResource( 745 )
-modulate = Color( 1, 0, 0.164063, 1 )
-stretch_mode = 0
+visibility/opacity = 0.0
+anchor/left = 0
+anchor/right = 0
+anchor/bottom = 0
+margin/left = 382.0
+margin/top = -13.0
+margin/right = 421.0
+margin/bottom = 73.0
 
 [node name="continue" type="Label" parent="."]
 
@@ -8360,7 +8320,7 @@ margin/left = 0.0
 margin/top = 980.0
 margin/right = 1537.0
 margin/bottom = 1066.0
-custom_fonts/font = ExtResource( 746 )
+custom_fonts/font = ExtResource( 747 )
 text = "Press \"up\" to continue."
 align = 1
 valign = 1
@@ -8374,7 +8334,7 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/blinking = SubResource( 78 )
-playback/active = false
+playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = "blinking"

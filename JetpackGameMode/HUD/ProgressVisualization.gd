@@ -1,6 +1,7 @@
 extends CenterContainer
 
-export(int) var ending_cap = 0
+export(int) var initial_margin = 60
+export(int) var ending_margin = 70
 export(PackedScene) var progress_barrier
 
 var progress_bar
@@ -13,18 +14,18 @@ var total_count
 var progress_count = 0
 
 func _ready():
-	progress_bar = get_node("ProgressBar")
-	icon = get_node("ProgressBar/IconContainer")
-	icon_length = icon.get_node("Icon").get_texture().get_width()
+	progress_bar = get_node("BarBase")
+	icon = get_node("BarBase/IconContainer")
+	icon_length = icon.get_size().x
 	icon_position = icon.get_pos()
 	
-	total_length = progress_bar.get_texture().get_width() - ending_cap
+	total_length = progress_bar.get_size().x - initial_margin - ending_margin
 
 
 func create_barrier(step):
 	var barrier = progress_barrier.instance()
-	var position = (step * increment)
-	barrier.set_pos(Vector2(position, 4))
+	var position_x = (step * increment)
+	barrier.set_pos(Vector2(position_x, 0))
 	progress_bar.add_child(barrier)
 
 
