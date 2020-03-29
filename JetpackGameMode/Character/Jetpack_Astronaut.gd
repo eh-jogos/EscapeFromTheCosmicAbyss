@@ -15,7 +15,6 @@ var game
 var overheat_bar
 var overheat_bar_animator
 var points_label
-var ammunition
 
 # Inside Nodes I'll interact with
 var jet_particles
@@ -57,10 +56,9 @@ var speed = Vector2(0, 0)
 func _ready():
 	# Outer Nodes
 	game = self.get_parent()
-	overheat_bar = game.get_node("HUD/TextureProgress")
-	overheat_bar_animator = game.get_node("HUD/TextureProgress/AnimationPlayer")
+	overheat_bar = get_node("OverheatBar")
+	overheat_bar_animator = get_node("OverheatBar/AnimationPlayer")
 	points_label = game.get_node("HUD/CenterArea/Points")
-	ammunition = game.get_node("HUD/TextureProgress/Ammunition")
 	
 	# Inside Nodes
 	jet_particles = self.get_node("JetParticles")
@@ -92,7 +90,7 @@ func _fixed_process(delta):
 	if game.get_game_state() != game.STATE.Playing and game.get_game_state() != game.STATE.Tutorial:
 		return
 	
-	var heat = game.get_overheat()
+	var heat = overheat_bar.get_value()
 	if not dashing:
 		heat -= cooldown if heat >= cooldown else 0
 	
@@ -130,7 +128,7 @@ func _fixed_process(delta):
 		speed.x += speed_x*unit.x*delta
 		speed.x = clamp(speed.x, 0, speed_x*unit.x)
 	
-	game.set_overheat(heat)
+	overheat_bar.set_value(heat)
 	
 	if is_bouncing:
 		speed.y = clamp(speed.y, speed_y*5, gravity)
@@ -249,10 +247,10 @@ func _input(event):
 	if game.get_game_state() != 0 and game.get_game_state() != 3:
 		return
 	
-	if event.is_action_pressed("shoot") and ammunition.has_ammo() and not shooting:
+	if event.is_action_pressed("shoot") and game.ammunition.has_ammo() and not shooting:
 		#game.dash_score()
 		shooting = true
-		ammunition.use_ammo()
+		game.ammunition.use_ammo()
 		arms_animator.play("shooting")
 		
 		var new_bullet = bullet.instance()

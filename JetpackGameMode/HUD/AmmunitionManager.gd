@@ -1,48 +1,41 @@
-extends Node2D
+extends HBoxContainer
 
 # preloaded scenes
 var ammo = preload("res://JetpackGameMode/HUD/Ammo.tscn")
 
-# outer nodes
-var game
-
-#member variables
-var current_slot = 0
-
 # Limits
 const TOTAL_SLOTS = 10
 
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	pass
 
 func initialize_ammo(initial_ammo):
 	for x in range(0,initial_ammo):
 		add_ammo()
 
+
 func add_ammo():
-	if current_slot >= TOTAL_SLOTS: return
-	var slot = self.get_child(current_slot)
+	if get_child_count() >= TOTAL_SLOTS: return
 	var instance = ammo.instance()
-	slot.add_child(instance)
-	current_slot += 1
+	add_child(instance, true)
 
 
 func has_ammo():
-	if current_slot == 0: 
+	if get_child_count() == 0: 
 		return false
 	else:
 		return true
 
 
 func use_ammo():
-	if current_slot == 0 : return false
-	var slot = self.get_child(current_slot-1)
-	var ammo = slot.get_child(0)
+	if get_child_count() == 0 : return false
+	var ammo = get_child(0)
 	
 	ammo.used()
 	
-	current_slot -= 1
-	
 	return true
+
+
+func _on_Ammunition_sort_children():
+	if get_child_count() == 0:
+		hide()
+	else:
+		show()

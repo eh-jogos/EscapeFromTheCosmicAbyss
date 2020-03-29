@@ -3,8 +3,6 @@ extends Node2D
 const MAX_SPEED_INCREMENT_PER_LAP = 5
 
 # Nodes this script will interact with
-var overheat_bar
-var overheat_bar_animator
 var score_label
 var points_label
 var time_laps_label
@@ -86,9 +84,7 @@ func _ready():
 	
 	# Nodes
 	countdown = self.get_node("AboveScreen/CountdownScreen")
-	overheat_bar = self.get_node("HUD/TextureProgress")
-	overheat_bar_animator = self.get_node("HUD/TextureProgress/AnimationPlayer")
-	ammunition = self.get_node("HUD/TextureProgress/Ammunition")
+	ammunition = self.get_node("HUD/Meters/Ammunition")
 	score_label = self.get_node("HUD/CenterArea/Score")
 	points_label = self.get_node("HUD/CenterArea/Points")
 	time_laps_label = self.get_node("HUD/CenterArea/TimeLaps")
@@ -325,12 +321,6 @@ func get_laps():
 func get_time():
 	var runtime_label = self.get_node("HUD/CenterArea/RunTime")
 	return runtime_label.run_time
-
-func get_overheat():
-	return overheat_bar.get_value()
-
-func set_overheat(value):
-	overheat_bar.set_value(value)
 
 func game_over():
 	if game_mode == "story":
