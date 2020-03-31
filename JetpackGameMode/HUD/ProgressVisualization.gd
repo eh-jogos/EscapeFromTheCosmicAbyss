@@ -1,7 +1,9 @@
 extends CenterContainer
 
-export(int) var initial_margin = 60
-export(int) var ending_margin = 70
+export(int) var player_icon_x_offset = -60
+export(int) var player_icon_finish_position = 1470
+export(int) var initial_margin = 80
+export(int) var ending_margin = 15
 export(PackedScene) var progress_barrier
 
 var progress_bar
@@ -12,6 +14,7 @@ var total_length
 var increment
 var total_count
 var progress_count = 0
+
 
 func _ready():
 	progress_bar = get_node("BarBase")
@@ -24,9 +27,11 @@ func _ready():
 
 func create_barrier(step):
 	var barrier = progress_barrier.instance()
+	progress_bar.add_child(barrier, true)
 	var position_x = (step * increment)
-	barrier.set_pos(Vector2(position_x, 0))
-	progress_bar.add_child(barrier)
+	var offset_x = barrier.offset_x
+	var offset_y = barrier.offset_y
+	barrier.set_pos(Vector2(position_x + offset_x, offset_y))
 
 
 func generate_visualization(level_data):
@@ -41,10 +46,10 @@ func generate_visualization(level_data):
 			total_length
 	])
 	
-	var addition = 0
+	var addition = 1
 	var step = 0
 	var limit = level_data["half_beats"].size()
-	for x in range(limit):
+	for x in range(0, limit):
 		step = x + addition
 		if level_data["beats"][x] == 4:
 			create_barrier(step)
@@ -60,15 +65,18 @@ func generate_visualization(level_data):
 			if level_data["beats"][x] == 4:
 				create_barrier(step)
 	
-	icon_position.x = 0
+	icon_position.x = initial_margin + player_icon_x_offset
 	icon.set_pos(icon_position)
+
 
 func update_progress():
 	if progress_count < total_count:
 		progress_count += 1
 		
 		if progress_count == total_count:
-			icon_position.x = total_length
+			icon_position.x = player_icon_finish_position
+#		elif progress_count == 1:
+#			icon_position.x = initial_margin
 		else:
 			icon_position.x += increment
 		

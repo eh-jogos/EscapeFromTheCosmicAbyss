@@ -60,7 +60,7 @@ expand_margin/top = 0.0
 expand_margin/bottom = 0.0
 draw_center = true
 
-[sub_resource type="Animation" id=85]
+[sub_resource type="Animation" id=4]
 
 resource/name = "loop"
 length = 1.0
@@ -115,8 +115,10 @@ margin/right = 0.0
 margin/bottom = 14.0
 use_top_left = false
 script/script = ExtResource( 1 )
-initial_margin = 60
-ending_margin = 70
+player_icon_x_offset = -80
+player_icon_finish_position = 1470
+initial_margin = 100
+ending_margin = 0
 progress_barrier = ExtResource( 2 )
 
 [node name="BarBase" type="Panel" parent="."]
@@ -148,6 +150,7 @@ custom_styles/panel = SubResource( 2 )
 
 [node name="BarFinish" type="Panel" parent="BarBase"]
 
+editor/display_folded = true
 visibility/opacity = 0.908755
 anchor/left = 1
 anchor/right = 1
@@ -167,7 +170,7 @@ custom_styles/panel = SubResource( 3 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/loop = SubResource( 85 )
+anims/loop = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -189,6 +192,7 @@ custom_styles/panel = SubResource( 5 )
 
 [node name="IconContainer" type="CenterContainer" parent="BarBase"]
 
+editor/display_folded = true
 anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -196,7 +200,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 20.0
 margin/top = 0.0
-margin/right = 59.0
+margin/right = 60.0
 margin/bottom = 0.0
 use_top_left = false
 
@@ -206,9 +210,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 8.0
+margin/left = 9.0
 margin/top = 19.0
-margin/right = 30.0
+margin/right = 31.0
 margin/bottom = 41.0
 texture = ExtResource( 7 )
 modulate = Color( 0, 1, 1, 1 )
@@ -239,5 +243,11 @@ params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
 color/color_ramp = SubResource( 6 )
+
+[node name="BarrierContainer" parent="BarBase" instance=ExtResource( 2 )]
+
+margin/left = 1440.0
+margin/right = 41.0
+margin/bottom = -13.0
 
 
