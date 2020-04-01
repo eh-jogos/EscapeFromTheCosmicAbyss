@@ -77,6 +77,8 @@ func _on_PipeTentacles_Die():
 		is_alive = false
 		tentacle_pipe.scored()
 		animation.play("crush_backwards")
+		
+		Global.emit_signal("barrier_tentacle_killed")
 
 func go_to_crush():
 	animation.play("crush")

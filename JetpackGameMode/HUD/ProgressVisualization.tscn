@@ -121,6 +121,13 @@ initial_margin = 100
 ending_margin = 0
 progress_barrier = ExtResource( 2 )
 
+[node name="Tween" type="Tween" parent="."]
+
+playback/process_mode = 1
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 [node name="BarBase" type="Panel" parent="."]
 
 rect/min_size = Vector2( 1520, 60 )
@@ -243,11 +250,5 @@ params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
 color/color_ramp = SubResource( 6 )
-
-[node name="BarrierContainer" parent="BarBase" instance=ExtResource( 2 )]
-
-margin/left = 1440.0
-margin/right = 41.0
-margin/bottom = -13.0
 
 

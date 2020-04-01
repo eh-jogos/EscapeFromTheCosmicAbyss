@@ -15,6 +15,7 @@ var increment
 var total_count
 var progress_count = 0
 
+var barriers = []
 
 func _ready():
 	progress_bar = get_node("BarBase")
@@ -23,6 +24,7 @@ func _ready():
 	icon_position = icon.get_pos()
 	
 	total_length = progress_bar.get_size().x - initial_margin - ending_margin
+	Global.connect("barrier_tentacle_killed", self, "_on_Global_barrier_tentacle_killed")
 
 
 func create_barrier(step):
@@ -32,6 +34,7 @@ func create_barrier(step):
 	var offset_x = barrier.offset_x
 	var offset_y = barrier.offset_y
 	barrier.set_pos(Vector2(position_x + offset_x, offset_y))
+	barriers.append(barrier)
 
 
 func generate_visualization(level_data):
@@ -70,8 +73,7 @@ func generate_visualization(level_data):
 
 
 func update_progress():
-	if progress_count < total_count:
-		progress_count += 1
+	if progress_count <= total_count:
 		
 		if progress_count == total_count:
 			icon_position.x = player_icon_finish_position
@@ -81,3 +83,14 @@ func update_progress():
 			icon_position.x += increment
 		
 		icon.set_pos(icon_position)
+		progress_count += 1
+
+
+func _on_Global_barrier_tentacle_killed():
+	if barriers.size() > 0:
+		var tween = get_node("Tween")
+		tween.interpolate_property(barriers[0], "visibility/opacity", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
+		tween.start()
+		yield(tween, "tween_complete")
+		barriers[0].queue_free()
+		barriers.pop_front()
