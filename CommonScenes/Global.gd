@@ -2,6 +2,8 @@ extends Node
 
 signal update_main_menu
 signal update_invincibility
+signal barrier_tentacle_killed
+signal shield_energy_updated_to(energy)
 
 const DEFAULT_SILHOUETTE_COLOR = Color(0.019608,0.078431,0.070588)
 const DEFAULT_ENEMY_COLOR = Color(0.12549,0.392157,0.356863)
