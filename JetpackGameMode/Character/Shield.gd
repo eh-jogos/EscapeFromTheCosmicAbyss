@@ -53,6 +53,7 @@ func increase_energy(increment, should_mute = false):
 	else:
 		print("SHIELD ERROR | UNKNOW VALUE OF INCREMENT: %s"%[increment])
 	
+	Global.emit_signal("shield_energy_updated_to", energy)
 	print("Shield Energy: %s | Incremet: %s"%[energy,increment])
 	
 	modulate_shield(should_mute)
@@ -65,6 +66,7 @@ func decrease_energy(increment):
 	else:
 		print("SHIELD ERROR | UNKNOW VALUE OF INCREMENT: %s"%[increment])
 	
+	Global.emit_signal("shield_energy_updated_to", energy)
 	shield_animator.play("burst")
 	yield(shield_animator, "finished")
 	modulate_shield()

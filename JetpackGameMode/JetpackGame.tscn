@@ -56,7 +56,7 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" type="PackedScene" id=54]
 [ext_resource path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" type="PackedScene" id=55]
 [ext_resource path="res://CommonScenes/pallet.png" type="Texture" id=56]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/shield_icon.png" type="Texture" id=57]
+[ext_resource path="res://JetpackGameMode/HUD/ShieldMeter.gd" type="Script" id=57]
 [ext_resource path="res://JetpackGameMode/HUD/AmmunitionManager.gd" type="Script" id=58]
 [ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=59]
 [ext_resource path="res://Fonts/OrbitronBlack72.fnt" type="BitmapFont" id=60]
@@ -639,6 +639,16 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Meters:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=20]
 
@@ -685,6 +695,16 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Meters:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=21]
 
@@ -726,6 +746,16 @@ tracks/3/path = NodePath("../Player/OverheatBar:visibility/opacity")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Meters:visibility/opacity")
+tracks/4/interp = 1
+tracks/4/imported = false
+tracks/4/keys = {
 "times": FloatArray( 0, 0.5 ),
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
@@ -887,6 +917,7 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -982,6 +1013,7 @@ end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -1544,6 +1576,7 @@ texture = ExtResource( 56 )
 
 [node name="Meters" type="HBoxContainer" parent="HUD"]
 
+visibility/opacity = 0.0
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -1552,7 +1585,7 @@ margin/left = 205.0
 margin/top = 954.0
 margin/right = 500.0
 margin/bottom = 994.0
-custom_constants/separation = 30
+custom_constants/separation = 15
 alignment = 0
 __meta__ = {
 "_edit_group_": true
@@ -1566,55 +1599,14 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 117.0
+margin/right = 45.0
 margin/bottom = 40.0
-custom_constants/separation = 15
+custom_constants/separation = 0
 alignment = 0
+script/script = ExtResource( 57 )
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="TextureFrame" type="TextureFrame" parent="HUD/Meters/Shields"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 29.0
-margin/bottom = 40.0
-texture = ExtResource( 57 )
-modulate = Color( 0, 0.960784, 1, 1 )
-stretch_mode = 0
-
-[node name="TextureFrame1" type="TextureFrame" parent="HUD/Meters/Shields"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 44.0
-margin/top = 0.0
-margin/right = 73.0
-margin/bottom = 40.0
-texture = ExtResource( 57 )
-modulate = Color( 0, 0.960784, 1, 1 )
-stretch_mode = 0
-
-[node name="TextureFrame2" type="TextureFrame" parent="HUD/Meters/Shields"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 88.0
-margin/top = 0.0
-margin/right = 117.0
-margin/bottom = 40.0
-texture = ExtResource( 57 )
-modulate = Color( 0, 0.960784, 1, 1 )
-stretch_mode = 0
 
 [node name="Ammunition" type="HBoxContainer" parent="HUD/Meters"]
 
@@ -1622,9 +1614,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 147.0
+margin/left = 60.0
 margin/top = 0.0
-margin/right = 147.0
+margin/right = 60.0
 margin/bottom = 40.0
 custom_constants/separation = 0
 alignment = 0
