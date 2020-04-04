@@ -1,16 +1,18 @@
-[gd_scene load_steps=40 format=1]
+[gd_scene load_steps=42 format=1]
 
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelSelectMenu.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronBlack80.fnt" type="BitmapFont" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium67.fnt" type="BitmapFont" id=3]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" type="Texture" id=4]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" type="Texture" id=5]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" type="Texture" id=6]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/TutorialButton.tscn" type="PackedScene" id=7]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" type="PackedScene" id=8]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_7.png" type="Texture" id=9]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=10]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=11]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" type="Texture" id=2]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_7.png" type="Texture" id=3]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/OrbitronBlack80.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://Fonts/OrbitronMedium67.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://Fonts/OrbitronMedium45.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://CommonScenes/pallet.png" type="Texture" id=8]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" type="Texture" id=9]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/TutorialButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -489,7 +491,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -499,7 +501,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton1")
@@ -677,7 +679,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -687,7 +689,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton2")
@@ -877,7 +879,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -887,7 +889,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton2")
@@ -1077,7 +1079,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -1087,7 +1089,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton3")
@@ -1277,7 +1279,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -1287,7 +1289,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton3")
@@ -1477,7 +1479,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -1487,7 +1489,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton4")
@@ -1677,7 +1679,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -1687,7 +1689,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton4")
@@ -1877,7 +1879,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -1887,7 +1889,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton5")
@@ -2077,7 +2079,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2087,7 +2089,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton5")
@@ -2277,7 +2279,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2287,7 +2289,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton6")
@@ -2477,7 +2479,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2487,7 +2489,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton6")
@@ -2677,7 +2679,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2687,7 +2689,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 83, 304 ) ]
+"values": [ Vector2( 84, 384.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton7")
@@ -2877,7 +2879,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -2887,7 +2889,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 83, 304 ) ]
+"values": [ Vector2( 84, 384.868 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton7")
@@ -3077,7 +3079,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -3087,7 +3089,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 83, 304 ) ]
+"values": [ Vector2( 83, 384 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton8")
@@ -3307,7 +3309,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ) ]
+"values": [ ExtResource( 4 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -3317,7 +3319,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 84, 301 ) ]
+"values": [ Vector2( 83, 381 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton8")
@@ -3507,7 +3509,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -3517,7 +3519,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton9")
@@ -3707,7 +3709,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -3717,7 +3719,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton9")
@@ -3907,7 +3909,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -3917,7 +3919,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton10")
@@ -4107,7 +4109,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -4117,7 +4119,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton10")
@@ -4307,7 +4309,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -4317,7 +4319,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton11")
@@ -4507,7 +4509,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -4517,7 +4519,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton11")
@@ -4707,7 +4709,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -4717,7 +4719,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton12")
@@ -4907,7 +4909,7 @@ tracks/14/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("levels_path_unlocked:transform/pos")
@@ -4917,7 +4919,7 @@ tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 40, 285.868 ) ]
+"values": [ Vector2( 40, 365 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("LevelButtons/LevelButton12")
@@ -5047,253 +5049,6 @@ margin/top = 0.0
 margin/right = 40.0
 margin/bottom = 40.0
 
-[node name="LevelNumber" type="Label" parent="Map"]
-
-visibility/opacity = 0.9
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 76.0
-margin/top = 40.0
-margin/right = 1846.0
-margin/bottom = 135.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
-text = "Stage 12"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LevelTitle" type="Label" parent="Map"]
-
-visibility/opacity = 0.9
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 76.0
-margin/top = 130.0
-margin/right = 1846.0
-margin/bottom = 213.0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
-text = "WHatever, Wherever, whenever!"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="levels_path_bg" type="Sprite" parent="Map"]
-
-visibility/opacity = 0.9
-transform/pos = Vector2( 965, 580 )
-texture = ExtResource( 4 )
-region = true
-region_rect = Rect2( 240, 60, 1800, 720 )
-
-[node name="levels_path_locked" type="Sprite" parent="Map"]
-
-visibility/opacity = 0.9
-transform/pos = Vector2( 40, 285.868 )
-texture = ExtResource( 5 )
-centered = false
-modulate = Color( 0.239216, 0.0784314, 0.298039, 1 )
-
-[node name="levels_path_unlocked" type="Sprite" parent="Map"]
-
-transform/pos = Vector2( 40, 285.868 )
-texture = ExtResource( 5 )
-centered = false
-modulate = Color( 0, 0.960784, 1, 1 )
-region = true
-region_rect = Rect2( 0, 0, 1760, 600 )
-
-[node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
-
-visibility/visible = false
-transform/pos = Vector2( 1037, 255 )
-texture = ExtResource( 6 )
-centered = false
-modulate = Color( 0, 0.960784, 1, 1 )
-region = true
-region_rect = Rect2( 1036, 258, 128, 153 )
-
-[node name="LevelButtons" type="Control" parent="Map"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 162.0
-margin/top = 427.0
-margin/right = 202.0
-margin/bottom = 467.0
-
-[node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 7 )]
-
-focus_neighbour/left = NodePath("../LevelButton12")
-focus_neighbour/top = NodePath("../LevelButton1")
-focus_neighbour/right = NodePath("../LevelButton1")
-focus_neighbour/bottom = NodePath("../LevelButton1")
-margin/left = -50.0
-margin/top = 220.0
-margin/right = 30.0
-margin/bottom = 312.0
-level_name = "How to Play"
-
-[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../TutorialButton")
-focus_neighbour/top = NodePath("../TutorialButton")
-focus_neighbour/right = NodePath("../LevelButton2")
-focus_neighbour/bottom = NodePath("../TutorialButton")
-disabled = false
-level_num = 1
-level_name = "Jetpack for your life!"
-
-[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton1")
-focus_neighbour/right = NodePath("../LevelButton3")
-focus_neighbour/bottom = NodePath("../LevelButton3")
-margin/left = 226.0
-margin/top = -116.0
-margin/right = 274.0
-margin/bottom = -68.0
-disabled = false
-level_num = 2
-level_name = "Pew pew!"
-
-[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton2")
-focus_neighbour/top = NodePath("../LevelButton2")
-focus_neighbour/right = NodePath("../LevelButton4")
-margin/left = 429.0
-margin/top = 196.0
-margin/right = 477.0
-margin/bottom = 244.0
-disabled = false
-level_num = 3
-level_name = "Double Trouble!"
-
-[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton3")
-focus_neighbour/right = NodePath("../LevelButton5")
-margin/left = 507.0
-margin/top = 54.0
-margin/right = 555.0
-margin/bottom = 102.0
-disabled = false
-level_num = 4
-level_name = "Triple Trouble!"
-
-[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton4")
-focus_neighbour/top = NodePath("../LevelButton6")
-focus_neighbour/right = NodePath("../LevelButton6")
-margin/left = 653.0
-margin/top = 39.0
-margin/right = 701.0
-margin/bottom = 87.0
-disabled = false
-level_num = 5
-level_name = "What was that sound?"
-
-[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton5")
-focus_neighbour/right = NodePath("../LevelButton7")
-focus_neighbour/bottom = NodePath("../LevelButton7")
-margin/left = 832.0
-margin/top = -106.0
-margin/right = 880.0
-margin/bottom = -58.0
-disabled = false
-level_num = 6
-level_name = "Dash like you mean it!"
-
-[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton6")
-focus_neighbour/top = NodePath("../LevelButton6")
-focus_neighbour/right = NodePath("../LevelButton8")
-focus_neighbour/bottom = NodePath("../LevelButton8")
-margin/left = 1029.0
-margin/top = 110.0
-margin/right = 1077.0
-margin/bottom = 158.0
-disabled = false
-level_num = 7
-level_name = "I feel like I'm being watched!"
-
-[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton7")
-focus_neighbour/top = NodePath("../LevelButton7")
-focus_neighbour/right = NodePath("../LevelButton9")
-margin/left = 963.0
-margin/top = 231.0
-margin/right = 1011.0
-margin/bottom = 279.0
-disabled = false
-level_num = 8
-level_name = "It's right behind me, isn't it?"
-
-[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton8")
-focus_neighbour/right = NodePath("../LevelButton10")
-focus_neighbour/bottom = NodePath("../LevelButton10")
-margin/left = 1256.0
-margin/top = 213.0
-margin/right = 1304.0
-margin/bottom = 261.0
-disabled = false
-level_num = 9
-level_name = "Almost there!"
-
-[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton9")
-focus_neighbour/top = NodePath("../LevelButton9")
-focus_neighbour/right = NodePath("../LevelButton11")
-margin/left = 1244.0
-margin/top = 303.0
-margin/right = 1292.0
-margin/bottom = 351.0
-disabled = false
-level_num = 10
-level_name = "Are we there yet?"
-
-[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton10")
-focus_neighbour/right = NodePath("../LevelButton12")
-margin/left = 1363.0
-margin/top = 385.0
-margin/right = 1411.0
-margin/bottom = 433.0
-disabled = false
-level_num = 11
-level_name = "The Calm Before the Storm!"
-
-[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 8 )]
-
-focus_neighbour/left = NodePath("../LevelButton11")
-focus_neighbour/right = NodePath("../TutorialButton")
-margin/left = 1467.0
-margin/top = 375.0
-margin/right = 1515.0
-margin/bottom = 423.0
-disabled = false
-level_num = 12
-level_name = "If that was the 'Calm', what is the 'Storm'?!"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Map"]
 
 playback/process_mode = 1
@@ -5327,6 +5082,281 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
 
+[node name="LevelNumber" type="Label" parent="Map"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 76.0
+margin/top = 40.0
+margin/right = 1846.0
+margin/bottom = 135.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
+text = "Stage 12"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LevelTitle" type="Label" parent="Map"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 76.0
+margin/top = 197.0
+margin/right = 1846.0
+margin/bottom = 280.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
+text = "WHatever, Wherever, whenever!"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Highscore" type="Label" parent="Map"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 75.0
+margin/top = 126.0
+margin/right = 1845.0
+margin/bottom = 182.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.0117647, 0.87451, 0.917647, 0.8 )
+text = "Highscore: %s"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pallet" type="Sprite" parent="Map/Highscore"]
+
+visibility/visible = false
+transform/pos = Vector2( 1090.42, 284.744 )
+texture = ExtResource( 8 )
+
+[node name="levels_path_bg" type="Sprite" parent="Map"]
+
+visibility/opacity = 0.9
+transform/pos = Vector2( 965, 660 )
+texture = ExtResource( 9 )
+region = true
+region_rect = Rect2( 240, 60, 1800, 720 )
+
+[node name="levels_path_locked" type="Sprite" parent="Map"]
+
+visibility/opacity = 0.9
+transform/pos = Vector2( 40, 365.868 )
+texture = ExtResource( 2 )
+centered = false
+modulate = Color( 0.239216, 0.0784314, 0.298039, 1 )
+
+[node name="levels_path_unlocked" type="Sprite" parent="Map"]
+
+editor/display_folded = true
+transform/pos = Vector2( 40, 365.868 )
+texture = ExtResource( 2 )
+centered = false
+modulate = Color( 0, 0.960784, 1, 1 )
+region = true
+region_rect = Rect2( 0, 0, 146, 600 )
+
+[node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
+
+visibility/visible = false
+transform/pos = Vector2( 1037, 255 )
+texture = ExtResource( 4 )
+centered = false
+modulate = Color( 0, 0.960784, 1, 1 )
+region = true
+region_rect = Rect2( 1036, 258, 128, 153 )
+
+[node name="LevelButtons" type="Control" parent="Map"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 162.0
+margin/top = 507.0
+margin/right = 202.0
+margin/bottom = 547.0
+
+[node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 10 )]
+
+focus_neighbour/left = NodePath("../LevelButton12")
+focus_neighbour/top = NodePath("../LevelButton1")
+focus_neighbour/right = NodePath("../LevelButton1")
+focus_neighbour/bottom = NodePath("../LevelButton1")
+margin/left = -50.0
+margin/top = 220.0
+margin/right = 30.0
+margin/bottom = 312.0
+level_name = "How to Play"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../TutorialButton")
+focus_neighbour/top = NodePath("../TutorialButton")
+focus_neighbour/right = NodePath("../LevelButton2")
+focus_neighbour/bottom = NodePath("../TutorialButton")
+disabled = false
+level_num = 1
+level_name = "Jetpack for your life!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton1")
+focus_neighbour/right = NodePath("../LevelButton3")
+focus_neighbour/bottom = NodePath("../LevelButton3")
+margin/left = 226.0
+margin/top = -116.0
+margin/right = 274.0
+margin/bottom = -68.0
+level_num = 2
+level_name = "Pew pew!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton2")
+focus_neighbour/top = NodePath("../LevelButton2")
+focus_neighbour/right = NodePath("../LevelButton4")
+margin/left = 429.0
+margin/top = 196.0
+margin/right = 477.0
+margin/bottom = 244.0
+level_num = 3
+level_name = "Double Trouble!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton3")
+focus_neighbour/right = NodePath("../LevelButton5")
+margin/left = 507.0
+margin/top = 54.0
+margin/right = 555.0
+margin/bottom = 102.0
+level_num = 4
+level_name = "Triple Trouble!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton4")
+focus_neighbour/top = NodePath("../LevelButton6")
+focus_neighbour/right = NodePath("../LevelButton6")
+margin/left = 653.0
+margin/top = 39.0
+margin/right = 701.0
+margin/bottom = 87.0
+level_num = 5
+level_name = "What was that sound?"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton5")
+focus_neighbour/right = NodePath("../LevelButton7")
+focus_neighbour/bottom = NodePath("../LevelButton7")
+margin/left = 832.0
+margin/top = -106.0
+margin/right = 880.0
+margin/bottom = -58.0
+level_num = 6
+level_name = "Dash like you mean it!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton6")
+focus_neighbour/top = NodePath("../LevelButton6")
+focus_neighbour/right = NodePath("../LevelButton8")
+focus_neighbour/bottom = NodePath("../LevelButton8")
+margin/left = 1029.0
+margin/top = 110.0
+margin/right = 1077.0
+margin/bottom = 158.0
+level_num = 7
+level_name = "I feel like I'm being watched!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton7")
+focus_neighbour/top = NodePath("../LevelButton7")
+focus_neighbour/right = NodePath("../LevelButton9")
+margin/left = 963.0
+margin/top = 231.0
+margin/right = 1011.0
+margin/bottom = 279.0
+level_num = 8
+level_name = "It's right behind me, isn't it?"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton8")
+focus_neighbour/right = NodePath("../LevelButton10")
+focus_neighbour/bottom = NodePath("../LevelButton10")
+margin/left = 1256.0
+margin/top = 213.0
+margin/right = 1304.0
+margin/bottom = 261.0
+level_num = 9
+level_name = "Almost there!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton9")
+focus_neighbour/top = NodePath("../LevelButton9")
+focus_neighbour/right = NodePath("../LevelButton11")
+margin/left = 1244.0
+margin/top = 303.0
+margin/right = 1292.0
+margin/bottom = 351.0
+level_num = 10
+level_name = "Are we there yet?"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton10")
+focus_neighbour/right = NodePath("../LevelButton12")
+margin/left = 1363.0
+margin/top = 385.0
+margin/right = 1411.0
+margin/bottom = 433.0
+level_num = 11
+level_name = "The Calm Before the Storm!"
+highscore_label_path = "../..//Highscore"
+
+[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 11 )]
+
+focus_neighbour/left = NodePath("../LevelButton11")
+focus_neighbour/right = NodePath("../TutorialButton")
+margin/left = 1467.0
+margin/top = 375.0
+margin/right = 1515.0
+margin/bottom = 423.0
+level_num = 12
+level_name = "If that was the 'Calm', what is the 'Storm'?!"
+highscore_label_path = "../..//Highscore"
+
 [node name="ScanlineFx" type="Node2D" parent="."]
 
 editor/display_folded = true
@@ -5340,7 +5370,7 @@ __meta__ = {
 
 visibility/blend_mode = 2
 transform/pos = Vector2( 960, 540 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 0, 0, 1800, 1080 )
 __meta__ = {
@@ -5352,7 +5382,7 @@ __meta__ = {
 visibility/opacity = 0.547357
 visibility/blend_mode = 1
 transform/pos = Vector2( 960, 694.598 )
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 0, 654.598, 1800, 80 )
 __meta__ = {

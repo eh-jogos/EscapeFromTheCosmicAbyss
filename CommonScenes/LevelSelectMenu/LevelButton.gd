@@ -6,12 +6,14 @@ export(NodePath) var number_label
 export(NodePath) var title_label
 export(NodePath) var animator_path
 export(NodePath) var menu_animator_path
+export(NodePath) var highscore_label_path = "../..//Highscore"
 
 var level_number
 var level_title
 var particle_fx
 var animator
 var menu_animator
+var highscore_label
 var game_settings
 
 func _ready():
@@ -23,6 +25,7 @@ func _ready():
 	level_title = get_node(title_label)
 	animator = get_node(animator_path)
 	menu_animator = get_node(menu_animator_path)
+	highscore_label = get_node(highscore_label_path)
 	particle_fx = get_node("Particles2D")
 	game_settings = Global.get_game_mode()
 
@@ -33,8 +36,6 @@ func _on_mouse_enter():
 func _on_focus_enter():
 	if not self.is_connected("focus_exit", self, "_on_focus_exit"):
 		self.connect("focus_exit", self, "_on_focus_exit")
-	if not self.is_connected("pressed", self, "_on_pressed"):
-		self.connect("pressed", self, "_on_pressed")
 
 
 func _on_focus_exit():
@@ -78,9 +79,12 @@ func set_level_and_reload():
 
 func _on_LevelButton_focus_enter():
 	var level_num_str = "Stage %02d"%[level_num]
+	var highscore = Global.savedata["story"]["highscore"][level_num]
+	var highscore_str = "Highscore: %03d"%[highscore]
 	
 	level_number.set_text(level_num_str)
 	level_title.set_text(level_name)
+	highscore_label.set_text(highscore_str)
 	pass # replace with function body
 
 
