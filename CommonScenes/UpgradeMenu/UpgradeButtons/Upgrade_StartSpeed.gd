@@ -1,6 +1,9 @@
 extends Button
 
 # class member variables go here, for example:
+export(NodePath) var max_speed_path
+onready var max_speed = get_node(max_speed_path)
+
 var upgrade_brain
 var stat_bar
 var stat_value
@@ -15,29 +18,69 @@ func set_stat_value(value):
 	upgrade_brain.initial_speed = value
 
 
-func increase_bar(bar_node):
+func init_bar(bar_stat, should_be_pending):
+	var max_stats = stat_bar.get_child_count()
+	
+	handle_button_states(bar_stat, max_stats)
+	
+	if bar_stat <= max_stats:
+		for stat in range(0,max_stats):
+			var slot = stat_bar.get_child(stat)
+			if stat < bar_stat:
+				if should_be_pending:
+					slot.pending_upgrade()
+				else:
+					slot.apply_upgrade()
+			else:
+				slot.base_slot()
+	else:
+		for stat in range(0,max_stats):
+			var slot = stat_bar.get_child(stat)
+			slot.apply_upgrade()
+		
+		print("ERROR | Saved Stat is bigger than Max Stat")
+		print("%s | Saved Stat: %s | Max Stat %s"%[get_name(), bar_stat, max_stats])
+
+
+
+func increase_bar():
 	if upgrade_brain.upgrade_points > 0:
-		var max_stats = bar_node.get_child_count()
-		var max_speed = upgrade_brain.max_speed
+		var max_stats = stat_bar.get_child_count()
+		var max_speed_value = upgrade_brain.max_speed
 		stat_value = get_stat_value()
 		
-		if stat_value+1 <= max_stats and stat_value+1 <= max_speed:
+		if stat_value == max_speed_value and stat_value +1 <= max_stats and upgrade_brain.upgrade_points >= 2:
 			SoundManager.play_sfx("ui_change")
 			upgrade_brain.upgrade_points -= 1
 			upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
 			
-			var slot = bar_node.get_child(stat_value)
+			var slot = stat_bar.get_child(stat_value)
+			slot.pending_upgrade()
+			
+			max_speed.increase_bar()
+			stat_value += 1
+			set_stat_value(stat_value)
+			handle_button_states(stat_value, max_stats)
+			print("Node Name: %s | Stat: %s"%[stat_bar.get_parent().get_name(), stat_value])
+		elif stat_value+1 <= max_stats and stat_value+1 <= max_speed_value:
+			SoundManager.play_sfx("ui_change")
+			upgrade_brain.upgrade_points -= 1
+			upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
+			
+			var slot = stat_bar.get_child(stat_value)
 			slot.pending_upgrade()
 			
 			stat_value += 1
 			set_stat_value(stat_value)
-			print("Node Name: %s | Stat: %s"%[bar_node.get_parent().get_name(), stat_value])
+			handle_button_states(stat_value, max_stats)
+			print("Node Name: %s | Stat: %s"%[stat_bar.get_parent().get_name(), stat_value])
 		else:
+			handle_button_states(stat_value, max_stats)
 			print("ERROR | Saved Stat is Maxed Out")
-			print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), stat_value, max_stats])
+			print("%s | Saved Stat: %s | Max Stat %s"%[stat_bar.get_parent().get_name(), stat_value, max_stats])
 
-func decrease_bar(bar_node):
-	var max_stats = bar_node.get_child_count()
+func decrease_bar():
+	var max_stats = stat_bar.get_child_count()
 	stat_value = get_stat_value()
 	
 	if stat_value-1 >= 0:
@@ -47,13 +90,15 @@ func decrease_bar(bar_node):
 		
 		stat_value -= 1
 		set_stat_value(stat_value)
-		print("Node Name: %s | Stat: %s"%[bar_node.get_parent().get_name(), stat_value])
+		handle_button_states(stat_value, max_stats)
+		print("Node Name: %s | Stat: %s"%[stat_bar.get_parent().get_name(), stat_value])
 		
-		var slot = bar_node.get_child(stat_value)
+		var slot = stat_bar.get_child(stat_value)
 		slot.base_slot()
 	else:
+		handle_button_states(stat_value, max_stats)
 		print("ERROR | Saved Stat is Maxed Out")
-		print("%s | Saved Stat: %s | Max Stat %s"%[bar_node.get_parent().get_name(), stat_value, max_stats])
+		print("%s | Saved Stat: %s | Max Stat %s"%[stat_bar.get_parent().get_name(), stat_value, max_stats])
 
 
 func validate_stat_value():
@@ -63,6 +108,21 @@ func validate_stat_value():
 		set_stat_value(max_value)
 	elif stat_value < 0:
 		set_stat_value(0)
+
+
+func handle_button_states(stat_value, max_stats):
+	var plus = get_node("Plus")
+	var minus = get_node("Minus")
+	var max_speed_value = upgrade_brain.max_speed
+	
+	if stat_value == max_stats or\
+	   (stat_value == max_speed_value and upgrade_brain.upgrade_points < 2):
+		plus.set_disabled(true)
+	elif stat_value == 0:
+		minus.set_disabled(true)
+	else:
+		plus.set_disabled(false)
+		minus.set_disabled(false)
 
 
 ###########################
@@ -90,10 +150,10 @@ func _input(event):
 		_on_Minus_pressed()
 
 func _on_Plus_pressed():
-	self.increase_bar(stat_bar)
+	self.increase_bar()
 
 func _on_Minus_pressed():
-	self.decrease_bar(stat_bar)
+	self.decrease_bar()
 
 func _on_mouse_enter():
 	self.grab_focus()
@@ -102,9 +162,11 @@ func _on_focus_enter():
 	#print("FOCUS GRABBED")
 	set_process_input(true)
 	self.get_node("AnimationPlayer").play("blink")
+	self.get_node("ArrowsIndicator").show_highlight()
 
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	SoundManager.play_sfx("ui_select")
 	self.get_node("AnimationPlayer").play("base")
+	self.get_node("ArrowsIndicator").stop_highlight()

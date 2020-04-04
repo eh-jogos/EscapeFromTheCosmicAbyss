@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=1]
+[gd_scene load_steps=45 format=1]
 
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeMenu.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" type="Texture" id=2]
@@ -9,28 +9,23 @@
 [ext_resource path="res://Fonts/OrbitronBold40.fnt" type="BitmapFont" id=7]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Cooldown.gd" type="Script" id=8]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeSlot.tscn" type="PackedScene" id=9]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_menos_pressed.png" type="Texture" id=10]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_menos_hover.png" type="Texture" id=11]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_menos_normal.png" type="Texture" id=12]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_menos_disabled.png" type="Texture" id=13]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_mais_pressed.png" type="Texture" id=14]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_mais_hover.png" type="Texture" id=15]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_mais_normal.png" type="Texture" id=16]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/btn_mais_disabled.png" type="Texture" id=17]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_cooldown.png" type="Texture" id=18]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_StartSpeed.gd" type="Script" id=19]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_booster.png" type="Texture" id=20]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_MaxSpeed.gd" type="Script" id=21]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Laser.gd" type="Script" id=22]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_laser.png" type="Texture" id=23]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Ammo.gd" type="Script" id=24]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Shield.gd" type="Script" id=25]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" type="Texture" id=26]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=27]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=28]
-[ext_resource path="res://CommonScenes/Buttons/LeftmostBlueScreen110Theme.tres" type="Theme" id=29]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=30]
-[ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=31]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Minus.tscn" type="PackedScene" id=10]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Plus.tscn" type="PackedScene" id=11]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_cooldown.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/Buttons/ArrowsIndicator.tscn" type="PackedScene" id=13]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_StartSpeed.gd" type="Script" id=14]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_booster.png" type="Texture" id=15]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_MaxSpeed.gd" type="Script" id=16]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Laser.gd" type="Script" id=17]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_laser.png" type="Texture" id=18]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Ammo.gd" type="Script" id=19]
+[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Shield.gd" type="Script" id=20]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" type="Texture" id=21]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=22]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=23]
+[ext_resource path="res://CommonScenes/Buttons/LeftmostBlueScreen110Theme.tres" type="Theme" id=24]
+[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=25]
+[ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=26]
 
 [sub_resource type="Animation" id=1]
 
@@ -866,6 +861,7 @@ percent/visible = false
 
 [node name="Cooldown" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../../Buttons/Confirm")
 focus_neighbour/right = NodePath(".")
@@ -890,6 +886,7 @@ script/script = ExtResource( 8 )
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown"]
 
+editor/display_folded = true
 transform/pos = Vector2( 120, 97 )
 
 [node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
@@ -912,52 +909,16 @@ transform/pos = Vector2( 180, 0 )
 
 transform/pos = Vector2( 215, 0 )
 
-[node name="Minus" type="TextureButton" parent="SectionLabels/Cooldown"]
+[node name="Minus" parent="SectionLabels/Cooldown" instance=ExtResource( 10 )]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 70.0
-margin/right = 88.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 10 )
-textures/pressed = ExtResource( 11 )
-textures/hover = ExtResource( 12 )
-textures/disabled = ExtResource( 13 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Plus" type="TextureButton" parent="SectionLabels/Cooldown"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 100.0
-margin/top = 70.0
-margin/right = 158.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 17 )
-params/resize_mode = 0
-params/stretch_mode = 0
+[node name="Plus" parent="SectionLabels/Cooldown" instance=ExtResource( 11 )]
 
 [node name="Highlight" type="Sprite" parent="SectionLabels/Cooldown"]
 
 visibility/visible = false
 visibility/opacity = 0.0
 transform/pos = Vector2( -493.595, 377.153 )
-texture = ExtResource( 18 )
+texture = ExtResource( 12 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Cooldown"]
 
@@ -971,8 +932,11 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
 
+[node name="ArrowsIndicator" parent="SectionLabels/Cooldown" instance=ExtResource( 13 )]
+
 [node name="StartSpeed" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../Cooldown")
 focus_neighbour/right = NodePath(".")
@@ -993,7 +957,8 @@ shortcut = null
 text = "Starting Speed"
 flat = false
 align = 0
-script/script = ExtResource( 19 )
+script/script = ExtResource( 14 )
+max_speed_path = NodePath("../MaxSpeed")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartSpeed"]
 
@@ -1068,52 +1033,12 @@ transform/pos = Vector2( 600, 0 )
 
 transform/pos = Vector2( 635, 0 )
 
-[node name="Minus" type="TextureButton" parent="SectionLabels/StartSpeed"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 70.0
-margin/right = 88.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 13 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Plus" type="TextureButton" parent="SectionLabels/StartSpeed"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 100.0
-margin/top = 70.0
-margin/right = 158.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 17 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
 [node name="Highlight" type="Sprite" parent="SectionLabels/StartSpeed"]
 
 visibility/visible = false
 visibility/opacity = 0.0
 transform/pos = Vector2( -495.472, 348.888 )
-texture = ExtResource( 20 )
+texture = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartSpeed"]
 
@@ -1127,8 +1052,15 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
 
+[node name="Minus" parent="SectionLabels/StartSpeed" instance=ExtResource( 10 )]
+
+[node name="Plus" parent="SectionLabels/StartSpeed" instance=ExtResource( 11 )]
+
+[node name="ArrowsIndicator" parent="SectionLabels/StartSpeed" instance=ExtResource( 13 )]
+
 [node name="MaxSpeed" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartSpeed")
 focus_neighbour/right = NodePath(".")
@@ -1149,7 +1081,8 @@ shortcut = null
 text = "Max Speed"
 flat = false
 align = 0
-script/script = ExtResource( 21 )
+script/script = ExtResource( 16 )
+start_speed_path = NodePath("../StartSpeed")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/MaxSpeed"]
 
@@ -1224,52 +1157,12 @@ transform/pos = Vector2( 600, 0 )
 
 transform/pos = Vector2( 635, 0 )
 
-[node name="Minus" type="TextureButton" parent="SectionLabels/MaxSpeed"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 70.0
-margin/right = 88.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 13 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Plus" type="TextureButton" parent="SectionLabels/MaxSpeed"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 100.0
-margin/top = 70.0
-margin/right = 158.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 17 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
 [node name="Highlight" type="Sprite" parent="SectionLabels/MaxSpeed"]
 
 visibility/visible = false
 visibility/opacity = 0.0
 transform/pos = Vector2( -496.472, 205.888 )
-texture = ExtResource( 20 )
+texture = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/MaxSpeed"]
 
@@ -1283,8 +1176,15 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
 
+[node name="Minus" parent="SectionLabels/MaxSpeed" instance=ExtResource( 10 )]
+
+[node name="Plus" parent="SectionLabels/MaxSpeed" instance=ExtResource( 11 )]
+
+[node name="ArrowsIndicator" parent="SectionLabels/MaxSpeed" instance=ExtResource( 13 )]
+
 [node name="LaserStrength" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../MaxSpeed")
 focus_neighbour/right = NodePath(".")
@@ -1305,7 +1205,7 @@ shortcut = null
 text = "Laser Strength"
 flat = false
 align = 0
-script/script = ExtResource( 22 )
+script/script = ExtResource( 17 )
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/LaserStrength"]
 
@@ -1352,52 +1252,12 @@ transform/pos = Vector2( 355, 0 )
 
 transform/pos = Vector2( 390, 0 )
 
-[node name="Minus" type="TextureButton" parent="SectionLabels/LaserStrength"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 70.0
-margin/right = 88.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 13 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Plus" type="TextureButton" parent="SectionLabels/LaserStrength"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 100.0
-margin/top = 70.0
-margin/right = 158.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 17 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
 [node name="Highlight" type="Sprite" parent="SectionLabels/LaserStrength"]
 
 visibility/visible = false
 visibility/opacity = 0.0
 transform/pos = Vector2( -217.396, 5.6712 )
-texture = ExtResource( 23 )
+texture = ExtResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/LaserStrength"]
 
@@ -1411,8 +1271,15 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
 
+[node name="Minus" parent="SectionLabels/LaserStrength" instance=ExtResource( 10 )]
+
+[node name="Plus" parent="SectionLabels/LaserStrength" instance=ExtResource( 11 )]
+
+[node name="ArrowsIndicator" parent="SectionLabels/LaserStrength" instance=ExtResource( 13 )]
+
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../LaserStrength")
 focus_neighbour/right = NodePath(".")
@@ -1433,7 +1300,7 @@ shortcut = null
 text = "Starting Ammo"
 flat = false
 align = 0
-script/script = ExtResource( 24 )
+script/script = ExtResource( 19 )
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartingAmmo"]
 
@@ -1451,52 +1318,12 @@ transform/pos = Vector2( 110, 0 )
 
 transform/pos = Vector2( 145, 0 )
 
-[node name="Minus" type="TextureButton" parent="SectionLabels/StartingAmmo"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 70.0
-margin/right = 88.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 13 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Plus" type="TextureButton" parent="SectionLabels/StartingAmmo"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 100.0
-margin/top = 70.0
-margin/right = 158.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 17 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
 [node name="Highlight" type="Sprite" parent="SectionLabels/StartingAmmo"]
 
 visibility/visible = false
 visibility/opacity = 0.0
 transform/pos = Vector2( -217.396, -132.329 )
-texture = ExtResource( 23 )
+texture = ExtResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartingAmmo"]
 
@@ -1510,8 +1337,15 @@ playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
 
+[node name="Minus" parent="SectionLabels/StartingAmmo" instance=ExtResource( 10 )]
+
+[node name="Plus" parent="SectionLabels/StartingAmmo" instance=ExtResource( 11 )]
+
+[node name="ArrowsIndicator" parent="SectionLabels/StartingAmmo" instance=ExtResource( 13 )]
+
 [node name="Shields" type="Button" parent="SectionLabels"]
 
+editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartingAmmo")
 focus_neighbour/right = NodePath(".")
@@ -1532,7 +1366,7 @@ shortcut = null
 text = "Shields"
 flat = false
 align = 0
-script/script = ExtResource( 25 )
+script/script = ExtResource( 20 )
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Shields"]
 
@@ -1551,52 +1385,12 @@ transform/pos = Vector2( 110, 0 )
 
 transform/pos = Vector2( 145, 0 )
 
-[node name="Minus" type="TextureButton" parent="SectionLabels/Shields"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 30.0
-margin/top = 70.0
-margin/right = 88.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 13 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
-[node name="Plus" type="TextureButton" parent="SectionLabels/Shields"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 100.0
-margin/top = 70.0
-margin/right = 158.0
-margin/bottom = 124.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 14 )
-textures/pressed = ExtResource( 15 )
-textures/hover = ExtResource( 16 )
-textures/disabled = ExtResource( 17 )
-params/resize_mode = 0
-params/stretch_mode = 0
-
 [node name="Highlight" type="Sprite" parent="SectionLabels/Shields"]
 
 visibility/visible = false
 visibility/opacity = 0.0
 transform/pos = Vector2( -337.933, -192.706 )
-texture = ExtResource( 26 )
+texture = ExtResource( 21 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Shields"]
 
@@ -1609,6 +1403,12 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = "base"
+
+[node name="Minus" parent="SectionLabels/Shields" instance=ExtResource( 10 )]
+
+[node name="Plus" parent="SectionLabels/Shields" instance=ExtResource( 11 )]
+
+[node name="ArrowsIndicator" parent="SectionLabels/Shields" instance=ExtResource( 13 )]
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 
@@ -1623,7 +1423,7 @@ __meta__ = {
 
 visibility/blend_mode = 2
 transform/pos = Vector2( 960, 540 )
-texture = ExtResource( 27 )
+texture = ExtResource( 22 )
 region = true
 region_rect = Rect2( 0, 0, 1800, 1080 )
 __meta__ = {
@@ -1635,7 +1435,7 @@ __meta__ = {
 visibility/opacity = 0.547357
 visibility/blend_mode = 1
 transform/pos = Vector2( 960, 694.598 )
-texture = ExtResource( 28 )
+texture = ExtResource( 23 )
 region = true
 region_rect = Rect2( 0, 654.598, 1800, 80 )
 __meta__ = {
@@ -1684,7 +1484,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 29 )
+theme/theme = ExtResource( 24 )
 margin/left = 143.0
 margin/top = 0.0
 margin/right = 519.0
@@ -1694,7 +1494,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Reset Changes"
 flat = false
-script/script = ExtResource( 30 )
+script/script = ExtResource( 25 )
 pressed_sfx = "ui_change"
 
 [node name="Confirm" type="Button" parent="Buttons"]
@@ -1708,7 +1508,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-theme/theme = ExtResource( 31 )
+theme/theme = ExtResource( 26 )
 margin/left = 534.0
 margin/top = 0.0
 margin/right = 785.0
@@ -1718,7 +1518,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Confirm"
 flat = false
-script/script = ExtResource( 30 )
+script/script = ExtResource( 25 )
 pressed_sfx = "ui_confirm"
 
 [node name="ColorFrame1" type="ColorFrame" parent="."]
