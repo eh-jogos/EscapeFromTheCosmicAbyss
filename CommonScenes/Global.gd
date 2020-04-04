@@ -50,11 +50,11 @@ var base_savedata = {
 				175, #11
 				380, #12
 		],
-		"cooldown": 0,
+		"cooldown": 1,
 		"initial ammo": 0,
 		"initial shield": 0,
 		"initial speed": 4.0,
-		"max speed": 11.0,
+		"max speed": 10.0,
 		"laser strength": 0,
 		"upgrade level": 1,
 		"next upgrade": base_upgrade,
@@ -74,7 +74,7 @@ var base_savedata = {
 		"initial speed": 0,
 		"max speed": 0,
 		"laser strength": 0,
-		"upgrade points": 15,
+		"upgrade points": 0,
 		},
 	"speedrun": {
 		"hightime": 0,
@@ -92,6 +92,11 @@ var base_savedata = {
 		"sub-mode": "15",
 	},
 }
+
+
+func _ready():
+	check_savefile()
+
 
 func check_savefile():
 	if not savefile.file_exists(savepath):
