@@ -1,4 +1,4 @@
-[gd_scene load_steps=223 format=1]
+[gd_scene load_steps=224 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/DarkWave_Looper.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/DarkWaveBrain.gd" type="Script" id=2]
@@ -210,6 +210,7 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0050.png" type="Texture" id=208]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" type="Texture" id=209]
 [ext_resource path="res://CommonScenes/SoundManager/tentacle_sfx_library.tres" type="SampleLibrary" id=210]
+[ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=211]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -250,14 +251,14 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ) ],
-"loop": true,
-"name": "crush_idle",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
 "loop": false,
 "name": "crush",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "crush_idle",
 "speed": 60.0
 } ]
 
@@ -294,14 +295,14 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ) ],
-"loop": true,
-"name": "crush_idle",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ) ],
 "loop": false,
 "name": "crush",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "crush_idle",
 "speed": 60.0
 } ]
 
@@ -643,7 +644,7 @@ lookahead = 4.0
 transform/pos = Vector2( 0, 923.881 )
 frames = SubResource( 4 )
 animation = "crush_idle"
-frame = 30
+frame = 34
 playing = true
 centered = false
 offset = Vector2( -200, -200 )
@@ -675,7 +676,7 @@ bounce = 0.0
 transform/pos = Vector2( 0, 923.881 )
 frames = SubResource( 8 )
 animation = "crush_idle"
-frame = 30
+frame = 34
 playing = true
 centered = false
 offset = Vector2( -200, -200 )
@@ -726,5 +727,6 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+script/script = ExtResource( 211 )
 
 

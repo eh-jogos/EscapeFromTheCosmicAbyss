@@ -1,7 +1,7 @@
 extends Button
 
 var is_invincible = false
-var arrows_animator
+var arrows_highlight
 
 func _ready():
 	if not self.is_connected("mouse_enter",self,"_on_mouse_enter"):
@@ -15,7 +15,7 @@ func _ready():
 	
 	is_invincible = Global.is_invincible
 	
-	arrows_animator = get_node("ArrowAnimator")
+	arrows_highlight = get_node("ArrowsIndicator")
 	_update_text()
 
 
@@ -38,13 +38,13 @@ func _on_mouse_enter():
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
 	set_process_input(true)
-	arrows_animator.play("enabled")
+	arrows_highlight.show_highlight()
 
 
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
-	arrows_animator.play("disabled")
+	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")
 
 func _update_text():

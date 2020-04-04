@@ -1,10 +1,8 @@
 extends Button
 
 # class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 var track_volume
-var arrows_animator
+var arrows_highlight
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -18,10 +16,10 @@ func _ready():
 	if not self.is_connected("focus_exit",self,"_on_focus_exit"):
 		self.connect("focus_exit",self,"_on_focus_exit")
 	
-	arrows_animator = get_node("ArrowAnimator")
+	arrows_highlight = get_node("ArrowsIndicator")
 	
 	track_volume = Global.savedata["options"]["bgm volume"]
-	self.set_text("BGM Volume: "+str(track_volume))
+	_set_text_value(track_volume)
 
 func _input(event):
 	if event.is_action_pressed("ui_right"):
@@ -41,10 +39,13 @@ func change_bgm_volume(direction):
 		if track_volume > 0:
 			track_volume -= 10
 	
-	self.set_text("BGM Volume: "+str(track_volume))
+	_set_text_value(track_volume)
 	
 	SoundManager.change_bgm_volume(track_volume)
 	Global.update_option_bgmvolume(track_volume)
+
+func _set_text_value(value):
+	self.set_text("Music Volume: %s"%[value])
 
 func _on_mouse_enter():
 	self.grab_focus()
@@ -52,10 +53,10 @@ func _on_mouse_enter():
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
 	set_process_input(true)
-	arrows_animator.play("enabled")
+	arrows_highlight.show_highlight()
 
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
-	arrows_animator.play("disabled")
+	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")

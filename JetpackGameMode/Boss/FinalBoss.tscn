@@ -1,138 +1,139 @@
-[gd_scene load_steps=173 format=1]
+[gd_scene load_steps=174 format=1]
 
 [ext_resource path="res://JetpackGameMode/Boss/Boss.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/SoundManager/boss_sfx_library.tres" type="SampleLibrary" id=2]
-[ext_resource path="res://JetpackGameMode/Boss/FinalBossSkin.gd" type="Script" id=3]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_01.png" type="Texture" id=4]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_02.png" type="Texture" id=5]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_03.png" type="Texture" id=6]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_04.png" type="Texture" id=7]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_05.png" type="Texture" id=8]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_01.png" type="Texture" id=9]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_02.png" type="Texture" id=10]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_03.png" type="Texture" id=11]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_01.png" type="Texture" id=12]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_03.png" type="Texture" id=13]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_05.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_06.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_01.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_02.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_03.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_04.png" type="Texture" id=19]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_01.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_02.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_03.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_01.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_02.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_03.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_04.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_01.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_02.png" type="Texture" id=28]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_03.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_eyes_slhouette.png" type="Texture" id=30]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_eye.png" type="Texture" id=31]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_01.png" type="Texture" id=32]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_02.png" type="Texture" id=33]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_03.png" type="Texture" id=34]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_04.png" type="Texture" id=35]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_05.png" type="Texture" id=36]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_06.png" type="Texture" id=37]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_iris_outline.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_iris.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_pupil.png" type="Texture" id=40]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_loop_01.png" type="Texture" id=41]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_loop_02.png" type="Texture" id=42]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_loop_03.png" type="Texture" id=43]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_transition_05.png" type="Texture" id=44]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_transition_06.png" type="Texture" id=45]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_default_00.png" type="Texture" id=46]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_loop_01.png" type="Texture" id=47]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_loop_02.png" type="Texture" id=48]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_loop_03.png" type="Texture" id=49]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_transition_05.png" type="Texture" id=50]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_transition_06.png" type="Texture" id=51]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/gengiva_scream_loop_01.png" type="Texture" id=52]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/gengiva_scream_loop_02.png" type="Texture" id=53]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/gengiva_scream_loop_03.png" type="Texture" id=54]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_01.png" type="Texture" id=55]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_02.png" type="Texture" id=56]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_03.png" type="Texture" id=57]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_04.png" type="Texture" id=58]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_05.png" type="Texture" id=59]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_01.png" type="Texture" id=60]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_02.png" type="Texture" id=61]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_03.png" type="Texture" id=62]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_01.png" type="Texture" id=63]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_02.png" type="Texture" id=64]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_03.png" type="Texture" id=65]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_05.png" type="Texture" id=66]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_06.png" type="Texture" id=67]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_01.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_02.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_03.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_04.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_01.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_02.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_03.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_01.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_02.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_03.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_04.png" type="Texture" id=78]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_01.png" type="Texture" id=79]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_02.png" type="Texture" id=80]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_03.png" type="Texture" id=81]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_01.png" type="Texture" id=82]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_02.png" type="Texture" id=83]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_03.png" type="Texture" id=84]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_04.png" type="Texture" id=85]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_05.png" type="Texture" id=86]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_01.png" type="Texture" id=87]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_02.png" type="Texture" id=88]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_03.png" type="Texture" id=89]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_01.png" type="Texture" id=90]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_02.png" type="Texture" id=91]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_03.png" type="Texture" id=92]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_04.png" type="Texture" id=93]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_05.png" type="Texture" id=94]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_06.png" type="Texture" id=95]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_01.png" type="Texture" id=96]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_02.png" type="Texture" id=97]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_03.png" type="Texture" id=98]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_04.png" type="Texture" id=99]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_01.png" type="Texture" id=100]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_02.png" type="Texture" id=101]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_03.png" type="Texture" id=102]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_03.png" type="Texture" id=103]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_04.png" type="Texture" id=104]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_05.png" type="Texture" id=105]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_01.png" type="Texture" id=106]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_02.png" type="Texture" id=107]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_01.png" type="Texture" id=108]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_02.png" type="Texture" id=109]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_03.png" type="Texture" id=110]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_04.png" type="Texture" id=111]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_05.png" type="Texture" id=112]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_01.png" type="Texture" id=113]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_02.png" type="Texture" id=114]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_03.png" type="Texture" id=115]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_01.png" type="Texture" id=116]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_03.png" type="Texture" id=117]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_05.png" type="Texture" id=118]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_06.png" type="Texture" id=119]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_01.png" type="Texture" id=120]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_02.png" type="Texture" id=121]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_03.png" type="Texture" id=122]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_04.png" type="Texture" id=123]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_01.png" type="Texture" id=124]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_02.png" type="Texture" id=125]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_03.png" type="Texture" id=126]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_01.png" type="Texture" id=127]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_02.png" type="Texture" id=128]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_03.png" type="Texture" id=129]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_04.png" type="Texture" id=130]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_01.png" type="Texture" id=131]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_02.png" type="Texture" id=132]
-[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_03.png" type="Texture" id=133]
+[ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=3]
+[ext_resource path="res://JetpackGameMode/Boss/FinalBossSkin.gd" type="Script" id=4]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_01.png" type="Texture" id=5]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_02.png" type="Texture" id=6]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_03.png" type="Texture" id=7]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_04.png" type="Texture" id=8]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_05.png" type="Texture" id=9]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_01.png" type="Texture" id=10]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_02.png" type="Texture" id=11]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_03.png" type="Texture" id=12]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_loop_04.png" type="Texture" id=13]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_01.png" type="Texture" id=14]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_02.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_laser_transition_03.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_01.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_02.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_03.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_loop_04.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_01.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_02.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_angry_transition_03.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_01.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_02.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_loop_03.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_01.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_03.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_05.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_scream_transition_06.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_eyes_slhouette.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_eye.png" type="Texture" id=32]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_01.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_02.png" type="Texture" id=34]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_03.png" type="Texture" id=35]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_04.png" type="Texture" id=36]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_05.png" type="Texture" id=37]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_color_change/eye_color_change_06.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_iris_outline.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_iris.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/static/boss_pupil.png" type="Texture" id=41]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_loop_01.png" type="Texture" id=42]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_loop_02.png" type="Texture" id=43]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_loop_03.png" type="Texture" id=44]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_transition_05.png" type="Texture" id=45]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/tongue_scream_transition_06.png" type="Texture" id=46]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_default_00.png" type="Texture" id=47]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_loop_01.png" type="Texture" id=48]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_loop_02.png" type="Texture" id=49]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_loop_03.png" type="Texture" id=50]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_transition_05.png" type="Texture" id=51]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/teeth_scream_transition_06.png" type="Texture" id=52]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/gengiva_scream_loop_01.png" type="Texture" id=53]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/gengiva_scream_loop_02.png" type="Texture" id=54]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/gengiva_scream_loop_03.png" type="Texture" id=55]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_01.png" type="Texture" id=56]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_02.png" type="Texture" id=57]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_03.png" type="Texture" id=58]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_04.png" type="Texture" id=59]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_idle_05.png" type="Texture" id=60]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_01.png" type="Texture" id=61]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_02.png" type="Texture" id=62]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_03.png" type="Texture" id=63]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_loop_04.png" type="Texture" id=64]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_01.png" type="Texture" id=65]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_02.png" type="Texture" id=66]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_laser_transition_03.png" type="Texture" id=67]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_01.png" type="Texture" id=68]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_02.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_03.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_loop_04.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_01.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_02.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_angry_transition_03.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_01.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_02.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_loop_03.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_01.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_02.png" type="Texture" id=79]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_03.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_05.png" type="Texture" id=81]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/body/body_scream_transition_06.png" type="Texture" id=82]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_01.png" type="Texture" id=83]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_02.png" type="Texture" id=84]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_03.png" type="Texture" id=85]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_04.png" type="Texture" id=86]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_idle_05.png" type="Texture" id=87]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_01.png" type="Texture" id=88]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_02.png" type="Texture" id=89]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_03.png" type="Texture" id=90]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_loop_04.png" type="Texture" id=91]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_01.png" type="Texture" id=92]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_02.png" type="Texture" id=93]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_angry_transition_03.png" type="Texture" id=94]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_01.png" type="Texture" id=95]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_02.png" type="Texture" id=96]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_loop_03.png" type="Texture" id=97]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_01.png" type="Texture" id=98]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_02.png" type="Texture" id=99]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_03.png" type="Texture" id=100]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_04.png" type="Texture" id=101]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_05.png" type="Texture" id=102]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/mouth_details_scream_transition_06.png" type="Texture" id=103]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_03.png" type="Texture" id=104]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_04.png" type="Texture" id=105]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_05.png" type="Texture" id=106]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_01.png" type="Texture" id=107]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/mouth/perdigotos_anim_02.png" type="Texture" id=108]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_01.png" type="Texture" id=109]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_02.png" type="Texture" id=110]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_03.png" type="Texture" id=111]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_04.png" type="Texture" id=112]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_idle_05.png" type="Texture" id=113]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_01.png" type="Texture" id=114]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_02.png" type="Texture" id=115]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_03.png" type="Texture" id=116]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_loop_04.png" type="Texture" id=117]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_01.png" type="Texture" id=118]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_02.png" type="Texture" id=119]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_laser_transition_03.png" type="Texture" id=120]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_01.png" type="Texture" id=121]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_02.png" type="Texture" id=122]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_03.png" type="Texture" id=123]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_loop_04.png" type="Texture" id=124]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_01.png" type="Texture" id=125]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_02.png" type="Texture" id=126]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_angry_transition_03.png" type="Texture" id=127]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_01.png" type="Texture" id=128]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_02.png" type="Texture" id=129]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_loop_03.png" type="Texture" id=130]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_01.png" type="Texture" id=131]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_03.png" type="Texture" id=132]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_05.png" type="Texture" id=133]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_06.png" type="Texture" id=134]
 
 [sub_resource type="Animation" id=1]
 
@@ -3674,39 +3675,39 @@ tracks/22/keys = {
 [sub_resource type="SpriteFrames" id=24]
 
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "idle_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": false,
 "name": "to_angry",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -3744,7 +3745,7 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": false,
 "name": "change_color",
 "speed": 12.0
@@ -4034,12 +4035,12 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 42 ) ],
+"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ null, null, null, null, ExtResource( 44 ), ExtResource( 45 ) ],
+"frames": [ null, null, null, null, ExtResource( 45 ), ExtResource( 46 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
@@ -4048,17 +4049,17 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=34]
 
 animations = [ {
-"frames": [ ExtResource( 46 ) ],
+"frames": [ ExtResource( 47 ) ],
 "loop": false,
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 48 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 50 ), ExtResource( 51 ) ],
+"frames": [ ExtResource( 47 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
@@ -4072,7 +4073,7 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 53 ) ],
+"frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 54 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
@@ -4081,68 +4082,68 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=36]
 
 animations = [ {
-"frames": [ ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 56 ) ],
+"frames": [ ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 61 ) ],
-"loop": true,
-"name": "scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 69 ) ],
+"frames": [ ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 62 ) ],
 "loop": true,
 "name": "idle_laser",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ) ],
+"frames": [ ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 77 ), ExtResource( 76 ) ],
+"frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 69 ) ],
 "loop": true,
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ) ],
+"frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ) ],
 "loop": false,
 "name": "to_angry",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
 
 animations = [ {
-"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 83 ) ],
+"frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 84 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 88 ) ],
-"loop": true,
-"name": "scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 98 ), ExtResource( 97 ) ],
+"frames": [ ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 89 ) ],
 "loop": true,
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ) ],
+"frames": [ ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ) ],
 "loop": false,
 "name": "to_angry",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -4154,12 +4155,12 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), null ],
+"frames": [ ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), null ],
 "loop": false,
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ null, null, null, null, ExtResource( 106 ), ExtResource( 107 ) ],
+"frames": [ null, null, null, null, ExtResource( 107 ), ExtResource( 108 ) ],
 "loop": false,
 "name": "to_scream",
 "speed": 12.0
@@ -4168,39 +4169,39 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=39]
 
 animations = [ {
-"frames": [ ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 111 ), ExtResource( 110 ), ExtResource( 109 ) ],
+"frames": [ ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 112 ), ExtResource( 111 ), ExtResource( 110 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 114 ) ],
-"loop": true,
-"name": "scream",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 116 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 122 ), ExtResource( 121 ) ],
+"frames": [ ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 116 ), ExtResource( 115 ) ],
 "loop": true,
 "name": "idle_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ) ],
+"frames": [ ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ) ],
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 129 ), ExtResource( 128 ) ],
+"frames": [ ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 123 ), ExtResource( 122 ) ],
 "loop": true,
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ) ],
+"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ) ],
 "loop": false,
 "name": "to_angry",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 129 ) ],
+"loop": true,
+"name": "scream",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 131 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -4255,6 +4256,7 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+script/script = ExtResource( 3 )
 
 [node name="CollisionTimer" type="Timer" parent="."]
 
@@ -4268,7 +4270,7 @@ autostart = false
 editor/display_folded = true
 visibility/behind_parent = true
 transform/pos = Vector2( -520, 0 )
-script/script = ExtResource( 3 )
+script/script = ExtResource( 4 )
 warning_color_1 = 0.0
 warning_color_2 = 0.0
 warning_color_3 = 0.0
@@ -4315,7 +4317,7 @@ modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
 visibility/behind_parent = true
 transform/pos = Vector2( 481, 763 )
-texture = ExtResource( 30 )
+texture = ExtResource( 31 )
 centered = false
 offset = Vector2( -40, -162 )
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
@@ -4402,7 +4404,7 @@ type_mask = 2
 
 [node name="Eye" type="Sprite" parent="FinalBossSkin/BodyOutline/EyeOutline"]
 
-texture = ExtResource( 31 )
+texture = ExtResource( 32 )
 centered = false
 offset = Vector2( -30, -152 )
 modulate = Color( 0, 1, 0.764706, 1 )
@@ -4471,19 +4473,19 @@ autoplay = ""
 
 transform/pos = Vector2( 289.303, 11.6164 )
 transform/rot = 1.48915
-texture = ExtResource( 38 )
+texture = ExtResource( 39 )
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
 [node name="Iris" type="Sprite" parent="FinalBossSkin/BodyOutline/EyeOutline/Eye/IrisOutline"]
 
-texture = ExtResource( 39 )
+texture = ExtResource( 40 )
 offset = Vector2( 3, 0 )
 modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 
 [node name="Pupil" type="Sprite" parent="FinalBossSkin/BodyOutline/EyeOutline/Eye/IrisOutline/Iris"]
 
 transform/pos = Vector2( 22, 0 )
-texture = ExtResource( 40 )
+texture = ExtResource( 41 )
 modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 
 [node name="Tongue" type="AnimatedSprite" parent="FinalBossSkin/BodyOutline"]

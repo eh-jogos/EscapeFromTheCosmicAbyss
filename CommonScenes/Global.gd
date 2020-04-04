@@ -17,7 +17,7 @@ const DEFAULT_ENEMY_LASER_COLOR = Color(1,1,1,1)
 var savefile = File.new()
 var savepath = "user://savegame.save"
 var savedata = {}
-var version = 0.63
+var version = 0.91
 
 var is_invincible = false
 var is_retry = false
@@ -32,7 +32,8 @@ var base_savedata = {
 	"options": {
 		"fullscreen": true,
 		"track": "2",
-		"bgm volume": 60
+		"bgm volume": 60,
+		"sfx volume": 100
 	},
 	"story": {
 		"highscore": [
@@ -96,6 +97,7 @@ var base_savedata = {
 
 func _ready():
 	check_savefile()
+	get_tree().call_group(0, "sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
 
 
 func check_savefile():
@@ -129,12 +131,13 @@ func read():
 	else:
 		#print("SAVE ERROR")
 		if old_save.has("version") and old_save["version"] < version:
+			savedata = base_savedata
 			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
 			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
 			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
 			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
 			savedata["story"]["max speed"] = old_save["story"]["max speed"]
-			savedata["story"]["laser strength"] = old_save["story"]["laser duration"]
+			savedata["story"]["laser strength"] = old_save["story"]["laser strength"]
 			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
 			
 			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
@@ -282,6 +285,10 @@ func update_option_track(option):
 
 func update_option_bgmvolume(option):
 	savedata["options"]["bgm volume"] = option
+
+func update_option_sfxvolume(option):
+	savedata["options"]["bgm volume"] = option
+	get_tree().call_group(0, "sfx_player", "adjust_volume_to", option)
 
 func set_game_mode(game_mode, category):
 	savedata["state"]["game mode"] = game_mode

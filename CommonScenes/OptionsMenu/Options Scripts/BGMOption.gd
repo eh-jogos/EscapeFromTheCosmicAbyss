@@ -4,7 +4,7 @@ extends Button
 # var a = 2
 # var b = "textvar"
 var track
-var arrows_animator
+var arrows_highlight
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -18,7 +18,7 @@ func _ready():
 	if not self.is_connected("focus_exit",self,"_on_focus_exit"):
 		self.connect("focus_exit",self,"_on_focus_exit")
 	
-	arrows_animator = get_node("ArrowAnimator")
+	arrows_highlight = get_node("ArrowsIndicator")
 	
 	track = Global.savedata["options"]["track"]
 	self.set_text("BGM: "+track)
@@ -70,10 +70,10 @@ func _on_focus_enter():
 	#print("FOCUS GRABBED")
 	set_process_input(true)
 	SoundManager.preview_bgm_play()
-	arrows_animator.play("enabled")
+	arrows_highlight.show_highlight()
 
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
-	arrows_animator.play("disabled")
+	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")

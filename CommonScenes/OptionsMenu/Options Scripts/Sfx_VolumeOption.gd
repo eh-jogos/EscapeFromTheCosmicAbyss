@@ -1,9 +1,12 @@
 extends Button
 
-var fullscreen
+# class member variables go here, for example:
+var sfx_volume
 var arrows_highlight
 
 func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization here
 	if not self.is_connected("mouse_enter",self,"_on_mouse_enter"):
 		self.connect("mouse_enter",self,"_on_mouse_enter")
 	
@@ -14,37 +17,37 @@ func _ready():
 		self.connect("focus_exit",self,"_on_focus_exit")
 	
 	arrows_highlight = get_node("ArrowsIndicator")
-
-	fullscreen = Global.savedata["options"]["fullscreen"]
 	
-	if fullscreen:
-		self.set_text("Fullscreen: On")
-	else:
-		self.set_text("Fullscreen: Off")
-
+	sfx_volume = Global.savedata["options"]["sfx volume"]
+	_set_text_value(sfx_volume)
 
 func _input(event):
-	if event.is_action_pressed("ui_right") or event.is_action_pressed("ui_left"):
-		change_screen_mode()
+	if event.is_action_pressed("ui_right"):
+		change_bgm_volume(true)
+	elif event.is_action_pressed("ui_left"):
+		change_bgm_volume(false)
 
-
-func change_screen_mode():
+func change_bgm_volume(direction):
+	var go_up = direction
+	
 	SoundManager.play_sfx("ui_change", true)
 	
-	if fullscreen:
-		OS.set_window_fullscreen(false)
-		fullscreen = OS.is_window_fullscreen()
-		Global.update_option_fullscreen(fullscreen)
-		
-		self.set_text("Fullscreen: Off")
-		#print("OFF")
+	if go_up:
+		if sfx_volume < 100:
+			sfx_volume += 10
 	else:
-		OS.set_window_fullscreen(true)
-		fullscreen = OS.is_window_fullscreen()
-		Global.update_option_fullscreen(fullscreen)
-		
-		self.set_text("Fullscreen: On")
-		#print("ON")
+		if sfx_volume > 0:
+			sfx_volume -= 10
+	
+	_set_text_value(sfx_volume)
+	
+	Global.update_option_sfxvolume(sfx_volume)
+	SoundManager.play_sfx("ui_select")
+
+
+func _set_text_value(value):
+	self.set_text("Sounds Volume: %s"%[value])
+
 
 func _on_mouse_enter():
 	self.grab_focus()
@@ -54,10 +57,8 @@ func _on_focus_enter():
 	set_process_input(true)
 	arrows_highlight.show_highlight()
 
-
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")
-

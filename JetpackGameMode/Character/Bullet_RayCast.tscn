@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://JetpackGameMode/Character/Bullet_RayCast.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Character/Fxs/FullLaser.png" type="Texture" id=2]
 [ext_resource path="res://JetpackGameMode/Character/Fxs/LaserParticle.png" type="Texture" id=3]
 [ext_resource path="res://CommonScenes/SoundManager/player_sfx_library.tres" type="SampleLibrary" id=4]
+[ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=5]
 
 [sub_resource type="ColorRamp" id=1]
 
@@ -694,6 +695,7 @@ default/filter/gain = 1.0
 default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
+script/script = ExtResource( 5 )
 
 [node name="Tween" type="Tween" parent="."]
 
