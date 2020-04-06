@@ -165,12 +165,12 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 			if initial_pos < 0:
 				initial_pos = 0
 			if end_pos >= level_array.size():
-				break
+				continue
 			
 			for index in range(initial_pos, end_pos):
 				if level_array[index] == key_translator("laser_eye"):
 					is_another_laser_eye_close_by = true
-					break
+					continue
 			
 			if not is_another_laser_eye_close_by:
 				level_array[level_position] = key_translator("laser_eye")
@@ -233,12 +233,12 @@ func draw_tentacle_barrier(level_array, obstacle_pool, initial_slot):
 		if obstacle_pool.has(key_translator("wall")):
 			var random_integer = randi()%available_slots.size()
 			var level_position = available_slots[random_integer]
+			var end_position = min(level_position+10, level_array.size())
 			
 			var wall_count = 0
-			for position in range(level_array.size()):
+			for position in range(end_position):
 				if position == level_position:
 					wall_count +=1
-					break
 				elif level_array[position] == key_translator("wall"):
 					wall_count +=1
 			
