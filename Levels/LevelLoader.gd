@@ -148,6 +148,7 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 	var available_slots
 	
 	print("LevelLoader | Level name: %s"%[level_info.get_name()])
+	var level_name = level_info.get_name()
 	if level_info.get_name() == "Level5":
 		available_slots = get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot)
 	else:
@@ -170,6 +171,7 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 			for index in range(initial_pos, end_pos):
 				if level_array[index] == key_translator("laser_eye"):
 					is_another_laser_eye_close_by = true
+					available_slots.remove(random_integer)
 					continue
 			
 			if not is_another_laser_eye_close_by:
@@ -184,7 +186,7 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 
 func get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot):
 	var available_slots
-	available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[0]+2)
+	available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[1]+1)
 	
 	return available_slots
 

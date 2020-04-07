@@ -18,7 +18,7 @@ var boss = {
 	"sequence_halfs":  [[4,2,3,6,5,2,2]],
 	"boss_node": "BackRowBoss",
 	"animations": ["awaken", "get_angry", "scream"],
-	"animations_countdowns": [8, 15,25],
+	"animations_countdowns": [8,15,25],
 }
 
 var beats = {
