@@ -74,7 +74,7 @@ curve = SubResource( 2 )
 
 [node name="PositionRange" type="PathFollow2D" parent="Path2D"]
 
-transform/pos = Vector2( 219.203, 43.5079 )
+transform/pos = Vector2( 219.203, 43.508 )
 transform/rot = -89.983
 offset = 393.453
 h_offset = 0.0
@@ -88,7 +88,7 @@ lookahead = 4.0
 
 input/pickable = true
 shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 2.6, 0, 0, 2.6, 0, 0 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -115,7 +115,7 @@ params/tangential_accel = 0.0
 params/damping = 0.0
 params/initial_angle = 0.0
 params/initial_size = 1.0
-params/final_size = 1.5
+params/final_size = 3.2
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
@@ -139,7 +139,7 @@ modulate = Color( 0, 0.956863, 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PositionRange/ShieldIcon"]
 
-visibility/visible = false
+transform/scale = Vector2( 2.6, 2.6 )
 shape = SubResource( 3 )
 trigger = false
 _update_shape_index = 0
