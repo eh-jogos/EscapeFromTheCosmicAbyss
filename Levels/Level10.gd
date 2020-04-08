@@ -13,12 +13,12 @@ var boss = {
 	"laser": false,
 	"laser_countdowns":[],
 	"scream": true,
-	"countdown": [10],
+	"countdown": [35],
 	"sequence_beats": [[3,2,2,4,3,6,5,2,3,2,5,3,2,6,2]],
 	"sequence_halfs":  [[2,4,5,2,2,3,2,4,6,2,3,2,2,3,4]],
 	"boss_node": "MidFrontRowBoss",
 	"animations": ["scream"],
-	"animations_countdowns": [10],
+	"animations_countdowns": [34],
 }
 
 var beats = {

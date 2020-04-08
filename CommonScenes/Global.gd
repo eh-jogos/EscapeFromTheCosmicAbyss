@@ -45,17 +45,17 @@ var base_savedata = {
 				120, #5
 				130, #6
 				110, #7
-				199, #8
-				90, #9
+				175, #8
+				120, #9
 				220, #10
 				175, #11
-				380, #12
+				350, #12
 		],
 		"cooldown": 1,
 		"initial ammo": 0,
-		"initial shield": 0,
+		"initial shield": 1,
 		"initial speed": 4.0,
-		"max speed": 10.0,
+		"max speed": 9.0,
 		"laser strength": 0,
 		"upgrade level": 1,
 		"next upgrade": base_upgrade,

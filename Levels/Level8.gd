@@ -18,14 +18,14 @@ var boss = {
 	"sequence_halfs":  [[2,2,6,2,3,2,5,2,2,6,4]],
 	"boss_node": "MidBackRowBoss",
 	"animations": ["scream"],
-	"animations_countdowns": [30],
+	"animations_countdowns": [5],
 }
 
 var beats = {
 	"none": 0,
-	"tentacles": 20,
-	"double_pipe": 16,
-	"triple_pipe": 13,
+	"tentacles": 12,
+	"double_pipe": 11,
+	"triple_pipe": 11,
 	"wall": 6,
 	"laser_eye": 1,
 	"shield_up": 2,
@@ -33,9 +33,9 @@ var beats = {
 }
 
 var half_beats = {
-	"none": 18,
-	"tentacles": 15,
-	"double_pipe": 15,
+	"none": 13,
+	"tentacles": 10,
+	"double_pipe": 10,
 	"triple_pipe": 5,
 	"wall": 4,
 	"laser_eye": 0,
