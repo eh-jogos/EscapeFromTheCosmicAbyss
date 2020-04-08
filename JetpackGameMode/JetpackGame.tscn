@@ -917,7 +917,6 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
-editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -1013,7 +1012,6 @@ end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -1148,6 +1146,7 @@ z/z = 3
 [node name="FinalBoss" type="Node2D" parent="Camera2D"]
 
 transform/pos = Vector2( -960, 0 )
+z/z = 2
 
 [node name="Boss" parent="Camera2D/FinalBoss" groups=[
 "boss",
@@ -1502,8 +1501,6 @@ transform/pos = Vector2( 961, 554 )
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
-editor/display_folded = true
-
 [node name="Outlines" type="Node2D" parent="Obstaculos"]
 
 [node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 54 )]
@@ -1599,7 +1596,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 45.0
+margin/right = 0.0
 margin/bottom = 40.0
 custom_constants/separation = 0
 alignment = 0
@@ -1614,9 +1611,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 60.0
+margin/left = 15.0
 margin/top = 0.0
-margin/right = 60.0
+margin/right = 15.0
 margin/bottom = 40.0
 custom_constants/separation = 0
 alignment = 0
