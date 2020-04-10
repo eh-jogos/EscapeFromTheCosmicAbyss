@@ -514,6 +514,8 @@ default/chorus_send = 0.0
 
 [node name="Root" type="Node2D" parent="."]
 
+transform/pos = Vector2( 0, -150 )
+
 [node name="ColorFrame" type="ColorFrame" parent="Root"]
 
 visibility/visible = false
@@ -551,14 +553,13 @@ warning_color_3 = 1.0
 
 [node name="Raycasts" type="Node2D" parent="Root"]
 
-editor/display_folded = true
 transform/pos = Vector2( -5, 0 )
 
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
 
-transform/pos = Vector2( -55, 1084 )
+transform/pos = Vector2( -55, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
@@ -568,7 +569,7 @@ type_mask = 2
 "enemy",
 ]]
 
-transform/pos = Vector2( 5, 1084 )
+transform/pos = Vector2( 5, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1
@@ -578,7 +579,7 @@ type_mask = 2
 "enemy",
 ]]
 
-transform/pos = Vector2( 65, 1084 )
+transform/pos = Vector2( 65, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 layer_mask = 1

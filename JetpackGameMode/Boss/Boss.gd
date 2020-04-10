@@ -8,7 +8,7 @@ var collision_timer
 
 
 func _ready():
-	raycasts = get_node("FinalBossSkin/BodyOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts").get_children()
+	raycasts = get_node("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts").get_children()
 	game = get_tree().get_root().get_node("JetpackGame")
 	collision_timer = get_node("CollisionTimer")
 	
@@ -30,7 +30,7 @@ func handle_collision(raycast):
 		set_fixed_process(false)
 		collision_timer.start()
 		if not collider.is_dead and collider.shield_energy > 0:
-			collider.shield.decrease_energy(1)
+			collider.take_hit()
 		elif not collider.is_dead:
 			var player_global_position = collider.get_global_pos()
 			has_killed_player = true

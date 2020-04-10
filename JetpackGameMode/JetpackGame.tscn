@@ -1146,7 +1146,7 @@ z/z = 3
 [node name="FinalBoss" type="Node2D" parent="Camera2D"]
 
 transform/pos = Vector2( -960, 0 )
-z/z = 2
+z/z = 1
 
 [node name="Boss" parent="Camera2D/FinalBoss" groups=[
 "boss",
