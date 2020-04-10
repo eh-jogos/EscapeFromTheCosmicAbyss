@@ -2,13 +2,11 @@ extends CanvasLayer
 
 var fullscreen_btn
 var animator
-var restart_button
 var debug_count = 0
 
 func _ready():
 	fullscreen_btn = get_node("MenuContainer/FullscreenOption")
 	fullscreen_btn.grab_focus()
-	restart_button = get_node("MenuContainer/Restart")
 	
 	animator = self.get_node("AnimationPlayer")
 	animator.set_current_animation("close")
@@ -18,7 +16,6 @@ func _ready():
 	
 	if OS.is_debug_build():
 		_toggle_debug_menu(true)
-		
 	else:
 		_toggle_debug_menu(false)
 
