@@ -52,3 +52,10 @@ func _update_text():
 		self.set_text("Invincible: On")
 	else:
 		self.set_text("Invincible: Off")
+
+func _on_ArrowsIndicator_right_pressed():
+	toggle_invincibility()
+
+
+func _on_ArrowsIndicator_left_pressed():
+	toggle_invincibility()

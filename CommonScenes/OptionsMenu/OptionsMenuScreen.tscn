@@ -197,9 +197,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 260.0
+margin/left = 275.0
 margin/top = 156.0
-margin/right = -260.0
+margin/right = -285.0
 margin/bottom = 952.0
 custom_constants/separation = 25
 alignment = 1
@@ -216,7 +216,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 56.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -238,7 +238,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 81.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 137.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -260,7 +260,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 162.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 218.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -282,7 +282,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 243.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 299.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -304,7 +304,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 324.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 380.0
 disabled = true
 toggle_mode = false
@@ -326,7 +326,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 405.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 461.0
 disabled = true
 toggle_mode = false
@@ -348,7 +348,7 @@ size_flags/vertical = 2
 theme/theme = ExtResource( 2 )
 margin/left = 0.0
 margin/top = 486.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 542.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -453,7 +453,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 3
 margin/left = 0.0
 margin/top = 567.0
-margin/right = 520.0
+margin/right = 560.0
 margin/bottom = 796.0
 
 [node name="OptionsExit" type="Button" parent="MenuContainer/Control"]
@@ -580,11 +580,31 @@ wait_time = 3.0
 one_shot = true
 autostart = false
 
+[connection signal="left_pressed" from="MenuContainer/FullscreenOption/ArrowsIndicator" to="MenuContainer/FullscreenOption" method="_on_ArrowsIndicator_left_pressed"]
+
+[connection signal="right_pressed" from="MenuContainer/FullscreenOption/ArrowsIndicator" to="MenuContainer/FullscreenOption" method="_on_ArrowsIndicator_right_pressed"]
+
+[connection signal="left_pressed" from="MenuContainer/BGM/ArrowsIndicator" to="MenuContainer/BGM" method="_on_ArrowsIndicator_left_pressed"]
+
+[connection signal="right_pressed" from="MenuContainer/BGM/ArrowsIndicator" to="MenuContainer/BGM" method="_on_ArrowsIndicator_right_pressed"]
+
+[connection signal="left_pressed" from="MenuContainer/BGM_volume/ArrowsIndicator" to="MenuContainer/BGM_volume" method="_on_ArrowsIndicator_left_pressed"]
+
+[connection signal="right_pressed" from="MenuContainer/BGM_volume/ArrowsIndicator" to="MenuContainer/BGM_volume" method="_on_ArrowsIndicator_right_pressed"]
+
+[connection signal="left_pressed" from="MenuContainer/SfxVolume/ArrowsIndicator" to="MenuContainer/SfxVolume" method="_on_ArrowsIndicator_left_pressed"]
+
+[connection signal="right_pressed" from="MenuContainer/SfxVolume/ArrowsIndicator" to="MenuContainer/SfxVolume" method="_on_ArrowsIndicator_right_pressed"]
+
 [connection signal="pressed" from="MenuContainer/ResetSave" to="." method="_on_ResetSave_pressed"]
 
 [connection signal="pressed" from="MenuContainer/DebugMenu/Restart" to="." method="_on_Restart_pressed"]
 
 [connection signal="pressed" from="MenuContainer/DebugMenu/UnlockEverything" to="." method="_on_UnlockEverything_pressed"]
+
+[connection signal="left_pressed" from="MenuContainer/DebugMenu/Invincibility/ArrowsIndicator" to="MenuContainer/DebugMenu/Invincibility" method="_on_ArrowsIndicator_left_pressed"]
+
+[connection signal="right_pressed" from="MenuContainer/DebugMenu/Invincibility/ArrowsIndicator" to="MenuContainer/DebugMenu/Invincibility" method="_on_ArrowsIndicator_right_pressed"]
 
 [connection signal="pressed" from="MenuContainer/Control/OptionsExit" to="." method="_on_options_exit_pressed"]
 

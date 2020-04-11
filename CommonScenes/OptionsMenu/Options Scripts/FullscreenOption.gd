@@ -24,6 +24,7 @@ func _ready():
 
 
 func _input(event):
+	print(event)
 	if event.is_action_pressed("ui_right") or event.is_action_pressed("ui_left"):
 		change_screen_mode()
 
@@ -61,3 +62,11 @@ func _on_focus_exit():
 	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")
 
+
+
+func _on_ArrowsIndicator_right_pressed():
+	change_screen_mode()
+
+
+func _on_ArrowsIndicator_left_pressed():
+	change_screen_mode()

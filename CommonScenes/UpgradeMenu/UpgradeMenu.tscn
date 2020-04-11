@@ -861,7 +861,6 @@ percent/visible = false
 
 [node name="Cooldown" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../../Buttons/Confirm")
 focus_neighbour/right = NodePath(".")
@@ -934,9 +933,10 @@ autoplay = "base"
 
 [node name="ArrowsIndicator" parent="SectionLabels/Cooldown" instance=ExtResource( 13 )]
 
+visibility/visible = false
+
 [node name="StartSpeed" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../Cooldown")
 focus_neighbour/right = NodePath(".")
@@ -1058,9 +1058,10 @@ autoplay = "base"
 
 [node name="ArrowsIndicator" parent="SectionLabels/StartSpeed" instance=ExtResource( 13 )]
 
+visibility/visible = false
+
 [node name="MaxSpeed" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartSpeed")
 focus_neighbour/right = NodePath(".")
@@ -1182,9 +1183,10 @@ autoplay = "base"
 
 [node name="ArrowsIndicator" parent="SectionLabels/MaxSpeed" instance=ExtResource( 13 )]
 
+visibility/visible = false
+
 [node name="LaserStrength" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../MaxSpeed")
 focus_neighbour/right = NodePath(".")
@@ -1277,9 +1279,10 @@ autoplay = "base"
 
 [node name="ArrowsIndicator" parent="SectionLabels/LaserStrength" instance=ExtResource( 13 )]
 
+visibility/visible = false
+
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../LaserStrength")
 focus_neighbour/right = NodePath(".")
@@ -1343,9 +1346,10 @@ autoplay = "base"
 
 [node name="ArrowsIndicator" parent="SectionLabels/StartingAmmo" instance=ExtResource( 13 )]
 
+visibility/visible = false
+
 [node name="Shields" type="Button" parent="SectionLabels"]
 
-editor/display_folded = true
 focus_neighbour/left = NodePath(".")
 focus_neighbour/top = NodePath("../StartingAmmo")
 focus_neighbour/right = NodePath(".")
@@ -1409,6 +1413,8 @@ autoplay = "base"
 [node name="Plus" parent="SectionLabels/Shields" instance=ExtResource( 11 )]
 
 [node name="ArrowsIndicator" parent="SectionLabels/Shields" instance=ExtResource( 13 )]
+
+visibility/visible = false
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 

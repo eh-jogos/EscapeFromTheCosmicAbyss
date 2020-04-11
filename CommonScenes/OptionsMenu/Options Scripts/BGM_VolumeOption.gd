@@ -60,3 +60,11 @@ func _on_focus_exit():
 	set_process_input(false)
 	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")
+
+
+func _on_ArrowsIndicator_left_pressed():
+	change_bgm_volume(false)
+
+
+func _on_ArrowsIndicator_right_pressed():
+	change_bgm_volume(true)

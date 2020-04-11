@@ -23,11 +23,11 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("ui_right"):
-		change_bgm_volume(true)
+		change_sfx_volume(true)
 	elif event.is_action_pressed("ui_left"):
-		change_bgm_volume(false)
+		change_sfx_volume(false)
 
-func change_bgm_volume(direction):
+func change_sfx_volume(direction):
 	var go_up = direction
 	
 	SoundManager.play_sfx("ui_change", true)
@@ -62,3 +62,11 @@ func _on_focus_exit():
 	set_process_input(false)
 	arrows_highlight.stop_highlight()
 	SoundManager.play_sfx("ui_select")
+
+
+func _on_ArrowsIndicator_right_pressed():
+	change_sfx_volume(true)
+
+
+func _on_ArrowsIndicator_left_pressed():
+	change_sfx_volume(false)
