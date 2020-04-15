@@ -64,7 +64,7 @@ func _ready():
 	animator.seek(0, true)
 	
 	last_played_level = Global.savedata["story"]["current level"]
-	last_unlocked_level = Global.savedata["story"]["last unlock"]
+	last_unlocked_level = max(Global.savedata["story"]["last unlock"], 1) 
 	levels_unlocked = Global.savedata["story"]["levels unlocked"]
 	
 	init_level_map()
