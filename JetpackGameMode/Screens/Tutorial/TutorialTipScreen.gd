@@ -6,7 +6,7 @@ export(NodePath) var level_num
 export(NodePath) var level_title
 export(NodePath) var tip_selector
 
-var tips_countdown = [0,3,7,2,8]
+var tips_countdown = [0,3,7,2,9]
 var next_countdown = 0
 var countdown
 
