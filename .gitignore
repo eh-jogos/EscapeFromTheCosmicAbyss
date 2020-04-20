@@ -11,3 +11,15 @@ export_presets.cfg
 # Mono-specific ignores
 
 .mono/
+
+
+#VS Code specific ignores
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
