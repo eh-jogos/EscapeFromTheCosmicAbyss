@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/HUD/pngs/tentacle_marker_outline.png" type="Texture" id=2]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tentacle_marker_fill.png" type="Texture" id=3]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierIconSilhouette.gd" type="Script" id=3]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tentacle_marker_fill.png" type="Texture" id=4]
+[ext_resource path="res://JetpackGameMode/HUD/BarrierIconBody.gd" type="Script" id=5]
 
 [node name="BarrierContainer" type="CenterContainer"]
 
@@ -21,7 +23,7 @@ script/script = ExtResource( 1 )
 offset_x = 20
 offset_y = -13
 
-[node name="BarrierIcon" type="TextureFrame" parent="."]
+[node name="BarrierIconSilhouette" type="TextureFrame" parent="."]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -34,8 +36,9 @@ margin/bottom = 86.0
 texture = ExtResource( 2 )
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 stretch_mode = 0
+script/script = ExtResource( 3 )
 
-[node name="BarrierIcon1" type="TextureFrame" parent="BarrierIcon"]
+[node name="BarrierIconBody" type="TextureFrame" parent="BarrierIconSilhouette"]
 
 anchor/left = 3
 anchor/right = 3
@@ -48,8 +51,9 @@ margin/left = 16.0
 margin/top = 0.0
 margin/right = -17.0
 margin/bottom = 0.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 stretch_mode = 6
+script/script = ExtResource( 5 )
 
 

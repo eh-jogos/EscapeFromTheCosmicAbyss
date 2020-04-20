@@ -917,6 +917,7 @@ autostart = false
 
 [node name="LevelLoader" type="Node" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Level0" type="Node" parent="LevelLoader"]
@@ -1012,6 +1013,7 @@ end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 960, 540 )
 anchor_mode = 1
 rotating = false
@@ -1185,7 +1187,6 @@ texture = ExtResource( 28 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-editor/display_folded = true
 layer = -2
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -1500,6 +1501,8 @@ transform/pos = Vector2( 960, 540 )
 transform/pos = Vector2( 961, 554 )
 
 [node name="Obstaculos" type="Node2D" parent="."]
+
+editor/display_folded = true
 
 [node name="Outlines" type="Node2D" parent="Obstaculos"]
 

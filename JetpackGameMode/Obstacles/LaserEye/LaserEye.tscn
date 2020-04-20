@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=1]
+[gd_scene load_steps=11 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/SoundManager/laser_eye_sfx_library.tres" type="SampleLibrary" id=2]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeLaserOutline.gd" type="Script" id=3]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeLaserCore.gd" type="Script" id=4]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 
@@ -518,7 +520,6 @@ transform/pos = Vector2( 0, -150 )
 
 [node name="ColorFrame" type="ColorFrame" parent="Root"]
 
-visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -528,6 +529,7 @@ margin/top = 1093.0
 margin/right = 81.0
 margin/bottom = 1106.0
 color = Color( 0.780392, 0.223529, 0.211765, 1 )
+script/script = ExtResource( 3 )
 
 [node name="ColorFrame" type="ColorFrame" parent="Root/ColorFrame"]
 
@@ -543,8 +545,9 @@ margin/top = 0.0
 margin/right = -61.0
 margin/bottom = 0.0
 color = Color( 1, 1, 1, 1 )
+script/script = ExtResource( 4 )
 
-[node name="LaseEyeSkin" parent="Root" instance=ExtResource( 3 )]
+[node name="LaseEyeSkin" parent="Root" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 0, 14 )
 warning_color_1 = 1.0

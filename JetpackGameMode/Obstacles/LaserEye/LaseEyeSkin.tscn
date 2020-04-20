@@ -1,35 +1,39 @@
-[gd_scene load_steps=43 format=1]
+[gd_scene load_steps=47 format=1]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye_silhouette.png" type="Texture" id=2]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye.png" type="Texture" id=3]
-[ext_resource path="res://CommonScenes/empty_texture.png" type="Texture" id=4]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_02.png" type="Texture" id=5]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_03.png" type="Texture" id=6]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_04.png" type="Texture" id=7]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_05.png" type="Texture" id=8]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye_iris.png" type="Texture" id=9]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye_shadow.png" type="Texture" id=10]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_01.png" type="Texture" id=11]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_02.png" type="Texture" id=12]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_03.png" type="Texture" id=13]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_04.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_05.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_01.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_02.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_03.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_04.png" type="Texture" id=19]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_05.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_01.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_02.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_03.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_04.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_05.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_01.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_02.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_03.png" type="Texture" id=28]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_04.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_05.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeSilhouette.gd" type="Script" id=3]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye.png" type="Texture" id=4]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeEyeColor.gd" type="Script" id=5]
+[ext_resource path="res://CommonScenes/empty_texture.png" type="Texture" id=6]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_02.png" type="Texture" id=7]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_03.png" type="Texture" id=8]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_04.png" type="Texture" id=9]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/color_change/eye_color_change_05.png" type="Texture" id=10]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeWarnings.gd" type="Script" id=11]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye_iris.png" type="Texture" id=12]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/static_parts/eye_shadow.png" type="Texture" id=13]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_01.png" type="Texture" id=14]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_02.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_03.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_04.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_skin/laser_eye_skin_05.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeBody.gd" type="Script" id=19]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_01.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_02.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_03.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_04.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_silhouette/laser_eye_body_silhouette_05.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_01.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_02.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_03.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_04.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_shadows/laser_eye_shadows_05.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_01.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_02.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_03.png" type="Texture" id=32]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_04.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_05.png" type="Texture" id=34]
 
 [sub_resource type="Animation" id=1]
 
@@ -58,7 +62,7 @@ tracks/1/keys = {
 "values": [ 0, 7 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Body/AnimatedSprite:frame")
+tracks/2/path = NodePath("Body/Shadows:frame")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
@@ -111,7 +115,7 @@ tracks/6/keys = {
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ) ],
 "loop": false,
 "name": "change_color",
 "speed": 12.0
@@ -133,16 +137,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Iris:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0.0196078, 0.0784314, 0.0705882, 1 ) ]
-}
 
 [sub_resource type="Animation" id=4]
 
@@ -159,16 +153,6 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 5 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Iris:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.0196078, 0.0784314, 0.0705882, 1 ), Color( 0.28125, 0.28125, 0.28125, 1 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -187,16 +171,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Iris:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0.0196078, 0.0784314, 0.0705882, 1 ) ]
-}
 
 [sub_resource type="Animation" id=6]
 
@@ -213,16 +187,6 @@ tracks/0/keys = {
 "transitions": FloatArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 6 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Iris:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.28125, 0.28125, 0.28125, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -241,16 +205,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Iris:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Color( 0.0196078, 0.0784314, 0.0705882, 1 ) ]
-}
 
 [sub_resource type="Animation" id=8]
 
@@ -268,21 +222,11 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 0, 5 ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Iris:modulate")
-tracks/1/interp = 1
-tracks/1/imported = false
-tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.558594, 0.558594, 0.558594, 1 ), Color( 1, 1, 1, 1 ) ]
-}
 
 [sub_resource type="SpriteFrames" id=9]
 
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
@@ -291,7 +235,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=10]
 
 animations = [ {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
@@ -300,7 +244,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=11]
 
 animations = [ {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 26 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
@@ -309,7 +253,7 @@ animations = [ {
 [sub_resource type="SpriteFrames" id=12]
 
 animations = [ {
-"frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
@@ -339,20 +283,23 @@ autoplay = "idle"
 
 texture = ExtResource( 2 )
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
+script/script = ExtResource( 3 )
 
 [node name="Eye" type="Sprite" parent="Eye"]
 
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 modulate = Color( 0, 1, 0.764706, 1 )
+script/script = ExtResource( 5 )
 
 [node name="ColorChange1" type="AnimatedSprite" parent="Eye/Eye"]
 
 frames = SubResource( 2 )
 animation = "change_color"
-frame = 5
 centered = false
 offset = Vector2( -99, -86 )
 modulate = Color( 0.78125, 1, 0, 1 )
+script/script = ExtResource( 11 )
+warning_level = "warning1"
 
 [node name="ColorChanger1" type="AnimationPlayer" parent="Eye/Eye/ColorChange1"]
 
@@ -370,10 +317,11 @@ autoplay = "BASE"
 
 frames = SubResource( 2 )
 animation = "change_color"
-frame = 5
 centered = false
 offset = Vector2( -99, -86 )
 modulate = Color( 1, 0.515625, 0, 1 )
+script/script = ExtResource( 11 )
+warning_level = "warning2"
 
 [node name="ColorChanger2" type="AnimationPlayer" parent="Eye/Eye/ColorChange2"]
 
@@ -391,10 +339,11 @@ autoplay = "BASE"
 
 frames = SubResource( 2 )
 animation = "change_color"
-frame = 5
 centered = false
 offset = Vector2( -99, -86 )
 modulate = Color( 1, 0, 0.257812, 1 )
+script/script = ExtResource( 11 )
+warning_level = "warning3"
 
 [node name="ColorChanger3" type="AnimationPlayer" parent="Eye/Eye/ColorChange3"]
 
@@ -411,11 +360,13 @@ autoplay = "BASE"
 [node name="Iris" type="Sprite" parent="Eye/Eye"]
 
 transform/pos = Vector2( 0, 64 )
-texture = ExtResource( 9 )
+texture = ExtResource( 12 )
+modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
+script/script = ExtResource( 3 )
 
 [node name="EyeShadow" type="Sprite" parent="Eye/Eye"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 centered = false
 offset = Vector2( -99, -86 )
 modulate = Color( 0.276263, 0.08638, 0.433594, 0.415294 )
@@ -428,6 +379,7 @@ animation = "idle"
 centered = false
 offset = Vector2( -246, -181 )
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
+script/script = ExtResource( 19 )
 
 [node name="BodySilhouette" type="AnimatedSprite" parent="Body"]
 
@@ -436,14 +388,16 @@ frames = SubResource( 10 )
 animation = "idle"
 offset = Vector2( 52, -49 )
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
+script/script = ExtResource( 3 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Body"]
+[node name="Shadows" type="AnimatedSprite" parent="Body"]
 
 frames = SubResource( 11 )
 animation = "idle"
 centered = false
 offset = Vector2( -246, -181 )
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
+script/script = ExtResource( 19 )
 
 [node name="InnerDetails" type="AnimatedSprite" parent="Body"]
 
@@ -451,5 +405,6 @@ frames = SubResource( 12 )
 animation = "idle"
 offset = Vector2( 1, 23 )
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
+script/script = ExtResource( 3 )
 
 

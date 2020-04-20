@@ -52,7 +52,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.266667, 0.490196, 1 ), Color( 1, 0.266667, 0.988542, 1 ), Color( 0.272396, 0.266667, 1, 1 ), Color( 0.266667, 1, 0.845313, 1 ), Color( 0.266667, 1, 0.295313, 1 ), Color( 0.977083, 1, 0.266667, 1 ), Color( 1, 0.507292, 0.266667, 1 ), Color( 0.988281, 0.073349, 0.073349, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource/name = "loop"
 length = 0.01
@@ -69,7 +69,7 @@ tracks/0/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
 length = 0.3
 loop = false
@@ -132,8 +132,8 @@ autoplay = "color_loop"
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/loop = SubResource( 5 )
-anims/splash_screen = SubResource( 4 )
+anims/loop = SubResource( 4 )
+anims/splash_screen = SubResource( 5 )
 next/splash_screen = "loop"
 playback/active = true
 playback/speed = 1.0

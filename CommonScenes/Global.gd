@@ -5,19 +5,27 @@ signal update_invincibility
 signal barrier_tentacle_killed
 signal shield_energy_updated_to(energy)
 
-const DEFAULT_SILHOUETTE_COLOR = Color(0.019608,0.078431,0.070588)
-const DEFAULT_ENEMY_COLOR = Color(0.12549,0.392157,0.356863)
-const DEFAULT_EYE_COLOR = Color(1,1,1,1)
-const DEFAULT_EYE_CHARGE1_COLOR = Color(1,1,1,1)
-const DEFAULT_EYE_CHARGE2_COLOR = Color(1,1,1,1)
-const DEFAULT_EYE_CHARGE3_COLOR = Color(1,1,1,1)
-const DEFAULT_ENEMY_LASER_COLOR = Color(1,1,1,1)
+const DEFAULT_SILHOUETTE_COLOR = Color(0,0,1,1) #Color("041411") #OR Color("1f122d")
+const DEFAULT_BODY_COLOR = Color(1,0,0,1) #Color("1f645b") 
+const DEFAULT_EYE_COLOR = Color(0,0.5,1,1) #Color("00ffc3")
+const DEFAULT_EYE_WARNING_COLOR1 = Color(0.2,0,0.2,1) #Color("c7ff00")
+const DEFAULT_EYE_WARNING_COLOR2 = Color(0,0.6,0.6,1) #Color("ff8300")
+const DEFAULT_EYE_WARNING_COLOR3 = Color(1,0,1,1) #Color("ff0041")
+
+const DEFAULT_ENEMY_LASER_OUTLINE = Color(1,1,0,1) #Color("c63836")
+const DEFAULT_ENEMY_LASER_CENTER = Color(0,1,1,1) #Color("ffffff")
+
+const DEFAULT_BOSS_IRIS_COLOR = Color(0.5,0,0.5,1) #Color("c63836")
+const DEFAULT_BOSS_TEETH_COLOR = Color(0.8, 0.2, 0, 1) #Color("00ffc3")
+const DEFAULT_BOSS_GENGIVA_COLOR = Color(0.1,0.9,0.3,1) #Color("264f44")
+const DEFAULT_BOSS_TONGUE_COLOR = Color(0.5,0.2,0.9,1) #Color("c63836")
+
 
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
 var savedata = {}
-var version = 0.91
+var version = 0.919
 
 var is_invincible = false
 var is_retry = false
@@ -49,7 +57,7 @@ var base_savedata = {
 				120, #9
 				220, #10
 				175, #11
-				350, #12
+				340, #12
 		],
 		"cooldown": 1,
 		"initial ammo": 0,
@@ -92,6 +100,51 @@ var base_savedata = {
 		"game mode" : "test_mode",
 		"sub-mode": "15",
 	},
+	"colors":{
+		"waves" : {
+			"outline": DEFAULT_SILHOUETTE_COLOR,
+			"body": DEFAULT_BODY_COLOR,
+		},
+		"tentacles" : {
+			"outline": DEFAULT_SILHOUETTE_COLOR,
+			"body": DEFAULT_BODY_COLOR
+		},
+		"laser_eye": {
+			"outline": DEFAULT_SILHOUETTE_COLOR,
+			"body": DEFAULT_BODY_COLOR,
+			"eye": DEFAULT_EYE_COLOR,
+			"warning1": DEFAULT_EYE_WARNING_COLOR1,
+			"warning2": DEFAULT_EYE_WARNING_COLOR2,
+			"warning3": DEFAULT_EYE_WARNING_COLOR3,
+			"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
+			"laser_core": DEFAULT_ENEMY_LASER_CENTER
+		},
+		"bg_boss":{
+			"eye": DEFAULT_EYE_COLOR,
+			"iris": DEFAULT_BOSS_IRIS_COLOR,
+			"mouth": DEFAULT_BOSS_GENGIVA_COLOR,
+			"teeth": DEFAULT_BOSS_TEETH_COLOR
+		},
+		"mid_bg_boss":{
+			"outline": DEFAULT_SILHOUETTE_COLOR,
+			"body": DEFAULT_BODY_COLOR,
+			"teeth": DEFAULT_BOSS_TEETH_COLOR,
+			"eye": DEFAULT_EYE_COLOR,
+			"iris": DEFAULT_BOSS_IRIS_COLOR,
+		},
+		"final_boss":{
+			"outline": DEFAULT_ENEMY_LASER_OUTLINE,
+			"body": DEFAULT_BODY_COLOR,
+			"eye": DEFAULT_EYE_COLOR,
+			"warning1": DEFAULT_EYE_WARNING_COLOR1,
+			"warning2": DEFAULT_EYE_WARNING_COLOR2,
+			"warning3": DEFAULT_EYE_WARNING_COLOR3,
+			"iris": DEFAULT_BOSS_IRIS_COLOR,
+			"tongue": DEFAULT_BOSS_TONGUE_COLOR,
+			"teeth": DEFAULT_BOSS_TEETH_COLOR,
+			"gengiva": DEFAULT_BOSS_GENGIVA_COLOR,
+		},
+	},
 }
 
 
@@ -130,16 +183,7 @@ func read():
 		savefile.close()
 	else:
 		#print("SAVE ERROR")
-		if old_save.has("version") and old_save["version"] < version:
-			savedata = base_savedata
-			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
-			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
-			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
-			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
-			savedata["story"]["max speed"] = old_save["story"]["max speed"]
-			savedata["story"]["laser strength"] = old_save["story"]["laser strength"]
-			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
-			
+		if old_save.has("version") and old_save["version"] <= 0.34:
 			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
 			savedata["options"]["track"] = old_save["options"]["track"]
 			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
@@ -155,10 +199,64 @@ func read():
 			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
 			savedata["options"]["track"] = old_save["options"]["track"]
 			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
-		elif old_save.has("version") and old_save["version"] <= 0.34:
+		elif old_save.has("version") and old_save["version"] <= 0.91:
+			savedata = base_savedata
+			
+			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
+			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
+			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
+			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
+			savedata["story"]["max speed"] = old_save["story"]["max speed"]
+			savedata["story"]["laser strength"] = old_save["story"]["laser duration"] if old_save["story"].has("laser duration") else old_save["story"]["laser strength"]
+			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
+			savedata["story"]["upgrade level"] = old_save["story"]["upgrade level"]
+			savedata["story"]["next upgrade"] = old_save["story"]["next upgrade"]
+			savedata["story"]["levels unlocked"] = old_save["story"]["levels unlocked"]
+			savedata["story"]["last unlock"] = old_save["story"]["last unlock"]
+			savedata["story"]["current level"] = old_save["story"]["current level"]
+			savedata["story"]["story beaten"] = old_save["story"]["story beaten"]
+			savedata["story"]["tutorial beaten"] = old_save["story"]["tutorial beaten"]
+			savedata["story"]["highscore"] = old_save["story"]["highscore"]
+			
+			savedata["arcade"]["highlaps"] = old_save["arcade"]["highlaps"]
+			savedata["arcade"]["highscore"] = old_save["arcade"]["highscore"]
+			
+			savedata["speedrun"]["hightime"] = old_save["speedrun"]["hightime"]
+			savedata["speedrun"]["highscore"] = old_save["speedrun"]["highscore"]
+			
+			
 			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
 			savedata["options"]["track"] = old_save["options"]["track"]
 			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
+		elif old_save.has("version") and old_save["version"] < version: #Add Colors from base savedata
+			savedata = base_savedata
+			
+			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
+			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
+			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
+			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
+			savedata["story"]["max speed"] = old_save["story"]["max speed"]
+			savedata["story"]["laser strength"] = old_save["story"]["laser strength"]
+			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
+			savedata["story"]["upgrade level"] = old_save["story"]["upgrade level"]
+			savedata["story"]["next upgrade"] = old_save["story"]["next upgrade"]
+			savedata["story"]["levels unlocked"] = old_save["story"]["levels unlocked"]
+			savedata["story"]["last unlock"] = old_save["story"]["last unlock"]
+			savedata["story"]["current level"] = old_save["story"]["current level"]
+			savedata["story"]["story beaten"] = old_save["story"]["story beaten"]
+			savedata["story"]["tutorial beaten"] = old_save["story"]["tutorial beaten"]
+			savedata["story"]["highscore"] = old_save["story"]["highscore"]
+			
+			savedata["arcade"]["highlaps"] = old_save["arcade"]["highlaps"]
+			savedata["arcade"]["highscore"] = old_save["arcade"]["highscore"]
+			
+			savedata["speedrun"]["hightime"] = old_save["speedrun"]["hightime"]
+			savedata["speedrun"]["highscore"] = old_save["speedrun"]["highscore"]
+			
+			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
+			savedata["options"]["track"] = old_save["options"]["track"]
+			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
+			savedata["options"]["sfx volume"] = old_save["options"]["sfx volume"]
 		
 		savefile.close()
 		

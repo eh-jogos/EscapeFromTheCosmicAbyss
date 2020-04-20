@@ -1,11 +1,9 @@
-extends AnimatedSprite
+extends ColorFrame
 
 func _ready():
-	self.play()
 	add_to_group("interactive_color")
 	colors_changed()
-	pass
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.waves.body)
+	set_frame_color(Global.savedata.colors.laser_eye.laser_outline)
