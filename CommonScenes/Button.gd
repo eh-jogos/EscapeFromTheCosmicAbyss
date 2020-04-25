@@ -1,4 +1,4 @@
-extends Button
+extends BaseButton
 
 export(String, "ui_confirm", "ui_change") var pressed_sfx = "ui_change"
 
