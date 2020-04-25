@@ -10,9 +10,9 @@ var warning_animator2
 var warning_animator3
 
 func _ready():
-	warning_animator1 = get_node("BodyOutline/EyeOutline/Eye/ColorChange1/ColorChanger1")
-	warning_animator2 = get_node("BodyOutline/EyeOutline/Eye/ColorChange2/ColorChanger2")
-	warning_animator3 = get_node("BodyOutline/EyeOutline/Eye/ColorChange3/ColorChanger3")
+	warning_animator1 = get_node("FaceOutline/EyeOutline/Eye/ColorChange1/ColorChanger1")
+	warning_animator2 = get_node("FaceOutline/EyeOutline/Eye/ColorChange2/ColorChanger2")
+	warning_animator3 = get_node("FaceOutline/EyeOutline/Eye/ColorChange3/ColorChanger3")
 
 
 func set_warning_color1(value):
