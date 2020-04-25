@@ -1,0 +1,85 @@
+[gd_resource type="Theme" load_steps=7 format=1]
+
+[ext_resource path="res://Fonts/OrbitronMedium30.fnt" type="BitmapFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.492188, 0.492188, 0.492188, 1 )
+light_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+dark_color = Color( 0.490196, 0.490196, 0.490196, 1 )
+border_size = 5
+border_blend = false
+draw_bg = false
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 1, 1, 1, 1 )
+light_color = Color( 1, 1, 1, 1 )
+dark_color = Color( 1, 1, 1, 1 )
+border_size = 5
+border_blend = false
+draw_bg = false
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0, 0.960784, 1, 1 )
+light_color = Color( 0, 0.960784, 1, 1 )
+dark_color = Color( 0, 0.960784, 1, 1 )
+border_size = 5
+border_blend = false
+draw_bg = false
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+content_margin/left = -1.0
+content_margin/right = -1.0
+content_margin/top = -1.0
+content_margin/bottom = -1.0
+bg_color = Color( 0.439216, 0.439216, 1, 1 )
+light_color = Color( 0.439216, 0.439216, 1, 1 )
+dark_color = Color( 0.439216, 0.439216, 1, 1 )
+border_size = 0
+border_blend = true
+draw_bg = true
+
+[resource]
+
+default_font = ExtResource( 1 )
+ColorPicker/constants/color_width = 0
+ColorPicker/constants/hseparator = 50
+ColorPicker/constants/label_width = 10000
+ColorPicker/constants/value_height = 100
+ColorPicker/constants/value_width = 10000
+ColorPicker/icons/add_preset = null
+ColorPicker/icons/screen_picker = null
+ColorPickerButton/colors/font_color = Color( 1, 1, 1, 1 )
+ColorPickerButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.3 )
+ColorPickerButton/colors/font_color_hover = Color( 1, 1, 1, 1 )
+ColorPickerButton/colors/font_color_pressed = Color( 0.8, 0.8, 0.8, 1 )
+ColorPickerButton/constants/hseparation = 2
+ColorPickerButton/fonts/font = null
+ColorPickerButton/styles/disabled = SubResource( 1 )
+ColorPickerButton/styles/focus = SubResource( 2 )
+ColorPickerButton/styles/hover = SubResource( 3 )
+ColorPickerButton/styles/normal = SubResource( 4 )
+ColorPickerButton/styles/pressed = SubResource( 5 )
+
