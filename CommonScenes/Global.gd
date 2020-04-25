@@ -5,6 +5,12 @@ signal update_invincibility
 signal barrier_tentacle_killed
 signal shield_energy_updated_to(energy)
 
+# Color Menu Signals
+signal page_updated(first_button, last_button)
+signal navigated_to_right
+signal navigated_to_left
+
+
 const DEFAULT_SILHOUETTE_COLOR = Color(0,0,1,1) #Color("041411") #OR Color("1f122d")
 const DEFAULT_BODY_COLOR = Color(1,0,0,1) #Color("1f645b") 
 const DEFAULT_EYE_COLOR = Color(0,0.5,1,1) #Color("00ffc3")
@@ -25,7 +31,7 @@ const DEFAULT_BOSS_TONGUE_COLOR = Color(0.5,0.2,0.9,1) #Color("c63836")
 var savefile = File.new()
 var savepath = "user://savegame.save"
 var savedata = {}
-var version = 0.919
+var version = 0.9191
 
 var is_invincible = false
 var is_retry = false
@@ -107,7 +113,7 @@ var base_savedata = {
 		},
 		"tentacles" : {
 			"outline": DEFAULT_SILHOUETTE_COLOR,
-			"body": DEFAULT_BODY_COLOR
+			"body": DEFAULT_BODY_COLOR,
 		},
 		"laser_eye": {
 			"outline": DEFAULT_SILHOUETTE_COLOR,
@@ -117,13 +123,13 @@ var base_savedata = {
 			"warning2": DEFAULT_EYE_WARNING_COLOR2,
 			"warning3": DEFAULT_EYE_WARNING_COLOR3,
 			"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
-			"laser_core": DEFAULT_ENEMY_LASER_CENTER
+			"laser_core": DEFAULT_ENEMY_LASER_CENTER,
 		},
 		"bg_boss":{
 			"eye": DEFAULT_EYE_COLOR,
 			"iris": DEFAULT_BOSS_IRIS_COLOR,
 			"mouth": DEFAULT_BOSS_GENGIVA_COLOR,
-			"teeth": DEFAULT_BOSS_TEETH_COLOR
+			"teeth": DEFAULT_BOSS_TEETH_COLOR,
 		},
 		"mid_bg_boss":{
 			"outline": DEFAULT_SILHOUETTE_COLOR,
@@ -143,6 +149,8 @@ var base_savedata = {
 			"tongue": DEFAULT_BOSS_TONGUE_COLOR,
 			"teeth": DEFAULT_BOSS_TEETH_COLOR,
 			"gengiva": DEFAULT_BOSS_GENGIVA_COLOR,
+			"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
+			"laser_core": DEFAULT_ENEMY_LASER_CENTER,
 		},
 	},
 }
