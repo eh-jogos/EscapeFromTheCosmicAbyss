@@ -1,4 +1,4 @@
-[gd_resource type="SampleLibrary" load_steps=4 format=1]
+[gd_resource type="Resource" load_steps=1 format=2]
 
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_death_by_laser.wav" type="Sample" id=1]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_spawn.wav" type="Sample" id=2]
@@ -24,4 +24,3 @@ samples/player_death_by_crushing = {
 "priority": 0,
 "sample": ExtResource( 3 )
 }
-

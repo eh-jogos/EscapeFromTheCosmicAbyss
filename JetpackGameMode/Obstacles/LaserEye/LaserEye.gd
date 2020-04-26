@@ -15,11 +15,11 @@ var raycast_right
 var should_score = true
 
 func _ready():
-	set_pos(Vector2(0, POSITION_Y))
+	position = Vector2(0, POSITION_Y)
 	animator = get_node("AnimationPlayer")
 	game = get_tree().get_root().get_node("JetpackGame")
 	
-	set_fixed_process(false)
+	set_physics_process(false)
 	
 	animator.set_current_animation("hidden")
 	animator.seek(0,true)
@@ -29,11 +29,11 @@ func _ready():
 	raycast_right = get_node("Root/Raycasts/Right")
 
 
-func _fixed_process(delta):
+func _physics_process(delta):
 	if is_tracking:
-		set_global_pos(Vector2(get_parent().player_position.x -480,get_global_pos().y))
+		global_position = Vector2(get_parent().player_position.x -480, global_position.y)
 	else:
-		set_global_pos(get_global_pos())
+		global_position = global_position
 
 	if raycast_middle.is_colliding():
 		handle_collision(raycast_middle)
@@ -47,19 +47,19 @@ func handle_collision(raycast):
 	var collider = raycast.get_collider()
 	#print("LaserEye | Raycast: %s | Collider: %s" %[raycast.get_name(), collider.get_name()])
 	if collider.is_in_group("player"):
-		set_fixed_process(false)
+		set_physics_process(false)
 		should_score = false
 		if not collider.is_dead and collider.shield_energy > 0:
 			collider.take_hit()
 		elif not collider.is_dead:
-			var offset = collider.get_global_pos()
+			var offset = collider.global_position
 			kill_player(offset)
 
 
 func start():
 	animator.play("enter")
 	is_tracking = true
-	set_fixed_process(true)
+	set_physics_process(true)
 
 
 func stop_tracking():
@@ -76,11 +76,11 @@ func _on_player_killed():
 	game.game_over()
 
 func _on_cycle_ended():
-	set_fixed_process(false)
+	set_physics_process(false)
 	if should_score:
 		game._on_scored(point_value)
 
 
 func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")
-	sfx_player.stop_all()
+	var sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	# sfx_player.stop()

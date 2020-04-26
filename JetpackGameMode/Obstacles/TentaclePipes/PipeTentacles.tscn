@@ -1,4 +1,4 @@
-[gd_scene load_steps=215 format=1]
+[gd_scene load_steps=208 format=2]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/Pipe_Looper.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/PipeBrain.gd" type="Script" id=2]
@@ -14,38 +14,38 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0014.png" type="Texture" id=12]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0017.png" type="Texture" id=13]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0020.png" type="Texture" id=14]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0000.png" type="Texture" id=15]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0002.png" type="Texture" id=16]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0004.png" type="Texture" id=17]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0006.png" type="Texture" id=18]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0008.png" type="Texture" id=19]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0009.png" type="Texture" id=20]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0010.png" type="Texture" id=21]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0011.png" type="Texture" id=22]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0012.png" type="Texture" id=23]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0000.png" type="Texture" id=24]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0001.png" type="Texture" id=25]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0003.png" type="Texture" id=26]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0005.png" type="Texture" id=27]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0007.png" type="Texture" id=28]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0010.png" type="Texture" id=29]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0013.png" type="Texture" id=30]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0016.png" type="Texture" id=31]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0018.png" type="Texture" id=32]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0020.png" type="Texture" id=33]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0000.png" type="Texture" id=34]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0003.png" type="Texture" id=35]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0006.png" type="Texture" id=36]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0008.png" type="Texture" id=37]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0010.png" type="Texture" id=38]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0012.png" type="Texture" id=39]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0014.png" type="Texture" id=40]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0016.png" type="Texture" id=41]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0018.png" type="Texture" id=42]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0020.png" type="Texture" id=43]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0022.png" type="Texture" id=44]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0024.png" type="Texture" id=45]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0026.png" type="Texture" id=46]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0000.png" type="Texture" id=15]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0003.png" type="Texture" id=16]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0006.png" type="Texture" id=17]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0008.png" type="Texture" id=18]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0010.png" type="Texture" id=19]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0012.png" type="Texture" id=20]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0014.png" type="Texture" id=21]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0016.png" type="Texture" id=22]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0018.png" type="Texture" id=23]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0020.png" type="Texture" id=24]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0022.png" type="Texture" id=25]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0024.png" type="Texture" id=26]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/outline/spawn_outline0026.png" type="Texture" id=27]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0000.png" type="Texture" id=28]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0002.png" type="Texture" id=29]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0004.png" type="Texture" id=30]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0006.png" type="Texture" id=31]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0008.png" type="Texture" id=32]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0009.png" type="Texture" id=33]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0010.png" type="Texture" id=34]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0011.png" type="Texture" id=35]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/outline/crush_outline0012.png" type="Texture" id=36]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0000.png" type="Texture" id=37]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0001.png" type="Texture" id=38]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0003.png" type="Texture" id=39]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0005.png" type="Texture" id=40]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0007.png" type="Texture" id=41]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0010.png" type="Texture" id=42]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0013.png" type="Texture" id=43]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0016.png" type="Texture" id=44]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0018.png" type="Texture" id=45]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/outline/crush_idle_outline0020.png" type="Texture" id=46]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/TentacleSilhouette.gd" type="Script" id=47]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0000.png" type="Texture" id=48]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0001.png" type="Texture" id=49]
@@ -58,38 +58,38 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0014.png" type="Texture" id=56]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0017.png" type="Texture" id=57]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/body/idle_body0020.png" type="Texture" id=58]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0000.png" type="Texture" id=59]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0002.png" type="Texture" id=60]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0004.png" type="Texture" id=61]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0006.png" type="Texture" id=62]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0008.png" type="Texture" id=63]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0009.png" type="Texture" id=64]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0010.png" type="Texture" id=65]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0011.png" type="Texture" id=66]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0012.png" type="Texture" id=67]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0000.png" type="Texture" id=68]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0001.png" type="Texture" id=69]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0003.png" type="Texture" id=70]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0005.png" type="Texture" id=71]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0007.png" type="Texture" id=72]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0010.png" type="Texture" id=73]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0013.png" type="Texture" id=74]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0016.png" type="Texture" id=75]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0018.png" type="Texture" id=76]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0020.png" type="Texture" id=77]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0000.png" type="Texture" id=78]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0003.png" type="Texture" id=79]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0006.png" type="Texture" id=80]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0008.png" type="Texture" id=81]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0010.png" type="Texture" id=82]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0012.png" type="Texture" id=83]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0014.png" type="Texture" id=84]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0016.png" type="Texture" id=85]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0018.png" type="Texture" id=86]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0020.png" type="Texture" id=87]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0022.png" type="Texture" id=88]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0024.png" type="Texture" id=89]
-[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0026.png" type="Texture" id=90]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0000.png" type="Texture" id=59]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0003.png" type="Texture" id=60]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0006.png" type="Texture" id=61]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0008.png" type="Texture" id=62]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0010.png" type="Texture" id=63]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0012.png" type="Texture" id=64]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0014.png" type="Texture" id=65]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0016.png" type="Texture" id=66]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0018.png" type="Texture" id=67]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0020.png" type="Texture" id=68]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0022.png" type="Texture" id=69]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0024.png" type="Texture" id=70]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_01_spawn/body/spawn_body0026.png" type="Texture" id=71]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0000.png" type="Texture" id=72]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0002.png" type="Texture" id=73]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0004.png" type="Texture" id=74]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0006.png" type="Texture" id=75]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0008.png" type="Texture" id=76]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0009.png" type="Texture" id=77]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0010.png" type="Texture" id=78]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0011.png" type="Texture" id=79]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_03_crush/body/crush_body0012.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0000.png" type="Texture" id=81]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0001.png" type="Texture" id=82]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0003.png" type="Texture" id=83]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0005.png" type="Texture" id=84]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0007.png" type="Texture" id=85]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0010.png" type="Texture" id=86]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0013.png" type="Texture" id=87]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0016.png" type="Texture" id=88]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0018.png" type="Texture" id=89]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_04_crushidle/body/crush_idle_body0020.png" type="Texture" id=90]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/TentacleBody.gd" type="Script" id=91]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Die/Armature_dying_00.png" type="Texture" id=92]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Die/Armature_dying_01.png" type="Texture" id=93]
@@ -196,32 +196,16 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0050.png" type="Texture" id=194]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" type="Texture" id=195]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles_KillPlayerAnim.tres" type="Animation" id=196]
-[ext_resource path="res://CommonScenes/SoundManager/tentacle_sfx_library.tres" type="SampleLibrary" id=197]
-[ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=198]
+[ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=197]
 
 [sub_resource type="Curve2D" id=1]
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, 25, -200, 0, 0, 0, 0, 25, 200 )
+"points": PoolVector2Array( 0, 0, 0, 0, 25, -200, 0, 0, 0, 0, 25, 200 )
 }
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
-
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
@@ -229,28 +213,28 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 25 ) ],
-"loop": false,
-"name": "kill_player",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": false,
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "crush_idle",
+"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"loop": false,
+"name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
 "loop": false,
 "name": "crush",
 "speed": 60.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "crush_idle",
+"speed": 60.0
 } ]
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
 "frames": [ ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 53 ), ExtResource( 53 ), ExtResource( 53 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 50 ), ExtResource( 49 ) ],
@@ -258,28 +242,28 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 69 ) ],
-"loop": false,
-"name": "kill_player",
-"speed": 59.999
-}, {
-"frames": [ ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ) ],
+"frames": [ ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ) ],
 "loop": false,
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 69 ) ],
-"loop": true,
-"name": "crush_idle",
-"speed": 60.0
+"frames": [ ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 82 ) ],
+"loop": false,
+"name": "kill_player",
+"speed": 59.999
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ) ],
+"frames": [ ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ) ],
 "loop": false,
 "name": "crush",
 "speed": 60.0
+}, {
+"frames": [ ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 82 ) ],
+"loop": true,
+"name": "crush_idle",
+"speed": 60.0
 } ]
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
 "frames": [ ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ) ],
@@ -288,7 +272,7 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
 "frames": [ ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ) ],
@@ -297,235 +281,260 @@ animations = [ {
 "speed": 60.0
 } ]
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 250, 379.066, 312, 537.066, 306, 799.066, 103, 796.066, 97, 530.066, 162, 376.066 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 226, 244.066, 250, 379.066, 162, 376.066, 178, 242.066 )
-
-[sub_resource type="SegmentShape2D" id=12]
+[sub_resource type="SegmentShape2D" id=6]
 
 custom_solver_bias = 0.0
 a = Vector2( 0, 0 )
 b = Vector2( 0, 700 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=7]
 
-resource/name = "die"
+resource_name = "die"
 length = 0.72
 loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0.24, 0.72 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0.24, 0.72 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0.24, 0.72 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0.24, 0.72 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0.24, 0.72 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0.24, 0.72 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0.24, 0.72 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0.24, 0.72 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 26, 0 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:position")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:position")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:position")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:position")
 tracks/14/interp = 1
+tracks/14/loop_wrap = true
 tracks/14/imported = false
+tracks/14/enabled = true
 tracks/14/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/15/type = "value"
 tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/15/interp = 1
+tracks/15/loop_wrap = true
 tracks/15/imported = false
+tracks/15/enabled = true
 tracks/15/keys = {
-"times": FloatArray( 0.24 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.24 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:position")
 tracks/16/interp = 1
+tracks/16/loop_wrap = true
 tracks/16/imported = false
+tracks/16/enabled = true
 tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -950 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:position")
 tracks/17/interp = 1
+tracks/17/loop_wrap = true
 tracks/17/imported = false
+tracks/17/enabled = true
 tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 950 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("ScoringArea:transform/pos")
+tracks/18/path = NodePath("ScoringArea:position")
 tracks/18/interp = 1
+tracks/18/loop_wrap = true
 tracks/18/imported = false
+tracks/18/enabled = true
 tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 388.933, -1080 ) ]
 }
 tracks/19/type = "value"
 tracks/19/path = NodePath("SamplePlayer:play/play")
 tracks/19/interp = 1
+tracks/19/loop_wrap = true
 tracks/19/imported = false
+tracks/19/enabled = false
 tracks/19/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "enemy_death_by_laser" ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=8]
 
 length = 0.01
 loop = false
@@ -533,195 +542,233 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ "spawn" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:position")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:position")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:position")
 tracks/14/interp = 1
+tracks/14/loop_wrap = true
 tracks/14/imported = false
+tracks/14/enabled = true
 tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:position")
 tracks/15/interp = 1
+tracks/15/loop_wrap = true
 tracks/15/imported = false
+tracks/15/enabled = true
 tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:position")
 tracks/16/interp = 1
+tracks/16/loop_wrap = true
 tracks/16/imported = false
+tracks/16/enabled = true
 tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 320 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:position")
 tracks/17/interp = 1
+tracks/17/loop_wrap = true
 tracks/17/imported = false
+tracks/17/enabled = true
 tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -330 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("ScoringArea:transform/pos")
+tracks/18/path = NodePath("ScoringArea:position")
 tracks/18/interp = 1
+tracks/18/loop_wrap = true
 tracks/18/imported = false
+tracks/18/enabled = true
 tracks/18/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 388.933, 0 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=9]
 
 length = 0.01
 loop = false
@@ -729,412 +776,489 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ "idle" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "idle" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "idle" ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "idle" ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ 0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:position")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:position")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:position")
 tracks/14/interp = 1
+tracks/14/loop_wrap = true
 tracks/14/imported = false
+tracks/14/enabled = true
 tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:position")
 tracks/15/interp = 1
+tracks/15/loop_wrap = true
 tracks/15/imported = false
+tracks/15/enabled = true
 tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/16/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:position")
 tracks/16/interp = 1
+tracks/16/loop_wrap = true
 tracks/16/imported = false
+tracks/16/enabled = true
 tracks/16/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:position")
 tracks/17/interp = 1
+tracks/17/loop_wrap = true
 tracks/17/imported = false
+tracks/17/enabled = true
 tracks/17/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -75 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=10]
 
-resource/name = "spawn"
+resource_name = "spawn"
 length = 0.43
 loop = false
 step = 0.43
 tracks/0/type = "value"
 tracks/0/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:animation")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ "spawn" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:playing")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:frame")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.43 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 27 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:animation")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:playing")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:frame")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.43 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 26 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:animation")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:playing")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:frame")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.43 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 26 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:animation")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ "spawn" ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:playing")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:frame")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.43 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 26 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:transform/pos")
+tracks/12/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/OutlineTop:position")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:transform/pos")
+tracks/13/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop:position")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -875 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:transform/pos")
+tracks/14/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/OutlineBottom:position")
 tracks/14/interp = 1
+tracks/14/loop_wrap = true
 tracks/14/imported = false
+tracks/14/enabled = true
 tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:transform/pos")
+tracks/15/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom:position")
 tracks/15/interp = 1
+tracks/15/loop_wrap = true
 tracks/15/imported = false
+tracks/15/enabled = true
 tracks/15/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 75 ) ]
 }
 tracks/16/type = "method"
 tracks/16/path = NodePath("PipeBrain")
 tracks/16/interp = 1
+tracks/16/loop_wrap = true
 tracks/16/imported = false
+tracks/16/enabled = true
 tracks/16/keys = {
-"times": FloatArray( 0.43 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.43 ),
+"transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "go_to_idle"
 } ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:transform/pos")
+tracks/17/path = NodePath("TentaclePath/TentaclePosition/TentacleTopStatic/CollisionPolygon2D:position")
 tracks/17/interp = 1
+tracks/17/loop_wrap = true
 tracks/17/imported = false
+tracks/17/enabled = true
 tracks/17/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.43 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, -320 ), Vector2( 0, -75 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:transform/pos")
+tracks/18/path = NodePath("TentaclePath/TentaclePosition/TentacleBottomStatic/CollisionPolygon2D:position")
 tracks/18/interp = 1
+tracks/18/loop_wrap = true
 tracks/18/imported = false
+tracks/18/enabled = true
 tracks/18/keys = {
-"times": FloatArray( 0, 0.43 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.43 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 320 ), Vector2( 0, 75 ) ]
 }
 tracks/19/type = "value"
 tracks/19/path = NodePath("SamplePlayer:play/play")
 tracks/19/interp = 1
+tracks/19/loop_wrap = true
 tracks/19/imported = false
+tracks/19/enabled = false
 tracks/19/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "enemy_spawn" ]
 }
 
-[node name="Tentacles" type="Node2D" groups=[
+[node name="Tentacles" type="Node2D" index="0" groups=[
 "pipes",
 ]]
 
-transform/pos = Vector2( 1920, 540 )
-script/script = ExtResource( 1 )
+position = Vector2( 1920, 540 )
+script = ExtResource( 1 )
 point_value = 1
 
-[node name="PipeBrain" type="Node" parent="."]
+[node name="PipeBrain" type="Node" parent="." index="0"]
 
-script/script = ExtResource( 2 )
+script = ExtResource( 2 )
 
-[node name="TentaclePath" type="Path2D" parent="."]
+[node name="TentaclePath" type="Path2D" parent="." index="1"]
 
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 1 )
 
-[node name="TentaclePosition" type="PathFollow2D" parent="TentaclePath"]
+[node name="TentaclePosition" type="PathFollow2D" parent="TentaclePath" index="0"]
 
-transform/pos = Vector2( 25, -0.0661464 )
+position = Vector2( 25, -0.0661469 )
 offset = 199.904
 h_offset = 0.0
 v_offset = 0.0
@@ -1143,214 +1267,172 @@ cubic_interp = false
 loop = false
 lookahead = 4.0
 
-[node name="TentacleTopStatic" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
+[node name="TentacleTopStatic" type="StaticBody2D" parent="TentaclePath/TentaclePosition" index="0" groups=[
 "pipes",
 "enemy",
 ]]
 
-input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 1, 0, 0, -1, 0, -950 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 3 )
-shapes/1/transform = Matrix32( 1, 0, 0, -1, 0, -950 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 4 )
-shapes/2/transform = Matrix32( 1, 0, 0, -1, 0, -950 )
-shapes/2/trigger = false
-collision/layers = 4
-collision/mask = 3
+input_pickable = false
+collision_layer = 4
+collision_mask = 3
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script/script = ExtResource( 3 )
+script = ExtResource( 3 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic" index="0"]
 
-transform/pos = Vector2( 0, -950 )
-transform/scale = Vector2( 1, -1 )
+position = Vector2( 0, -950 )
+scale = Vector2( 1, -1 )
 build_mode = 0
-polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
-shape_range = Vector2( 0, 2 )
-trigger = false
+polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
-[node name="OutlineTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
+[node name="OutlineTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic" index="1"]
 
-transform/pos = Vector2( 0, -1723.88 )
+self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+position = Vector2( 0, -875 )
+frames = SubResource( 2 )
+animation = "spawn"
+centered = false
+flip_v = true
+script = ExtResource( 47 )
+
+[node name="TentacleTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic" index="2"]
+
+self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
+position = Vector2( 0, -875 )
+frames = SubResource( 3 )
+animation = "spawn"
+centered = false
+flip_v = true
+script = ExtResource( 91 )
+
+[node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop" index="0"]
+
+show_behind_parent = true
+position = Vector2( 215, -75 )
+frames = SubResource( 4 )
+animation = "dying"
+frame = 51
+
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop/DeadPlayer" index="0"]
+
+show_behind_parent = true
 frames = SubResource( 5 )
-animation = "crush_idle"
-frame = 31
-playing = true
-centered = false
-flip_v = true
-modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
-script/script = ExtResource( 47 )
-
-[node name="TentacleTop" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
-
-transform/pos = Vector2( 0, -1723.88 )
-frames = SubResource( 6 )
-animation = "crush_idle"
-frame = 31
-playing = true
-centered = false
-flip_v = true
-modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
-script/script = ExtResource( 91 )
-
-[node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop"]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 215, -75 )
-frames = SubResource( 7 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic/TentacleTop/DeadPlayer"]
-
-visibility/behind_parent = true
-frames = SubResource( 8 )
-animation = "dying"
-frame = 51
-
-[node name="TentacleBottomStatic" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
+[node name="TentacleBottomStatic" type="StaticBody2D" parent="TentaclePath/TentaclePosition" index="1" groups=[
 "pipes",
 "enemy",
 ]]
 
-input/pickable = false
-shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 950 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 10 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 950 )
-shapes/1/trigger = false
-shapes/2/shape = SubResource( 11 )
-shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 950 )
-shapes/2/trigger = false
-collision/layers = 4
-collision/mask = 3
+input_pickable = false
+collision_layer = 4
+collision_mask = 3
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script/script = ExtResource( 3 )
+script = ExtResource( 3 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic" index="0"]
 
-transform/pos = Vector2( 0, 950 )
+position = Vector2( 0, 950 )
 build_mode = 0
-polygon = Vector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
-shape_range = Vector2( 0, 2 )
-trigger = false
+polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
-[node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
+[node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic" index="1"]
 
-transform/pos = Vector2( 0, 923.881 )
-frames = SubResource( 5 )
-animation = "crush_idle"
-frame = 31
-playing = true
+self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+position = Vector2( 0, 75 )
+frames = SubResource( 2 )
+animation = "spawn"
 centered = false
-modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
-script/script = ExtResource( 47 )
+script = ExtResource( 47 )
 
-[node name="TentacleBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
+[node name="TentacleBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic" index="2"]
 
 editor/display_folded = true
-transform/pos = Vector2( 0, 923.881 )
-frames = SubResource( 6 )
-animation = "crush_idle"
-frame = 31
-playing = true
+self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
+position = Vector2( 0, 75 )
+frames = SubResource( 3 )
+animation = "spawn"
 centered = false
-modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
-script/script = ExtResource( 91 )
+script = ExtResource( 91 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom"]
+[node name="DeadPlayer" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom" index="0"]
 
-visibility/behind_parent = true
-transform/pos = Vector2( 215, 875 )
-frames = SubResource( 7 )
+show_behind_parent = true
+position = Vector2( 215, 875 )
+frames = SubResource( 4 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom/DeadPlayer"]
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom/DeadPlayer" index="0"]
 
-visibility/behind_parent = true
-frames = SubResource( 8 )
+show_behind_parent = true
+frames = SubResource( 5 )
 animation = "dying"
 frame = 51
 
-[node name="ScoringArea" type="Area2D" parent="." groups=[
+[node name="ScoringArea" type="Area2D" parent="." index="2" groups=[
 "score",
 ]]
 
 editor/display_folded = true
-transform/pos = Vector2( 388.933, -1080 )
-input/pickable = true
-shapes/0/shape = SubResource( 12 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -350 )
-shapes/0/trigger = false
+position = Vector2( 388.933, -1080 )
+input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea" index="0"]
 
-transform/pos = Vector2( 0, -350 )
-shape = SubResource( 12 )
-trigger = false
-_update_shape_index = 0
+position = Vector2( 0, -350 )
+shape = SubResource( 6 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/die = SubResource( 13 )
-anims/hidden = SubResource( 14 )
-anims/idle = SubResource( 15 )
-anims/kill_player = ExtResource( 196 )
-anims/spawn = SubResource( 16 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/die = SubResource( 7 )
+anims/hidden = SubResource( 8 )
+anims/idle = SubResource( 9 )
+anims/kill_player = ExtResource( 196 )
+anims/spawn = SubResource( 10 )
+blend_times = [  ]
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="4"]
 
-visibility/visible = false
-transform/pos = Vector2( 53, 0 )
-transform/scale = Vector2( 17.35, 1.62407 )
+visible = false
+position = Vector2( 53, 0 )
+scale = Vector2( 17.35, 1.62407 )
 rect = Rect2( 0, -540, 20, 1080 )
 
-[node name="SamplePlayer" type="SamplePlayer" parent="."]
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="." index="5"]
 
-config/polyphony = 1
-config/samples = ExtResource( 197 )
-default/volume_db = 0.0
-default/pitch_scale = 1.0
-default/pan = 0.0
-default/depth = 0.0
-default/height = 0.0
-default/filter/type = 0
-default/filter/cutoff = 5000.0
-default/filter/resonance = 1.0
-default/filter/gain = 1.0
-default/reverb_room = 2
-default/reverb_send = 0.0
-default/chorus_send = 0.0
-script/script = ExtResource( 198 )
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+script = ExtResource( 197 )
 
 [connection signal="die" from="TentaclePath/TentaclePosition/TentacleTopStatic" to="PipeBrain" method="_on_PipeTentacles_Die"]
 
 [connection signal="die" from="TentaclePath/TentaclePosition/TentacleBottomStatic" to="PipeBrain" method="_on_PipeTentacles_Die"]
 
-[connection signal="body_enter" from="ScoringArea" to="PipeBrain" method="_on_player_pass"]
+[connection signal="body_entered" from="ScoringArea" to="PipeBrain" method="_on_player_pass"]
 
-[connection signal="exit_screen" from="VisibilityNotifier2D" to="PipeBrain" method="_on_VisibilityNotifier2D_exit_screen"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="PipeBrain" method="_on_VisibilityNotifier2D_exit_screen"]
 
 

@@ -10,3 +10,4 @@ func set_background_bosses(boss_node_name, laser_countdowns, animation_countdown
 		assert(false)
 	
 	return boss_node
+

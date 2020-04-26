@@ -158,7 +158,7 @@ var base_savedata = {
 
 func _ready():
 	check_savefile()
-	get_tree().call_group(0, "sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
+	get_tree().call_group("sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
 
 
 func check_savefile():
@@ -267,7 +267,7 @@ func read():
 			savedata["options"]["sfx volume"] = old_save["options"]["sfx volume"]
 		
 		savefile.close()
-		
+		print(savedata)
 		save()
 
 func update_highscore(game_mode, points):
@@ -394,7 +394,7 @@ func update_option_bgmvolume(option):
 
 func update_option_sfxvolume(option):
 	savedata["options"]["bgm volume"] = option
-	get_tree().call_group(0, "sfx_player", "adjust_volume_to", option)
+	get_tree().call_group("sfx_player", "adjust_volume_to", option)
 
 func set_game_mode(game_mode, category):
 	savedata["state"]["game mode"] = game_mode

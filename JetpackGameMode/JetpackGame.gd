@@ -304,9 +304,9 @@ func set_game_state(string):
 
 func interrupt_all_sfx():
 	player.stop_all_sfx()
-	get_tree().call_group(0, "pipes", "stop_all_sfx")
-	get_tree().call_group(0, "enemy", "stop_all_sfx")
-	get_tree().call_group(0, "boss", "stop_all_sfx")
+	get_tree().call_group("pipes", "stop_all_sfx")
+	get_tree().call_group("enemy", "stop_all_sfx")
+	get_tree().call_group("boss", "stop_all_sfx")
 
 
 func get_game_state():

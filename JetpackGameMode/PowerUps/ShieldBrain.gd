@@ -20,3 +20,4 @@ func _on_ShieldIcon_body_enter( body ):
 	if body.is_in_group("player"):
 		body.shield_up(shield_increment)
 		shield_icon.queue_free()
+

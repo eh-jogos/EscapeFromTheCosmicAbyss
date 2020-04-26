@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=1]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://JetpackGameMode/Boss/bg2_boss/bg2_boss_body.png" type="Texture" id=1]
 [ext_resource path="res://JetpackGameMode/Boss/MidRowsBossSkin.gd" type="Script" id=2]
@@ -44,97 +44,115 @@
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "idle"
+resource_name = "idle"
 length = 0.7
 loop = true
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Eye/EyeShape:frame")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Eye/Iris/IrisShape:frame")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Eye/Iris/IrisOutline:frame")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Eye/EyeOutline:frame")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Mouth/MouthOutline:frame")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Mouth/MouthOutline/MouthShape:frame")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Mouth/MouthOutline/MouthTeeth:frame")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.7 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0, 7 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Eye/EyeOutline:transform/pos")
+tracks/7/path = NodePath("Eye/EyeOutline:position")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.49, 0.6, 0.69 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.49, 0.6, 0.69 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( 6, 0 ), Vector2( -9, -11 ), Vector2( 3, -5 ), Vector2( -6, -9 ), Vector2( -3, -3 ), Vector2( -6, -9 ), Vector2( 3, -5 ), Vector2( 6, 0 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Mouth/MouthOutline/MouthTeeth:transform/pos")
+tracks/8/path = NodePath("Mouth/MouthOutline/MouthTeeth:position")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.3, 0.69 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.69 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( 1, 0 ), Vector2( -4, 2 ), Vector2( 1, 0 ) ]
 }
@@ -204,97 +222,104 @@ animations = [ {
 
 [node name="MidRowsBossSkin" type="Sprite"]
 
-transform/pos = Vector2( -430, 620 )
+self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
+position = Vector2( -430, 620 )
 texture = ExtResource( 1 )
-modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
-script/script = ExtResource( 2 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/idle = SubResource( 1 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "idle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle = SubResource( 1 )
+blend_times = [  ]
 
-[node name="Eye" type="Node2D" parent="."]
+[node name="Eye" type="Node2D" parent="." index="1"]
 
-transform/pos = Vector2( -580.326, -66.3229 )
+position = Vector2( -580.326, -66.3229 )
 
-[node name="EyeShape" type="AnimatedSprite" parent="Eye"]
+[node name="EyeShape" type="AnimatedSprite" parent="Eye" index="0"]
 
+self_modulate = Color( 0, 1, 0.764706, 1 )
 frames = SubResource( 2 )
 animation = "default"
 frame = 5
-modulate = Color( 0, 1, 0.764706, 1 )
-script/script = ExtResource( 8 )
+script = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Iris" type="Node2D" parent="Eye"]
+[node name="Iris" type="Node2D" parent="Eye" index="1"]
 
-transform/pos = Vector2( -20.3567, 12.9543 )
+position = Vector2( -20.3567, 12.9543 )
 
-[node name="IrisShape" type="AnimatedSprite" parent="Eye/Iris"]
+[node name="IrisShape" type="AnimatedSprite" parent="Eye/Iris" index="0"]
 
-transform/pos = Vector2( 30, 20 )
+self_modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
+position = Vector2( 30, 20 )
 frames = SubResource( 3 )
 animation = "default"
 frame = 5
-modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
-script/script = ExtResource( 14 )
+script = ExtResource( 14 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="IrisOutline" type="AnimatedSprite" parent="Eye/Iris"]
+[node name="IrisOutline" type="AnimatedSprite" parent="Eye/Iris" index="1"]
 
-transform/pos = Vector2( 30, 20 )
+self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+position = Vector2( 30, 20 )
 frames = SubResource( 4 )
 animation = "default"
 frame = 5
-modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-script/script = ExtResource( 20 )
+script = ExtResource( 20 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="EyeOutline" type="AnimatedSprite" parent="Eye"]
+[node name="EyeOutline" type="AnimatedSprite" parent="Eye" index="2"]
 
-transform/pos = Vector2( -6, -9 )
+self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+position = Vector2( -6, -9 )
 frames = SubResource( 5 )
 animation = "default"
 frame = 5
-modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-script/script = ExtResource( 20 )
+script = ExtResource( 20 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="Mouth" type="Node2D" parent="."]
+[node name="Mouth" type="Node2D" parent="." index="2"]
 
-transform/pos = Vector2( -580.326, -66.3229 )
+position = Vector2( -580.326, -66.3229 )
 
-[node name="MouthOutline" type="AnimatedSprite" parent="Mouth"]
+[node name="MouthOutline" type="AnimatedSprite" parent="Mouth" index="0"]
 
-transform/pos = Vector2( 182.499, 299.38 )
+self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+position = Vector2( 182.499, 299.38 )
 frames = SubResource( 6 )
 animation = "default"
 frame = 5
-modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-script/script = ExtResource( 20 )
+script = ExtResource( 20 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="MouthShape" type="AnimatedSprite" parent="Mouth/MouthOutline"]
+[node name="MouthShape" type="AnimatedSprite" parent="Mouth/MouthOutline" index="0"]
 
-visibility/behind_parent = true
-transform/pos = Vector2( 2, 2 )
-transform/scale = Vector2( 1.01, 1.01 )
+self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
+show_behind_parent = true
+position = Vector2( 2, 2 )
+scale = Vector2( 1.01, 1.01 )
 frames = SubResource( 7 )
 animation = "default"
 frame = 5
-modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-script/script = ExtResource( 20 )
+script = ExtResource( 20 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="MouthTeeth" type="AnimatedSprite" parent="Mouth/MouthOutline"]
+[node name="MouthTeeth" type="AnimatedSprite" parent="Mouth/MouthOutline" index="1"]
 
-visibility/behind_parent = true
-transform/pos = Vector2( -4, 2 )
+self_modulate = Color( 0, 1, 0.764706, 1 )
+show_behind_parent = true
+position = Vector2( -4, 2 )
 frames = SubResource( 8 )
 animation = "default"
 frame = 5
-modulate = Color( 0, 1, 0.764706, 1 )
-script/script = ExtResource( 41 )
+script = ExtResource( 41 )
+_sections_unfolded = [ "Visibility" ]
 
 

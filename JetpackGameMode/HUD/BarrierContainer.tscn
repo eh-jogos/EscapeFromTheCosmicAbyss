@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/HUD/pngs/tentacle_marker_outline.png" type="Texture" id=2]
@@ -7,53 +7,35 @@
 [ext_resource path="res://JetpackGameMode/HUD/BarrierIconBody.gd" type="Script" id=5]
 
 [node name="BarrierContainer" type="CenterContainer"]
-
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -20.0
-margin/top = -13.0
-margin/right = 1901.0
-margin/bottom = 1007.0
-use_top_left = false
-script/script = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -20.0
+margin_top = -13.0
+margin_right = -1901.0
+margin_bottom = -1007.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 offset_x = 20
-offset_y = -13
 
-[node name="BarrierIconSilhouette" type="TextureFrame" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 39.0
-margin/bottom = 86.0
+[node name="BarrierIconSilhouette" type="TextureRect" parent="."]
+self_modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
+margin_right = 39.0
+margin_bottom = 86.0
 texture = ExtResource( 2 )
-modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
-stretch_mode = 0
-script/script = ExtResource( 3 )
+script = ExtResource( 3 )
 
-[node name="BarrierIconBody" type="TextureFrame" parent="BarrierIconSilhouette"]
-
-anchor/left = 3
-anchor/right = 3
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 16.0
-margin/top = 0.0
-margin/right = -17.0
-margin/bottom = 0.0
+[node name="BarrierIconBody" type="TextureRect" parent="BarrierIconSilhouette"]
+self_modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -16.0
+margin_right = 17.0
 texture = ExtResource( 4 )
-modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 stretch_mode = 6
-script/script = ExtResource( 5 )
-
-
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

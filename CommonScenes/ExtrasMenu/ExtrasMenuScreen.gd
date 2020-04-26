@@ -64,5 +64,6 @@ func _on_button_pressed(node):
 
 func _on_Back_pressed():
 	animator.play("close")
-	yield(animator,"finished")
+	yield(animator, "animation_finished")
 	ScreenManager.clear_above()
+

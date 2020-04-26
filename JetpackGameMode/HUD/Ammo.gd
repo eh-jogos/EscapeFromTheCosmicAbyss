@@ -8,7 +8,7 @@ func _ready():
 
 func used():
 	animation.play("shoot")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	self.queue_free()
 
 func play_intro():

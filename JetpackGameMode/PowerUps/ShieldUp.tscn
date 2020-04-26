@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://JetpackGameMode/PowerUps/ShieldBrain.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=2]
@@ -14,7 +14,7 @@ b = Vector2( 0, 700 )
 
 bake_interval = 5.0
 _data = {
-"points": Vector2Array( 0, 0, 0, 0, 219.084, -350.099, 0, 0, 0, 0, 219.295, 347.292 )
+"points": PoolVector2Array( 0, 0, 0, 0, 219.084, -350.099, 0, 0, 0, 0, 219.295, 347.292 )
 }
 
 [sub_resource type="CircleShape2D" id=3]
@@ -22,60 +22,53 @@ _data = {
 custom_solver_bias = 0.0
 radius = 50.4487
 
-[sub_resource type="ColorRamp" id=4]
-
-offsets = FloatArray( 0, 0.50237, 1 )
-colors = ColorArray( 1, 1, 1, 0.909804, 1, 1, 1, 0.896868, 0.239216, 0.0901961, 0.431373, 0 )
-
 [node name="ShieldUp" type="Node2D" groups=[
 "pipes",
 ]]
 
-transform/pos = Vector2( 1920, 540 )
+position = Vector2( 1920, 540 )
 
-[node name="ShieldBrain" type="Node" parent="."]
+[node name="ShieldBrain" type="Node" parent="." index="0"]
 
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 position_range = NodePath("../Path2D/PositionRange")
 shield_icon = NodePath("../Path2D/PositionRange/ShieldIcon")
 shield_increment = 1
 
-[node name="ScoringArea" type="Area2D" parent="." groups=[
+[node name="ScoringArea" type="Area2D" parent="." index="1" groups=[
 "score",
 ]]
 
 editor/display_folded = true
-transform/pos = Vector2( 388.933, -1080 )
-input/pickable = true
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -350 )
-shapes/0/trigger = false
+position = Vector2( 388.933, -1080 )
+input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea" index="0"]
 
-transform/pos = Vector2( 0, -350 )
+position = Vector2( 0, -350 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
 
-transform/pos = Vector2( 53, 0 )
-transform/scale = Vector2( 17.35, 1.62407 )
+position = Vector2( 53, 0 )
+scale = Vector2( 17.35, 1.62407 )
 rect = Rect2( 0, -540, 20, 1080 )
 
-[node name="Path2D" type="Path2D" parent="."]
+[node name="Path2D" type="Path2D" parent="." index="3"]
 
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
 curve = SubResource( 2 )
 
-[node name="PositionRange" type="PathFollow2D" parent="Path2D"]
+[node name="PositionRange" type="PathFollow2D" parent="Path2D" index="0"]
 
-transform/pos = Vector2( 219.203, 43.508 )
-transform/rot = -89.983
+position = Vector2( 219.203, 43.508 )
+rotation = 1.5705
 offset = 393.453
 h_offset = 0.0
 v_offset = 0.0
@@ -84,68 +77,60 @@ cubic_interp = true
 loop = true
 lookahead = 4.0
 
-[node name="ShieldIcon" type="Area2D" parent="Path2D/PositionRange"]
+[node name="ShieldIcon" type="Area2D" parent="Path2D/PositionRange" index="0"]
 
-input/pickable = true
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 2.6, 0, 0, 2.6, 0, 0 )
-shapes/0/trigger = false
+input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="Particles2D" type="Particles2D" parent="Path2D/PositionRange/ShieldIcon"]
+[node name="Particles2D" type="Particles2D" parent="Path2D/PositionRange/ShieldIcon" index="0"]
 
-visibility/behind_parent = true
-transform/scale = Vector2( 0.607119, 0.607119 )
-config/amount = 1
-config/lifetime = 0.8
-config/process_mode = 1
-config/texture = ExtResource( 2 )
-params/direction = 0.0
-params/spread = 10.0
-params/linear_velocity = 0.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 0.0
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 3.2
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
-color/color = Color( 1, 1, 1, 0.909804 )
-color/color_ramp = SubResource( 4 )
-
-[node name="Shield" type="Sprite" parent="Path2D/PositionRange/ShieldIcon"]
-
-transform/pos = Vector2( 0.196438, 0.196438 )
-transform/scale = Vector2( 0.607119, 0.607119 )
+show_behind_parent = true
+scale = Vector2( 0.607119, 0.607119 )
+emitting = true
+amount = 1
+lifetime = 0.8
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = null
 texture = ExtResource( 2 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+
+[node name="Shield" type="Sprite" parent="Path2D/PositionRange/ShieldIcon" index="1"]
+
 modulate = Color( 0, 0.960784, 1, 1 )
+position = Vector2( 0.196438, 0.196438 )
+scale = Vector2( 0.607119, 0.607119 )
+texture = ExtResource( 2 )
 
-[node name="BG" type="Sprite" parent="Path2D/PositionRange/ShieldIcon/Shield"]
+[node name="BG" type="Sprite" parent="Path2D/PositionRange/ShieldIcon/Shield" index="0"]
 
-visibility/opacity = 0.4
-visibility/behind_parent = true
-transform/pos = Vector2( -0.323547, -0.323486 )
-texture = ExtResource( 3 )
 modulate = Color( 0, 0.956863, 1, 1 )
+show_behind_parent = true
+position = Vector2( -0.323547, -0.323486 )
+texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PositionRange/ShieldIcon"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PositionRange/ShieldIcon" index="2"]
 
-transform/scale = Vector2( 2.6, 2.6 )
+scale = Vector2( 2.6, 2.6 )
 shape = SubResource( 3 )
-trigger = false
-_update_shape_index = 0
 
-[connection signal="exit_screen" from="VisibilityNotifier2D" to="ShieldBrain" method="_on_VisibilityNotifier2D_exit_screen"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="ShieldBrain" method="_on_VisibilityNotifier2D_exit_screen"]
 
-[connection signal="body_enter" from="Path2D/PositionRange/ShieldIcon" to="ShieldBrain" method="_on_ShieldIcon_body_enter"]
+[connection signal="body_entered" from="Path2D/PositionRange/ShieldIcon" to="ShieldBrain" method="_on_ShieldIcon_body_enter"]
 
 

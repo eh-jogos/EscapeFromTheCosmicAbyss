@@ -44,9 +44,9 @@ func _ready():
 	hue_slider.set_custom_minimum_size(Vector2(40,0))
 	
 	connect("color_changed", self, "_on_color_changed")
-	connect("focus_enter", self, "_on_focus_enter")
-	connect("focus_exit", self, "_on_focus_exit")
-	back_panel.connect("modal_close", self, "_on_modal_close")
+	connect("focus_entered", self, "_on_focus_entered")
+	connect("focus_exited", self, "_on_focus_exited")
+	back_panel.connect("modal_closed", self, "_on_modal_closed")
 	
 	if not get_tree().is_editor_hint():
 		Global = get_node("/root/Global")
@@ -68,10 +68,10 @@ func _on_color_changed(color):
 	if Global:
 		Global.savedata.colors[category][selected_part] = color
 	
-	get_tree().call_group(0,"interactive_color", "colors_changed")
+	get_tree().call_group("interactive_color", "colors_changed")
 
 
-func _on_modal_close():
+func _on_modal_closed():
 	yield(get_tree(), "idle_frame")
 	
 	if SoundManager:
@@ -80,12 +80,12 @@ func _on_modal_close():
 	self.grab_focus()
 
 
-func _on_focus_enter():
+func _on_focus_entered():
 	var description = get_node("Description")
 	description.add_color_override("font_color", Color("ffffff"))
 
 
-func _on_focus_exit():
+func _on_focus_exited():
 	if SoundManager:
 		SoundManager.play_sfx("ui_select")
 	var description = get_node("Description")
@@ -96,7 +96,7 @@ func _on_ButtonArea_mouse_enter():
 	self.grab_focus()
 
 
-func _on_ColorPickerButton_input_event( ev ):
+func _on_ColorPickerButton_gui_input( ev ):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	if not Global:
 		return
 	
@@ -104,3 +104,4 @@ func _on_ColorPickerButton_input_event( ev ):
 		Global.emit_signal("navigated_to_right")
 	elif ev.is_action_pressed("ui_left"):
 		Global.emit_signal("navigated_to_left")
+

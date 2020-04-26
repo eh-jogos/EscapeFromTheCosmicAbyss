@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/boss_byte.wav-696acdaf1d844a01613eaf3e3fbbc383.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/boss_byte.wav"
+dest_files=[ "res://.import/boss_byte.wav-696acdaf1d844a01613eaf3e3fbbc383.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

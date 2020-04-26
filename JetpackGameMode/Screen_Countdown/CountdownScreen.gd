@@ -25,16 +25,19 @@ func play(num, title):
 	level_title.set_text(title)
 	
 	animator.play("fade_in")
-	yield(animator,"finished")
+	yield(animator, "animation_finished")
 	set_process_input(true)
 
 func _input(event):
 	if event.is_action_pressed("boost"):
 		self.set_process_input(false)
-		game.set_game_state("Playing")
+		if game.is_tutorial:
+			game.set_game_state("Tutorial")
+		else:
+			game.set_game_state("Playing")
 		
 		animator.play_backwards("fade_in")
-		yield(animator,"finished")
+		yield(animator, "animation_finished")
 		
 		if game.game_mode == "speedrun":
 			game.runtime_label.get_node("Timer").start()
@@ -46,3 +49,4 @@ func _input(event):
 		#SoundManager.bgm_set_loop(true)
 		if not SoundManager.bgm_stream.is_playing():
 			SoundManager.play_bgm()
+

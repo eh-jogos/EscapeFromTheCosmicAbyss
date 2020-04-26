@@ -17,5 +17,5 @@ func scored():
 
 
 func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")
-	sfx_player.stop_all()
+	var sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	# sfx_player.stop()

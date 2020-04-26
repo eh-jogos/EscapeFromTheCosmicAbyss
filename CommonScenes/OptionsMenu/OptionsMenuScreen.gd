@@ -23,7 +23,7 @@ func _ready():
 func _toggle_debug_menu(value):
 	var debug_menu_container = get_node("MenuContainer/DebugMenu")
 	
-	debug_menu_container.set_hidden(!value)
+	debug_menu_container.visible = !(!value)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	for button in debug_menu_container.get_children():
 		button.set_disabled(!value)
 
@@ -35,7 +35,7 @@ func _on_options_exit_pressed():
 	
 	animator.play("close")
 	
-	yield(animator,"finished")
+	yield(animator, "animation_finished")
 	
 	ScreenManager.clear_above()
 
@@ -75,3 +75,4 @@ func _on_DebugButton_pressed():
 
 func _on_DebugTimer_timeout():
 	debug_count = 0
+

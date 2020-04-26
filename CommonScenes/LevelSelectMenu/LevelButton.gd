@@ -17,9 +17,9 @@ var highscore_label
 var game_settings
 
 func _ready():
-	self.connect("mouse_enter",self,"_on_mouse_enter")
-	if not self.is_connected("focus_enter", self, "_on_focus_enter"):
-		self.connect("focus_enter", self, "_on_focus_enter")
+	self.connect("mouse_entered",self,"_on_mouse_enter")
+	if not self.is_connected("focus_entered", self, "_on_focus_enter"):
+		self.connect("focus_entered", self, "_on_focus_enter")
 	
 	level_number = get_node(number_label)
 	level_title = get_node(title_label)
@@ -34,8 +34,8 @@ func _on_mouse_enter():
 	self.grab_focus()
 
 func _on_focus_enter():
-	if not self.is_connected("focus_exit", self, "_on_focus_exit"):
-		self.connect("focus_exit", self, "_on_focus_exit")
+	if not self.is_connected("focus_exited", self, "_on_focus_exit"):
+		self.connect("focus_exited", self, "_on_focus_exit")
 
 
 func _on_focus_exit():
@@ -43,8 +43,8 @@ func _on_focus_exit():
 
 
 func _on_LevelButton_pressed():
-	if self.is_connected("focus_exit", self, "_on_focus_exit"):
-		self.disconnect("focus_exit", self, "_on_focus_exit")
+	if self.is_connected("focus_exited", self, "_on_focus_exit"):
+		self.disconnect("focus_exited", self, "_on_focus_exit")
 	
 	SoundManager.play_sfx_with_reverb("ui_confirm")
 	
@@ -58,7 +58,7 @@ func _on_LevelButton_pressed():
 func set_level_and_close():
 	Global.set_current_story_level(level_num)
 	menu_animator.play("close")
-	yield(menu_animator, "finished")
+	yield(menu_animator, "animation_finished")
 	
 	var game = get_tree().get_root().get_node("JetpackGame")
 	print(game.get_children())
@@ -74,7 +74,7 @@ func set_level_and_reload():
 	ScreenManager.load_screen(game_path)
 	menu_animator.play("close")
 	
-	yield(menu_animator, "finished")
+	yield(menu_animator, "animation_finished")
 	ScreenManager.reset_above_below()
 
 func _on_LevelButton_focus_enter():

@@ -16,10 +16,10 @@ func _ready():
 	idle_timer = self.get_node("IdleTimer")
 	idle_duration = 1.5
 	
-	set_fixed_process(true)
+	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	pass
 
-func _fixed_process(delta):
+func _physics_process(delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	#print("Bullet Processing")
 	#var colliders = get_overlapping_bodies()
 #	if colliders.size() > 0:
@@ -41,7 +41,7 @@ func start_idle_timer():
 
 func _on_idle_timeout():
 	animator.play("fadeout")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	emit_signal("laser_end")
 	#print("Bullet Fade")
 	self.queue_free()
@@ -56,5 +56,6 @@ func _on_Bullet_body_enter( body ):
 
 func _on_CollisionShape2D_item_rect_changed():
 	print("SHAPE CHANGED")
-	self.set_pos(get_pos())
+	self.set_position(get_position())  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	pass # replace with function body
+

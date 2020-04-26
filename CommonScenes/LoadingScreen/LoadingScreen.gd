@@ -25,7 +25,7 @@ var previous_focuses = []
 
 func _ready():
 	animation = self.get_node("AnimationPlayer")
-	progress_bar = self.get_node("ColorFrame/TextureProgress")
+	progress_bar = self.get_node("ColorRect/TextureProgress")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	reset()
 
 func reset():
@@ -45,7 +45,7 @@ func load_above(path, focus_path, origin_scene, path_is_node = false):
 	emit_signal("scene_above_loaded", scene_above)
 	
 	get_tree().get_root().call_deferred("add_child",scene_above)
-	#scene_above.set_pos(scenes_bellow.get_global_pos())
+	#scene_above.set_position(scenes_bellow.get_global_position())  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	
 	print("Scenes Below: %s | Previous Focuses%s"%[
 			_get_scenes_below_names(),
@@ -114,7 +114,7 @@ func reset_above_below():
 
 func load_screen(path):
 	animation.play("fade_in")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null:
 #		show_error()
@@ -152,7 +152,8 @@ func _process(delta):
 		elif err == OK:
 			update_progress()
 		else: # error during loading
-			show_error()
+			print(err)
+			#show_error()
 			loader = null
 
 func update_progress():
@@ -165,7 +166,7 @@ func set_new_scene(scene_resource):
 	progress_bar.set_value(100)
 	if not animation_loaded:
 		animation.play("black_transition")
-		yield(animation, "finished")
+		yield(animation, "animation_finished")
 	
 	get_tree().change_scene_to(scene_resource)
 	
@@ -173,7 +174,7 @@ func set_new_scene(scene_resource):
 		animation.play_backwards("fade_in")
 	else:
 		animation.play_backwards("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	reset()
 
 func animation_ready():
@@ -182,31 +183,31 @@ func animation_ready():
 
 func black_transition(path, focus_path, origin_scene):
 	animation.play("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
 	load_above(path, focus_path, origin_scene)
 	animation.play_backwards("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
 
 func black_transition_replace(path):
 	animation.play("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
 	get_tree().change_scene(path)
 	animation.play_backwards("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
 
 func black_transition_from_above():
 	animation.play("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
 	clear_above()
 	animation.play_backwards("black_transition")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
 
@@ -218,3 +219,4 @@ func _get_scenes_below_names():
 			names_array.append(scene.get_name())
 	
 	return names_array
+

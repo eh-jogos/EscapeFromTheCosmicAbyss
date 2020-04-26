@@ -18,8 +18,8 @@ func _ready():
 	
 	_on_PipeTentacles_Reset()
 	
-	if not tentacle_trigger.is_connected("body_enter",self,"_on_TentacleTrigger"):
-		tentacle_trigger.connect("body_enter",self,"_on_TentacleTrigger")
+	if not tentacle_trigger.is_connected("body_entered",self,"_on_TentacleTrigger"):
+		tentacle_trigger.connect("body_entered",self,"_on_TentacleTrigger")
 	
 	randomize()
 
@@ -52,28 +52,28 @@ func _on_player_pass( body ):
 
 func _on_kill_player(body, offset_y):
 	#print(offset_y)
-	#print(tentacle_position.get_global_pos().y)
+	#print(tentacle_position.get_global_position().y)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	var tentacle_top
 	var tentacle_bottom
 	var dead_player
-	var relative_pos = offset_y - tentacle_position.get_global_pos().y
+	var relative_pos = offset_y - tentacle_position.get_global_position().y  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	#print(relative_pos)
 	
 	if relative_pos > 0:
 		tentacle_bottom = body.get_node("TentacleBottom")
 		dead_player = tentacle_bottom.get_node("DeadPlayer")
-		offset_y = relative_pos - tentacle_bottom.get_pos().y
+		offset_y = relative_pos - tentacle_bottom.get_position().y  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	else:
 		tentacle_top = body.get_node("TentacleTop")
 		dead_player = tentacle_top.get_node("DeadPlayer")
-		offset_y = relative_pos - tentacle_top.get_pos().y
-	var target_pos = Vector2(dead_player.get_pos().x, offset_y)
+		offset_y = relative_pos - tentacle_top.get_position().y  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	var target_pos = Vector2(dead_player.get_position().x, offset_y)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	#print(target_pos)
-	dead_player.set_pos(target_pos)
+	dead_player.set_position(target_pos)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	dead_player.show()
 	
 	animation.play("kill_player")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	tentacle_pipe._on_player_killed()
 
 func _on_PipeTentacles_Die():
@@ -87,3 +87,4 @@ func go_to_idle():
 func _on_VisibilityNotifier2D_exit_screen():
 	#print("Kill")
 	tentacle_pipe.queue_free()
+

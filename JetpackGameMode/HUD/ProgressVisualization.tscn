@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=1]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=2]
@@ -11,244 +11,275 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 texture = ExtResource( 3 )
-margin/left = 20.0
-margin/right = 20.0
-margin/top = 20.0
-margin/bottom = 20.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
+region_rect = Rect2( 0, 0, 53, 60 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=2]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 texture = ExtResource( 4 )
-margin/left = 20.0
-margin/right = 20.0
-margin/top = 20.0
-margin/bottom = 20.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
+region_rect = Rect2( 0, 0, 49, 55 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=3]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 texture = ExtResource( 5 )
-margin/left = 20.0
-margin/right = 20.0
-margin/top = 20.0
-margin/bottom = 20.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
+region_rect = Rect2( 0, 0, 49, 56 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
 
 [sub_resource type="Animation" id=4]
 
-resource/name = "loop"
+resource_name = "loop"
 length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.4 ]
 }
 
 [sub_resource type="StyleBoxTexture" id=5]
 
-content_margin/left = -1.0
-content_margin/right = -1.0
-content_margin/top = -1.0
-content_margin/bottom = -1.0
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
 texture = ExtResource( 6 )
-margin/left = 20.0
-margin/right = 20.0
-margin/top = 20.0
-margin/bottom = 20.0
-expand_margin/left = 0.0
-expand_margin/right = 0.0
-expand_margin/top = 0.0
-expand_margin/bottom = 0.0
+region_rect = Rect2( 0, 0, 49, 56 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+modulate_color = Color( 1, 1, 1, 1 )
 draw_center = true
-
-[sub_resource type="ColorRamp" id=6]
-
-offsets = FloatArray( 0, 1 )
-colors = ColorArray( 0, 0.960784, 1, 1, 0.402344, 0.976563, 1, 0 )
 
 [node name="ProgressVisualization" type="CenterContainer"]
 
-process/pause_mode = 2
-anchor/left = 1
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1920.0
-margin/top = 980.0
-margin/right = 0.0
-margin/bottom = 14.0
+pause_mode = 2
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1920.0
+margin_top = 980.0
+margin_bottom = -14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 use_top_left = false
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 player_icon_x_offset = -80
 player_icon_finish_position = 1470
 initial_margin = 100
 ending_margin = 0
 progress_barrier = ExtResource( 2 )
 
-[node name="Tween" type="Tween" parent="."]
+[node name="Tween" type="Tween" parent="." index="0"]
 
-playback/process_mode = 1
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
 playback/active = false
 playback/repeat = false
 playback/speed = 1.0
 
-[node name="BarBase" type="Panel" parent="."]
+[node name="BarBase" type="Panel" parent="." index="1"]
 
-rect/min_size = Vector2( 1520, 60 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 200.0
-margin/top = 13.0
-margin/right = 1720.0
-margin/bottom = 73.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 200.0
+margin_top = 13.0
+margin_right = 1720.0
+margin_bottom = 73.0
+rect_min_size = Vector2( 1520, 60 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_styles/panel = SubResource( 1 )
 
-[node name="BarFill" type="Panel" parent="BarBase"]
+[node name="BarFill" type="Panel" parent="BarBase" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 2.0
-margin/right = 2.0
-margin/bottom = 2.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_styles/panel = SubResource( 2 )
 
-[node name="BarFinish" type="Panel" parent="BarBase"]
+[node name="BarFinish" type="Panel" parent="BarBase" index="1"]
 
 editor/display_folded = true
-visibility/opacity = 0.908755
-anchor/left = 1
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 60.0
-margin/top = 2.0
-margin/right = 2.0
-margin/bottom = 2.0
+modulate = Color( 1, 1, 1, 0.908755 )
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -60.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_styles/panel = SubResource( 3 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="BarBase/BarFinish"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BarBase/BarFinish" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 4 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "loop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 4 )
+blend_times = [  ]
 
-[node name="BarOutline" type="Panel" parent="BarBase"]
+[node name="BarOutline" type="Panel" parent="BarBase" index="2"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 2.0
-margin/top = 2.0
-margin/right = 2.0
-margin/bottom = 2.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = -2.0
+margin_bottom = -2.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_styles/panel = SubResource( 5 )
 
-[node name="IconContainer" type="CenterContainer" parent="BarBase"]
+[node name="IconContainer" type="CenterContainer" parent="BarBase" index="3"]
 
 editor/display_folded = true
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 20.0
-margin/top = 0.0
-margin/right = 60.0
-margin/bottom = 0.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 use_top_left = false
 
-[node name="Icon" type="TextureFrame" parent="BarBase/IconContainer"]
+[node name="Icon" type="TextureRect" parent="BarBase/IconContainer" index="0"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 9.0
-margin/top = 19.0
-margin/right = 31.0
-margin/bottom = 41.0
-texture = ExtResource( 7 )
 modulate = Color( 0, 1, 1, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 9.0
+margin_top = 19.0
+margin_right = 31.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
 stretch_mode = 0
 
-[node name="Particles2D" type="Particles2D" parent="BarBase/IconContainer/Icon"]
+[node name="Particles2D" type="Particles2D" parent="BarBase/IconContainer/Icon" index="0"]
 
-visibility/behind_parent = true
-transform/pos = Vector2( 11, 11 )
-config/amount = 1
-config/lifetime = 0.5
-config/process_mode = 1
-config/texture = ExtResource( 8 )
-params/direction = 0.0
-params/spread = 10.0
-params/linear_velocity = 0.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 0.0
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 0.5
-params/final_size = 1.8
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
-color/color_ramp = SubResource( 6 )
+show_behind_parent = true
+position = Vector2( 11, 11 )
+emitting = true
+amount = 1
+lifetime = 0.5
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = null
+texture = ExtResource( 8 )
+normal_map = null
+h_frames = 1
+v_frames = 1
 
 

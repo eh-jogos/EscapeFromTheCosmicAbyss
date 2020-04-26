@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture" id=2]
@@ -6,341 +6,460 @@
 [ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=4]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=6]
-[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://Fonts/OrbitronBold30.font" type="BitmapFont" id=7]
 
 [node name="MainMenuScreen" type="Node2D"]
 
-process/pause_mode = 2
-script/script = ExtResource( 1 )
+pause_mode = 2
+script = ExtResource( 1 )
 options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 extras_path = "res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn"
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
-[node name="TextureFrame" type="TextureFrame" parent="."]
+[node name="TextureFrame" type="TextureRect" parent="." index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = -1856.0
-margin/bottom = -1016.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1856.0
+margin_bottom = 1016.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 0
 
-[node name="MenuContainer" type="VBoxContainer" parent="."]
+[node name="MenuContainer" type="VBoxContainer" parent="." index="1"]
 
-rect/min_size = Vector2( 509, 356 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1276.0
-margin/top = 199.0
-margin/right = 1886.0
-margin/bottom = 938.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1276.0
+margin_top = 199.0
+margin_right = 1886.0
+margin_bottom = 938.0
+rect_min_size = Vector2( 509, 356 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_constants/separation = 5
 alignment = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Logo" type="TextureFrame" parent="MenuContainer"]
+[node name="Logo" type="TextureRect" parent="MenuContainer" index="0"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 610.0
-margin/bottom = 287.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 610.0
+margin_bottom = 287.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="MarginContainer" type="Control" parent="MenuContainer"]
+[node name="MarginContainer" type="Control" parent="MenuContainer" index="1"]
 
-rect/min_size = Vector2( 610, 60 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 292.0
-margin/right = 610.0
-margin/bottom = 352.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 292.0
+margin_right = 610.0
+margin_bottom = 352.0
+rect_min_size = Vector2( 610, 60 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="Continue" type="Button" parent="MenuContainer"]
+[node name="Continue" type="Button" parent="MenuContainer" index="2"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 357.0
-margin/right = 610.0
-margin/bottom = 413.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 357.0
+margin_right = 610.0
+margin_bottom = 413.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Continue"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="NewGame" type="Button" parent="MenuContainer" groups=[
+[node name="NewGame" type="Button" parent="MenuContainer" index="3" groups=[
 "mainmenu",
 ]]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 418.0
-margin/right = 610.0
-margin/bottom = 474.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 418.0
+margin_right = 610.0
+margin_bottom = 474.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "New Game"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="ArcadeMode" type="Button" parent="MenuContainer"]
+[node name="ArcadeMode" type="Button" parent="MenuContainer" index="4"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 479.0
-margin/right = 610.0
-margin/bottom = 535.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 479.0
+margin_right = 610.0
+margin_bottom = 535.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Arcade Mode"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_change"
 
-[node name="SpeedrunMode" type="Button" parent="MenuContainer"]
+[node name="SpeedrunMode" type="Button" parent="MenuContainer" index="5"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 540.0
-margin/right = 610.0
-margin/bottom = 596.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 540.0
+margin_right = 610.0
+margin_bottom = 596.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Speedrun Mode"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_change"
 
-[node name="Category15" type="Button" parent="MenuContainer" groups=[
+[node name="Category15" type="Button" parent="MenuContainer" index="6" groups=[
 "categorymenu",
 ]]
 
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 601.0
-margin/right = 610.0
-margin/bottom = 638.0
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 601.0
+margin_right = 610.0
+margin_bottom = 638.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "15 Upgrade Points"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="Category30" type="Button" parent="MenuContainer" groups=[
+[node name="Category30" type="Button" parent="MenuContainer" index="7" groups=[
 "categorymenu",
 ]]
 
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 643.0
-margin/right = 610.0
-margin/bottom = 680.0
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 643.0
+margin_right = 610.0
+margin_bottom = 680.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "30 Upgrade Points"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="Category40" type="Button" parent="MenuContainer" groups=[
+[node name="Category40" type="Button" parent="MenuContainer" index="8" groups=[
 "categorymenu",
 ]]
 
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 685.0
-margin/right = 610.0
-margin/bottom = 722.0
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 685.0
+margin_right = 610.0
+margin_bottom = 722.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "40 Upgrade Points"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="Unlimited" type="Button" parent="MenuContainer" groups=[
+[node name="Unlimited" type="Button" parent="MenuContainer" index="9" groups=[
 "categorymenu",
 ]]
 
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 727.0
-margin/right = 610.0
-margin/bottom = 764.0
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 727.0
+margin_right = 610.0
+margin_bottom = 764.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Unlimited"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="Back" type="Button" parent="MenuContainer" groups=[
+[node name="Back" type="Button" parent="MenuContainer" index="10" groups=[
 "categorymenu",
 ]]
 
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 769.0
-margin/right = 610.0
-margin/bottom = 825.0
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 769.0
+margin_right = 610.0
+margin_bottom = 825.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Back"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_change"
 
-[node name="Options" type="Button" parent="MenuContainer" groups=[
+[node name="Options" type="Button" parent="MenuContainer" index="11" groups=[
 "mainmenu",
 ]]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 601.0
-margin/right = 610.0
-margin/bottom = 657.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 601.0
+margin_right = 610.0
+margin_bottom = 657.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Options"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_change"
 
-[node name="Extras" type="Button" parent="MenuContainer" groups=[
+[node name="Extras" type="Button" parent="MenuContainer" index="12" groups=[
 "mainmenu",
 ]]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 662.0
-margin/right = 610.0
-margin/bottom = 718.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 662.0
+margin_right = 610.0
+margin_bottom = 718.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Extras"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_change"
 
-[node name="QuitGame" type="Button" parent="MenuContainer" groups=[
+[node name="QuitGame" type="Button" parent="MenuContainer" index="13" groups=[
 "mainmenu",
 ]]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 723.0
-margin/right = 610.0
-margin/bottom = 779.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 723.0
+margin_right = 610.0
+margin_bottom = 779.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 text = "Quit Game"
 flat = false
-script/script = ExtResource( 5 )
+align = 1
+script = ExtResource( 5 )
 pressed_sfx = "ui_confirm"
 
-[node name="Timer" type="Timer" parent="MenuContainer/QuitGame"]
+[node name="Timer" type="Timer" parent="MenuContainer/QuitGame" index="0"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = true
 autostart = false
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." index="2"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 3.0
-margin/top = 1024.0
-margin/right = 1916.0
-margin/bottom = 1061.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 3.0
+margin_top = 1024.0
+margin_right = 1916.0
+margin_bottom = 1061.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 7 )
 text = "Game, Art and Animations by: Daniel Queiroz Porto          Music by: Sam Oz          Cutscene Art by: Filipe Stonoga"
 align = 1

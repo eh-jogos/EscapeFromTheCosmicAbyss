@@ -62,7 +62,7 @@ func _ready():
 	
 	# Inside Nodes
 	jet_particles = self.get_node("JetParticles")
-	jet_sfx = jet_particles.get_node("SamplePlayer")
+	jet_sfx = jet_particles.get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	body_animator = self.get_node("BodyAnimator")
 	arms_animator = self.get_node("ArmsAnimator")
 	bullet_spawn = self.get_node("BulletSpawn")
@@ -75,7 +75,7 @@ func _ready():
 	
 	overheat_bar_animator.play("base")
 	
-	set_fixed_process(true)
+	set_physics_process(true)
 	set_process_input(true)
 	
 	Global.connect("update_invincibility", self, "_on_update_invincibility")
@@ -86,7 +86,7 @@ func _ready():
 		is_invincible = Global.is_invincible
 
 
-func _fixed_process(delta):
+func _physics_process(delta):
 	if game.get_game_state() != game.STATE.Playing and game.get_game_state() != game.STATE.Tutorial:
 		return
 	
@@ -102,8 +102,8 @@ func _fixed_process(delta):
 		heat = handle_boost(delta, heat)
 	else:
 		jet_particles.set_emitting(false)
-		if jet_sfx.is_active():
-			jet_sfx.stop_all()
+		if jet_sfx.playing:
+			jet_sfx.stop()
 	
 	var dash_force = speed_x*dash_modifier*unit.x
 	
@@ -145,18 +145,18 @@ func _fixed_process(delta):
 	
 	var motion = speed * delta
 	#print("Motion: %s"%[motion])
-	motion = self.move(motion)
+	var collision = self.move_and_collide(motion)
 	
-	
-	if self.is_colliding():
+	if collision != null:
 		
-		var collider = get_collider()
+		motion = collision.remainder
+		var collider = collision.collider
 		#print(collider.get_name())
 		if collider.is_in_group("enemy") and not is_dead and shield_energy > 0:
 			#print("Shield Protected")
 			take_hit()
 			
-			var normal = self.get_collision_normal()
+			var normal = collision.normal
 			var final_motion = normal.slide(motion)
 			
 			if collider.has_method("die"):
@@ -170,24 +170,24 @@ func _fixed_process(delta):
 					speed.y *= -2
 					#print("Rising | speed.y: %s"%[speed.y])
 			
-			self.move(final_motion)
+			self.move_and_slide(final_motion)
 			
 		elif collider.is_in_group("enemy") and not is_dead and not is_invincible:
 			#print("Shield Energy at death: %s"%[shield_energy])
 			is_dead = true
 			game.set_game_state("GameOver")
-			set_fixed_process(false)
+			set_physics_process(false)
 			set_process_input(false)
 			self.hide()
 			
-			var offset = self.get_global_pos()
+			var offset = self.global_position
 			collider.kill_player(offset)
 #			queue_free()
 			
 		else: 
-			var normal = get_collision_normal()
+			var normal = collision.normal
 			motion = normal.slide(motion)
-			motion = self.move(motion)
+			motion = self.move_and_slide(motion)
 
 
 func handle_overheat_bar_color(heat): 
@@ -207,8 +207,9 @@ func handle_overheat_bar_color(heat):
 
 func handle_boost(delta, heat):
 	jet_particles.set_emitting(true)
-	if not jet_sfx.is_active():
-		jet_sfx.play("jetpack_noise")
+	if not jet_sfx.playing:
+#		jet_sfx.play("jetpack_noise")  # -- AUDIO REFACTOR
+		pass
 	
 	if falling: 
 		falling = false
@@ -263,14 +264,14 @@ func _input(event):
 func stop_shooting():
 	shooting = false
 	arms_animator.play("reloading")
-	yield(arms_animator,"finished")
-	var current_anim = body_animator.get_current_animation()
-	var current_anim_pos = body_animator.get_current_animation_pos()
+	yield(arms_animator, "animation_finished")
+	var current_anim = body_animator.current_animation
+	var current_anim_pos = body_animator.current_animation_position
 	
-	arms_animator.set_current_animation(current_anim)
+	arms_animator.assigned_animation = current_anim
 	arms_animator.seek(current_anim_pos)
-	if not arms_animator.is_active():
-		arms_animator.set_active(true)
+	if not arms_animator.is_playing():
+		arms_animator.play(current_anim)
 
 func rise_to_fall():
 	body_animator.play("falling")
@@ -320,8 +321,8 @@ func take_hit():
 
 func stop_all_sfx():
 	var shield_sfx = shield.get_node("SamplePlayer")
-	jet_sfx.stop_all()
-	shield_sfx.stop_all()
+	# jet_sfx.stop()
+	# shield_sfx.stop()
 
 
 func _on_update_invincibility():

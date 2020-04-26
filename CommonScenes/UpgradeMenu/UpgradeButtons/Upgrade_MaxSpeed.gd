@@ -131,14 +131,14 @@ func _ready():
 	upgrade_brain = self.get_parent().get_parent()
 	stat_bar = self.get_node("UpgradeBar")
 	
-	if not self.is_connected("mouse_enter",self,"_on_mouse_enter"):
-		self.connect("mouse_enter",self,"_on_mouse_enter")
+	if not self.is_connected("mouse_entered",self,"_on_mouse_enter"):
+		self.connect("mouse_entered",self,"_on_mouse_enter")
 	
-	if not self.is_connected("focus_enter",self,"_on_focus_enter"):
-		self.connect("focus_enter",self,"_on_focus_enter")
+	if not self.is_connected("focus_entered",self,"_on_focus_enter"):
+		self.connect("focus_entered",self,"_on_focus_enter")
 	
-	if not self.is_connected("focus_exit",self,"_on_focus_exit"):
-		self.connect("focus_exit",self,"_on_focus_exit")
+	if not self.is_connected("focus_exited",self,"_on_focus_exit"):
+		self.connect("focus_exited",self,"_on_focus_exit")
 
 
 func _input(event):

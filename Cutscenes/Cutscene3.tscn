@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=1]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=2]
@@ -53,302 +53,354 @@
 
 [sub_resource type="Animation" id=1]
 
-resource/name = "00_base"
+resource_name = "00_base"
 length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame2:visibility/opacity")
+tracks/2/path = NodePath("Frame2:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame3:visibility/opacity")
+tracks/3/path = NodePath("Frame3:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame3/Balloon2:visibility/opacity")
+tracks/4/path = NodePath("Frame3/Balloon2:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame1/Balloon1:visibility/opacity")
+tracks/5/path = NodePath("Frame1/Balloon1:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Frame1/Balloon1/RichTextLabel/AnimationPlayer:playback/play")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 
 [sub_resource type="Animation" id=2]
 
-resource/name = "01_fade_in"
+resource_name = "01_fade_in"
 length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=3]
 
-resource/name = "02_frame1_ballon1"
+resource_name = "02_frame1_ballon1"
 length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1/Balloon1:visibility/opacity")
+tracks/2/path = NodePath("Frame1/Balloon1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Frame1/Balloon1/RichTextLabel/AnimationPlayer:playback/play")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 2,
 "values": [ "[stop]", "loop" ]
 }
 
 [sub_resource type="Animation" id=4]
 
-resource/name = "03_frame2_3"
+resource_name = "03_frame2_3"
 length = 1.3
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Frame1/Balloon1/RichTextLabel:percent_visible")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame2:visibility/opacity")
+tracks/3/path = NodePath("Frame2:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.4 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame2:rect/pos")
+tracks/4/path = NodePath("Frame2:rect_position")
 tracks/4/interp = 2
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 0.2, 0.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 803, 710 ), Vector2( 803, 582 ), Vector2( 803, 630 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame3:visibility/opacity")
+tracks/5/path = NodePath("Frame3:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.4, 0.9 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame3:rect/pos")
+tracks/6/path = NodePath("Frame3:rect_position")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.4, 0.9 ),
-"transitions": FloatArray( 1, 0.25, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.9 ),
+"transitions": PoolRealArray( 1, 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 960, 630 ), Vector2( 960, 630 ), Vector2( 1160, 630 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame3/Balloon2:visibility/opacity")
+tracks/7/path = NodePath("Frame3/Balloon2:modulate:a")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 0.6, 1 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Frame3/Balloon2/RichTextLabel:percent_visible")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.9, 1.3 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.9, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Frame1/Balloon1/RichTextLabel/AnimationPlayer:playback/play")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "still" ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Frame1/Balloon1:visibility/opacity")
+tracks/10/path = NodePath("Frame1/Balloon1:modulate:a")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 1.3 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 1.3 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 
 [sub_resource type="Animation" id=5]
 
-resource/name = "loop"
+resource_name = "loop"
 length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:percent_visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=6]
 
-resource/name = "still"
+resource_name = "still"
 length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:percent_visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -359,32 +411,38 @@ length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 1 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 360.0 ]
+"values": [ 0.0, -360.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/pos")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.2, 0.5, 0.7 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 416.144, 102.186 ), Vector2( 418.144, 103.186 ), Vector2( 417.394, 98.8113 ), Vector2( 414.894, 99.1613 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath(".:visibility/opacity")
+tracks/2/path = NodePath(".:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.2 ]
 }
@@ -395,52 +453,62 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame2:visibility/opacity")
+tracks/3/path = NodePath("Frame2:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame3:visibility/opacity")
+tracks/4/path = NodePath("Frame3:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -451,22 +519,26 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
@@ -477,42 +549,50 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Frame1/RedLight/AnimationPlayer:playback/play")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "loop" ]
 }
@@ -523,82 +603,98 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Frame1/RedLight/AnimationPlayer:playback/play")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "still" ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame2:visibility/opacity")
+tracks/4/path = NodePath("Frame2:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Frame2/RedLight/AnimationPlayer1:playback/play")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "loop" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2/BlamSfx:rect/pos")
+tracks/6/path = NodePath("Frame2/BlamSfx:rect_position")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 647, 132 ), Vector2( 757, 82 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame2/BlamSfx:visibility/opacity")
+tracks/7/path = NodePath("Frame2/BlamSfx:modulate:a")
 tracks/7/interp = 2
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
@@ -609,122 +705,146 @@ length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Frame1/RedLight/AnimationPlayer:playback/play")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "still" ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame2:visibility/opacity")
+tracks/4/path = NodePath("Frame2:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Frame2/RedLight/AnimationPlayer1:playback/play")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "still" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2/BlamSfx:rect/pos")
+tracks/6/path = NodePath("Frame2/BlamSfx:rect_position")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 757, 82 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame2/BlamSfx:visibility/opacity")
+tracks/7/path = NodePath("Frame2/BlamSfx:modulate:a")
 tracks/7/interp = 2
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Frame3:visibility/opacity")
+tracks/8/path = NodePath("Frame3:modulate:a")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("Frame3/Balloon/RichTextLabel:percent_visible")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0, 1, 1.5 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Frame3/Balloon:visibility/opacity")
+tracks/10/path = NodePath("Frame3/Balloon:modulate:a")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0, 0.5, 1 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Frame3/Balloon:rect/pos")
+tracks/11/path = NodePath("Frame3/Balloon:rect_position")
 tracks/11/interp = 2
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0, 0.5, 1 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 187, 110 ), Vector2( 187, 110 ), Vector2( 197, 80 ) ]
 }
@@ -735,12 +855,14 @@ length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.5, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.3, 1.0 ]
 }
@@ -751,12 +873,14 @@ length = 0.3
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0.3 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.5 ]
 }
@@ -767,52 +891,62 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame2:visibility/opacity")
+tracks/3/path = NodePath("Frame2:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame3:visibility/opacity")
+tracks/4/path = NodePath("Frame3:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -823,22 +957,26 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
@@ -849,42 +987,50 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame1:rect/pos")
+tracks/3/path = NodePath("Frame1:rect_position")
 tracks/3/interp = 2
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( -68, 70 ), Vector2( 52, 70 ) ]
 }
@@ -895,82 +1041,98 @@ length = 0.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame1:rect/pos")
+tracks/3/path = NodePath("Frame1:rect_position")
 tracks/3/interp = 2
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 52, 70 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame2:visibility/opacity")
+tracks/4/path = NodePath("Frame2:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2:rect/pos")
+tracks/5/path = NodePath("Frame2:rect_position")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 834, 70 ), Vector2( 674, 70 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2/ThumpSfx:visibility/opacity")
+tracks/6/path = NodePath("Frame2/ThumpSfx:modulate:a")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.2, 0.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame2/ThumpSfx:transform/scale")
+tracks/7/path = NodePath("Frame2/ThumpSfx:scale")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.6, 0.6 ), Vector2( 0.6, 0.6 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
 }
@@ -981,142 +1143,170 @@ length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame1:rect/pos")
+tracks/3/path = NodePath("Frame1:rect_position")
 tracks/3/interp = 2
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 52, 70 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame2:visibility/opacity")
+tracks/4/path = NodePath("Frame2:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2:rect/pos")
+tracks/5/path = NodePath("Frame2:rect_position")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 674, 70 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2/ThumpSfx:visibility/opacity")
+tracks/6/path = NodePath("Frame2/ThumpSfx:modulate:a")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame2/ThumpSfx:transform/scale")
+tracks/7/path = NodePath("Frame2/ThumpSfx:scale")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Frame3:visibility/opacity")
+tracks/8/path = NodePath("Frame3:modulate:a")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Frame3:rect/pos")
+tracks/9/path = NodePath("Frame3:rect_position")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 1149, 70 ), Vector2( 1329, 70 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Frame3/BlamSfx:visibility/opacity")
+tracks/10/path = NodePath("Frame3/BlamSfx:modulate:a")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0, 0.2, 0.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Frame3/BlamSfx:transform/scale")
+tracks/11/path = NodePath("Frame3/BlamSfx:scale")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.6, 0.6 ), Vector2( 0.6, 0.6 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Frame3/Balloon:visibility/opacity")
+tracks/12/path = NodePath("Frame3/Balloon:modulate:a")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 0, 0.4, 0.8 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Frame3/Balloon/RichTextLabel:percent_visible")
 tracks/13/interp = 1
+tracks/13/loop_wrap = true
 tracks/13/imported = false
+tracks/13/enabled = true
 tracks/13/keys = {
-"times": FloatArray( 0, 0.8, 1.5 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -1127,420 +1317,498 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame3:visibility/self_opacity")
+tracks/2/path = NodePath("Frame3:self_modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame3/KbroomSfx:visibility/opacity")
+tracks/3/path = NodePath("Frame3/KbroomSfx:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame1:visibility/opacity")
+tracks/4/path = NodePath("Frame1:modulate:a")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2:visibility/opacity")
+tracks/5/path = NodePath("Frame2:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Frame2/Sfx/AnimationPlayer:playback/play")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 
 [sub_resource type="Animation" id=21]
 
-resource/name = "01_fade"
+resource_name = "01_fade"
 length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 
 [sub_resource type="Animation" id=22]
 
-resource/name = "02_frame1"
+resource_name = "02_frame1"
 length = 0.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame1:rect/pos")
+tracks/3/path = NodePath("Frame1:rect_position")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( -335, 60 ), Vector2( 25, 60 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame1/ThumpSfx:transform/scale")
+tracks/4/path = NodePath("Frame1/ThumpSfx:scale")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.4, 0.4 ), Vector2( 0.4, 0.4 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 
 [sub_resource type="Animation" id=23]
 
-resource/name = "03_frame2"
+resource_name = "03_frame2"
 length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame1:rect/pos")
+tracks/3/path = NodePath("Frame1:rect_position")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 25, 60 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame1/ThumpSfx:transform/scale")
+tracks/4/path = NodePath("Frame1/ThumpSfx:scale")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("Frame2/Sfx/AnimationPlayer:playback/play")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "start" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2:visibility/opacity")
+tracks/6/path = NodePath("Frame2:modulate:a")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame2:rect/pos")
+tracks/7/path = NodePath("Frame2:rect_position")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 660, 290 ), Vector2( 660, 60 ) ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "loop" ]
 }
 
 [sub_resource type="Animation" id=24]
 
-resource/name = "04_frame3"
+resource_name = "04_frame3"
 length = 1.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame1:visibility/opacity")
+tracks/2/path = NodePath("Frame1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame1:rect/pos")
+tracks/3/path = NodePath("Frame1:rect_position")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 25, 60 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame1/ThumpSfx:transform/scale")
+tracks/4/path = NodePath("Frame1/ThumpSfx:scale")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2:visibility/opacity")
+tracks/5/path = NodePath("Frame2:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2:rect/pos")
+tracks/6/path = NodePath("Frame2:rect_position")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 660, 60 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame3/KbroomSfx:visibility/opacity")
+tracks/7/path = NodePath("Frame3/KbroomSfx:modulate:a")
 tracks/7/interp = 1
+tracks/7/loop_wrap = true
 tracks/7/imported = false
+tracks/7/enabled = true
 tracks/7/keys = {
-"times": FloatArray( 0, 0.2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 10.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Frame3/KbroomSfx:transform/scale")
+tracks/8/path = NodePath("Frame3/KbroomSfx:scale")
 tracks/8/interp = 1
+tracks/8/loop_wrap = true
 tracks/8/imported = false
+tracks/8/enabled = true
 tracks/8/keys = {
-"times": FloatArray( 0, 0.2, 0.4 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.6, 0.6 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Frame3/KbroomSfx:z/z")
+tracks/9/path = NodePath("Frame3/KbroomSfx:z_index")
 tracks/9/interp = 1
+tracks/9/loop_wrap = true
 tracks/9/imported = false
+tracks/9/enabled = true
 tracks/9/keys = {
-"times": FloatArray( 0, 0.4 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 2, 0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Frame3:visibility/self_opacity")
+tracks/10/path = NodePath("Frame3:self_modulate:a")
 tracks/10/interp = 1
+tracks/10/loop_wrap = true
 tracks/10/imported = false
+tracks/10/enabled = true
 tracks/10/keys = {
-"times": FloatArray( 0, 1, 1.5 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
 tracks/11/interp = 1
+tracks/11/loop_wrap = true
 tracks/11/imported = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("Frame2/Sfx/AnimationPlayer:playback/play")
 tracks/12/interp = 1
+tracks/12/loop_wrap = true
 tracks/12/imported = false
+tracks/12/enabled = true
 tracks/12/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "stop" ]
 }
@@ -1551,12 +1819,14 @@ length = 1.4
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.22385, 0.7, 1.3 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.22385, 0.7, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.2, 1.0 ]
 }
@@ -1569,60 +1839,72 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("V/AnimationPlayer:playback/play")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "loop" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("R1/AnimationPlayer1:playback/play")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.1 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 2,
 "values": [ "[stop]", "loop" ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("R2/AnimationPlayer2:playback/play")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 2,
 "values": [ "[stop]", "loop" ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("R3/AnimationPlayer3:playback/play")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.3 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 2,
 "values": [ "[stop]", "loop" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("R4/AnimationPlayer4:playback/play")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 0.4 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 2,
 "values": [ "[stop]", "loop" ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("R5/AnimationPlayer5:playback/play")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 2,
 "values": [ "[stop]", "loop" ]
 }
@@ -1635,60 +1917,72 @@ step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("V/AnimationPlayer:playback/play")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("R1/AnimationPlayer1:playback/play")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("R2/AnimationPlayer2:playback/play")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("R3/AnimationPlayer3:playback/play")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("R4/AnimationPlayer4:playback/play")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("R5/AnimationPlayer5:playback/play")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
 "values": [ "[stop]" ]
 }
@@ -1699,24 +1993,28 @@ length = 1.2
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/pos")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 2
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 117, 806 ), Vector2( 87, 736 ), Vector2( 117, 806 ), Vector2( 137, 866 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/rot")
+tracks/1/path = NodePath(".:rotation_degrees")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -5.0, 5.0, -5.0, 5.0, -5.0, 5.0 ]
+"values": [ 5.0, -5.0, 5.0, -5.0, 5.0, -5.0 ]
 }
 
 [sub_resource type="Animation" id=29]
@@ -1725,22 +2023,26 @@ length = 1.2
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -5.0, 5.0, -5.0, 5.0, -5.0, 5.0 ]
+"values": [ 5.0, -5.0, 5.0, -5.0, 5.0, -5.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/pos")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 2
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 223, 718 ), Vector2( 190, 669 ), Vector2( 223, 718 ), Vector2( 256, 767 ) ]
 }
@@ -1751,22 +2053,26 @@ length = 1.2
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -5.0, 5.0, -5.0, 5.0, -5.0, 5.0 ]
+"values": [ 5.0, -5.0, 5.0, -5.0, 5.0, -5.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/pos")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 2
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 299.369, 577.011 ), Vector2( 266, 528 ), Vector2( 299.369, 577.011 ), Vector2( 332, 626 ) ]
 }
@@ -1777,22 +2083,26 @@ length = 1.2
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -5.0, 5.0, -5.0, 5.0, -5.0, 5.0 ]
+"values": [ 5.0, -5.0, 5.0, -5.0, 5.0, -5.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/pos")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 365, 450 ), Vector2( 332, 401 ), Vector2( 365, 450 ), Vector2( 398, 499 ) ]
 }
@@ -1803,22 +2113,26 @@ length = 1.2
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -5.0, 5.0, -5.0, 5.0, -5.0, 5.0 ]
+"values": [ 5.0, -5.0, 5.0, -5.0, 5.0, -5.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/pos")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 441, 325 ), Vector2( 408, 276 ), Vector2( 441, 325 ), Vector2( 474, 374 ) ]
 }
@@ -1829,22 +2143,26 @@ length = 1.2
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -5.0, 5.0, -5.0, 5.0, -5.0, 5.0 ]
+"values": [ 5.0, -5.0, 5.0, -5.0, 5.0, -5.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:transform/pos")
+tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 0.9 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 530, 196 ), Vector2( 497, 147 ), Vector2( 530, 196 ), Vector2( 563, 245 ) ]
 }
@@ -1855,42 +2173,50 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Splash:visibility/opacity")
+tracks/2/path = NodePath("Splash:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("VooosshSfx:transform/scale")
+tracks/3/path = NodePath("VooosshSfx:scale")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ) ]
 }
@@ -1901,88 +2227,102 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=36]
 
-resource/name = "02_Splash"
+resource_name = "02_Splash"
 length = 0.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Splash:visibility/opacity")
+tracks/2/path = NodePath("Splash:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("VooosshSfx:transform/scale")
+tracks/3/path = NodePath("VooosshSfx:scale")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0.1, 0.6 ),
-"transitions": FloatArray( 0.25, 1 ),
+"times": PoolRealArray( 0.1, 0.6 ),
+"transitions": PoolRealArray( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=37]
 
-resource/name = "loop"
+resource_name = "loop"
 length = 0.4
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:transform/rot")
+tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.3, 0.4 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, -1.5, 1.5, 0.0 ]
+"values": [ 0.0, 1.5, -1.5, 0.0 ]
 }
 
 [sub_resource type="Animation" id=38]
@@ -1991,32 +2331,38 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame2:visibility/opacity")
+tracks/2/path = NodePath("Frame2:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -2027,220 +2373,258 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=40]
 
-resource/name = "02_frame2"
+resource_name = "02_frame2"
 length = 3.7
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame2:visibility/opacity")
+tracks/2/path = NodePath("Frame2:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame2/Balloons/Balloon1:visibility/opacity")
+tracks/3/path = NodePath("Frame2/Balloons/Balloon1:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.5, 1 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Frame2/Balloons/Balloon1/RichTextLabel:percent_visible")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 1, 1.8, 2, 3.1, 3.7 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.8, 2, 3.1, 3.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.42, 0.42, 0.755789, 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2/Balloons/Balloon2:visibility/opacity")
+tracks/5/path = NodePath("Frame2/Balloons/Balloon2:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=41]
 
-resource/name = "03_frame2_balloon2"
+resource_name = "03_frame2_balloon2"
 length = 1.2
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Frame2:visibility/opacity")
+tracks/2/path = NodePath("Frame2:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame2/Balloons/Balloon1:visibility/opacity")
+tracks/3/path = NodePath("Frame2/Balloons/Balloon1:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Frame2/Balloons/Balloon1/RichTextLabel:percent_visible")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2/Balloons/Balloon2:visibility/opacity")
+tracks/5/path = NodePath("Frame2/Balloons/Balloon2:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Frame2/Balloons/Balloon2/RichTextLabel1:percent_visible")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.5, 1.2 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=42]
 
-resource/name = "loop"
+resource_name = "loop"
 length = 4.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("TextureFrame:rect/scale")
+tracks/0/path = NodePath("TextureFrame:rect_scale")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 0.85, 0.85 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TextureFrame:visibility/opacity")
+tracks/1/path = NodePath("TextureFrame:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.2, 2, 3.8 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 2, 3.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.3, 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TextureFrame:rect/pos")
+tracks/2/path = NodePath("TextureFrame:rect_position")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 2 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -150, -90 ), Vector2( -100, -10 ) ]
 }
 
 [sub_resource type="Animation" id=43]
 
-resource/name = "loop"
+resource_name = "loop"
 length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.7 ]
 }
@@ -2251,1472 +2635,1827 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Splash/Balloon1:visibility/opacity")
+tracks/2/path = NodePath("Splash/Balloon1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Splash/Balloon2:visibility/opacity")
+tracks/3/path = NodePath("Splash/Balloon2:modulate:a")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=45]
 
-resource/name = "01_fade"
+resource_name = "01_fade"
 length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=46]
 
-resource/name = "02_balloon1"
+resource_name = "02_balloon1"
 length = 6.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Splash/Balloon1:visibility/opacity")
+tracks/2/path = NodePath("Splash/Balloon1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Splash/Balloon1/RichTextLabel:percent_visible")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0, 0.5, 1, 1.5, 1.7, 2.4, 2.9 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 1.7, 2.4, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.357143, 0.47, 0.583333, 0.81, 1.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Splash/Balloon1/RichTextLabel1:percent_visible")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0, 2.9, 4.1, 4.9, 5.3, 6 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 2.9, 4.1, 4.9, 5.3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.5625, 0.7, 0.890909, 1.0 ]
 }
 
 [sub_resource type="Animation" id=47]
 
-resource/name = "03_balloon2"
+resource_name = "03_balloon2"
 length = 2.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/visible")
+tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
+tracks/0/loop_wrap = true
 tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visibility/opacity")
+tracks/1/path = NodePath(".:modulate:a")
 tracks/1/interp = 1
+tracks/1/loop_wrap = true
 tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Splash/Balloon1:visibility/opacity")
+tracks/2/path = NodePath("Splash/Balloon1:modulate:a")
 tracks/2/interp = 1
+tracks/2/loop_wrap = true
 tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Splash/Balloon1/RichTextLabel:percent_visible")
 tracks/3/interp = 1
+tracks/3/loop_wrap = true
 tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Splash/Balloon1/RichTextLabel1:percent_visible")
 tracks/4/interp = 1
+tracks/4/loop_wrap = true
 tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Splash/Balloon2:visibility/opacity")
+tracks/5/path = NodePath("Splash/Balloon2:modulate:a")
 tracks/5/interp = 1
+tracks/5/loop_wrap = true
 tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Splash/Balloon2/RichTextLabel:percent_visible")
 tracks/6/interp = 1
+tracks/6/loop_wrap = true
 tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": FloatArray( 0, 0.5, 2 ),
-"transitions": FloatArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 
 [node name="Cutscene3" type="CanvasLayer"]
 
-process/pause_mode = 2
+pause_mode = 2
 layer = 10
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
-script/script = ExtResource( 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
 
-[node name="BackPanel" type="ColorFrame" parent="."]
+[node name="BackPanel" type="ColorRect" parent="." index="0"]
 
-process/pause_mode = 2
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 2 )
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
+pause_mode = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
 color = Color( 0, 0, 0, 1 )
 
-[node name="Scenes" type="Control" parent="."]
+[node name="Scenes" type="Control" parent="." index="1"]
 
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="Scene1" type="Control" parent="Scenes"]
+[node name="Scene1" type="Control" parent="Scenes" index="0"]
 
 editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 1 )
 anims/01_fade_in = SubResource( 2 )
 anims/02_frame1_ballon1 = SubResource( 3 )
 anims/03_frame2_3 = SubResource( 4 )
 next/01_fade_in = "02_frame1_ballon1"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade_in", "02_frame1_ballon1", 0.05 ]
-autoplay = "00_base"
 
-[node name="Frame1" type="TextureFrame" parent="Scenes/Scene1"]
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene1" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1920.0
-margin/bottom = 1080.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 3 )
 stretch_mode = 0
 
-[node name="Balloon1" type="Patch9Frame" parent="Scenes/Scene1/Frame1"]
+[node name="Balloon1" type="NinePatchRect" parent="Scenes/Scene1/Frame1" index="0"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 1443.0
-margin/top = 51.0
-margin/right = 1861.0
-margin/bottom = 263.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1443.0
+margin_top = 51.0
+margin_right = 1861.0
+margin_bottom = 263.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 386, 196 )
-patch_margin/left = 85
-patch_margin/top = 41
-patch_margin/right = 43
-patch_margin/bottom = 37
+patch_margin_left = 85
+patch_margin_top = 41
+patch_margin_right = 43
+patch_margin_bottom = 37
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene1/Frame1/Balloon1"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene1/Frame1/Balloon1" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 55.0
-margin/top = 53.0
-margin/right = 1.0
-margin/bottom = 1.0
-bbcode/enabled = true
-bbcode/bbcode = "[center]Oh god, oh god,
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 55.0
+margin_top = 53.0
+margin_right = -1.0
+margin_bottom = -1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center]Oh god, oh god,
 oh god, oh god!![/center]"
 visible_characters = 0
 percent_visible = 0.0
+meta_underlined = true
+tab_size = 4
+text = "Oh god, oh god,
+oh god, oh god!!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/Frame1/Balloon1/RichTextLabel"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/Frame1/Balloon1/RichTextLabel" index="1"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/loop = SubResource( 5 )
 anims/still = SubResource( 6 )
-playback/active = true
-playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
 
-[node name="Frame2" type="TextureFrame" parent="Scenes/Scene1"]
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene1" index="2"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 803.0
-margin/top = 630.0
-margin/right = 1291.0
-margin/bottom = 1026.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 803.0
+margin_top = 630.0
+margin_right = 1291.0
+margin_bottom = 1026.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 6 )
 stretch_mode = 0
 
-[node name="Frame3" type="TextureFrame" parent="Scenes/Scene1"]
+[node name="Frame3" type="TextureRect" parent="Scenes/Scene1" index="3"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1160.0
-margin/top = 630.0
-margin/right = 1826.0
-margin/bottom = 1026.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1160.0
+margin_top = 630.0
+margin_right = 1826.0
+margin_bottom = 1026.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 7 )
 stretch_mode = 0
 
-[node name="Balloon2" type="Patch9Frame" parent="Scenes/Scene1/Frame3"]
+[node name="Balloon2" type="NinePatchRect" parent="Scenes/Scene1/Frame3" index="0"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 41.0
-margin/top = 257.0
-margin/right = 457.0
-margin/bottom = 395.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 41.0
+margin_top = 257.0
+margin_right = 457.0
+margin_bottom = 395.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 342, 120 )
-patch_margin/left = 74
-patch_margin/top = 28
-patch_margin/right = 34
-patch_margin/bottom = 29
+patch_margin_left = 74
+patch_margin_top = 28
+patch_margin_right = 34
+patch_margin_bottom = 29
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene1/Frame3/Balloon2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene1/Frame3/Balloon2" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 42.0
-margin/top = 42.0
-margin/right = 1.0
-margin/bottom = -2.0
-bbcode/enabled = true
-bbcode/bbcode = "[center]My [b]escape pod![/b][/center]"
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 42.0
+margin_top = 42.0
+margin_right = -1.0
+margin_bottom = 2.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center]My [b]escape pod![/b][/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "My escape pod!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="RedLight" type="Sprite" parent="Scenes/Scene1/Frame3"]
+[node name="RedLight" type="Sprite" parent="Scenes/Scene1/Frame3" index="1"]
 
-visibility/opacity = 0.992273
-transform/pos = Vector2( 416.192, 102.21 )
-transform/rot = 1.73859
+modulate = Color( 1, 1, 1, 0.992273 )
+position = Vector2( 416.192, 102.21 )
+rotation = -0.0303441
 texture = ExtResource( 9 )
 offset = Vector2( 7.79187, -4.3172 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/Frame3/RedLight"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/Frame3/RedLight" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 7 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "loop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 7 )
+blend_times = [  ]
 
-[node name="Scene2" type="Control" parent="Scenes"]
+[node name="Scene2" type="Control" parent="Scenes" index="1"]
 
 editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene2" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 8 )
 anims/01_fade_in = SubResource( 9 )
 anims/02_frame1 = SubResource( 10 )
 anims/03_frame2 = SubResource( 11 )
 anims/04_frame3 = SubResource( 12 )
 next/01_fade_in = "02_frame1"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade_in", "02_frame1", 0.05 ]
-autoplay = "00_base"
 
-[node name="BlackBackground" type="TextureFrame" parent="Scenes/Scene2"]
+[node name="BlackBackground" type="TextureRect" parent="Scenes/Scene2" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 10 )
 stretch_mode = 0
 
-[node name="Frame1" type="TextureFrame" parent="Scenes/Scene2"]
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene2" index="2"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 52.0
-margin/top = 80.0
-margin/right = 851.0
-margin/bottom = 985.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 52.0
+margin_top = 80.0
+margin_right = 851.0
+margin_bottom = 985.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 11 )
 stretch_mode = 0
 
-[node name="RedLight" type="TextureFrame" parent="Scenes/Scene2/Frame1"]
+[node name="RedLight" type="TextureRect" parent="Scenes/Scene2/Frame1" index="0"]
 
-visibility/opacity = 0.5
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 65.0
-margin/top = 6.0
-margin/right = 559.0
-margin/bottom = 358.0
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 65.0
+margin_top = 6.0
+margin_right = 559.0
+margin_bottom = 358.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 12 )
 stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene2/Frame1/RedLight"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene2/Frame1/RedLight" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/loop = SubResource( 13 )
 anims/still = SubResource( 14 )
-playback/active = true
-playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
 
-[node name="Frame2" type="TextureFrame" parent="Scenes/Scene2"]
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene2" index="3"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 340.0
-margin/top = 49.0
-margin/right = 1427.0
-margin/bottom = 986.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 340.0
+margin_top = 49.0
+margin_right = 1427.0
+margin_bottom = 986.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 13 )
 stretch_mode = 0
 
-[node name="RedLight" type="TextureFrame" parent="Scenes/Scene2/Frame2"]
+[node name="RedLight" type="TextureRect" parent="Scenes/Scene2/Frame2" index="0"]
 
-visibility/opacity = 0.380873
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 561.0
-margin/top = -49.0
-margin/right = 1053.0
-margin/bottom = 270.0
+modulate = Color( 1, 1, 1, 0.380873 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 561.0
+margin_top = -49.0
+margin_right = 1053.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 14 )
 stretch_mode = 0
 
-[node name="AnimationPlayer1" type="AnimationPlayer" parent="Scenes/Scene2/Frame2/RedLight"]
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Scenes/Scene2/Frame2/RedLight" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/loop = SubResource( 13 )
 anims/still = SubResource( 14 )
-playback/active = true
-playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
 
-[node name="BlamSfx" type="TextureFrame" parent="Scenes/Scene2/Frame2"]
+[node name="BlamSfx" type="TextureRect" parent="Scenes/Scene2/Frame2" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 757.0
-margin/top = 82.0
-margin/right = 1052.0
-margin/bottom = 284.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 757.0
+margin_top = 82.0
+margin_right = 1052.0
+margin_bottom = 284.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 15 )
 stretch_mode = 0
 
-[node name="Frame3" type="TextureFrame" parent="Scenes/Scene2"]
+[node name="Frame3" type="TextureRect" parent="Scenes/Scene2" index="4"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1456.0
-margin/top = 80.0
-margin/right = 1869.0
-margin/bottom = 986.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1456.0
+margin_top = 80.0
+margin_right = 1869.0
+margin_bottom = 986.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 16 )
 stretch_mode = 0
 
-[node name="Balloon" type="Patch9Frame" parent="Scenes/Scene2/Frame3"]
+[node name="Balloon" type="NinePatchRect" parent="Scenes/Scene2/Frame3" index="0"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 197.0
-margin/top = 80.0
-margin/right = 362.0
-margin/bottom = 221.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 197.0
+margin_top = 80.0
+margin_right = 362.0
+margin_bottom = 221.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 texture = ExtResource( 17 )
 region_rect = Rect2( 0, 0, 165, 141 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene2/Frame3/Balloon"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene2/Frame3/Balloon" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 28.0
-margin/right = 0.0
-margin/bottom = 42.0
-bbcode/enabled = true
-bbcode/bbcode = "[center]Phew...[/center]"
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 28.0
+margin_bottom = -42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center]Phew...[/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Phew..."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Scene3" type="Control" parent="Scenes"]
+[node name="Scene3" type="Control" parent="Scenes" index="2"]
 
 editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 15 )
 anims/01_fade_in = SubResource( 16 )
 anims/02_frame1 = SubResource( 17 )
 anims/03_frame2 = SubResource( 18 )
 anims/04_frame3 = SubResource( 19 )
 next/01_fade_in = "02_frame1"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade_in", "02_frame1", 0.05 ]
-autoplay = "00_base"
 
-[node name="BlackBackground" type="TextureFrame" parent="Scenes/Scene3"]
+[node name="BlackBackground" type="TextureRect" parent="Scenes/Scene3" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1920.0
-margin/bottom = 1080.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 10 )
 stretch_mode = 0
 
-[node name="Frame1" type="TextureFrame" parent="Scenes/Scene3"]
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene3" index="2"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 52.0
-margin/top = 70.0
-margin/right = 626.0
-margin/bottom = 996.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 52.0
+margin_top = 70.0
+margin_right = 626.0
+margin_bottom = 996.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 18 )
 stretch_mode = 0
 
-[node name="Frame2" type="TextureFrame" parent="Scenes/Scene3"]
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene3" index="3"]
 
 editor/display_folded = true
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 674.0
-margin/top = 70.0
-margin/right = 1281.0
-margin/bottom = 996.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 674.0
+margin_top = 70.0
+margin_right = 1281.0
+margin_bottom = 996.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 19 )
 stretch_mode = 0
 
-[node name="ThumpSfx" type="Sprite" parent="Scenes/Scene3/Frame2"]
+[node name="ThumpSfx" type="Sprite" parent="Scenes/Scene3/Frame2" index="0"]
 
-transform/pos = Vector2( 322.906, 440.143 )
+position = Vector2( 322.906, 440.143 )
 texture = ExtResource( 20 )
 
-[node name="Frame3" type="TextureFrame" parent="Scenes/Scene3"]
+[node name="Frame3" type="TextureRect" parent="Scenes/Scene3" index="4"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1329.0
-margin/top = 70.0
-margin/right = 1856.0
-margin/bottom = 998.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1329.0
+margin_top = 70.0
+margin_right = 1856.0
+margin_bottom = 998.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 21 )
 stretch_mode = 0
 
-[node name="BlamSfx" type="Sprite" parent="Scenes/Scene3/Frame3"]
+[node name="BlamSfx" type="Sprite" parent="Scenes/Scene3/Frame3" index="0"]
 
-transform/pos = Vector2( 140, 312 )
+position = Vector2( 140, 312 )
 texture = ExtResource( 22 )
 
-[node name="Balloon" type="Patch9Frame" parent="Scenes/Scene3/Frame3"]
+[node name="Balloon" type="NinePatchRect" parent="Scenes/Scene3/Frame3" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 125.0
-margin/top = 665.0
-margin/right = 451.0
-margin/bottom = 858.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 125.0
+margin_top = 665.0
+margin_right = 451.0
+margin_bottom = 858.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 texture = ExtResource( 23 )
 region_rect = Rect2( 0, 0, 326, 193 )
-patch_margin/left = 110
-patch_margin/top = 33
-patch_margin/right = 35
-patch_margin/bottom = 40
+patch_margin_left = 110
+patch_margin_top = 33
+patch_margin_right = 35
+patch_margin_bottom = 40
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene3/Frame3/Balloon"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene3/Frame3/Balloon" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 45.0
-margin/top = 42.0
-margin/right = -8.0
-margin/bottom = -13.0
-bbcode/enabled = true
-bbcode/bbcode = "[center]Let's get
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 45.0
+margin_top = 42.0
+margin_right = 8.0
+margin_bottom = 13.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center]Let's get
 out of here!![/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Let's get
+out of here!!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Scene4" type="Control" parent="Scenes"]
+[node name="Scene4" type="Control" parent="Scenes" index="3"]
 
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 20 )
 anims/01_fade = SubResource( 21 )
 anims/02_frame1 = SubResource( 22 )
 anims/03_frame2 = SubResource( 23 )
 anims/04_frame3 = SubResource( 24 )
 next/01_fade = "02_frame1"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade", "02_frame1", 0.05 ]
-autoplay = "00_base"
 
-[node name="BlackBackground" type="TextureFrame" parent="Scenes/Scene4"]
+[node name="BlackBackground" type="TextureRect" parent="Scenes/Scene4" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1920.0
-margin/bottom = 1080.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 10 )
 stretch_mode = 0
 
-[node name="Frame3" type="TextureFrame" parent="Scenes/Scene4"]
+[node name="Frame3" type="TextureRect" parent="Scenes/Scene4" index="2"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 24 )
 stretch_mode = 0
 
-[node name="KbroomSfx" type="Sprite" parent="Scenes/Scene4/Frame3"]
+[node name="KbroomSfx" type="Sprite" parent="Scenes/Scene4/Frame3" index="0"]
 
-visibility/opacity = 10.0
-transform/pos = Vector2( 1624, 592 )
+modulate = Color( 1, 1, 1, 10 )
+position = Vector2( 1624, 592 )
 texture = ExtResource( 25 )
 
-[node name="Frame1" type="TextureFrame" parent="Scenes/Scene4"]
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene4" index="3"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 25.0
-margin/top = 60.0
-margin/right = 1317.0
-margin/bottom = 1011.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 25.0
+margin_top = 60.0
+margin_right = 1317.0
+margin_bottom = 1011.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 26 )
 stretch_mode = 0
 
-[node name="ThumpSfx" type="Sprite" parent="Scenes/Scene4/Frame1"]
+[node name="ThumpSfx" type="Sprite" parent="Scenes/Scene4/Frame1" index="0"]
 
-transform/pos = Vector2( 300, 480 )
+position = Vector2( 300, 480 )
 texture = ExtResource( 27 )
 
-[node name="Frame2" type="TextureFrame" parent="Scenes/Scene4"]
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene4" index="4"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 660.0
-margin/top = 60.0
-margin/right = 1296.0
-margin/bottom = 1008.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 660.0
+margin_top = 60.0
+margin_right = 1296.0
+margin_bottom = 1008.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 28 )
 stretch_mode = 0
 
-[node name="Fire" type="TextureFrame" parent="Scenes/Scene4/Frame2"]
+[node name="Fire" type="TextureRect" parent="Scenes/Scene4/Frame2" index="0"]
 
-visibility/opacity = 0.955011
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 95.0
-margin/top = 703.0
-margin/right = 625.0
-margin/bottom = 840.0
+modulate = Color( 1, 1, 1, 0.955011 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 95.0
+margin_top = 703.0
+margin_right = 625.0
+margin_bottom = 840.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 29 )
 stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Fire"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Fire" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 25 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 25 )
+blend_times = [  ]
 
-[node name="Sfx" type="Control" parent="Scenes/Scene4/Frame2"]
+[node name="Sfx" type="Control" parent="Scenes/Scene4/Frame2" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/start = SubResource( 26 )
 anims/stop = SubResource( 27 )
-playback/active = true
-playback/speed = 1.0
 blend_times = [  ]
-autoplay = ""
 
-[node name="V" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="V" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx" index="1"]
 
-transform/pos = Vector2( 121.018, 816.918 )
-transform/rot = 2.57662
+position = Vector2( 121.018, 816.918 )
+rotation = -0.0449705
 texture = ExtResource( 30 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/V"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/V" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 28 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 28 )
+blend_times = [  ]
 
-[node name="R1" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="R1" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx" index="2"]
 
 editor/display_folded = true
-transform/pos = Vector2( 215.101, 706.272 )
-transform/rot = 1.91394
+position = Vector2( 215.101, 706.272 )
+rotation = -0.0334046
 texture = ExtResource( 31 )
 
-[node name="AnimationPlayer1" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R1"]
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R1" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 29 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 29 )
+blend_times = [  ]
 
-[node name="R2" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="R2" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx" index="3"]
 
 editor/display_folded = true
-transform/pos = Vector2( 274.557, 540.517 )
-transform/rot = -4.00852
+position = Vector2( 274.557, 540.517 )
+rotation = 0.0699619
 texture = ExtResource( 32 )
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R2"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R2" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 30 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 30 )
+blend_times = [  ]
 
-[node name="R3" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="R3" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx" index="4"]
 
 editor/display_folded = true
-transform/pos = Vector2( 334.887, 405.287 )
-transform/rot = -1.3124
+position = Vector2( 334.887, 405.287 )
+rotation = 0.0229057
 texture = ExtResource( 33 )
 
-[node name="AnimationPlayer3" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R3"]
+[node name="AnimationPlayer3" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R3" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 31 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 31 )
+blend_times = [  ]
 
-[node name="R4" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="R4" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx" index="5"]
 
 editor/display_folded = true
-transform/pos = Vector2( 413.88, 284.731 )
-transform/rot = 2.6729
+position = Vector2( 413.88, 284.731 )
+rotation = -0.0466509
 texture = ExtResource( 34 )
 
-[node name="AnimationPlayer4" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R4"]
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R4" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 32 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 32 )
+blend_times = [  ]
 
-[node name="R5" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
+[node name="R5" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx" index="6"]
 
 editor/display_folded = true
-transform/pos = Vector2( 514.161, 172.481 )
-transform/rot = 2.19959
+position = Vector2( 514.161, 172.481 )
+rotation = -0.0383901
 texture = ExtResource( 35 )
 
-[node name="AnimationPlayer5" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R5"]
+[node name="AnimationPlayer5" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R5" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 33 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 33 )
+blend_times = [  ]
 
-[node name="Scene5" type="Control" parent="Scenes"]
+[node name="Scene5" type="Control" parent="Scenes" index="4"]
 
 editor/display_folded = true
-visibility/visible = false
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 34 )
 anims/01_fade = SubResource( 35 )
 anims/02_Splash = SubResource( 36 )
 next/01_fade = "02_Splash"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade", "02_Splash", 0.05 ]
-autoplay = "00_base"
 
-[node name="BlackBackground1" type="TextureFrame" parent="Scenes/Scene5"]
+[node name="BlackBackground1" type="TextureRect" parent="Scenes/Scene5" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1920.0
-margin/bottom = 1080.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 10 )
 stretch_mode = 0
 
-[node name="Splash" type="TextureFrame" parent="Scenes/Scene5"]
+[node name="Splash" type="TextureRect" parent="Scenes/Scene5" index="2"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 36 )
 stretch_mode = 0
 
-[node name="VooosshSfx" type="Sprite" parent="Scenes/Scene5"]
+[node name="VooosshSfx" type="Sprite" parent="Scenes/Scene5" index="3"]
 
-transform/pos = Vector2( 676.498, 482.489 )
-transform/rot = -0.801099
-transform/scale = Vector2( 1e-05, 1e-05 )
+position = Vector2( 676.498, 482.489 )
+rotation = 0.0139818
+scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 37 )
 offset = Vector2( 238.502, -165.489 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5/VooosshSfx"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5/VooosshSfx" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 37 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "loop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 37 )
+blend_times = [  ]
 
-[node name="Scene6" type="Control" parent="Scenes"]
+[node name="Scene6" type="Control" parent="Scenes" index="5"]
 
 editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene6"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene6" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 38 )
 anims/01_fade = SubResource( 39 )
 anims/02_frame2 = SubResource( 40 )
 anims/03_frame2_balloon2 = SubResource( 41 )
 next/01_fade = "02_frame2"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade", "02_frame2", 0.05 ]
-autoplay = "00_base"
 
-[node name="Frame1" type="TextureFrame" parent="Scenes/Scene6"]
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene6" index="1"]
 
 editor/display_folded = true
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 38 )
 stretch_mode = 0
 
-[node name="Rift" type="TextureFrame" parent="Scenes/Scene6/Frame1"]
+[node name="Rift" type="TextureRect" parent="Scenes/Scene6/Frame1" index="0"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 110.0
-margin/top = 140.0
-margin/right = 518.0
-margin/bottom = 1044.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 110.0
+margin_top = 140.0
+margin_right = 518.0
+margin_bottom = 1044.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 39 )
 stretch_mode = 0
 
-[node name="TextureFrame" type="TextureFrame" parent="Scenes/Scene6/Frame1/Rift"]
+[node name="TextureFrame" type="TextureRect" parent="Scenes/Scene6/Frame1/Rift" index="0"]
 
-visibility/opacity = 0.626285
-visibility/behind_parent = true
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-rect/scale = Vector2( 0.912926, 0.912926 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 324.975
-margin/top = 495.561
-margin/right = -479.025
-margin/bottom = -605.439
+modulate = Color( 1, 1, 1, 0.626285 )
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -324.975
+margin_top = -495.561
+margin_right = 479.025
+margin_bottom = 605.439
+rect_scale = Vector2( 0.912926, 0.912926 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 40 )
 stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene6/Frame1/Rift"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene6/Frame1/Rift" index="1"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 42 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "loop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 42 )
+blend_times = [  ]
 
-[node name="Frame2" type="TextureFrame" parent="Scenes/Scene6"]
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene6" index="2"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 779.0
-margin/top = 51.0
-margin/right = 1829.0
-margin/bottom = 1002.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 779.0
+margin_top = 51.0
+margin_right = 1829.0
+margin_bottom = 1002.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 41 )
 stretch_mode = 0
 
-[node name="BlueLight" type="TextureFrame" parent="Scenes/Scene6/Frame2"]
+[node name="BlueLight" type="TextureRect" parent="Scenes/Scene6/Frame2" index="0"]
 
 editor/display_folded = true
-visibility/opacity = 0.783869
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 498.0
-margin/top = 383.0
-margin/right = 954.0
-margin/bottom = 952.0
+modulate = Color( 1, 1, 1, 0.783869 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 498.0
+margin_top = 383.0
+margin_right = 954.0
+margin_bottom = 952.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 42 )
 stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene6/Frame2/BlueLight"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene6/Frame2/BlueLight" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
-anims/loop = SubResource( 43 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
+root_node = NodePath("..")
 autoplay = "loop"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/loop = SubResource( 43 )
+blend_times = [  ]
 
-[node name="Balloons" type="Control" parent="Scenes/Scene6/Frame2"]
+[node name="Balloons" type="Control" parent="Scenes/Scene6/Frame2" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 40.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="Balloon1" type="Patch9Frame" parent="Scenes/Scene6/Frame2/Balloons"]
+[node name="Balloon1" type="NinePatchRect" parent="Scenes/Scene6/Frame2/Balloons" index="0"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 84.0
-margin/top = 62.0
-margin/right = 688.0
-margin/bottom = 472.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 84.0
+margin_top = 62.0
+margin_right = 688.0
+margin_bottom = 472.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 texture = ExtResource( 43 )
 region_rect = Rect2( 0, 0, 627, 393 )
-patch_margin/left = 61
-patch_margin/top = 69
-patch_margin/right = 67
-patch_margin/bottom = 151
+patch_margin_left = 61
+patch_margin_top = 69
+patch_margin_right = 67
+patch_margin_bottom = 151
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene6/Frame2/Balloons/Balloon1"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene6/Frame2/Balloons/Balloon1" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 54.0
-margin/right = 2.0
-margin/bottom = 101.0
-bbcode/enabled = true
-bbcode/bbcode = "[center]Central Command, 
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 54.0
+margin_right = -2.0
+margin_bottom = -101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center]Central Command, 
 this is A5-tr0. The 
 [b]objective is secured[/b] and
 I'm on my way in.[/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Central Command, 
+this is A5-tr0. The 
+objective is secured and
+I'm on my way in."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Balloon2" type="Patch9Frame" parent="Scenes/Scene6/Frame2/Balloons"]
+[node name="Balloon2" type="NinePatchRect" parent="Scenes/Scene6/Frame2/Balloons" index="1"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 44 )
-margin/left = 693.0
-margin/top = 821.0
-margin/right = 1097.0
-margin/bottom = 973.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 693.0
+margin_top = 821.0
+margin_right = 1097.0
+margin_bottom = 973.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 44 )
 texture = ExtResource( 45 )
 region_rect = Rect2( 0, 0, 404, 152 )
-patch_margin/left = 13
-patch_margin/top = 13
-patch_margin/right = 13
-patch_margin/bottom = 10
+patch_margin_left = 13
+patch_margin_top = 13
+patch_margin_right = 13
+patch_margin_bottom = 10
 
-[node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene6/Frame2/Balloons/Balloon2"]
+[node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene6/Frame2/Balloons/Balloon2" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-rect/scale = Vector2( 1.2, 1.2 )
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1.0
-margin/top = 38.0
-margin/right = 71.0
-margin/bottom = 21.0
-bbcode/enabled = true
-bbcode/bbcode = "[center][b]Congratulations,[/b]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 38.0
+margin_right = -71.0
+margin_bottom = -21.0
+rect_scale = Vector2( 1.2, 1.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center][b]Congratulations,[/b]
 A5-tr0![/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Congratulations,
+A5-tr0!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Scene7" type="Control" parent="Scenes"]
+[node name="Scene7" type="Control" parent="Scenes" index="6"]
 
 editor/display_folded = true
-visibility/visible = false
-visibility/opacity = 0.0
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 960.0
-margin/top = 540.0
-margin/right = -960.0
-margin/bottom = -540.0
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene7"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene7" index="0"]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+root_node = NodePath("..")
+autoplay = "00_base"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
 anims/00_base = SubResource( 44 )
 anims/01_fade = SubResource( 45 )
 anims/02_balloon1 = SubResource( 46 )
 anims/03_balloon2 = SubResource( 47 )
 next/01_fade = "02_balloon1"
-playback/active = true
-playback/speed = 1.0
 blend_times = [ "01_fade", "02_balloon1", 0.05 ]
-autoplay = "00_base"
 
-[node name="Splash" type="TextureFrame" parent="Scenes/Scene7"]
+[node name="Splash" type="TextureRect" parent="Scenes/Scene7" index="1"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 1920.0
-margin/bottom = 1080.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 texture = ExtResource( 46 )
 stretch_mode = 0
 
-[node name="Balloon1" type="Patch9Frame" parent="Scenes/Scene7/Splash"]
+[node name="Balloon1" type="NinePatchRect" parent="Scenes/Scene7/Splash" index="0"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 44 )
-margin/left = 50.0
-margin/top = 40.0
-margin/right = 644.0
-margin/bottom = 486.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 50.0
+margin_top = 40.0
+margin_right = 644.0
+margin_bottom = 486.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 44 )
 texture = ExtResource( 47 )
 region_rect = Rect2( 0, 0, 594, 446 )
-patch_margin/left = 20
-patch_margin/top = 22
-patch_margin/right = 92
-patch_margin/bottom = 18
+patch_margin_left = 20
+patch_margin_top = 22
+patch_margin_right = 92
+patch_margin_bottom = 18
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon1"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon1" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-rect/scale = Vector2( 1.15, 1.15 )
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 28.0
-margin/right = 77.0
-margin/bottom = 312.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 28.0
+margin_right = -77.0
+margin_bottom = -312.0
+rect_scale = Vector2( 1.15, 1.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_constants/line_separation = 12
-bbcode/enabled = true
-bbcode/bbcode = "[center]The universe will [b]never[/b] be 
+bbcode_enabled = true
+bbcode_text = "[center]The universe will [b]never[/b] be 
 the [b]same again[/b] after this![/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "The universe will never be 
+the same again after this!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon1"]
+[node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon1" index="1"]
 
-anchor/right = 1
-anchor/bottom = 1
-rect/scale = Vector2( 1.15, 1.15 )
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 170.0
-margin/right = 141.0
-margin/bottom = 37.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 170.0
+margin_right = -141.0
+margin_bottom = -37.0
+rect_scale = Vector2( 1.15, 1.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_constants/line_separation = 12
-bbcode/enabled = true
-bbcode/bbcode = "[center]We're expecting you in
+bbcode_enabled = true
+bbcode_text = "[center]We're expecting you in
 the hangar, and you can
 count on a [b]hefty bonus
 pay[/b] at the end of this
 [b]fiscal year![/b][/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "We're expecting you in
+the hangar, and you can
+count on a hefty bonus
+pay at the end of this
+fiscal year!"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Balloon2" type="Patch9Frame" parent="Scenes/Scene7/Splash"]
+[node name="Balloon2" type="NinePatchRect" parent="Scenes/Scene7/Splash" index="1"]
 
-visibility/opacity = 0.0
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 44 )
-margin/left = 1470.0
-margin/top = 932.0
-margin/right = 1861.0
-margin/bottom = 1021.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1470.0
+margin_top = 932.0
+margin_right = 1861.0
+margin_bottom = 1021.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 44 )
 texture = ExtResource( 48 )
 region_rect = Rect2( 0, 0, 391, 89 )
-patch_margin/left = 12
-patch_margin/top = 11
-patch_margin/right = 10
-patch_margin/bottom = 9
+patch_margin_left = 12
+patch_margin_top = 11
+patch_margin_right = 10
+patch_margin_bottom = 9
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon2" index="0"]
 
-anchor/right = 1
-anchor/bottom = 1
-rect/scale = Vector2( 1.4, 1.4 )
-focus/ignore_mouse = true
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 20.0
-margin/right = 111.0
-margin/bottom = 23.0
-bbcode/enabled = true
-bbcode/bbcode = "[center][b]Over and out.[/b][/center]"
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 20.0
+margin_right = -111.0
+margin_bottom = -23.0
+rect_scale = Vector2( 1.4, 1.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+bbcode_enabled = true
+bbcode_text = "[center][b]Over and out.[/b][/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Over and out."
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Buttons" type="HBoxContainer" parent="."]
+[node name="Buttons" type="HBoxContainer" parent="." index="2"]
 
-anchor/left = 3
-anchor/top = 1
-anchor/right = 3
-anchor/bottom = 1
-rect/min_size = Vector2( 0, 40 )
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 3
-size_flags/vertical = 2
-theme/theme = ExtResource( 49 )
-margin/left = 920.0
-margin/top = 63.0
-margin/right = -920.0
-margin/bottom = 6.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -920.0
+margin_top = -63.0
+margin_right = 920.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 0, 40 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource( 49 )
 alignment = 1
 
-[node name="Next" parent="Buttons" instance=ExtResource( 50 )]
+[node name="Next" parent="Buttons" index="0" instance=ExtResource( 50 )]
 
-[node name="separator" type="Control" parent="Buttons"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_default_cursor_shape = 0
+group = null
+align = 1
 
-rect/min_size = Vector2( 25, 0 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 912.0
-margin/top = 0.0
-margin/right = 937.0
-margin/bottom = 57.0
+[node name="separator" type="Control" parent="Buttons" index="1"]
 
-[node name="Skip" parent="Buttons" instance=ExtResource( 50 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 912.0
+margin_right = 937.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 25, 0 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-margin/left = 941.0
-margin/right = 1011.0
+[node name="Skip" parent="Buttons" index="2" instance=ExtResource( 50 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 941.0
+margin_right = 1011.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_default_cursor_shape = 0
+group = null
 text = "Skip"
+align = 1
 
 [connection signal="pressed" from="Buttons/Next" to="." method="_on_Next_pressed"]
 

@@ -23,9 +23,9 @@ func _ready():
 	animator = self.get_node("AnimationPlayer")
 	animator.play("fire")
 	
-	sfx_player = get_node("SamplePlayer")
+	sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	
-	set_fixed_process(true)
+	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 
 func set_laser_strength(duration):
@@ -34,7 +34,7 @@ func set_laser_strength(duration):
 	self.set_scale(new_height)
 
 
-func _fixed_process(delta):
+func _physics_process(delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	for raycast in raycasts:
 		if raycast.is_colliding():
 			var collider = raycast.get_collider()
@@ -43,8 +43,9 @@ func _fixed_process(delta):
 				#print("Bullet HIT")
 				collider.emit_signal("die")
 	
-	if is_looping_sfx and not sfx_player.is_active():
-		sfx_voice = sfx_player.play("laser_loop")
+	if is_looping_sfx and not sfx_player.playing:
+		#sfx_voice = sfx_player.play("laser_loop") # -- AUDIO REFACTOR
+		pass
 
 
 func _on_AnimationPlayer_fadeout_finished():
@@ -54,12 +55,12 @@ func _on_AnimationPlayer_fadeout_finished():
 
 
 func play_fire_sfx():
-	sfx_player.play("laser_firing")
+	# sfx_player.play("laser_firing") # -- AUDIO REFACTOR
 	pass
 
 
 func play_loop_sfx():
-	sfx_voice = sfx_player.play("laser_loop")
+	#sfx_voice = sfx_player.play("laser_loop") # -- AUDIO REFACTOR
 	is_looping_sfx = true
 
 
@@ -69,4 +70,6 @@ func start_fade_out_sfx():
 
 
 func fade_out_sfx(volume_db):
-	sfx_player.set_volume_db(sfx_voice, volume_db)
+	#sfx_player.set_volume_db(sfx_voice, volume_db) # -- AUDIO REFACTOR
+	pass
+

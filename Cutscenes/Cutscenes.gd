@@ -72,7 +72,7 @@ func go_to_next_scene():
 func fade_out_current_scene():
 	var fade_out_scene = scenes[current_scene]
 	current_animator.play_backwards(animator_steps[1])
-	yield(current_animator, "finished")
+	yield(current_animator, "animation_finished")
 	fade_out_scene.hide()
 
 func has_more_scenes():

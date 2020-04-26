@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/enemy_spawn.wav-35d80533044967ecc31c8ad7bacdd429.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/enemy_spawn.wav"
+dest_files=[ "res://.import/enemy_spawn.wav-35d80533044967ecc31c8ad7bacdd429.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

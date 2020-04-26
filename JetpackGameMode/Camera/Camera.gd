@@ -11,12 +11,12 @@ onready var tween = get_node("Tween")
 onready var obstacle_spawner = get_node("ObstacleSpawner")
 
 func _ready():
-	set_fixed_process(true)
+	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 
-func _fixed_process(delta):
-	player_position = player.get_pos()
-	set_pos(Vector2(player.get_pos().x+camera_offset_x,get_pos().y))
+func _physics_process(delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	player_position = player.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	set_position(Vector2(player.get_position().x+camera_offset_x,get_position().y))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 
 func set_camera_offset_x(value, seconds, easing = Tween.EASE_IN):
@@ -44,4 +44,5 @@ func _on_Player_dashing( boolean ):
 func _on_ObstacleSpawner_setup_laser_eye():
 	var laser_eye = get_node("LaserEye")
 	laser_eye.start()
+
 

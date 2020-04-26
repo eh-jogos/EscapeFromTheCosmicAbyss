@@ -75,8 +75,8 @@ func _on_Back_pressed():
 
 func toggle_menuitems(game_mode, should_grab_focus = true):
 	if game_mode == "story":
-		get_tree().call_group(0,"categorymenu", "hide")
-		get_tree().call_group(0,"mainmenu", "show")
+		get_tree().call_group("categorymenu", "hide")
+		get_tree().call_group("mainmenu", "show")
 		
 		arcade_btn.show()
 		speedrun_btn.show()
@@ -109,8 +109,8 @@ func toggle_menuitems(game_mode, should_grab_focus = true):
 		speedrun_btn.set_focus_neighbour(MARGIN_TOP, "")
 		
 	elif game_mode == "arcade" or game_mode == "speedrun":
-		get_tree().call_group(0,"categorymenu", "show")
-		get_tree().call_group(0,"mainmenu", "hide")
+		get_tree().call_group("categorymenu", "show")
+		get_tree().call_group("mainmenu", "hide")
 		
 		if game_mode == "arcade":
 			arcade_btn.show()

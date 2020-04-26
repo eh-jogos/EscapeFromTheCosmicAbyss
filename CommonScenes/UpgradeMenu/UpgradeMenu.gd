@@ -87,7 +87,7 @@ func _on_Close_pressed():
 	_on_SaveApply_pressed()
 	
 	animator.play("close")
-	yield(animator,"finished")
+	yield(animator, "animation_finished")
 	
 	
 	if is_story_mode():
