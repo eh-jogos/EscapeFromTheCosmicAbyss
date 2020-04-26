@@ -1,8 +1,8 @@
 extends Node
 
-var bgm1 = preload("res://CommonScenes/SoundManager/bgm/Musique 1.ogg")
-var bgm2 = preload("res://CommonScenes/SoundManager/bgm/Musique 2.ogg")
-var bgm3 = preload("res://CommonScenes/SoundManager/bgm/Musique electro.ogg")
+var bgm1 = preload("res://CommonScenes/SoundManager/bgm/Musique_1.ogg")
+var bgm2 = preload("res://CommonScenes/SoundManager/bgm/Musique_2.ogg")
+var bgm3 = preload("res://CommonScenes/SoundManager/bgm/Musique_electro.ogg")
 var track_list = {
 	"1" : bgm1,
 	"2" : bgm2,

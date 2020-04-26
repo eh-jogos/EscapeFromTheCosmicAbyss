@@ -3,7 +3,7 @@
 [ext_resource path="res://CommonScenes/SoundManager/SoundManager.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/SoundManager/ui_sfx_library.tres" type="SampleLibrary" id=2]
 [ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=3]
-[ext_resource path="res://CommonScenes/SoundManager/Musique 2.ogg" type="AudioStream" id=4]
+[ext_resource path="res://CommonScenes/SoundManager/bgm/Musique_2.ogg" type="AudioStream" id=4]
 
 [node name="SoundManager" type="Node"]
 
