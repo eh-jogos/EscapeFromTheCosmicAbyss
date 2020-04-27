@@ -6,9 +6,8 @@
 [ext_resource path="res://Fonts/OrbitronBold30.font" type="BitmapFont" id=4]
 
 [sub_resource type="StyleBoxTexture" id=1]
-
-content_margin_left = 0.0
-content_margin_right = 0.0
+content_margin_left = 40.0
+content_margin_right = 40.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 texture = ExtResource( 1 )
@@ -17,24 +16,12 @@ margin_left = 45.0
 margin_right = 45.0
 margin_top = 25.0
 margin_bottom = 25.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-
 [sub_resource type="StyleBoxTexture" id=3]
-
-content_margin_left = 0.0
-content_margin_right = 0.0
+content_margin_left = 40.0
+content_margin_right = 40.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 texture = ExtResource( 2 )
@@ -43,17 +30,10 @@ margin_left = 45.0
 margin_right = 45.0
 margin_top = 25.0
 margin_bottom = 25.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=4]
-
-content_margin_left = 60.0
-content_margin_right = 60.0
+content_margin_left = 40.0
+content_margin_right = 40.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 texture = ExtResource( 1 )
@@ -62,17 +42,10 @@ margin_left = 45.0
 margin_right = 45.0
 margin_top = 25.0
 margin_bottom = 25.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=5]
-
-content_margin_left = 0.0
-content_margin_right = 0.0
+content_margin_left = 40.0
+content_margin_right = 40.0
 content_margin_top = 0.0
 content_margin_bottom = 0.0
 texture = ExtResource( 3 )
@@ -81,25 +54,17 @@ margin_left = 45.0
 margin_right = 45.0
 margin_top = 25.0
 margin_bottom = 25.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [resource]
-
 default_font = ExtResource( 4 )
 Button/colors/font_color = Color( 0, 0.960784, 1, 1 )
 Button/colors/font_color_disabled = Color( 0, 0.960784, 1, 0.469922 )
 Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
-Button/constants/hseparation = 2
+Button/constants/hseparation = 15
 Button/fonts/font = null
 Button/styles/disabled = SubResource( 1 )
 Button/styles/focus = SubResource( 2 )
 Button/styles/hover = SubResource( 3 )
 Button/styles/normal = SubResource( 4 )
 Button/styles/pressed = SubResource( 5 )
-

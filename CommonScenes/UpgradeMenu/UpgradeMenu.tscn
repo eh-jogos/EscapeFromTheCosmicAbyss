@@ -24,15 +24,12 @@
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=22]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=23]
 [ext_resource path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" type="Animation" id=24]
-[ext_resource path="res://CommonScenes/Buttons/LeftmostBlueScreen110Theme.tres" type="Theme" id=25]
+[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=25]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=26]
 [ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=27]
 
 [sub_resource type="Animation" id=1]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScreenBaseFrame:rect_position")
 tracks/0/interp = 1
@@ -131,10 +128,6 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScreenBaseFrame:rect_position")
 tracks/0/interp = 1
@@ -269,10 +262,7 @@ tracks/10/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 length = 0.3
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScreenBaseFrame:rect_position")
 tracks/0/interp = 1
@@ -395,66 +385,14 @@ tracks/9/keys = {
 }
 
 [sub_resource type="StyleBoxFlat" id=4]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.815686, 0.192157, 0.243137, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
-border_color = Color( 0.8, 0.8, 0.8, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
 
 [sub_resource type="StyleBoxFlat" id=5]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.25098, 0.172549, 0.301961, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
-border_color = Color( 0.8, 0.8, 0.8, 1 )
 border_blend = true
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
 
 [sub_resource type="Animation" id=6]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -481,10 +419,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=7]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -511,10 +447,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=8]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -541,10 +474,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=9]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -571,10 +502,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=10]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -601,10 +529,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=11]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -631,10 +557,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=12]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -661,10 +584,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=13]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -691,10 +612,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -721,10 +639,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -751,10 +667,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -781,10 +694,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=17]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Highlight:visible")
 tracks/0/interp = 1
@@ -810,909 +721,481 @@ tracks/1/keys = {
 "values": [ 0.2, 0.7 ]
 }
 
-[node name="UpgradeScreen" type="CanvasLayer" index="0"]
-
+[node name="UpgradeScreen" type="CanvasLayer"]
 pause_mode = 2
 layer = 4
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 1 )
 anims/close = SubResource( 2 )
 anims/fade = SubResource( 3 )
-blend_times = [  ]
 
-[node name="DarkScreen" type="ColorRect" parent="." index="1"]
-
+[node name="DarkScreen" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.7 )
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
-[node name="ScreenBaseFrame" type="ColorRect" parent="." index="2"]
-
+[node name="ScreenBaseFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 60.0
 margin_right = 1860.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0.266667, 0.65098, 1, 0.6 )
-_sections_unfolded = [ "Rect" ]
 
-[node name="AstronautDiagram" type="Sprite" parent="." index="3"]
-
+[node name="AstronautDiagram" type="Sprite" parent="."]
 position = Vector2( 453.902, 588.111 )
 texture = ExtResource( 2 )
 
-[node name="SectionLabels" type="Control" parent="." index="4"]
-
+[node name="SectionLabels" type="Control" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Title" type="Label" parent="SectionLabels" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Title" type="Label" parent="SectionLabels"]
 margin_left = 160.0
 margin_top = 25.0
 margin_right = 740.0
 margin_bottom = 108.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Upgrade Points:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="PointsNumber" type="Label" parent="SectionLabels" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PointsNumber" type="Label" parent="SectionLabels"]
 margin_left = 780.0
 margin_top = 5.0
 margin_right = 900.0
 margin_bottom = 91.0
 rect_scale = Vector2( 1.3, 1.3 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "--"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Next" type="Label" parent="SectionLabels" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Next" type="Label" parent="SectionLabels"]
 margin_left = 938.0
 margin_top = 25.0
 margin_right = 1139.0
 margin_bottom = 109.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 0.227451, 0.172549, 1 )
 text = "Next:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="ProgressBar" type="ProgressBar" parent="SectionLabels" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ProgressBar" type="ProgressBar" parent="SectionLabels"]
 margin_left = 1152.0
 margin_top = 41.0
 margin_right = 1759.0
 margin_bottom = 102.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 0
 custom_styles/fg = SubResource( 4 )
 custom_styles/bg = SubResource( 5 )
-min_value = 0.0
-max_value = 100.0
 step = 1.0
-page = 0.0
 value = 50.0
-exp_edit = false
-rounded = false
 percent_visible = false
 
-[node name="Cooldown" type="Button" parent="SectionLabels" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Cooldown" type="Button" parent="SectionLabels"]
 margin_left = 780.0
 margin_top = 138.0
 margin_right = 1209.0
 margin_bottom = 193.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../../Buttons/Confirm")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath("../StartSpeed")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 7 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Jetpack Cooldown"
-flat = false
 align = 0
 script = ExtResource( 8 )
 
-[node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown" index="0"]
-
-editor/display_folded = true
+[node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown"]
 position = Vector2( 120, 97 )
 
-[node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" index="0" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )
 
-[node name="UpgradeSlot2" parent="SectionLabels/Cooldown/UpgradeBar" index="1" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot2" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 110, 0 )
 
-[node name="UpgradeSlot3" parent="SectionLabels/Cooldown/UpgradeBar" index="2" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot3" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="UpgradeSlot4" parent="SectionLabels/Cooldown/UpgradeBar" index="3" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot4" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 180, 0 )
 
-[node name="UpgradeSlot5" parent="SectionLabels/Cooldown/UpgradeBar" index="4" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot5" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 215, 0 )
 
-[node name="Minus" parent="SectionLabels/Cooldown" index="1" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/Cooldown" instance=ExtResource( 10 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
+[node name="Plus" parent="SectionLabels/Cooldown" instance=ExtResource( 11 )]
 
-[node name="Plus" parent="SectionLabels/Cooldown" index="2" instance=ExtResource( 11 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-
-[node name="Highlight" type="Sprite" parent="SectionLabels/Cooldown" index="3"]
-
+[node name="Highlight" type="Sprite" parent="SectionLabels/Cooldown"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -493.595, 377.153 )
 texture = ExtResource( 12 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Cooldown" index="4"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Cooldown"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 6 )
 anims/blink = SubResource( 7 )
-blend_times = [  ]
 
-[node name="ArrowsIndicator" parent="SectionLabels/Cooldown" index="5" instance=ExtResource( 13 )]
-
+[node name="ArrowsIndicator" parent="SectionLabels/Cooldown" instance=ExtResource( 13 )]
 visible = false
 
-[node name="StartSpeed" type="Button" parent="SectionLabels" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="StartSpeed" type="Button" parent="SectionLabels"]
 margin_left = 780.0
 margin_top = 276.0
 margin_right = 1114.0
 margin_bottom = 325.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../Cooldown")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath("../MaxSpeed")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 7 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Starting Speed"
-flat = false
 align = 0
 script = ExtResource( 14 )
 max_speed_path = NodePath("../MaxSpeed")
 
-[node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartSpeed" index="0"]
-
-editor/display_folded = true
+[node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartSpeed"]
 position = Vector2( 120, 97 )
 
-[node name="UpgradeSlot1" parent="SectionLabels/StartSpeed/UpgradeBar" index="0" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot1" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )
 
-[node name="UpgradeSlot2" parent="SectionLabels/StartSpeed/UpgradeBar" index="1" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot2" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 110, 0 )
 
-[node name="UpgradeSlot3" parent="SectionLabels/StartSpeed/UpgradeBar" index="2" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot3" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="UpgradeSlot4" parent="SectionLabels/StartSpeed/UpgradeBar" index="3" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot4" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 180, 0 )
 
-[node name="UpgradeSlot5" parent="SectionLabels/StartSpeed/UpgradeBar" index="4" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot5" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 215, 0 )
 
-[node name="UpgradeSlot6" parent="SectionLabels/StartSpeed/UpgradeBar" index="5" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot6" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 250, 0 )
 
-[node name="UpgradeSlot7" parent="SectionLabels/StartSpeed/UpgradeBar" index="6" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot7" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 285, 0 )
 
-[node name="UpgradeSlot8" parent="SectionLabels/StartSpeed/UpgradeBar" index="7" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot8" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 320, 0 )
 
-[node name="UpgradeSlot9" parent="SectionLabels/StartSpeed/UpgradeBar" index="8" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot9" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 355, 0 )
 
-[node name="UpgradeSlot10" parent="SectionLabels/StartSpeed/UpgradeBar" index="9" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot10" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 390, 0 )
 
-[node name="UpgradeSlot11" parent="SectionLabels/StartSpeed/UpgradeBar" index="10" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot11" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 425, 0 )
 
-[node name="UpgradeSlot12" parent="SectionLabels/StartSpeed/UpgradeBar" index="11" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot12" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 460, 0 )
 
-[node name="UpgradeSlot13" parent="SectionLabels/StartSpeed/UpgradeBar" index="12" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot13" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 495, 0 )
 
-[node name="UpgradeSlot14" parent="SectionLabels/StartSpeed/UpgradeBar" index="13" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot14" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 530, 0 )
 
-[node name="UpgradeSlot15" parent="SectionLabels/StartSpeed/UpgradeBar" index="14" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot15" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 565, 0 )
 
-[node name="UpgradeSlot16" parent="SectionLabels/StartSpeed/UpgradeBar" index="15" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot16" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 600, 0 )
 
-[node name="UpgradeSlot17" parent="SectionLabels/StartSpeed/UpgradeBar" index="16" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot17" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 635, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/StartSpeed" index="1"]
-
+[node name="Highlight" type="Sprite" parent="SectionLabels/StartSpeed"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -495.472, 348.888 )
 texture = ExtResource( 15 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartSpeed" index="2"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartSpeed"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 8 )
 anims/blink = SubResource( 9 )
-blend_times = [  ]
 
-[node name="Minus" parent="SectionLabels/StartSpeed" index="3" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/StartSpeed" instance=ExtResource( 10 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
+[node name="Plus" parent="SectionLabels/StartSpeed" instance=ExtResource( 11 )]
 
-[node name="Plus" parent="SectionLabels/StartSpeed" index="4" instance=ExtResource( 11 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-
-[node name="ArrowsIndicator" parent="SectionLabels/StartSpeed" index="5" instance=ExtResource( 13 )]
-
+[node name="ArrowsIndicator" parent="SectionLabels/StartSpeed" instance=ExtResource( 13 )]
 visible = false
 
-[node name="MaxSpeed" type="Button" parent="SectionLabels" index="6"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MaxSpeed" type="Button" parent="SectionLabels"]
 margin_left = 781.0
 margin_top = 419.0
 margin_right = 1028.0
 margin_bottom = 468.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../StartSpeed")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath("../LaserStrength")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 7 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Max Speed"
-flat = false
 align = 0
 script = ExtResource( 16 )
 start_speed_path = NodePath("../StartSpeed")
 
-[node name="UpgradeBar" type="Node2D" parent="SectionLabels/MaxSpeed" index="0"]
-
-editor/display_folded = true
+[node name="UpgradeBar" type="Node2D" parent="SectionLabels/MaxSpeed"]
 position = Vector2( 120, 97 )
 
-[node name="UpgradeSlot1" parent="SectionLabels/MaxSpeed/UpgradeBar" index="0" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot1" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )
 
-[node name="UpgradeSlot2" parent="SectionLabels/MaxSpeed/UpgradeBar" index="1" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot2" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 110, 0 )
 
-[node name="UpgradeSlot3" parent="SectionLabels/MaxSpeed/UpgradeBar" index="2" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot3" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="UpgradeSlot4" parent="SectionLabels/MaxSpeed/UpgradeBar" index="3" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot4" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 180, 0 )
 
-[node name="UpgradeSlot5" parent="SectionLabels/MaxSpeed/UpgradeBar" index="4" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot5" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 215, 0 )
 
-[node name="UpgradeSlot6" parent="SectionLabels/MaxSpeed/UpgradeBar" index="5" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot6" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 250, 0 )
 
-[node name="UpgradeSlot7" parent="SectionLabels/MaxSpeed/UpgradeBar" index="6" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot7" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 285, 0 )
 
-[node name="UpgradeSlot8" parent="SectionLabels/MaxSpeed/UpgradeBar" index="7" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot8" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 320, 0 )
 
-[node name="UpgradeSlot9" parent="SectionLabels/MaxSpeed/UpgradeBar" index="8" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot9" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 355, 0 )
 
-[node name="UpgradeSlot10" parent="SectionLabels/MaxSpeed/UpgradeBar" index="9" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot10" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 390, 0 )
 
-[node name="UpgradeSlot11" parent="SectionLabels/MaxSpeed/UpgradeBar" index="10" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot11" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 425, 0 )
 
-[node name="UpgradeSlot12" parent="SectionLabels/MaxSpeed/UpgradeBar" index="11" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot12" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 460, 0 )
 
-[node name="UpgradeSlot13" parent="SectionLabels/MaxSpeed/UpgradeBar" index="12" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot13" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 495, 0 )
 
-[node name="UpgradeSlot14" parent="SectionLabels/MaxSpeed/UpgradeBar" index="13" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot14" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 530, 0 )
 
-[node name="UpgradeSlot15" parent="SectionLabels/MaxSpeed/UpgradeBar" index="14" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot15" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 565, 0 )
 
-[node name="UpgradeSlot16" parent="SectionLabels/MaxSpeed/UpgradeBar" index="15" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot16" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 600, 0 )
 
-[node name="UpgradeSlot17" parent="SectionLabels/MaxSpeed/UpgradeBar" index="16" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot17" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 635, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/MaxSpeed" index="1"]
-
+[node name="Highlight" type="Sprite" parent="SectionLabels/MaxSpeed"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -496.472, 205.888 )
 texture = ExtResource( 15 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/MaxSpeed" index="2"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/MaxSpeed"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 10 )
 anims/blink = SubResource( 11 )
-blend_times = [  ]
 
-[node name="Minus" parent="SectionLabels/MaxSpeed" index="3" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/MaxSpeed" instance=ExtResource( 10 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
+[node name="Plus" parent="SectionLabels/MaxSpeed" instance=ExtResource( 11 )]
 
-[node name="Plus" parent="SectionLabels/MaxSpeed" index="4" instance=ExtResource( 11 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-
-[node name="ArrowsIndicator" parent="SectionLabels/MaxSpeed" index="5" instance=ExtResource( 13 )]
-
+[node name="ArrowsIndicator" parent="SectionLabels/MaxSpeed" instance=ExtResource( 13 )]
 visible = false
 
-[node name="LaserStrength" type="Button" parent="SectionLabels" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LaserStrength" type="Button" parent="SectionLabels"]
 margin_left = 780.0
 margin_top = 551.0
 margin_right = 1117.0
 margin_bottom = 600.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../MaxSpeed")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath("../StartingAmmo")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 7 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Laser Strength"
-flat = false
 align = 0
 script = ExtResource( 17 )
 
-[node name="UpgradeBar" type="Node2D" parent="SectionLabels/LaserStrength" index="0"]
-
-editor/display_folded = true
+[node name="UpgradeBar" type="Node2D" parent="SectionLabels/LaserStrength"]
 position = Vector2( 120, 97 )
 
-[node name="UpgradeSlot1" parent="SectionLabels/LaserStrength/UpgradeBar" index="0" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot1" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )
 
-[node name="UpgradeSlot2" parent="SectionLabels/LaserStrength/UpgradeBar" index="1" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot2" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 110, 0 )
 
-[node name="UpgradeSlot3" parent="SectionLabels/LaserStrength/UpgradeBar" index="2" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot3" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="UpgradeSlot4" parent="SectionLabels/LaserStrength/UpgradeBar" index="3" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot4" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 180, 0 )
 
-[node name="UpgradeSlot5" parent="SectionLabels/LaserStrength/UpgradeBar" index="4" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot5" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 215, 0 )
 
-[node name="UpgradeSlot6" parent="SectionLabels/LaserStrength/UpgradeBar" index="5" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot6" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 250, 0 )
 
-[node name="UpgradeSlot7" parent="SectionLabels/LaserStrength/UpgradeBar" index="6" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot7" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 285, 0 )
 
-[node name="UpgradeSlot8" parent="SectionLabels/LaserStrength/UpgradeBar" index="7" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot8" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 320, 0 )
 
-[node name="UpgradeSlot9" parent="SectionLabels/LaserStrength/UpgradeBar" index="8" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot9" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 355, 0 )
 
-[node name="UpgradeSlot10" parent="SectionLabels/LaserStrength/UpgradeBar" index="9" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot10" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 390, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/LaserStrength" index="1"]
-
+[node name="Highlight" type="Sprite" parent="SectionLabels/LaserStrength"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -217.396, 5.6712 )
 texture = ExtResource( 18 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/LaserStrength" index="2"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/LaserStrength"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 12 )
 anims/blink = SubResource( 13 )
-blend_times = [  ]
 
-[node name="Minus" parent="SectionLabels/LaserStrength" index="3" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/LaserStrength" instance=ExtResource( 10 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
+[node name="Plus" parent="SectionLabels/LaserStrength" instance=ExtResource( 11 )]
 
-[node name="Plus" parent="SectionLabels/LaserStrength" index="4" instance=ExtResource( 11 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-
-[node name="ArrowsIndicator" parent="SectionLabels/LaserStrength" index="5" instance=ExtResource( 13 )]
-
+[node name="ArrowsIndicator" parent="SectionLabels/LaserStrength" instance=ExtResource( 13 )]
 visible = false
 
-[node name="StartingAmmo" type="Button" parent="SectionLabels" index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="StartingAmmo" type="Button" parent="SectionLabels"]
 margin_left = 780.0
 margin_top = 689.0
 margin_right = 1117.0
 margin_bottom = 738.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../LaserStrength")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath("../Shields")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 7 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Starting Ammo"
-flat = false
 align = 0
 script = ExtResource( 19 )
 
-[node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartingAmmo" index="0"]
-
+[node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartingAmmo"]
 position = Vector2( 120, 97 )
 
-[node name="UpgradeSlot1" parent="SectionLabels/StartingAmmo/UpgradeBar" index="0" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot1" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )
 
-[node name="UpgradeSlot2" parent="SectionLabels/StartingAmmo/UpgradeBar" index="1" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot2" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 110, 0 )
 
-[node name="UpgradeSlot3" parent="SectionLabels/StartingAmmo/UpgradeBar" index="2" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot3" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/StartingAmmo" index="1"]
-
+[node name="Highlight" type="Sprite" parent="SectionLabels/StartingAmmo"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -217.396, -132.329 )
 texture = ExtResource( 18 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartingAmmo" index="2"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartingAmmo"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 14 )
 anims/blink = SubResource( 15 )
-blend_times = [  ]
 
-[node name="Minus" parent="SectionLabels/StartingAmmo" index="3" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/StartingAmmo" instance=ExtResource( 10 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
+[node name="Plus" parent="SectionLabels/StartingAmmo" instance=ExtResource( 11 )]
 
-[node name="Plus" parent="SectionLabels/StartingAmmo" index="4" instance=ExtResource( 11 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-
-[node name="ArrowsIndicator" parent="SectionLabels/StartingAmmo" index="5" instance=ExtResource( 13 )]
-
+[node name="ArrowsIndicator" parent="SectionLabels/StartingAmmo" instance=ExtResource( 13 )]
 visible = false
 
-[node name="Shields" type="Button" parent="SectionLabels" index="9"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Shields" type="Button" parent="SectionLabels"]
 margin_left = 780.0
 margin_top = 825.0
 margin_right = 944.0
 margin_bottom = 874.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath("../StartingAmmo")
 focus_neighbour_right = NodePath(".")
 focus_neighbour_bottom = NodePath("../../Buttons/Confirm")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 6 )
 custom_fonts/font = ExtResource( 7 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Shields"
-flat = false
 align = 0
 script = ExtResource( 20 )
 
-[node name="UpgradeBar" type="Node2D" parent="SectionLabels/Shields" index="0"]
-
-editor/display_folded = true
+[node name="UpgradeBar" type="Node2D" parent="SectionLabels/Shields"]
 position = Vector2( 120, 97 )
 
-[node name="UpgradeSlot1" parent="SectionLabels/Shields/UpgradeBar" index="0" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot1" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )
 
-[node name="UpgradeSlot2" parent="SectionLabels/Shields/UpgradeBar" index="1" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot2" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 110, 0 )
 
-[node name="UpgradeSlot3" parent="SectionLabels/Shields/UpgradeBar" index="2" instance=ExtResource( 9 )]
-
+[node name="UpgradeSlot3" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/Shields" index="1"]
-
+[node name="Highlight" type="Sprite" parent="SectionLabels/Shields"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -337.933, -192.706 )
 texture = ExtResource( 21 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Shields" index="2"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Shields"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 16 )
 anims/blink = SubResource( 17 )
-blend_times = [  ]
 
-[node name="Minus" parent="SectionLabels/Shields" index="3" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/Shields" instance=ExtResource( 10 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
+[node name="Plus" parent="SectionLabels/Shields" instance=ExtResource( 11 )]
 
-[node name="Plus" parent="SectionLabels/Shields" index="4" instance=ExtResource( 11 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-
-[node name="ArrowsIndicator" parent="SectionLabels/Shields" index="5" instance=ExtResource( 13 )]
-
+[node name="ArrowsIndicator" parent="SectionLabels/Shields" instance=ExtResource( 13 )]
 visible = false
 
-[node name="ScanlineFx" type="Node2D" parent="." index="5"]
-
+[node name="ScanlineFx" type="Node2D" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="ScanlineDark" type="Sprite" parent="ScanlineFx" index="0"]
-
+[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
 position = Vector2( 960, 540 )
 texture = ExtResource( 22 )
 region_enabled = true
@@ -1721,8 +1204,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlineBright" type="Sprite" parent="ScanlineFx" index="1"]
-
+[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
 modulate = Color( 1, 1, 1, 0.1 )
 position = Vector2( 960, 0 )
 texture = ExtResource( 23 )
@@ -1732,18 +1214,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlinePLayer" type="AnimationPlayer" parent="ScanlineFx" index="2"]
-
-root_node = NodePath("..")
+[node name="ScanlinePLayer" type="AnimationPlayer" parent="ScanlineFx"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = ExtResource( 24 )
-blend_times = [  ]
 
-[node name="Buttons" type="HBoxContainer" parent="." index="6"]
-
+[node name="Buttons" type="HBoxContainer" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -1752,144 +1227,65 @@ margin_left = -895.0
 margin_top = -127.0
 margin_right = -110.0
 margin_bottom = -17.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 15
 alignment = 2
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
-[node name="Reset" type="Button" parent="Buttons" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 143.0
-margin_right = 519.0
+[node name="Reset" type="Button" parent="Buttons"]
+margin_left = 223.0
+margin_right = 559.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 147, 110 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../Confirm")
 focus_neighbour_top = NodePath("../../SectionLabels/Shields")
 focus_neighbour_right = NodePath("../Confirm")
 focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 25 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Reset Changes"
-flat = false
-align = 1
 script = ExtResource( 26 )
-pressed_sfx = "ui_change"
 
-[node name="Confirm" type="Button" parent="Buttons" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 534.0
+[node name="Confirm" type="Button" parent="Buttons"]
+margin_left = 574.0
 margin_right = 785.0
 margin_bottom = 110.0
 rect_min_size = Vector2( 147, 110 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../Reset")
 focus_neighbour_top = NodePath("../../SectionLabels/Shields")
 focus_neighbour_right = NodePath("../Reset")
 focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 27 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Confirm"
-flat = false
-align = 1
 script = ExtResource( 26 )
 pressed_sfx = "ui_confirm"
 
-[node name="ColorFrame1" type="ColorRect" parent="." index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ColorFrame1" type="ColorRect" parent="."]
 margin_left = 1845.0
 margin_top = -28.0
 margin_right = 1860.0
 margin_bottom = 1086.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0, 0.924107, 1, 1 )
 
-[node name="ColorFrame3" type="ColorRect" parent="." index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ColorFrame3" type="ColorRect" parent="."]
 margin_left = 60.0
 margin_top = -28.0
 margin_right = 75.0
 margin_bottom = 1086.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0, 0.924107, 1, 1 )
-
 [connection signal="pressed" from="SectionLabels/Cooldown/Minus" to="SectionLabels/Cooldown" method="_on_Minus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/Cooldown/Plus" to="SectionLabels/Cooldown" method="_on_Plus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/StartSpeed/Minus" to="SectionLabels/StartSpeed" method="_on_Minus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/StartSpeed/Plus" to="SectionLabels/StartSpeed" method="_on_Plus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/MaxSpeed/Minus" to="SectionLabels/MaxSpeed" method="_on_Minus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/MaxSpeed/Plus" to="SectionLabels/MaxSpeed" method="_on_Plus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/LaserStrength/Minus" to="SectionLabels/LaserStrength" method="_on_Minus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/LaserStrength/Plus" to="SectionLabels/LaserStrength" method="_on_Plus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/StartingAmmo/Minus" to="SectionLabels/StartingAmmo" method="_on_Minus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/StartingAmmo/Plus" to="SectionLabels/StartingAmmo" method="_on_Plus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/Shields/Minus" to="SectionLabels/Shields" method="_on_Minus_pressed"]
-
 [connection signal="pressed" from="SectionLabels/Shields/Plus" to="SectionLabels/Shields" method="_on_Plus_pressed"]
-
 [connection signal="pressed" from="Buttons/Reset" to="." method="_on_Reset_pressed"]
-
 [connection signal="pressed" from="Buttons/Confirm" to="." method="_on_Close_pressed"]
-
-

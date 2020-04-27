@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
@@ -7,16 +7,16 @@
 [ext_resource path="res://Fonts/OrbitronBlack72.font" type="BitmapFont" id=5]
 [ext_resource path="res://Fonts/OrbitronBlack30.font" type="BitmapFont" id=6]
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=7]
-[ext_resource path="res://CommonScenes/Buttons/LeftmostBlueScreen110Theme.tres" type="Theme" id=8]
+[ext_resource path="res://CommonScenes/Buttons/icons/home_icon.png" type="Texture" id=8]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=9]
 [ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=10]
+[ext_resource path="res://CommonScenes/Buttons/icons/upgrade_icon.png" type="Texture" id=11]
+[ext_resource path="res://CommonScenes/Buttons/icons/retry_icon.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture" id=13]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "base"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -103,10 +103,7 @@ tracks/6/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -121,11 +118,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "open"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -212,10 +205,7 @@ tracks/6/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material/material:shader_param/Start")
 tracks/0/interp = 1
@@ -242,851 +232,393 @@ tracks/1/keys = {
 }
 
 [node name="GameOverScreen" type="Node2D"]
-
 pause_mode = 2
 script = ExtResource( 1 )
 main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/base = SubResource( 1 )
 "anims/fade out" = SubResource( 2 )
 anims/open = SubResource( 3 )
-blend_times = [  ]
 
-[node name="ColorFrame" type="ColorRect" parent="." index="1"]
-
+[node name="ColorFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 2.0
 margin_top = 2.0
 margin_right = 1922.0
 margin_bottom = 1082.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
-[node name="GameOver" type="Label" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="GameOver" type="Label" parent="."]
 margin_left = 335.0
 margin_top = 95.0
 margin_right = 834.0
 margin_bottom = 190.0
 rect_scale = Vector2( 2.5, 2.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.815686, 0.192157, 0.243137, 1 )
 text = "Game Over"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="ResultsContainer" type="VBoxContainer" parent="." index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ResultsContainer" type="VBoxContainer" parent="."]
 margin_top = 330.0
 margin_right = 1920.0
 margin_bottom = 1006.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 50
 alignment = 2
 
-[node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 398.0
+[node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
+margin_top = 397.0
 margin_right = 1920.0
-margin_bottom = 547.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+margin_bottom = 546.0
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 50
 alignment = 1
 
-[node name="HighScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HighScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 margin_left = 313.0
 margin_right = 739.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 426, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -2
-alignment = 0
 
-[node name="PrevHighscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PrevHighscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer"]
 margin_right = 426.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Score:"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Highscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Highscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer"]
 margin_top = 35.0
 margin_right = 426.0
 margin_bottom = 106.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="ScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 margin_left = 789.0
 margin_right = 1205.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 416, 149 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -5
-alignment = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="YourScore" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="YourScore" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 margin_right = 416.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Scored:"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Score" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Score" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 margin_top = 32.0
 margin_right = 416.0
 margin_bottom = 118.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer" index="2"]
-
-editor/display_folded = true
+[node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 113.0
 margin_right = 416.0
 margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 6 )
 text = "IT'S A NEW HIGHSCORE!"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/ScoreResults/ScoreContainer/HighscoreText" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/ScoreResults/ScoreContainer/HighscoreText"]
 autoplay = "text_anim"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/text_anim = SubResource( 4 )
-blend_times = [  ]
 
-[node name="UpgradeContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="UpgradeContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 margin_left = 1255.0
 margin_right = 1606.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 351, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -2
-alignment = 0
 
-[node name="UpgradeText" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="UpgradeText" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer"]
 margin_right = 351.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Upgrade Points:"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="UpgradePoints" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="UpgradePoints" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer"]
 margin_top = 35.0
 margin_right = 351.0
 margin_bottom = 106.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="TimeResults" type="HBoxContainer" parent="ResultsContainer" index="1"]
-
+[node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 398.0
 margin_right = 1920.0
 margin_bottom = 547.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 50
 alignment = 1
 
-[node name="HighTimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HighTimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults"]
 margin_left = 514.0
 margin_right = 940.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 426, 149 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -2
-alignment = 0
 
-[node name="PrevHighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PrevHighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer"]
 margin_right = 426.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Time:"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="HighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer"]
 margin_top = 35.0
 margin_right = 426.0
 margin_bottom = 106.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="TimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults"]
 margin_left = 990.0
 margin_right = 1406.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 416, 149 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -5
-alignment = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="YourTime" type="Label" parent="ResultsContainer/TimeResults/TimeContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="YourTime" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
 margin_right = 416.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Time:"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Time" type="Label" parent="ResultsContainer/TimeResults/TimeContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Time" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
 margin_top = 32.0
 margin_right = 416.0
 margin_bottom = 118.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="HightimeText" type="Label" parent="ResultsContainer/TimeResults/TimeContainer" index="2"]
-
+[node name="HightimeText" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 113.0
 margin_right = 416.0
 margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 6 )
 text = "IT'S A NEW RECORD!"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/TimeResults/TimeContainer/HightimeText" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/TimeResults/TimeContainer/HightimeText"]
 autoplay = "text_anim"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/text_anim = SubResource( 4 )
-blend_times = [  ]
 
-[node name="LapsResults" type="HBoxContainer" parent="ResultsContainer" index="2"]
-
+[node name="LapsResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 398.0
 margin_right = 1920.0
 margin_bottom = 547.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 50
 alignment = 1
 
-[node name="HighLapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HighLapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults"]
 margin_left = 514.0
 margin_right = 940.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 426, 149 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -2
-alignment = 0
 
-[node name="PrevHighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="PrevHighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer"]
 margin_right = 426.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Laps"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="HighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer"]
 margin_top = 35.0
 margin_right = 426.0
 margin_bottom = 106.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="LapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults"]
 margin_left = 990.0
 margin_right = 1406.0
 margin_bottom = 149.0
 rect_min_size = Vector2( 416, 149 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -5
-alignment = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="YourLaps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="YourLaps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
 margin_right = 416.0
 margin_bottom = 37.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Laps:"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Laps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Laps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
 margin_top = 32.0
 margin_right = 416.0
 margin_bottom = 118.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="HighlapsText" type="Label" parent="ResultsContainer/LapsResults/LapsContainer" index="2"]
-
+[node name="HighlapsText" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 113.0
 margin_right = 416.0
 margin_bottom = 149.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 6 )
 text = "IT'S A NEW RECORD!"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/LapsResults/LapsContainer/HighlapsText" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/LapsResults/LapsContainer/HighlapsText"]
 autoplay = "text_anim"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/text_anim = SubResource( 4 )
-blend_times = [  ]
 
-[node name="Buttons" type="HBoxContainer" parent="ResultsContainer" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 597.0
+[node name="Buttons" type="HBoxContainer" parent="ResultsContainer"]
+margin_top = 596.0
 margin_right = 1920.0
 margin_bottom = 676.0
-rect_min_size = Vector2( 0, 79 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+rect_min_size = Vector2( 0, 80 )
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 7 )
 alignment = 1
 
-[node name="Quit" type="Button" parent="ResultsContainer/Buttons" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 397.0
-margin_right = 613.0
-margin_bottom = 79.0
+[node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
+margin_left = 342.0
+margin_right = 647.0
+margin_bottom = 80.0
 rect_min_size = Vector2( 147, 79 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 8 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Home"
-flat = false
-align = 1
+text = "Main Menu"
+icon = ExtResource( 8 )
 script = ExtResource( 9 )
 pressed_sfx = "ui_confirm"
 
-[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 617.0
-margin_right = 955.0
-margin_bottom = 79.0
+[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
+margin_left = 651.0
+margin_right = 1001.0
+margin_bottom = 80.0
 rect_min_size = Vector2( 262, 79 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Stage Select"
-flat = false
-align = 1
+icon = ExtResource( 13 )
 script = ExtResource( 9 )
-pressed_sfx = "ui_change"
 
-[node name="Upgrade" type="Button" parent="ResultsContainer/Buttons" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 959.0
-margin_right = 1221.0
-margin_bottom = 79.0
+[node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
+margin_left = 1005.0
+margin_right = 1264.0
+margin_bottom = 80.0
 rect_min_size = Vector2( 192, 79 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Upgrade"
-flat = false
-align = 1
+icon = ExtResource( 11 )
 script = ExtResource( 9 )
-pressed_sfx = "ui_change"
 
-[node name="Replay" type="Button" parent="ResultsContainer/Buttons" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1225.0
-margin_right = 1523.0
-margin_bottom = 79.0
+[node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
+margin_left = 1268.0
+margin_right = 1578.0
+margin_bottom = 80.0
 rect_min_size = Vector2( 228, 79 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 10 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Play Again"
-flat = false
-align = 1
+icon = ExtResource( 12 )
 script = ExtResource( 9 )
 pressed_sfx = "ui_confirm"
-
 [connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
-
 [connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
-
 [connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
-
 [connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
-
-

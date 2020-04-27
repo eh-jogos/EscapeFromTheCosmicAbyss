@@ -9,486 +9,187 @@
 [ext_resource path="res://Fonts/OrbitronBold30.font" type="BitmapFont" id=7]
 
 [node name="MainMenuScreen" type="Node2D"]
-
 pause_mode = 2
 script = ExtResource( 1 )
-options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
-extras_path = "res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn"
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
-[node name="TextureFrame" type="TextureRect" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="TextureFrame" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1856.0
 margin_bottom = 1016.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 2 )
-stretch_mode = 0
 
-[node name="MenuContainer" type="VBoxContainer" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MenuContainer" type="VBoxContainer" parent="."]
 margin_left = 1276.0
 margin_top = 199.0
 margin_right = 1886.0
 margin_bottom = 938.0
 rect_min_size = Vector2( 509, 356 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 5
-alignment = 0
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
-[node name="Logo" type="TextureRect" parent="MenuContainer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Logo" type="TextureRect" parent="MenuContainer"]
 margin_right = 610.0
 margin_bottom = 287.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 3 )
-stretch_mode = 0
 
-[node name="MarginContainer" type="Control" parent="MenuContainer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="MarginContainer" type="Control" parent="MenuContainer"]
 margin_top = 292.0
 margin_right = 610.0
 margin_bottom = 352.0
 rect_min_size = Vector2( 610, 60 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Continue" type="Button" parent="MenuContainer" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Continue" type="Button" parent="MenuContainer"]
 margin_top = 357.0
 margin_right = 610.0
 margin_bottom = 413.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Continue"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="NewGame" type="Button" parent="MenuContainer" index="3" groups=[
+[node name="NewGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 418.0
 margin_right = 610.0
 margin_bottom = 474.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "New Game"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="ArcadeMode" type="Button" parent="MenuContainer" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ArcadeMode" type="Button" parent="MenuContainer"]
 margin_top = 479.0
 margin_right = 610.0
 margin_bottom = 535.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+focus_mode = 0
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Arcade Mode"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_change"
 
-[node name="SpeedrunMode" type="Button" parent="MenuContainer" index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SpeedrunMode" type="Button" parent="MenuContainer"]
 margin_top = 540.0
 margin_right = 610.0
 margin_bottom = 596.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+focus_mode = 0
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Speedrun Mode"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_change"
 
-[node name="Category15" type="Button" parent="MenuContainer" index="6" groups=[
+[node name="Category15" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 601.0
 margin_right = 610.0
 margin_bottom = 638.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 6 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "15 Upgrade Points"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="Category30" type="Button" parent="MenuContainer" index="7" groups=[
+[node name="Category30" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 643.0
 margin_right = 610.0
 margin_bottom = 680.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 6 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "30 Upgrade Points"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="Category40" type="Button" parent="MenuContainer" index="8" groups=[
+[node name="Category40" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 685.0
 margin_right = 610.0
 margin_bottom = 722.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 6 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "40 Upgrade Points"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="Unlimited" type="Button" parent="MenuContainer" index="9" groups=[
+[node name="Unlimited" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 727.0
 margin_right = 610.0
 margin_bottom = 764.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 6 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Unlimited"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="Back" type="Button" parent="MenuContainer" index="10" groups=[
+[node name="Back" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 769.0
 margin_right = 610.0
 margin_bottom = 825.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Back"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_change"
 
-[node name="Options" type="Button" parent="MenuContainer" index="11" groups=[
+[node name="Options" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 601.0
 margin_right = 610.0
 margin_bottom = 657.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Options"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_change"
 
-[node name="Extras" type="Button" parent="MenuContainer" index="12" groups=[
+[node name="Extras" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 662.0
 margin_right = 610.0
 margin_bottom = 718.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Extras"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_change"
 
-[node name="QuitGame" type="Button" parent="MenuContainer" index="13" groups=[
+[node name="QuitGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 723.0
 margin_right = 610.0
 margin_bottom = 779.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
 text = "Quit Game"
-flat = false
-align = 1
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
 
-[node name="Timer" type="Timer" parent="MenuContainer/QuitGame" index="0"]
-
-process_mode = 1
-wait_time = 1.0
+[node name="Timer" type="Timer" parent="MenuContainer/QuitGame"]
 one_shot = true
-autostart = false
 
-[node name="Label" type="Label" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="."]
 margin_left = 3.0
 margin_top = 1024.0
 margin_right = 1916.0
 margin_bottom = 1061.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 7 )
 text = "Game, Art and Animations by: Daniel Queiroz Porto          Music by: Sam Oz          Cutscene Art by: Filipe Stonoga"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="MenuContainer/Continue" to="." method="_on_Continue_pressed"]
-
 [connection signal="pressed" from="MenuContainer/NewGame" to="." method="_on_NewGame_pressed"]
-
 [connection signal="pressed" from="MenuContainer/ArcadeMode" to="." method="_on_ArcadeMode_pressed"]
-
 [connection signal="pressed" from="MenuContainer/SpeedrunMode" to="." method="_on_SpeedrunMode_pressed"]
-
 [connection signal="pressed" from="MenuContainer/Category15" to="." method="_on_Category_pressed" binds= [ 15 ]]
-
 [connection signal="pressed" from="MenuContainer/Category30" to="." method="_on_Category_pressed" binds= [ 30 ]]
-
 [connection signal="pressed" from="MenuContainer/Category40" to="." method="_on_Category_pressed" binds= [ 40 ]]
-
 [connection signal="pressed" from="MenuContainer/Unlimited" to="." method="_on_Category_pressed" binds= [ 59 ]]
-
 [connection signal="pressed" from="MenuContainer/Back" to="." method="_on_Back_pressed"]
-
 [connection signal="pressed" from="MenuContainer/Options" to="." method="_on_options_pressed"]
-
 [connection signal="pressed" from="MenuContainer/Extras" to="." method="_on_Extras_pressed"]
-
 [connection signal="pressed" from="MenuContainer/QuitGame" to="." method="_on_quit_pressed"]
-
-
