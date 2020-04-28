@@ -69,27 +69,18 @@
 [ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" type="PackedScene" id=67]
 
 [sub_resource type="SegmentShape2D" id=1]
-
-custom_solver_bias = 0.0
 a = Vector2( -50, 0 )
 b = Vector2( 1970, 0 )
 
 [sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
 extents = Vector2( 10, 629.357 )
 
 [sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
 extents = Vector2( 55.4252, 2224.51 )
 
 [sub_resource type="Animation" id=4]
-
 resource_name = "base"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Guardian:position")
 tracks/0/interp = 1
@@ -140,11 +131,8 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-
 resource_name = "warning"
 length = 16.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Guardian:position")
 tracks/0/interp = 1
@@ -195,10 +183,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -249,10 +233,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=7]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -291,11 +272,8 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=8]
-
 resource_name = "get_angry"
 length = 1.7
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -346,10 +324,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=9]
-
 length = 2.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -424,7 +399,6 @@ tracks/5/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=10]
-
 animations = [ {
 "frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
 "loop": false,
@@ -433,10 +407,7 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=11]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -463,10 +434,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=12]
-
 length = 2.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -517,7 +485,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=13]
-
 animations = [ {
 "frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
 "loop": false,
@@ -526,10 +493,7 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=14]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -568,10 +532,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-
 length = 2.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -622,7 +583,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=16]
-
 animations = [ {
 "frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
 "loop": false,
@@ -631,10 +591,7 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=17]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
 tracks/0/interp = 1
@@ -697,10 +654,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=18]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
 tracks/0/interp = 1
@@ -763,10 +717,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=19]
-
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
 tracks/0/interp = 1
@@ -829,10 +780,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=20]
-
 length = 1.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material/material:shader_param/Start")
 tracks/0/interp = 1
@@ -883,10 +831,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=21]
-
 length = 1.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material/material:shader_param/Start")
 tracks/0/interp = 1
@@ -937,223 +882,119 @@ tracks/3/keys = {
 }
 
 [node name="JetpackGame" type="Node2D"]
-
 script = ExtResource( 1 )
-point_multiple = 5
-upgrade_multiple = 30
-level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
-upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 test_mode = "speedrun"
 test_level_or_points = 10
 
-[node name="AutoBoost" type="Timer" parent="." index="0"]
-
-process_mode = 1
+[node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
-autostart = false
 
-[node name="LevelLoader" type="Node" parent="." index="1"]
-
-editor/display_folded = true
+[node name="LevelLoader" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="Level0" type="Node" parent="LevelLoader" index="0"]
-
+[node name="Level0" type="Node" parent="LevelLoader"]
 script = ExtResource( 3 )
 title = "How to Play"
 intro_cutscene = "res://Cutscenes/Cutscene1.tscn"
-end_cutscene = null
 
-[node name="Level1" type="Node" parent="LevelLoader" index="1"]
-
+[node name="Level1" type="Node" parent="LevelLoader"]
 script = ExtResource( 4 )
 title = "Jetpack for Your Life!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level2" type="Node" parent="LevelLoader" index="2"]
-
+[node name="Level2" type="Node" parent="LevelLoader"]
 script = ExtResource( 5 )
 title = "Pew pew!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level3" type="Node" parent="LevelLoader" index="3"]
-
+[node name="Level3" type="Node" parent="LevelLoader"]
 script = ExtResource( 6 )
 title = "Double Trouble!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level4" type="Node" parent="LevelLoader" index="4"]
-
+[node name="Level4" type="Node" parent="LevelLoader"]
 script = ExtResource( 7 )
 title = "Triple Trouble!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level5" type="Node" parent="LevelLoader" index="5"]
-
+[node name="Level5" type="Node" parent="LevelLoader"]
 script = ExtResource( 8 )
 title = "What was that sound?"
-intro_cutscene = null
 end_cutscene = "res://Cutscenes/Cutscene2.tscn"
 
-[node name="Level6" type="Node" parent="LevelLoader" index="6"]
-
+[node name="Level6" type="Node" parent="LevelLoader"]
 script = ExtResource( 9 )
 title = "Dash like you mean it!"
-intro_cutscene = ""
-end_cutscene = null
 
-[node name="Level7" type="Node" parent="LevelLoader" index="7"]
-
+[node name="Level7" type="Node" parent="LevelLoader"]
 script = ExtResource( 10 )
 title = "I feel like I'm being watched!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level8" type="Node" parent="LevelLoader" index="8"]
-
+[node name="Level8" type="Node" parent="LevelLoader"]
 script = ExtResource( 11 )
 title = "It's right behind me, isn't it?"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level9" type="Node" parent="LevelLoader" index="9"]
-
+[node name="Level9" type="Node" parent="LevelLoader"]
 script = ExtResource( 12 )
 title = "Almost there!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level10" type="Node" parent="LevelLoader" index="10"]
-
+[node name="Level10" type="Node" parent="LevelLoader"]
 script = ExtResource( 13 )
 title = "Are we there yet?"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level11" type="Node" parent="LevelLoader" index="11"]
-
+[node name="Level11" type="Node" parent="LevelLoader"]
 script = ExtResource( 14 )
 title = "The Calm Before the Storm!"
-intro_cutscene = null
-end_cutscene = null
 
-[node name="Level12" type="Node" parent="LevelLoader" index="12"]
-
+[node name="Level12" type="Node" parent="LevelLoader"]
 script = ExtResource( 15 )
 title = "If that was the 'Calm', what is the 'Storm'?!"
-intro_cutscene = null
 end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
-[node name="Camera2D" type="Camera2D" parent="." index="2"]
-
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 960, 540 )
-anchor_mode = 1
-rotating = false
 current = true
-zoom = Vector2( 1, 1 )
 limit_left = 0
 limit_top = 0
-limit_right = 10000000
 limit_bottom = 0
-limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
 smoothing_speed = 25.0
-offset_v = 0.0
-offset_h = 0.0
 drag_margin_left = 0.0
 drag_margin_top = 1.0
 drag_margin_right = 0.0
 drag_margin_bottom = 1.0
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
 script = ExtResource( 16 )
-_sections_unfolded = [ "Limit" ]
 
-[node name="Tween" type="Tween" parent="Camera2D" index="0"]
+[node name="Tween" type="Tween" parent="Camera2D"]
 
-repeat = false
-playback_process_mode = 1
-playback_speed = 1.0
-playback/active = false
-playback/repeat = false
-playback/speed = 1.0
-
-[node name="Limites" type="StaticBody2D" parent="Camera2D" index="1"]
-
-editor/display_folded = true
+[node name="Limites" type="StaticBody2D" parent="Camera2D"]
 position = Vector2( -960, -540 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Limites" index="0"]
-
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/Limites"]
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="Camera2D/Limites" index="1"]
-
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Camera2D/Limites"]
 position = Vector2( 0, 1080 )
 shape = SubResource( 1 )
 
-[node name="TentacleTrigger" type="Area2D" parent="Camera2D" index="2"]
-
+[node name="TentacleTrigger" type="Area2D" parent="Camera2D"]
 position = Vector2( 650, 0 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Collision" type="CollisionShape2D" parent="Camera2D/TentacleTrigger" index="0"]
-
+[node name="Collision" type="CollisionShape2D" parent="Camera2D/TentacleTrigger"]
 position = Vector2( 230, 0 )
 shape = SubResource( 2 )
 
-[node name="Beat" type="Area2D" parent="Camera2D" index="3"]
-
+[node name="Beat" type="Area2D" parent="Camera2D"]
 position = Vector2( -960, 0 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Collision" type="CollisionShape2D" parent="Camera2D/Beat" index="0"]
-
+[node name="Collision" type="CollisionShape2D" parent="Camera2D/Beat"]
 shape = SubResource( 3 )
 
-[node name="HalfBeat" type="Area2D" parent="Camera2D" index="4"]
+[node name="HalfBeat" type="Area2D" parent="Camera2D"]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="Collision" type="CollisionShape2D" parent="Camera2D/HalfBeat" index="0"]
-
+[node name="Collision" type="CollisionShape2D" parent="Camera2D/HalfBeat"]
 shape = SubResource( 3 )
 
-[node name="ObstacleSpawner" type="Position2D" parent="Camera2D" index="5"]
-
+[node name="ObstacleSpawner" type="Position2D" parent="Camera2D"]
 position = Vector2( 960, 0 )
 script = ExtResource( 17 )
 obstacle_parent = NodePath("../../Obstaculos/ObstacleBeat")
@@ -1165,295 +1006,199 @@ triple_pipe = ExtResource( 21 )
 wall = ExtResource( 22 )
 laser_eye = ExtResource( 23 )
 shield_up = ExtResource( 24 )
-ammo_up = null
 
-[node name="LaserEye" parent="Camera2D" index="6" instance=ExtResource( 25 )]
-
+[node name="LaserEye" parent="Camera2D" instance=ExtResource( 25 )]
 position = Vector2( -550, -472 )
 z_index = 3
 
-[node name="FinalBoss" type="Node2D" parent="Camera2D" index="7"]
-
-editor/display_folded = true
+[node name="FinalBoss" type="Node2D" parent="Camera2D"]
 position = Vector2( -960, 0 )
 z_index = 1
 
-[node name="Boss" parent="Camera2D/FinalBoss" index="0" groups=[
+[node name="Boss" parent="Camera2D/FinalBoss" groups=[
 "boss",
 ] instance=ExtResource( 26 )]
 
-[node name="WarningCutscene" type="Node2D" parent="Camera2D" index="8"]
-
+[node name="WarningCutscene" type="Node2D" parent="Camera2D"]
 position = Vector2( 0, 50 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/WarningCutscene" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/WarningCutscene"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 4 )
 anims/warning = SubResource( 5 )
 next/warning = "base"
-blend_times = [  ]
 
-[node name="Guardian" type="Sprite" parent="Camera2D/WarningCutscene" index="1"]
-
+[node name="Guardian" type="Sprite" parent="Camera2D/WarningCutscene"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1331.09, -33.4312 )
 texture = ExtResource( 27 )
 
-[node name="Astro" type="Sprite" parent="Camera2D/WarningCutscene" index="2"]
-
+[node name="Astro" type="Sprite" parent="Camera2D/WarningCutscene"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 504.4, 198.177 )
 texture = ExtResource( 28 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="." index="3"]
-
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -2
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-scroll_offset = Vector2( 0, 0 )
-scroll_base_offset = Vector2( 0, 0 )
-scroll_base_scale = Vector2( 1, 1 )
-scroll_limit_begin = Vector2( 0, 0 )
-scroll_limit_end = Vector2( 0, 0 )
 scroll_ignore_camera_zoom = true
 script = ExtResource( 29 )
-_sections_unfolded = [ "Scroll" ]
 
-[node name="BackRowBoss" type="Node2D" parent="ParallaxBackground" index="0" groups=[
+[node name="BackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
 ]]
-
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 650, 540 )
 script = ExtResource( 30 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/BackRowBoss" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/BackRowBoss"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/awaken = SubResource( 6 )
 anims/base = SubResource( 7 )
 anims/get_angry = SubResource( 8 )
 anims/scream = SubResource( 9 )
-blend_times = [  ]
 
-[node name="SamplePlayer" type="AudioStreamPlayer" parent="ParallaxBackground/BackRowBoss" index="1"]
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="ParallaxBackground/BackRowBoss"]
 
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
+[node name="BackRowBossSkin" parent="ParallaxBackground/BackRowBoss" instance=ExtResource( 31 )]
 
-[node name="BackRowBossSkin" parent="ParallaxBackground/BackRowBoss" index="2" instance=ExtResource( 31 )]
-
-[node name="Parallax3" type="ParallaxLayer" parent="ParallaxBackground" index="1"]
-
-editor/display_folded = true
+[node name="Parallax3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.25, 1 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
-_sections_unfolded = [ "Motion" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite0" type="AnimatedSprite" parent="ParallaxBackground/Parallax3" index="0"]
-
+[node name="Sprite0" type="AnimatedSprite" parent="ParallaxBackground/Parallax3"]
 position = Vector2( 1010, 540 )
 frames = SubResource( 10 )
-animation = "default"
 frame = 2
 script = ExtResource( 37 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax3/Sprite0" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax3/Sprite0"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="ParallaxBackground/Parallax3" index="1"]
-
-editor/display_folded = true
+[node name="Sprite1" type="AnimatedSprite" parent="ParallaxBackground/Parallax3"]
 position = Vector2( 3030, 540 )
 frames = SubResource( 10 )
-animation = "default"
 frame = 2
 script = ExtResource( 37 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax3/Sprite1" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax3/Sprite1"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="MidBackRowBoss" type="Node2D" parent="ParallaxBackground" index="2" groups=[
+[node name="MidBackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
 ]]
-
 visible = false
 position = Vector2( -430, 620 )
 script = ExtResource( 30 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/MidBackRowBoss" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/MidBackRowBoss"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 11 )
 anims/scream = SubResource( 12 )
-blend_times = [  ]
 
-[node name="SamplePlayer" type="Node" parent="ParallaxBackground/MidBackRowBoss" index="1"]
+[node name="SamplePlayer" type="Node" parent="ParallaxBackground/MidBackRowBoss"]
 
-[node name="MidRowsBossSkin" parent="ParallaxBackground/MidBackRowBoss" index="2" instance=ExtResource( 38 )]
-
+[node name="MidRowsBossSkin" parent="ParallaxBackground/MidBackRowBoss" instance=ExtResource( 38 )]
 position = Vector2( -200, -100 )
 scale = Vector2( -0.5, 0.5 )
 
-[node name="Parallax2" type="ParallaxLayer" parent="ParallaxBackground" index="3"]
-
-editor/display_folded = true
+[node name="Parallax2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.4, 1 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
-_sections_unfolded = [ "Motion" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite0" type="AnimatedSprite" parent="ParallaxBackground/Parallax2" index="0"]
-
-editor/display_folded = true
+[node name="Sprite0" type="AnimatedSprite" parent="ParallaxBackground/Parallax2"]
 position = Vector2( 1010, 540 )
 frames = SubResource( 13 )
-animation = "default"
 frame = 1
 script = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax2/Sprite0" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax2/Sprite0"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="ParallaxBackground/Parallax2" index="1"]
-
-editor/display_folded = true
+[node name="Sprite1" type="AnimatedSprite" parent="ParallaxBackground/Parallax2"]
 position = Vector2( 3030, 540 )
 frames = SubResource( 13 )
-animation = "default"
 frame = 3
 script = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax2/Sprite1" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax2/Sprite1"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="MidFrontRowBoss" type="Node2D" parent="ParallaxBackground" index="4" groups=[
+[node name="MidFrontRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
 ]]
-
 visible = false
 position = Vector2( 2600, 540 )
 script = ExtResource( 30 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/MidFrontRowBoss" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/MidFrontRowBoss"]
 anims/base = SubResource( 14 )
 anims/scream = SubResource( 15 )
-blend_times = [  ]
 
-[node name="SamplePlayer" type="Node" parent="ParallaxBackground/MidFrontRowBoss" index="1"]
+[node name="SamplePlayer" type="Node" parent="ParallaxBackground/MidFrontRowBoss"]
 
-[node name="MidRowsBossSkin" parent="ParallaxBackground/MidFrontRowBoss" index="2" instance=ExtResource( 38 )]
-
+[node name="MidRowsBossSkin" parent="ParallaxBackground/MidFrontRowBoss" instance=ExtResource( 38 )]
 position = Vector2( 400, -50 )
 scale = Vector2( 0.9, 0.9 )
 
-[node name="Parallax1" type="ParallaxLayer" parent="ParallaxBackground" index="5"]
-
-editor/display_folded = true
+[node name="Parallax1" type="ParallaxLayer" parent="ParallaxBackground"]
 z_as_relative = false
 motion_scale = Vector2( 0.5, 1 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
 
-[node name="Sprite0" type="AnimatedSprite" parent="ParallaxBackground/Parallax1" index="0"]
-
-editor/display_folded = true
+[node name="Sprite0" type="AnimatedSprite" parent="ParallaxBackground/Parallax1"]
 position = Vector2( 1010, 540 )
 frames = SubResource( 16 )
-animation = "default"
 frame = 2
 script = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax1/Sprite0" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax1/Sprite0"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="ParallaxBackground/Parallax1" index="1"]
-
-editor/display_folded = true
+[node name="Sprite1" type="AnimatedSprite" parent="ParallaxBackground/Parallax1"]
 position = Vector2( 3030, 540 )
 frames = SubResource( 16 )
-animation = "default"
 frame = 4
 script = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax1/Sprite1" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax1/Sprite1"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Parallax0" type="ParallaxLayer" parent="ParallaxBackground" index="6"]
-
+[node name="Parallax0" type="ParallaxLayer" parent="ParallaxBackground"]
 visible = false
 z_as_relative = false
 motion_scale = Vector2( 0.75, 1 )
-motion_offset = Vector2( 0, 0 )
-motion_mirroring = Vector2( 0, 0 )
 
-[node name="Sprite0" type="Sprite" parent="ParallaxBackground/Parallax0" index="0"]
-
+[node name="Sprite0" type="Sprite" parent="ParallaxBackground/Parallax0"]
 light_mask = 1024
 position = Vector2( 960, 540 )
 texture = ExtResource( 50 )
@@ -1462,395 +1207,221 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax0/Sprite0" index="0"]
-
+[node name="EndPoint" type="Position2D" parent="ParallaxBackground/Parallax0/Sprite0"]
 visible = false
 position = Vector2( 960, 540 )
 
-[node name="Player" parent="." index="4" instance=ExtResource( 52 )]
-
+[node name="Player" parent="." instance=ExtResource( 52 )]
 position = Vector2( 961, 554 )
 
-[node name="Obstaculos" type="Node2D" parent="." index="5"]
+[node name="Obstaculos" type="Node2D" parent="."]
 
-[node name="Outlines" type="Node2D" parent="Obstaculos" index="0"]
+[node name="Outlines" type="Node2D" parent="Obstaculos"]
 
-[node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" index="0" instance=ExtResource( 53 )]
-
+[node name="BottomLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 53 )]
 position = Vector2( 0, 1019 )
 
-[node name="BottomLimitsOutline1" parent="Obstaculos/Outlines" index="1" instance=ExtResource( 53 )]
-
+[node name="BottomLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 53 )]
 position = Vector2( 2370, 1019 )
 
-[node name="TopLimitsOutline0" parent="Obstaculos/Outlines" index="2" instance=ExtResource( 53 )]
-
+[node name="TopLimitsOutline0" parent="Obstaculos/Outlines" instance=ExtResource( 53 )]
 position = Vector2( 0, 61 )
 scale = Vector2( 1, -1 )
 
-[node name="TopLimitsOutline1" parent="Obstaculos/Outlines" index="3" instance=ExtResource( 53 )]
-
+[node name="TopLimitsOutline1" parent="Obstaculos/Outlines" instance=ExtResource( 53 )]
 position = Vector2( 2370, 61 )
 scale = Vector2( 1, -1 )
 
-[node name="ObstacleBeat" type="Node2D" parent="Obstaculos" index="1"]
+[node name="ObstacleBeat" type="Node2D" parent="Obstaculos"]
 
-[node name="ObstacleHalfBeat" type="Node2D" parent="Obstaculos" index="2"]
+[node name="ObstacleHalfBeat" type="Node2D" parent="Obstaculos"]
 
-[node name="ScreenLimits" type="Node2D" parent="Obstaculos" index="3"]
+[node name="ScreenLimits" type="Node2D" parent="Obstaculos"]
 
-[node name="BottomScreenLimits0" parent="Obstaculos/ScreenLimits" index="0" instance=ExtResource( 54 )]
-
+[node name="BottomScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 54 )]
 position = Vector2( 0, 1019 )
 
-[node name="BottomScreenLimits1" parent="Obstaculos/ScreenLimits" index="1" instance=ExtResource( 54 )]
-
+[node name="BottomScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 54 )]
 position = Vector2( 2370, 1019 )
 
-[node name="TopScreenLimits0" parent="Obstaculos/ScreenLimits" index="2" instance=ExtResource( 54 )]
-
+[node name="TopScreenLimits0" parent="Obstaculos/ScreenLimits" instance=ExtResource( 54 )]
 position = Vector2( 0, 61 )
 scale = Vector2( 1, -1 )
 
-[node name="TopScreenLimits1" parent="Obstaculos/ScreenLimits" index="3" instance=ExtResource( 54 )]
-
+[node name="TopScreenLimits1" parent="Obstaculos/ScreenLimits" instance=ExtResource( 54 )]
 position = Vector2( 2370, 61 )
 scale = Vector2( 1, -1 )
 
-[node name="HUD" type="CanvasLayer" parent="." index="6"]
-
+[node name="HUD" type="CanvasLayer" parent="."]
 pause_mode = 2
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 17 )
 anims/editor = SubResource( 18 )
 anims/fade_out = SubResource( 19 )
-blend_times = [  ]
 
-[node name="pallet" type="Sprite" parent="HUD" index="1"]
-
+[node name="pallet" type="Sprite" parent="HUD"]
 position = Vector2( 959.021, 1335.47 )
 texture = ExtResource( 55 )
 
-[node name="Meters" type="HBoxContainer" parent="HUD" index="2"]
-
+[node name="Meters" type="HBoxContainer" parent="HUD"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 205.0
 margin_top = 954.0
 margin_right = 500.0
 margin_bottom = 994.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 15
-alignment = 0
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Shields" type="HBoxContainer" parent="HUD/Meters" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Shields" type="HBoxContainer" parent="HUD/Meters"]
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
-alignment = 0
 script = ExtResource( 56 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Ammunition" type="HBoxContainer" parent="HUD/Meters" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Ammunition" type="HBoxContainer" parent="HUD/Meters"]
 margin_left = 15.0
 margin_right = 15.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = 0
-alignment = 0
 script = ExtResource( 57 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CenterArea" type="VBoxContainer" parent="HUD" index="3"]
-
+[node name="CenterArea" type="VBoxContainer" parent="HUD"]
 anchor_left = 0.5
-anchor_top = 0.0
 anchor_right = 0.5
-anchor_bottom = 0.0
 margin_left = -375.0
 margin_top = 75.0
 margin_right = 375.0
 margin_bottom = 225.0
 rect_min_size = Vector2( 750, 150 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_constants/separation = -5
-alignment = 0
 
-[node name="Score" type="Label" parent="HUD/CenterArea" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Score" type="Label" parent="HUD/CenterArea"]
 margin_right = 750.0
 margin_bottom = 37.0
 rect_min_size = Vector2( 108, 37 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 58 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Score:"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Points" type="Label" parent="HUD/CenterArea" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Points" type="Label" parent="HUD/CenterArea"]
 margin_top = 32.0
 margin_right = 750.0
 margin_bottom = 118.0
 rect_min_size = Vector2( 500, 86 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 59 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "0000"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="TimeLaps" type="Label" parent="HUD/CenterArea" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TimeLaps" type="Label" parent="HUD/CenterArea"]
 margin_top = 113.0
 margin_right = 750.0
 margin_bottom = 150.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 58 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Time: "
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="RunTime" type="Label" parent="HUD/CenterArea" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="RunTime" type="Label" parent="HUD/CenterArea"]
 margin_top = 145.0
 margin_right = 750.0
 margin_bottom = 182.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 58 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "00:00"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 script = ExtResource( 60 )
 
-[node name="Timer" type="Timer" parent="HUD/CenterArea/RunTime" index="0"]
+[node name="Timer" type="Timer" parent="HUD/CenterArea/RunTime"]
 
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
-
-[node name="UpgradeLabel" type="Label" parent="HUD" index="4"]
-
+[node name="UpgradeLabel" type="Label" parent="HUD"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 492.0
 margin_top = 400.0
 margin_right = 1476.0
 margin_bottom = 486.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 59 )
 text = "+ UPGRADE POINT!"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Messager" type="AnimationPlayer" parent="HUD/UpgradeLabel" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="Messager" type="AnimationPlayer" parent="HUD/UpgradeLabel"]
 anims/text_anim = SubResource( 20 )
-blend_times = [  ]
 
-[node name="SpeedLabel" type="Label" parent="HUD" index="5"]
-
+[node name="SpeedLabel" type="Label" parent="HUD"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_top = 50.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 59 )
 text = "MAX SPEED INCREASED!"
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 script = ExtResource( 61 )
 
-[node name="Messager" type="AnimationPlayer" parent="HUD/SpeedLabel" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="Messager" type="AnimationPlayer" parent="HUD/SpeedLabel"]
 anims/text_anim = SubResource( 21 )
-blend_times = [  ]
 
-[node name="ProgressVisualization" parent="HUD" index="6" instance=ExtResource( 62 )]
-
+[node name="ProgressVisualization" parent="HUD" instance=ExtResource( 62 )]
 margin_top = 986.0
 margin_bottom = 8.0
 
-[node name="AboveScreen" type="CanvasLayer" parent="." index="7"]
-
+[node name="AboveScreen" type="CanvasLayer" parent="."]
 pause_mode = 2
 layer = 3
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="LevelCompleteScreen" parent="AboveScreen" index="0" instance=ExtResource( 63 )]
-
+[node name="LevelCompleteScreen" parent="AboveScreen" instance=ExtResource( 63 )]
 visible = false
 
-[node name="CountdownScreen" parent="AboveScreen" index="1" instance=ExtResource( 64 )]
-
+[node name="CountdownScreen" parent="AboveScreen" instance=ExtResource( 64 )]
 visible = false
 
-[node name="PauseScreen" parent="AboveScreen" index="2" instance=ExtResource( 65 )]
-
+[node name="PauseScreen" parent="AboveScreen" instance=ExtResource( 65 )]
 visible = false
 
-[node name="GameOverScreen" parent="AboveScreen" index="3" instance=ExtResource( 66 )]
-
+[node name="GameOverScreen" parent="AboveScreen" instance=ExtResource( 66 )]
 visible = false
 
-[node name="TutorialTipScreen" parent="AboveScreen" index="4" instance=ExtResource( 67 )]
-
+[node name="TutorialTipScreen" parent="AboveScreen" instance=ExtResource( 67 )]
 visible = false
-
 [connection signal="area_exited" from="Camera2D/Beat" to="Camera2D/ObstacleSpawner" method="_on_Beat_area_exit"]
-
 [connection signal="area_exited" from="Camera2D/HalfBeat" to="Camera2D/ObstacleSpawner" method="_on_HalfBeat_area_exit"]
-
 [connection signal="level_end" from="Camera2D/ObstacleSpawner" to="." method="_on_ObstacleSpawner_level_end"]
-
 [connection signal="level_ready" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
-
 [connection signal="setup_laser_eye" from="Camera2D/ObstacleSpawner" to="Camera2D" method="_on_ObstacleSpawner_setup_laser_eye"]
-
 [connection signal="update_visualization" from="Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
-
 [connection signal="dashing" from="Player" to="Camera2D" method="_on_Player_dashing"]
-
 [connection signal="sort_children" from="HUD/Meters/Ammunition" to="HUD/Meters/Ammunition" method="_on_Ammunition_sort_children"]
-
 [connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
-
 
 [editable path="ParallaxBackground/BackRowBoss/BackRowBossSkin"]

@@ -15,6 +15,8 @@ var last_focus
 var game
 
 func _ready():
+	set_process_input(true)
+	
 	animator = self.get_node("AnimationPlayer")
 	
 	resume_btn = self.get_node("ButtonsBlock/Resume")
@@ -31,7 +33,6 @@ func _ready():
 	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
 		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
 	
-	set_process_input(true)
 	pass
 
 func _input(event):

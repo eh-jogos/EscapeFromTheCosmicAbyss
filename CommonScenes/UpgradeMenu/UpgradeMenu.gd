@@ -116,7 +116,7 @@ func _ready():
 	initial_btn.grab_focus()
 	
 	animator = self.get_node("AnimationPlayer")
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
 	if is_extra_mode():

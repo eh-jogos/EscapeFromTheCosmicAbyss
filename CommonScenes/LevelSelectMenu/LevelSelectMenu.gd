@@ -59,7 +59,7 @@ func _ready():
 	map_animator = self.get_node("Map/AnimationPlayer")
 	
 	animator = self.get_node("AnimationPlayer")
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0, true)
 	
 	last_played_level = Global.savedata["story"]["current level"]

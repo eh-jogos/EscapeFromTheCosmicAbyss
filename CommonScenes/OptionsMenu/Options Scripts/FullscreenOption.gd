@@ -4,6 +4,8 @@ var fullscreen
 var arrows_highlight
 
 func _ready():
+	set_process_input(false)
+	
 	if not self.is_connected("mouse_enter",self,"_on_mouse_enter"):
 		self.connect("mouse_enter",self,"_on_mouse_enter")
 	

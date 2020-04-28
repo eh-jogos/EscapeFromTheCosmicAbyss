@@ -5,6 +5,7 @@ var track_volume
 var arrows_highlight
 
 func _ready():
+	set_process_input(false)
 	# Called every time the node is added to the scene.
 	# Initialization here
 	if not self.is_connected("mouse_enter",self,"_on_mouse_enter"):

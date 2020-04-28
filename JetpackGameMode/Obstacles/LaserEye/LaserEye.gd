@@ -21,7 +21,7 @@ func _ready():
 	
 	set_physics_process(false)
 	
-	animator.set_current_animation("hidden")
+	animator.assigned_animation = "hidden"
 	animator.seek(0,true)
 	
 	raycast_left = get_node("Root/Raycasts/Left")

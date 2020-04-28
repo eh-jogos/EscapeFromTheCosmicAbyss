@@ -7,13 +7,15 @@ var level_num
 var level_title
 
 func _ready():
+	set_process_input(false)
 	game = self.get_parent().get_parent()
 	animator = self.get_node("AnimationPlayer")
 	level_num = self.get_node("LevelNum")
 	level_title = self.get_node("LevelTitle")
 	
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0,true)
+	
 
 
 func play(num, title):

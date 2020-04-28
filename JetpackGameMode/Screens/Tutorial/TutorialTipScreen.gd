@@ -16,8 +16,9 @@ func _ready():
 	level_title = self.get_node(level_title)
 	tip_selector = self.get_node(tip_selector)
 	
-	tip_selector.set_current_animation("TipScreen_0")
+	tip_selector.assigned_animation = "TipScreen_0"
 	tip_selector.seek(0, true)
+	self.set_process_input(false)
 	
 
 func play(num, title):
@@ -41,6 +42,7 @@ func _input(event):
 		game.player_reset_y()
 		self.get_tree().set_pause(false)
 		self.hide()
+		#Process is being set to true by TipSelector when needed
 		self.set_process_input(false)
 		
 		if not SoundManager.bgm_stream.is_playing():

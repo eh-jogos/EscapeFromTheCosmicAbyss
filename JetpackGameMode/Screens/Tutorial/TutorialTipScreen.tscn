@@ -753,11 +753,7 @@
 [ext_resource path="res://CommonScenes/pallet.png" type="Texture" id=751]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "TipScreen_0"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Tip#0:visible")
 tracks/0/interp = 1
@@ -930,11 +926,7 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "TipScreen_1"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Tip#0:visible")
 tracks/0/interp = 1
@@ -1107,11 +1099,7 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "TipScreen_2"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Tip#0:visible")
 tracks/0/interp = 1
@@ -1284,11 +1272,7 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
 resource_name = "TipScreen_3"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Tip#0:visible")
 tracks/0/interp = 1
@@ -1461,11 +1445,7 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-
 resource_name = "TipScreen_4"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Tip#0:visible")
 tracks/0/interp = 1
@@ -1638,52 +1618,48 @@ tracks/13/keys = {
 }
 
 [sub_resource type="Curve2D" id=6]
-
-bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 664.597, 573.424, -94.2742, -3.0411, 133.406, -1.02707, 854.907, 431.216, -101.877, 0, 107.959, -3.0411, 1119.24, 679.863, 0, 0, 0, 0, 1295.63, 562.78 )
 }
 
 [sub_resource type="SpriteFrames" id=7]
-
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
-"loop": false,
-"name": "rise_to_fall",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "rise_to_fall",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ) ],
 "loop": false,
 "name": "fall_to_rise",
 "speed": 60.0
-} ]
-
-[sub_resource type="SpriteFrames" id=8]
-
-animations = [ {
-"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ) ],
-"loop": false,
-"name": "rise_to_fall",
-"speed": 60.0
 }, {
-"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ) ],
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
 "loop": true,
 "name": "rising",
 "speed": 60.0
-}, {
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
 "frames": [ ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ) ],
+"loop": true,
+"name": "shooting",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ) ],
+"loop": false,
+"name": "rise_to_fall",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ) ],
@@ -1696,28 +1672,27 @@ animations = [ {
 "name": "reloading",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ) ],
+"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ) ],
 "loop": true,
-"name": "shooting",
+"name": "rising",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=9]
-
 animations = [ {
-"frames": [ ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ) ],
-"loop": false,
-"name": "rise_to_fall",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ) ],
+"loop": true,
+"name": "shooting",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ) ],
+"loop": false,
+"name": "rise_to_fall",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ) ],
@@ -1730,52 +1705,50 @@ animations = [ {
 "name": "reloading",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 248 ) ],
+"frames": [ ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ) ],
 "loop": true,
-"name": "shooting",
+"name": "rising",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=10]
-
 animations = [ {
-"frames": [ ExtResource( 249 ), ExtResource( 250 ), ExtResource( 251 ), ExtResource( 252 ), ExtResource( 253 ), ExtResource( 254 ), ExtResource( 255 ), ExtResource( 256 ), ExtResource( 257 ), ExtResource( 258 ), ExtResource( 259 ), ExtResource( 260 ), ExtResource( 261 ) ],
-"loop": false,
-"name": "rise_to_fall",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 262 ), ExtResource( 263 ), ExtResource( 264 ), ExtResource( 265 ), ExtResource( 266 ), ExtResource( 267 ), ExtResource( 268 ), ExtResource( 269 ), ExtResource( 270 ), ExtResource( 271 ), ExtResource( 272 ), ExtResource( 273 ), ExtResource( 274 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 275 ), ExtResource( 276 ), ExtResource( 277 ), ExtResource( 278 ), ExtResource( 279 ), ExtResource( 280 ), ExtResource( 281 ), ExtResource( 282 ), ExtResource( 283 ), ExtResource( 284 ), ExtResource( 285 ), ExtResource( 286 ), ExtResource( 287 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 249 ), ExtResource( 250 ), ExtResource( 251 ), ExtResource( 252 ), ExtResource( 253 ), ExtResource( 254 ), ExtResource( 255 ), ExtResource( 256 ), ExtResource( 257 ), ExtResource( 258 ), ExtResource( 259 ), ExtResource( 260 ), ExtResource( 261 ) ],
+"loop": false,
+"name": "rise_to_fall",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 288 ), ExtResource( 289 ), ExtResource( 290 ), ExtResource( 291 ), ExtResource( 292 ), ExtResource( 293 ), ExtResource( 294 ), ExtResource( 295 ), ExtResource( 296 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 299 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 305 ), ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 309 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 312 ) ],
 "loop": false,
 "name": "fall_to_rise",
 "speed": 60.0
-} ]
-
-[sub_resource type="SpriteFrames" id=11]
-
-animations = [ {
-"frames": [ ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ) ],
-"loop": false,
-"name": "rise_to_fall",
-"speed": 60.0
 }, {
-"frames": [ ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ) ],
+"frames": [ ExtResource( 262 ), ExtResource( 263 ), ExtResource( 264 ), ExtResource( 265 ), ExtResource( 266 ), ExtResource( 267 ), ExtResource( 268 ), ExtResource( 269 ), ExtResource( 270 ), ExtResource( 271 ), ExtResource( 272 ), ExtResource( 273 ), ExtResource( 274 ) ],
 "loop": true,
 "name": "rising",
 "speed": 60.0
-}, {
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
 "frames": [ ExtResource( 339 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 342 ), ExtResource( 343 ), ExtResource( 344 ), ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ), ExtResource( 400 ), ExtResource( 401 ), ExtResource( 402 ) ],
+"loop": true,
+"name": "shooting",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ) ],
+"loop": false,
+"name": "rise_to_fall",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ), ExtResource( 364 ), ExtResource( 365 ), ExtResource( 366 ), ExtResource( 367 ), ExtResource( 368 ), ExtResource( 369 ), ExtResource( 370 ), ExtResource( 371 ), ExtResource( 372 ), ExtResource( 373 ), ExtResource( 374 ), ExtResource( 375 ), ExtResource( 376 ) ],
@@ -1788,28 +1761,27 @@ animations = [ {
 "name": "reloading",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ), ExtResource( 400 ), ExtResource( 401 ), ExtResource( 402 ) ],
+"frames": [ ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ) ],
 "loop": true,
-"name": "shooting",
+"name": "rising",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=12]
-
 animations = [ {
-"frames": [ ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ), ExtResource( 407 ), ExtResource( 408 ), ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ) ],
-"loop": false,
-"name": "rise_to_fall",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 429 ), ExtResource( 430 ), ExtResource( 431 ), ExtResource( 432 ), ExtResource( 433 ), ExtResource( 434 ), ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ) ],
 "loop": true,
 "name": "falling",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 491 ), ExtResource( 492 ) ],
+"loop": true,
+"name": "shooting",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ), ExtResource( 407 ), ExtResource( 408 ), ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ) ],
+"loop": false,
+"name": "rise_to_fall",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ), ExtResource( 454 ), ExtResource( 455 ), ExtResource( 456 ), ExtResource( 457 ), ExtResource( 458 ), ExtResource( 459 ), ExtResource( 460 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 463 ), ExtResource( 464 ), ExtResource( 465 ), ExtResource( 466 ) ],
@@ -1822,17 +1794,14 @@ animations = [ {
 "name": "reloading",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 491 ), ExtResource( 492 ) ],
+"frames": [ ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ) ],
 "loop": true,
-"name": "shooting",
+"name": "rising",
 "speed": 60.0
 } ]
 
 [sub_resource type="Animation" id=13]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:position")
 tracks/0/interp = 1
@@ -1931,10 +1900,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-
 length = 0.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:position")
 tracks/0/interp = 1
@@ -2033,10 +1999,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:position")
 tracks/0/interp = 1
@@ -2135,10 +2098,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-
 length = 0.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:position")
 tracks/0/interp = 1
@@ -2249,10 +2209,7 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id=17]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:position")
 tracks/0/interp = 1
@@ -2351,10 +2308,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=18]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -2549,10 +2503,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=19]
-
 length = 0.4
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -2747,10 +2698,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=20]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -2945,10 +2893,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=21]
-
 length = 0.3
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -3143,10 +3088,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=22]
-
 length = 0.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -3341,10 +3283,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=23]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -3539,10 +3478,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=24]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline/ArmFrontOutline:position")
 tracks/0/interp = 1
@@ -3737,10 +3673,7 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=25]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -3815,10 +3748,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=26]
-
 length = 0.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -3893,10 +3823,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=27]
-
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -3971,10 +3898,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=28]
-
 length = 0.01
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -4049,10 +3974,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=29]
-
 length = 0.2
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
 tracks/0/interp = 1
@@ -4127,11 +4049,9 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=30]
-
 resource_name = "base"
 length = 0.01
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -4182,10 +4102,8 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=31]
-
 length = 1.5
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -4236,7 +4154,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=32]
-
 animations = [ {
 "frames": [ ExtResource( 494 ), ExtResource( 495 ), ExtResource( 496 ), ExtResource( 497 ), ExtResource( 498 ), ExtResource( 499 ), ExtResource( 500 ), ExtResource( 501 ), ExtResource( 502 ), ExtResource( 503 ), ExtResource( 504 ), ExtResource( 505 ), ExtResource( 506 ), ExtResource( 507 ), ExtResource( 508 ), ExtResource( 509 ) ],
 "loop": true,
@@ -4245,7 +4162,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=33]
-
 animations = [ {
 "frames": [ ExtResource( 511 ), ExtResource( 512 ), ExtResource( 513 ), ExtResource( 514 ), ExtResource( 515 ), ExtResource( 516 ), ExtResource( 517 ), ExtResource( 518 ), ExtResource( 519 ), ExtResource( 520 ), ExtResource( 521 ), ExtResource( 522 ), ExtResource( 523 ), ExtResource( 524 ), ExtResource( 525 ), ExtResource( 526 ) ],
 "loop": true,
@@ -4254,7 +4170,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=34]
-
 animations = [ {
 "frames": [ ExtResource( 528 ), ExtResource( 529 ), ExtResource( 530 ), ExtResource( 531 ), ExtResource( 532 ), ExtResource( 533 ), ExtResource( 534 ), ExtResource( 535 ), ExtResource( 536 ), ExtResource( 537 ), ExtResource( 538 ), ExtResource( 539 ), ExtResource( 540 ), ExtResource( 541 ), ExtResource( 542 ), ExtResource( 543 ) ],
 "loop": true,
@@ -4263,11 +4178,9 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=35]
-
 resource_name = "base"
 length = 0.01
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -4318,7 +4231,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=36]
-
 animations = [ {
 "frames": [ ExtResource( 544 ), ExtResource( 545 ), ExtResource( 546 ), ExtResource( 546 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 549 ), ExtResource( 550 ), ExtResource( 551 ), ExtResource( 551 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 554 ), ExtResource( 554 ), ExtResource( 554 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 551 ), ExtResource( 550 ), ExtResource( 549 ), ExtResource( 549 ), ExtResource( 549 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 546 ), ExtResource( 545 ) ],
 "loop": true,
@@ -4330,9 +4242,9 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
-"loop": true,
-"name": "crush_idle",
+"frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
+"loop": false,
+"name": "kill_player",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ) ],
@@ -4340,14 +4252,13 @@ animations = [ {
 "name": "crush",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
-"loop": false,
-"name": "kill_player",
+"frames": [ ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
+"loop": true,
+"name": "crush_idle",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
-
 animations = [ {
 "frames": [ ExtResource( 588 ), ExtResource( 589 ), ExtResource( 590 ), ExtResource( 590 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 593 ), ExtResource( 594 ), ExtResource( 595 ), ExtResource( 595 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 595 ), ExtResource( 594 ), ExtResource( 593 ), ExtResource( 593 ), ExtResource( 593 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 590 ), ExtResource( 589 ) ],
 "loop": true,
@@ -4359,24 +4270,23 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
-"loop": true,
-"name": "crush_idle",
-"speed": 60.0
+"frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
+"loop": false,
+"name": "kill_player",
+"speed": 59.999
 }, {
 "frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ) ],
 "loop": false,
 "name": "crush",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
-"loop": false,
-"name": "kill_player",
-"speed": 59.999
+"frames": [ ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
+"loop": true,
+"name": "crush_idle",
+"speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
-
 animations = [ {
 "frames": [ ExtResource( 632 ), ExtResource( 633 ), ExtResource( 634 ), ExtResource( 635 ), ExtResource( 636 ), ExtResource( 637 ), ExtResource( 638 ), ExtResource( 639 ), ExtResource( 640 ), ExtResource( 641 ), ExtResource( 642 ), ExtResource( 643 ), ExtResource( 644 ), ExtResource( 645 ), ExtResource( 646 ), ExtResource( 647 ), ExtResource( 648 ), ExtResource( 649 ), ExtResource( 650 ), ExtResource( 651 ), ExtResource( 652 ), ExtResource( 653 ), ExtResource( 654 ), ExtResource( 655 ), ExtResource( 656 ), ExtResource( 657 ), ExtResource( 658 ), ExtResource( 659 ), ExtResource( 660 ), ExtResource( 661 ), ExtResource( 662 ), ExtResource( 663 ), ExtResource( 664 ), ExtResource( 665 ), ExtResource( 666 ), ExtResource( 667 ), ExtResource( 668 ), ExtResource( 669 ), ExtResource( 670 ), ExtResource( 671 ), ExtResource( 672 ), ExtResource( 673 ), ExtResource( 674 ), ExtResource( 675 ), ExtResource( 676 ), ExtResource( 677 ), ExtResource( 678 ), ExtResource( 679 ), ExtResource( 680 ), ExtResource( 681 ), ExtResource( 682 ), ExtResource( 683 ) ],
 "loop": false,
@@ -4385,7 +4295,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=39]
-
 animations = [ {
 "frames": [ ExtResource( 684 ), ExtResource( 685 ), ExtResource( 686 ), ExtResource( 687 ), ExtResource( 688 ), ExtResource( 689 ), ExtResource( 690 ), ExtResource( 691 ), ExtResource( 692 ), ExtResource( 693 ), ExtResource( 694 ), ExtResource( 695 ), ExtResource( 696 ), ExtResource( 697 ), ExtResource( 698 ), ExtResource( 699 ), ExtResource( 700 ), ExtResource( 701 ), ExtResource( 702 ), ExtResource( 703 ), ExtResource( 704 ), ExtResource( 705 ), ExtResource( 706 ), ExtResource( 707 ), ExtResource( 708 ), ExtResource( 709 ), ExtResource( 710 ), ExtResource( 711 ), ExtResource( 712 ), ExtResource( 713 ), ExtResource( 714 ), ExtResource( 715 ), ExtResource( 716 ), ExtResource( 717 ), ExtResource( 718 ), ExtResource( 719 ), ExtResource( 720 ), ExtResource( 721 ), ExtResource( 722 ), ExtResource( 723 ), ExtResource( 724 ), ExtResource( 725 ), ExtResource( 726 ), ExtResource( 727 ), ExtResource( 728 ), ExtResource( 729 ), ExtResource( 730 ), ExtResource( 731 ), ExtResource( 732 ), ExtResource( 733 ), ExtResource( 734 ), ExtResource( 735 ) ],
 "loop": false,
@@ -4394,17 +4303,13 @@ animations = [ {
 } ]
 
 [sub_resource type="Curve2D" id=40]
-
-bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 664.597, 573.424, -50.5927, 2.35315, 7.05945, 0, 755.841, 484.947, 0, 0, 70.5945, 0, 1105.24, 485.063, 0, 0, 0, 0, 1217.01, 365.053 )
 }
 
 [sub_resource type="Animation" id=41]
-
 length = 1.3
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -4491,17 +4396,13 @@ tracks/6/keys = {
 }
 
 [sub_resource type="Curve2D" id=42]
-
-bake_interval = 5.0
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 664.597, 573.424, -94.2742, -3.0411, 133.406, -1.02707, 854.907, 431.216, -101.877, 0, 107.959, -3.0411, 1119.24, 679.863, 0, 0, 0, 0, 1295.63, 562.78 )
 }
 
 [sub_resource type="Animation" id=43]
-
 length = 1.5
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -4708,10 +4609,7 @@ tracks/16/keys = {
 }
 
 [sub_resource type="Animation" id=44]
-
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("LaserBody:scale")
 tracks/0/interp = 1
@@ -4834,10 +4732,7 @@ tracks/9/keys = {
 }
 
 [sub_resource type="Animation" id=45]
-
 length = 0.3
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("LaserBody:region_rect")
 tracks/0/interp = 1
@@ -4984,10 +4879,8 @@ tracks/11/keys = {
 }
 
 [sub_resource type="Animation" id=46]
-
 length = 0.4
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("LaserBody:region_rect")
 tracks/0/interp = 1
@@ -5110,10 +5003,7 @@ tracks/9/keys = {
 }
 
 [sub_resource type="Animation" id=47]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("LaserBody:region_rect")
 tracks/0/interp = 1
@@ -5236,10 +5126,8 @@ tracks/9/keys = {
 }
 
 [sub_resource type="Animation" id=48]
-
 length = 1.5
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("PathFollow2D:unit_offset")
 tracks/0/interp = 1
@@ -5530,7 +5418,6 @@ tracks/23/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=49]
-
 animations = [ {
 "frames": [ ExtResource( 544 ), ExtResource( 545 ), ExtResource( 546 ), ExtResource( 546 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 549 ), ExtResource( 550 ), ExtResource( 551 ), ExtResource( 551 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 554 ), ExtResource( 554 ), ExtResource( 554 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 553 ), ExtResource( 552 ), ExtResource( 552 ), ExtResource( 551 ), ExtResource( 550 ), ExtResource( 549 ), ExtResource( 549 ), ExtResource( 549 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 548 ), ExtResource( 547 ), ExtResource( 547 ), ExtResource( 546 ), ExtResource( 545 ) ],
 "loop": true,
@@ -5542,9 +5429,9 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
-"loop": true,
-"name": "crush_idle",
+"frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
+"loop": false,
+"name": "kill_player",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ) ],
@@ -5552,14 +5439,13 @@ animations = [ {
 "name": "crush",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
-"loop": false,
-"name": "kill_player",
+"frames": [ ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
+"loop": true,
+"name": "crush_idle",
 "speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=50]
-
 animations = [ {
 "frames": [ ExtResource( 588 ), ExtResource( 589 ), ExtResource( 590 ), ExtResource( 590 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 593 ), ExtResource( 594 ), ExtResource( 595 ), ExtResource( 595 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 598 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 597 ), ExtResource( 596 ), ExtResource( 596 ), ExtResource( 595 ), ExtResource( 594 ), ExtResource( 593 ), ExtResource( 593 ), ExtResource( 593 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 592 ), ExtResource( 591 ), ExtResource( 591 ), ExtResource( 590 ), ExtResource( 589 ) ],
 "loop": true,
@@ -5571,24 +5457,23 @@ animations = [ {
 "name": "spawn",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
-"loop": true,
-"name": "crush_idle",
-"speed": 60.0
+"frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
+"loop": false,
+"name": "kill_player",
+"speed": 59.999
 }, {
 "frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ) ],
 "loop": false,
 "name": "crush",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
-"loop": false,
-"name": "kill_player",
-"speed": 59.999
+"frames": [ ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
+"loop": true,
+"name": "crush_idle",
+"speed": 60.0
 } ]
 
 [sub_resource type="SpriteFrames" id=51]
-
 animations = [ {
 "frames": [ ExtResource( 632 ), ExtResource( 633 ), ExtResource( 634 ), ExtResource( 635 ), ExtResource( 636 ), ExtResource( 637 ), ExtResource( 638 ), ExtResource( 639 ), ExtResource( 640 ), ExtResource( 641 ), ExtResource( 642 ), ExtResource( 643 ), ExtResource( 644 ), ExtResource( 645 ), ExtResource( 646 ), ExtResource( 647 ), ExtResource( 648 ), ExtResource( 649 ), ExtResource( 650 ), ExtResource( 651 ), ExtResource( 652 ), ExtResource( 653 ), ExtResource( 654 ), ExtResource( 655 ), ExtResource( 656 ), ExtResource( 657 ), ExtResource( 658 ), ExtResource( 659 ), ExtResource( 660 ), ExtResource( 661 ), ExtResource( 662 ), ExtResource( 663 ), ExtResource( 664 ), ExtResource( 665 ), ExtResource( 666 ), ExtResource( 667 ), ExtResource( 668 ), ExtResource( 669 ), ExtResource( 670 ), ExtResource( 671 ), ExtResource( 672 ), ExtResource( 673 ), ExtResource( 674 ), ExtResource( 675 ), ExtResource( 676 ), ExtResource( 677 ), ExtResource( 678 ), ExtResource( 679 ), ExtResource( 680 ), ExtResource( 681 ), ExtResource( 682 ), ExtResource( 683 ) ],
 "loop": false,
@@ -5597,7 +5482,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=52]
-
 animations = [ {
 "frames": [ ExtResource( 684 ), ExtResource( 685 ), ExtResource( 686 ), ExtResource( 687 ), ExtResource( 688 ), ExtResource( 689 ), ExtResource( 690 ), ExtResource( 691 ), ExtResource( 692 ), ExtResource( 693 ), ExtResource( 694 ), ExtResource( 695 ), ExtResource( 696 ), ExtResource( 697 ), ExtResource( 698 ), ExtResource( 699 ), ExtResource( 700 ), ExtResource( 701 ), ExtResource( 702 ), ExtResource( 703 ), ExtResource( 704 ), ExtResource( 705 ), ExtResource( 706 ), ExtResource( 707 ), ExtResource( 708 ), ExtResource( 709 ), ExtResource( 710 ), ExtResource( 711 ), ExtResource( 712 ), ExtResource( 713 ), ExtResource( 714 ), ExtResource( 715 ), ExtResource( 716 ), ExtResource( 717 ), ExtResource( 718 ), ExtResource( 719 ), ExtResource( 720 ), ExtResource( 721 ), ExtResource( 722 ), ExtResource( 723 ), ExtResource( 724 ), ExtResource( 725 ), ExtResource( 726 ), ExtResource( 727 ), ExtResource( 728 ), ExtResource( 729 ), ExtResource( 730 ), ExtResource( 731 ), ExtResource( 732 ), ExtResource( 733 ), ExtResource( 734 ), ExtResource( 735 ) ],
 "loop": false,
@@ -5606,68 +5490,32 @@ animations = [ {
 } ]
 
 [sub_resource type="StyleBoxTexture" id=53]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 texture = ExtResource( 743 )
 region_rect = Rect2( 0, 0, 53, 60 )
 margin_left = 20.0
 margin_right = 20.0
 margin_top = 20.0
 margin_bottom = 20.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=54]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 texture = ExtResource( 744 )
 region_rect = Rect2( 0, 0, 49, 55 )
 margin_left = 20.0
 margin_right = 20.0
 margin_top = 20.0
 margin_bottom = 20.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="StyleBoxTexture" id=55]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 texture = ExtResource( 745 )
 region_rect = Rect2( 0, 0, 49, 56 )
 margin_left = 20.0
 margin_right = 20.0
 margin_top = 20.0
 margin_bottom = 20.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="Animation" id=56]
-
 resource_name = "loop"
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
@@ -5682,29 +5530,15 @@ tracks/0/keys = {
 }
 
 [sub_resource type="StyleBoxTexture" id=57]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 texture = ExtResource( 746 )
 region_rect = Rect2( 0, 0, 49, 56 )
 margin_left = 20.0
 margin_right = 20.0
 margin_top = 20.0
 margin_bottom = 20.0
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-modulate_color = Color( 1, 1, 1, 1 )
-draw_center = true
 
 [sub_resource type="Animation" id=58]
-
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
@@ -5719,275 +5553,153 @@ tracks/0/keys = {
 }
 
 [node name="TutorialTipScreen" type="Node2D"]
-
 pause_mode = 2
 script = ExtResource( 1 )
 level_num = NodePath("Tip#0/LevelNum")
 level_title = NodePath("Tip#0/LevelTitle")
 tip_selector = NodePath("TipSelector")
 
-[node name="TipSelector" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="TipSelector" type="AnimationPlayer" parent="."]
 anims/TipScreen_0 = SubResource( 1 )
 anims/TipScreen_1 = SubResource( 2 )
 anims/TipScreen_2 = SubResource( 3 )
 anims/TipScreen_3 = SubResource( 4 )
 anims/TipScreen_4 = SubResource( 5 )
-blend_times = [  ]
 
-[node name="ColorFrame" type="ColorRect" parent="." index="1"]
-
+[node name="ColorFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Tip#0" type="Control" parent="." index="2"]
-
-editor/display_folded = true
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="Tip#0" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
 margin_bottom = -24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="LevelNum" type="Label" parent="Tip#0" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelNum" type="Label" parent="Tip#0"]
 margin_top = 28.0
 margin_right = 1920.0
 margin_bottom = 123.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
 text = "Level Num"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="LevelTitle" type="Label" parent="Tip#0" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelTitle" type="Label" parent="Tip#0"]
 margin_top = 130.0
 margin_right = 1920.0
 margin_bottom = 225.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 3 )
 text = "Level Title"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Label 2" type="Label" parent="Tip#0" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label 2" type="Label" parent="Tip#0"]
 margin_left = 71.0
 margin_top = 230.0
 margin_right = 1857.0
 margin_bottom = 322.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Press Up to use your jetpack. "
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Label3" type="Label" parent="Tip#0" index="3"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label3" type="Label" parent="Tip#0"]
 margin_left = 71.0
 margin_top = 847.0
 margin_right = 1857.0
 margin_bottom = 987.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = " Try to fly around a bit without falling or rising too much, avoiding the waves at the top and at the bottom"
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Path2D" type="Path2D" parent="Tip#0" index="4"]
-
-self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+[node name="Path2D" type="Path2D" parent="Tip#0"]
 curve = SubResource( 6 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Tip#0/Path2D" index="0"]
-
+[node name="PathFollow2D" type="PathFollow2D" parent="Tip#0/Path2D"]
 position = Vector2( 1025.65, 600.34 )
 rotation = -0.979385
 offset = 498.19
-h_offset = 0.0
-v_offset = 0.0
 rotate = false
-cubic_interp = true
-loop = true
-lookahead = 4.0
 
-[node name="Player" type="KinematicBody2D" parent="Tip#0/Path2D/PathFollow2D" index="0"]
-
-editor/display_folded = true
+[node name="Player" type="KinematicBody2D" parent="Tip#0/Path2D/PathFollow2D"]
 position = Vector2( 2.64404, 14.1461 )
 rotation = 0.979385
-input_pickable = false
 collision_layer = 4097
-collision_mask = 1
-collision/safe_margin = 0.08
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="BodyOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player" index="0"]
-
-editor/display_folded = true
+[node name="BodyOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "falling"
-frame = 1
+frame = 6
 playing = true
 
-[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline" index="0"]
-
+[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "falling"
-frame = 1
+frame = 6
 playing = true
 
-[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline" index="1"]
-
+[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
 animation = "falling"
-frame = 1
+frame = 6
 playing = true
 
-[node name="Body" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player" index="1"]
-
+[node name="Body" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "falling"
-frame = 1
+frame = 6
 playing = true
 
-[node name="JetParticles" type="Particles2D" parent="Tip#0/Path2D/PathFollow2D/Player/Body" index="0"]
-
+[node name="JetParticles" type="Particles2D" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 position = Vector2( -40, 12.8015 )
-emitting = true
 amount = 24
 lifetime = 0.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
-draw_order = 0
-process_material = null
-texture = null
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="ArmBack" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body" index="1"]
-
+[node name="ArmBack" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "falling"
-frame = 1
+frame = 6
 playing = true
 
-[node name="ArmFront" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body" index="2"]
-
+[node name="ArmFront" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "falling"
-frame = 1
+frame = 6
 playing = true
 
-[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player" index="2"]
-
-root_node = NodePath("..")
+[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 13 )
 anims/fall_to_rise = SubResource( 14 )
 anims/falling = SubResource( 15 )
 anims/rise_to_fall = SubResource( 16 )
 anims/rising = SubResource( 17 )
-blend_times = [  ]
 
-[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player" index="3"]
-
-root_node = NodePath("..")
+[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 18 )
 anims/fall_to_rise = SubResource( 19 )
 anims/falling = SubResource( 20 )
@@ -5995,308 +5707,196 @@ anims/reloading = SubResource( 21 )
 anims/rise_to_fall = SubResource( 22 )
 anims/rising = SubResource( 23 )
 anims/shooting = SubResource( 24 )
-blend_times = [  ]
 
-[node name="Shield" type="Area2D" parent="Tip#0/Path2D/PathFollow2D/Player" index="4"]
-
-editor/display_folded = true
+[node name="Shield" type="Area2D" parent="Tip#0/Path2D/PathFollow2D/Player"]
 visible = false
 position = Vector2( -485, 0 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Sprite" type="Sprite" parent="Tip#0/Path2D/PathFollow2D/Player/Shield" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#0/Path2D/PathFollow2D/Player/Shield"]
 modulate = Color( 0.835294, 0, 1, 1 )
 texture = ExtResource( 493 )
 
-[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player/Shield" index="1"]
-
-root_node = NodePath("..")
+[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player/Shield"]
 autoplay = "disabled"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 25 )
 anims/burst = SubResource( 26 )
 anims/disabled = SubResource( 27 )
 anims/idle = SubResource( 28 )
 anims/open = SubResource( 29 )
-blend_times = [  ]
 
-[node name="Tip#0Animator" type="AnimationPlayer" parent="Tip#0/Path2D" index="1"]
-
-root_node = NodePath("..")
+[node name="Tip#0Animator" type="AnimationPlayer" parent="Tip#0/Path2D"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 30 )
 anims/tutorial = SubResource( 31 )
-blend_times = [  ]
 
-[node name="Cena2" type="Node2D" parent="Tip#0" index="5"]
-
+[node name="Cena2" type="Node2D" parent="Tip#0"]
 position = Vector2( 71, 847 )
 
-[node name="Limits" type="Node2D" parent="Tip#0/Cena2" index="0"]
-
+[node name="Limits" type="Node2D" parent="Tip#0/Cena2"]
 position = Vector2( 883.015, -69.0731 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#0/Cena2/Limits" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#0/Cena2/Limits"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#0/Cena2/Limits" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#0/Cena2/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#0/Cena2/Limits" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#0/Cena2/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="Limits1" type="Node2D" parent="Tip#0/Cena2" index="1"]
-
+[node name="Limits1" type="Node2D" parent="Tip#0/Cena2"]
 position = Vector2( 883.015, -486.073 )
 scale = Vector2( 1, -1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 12
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#0/Cena2/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
 playing = true
 script = ExtResource( 527 )
 
-[node name="Tip#1" type="Control" parent="." index="3"]
-
-editor/display_folded = true
+[node name="Tip#1" type="Control" parent="."]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
 margin_bottom = -24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Label 2" type="Label" parent="Tip#1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label 2" type="Label" parent="Tip#1"]
 margin_left = 71.0
 margin_top = 44.0
 margin_right = 1857.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "The Lord of the Abyss will try to capture you by summoning tentacles periodically."
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Label3" type="Label" parent="Tip#1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label3" type="Label" parent="Tip#1"]
 margin_left = 71.0
 margin_top = 816.0
 margin_right = 1857.0
 margin_bottom = 956.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Try to avoid the next 3 tentacles."
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Path2D" type="Path2D" parent="Tip#1" index="2"]
-
-self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+[node name="Path2D" type="Path2D" parent="Tip#1"]
 curve = SubResource( 6 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Tip#1/Path2D" index="0"]
-
-position = Vector2( 729.757, 495.893 )
+[node name="PathFollow2D" type="PathFollow2D" parent="Tip#1/Path2D"]
+position = Vector2( 729.757, 495.892 )
 rotation = -0.979385
 offset = 101.415
-h_offset = 0.0
-v_offset = 0.0
 rotate = false
-cubic_interp = true
-loop = true
-lookahead = 4.0
 
-[node name="Player" type="KinematicBody2D" parent="Tip#1/Path2D/PathFollow2D" index="0"]
-
-editor/display_folded = true
+[node name="Player" type="KinematicBody2D" parent="Tip#1/Path2D/PathFollow2D"]
 position = Vector2( 2.64404, 14.1461 )
 rotation = 0.979385
-input_pickable = false
 collision_layer = 4097
-collision_mask = 1
-collision/safe_margin = 0.08
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="BodyOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player" index="0"]
-
-editor/display_folded = true
+[node name="BodyOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "rising"
-frame = 1
+frame = 6
 playing = true
 
-[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline" index="0"]
-
+[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 1
+frame = 6
 playing = true
 
-[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline" index="1"]
-
+[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
 animation = "rising"
-frame = 1
+frame = 6
 playing = true
 
-[node name="Body" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player" index="1"]
-
+[node name="Body" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "rising"
-frame = 1
+frame = 6
 playing = true
 
-[node name="JetParticles" type="Particles2D" parent="Tip#1/Path2D/PathFollow2D/Player/Body" index="0"]
-
+[node name="JetParticles" type="Particles2D" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 position = Vector2( -40, 12.8015 )
-emitting = true
 amount = 24
 lifetime = 0.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
-draw_order = 0
-process_material = null
-texture = null
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="ArmBack" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/Body" index="1"]
-
+[node name="ArmBack" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "rising"
-frame = 1
+frame = 6
 playing = true
 
-[node name="ArmFront" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/Body" index="2"]
-
+[node name="ArmFront" type="AnimatedSprite" parent="Tip#1/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "rising"
-frame = 1
+frame = 6
 playing = true
 
-[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player" index="2"]
-
-root_node = NodePath("..")
+[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 13 )
 anims/fall_to_rise = SubResource( 14 )
 anims/falling = SubResource( 15 )
 anims/rise_to_fall = SubResource( 16 )
 anims/rising = SubResource( 17 )
-blend_times = [  ]
 
-[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player" index="3"]
-
-root_node = NodePath("..")
+[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 18 )
 anims/fall_to_rise = SubResource( 19 )
 anims/falling = SubResource( 20 )
@@ -6304,84 +5904,56 @@ anims/reloading = SubResource( 21 )
 anims/rise_to_fall = SubResource( 22 )
 anims/rising = SubResource( 23 )
 anims/shooting = SubResource( 24 )
-blend_times = [  ]
 
-[node name="Shield" type="Area2D" parent="Tip#1/Path2D/PathFollow2D/Player" index="4"]
-
-editor/display_folded = true
+[node name="Shield" type="Area2D" parent="Tip#1/Path2D/PathFollow2D/Player"]
 visible = false
 position = Vector2( -485, 0 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Sprite" type="Sprite" parent="Tip#1/Path2D/PathFollow2D/Player/Shield" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#1/Path2D/PathFollow2D/Player/Shield"]
 modulate = Color( 0.835294, 0, 1, 1 )
 texture = ExtResource( 493 )
 
-[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player/Shield" index="1"]
-
-root_node = NodePath("..")
+[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#1/Path2D/PathFollow2D/Player/Shield"]
 autoplay = "disabled"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 25 )
 anims/burst = SubResource( 26 )
 anims/disabled = SubResource( 27 )
 anims/idle = SubResource( 28 )
 anims/open = SubResource( 29 )
-blend_times = [  ]
 
-[node name="Tip#1Animator" type="AnimationPlayer" parent="Tip#1/Path2D" index="1"]
-
-root_node = NodePath("..")
+[node name="Tip#1Animator" type="AnimationPlayer" parent="Tip#1/Path2D"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 35 )
 anims/tutorial = SubResource( 31 )
-blend_times = [  ]
 
-[node name="Tentacles" type="Node2D" parent="Tip#1" index="3"]
-
+[node name="Tentacles" type="Node2D" parent="Tip#1"]
 position = Vector2( 559, 113 )
 
-[node name="TentacleTop" type="Node2D" parent="Tip#1/Tentacles" index="0"]
-
+[node name="TentacleTop" type="Node2D" parent="Tip#1/Tentacles"]
 position = Vector2( 150, -450 )
 
-[node name="OutlineTop" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop" index="0"]
-
+[node name="OutlineTop" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 36 )
 animation = "idle"
-frame = 38
+frame = 6
 playing = true
 centered = false
 flip_v = true
 script = ExtResource( 587 )
 
-[node name="TentacleTop" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop" index="1"]
-
-editor/display_folded = true
+[node name="TentacleTop" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 37 )
 animation = "idle"
-frame = 38
+frame = 6
 playing = true
 centered = false
 flip_v = true
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop/TentacleTop" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop/TentacleTop"]
 show_behind_parent = true
 use_parent_material = true
 position = Vector2( 215, -75 )
@@ -6389,317 +5961,223 @@ frames = SubResource( 38 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop/TentacleTop/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleTop/TentacleTop/DeadPlayer"]
 show_behind_parent = true
 use_parent_material = true
 frames = SubResource( 39 )
 animation = "dying"
 frame = 51
 
-[node name="TentacleBottom" type="Node2D" parent="Tip#1/Tentacles" index="1"]
-
+[node name="TentacleBottom" type="Node2D" parent="Tip#1/Tentacles"]
 position = Vector2( 150, 350 )
 
-[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom" index="0"]
-
+[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 36 )
 animation = "idle"
-frame = 38
+frame = 6
 playing = true
 centered = false
 script = ExtResource( 587 )
 
-[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom" index="1"]
-
-editor/display_folded = true
+[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 37 )
 animation = "idle"
-frame = 38
+frame = 6
 playing = true
 centered = false
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom/TentacleBottom" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom/TentacleBottom"]
 show_behind_parent = true
 position = Vector2( 215, 875 )
 frames = SubResource( 38 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#1/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 39 )
 animation = "dying"
 frame = 51
 
-[node name="Limits" type="Node2D" parent="Tip#1" index="4"]
-
+[node name="Limits" type="Node2D" parent="Tip#1"]
 position = Vector2( 71, 847 )
 
-[node name="Limits" type="Node2D" parent="Tip#1/Limits" index="0"]
-
+[node name="Limits" type="Node2D" parent="Tip#1/Limits"]
 position = Vector2( 883.015, -99.0731 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#1/Limits/Limits" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#1/Limits/Limits"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 4
+frame = 8
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#1/Limits/Limits" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#1/Limits/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 4
+frame = 8
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#1/Limits/Limits" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#1/Limits/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 4
+frame = 8
 playing = true
 script = ExtResource( 527 )
 
-[node name="Limits1" type="Node2D" parent="Tip#1/Limits" index="1"]
-
+[node name="Limits1" type="Node2D" parent="Tip#1/Limits"]
 position = Vector2( 883.015, -672.073 )
 rotation = 3.14159
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#1/Limits/Limits1" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#1/Limits/Limits1"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 15
+frame = 3
 playing = true
 flip_h = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#1/Limits/Limits1" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#1/Limits/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 15
+frame = 3
 playing = true
 flip_h = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#1/Limits/Limits1" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#1/Limits/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 15
+frame = 3
 playing = true
 flip_h = true
 script = ExtResource( 527 )
 
-[node name="Tip#2" type="Control" parent="." index="4"]
-
-editor/display_folded = true
+[node name="Tip#2" type="Control" parent="."]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
 margin_bottom = -24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Label 2" type="Label" parent="Tip#2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label 2" type="Label" parent="Tip#2"]
 margin_left = 71.0
 margin_top = 44.0
 margin_right = 1857.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = " To help you avoid danger, you can also Dash by pressing forward. "
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Label3" type="Label" parent="Tip#2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label3" type="Label" parent="Tip#2"]
 margin_left = 71.0
 margin_top = 816.0
 margin_right = 1887.0
 margin_bottom = 1004.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Both the dash and boosting up will increase the overheat bar. 
 If it gets red you will lose the ability to dash, but if it fills completely,  your jetpack will stop working until it cools down. "
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Path2D" type="Path2D" parent="Tip#2" index="2"]
-
-self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+[node name="Path2D" type="Path2D" parent="Tip#2"]
 curve = SubResource( 40 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Tip#2/Path2D" index="0"]
-
-position = Vector2( 1088.54, 485.057 )
+[node name="PathFollow2D" type="PathFollow2D" parent="Tip#2/Path2D"]
+position = Vector2( 1088.53, 485.057 )
 rotation = -0.979385
 offset = 464.893
-h_offset = 0.0
-v_offset = 0.0
 rotate = false
-cubic_interp = true
-loop = true
-lookahead = 4.0
 
-[node name="Player" type="KinematicBody2D" parent="Tip#2/Path2D/PathFollow2D" index="0"]
-
+[node name="Player" type="KinematicBody2D" parent="Tip#2/Path2D/PathFollow2D"]
 position = Vector2( 2.64404, 14.1461 )
 rotation = 0.979385
-input_pickable = false
 collision_layer = 4097
-collision_mask = 1
-collision/safe_margin = 0.08
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="BodyOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player" index="0"]
-
-editor/display_folded = true
+[node name="BodyOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "falling"
-frame = 12
+frame = 4
 playing = true
 
-[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline" index="0"]
-
+[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "falling"
-frame = 12
+frame = 4
 playing = true
 
-[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline" index="1"]
-
+[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
 animation = "falling"
-frame = 12
+frame = 4
 playing = true
 
-[node name="Body" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player" index="1"]
-
+[node name="Body" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "falling"
-frame = 12
+frame = 4
 playing = true
 
-[node name="JetParticles" type="Particles2D" parent="Tip#2/Path2D/PathFollow2D/Player/Body" index="0"]
-
+[node name="JetParticles" type="Particles2D" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 position = Vector2( -40, 12.8015 )
-emitting = true
 amount = 24
 lifetime = 0.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
-draw_order = 0
-process_material = null
-texture = null
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="ArmBack" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/Body" index="1"]
-
+[node name="ArmBack" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "falling"
-frame = 12
+frame = 4
 playing = true
 
-[node name="ArmFront" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/Body" index="2"]
-
+[node name="ArmFront" type="AnimatedSprite" parent="Tip#2/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "falling"
-frame = 12
+frame = 4
 playing = true
 
-[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player" index="2"]
-
-root_node = NodePath("..")
+[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 13 )
 anims/fall_to_rise = SubResource( 14 )
 anims/falling = SubResource( 15 )
 anims/rise_to_fall = SubResource( 16 )
 anims/rising = SubResource( 17 )
-blend_times = [  ]
 
-[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player" index="3"]
-
-root_node = NodePath("..")
+[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 18 )
 anims/fall_to_rise = SubResource( 19 )
 anims/falling = SubResource( 20 )
@@ -6707,664 +6185,399 @@ anims/reloading = SubResource( 21 )
 anims/rise_to_fall = SubResource( 22 )
 anims/rising = SubResource( 23 )
 anims/shooting = SubResource( 24 )
-blend_times = [  ]
 
-[node name="Shield" type="Area2D" parent="Tip#2/Path2D/PathFollow2D/Player" index="4"]
-
-editor/display_folded = true
+[node name="Shield" type="Area2D" parent="Tip#2/Path2D/PathFollow2D/Player"]
 visible = false
 position = Vector2( -485, 0 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Sprite" type="Sprite" parent="Tip#2/Path2D/PathFollow2D/Player/Shield" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#2/Path2D/PathFollow2D/Player/Shield"]
 modulate = Color( 0.835294, 0, 1, 1 )
 texture = ExtResource( 493 )
 
-[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player/Shield" index="1"]
-
-root_node = NodePath("..")
+[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#2/Path2D/PathFollow2D/Player/Shield"]
 autoplay = "disabled"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 25 )
 anims/burst = SubResource( 26 )
 anims/disabled = SubResource( 27 )
 anims/idle = SubResource( 28 )
 anims/open = SubResource( 29 )
-blend_times = [  ]
 
-[node name="OverheatBar" parent="Tip#2/Path2D/PathFollow2D/Player" index="5" instance=ExtResource( 736 )]
-
+[node name="OverheatBar" parent="Tip#2/Path2D/PathFollow2D/Player" instance=ExtResource( 736 )]
 margin_left = -139.0
 margin_top = -65.0
 margin_right = -59.0
 margin_bottom = 101.0
 rect_scale = Vector2( 0.8, 0.8 )
-value = 48.9979
+value = 49.0
 
-[node name="Tip#2Animator" type="AnimationPlayer" parent="Tip#2/Path2D" index="1"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="Tip#2Animator" type="AnimationPlayer" parent="Tip#2/Path2D"]
 anims/tutorial = SubResource( 41 )
-blend_times = [  ]
 
-[node name="Tentacles" type="Node2D" parent="Tip#2" index="3"]
-
+[node name="Tentacles" type="Node2D" parent="Tip#2"]
 position = Vector2( 559, 113 )
 
-[node name="TentacleTop" type="Node2D" parent="Tip#2/Tentacles" index="0"]
-
+[node name="TentacleTop" type="Node2D" parent="Tip#2/Tentacles"]
 light_mask = 2
 position = Vector2( 150, -450 )
 
-[node name="OutlineTop" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop" index="0"]
-
+[node name="OutlineTop" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
 animation = "idle"
-frame = 22
+frame = 30
 playing = true
 centered = false
 flip_v = true
 script = ExtResource( 587 )
 
-[node name="TentacleTop" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop" index="1"]
-
-editor/display_folded = true
+[node name="TentacleTop" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
 animation = "idle"
-frame = 22
+frame = 30
 playing = true
 centered = false
 flip_v = true
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop/TentacleTop" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop/TentacleTop"]
 show_behind_parent = true
 position = Vector2( 215, -75 )
 frames = SubResource( 38 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop/TentacleTop/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleTop/TentacleTop/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 39 )
 animation = "dying"
 frame = 51
 
-[node name="TentacleBottom" type="Node2D" parent="Tip#2/Tentacles" index="1"]
-
+[node name="TentacleBottom" type="Node2D" parent="Tip#2/Tentacles"]
 light_mask = 2
 position = Vector2( 150, 350 )
 
-[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom" index="0"]
-
+[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
 animation = "idle"
-frame = 22
+frame = 30
 playing = true
 centered = false
 script = ExtResource( 587 )
 
-[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom" index="1"]
-
-editor/display_folded = true
+[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
 animation = "idle"
-frame = 22
+frame = 30
 playing = true
 centered = false
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom/TentacleBottom" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom/TentacleBottom"]
 show_behind_parent = true
 position = Vector2( 215, 875 )
 frames = SubResource( 38 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#2/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 39 )
 animation = "dying"
 frame = 51
 
-[node name="Limits" type="Node2D" parent="Tip#2" index="4"]
-
+[node name="Limits" type="Node2D" parent="Tip#2"]
 position = Vector2( 71, 847 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="Limits" type="Node2D" parent="Tip#2/Limits" index="0"]
-
+[node name="Limits" type="Node2D" parent="Tip#2/Limits"]
 position = Vector2( 883.015, -99.0731 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#2/Limits/Limits" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#2/Limits/Limits"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#2/Limits/Limits" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#2/Limits/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#2/Limits/Limits" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#2/Limits/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="Limits1" type="Node2D" parent="Tip#2/Limits" index="1"]
-
+[node name="Limits1" type="Node2D" parent="Tip#2/Limits"]
 position = Vector2( 883.015, -672.073 )
 rotation = -3.14159
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#2/Limits/Limits1" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#2/Limits/Limits1"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#2/Limits/Limits1" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#2/Limits/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#2/Limits/Limits1" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#2/Limits/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 527 )
 
-[node name="HUD" type="Control" parent="Tip#2/Limits" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HUD" type="Control" parent="Tip#2/Limits"]
 margin_left = 479.0
 margin_top = -810.0
 margin_right = 479.0
 margin_bottom = -810.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Score" type="Label" parent="Tip#2/Limits/HUD" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Score" type="Label" parent="Tip#2/Limits/HUD"]
 margin_left = 334.0
 margin_top = 88.0
 margin_right = 442.0
 margin_bottom = 125.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 737 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Score:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Points" type="Label" parent="Tip#2/Limits/HUD" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Points" type="Label" parent="Tip#2/Limits/HUD"]
 margin_left = 312.0
 margin_top = 116.0
 margin_right = 464.0
 margin_bottom = 172.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "0001"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Tip#3" type="Control" parent="." index="5"]
-
-editor/display_folded = true
+[node name="Tip#3" type="Control" parent="."]
 visible = false
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
 margin_bottom = -24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Label 2" type="Label" parent="Tip#3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label 2" type="Label" parent="Tip#3"]
 margin_left = 71.0
 margin_top = 44.0
 margin_right = 1857.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Shields will protect you from one hit, grab them whenever you see them!"
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Label3" type="Label" parent="Tip#3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label3" type="Label" parent="Tip#3"]
 margin_left = 71.0
 margin_top = 816.0
 margin_right = 1857.0
 margin_bottom = 999.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "You can have up to 3 shields at the same time. If you grab a new shield while at maximum shield level, you will win bonus points instead! Grab the shield and try to avoid the next 3 tentacles."
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Shield Levels" type="Node2D" parent="Tip#3" index="2"]
-
+[node name="Shield Levels" type="Node2D" parent="Tip#3"]
 position = Vector2( 1512, 0 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Tip#3/Shield Levels" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Tip#3/Shield Levels"]
 margin_top = 140.0
 margin_right = 143.0
 margin_bottom = 180.0
 rect_scale = Vector2( 1.5, 1.5 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
 
-[node name="ShiedIcon" parent="Tip#3/Shield Levels/HBoxContainer" index="0" instance=ExtResource( 738 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ShiedIcon" parent="Tip#3/Shield Levels/HBoxContainer" instance=ExtResource( 738 )]
 margin_right = 45.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="ShiedIcon1" parent="Tip#3/Shield Levels/HBoxContainer" index="1" instance=ExtResource( 738 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ShiedIcon1" parent="Tip#3/Shield Levels/HBoxContainer" instance=ExtResource( 738 )]
 margin_left = 49.0
 margin_right = 94.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="ShiedIcon2" parent="Tip#3/Shield Levels/HBoxContainer" index="2" instance=ExtResource( 738 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="ShiedIcon2" parent="Tip#3/Shield Levels/HBoxContainer" instance=ExtResource( 738 )]
 margin_left = 98.0
 margin_right = 143.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="Shield1" type="Area2D" parent="Tip#3/Shield Levels" index="1"]
-
-editor/display_folded = true
+[node name="Shield1" type="Area2D" parent="Tip#3/Shield Levels"]
 position = Vector2( 0, 306 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
 monitoring = false
 monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Tip#3/Shield Levels/Shield1" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#3/Shield Levels/Shield1"]
 modulate = Color( 0, 0.956863, 1, 1 )
 texture = ExtResource( 493 )
 
-[node name="Label" type="Label" parent="Tip#3/Shield Levels/Shield1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Tip#3/Shield Levels/Shield1"]
 margin_left = 100.0
 margin_top = -30.0
 margin_right = 273.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Level 1"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Shield2" type="Area2D" parent="Tip#3/Shield Levels" index="2"]
-
-editor/display_folded = true
+[node name="Shield2" type="Area2D" parent="Tip#3/Shield Levels"]
 position = Vector2( 0, 501 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
 monitoring = false
 monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Tip#3/Shield Levels/Shield2" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#3/Shield Levels/Shield2"]
 modulate = Color( 0.6, 0.266667, 1, 1 )
 texture = ExtResource( 493 )
 
-[node name="Label" type="Label" parent="Tip#3/Shield Levels/Shield2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Tip#3/Shield Levels/Shield2"]
 margin_left = 100.0
 margin_top = -30.0
 margin_right = 273.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Level 2"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Shield3" type="Area2D" parent="Tip#3/Shield Levels" index="3"]
-
-editor/display_folded = true
+[node name="Shield3" type="Area2D" parent="Tip#3/Shield Levels"]
 position = Vector2( 0, 696 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
 monitoring = false
 monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Tip#3/Shield Levels/Shield3" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#3/Shield Levels/Shield3"]
 modulate = Color( 0.839216, 0, 1, 1 )
 texture = ExtResource( 493 )
 
-[node name="Label" type="Label" parent="Tip#3/Shield Levels/Shield3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Tip#3/Shield Levels/Shield3"]
 margin_left = 100.0
 margin_top = -30.0
 margin_right = 273.0
 margin_bottom = 26.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Level 3"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Path2D" type="Path2D" parent="Tip#3" index="3"]
-
-self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+[node name="Path2D" type="Path2D" parent="Tip#3"]
 curve = SubResource( 42 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Tip#3/Path2D" index="0"]
-
+[node name="PathFollow2D" type="PathFollow2D" parent="Tip#3/Path2D"]
 position = Vector2( 1249.59, 618.593 )
 rotation = -0.979385
 offset = 773.551
-h_offset = 0.0
-v_offset = 0.0
 rotate = false
-cubic_interp = true
-loop = true
-lookahead = 4.0
 
-[node name="Player" type="KinematicBody2D" parent="Tip#3/Path2D/PathFollow2D" index="0"]
-
+[node name="Player" type="KinematicBody2D" parent="Tip#3/Path2D/PathFollow2D"]
 position = Vector2( 2.64404, 14.1461 )
 rotation = 0.979385
-input_pickable = false
 collision_layer = 4097
-collision_mask = 1
-collision/safe_margin = 0.08
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="BodyOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player" index="0"]
-
-editor/display_folded = true
+[node name="BodyOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "rising"
-frame = 8
 playing = true
 
-[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline" index="0"]
-
+[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 8
 playing = true
 
-[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline" index="1"]
-
+[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
 animation = "rising"
-frame = 8
 playing = true
 
-[node name="Body" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player" index="1"]
-
-editor/display_folded = true
+[node name="Body" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "rising"
-frame = 8
 playing = true
 
-[node name="JetParticles" type="Particles2D" parent="Tip#3/Path2D/PathFollow2D/Player/Body" index="0"]
-
+[node name="JetParticles" type="Particles2D" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 position = Vector2( -40, 12.8015 )
-emitting = true
 amount = 24
 lifetime = 0.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
-draw_order = 0
-process_material = null
-texture = null
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="ArmBack" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/Body" index="1"]
-
+[node name="ArmBack" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "rising"
-frame = 8
 playing = true
 
-[node name="ArmFront" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/Body" index="2"]
-
+[node name="ArmFront" type="AnimatedSprite" parent="Tip#3/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "rising"
-frame = 8
 playing = true
 
-[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player" index="2"]
-
-root_node = NodePath("..")
+[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 13 )
 anims/fall_to_rise = SubResource( 14 )
 anims/falling = SubResource( 15 )
 anims/rise_to_fall = SubResource( 16 )
 anims/rising = SubResource( 17 )
-blend_times = [  ]
 
-[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player" index="3"]
-
-root_node = NodePath("..")
+[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 18 )
 anims/fall_to_rise = SubResource( 19 )
 anims/falling = SubResource( 20 )
@@ -7372,122 +6585,74 @@ anims/reloading = SubResource( 21 )
 anims/rise_to_fall = SubResource( 22 )
 anims/rising = SubResource( 23 )
 anims/shooting = SubResource( 24 )
-blend_times = [  ]
 
-[node name="Shield" type="Area2D" parent="Tip#3/Path2D/PathFollow2D/Player" index="4"]
-
-editor/display_folded = true
+[node name="Shield" type="Area2D" parent="Tip#3/Path2D/PathFollow2D/Player"]
 position = Vector2( -15, 0 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
 monitoring = false
 monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Sprite" type="Sprite" parent="Tip#3/Path2D/PathFollow2D/Player/Shield" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#3/Path2D/PathFollow2D/Player/Shield"]
 modulate = Color( 0, 0.956863, 1, 1 )
 scale = Vector2( 1.69482, 1.69482 )
 texture = ExtResource( 493 )
 
-[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player/Shield" index="1"]
-
-root_node = NodePath("..")
+[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#3/Path2D/PathFollow2D/Player/Shield"]
 autoplay = "disabled"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 25 )
 anims/burst = SubResource( 26 )
 anims/disabled = SubResource( 27 )
 anims/idle = SubResource( 28 )
 anims/open = SubResource( 29 )
-blend_times = [  ]
 
-[node name="OverheatBar1" parent="Tip#3/Path2D/PathFollow2D/Player" index="5" instance=ExtResource( 736 )]
-
+[node name="OverheatBar1" parent="Tip#3/Path2D/PathFollow2D/Player" instance=ExtResource( 736 )]
 margin_left = -159.0
 margin_top = -65.0
 margin_right = -79.0
 margin_bottom = 101.0
 rect_scale = Vector2( 0.8, 0.8 )
-value = 39.4889
+value = 39.0
 
-[node name="Tip#3Animator" type="AnimationPlayer" parent="Tip#3/Path2D" index="1"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="Tip#3Animator" type="AnimationPlayer" parent="Tip#3/Path2D"]
 anims/tutorial = SubResource( 43 )
-blend_times = [  ]
 
-[node name="ShieldUp" type="Node2D" parent="Tip#3" index="4" groups=[
+[node name="ShieldUp" type="Node2D" parent="Tip#3" groups=[
 "pipes",
 ]]
-
-editor/display_folded = true
 visible = false
 position = Vector2( 851.931, 432.04 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Particles2D" type="Particles2D" parent="Tip#3/ShieldUp" index="0"]
-
+[node name="Particles2D" type="Particles2D" parent="Tip#3/ShieldUp"]
 show_behind_parent = true
 rotation = 1.5705
 scale = Vector2( 0.607119, 0.607119 )
-emitting = true
 amount = 1
 lifetime = 0.8
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
-draw_order = 0
-process_material = null
 texture = ExtResource( 493 )
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="Shield" type="Sprite" parent="Tip#3/ShieldUp" index="1"]
-
-editor/display_folded = true
+[node name="Shield" type="Sprite" parent="Tip#3/ShieldUp"]
 modulate = Color( 0, 0.960784, 1, 1 )
 rotation = 1.5705
 scale = Vector2( 0.607119, 0.607119 )
 texture = ExtResource( 493 )
 
-[node name="BG" type="Sprite" parent="Tip#3/ShieldUp/Shield" index="0"]
-
+[node name="BG" type="Sprite" parent="Tip#3/ShieldUp/Shield"]
 modulate = Color( 0, 0.956863, 1, 1 )
 show_behind_parent = true
 position = Vector2( -0.323547, -0.323486 )
 texture = ExtResource( 739 )
 
-[node name="Tentacles" type="Node2D" parent="Tip#3" index="5"]
-
+[node name="Tentacles" type="Node2D" parent="Tip#3"]
 position = Vector2( 774, 113 )
 
-[node name="TentacleTop" type="Node2D" parent="Tip#3/Tentacles" index="0"]
-
+[node name="TentacleTop" type="Node2D" parent="Tip#3/Tentacles"]
 light_mask = 2
 position = Vector2( 150, -600 )
 
-[node name="OutlineTop" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop" index="0"]
-
+[node name="OutlineTop" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
@@ -7497,9 +6662,7 @@ centered = false
 flip_v = true
 script = ExtResource( 587 )
 
-[node name="TentacleTop" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop" index="1"]
-
-editor/display_folded = true
+[node name="TentacleTop" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
@@ -7509,28 +6672,24 @@ centered = false
 flip_v = true
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop/TentacleTop" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop/TentacleTop"]
 show_behind_parent = true
 position = Vector2( 215, -75 )
 frames = SubResource( 38 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop/TentacleTop/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleTop/TentacleTop/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 39 )
 animation = "dying"
 frame = 51
 
-[node name="TentacleBottom" type="Node2D" parent="Tip#3/Tentacles" index="1"]
-
+[node name="TentacleBottom" type="Node2D" parent="Tip#3/Tentacles"]
 light_mask = 2
 position = Vector2( 150, 150 )
 
-[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom" index="0"]
-
+[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
@@ -7539,9 +6698,7 @@ frame = 6
 centered = false
 script = ExtResource( 587 )
 
-[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom" index="1"]
-
-editor/display_folded = true
+[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
@@ -7550,471 +6707,277 @@ frame = 6
 centered = false
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom/TentacleBottom" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom/TentacleBottom"]
 show_behind_parent = true
 position = Vector2( 215, 875 )
 frames = SubResource( 38 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#3/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 39 )
 animation = "dying"
 frame = 51
 
-[node name="Cena2" type="Node2D" parent="Tip#3" index="6"]
-
+[node name="Cena2" type="Node2D" parent="Tip#3"]
 position = Vector2( 71, 847 )
 
-[node name="Limits" type="Node2D" parent="Tip#3/Cena2" index="0"]
-
+[node name="Limits" type="Node2D" parent="Tip#3/Cena2"]
 position = Vector2( 883.015, -99.0731 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#3/Cena2/Limits" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#3/Cena2/Limits"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#3/Cena2/Limits" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#3/Cena2/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#3/Cena2/Limits" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#3/Cena2/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="Limits1" type="Node2D" parent="Tip#3/Cena2" index="1"]
-
+[node name="Limits1" type="Node2D" parent="Tip#3/Cena2"]
 position = Vector2( 883.015, -672.073 )
 rotation = 3.14159
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#3/Cena2/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 527 )
 
-[node name="HUD" type="Control" parent="Tip#3/Cena2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HUD" type="Control" parent="Tip#3/Cena2"]
 margin_left = 479.0
 margin_top = -810.0
 margin_right = 479.0
 margin_bottom = -810.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Score" type="Label" parent="Tip#3/Cena2/HUD" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Score" type="Label" parent="Tip#3/Cena2/HUD"]
 margin_left = 334.0
 margin_top = 88.0
 margin_right = 442.0
 margin_bottom = 125.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 737 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Score:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Points" type="Label" parent="Tip#3/Cena2/HUD" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Points" type="Label" parent="Tip#3/Cena2/HUD"]
 margin_left = 312.0
 margin_top = 116.0
 margin_right = 464.0
 margin_bottom = 172.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "0000"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="ShiedIcon3" parent="Tip#3/Cena2/HUD" index="2" instance=ExtResource( 738 )]
-
+[node name="ShiedIcon3" parent="Tip#3/Cena2/HUD" instance=ExtResource( 738 )]
 modulate = Color( 1, 1, 1, 0.142967 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 56.0
 margin_top = 692.0
 margin_right = 101.0
 margin_bottom = 732.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="Tip#4" type="Control" parent="." index="6"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="Tip#4" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
 margin_bottom = -24.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Label4" type="Label" parent="Tip#4" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label4" type="Label" parent="Tip#4"]
 margin_left = 71.0
 margin_top = 44.0
 margin_right = 1857.0
 margin_bottom = 136.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "Every 5 points you gain one ammunition to use your laser!"
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="Label5" type="Label" parent="Tip#4" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label5" type="Label" parent="Tip#4"]
 margin_left = 71.0
 margin_top = 816.0
 margin_right = 1857.0
 margin_bottom = 1057.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "There are also barrier tentacles that can only be crossed by either spending a shield or shooting them down. They are shown as red lines at the progression bar. Beat the Barrier Tentacle to finish the tutorial!"
 align = 1
 autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
 max_lines_visible = 10
 
-[node name="HUD1" type="Control" parent="Tip#4" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HUD1" type="Control" parent="Tip#4"]
 margin_left = 170.0
 margin_top = 38.0
 margin_right = 170.0
 margin_bottom = 38.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Score" type="Label" parent="Tip#4/HUD1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Score" type="Label" parent="Tip#4/HUD1"]
 margin_left = -6.0
 margin_top = 127.0
 margin_right = 102.0
 margin_bottom = 164.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 737 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Score:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Points" type="Label" parent="Tip#4/HUD1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Points" type="Label" parent="Tip#4/HUD1"]
 margin_left = -28.0
 margin_top = 155.0
 margin_right = 124.0
 margin_bottom = 211.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "0005"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Equal" type="Label" parent="Tip#4/HUD1" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Equal" type="Label" parent="Tip#4/HUD1"]
 margin_left = 152.0
 margin_top = 135.0
 margin_right = 181.0
 margin_bottom = 191.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 text = "="
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="AmmoRoot" parent="Tip#4/HUD1" index="3" instance=ExtResource( 740 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="AmmoRoot" parent="Tip#4/HUD1" instance=ExtResource( 740 )]
 margin_left = 214.0
 margin_top = 130.0
 margin_right = 240.0
 margin_bottom = 168.0
 rect_min_size = Vector2( 3.6813, 38 )
 rect_scale = Vector2( 2, 2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
 [node name="Ammo" parent="Tip#4/HUD1/AmmoRoot" index="1"]
-
 modulate = Color( 1, 1, 1, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 2.85144
 margin_right = 13.8514
 margin_bottom = 98.0
 rect_scale = Vector2( 0.334664, 1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="Path2D" type="Path2D" parent="Tip#4" index="3"]
-
-self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+[node name="Path2D" type="Path2D" parent="Tip#4"]
 curve = SubResource( 42 )
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Tip#4/Path2D" index="0"]
-
+[node name="PathFollow2D" type="PathFollow2D" parent="Tip#4/Path2D"]
 position = Vector2( 797.394, 445.59 )
 rotation = -0.979385
 offset = 186.071
-h_offset = 0.0
-v_offset = 0.0
 rotate = false
-cubic_interp = true
-loop = true
-lookahead = 4.0
 
-[node name="Player" type="KinematicBody2D" parent="Tip#4/Path2D/PathFollow2D" index="0"]
-
+[node name="Player" type="KinematicBody2D" parent="Tip#4/Path2D/PathFollow2D"]
 position = Vector2( 2.64404, 14.1461 )
 rotation = 0.979385
-input_pickable = false
 collision_layer = 4097
-collision_mask = 1
-collision/safe_margin = 0.08
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="BodyOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player" index="0"]
-
-editor/display_folded = true
+[node name="BodyOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "rising"
-frame = 2
+frame = 7
 playing = true
 
-[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline" index="0"]
-
+[node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "shooting"
-frame = 5
-playing = true
-
-[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline" index="1"]
-
-frames = SubResource( 9 )
-animation = "shooting"
-frame = 5
-playing = true
-
-[node name="Body" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player" index="1"]
-
-editor/display_folded = true
-frames = SubResource( 10 )
-animation = "rising"
 frame = 2
 playing = true
 
-[node name="JetParticles" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/Body" index="0"]
+[node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/BodyOutline"]
+frames = SubResource( 9 )
+animation = "shooting"
+frame = 2
+playing = true
 
+[node name="Body" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player"]
+frames = SubResource( 10 )
+animation = "rising"
+frame = 7
+playing = true
+
+[node name="JetParticles" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 position = Vector2( -40, 12.8015 )
 emitting = false
 amount = 24
 lifetime = 0.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
 local_coords = false
-draw_order = 0
-process_material = null
-texture = null
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="ArmBack" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/Body" index="1"]
-
+[node name="ArmBack" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "shooting"
-frame = 5
+frame = 2
 playing = true
 
-[node name="ArmFront" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/Body" index="2"]
-
+[node name="ArmFront" type="AnimatedSprite" parent="Tip#4/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "shooting"
-frame = 5
+frame = 2
 playing = true
 
-[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player" index="2"]
-
-root_node = NodePath("..")
+[node name="BodyAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 13 )
 anims/fall_to_rise = SubResource( 14 )
 anims/falling = SubResource( 15 )
 anims/rise_to_fall = SubResource( 16 )
 anims/rising = SubResource( 17 )
-blend_times = [  ]
 
-[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player" index="3"]
-
-root_node = NodePath("..")
+[node name="ArmsAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player"]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 18 )
 anims/fall_to_rise = SubResource( 19 )
 anims/falling = SubResource( 20 )
@@ -8022,155 +6985,84 @@ anims/reloading = SubResource( 21 )
 anims/rise_to_fall = SubResource( 22 )
 anims/rising = SubResource( 23 )
 anims/shooting = SubResource( 24 )
-blend_times = [  ]
 
-[node name="Shield" type="Area2D" parent="Tip#4/Path2D/PathFollow2D/Player" index="4"]
-
-editor/display_folded = true
+[node name="Shield" type="Area2D" parent="Tip#4/Path2D/PathFollow2D/Player"]
 position = Vector2( -15, 0 )
 input_pickable = false
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
 monitoring = false
 monitorable = false
-audio_bus_override = false
-audio_bus_name = "Master"
 
-[node name="Sprite" type="Sprite" parent="Tip#4/Path2D/PathFollow2D/Player/Shield" index="0"]
-
+[node name="Sprite" type="Sprite" parent="Tip#4/Path2D/PathFollow2D/Player/Shield"]
 modulate = Color( 0, 0.956863, 1, 1 )
 scale = Vector2( 1.69482, 1.69482 )
 texture = ExtResource( 493 )
 
-[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player/Shield" index="1"]
-
-root_node = NodePath("..")
+[node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player/Shield"]
 autoplay = "disabled"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 25 )
 anims/burst = SubResource( 26 )
 anims/disabled = SubResource( 27 )
 anims/idle = SubResource( 28 )
 anims/open = SubResource( 29 )
-blend_times = [  ]
 
-[node name="BulletSpawn" type="Position2D" parent="Tip#4/Path2D/PathFollow2D/Player" index="5"]
-
-editor/display_folded = true
+[node name="BulletSpawn" type="Position2D" parent="Tip#4/Path2D/PathFollow2D/Player"]
 show_behind_parent = true
 position = Vector2( 50, -22 )
 
-[node name="Bullet" type="Node2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn" index="0"]
-
+[node name="Bullet" type="Node2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn"]
 z_index = 3
 
-[node name="LaserBody" type="Sprite" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet" index="0"]
-
+[node name="LaserBody" type="Sprite" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 position = Vector2( 240.664, 0 )
 texture = ExtResource( 741 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 481.328, 24 )
 
-[node name="LaserTip" type="Sprite" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet" index="1"]
-
+[node name="LaserTip" type="Sprite" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 position = Vector2( 488.328, 0 )
 texture = ExtResource( 741 )
 region_enabled = true
 region_rect = Rect2( 1418, 0, 14, 24 )
 
-[node name="LaserParticlesTop" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet" index="2"]
-
+[node name="LaserParticlesTop" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 modulate = Color( 1, 1, 1, 0.331903 )
 position = Vector2( 0, -2 )
-emitting = true
 amount = 15
 lifetime = 2.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
-draw_order = 0
-process_material = null
 texture = ExtResource( 742 )
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="LaserParticlesBottom" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet" index="3"]
-
+[node name="LaserParticlesBottom" type="Particles2D" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 modulate = Color( 1, 1, 1, 0.331903 )
 position = Vector2( 0, 1 )
-emitting = true
 amount = 15
 lifetime = 2.3
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
-draw_order = 0
-process_material = null
 texture = ExtResource( 742 )
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet" index="4"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
 anims/fadeout = SubResource( 44 )
 anims/fire = SubResource( 45 )
 anims/idle = SubResource( 46 )
 anims/inactive = SubResource( 47 )
-blend_times = [  ]
 
-[node name="OverheatBar2" parent="Tip#4/Path2D/PathFollow2D/Player" index="6" instance=ExtResource( 736 )]
-
+[node name="OverheatBar2" parent="Tip#4/Path2D/PathFollow2D/Player" instance=ExtResource( 736 )]
 margin_left = -154.0
 margin_top = -65.0
 margin_right = -74.0
 margin_bottom = 101.0
 rect_scale = Vector2( 0.8, 0.8 )
-value = 33.8048
+value = 34.0
 
-[node name="Tip#4Animator" type="AnimationPlayer" parent="Tip#4/Path2D" index="1"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="Tip#4Animator" type="AnimationPlayer" parent="Tip#4/Path2D"]
 anims/tutorial = SubResource( 48 )
-blend_times = [  ]
 
-[node name="Tentacles" type="Node2D" parent="Tip#4" index="4"]
-
+[node name="Tentacles" type="Node2D" parent="Tip#4"]
 position = Vector2( 774, 113 )
 
-[node name="TentacleTop" type="Node2D" parent="Tip#4/Tentacles" index="0"]
-
+[node name="TentacleTop" type="Node2D" parent="Tip#4/Tentacles"]
 light_mask = 2
 position = Vector2( 0, 350 )
 
-[node name="OutlineTop" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop" index="0"]
-
+[node name="OutlineTop" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 position = Vector2( 25, -750.066 )
@@ -8181,9 +7073,7 @@ centered = false
 flip_v = true
 script = ExtResource( 587 )
 
-[node name="TentacleTop" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop" index="1"]
-
-editor/display_folded = true
+[node name="TentacleTop" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 position = Vector2( 25, -750.066 )
@@ -8194,28 +7084,24 @@ centered = false
 flip_v = true
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop/TentacleTop" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop/TentacleTop"]
 show_behind_parent = true
 position = Vector2( 215, -75 )
 frames = SubResource( 51 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop/TentacleTop/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleTop/TentacleTop/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 52 )
 animation = "dying"
 frame = 51
 
-[node name="TentacleBottom" type="Node2D" parent="Tip#4/Tentacles" index="1"]
-
+[node name="TentacleBottom" type="Node2D" parent="Tip#4/Tentacles"]
 light_mask = 2
 position = Vector2( 0, 350 )
 
-[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom" index="0"]
-
+[node name="OutlineBottom" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 position = Vector2( 25, -50.0661 )
@@ -8225,9 +7111,7 @@ frame = 20
 centered = false
 script = ExtResource( 587 )
 
-[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom" index="1"]
-
-editor/display_folded = true
+[node name="TentacleBottom" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 position = Vector2( 25, -50.0661 )
@@ -8237,497 +7121,270 @@ frame = 20
 centered = false
 script = ExtResource( 631 )
 
-[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom/TentacleBottom" index="0"]
-
+[node name="DeadPlayer" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom/TentacleBottom"]
 show_behind_parent = true
 position = Vector2( 215, 875 )
 frames = SubResource( 51 )
 animation = "dying"
 frame = 51
 
-[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer" index="0"]
-
+[node name="DeadPlayerOutline" type="AnimatedSprite" parent="Tip#4/Tentacles/TentacleBottom/TentacleBottom/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 52 )
 animation = "dying"
 frame = 51
 
-[node name="Cena2" type="Node2D" parent="Tip#4" index="5"]
-
+[node name="Cena2" type="Node2D" parent="Tip#4"]
 position = Vector2( 71, 847 )
 
-[node name="Limits" type="Node2D" parent="Tip#4/Cena2" index="0"]
-
+[node name="Limits" type="Node2D" parent="Tip#4/Cena2"]
 position = Vector2( 883.015, -99.0731 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#4/Cena2/Limits" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#4/Cena2/Limits"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#4/Cena2/Limits" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#4/Cena2/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#4/Cena2/Limits" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#4/Cena2/Limits"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 3
+frame = 7
 playing = true
 script = ExtResource( 527 )
 
-[node name="Limits1" type="Node2D" parent="Tip#4/Cena2" index="1"]
-
+[node name="Limits1" type="Node2D" parent="Tip#4/Cena2"]
 position = Vector2( 883.015, -672.073 )
 rotation = 3.14159
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1" index="0"]
-
+[node name="LimitsOutline0" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1"]
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 510 )
 
-[node name="LimitsLight" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1" index="1"]
-
+[node name="LimitsLight" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 527 )
 
-[node name="LimitsDark" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1" index="2"]
-
+[node name="LimitsDark" type="AnimatedSprite" parent="Tip#4/Cena2/Limits1"]
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 14
+frame = 2
 playing = true
 script = ExtResource( 527 )
 
-[node name="HUD" type="Control" parent="Tip#4/Cena2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HUD" type="Control" parent="Tip#4/Cena2"]
 margin_left = 479.0
 margin_top = -810.0
 margin_right = 479.0
 margin_bottom = -810.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Score" type="Label" parent="Tip#4/Cena2/HUD" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Score" type="Label" parent="Tip#4/Cena2/HUD"]
 margin_left = 334.0
 margin_top = 88.0
 margin_right = 442.0
 margin_bottom = 125.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 737 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Score:"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Points" type="Label" parent="Tip#4/Cena2/HUD" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Points" type="Label" parent="Tip#4/Cena2/HUD"]
 margin_left = 312.0
 margin_top = 116.0
 margin_right = 464.0
 margin_bottom = 172.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "0015"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="ProgressVisualization2" type="CenterContainer" parent="Tip#4/Cena2/HUD" index="2"]
-
+[node name="ProgressVisualization2" type="CenterContainer" parent="Tip#4/Cena2/HUD"]
 pause_mode = 2
-editor/display_folded = true
 anchor_left = 1.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 30.0
 margin_top = 680.0
 margin_right = 782.0
 margin_bottom = 766.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
 
-[node name="BarBase" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BarBase" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2"]
 margin_top = 13.0
 margin_right = 752.0
 margin_bottom = 73.0
 rect_min_size = Vector2( 752, 60 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_styles/panel = SubResource( 53 )
 
-[node name="BarFill" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="BarFill" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_styles/panel = SubResource( 54 )
 
-[node name="BarFinish" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" index="1"]
-
+[node name="BarFinish" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
 modulate = Color( 1, 1, 1, 0.434536 )
 anchor_left = 1.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -60.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_styles/panel = SubResource( 55 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/BarFinish" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/BarFinish"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 56 )
-blend_times = [  ]
 
-[node name="BarOutline" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="BarOutline" type="Panel" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 2.0
 margin_top = 2.0
 margin_right = -2.0
 margin_bottom = -2.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 custom_styles/panel = SubResource( 57 )
 
-[node name="IconContainer" type="CenterContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
+[node name="IconContainer" type="CenterContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase"]
 anchor_bottom = 1.0
 margin_left = 344.0
 margin_right = 383.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
 
-[node name="Icon" type="TextureRect" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/IconContainer" index="0"]
-
+[node name="Icon" type="TextureRect" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/IconContainer"]
 modulate = Color( 0, 1, 1, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 8.0
 margin_top = 19.0
 margin_right = 30.0
 margin_bottom = 41.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 747 )
-stretch_mode = 0
 
-[node name="Particles2D" type="Particles2D" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/IconContainer/Icon" index="0"]
-
+[node name="Particles2D" type="Particles2D" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase/IconContainer/Icon"]
 show_behind_parent = true
 position = Vector2( 11, 11 )
-emitting = true
 amount = 1
 lifetime = 0.5
-one_shot = false
-preprocess = 0.0
-speed_scale = 1.0
-explosiveness = 0.0
-randomness = 0.0
-fixed_fps = 0
-fract_delta = true
-visibility_rect = Rect2( -100, -100, 200, 200 )
-local_coords = true
-draw_order = 0
-process_material = null
 texture = ExtResource( 748 )
-normal_map = null
-h_frames = 1
-v_frames = 1
 
-[node name="BarrierContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" index="4" instance=ExtResource( 749 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="BarrierContainer" parent="Tip#4/Cena2/HUD/ProgressVisualization2/BarBase" instance=ExtResource( 749 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 382.0
 margin_right = 421.0
 margin_bottom = 73.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Tip#4/Cena2/HUD" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Tip#4/Cena2/HUD"]
 margin_left = 40.0
 margin_top = 640.0
 margin_right = 80.0
 margin_bottom = 680.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-alignment = 0
 
-[node name="AmmoRoot" parent="Tip#4/Cena2/HUD/HBoxContainer" index="0" instance=ExtResource( 740 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="AmmoRoot" parent="Tip#4/Cena2/HUD/HBoxContainer" instance=ExtResource( 740 )]
 margin_right = 26.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 26, 38 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
 [node name="Ammo" parent="Tip#4/Cena2/HUD/HBoxContainer/AmmoRoot" index="1"]
-
 modulate = Color( 0.331903, 0.717388, 0.725366, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 0.0
 margin_right = 12.0
 rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="AmmoRoot1" parent="Tip#4/Cena2/HUD/HBoxContainer" index="1" instance=ExtResource( 740 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="AmmoRoot1" parent="Tip#4/Cena2/HUD/HBoxContainer" instance=ExtResource( 740 )]
 margin_left = 30.0
 margin_right = 56.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 26, 38 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
 [node name="Ammo" parent="Tip#4/Cena2/HUD/HBoxContainer/AmmoRoot1" index="1"]
-
 modulate = Color( 0, 0.960784, 1, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 0.0
 margin_right = 11.0
 rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="AmmoRoot2" parent="Tip#4/Cena2/HUD/HBoxContainer" index="2" instance=ExtResource( 740 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="AmmoRoot2" parent="Tip#4/Cena2/HUD/HBoxContainer" instance=ExtResource( 740 )]
 margin_left = 60.0
 margin_right = 86.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 26, 38 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
 [node name="Ammo" parent="Tip#4/Cena2/HUD/HBoxContainer/AmmoRoot2" index="1"]
-
 modulate = Color( 0, 0.960784, 1, 1 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 0.0
 margin_right = 11.0
 rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_default_cursor_shape = 0
 
-[node name="continue" type="Label" parent="." index="7"]
-
+[node name="continue" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = 980.0
 margin_right = 1537.0
 margin_bottom = 1066.0
 rect_scale = Vector2( 1.25, 1.25 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 750 )
 text = "Press \"up\" to continue."
 align = 1
 valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="continue" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="continue"]
 autoplay = "blinking"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/blinking = SubResource( 58 )
-blend_times = [  ]
-_sections_unfolded = [ "Playback Options" ]
 
-[node name="Control 2" type="Control" parent="." index="8"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Control 2" type="Control" parent="."]
 margin_left = -1590.0
 margin_right = -590.0
 margin_bottom = 1000.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="pallet" type="Sprite" parent="Control 2" index="0"]
-
+[node name="pallet" type="Sprite" parent="Control 2"]
 position = Vector2( 2501.43, 1308.35 )
 texture = ExtResource( 751 )
 
-
 [editable path="Tip#2/Path2D/PathFollow2D/Player/OverheatBar"]
+
 [editable path="Tip#3/Path2D/PathFollow2D/Player/OverheatBar1"]
+
 [editable path="Tip#4/HUD1/AmmoRoot"]
+
 [editable path="Tip#4/Path2D/PathFollow2D/Player/OverheatBar2"]
+
 [editable path="Tip#4/Cena2/HUD/HBoxContainer/AmmoRoot"]
+
 [editable path="Tip#4/Cena2/HUD/HBoxContainer/AmmoRoot1"]
+
 [editable path="Tip#4/Cena2/HUD/HBoxContainer/AmmoRoot2"]

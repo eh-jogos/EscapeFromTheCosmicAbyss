@@ -130,6 +130,8 @@ func handle_button_states(stat_value, max_stats):
 ###########################
 
 func _ready():
+	set_process_input(false)
+	
 	upgrade_brain = self.get_parent().get_parent()
 	stat_bar = self.get_node("UpgradeBar")
 	

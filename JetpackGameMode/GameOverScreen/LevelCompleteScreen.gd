@@ -44,7 +44,7 @@ func _ready():
 	stage_number = self.get_node("StageClearedContainer/LevelText/StageNumber")
 	stage_name = self.get_node("StageClearedContainer/LevelText/StageName")
 	
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
 	score_results = self.get_node("ResultsContainer/ScoreResults")

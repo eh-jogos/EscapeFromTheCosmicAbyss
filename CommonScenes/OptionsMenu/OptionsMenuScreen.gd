@@ -9,7 +9,7 @@ func _ready():
 	fullscreen_btn.grab_focus()
 	
 	animator = self.get_node("AnimationPlayer")
-	animator.set_current_animation("close")
+	animator.assigned_animation = "close"
 	animator.seek(animator.get_current_animation_length(), true)
 	animator.play_backwards("close")
 	

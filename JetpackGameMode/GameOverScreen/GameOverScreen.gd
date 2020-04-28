@@ -41,7 +41,7 @@ func _ready():
 	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
 	
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
 	score_results = self.get_node("ResultsContainer/ScoreResults")
