@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -67,6 +67,8 @@
 [ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" type="PackedScene" id=65]
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" type="PackedScene" id=66]
 [ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" type="PackedScene" id=67]
+[ext_resource path="res://JetpackGameMode/BG/BG_LooperH_Bg2.gd" type="Script" id=68]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_5.png" type="Texture" id=69]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( -50, 0 )
@@ -400,7 +402,7 @@ tracks/5/keys = {
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 69 ) ],
 "loop": false,
 "name": "default",
 "speed": 0.0
@@ -1042,8 +1044,12 @@ texture = ExtResource( 28 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -2
+scroll_base_offset = Vector2( -960, 0 )
 scroll_ignore_camera_zoom = true
 script = ExtResource( 29 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="BackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
@@ -1066,6 +1072,7 @@ anims/scream = SubResource( 9 )
 
 [node name="Parallax3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.25, 1 )
+motion_offset = Vector2( -480, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1116,6 +1123,7 @@ scale = Vector2( -0.5, 0.5 )
 
 [node name="Parallax2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.4, 1 )
+motion_offset = Vector2( -192, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1124,7 +1132,7 @@ __meta__ = {
 position = Vector2( 1010, 540 )
 frames = SubResource( 13 )
 frame = 1
-script = ExtResource( 44 )
+script = ExtResource( 68 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1137,7 +1145,7 @@ position = Vector2( 1010, 540 )
 position = Vector2( 3030, 540 )
 frames = SubResource( 13 )
 frame = 3
-script = ExtResource( 44 )
+script = ExtResource( 68 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1194,9 +1202,9 @@ visible = false
 position = Vector2( 1010, 540 )
 
 [node name="Parallax0" type="ParallaxLayer" parent="ParallaxBackground"]
-visible = false
 z_as_relative = false
 motion_scale = Vector2( 0.75, 1 )
+motion_offset = Vector2( 480, 0 )
 
 [node name="Sprite0" type="Sprite" parent="ParallaxBackground/Parallax0"]
 light_mask = 1024
