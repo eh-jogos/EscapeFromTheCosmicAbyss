@@ -171,9 +171,9 @@ func set_new_scene(scene_resource):
 	get_tree().change_scene_to(scene_resource)
 	
 	if animation_loaded:
-		animation.play_backwards("fade_in")
+		animation.play("fade_out")
 	else:
-		animation.play_backwards("black_transition")
+		animation.play("black_transition_out")
 	yield(animation, "animation_finished")
 	reset()
 
@@ -186,7 +186,7 @@ func black_transition(path, focus_path, origin_scene):
 	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
 	load_above(path, focus_path, origin_scene)
-	animation.play_backwards("black_transition")
+	animation.play("black_transition_out")
 	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
@@ -196,7 +196,7 @@ func black_transition_replace(path):
 	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
 	get_tree().change_scene(path)
-	animation.play_backwards("black_transition")
+	animation.play("black_transition_out")
 	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
@@ -206,7 +206,7 @@ func black_transition_from_above():
 	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
 	clear_above()
-	animation.play_backwards("black_transition")
+	animation.play("black_transition_out")
 	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
