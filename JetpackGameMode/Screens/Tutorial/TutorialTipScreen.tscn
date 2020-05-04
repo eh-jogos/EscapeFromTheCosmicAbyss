@@ -1,4 +1,4 @@
-[gd_scene load_steps=809 format=2]
+[gd_scene load_steps=816 format=2]
 
 [ext_resource path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
@@ -750,6 +750,8 @@
 [ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=748]
 [ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=749]
 [ext_resource path="res://Fonts/OrbitronBold40.font" type="BitmapFont" id=750]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/jetpack_particle.png" type="Texture" id=751]
+[ext_resource path="res://JetpackGameMode/Screens/Tutorial/tutorial_jetpack_particles.tres" type="Material" id=752]
 
 [sub_resource type="Animation" id=1]
 resource_name = "TipScreen_0"
@@ -1666,14 +1668,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ) ],
 "loop": true,
 "name": "reloading",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ) ],
+"loop": true,
+"name": "rising",
 "speed": 60.0
 } ]
 
@@ -1699,14 +1701,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 240 ), ExtResource( 241 ) ],
 "loop": true,
 "name": "reloading",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ) ],
+"loop": true,
+"name": "rising",
 "speed": 60.0
 } ]
 
@@ -1755,14 +1757,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 377 ), ExtResource( 378 ), ExtResource( 379 ), ExtResource( 380 ), ExtResource( 381 ), ExtResource( 382 ), ExtResource( 383 ), ExtResource( 384 ), ExtResource( 385 ), ExtResource( 386 ), ExtResource( 387 ), ExtResource( 388 ), ExtResource( 389 ), ExtResource( 390 ), ExtResource( 391 ), ExtResource( 392 ), ExtResource( 393 ), ExtResource( 394 ), ExtResource( 395 ) ],
 "loop": true,
 "name": "reloading",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ), ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ) ],
+"loop": true,
+"name": "rising",
 "speed": 60.0
 } ]
 
@@ -1788,14 +1790,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ) ],
-"loop": true,
-"name": "rising",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 467 ), ExtResource( 468 ), ExtResource( 469 ), ExtResource( 470 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 474 ), ExtResource( 475 ), ExtResource( 476 ), ExtResource( 477 ), ExtResource( 478 ), ExtResource( 479 ), ExtResource( 480 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 483 ), ExtResource( 484 ), ExtResource( 485 ) ],
 "loop": true,
 "name": "reloading",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ), ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ) ],
+"loop": true,
+"name": "rising",
 "speed": 60.0
 } ]
 
@@ -4236,14 +4238,14 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 555 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 561 ), ExtResource( 562 ), ExtResource( 562 ), ExtResource( 563 ), ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
 "loop": false,
 "name": "kill_player",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 555 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 561 ), ExtResource( 562 ), ExtResource( 562 ), ExtResource( 563 ), ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ) ],
@@ -4264,15 +4266,15 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 599 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 604 ), ExtResource( 605 ), ExtResource( 605 ), ExtResource( 606 ), ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
 "loop": false,
 "name": "kill_player",
 "speed": 59.999
+}, {
+"frames": [ ExtResource( 599 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 604 ), ExtResource( 605 ), ExtResource( 605 ), ExtResource( 606 ), ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ) ],
+"loop": false,
+"name": "spawn",
+"speed": 60.0
 }, {
 "frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ) ],
 "loop": false,
@@ -5423,14 +5425,14 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 555 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 561 ), ExtResource( 562 ), ExtResource( 562 ), ExtResource( 563 ), ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ), ExtResource( 568 ), ExtResource( 569 ), ExtResource( 569 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 577 ), ExtResource( 577 ), ExtResource( 576 ), ExtResource( 576 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 575 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 574 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 573 ), ExtResource( 572 ), ExtResource( 572 ), ExtResource( 571 ), ExtResource( 571 ), ExtResource( 570 ), ExtResource( 570 ), ExtResource( 569 ) ],
 "loop": false,
 "name": "kill_player",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 555 ), ExtResource( 555 ), ExtResource( 555 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 556 ), ExtResource( 557 ), ExtResource( 557 ), ExtResource( 558 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 559 ), ExtResource( 560 ), ExtResource( 560 ), ExtResource( 561 ), ExtResource( 561 ), ExtResource( 562 ), ExtResource( 562 ), ExtResource( 563 ), ExtResource( 563 ), ExtResource( 564 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 565 ), ExtResource( 566 ), ExtResource( 566 ), ExtResource( 567 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 578 ), ExtResource( 578 ), ExtResource( 579 ), ExtResource( 579 ), ExtResource( 580 ), ExtResource( 580 ), ExtResource( 581 ), ExtResource( 581 ), ExtResource( 582 ), ExtResource( 583 ), ExtResource( 584 ), ExtResource( 585 ), ExtResource( 586 ) ],
@@ -5451,15 +5453,15 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 599 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 604 ), ExtResource( 605 ), ExtResource( 605 ), ExtResource( 606 ), ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ), ExtResource( 612 ), ExtResource( 613 ), ExtResource( 613 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 621 ), ExtResource( 621 ), ExtResource( 620 ), ExtResource( 620 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 619 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 618 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 617 ), ExtResource( 616 ), ExtResource( 616 ), ExtResource( 615 ), ExtResource( 615 ), ExtResource( 614 ), ExtResource( 614 ), ExtResource( 613 ) ],
 "loop": false,
 "name": "kill_player",
 "speed": 59.999
+}, {
+"frames": [ ExtResource( 599 ), ExtResource( 599 ), ExtResource( 599 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 600 ), ExtResource( 601 ), ExtResource( 601 ), ExtResource( 602 ), ExtResource( 602 ), ExtResource( 603 ), ExtResource( 603 ), ExtResource( 604 ), ExtResource( 604 ), ExtResource( 605 ), ExtResource( 605 ), ExtResource( 606 ), ExtResource( 606 ), ExtResource( 607 ), ExtResource( 607 ), ExtResource( 608 ), ExtResource( 608 ), ExtResource( 609 ), ExtResource( 609 ), ExtResource( 610 ), ExtResource( 610 ), ExtResource( 611 ) ],
+"loop": false,
+"name": "spawn",
+"speed": 60.0
 }, {
 "frames": [ ExtResource( 622 ), ExtResource( 622 ), ExtResource( 623 ), ExtResource( 623 ), ExtResource( 624 ), ExtResource( 624 ), ExtResource( 625 ), ExtResource( 625 ), ExtResource( 626 ), ExtResource( 627 ), ExtResource( 628 ), ExtResource( 629 ), ExtResource( 630 ) ],
 "loop": false,
@@ -5535,6 +5537,27 @@ margin_left = 20.0
 margin_right = 20.0
 margin_top = 20.0
 margin_bottom = 20.0
+
+[sub_resource type="Gradient" id=59]
+colors = PoolColorArray( 0, 0.956863, 1, 1, 0, 0.956863, 1, 0 )
+
+[sub_resource type="GradientTexture" id=60]
+gradient = SubResource( 59 )
+
+[sub_resource type="Curve" id=61]
+_data = [ Vector2( 0, 0.290909 ), 0.0, 0.709091, 0, 1, Vector2( 1, 1 ), 0.709091, 0.0, 1, 0 ]
+
+[sub_resource type="CurveTexture" id=62]
+curve = SubResource( 61 )
+
+[sub_resource type="ParticlesMaterial" id=63]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 1.8
+scale_curve = SubResource( 62 )
+color_ramp = SubResource( 60 )
 
 [sub_resource type="Animation" id=58]
 loop = true
@@ -5631,9 +5654,9 @@ max_lines_visible = 10
 curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#0/Path2D"]
-position = Vector2( 674.644, 559.278 )
+position = Vector2( 691.706, 537.433 )
 rotation = -0.979385
-offset = 17.357
+offset = 45.0545
 rotate = false
 
 [node name="Player" type="KinematicBody2D" parent="Tip#0/Path2D/PathFollow2D"]
@@ -5647,46 +5670,48 @@ __meta__ = {
 [node name="BodyOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "rising"
-frame = 12
+frame = 6
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "rising"
-frame = 12
+frame = 6
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
 animation = "rising"
-frame = 12
+frame = 6
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "rising"
-frame = 12
+frame = 6
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
-position = Vector2( -40, 12.8015 )
-amount = 24
+position = Vector2( -46.4238, 22.7291 )
+amount = 124
 lifetime = 0.3
 local_coords = false
+process_material = ExtResource( 752 )
+texture = ExtResource( 751 )
 
 [node name="ArmBack" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "rising"
-frame = 12
+frame = 6
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#0/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "rising"
-frame = 12
+frame = 6
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#0/Path2D/PathFollow2D/Player"]
@@ -5742,7 +5767,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 510 )
 
@@ -5750,7 +5775,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -5758,7 +5783,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -5773,7 +5798,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 5
+frame = 13
 playing = true
 script = ExtResource( 510 )
 
@@ -5781,7 +5806,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 5
+frame = 13
 playing = true
 script = ExtResource( 527 )
 
@@ -5789,13 +5814,12 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 5
+frame = 13
 playing = true
 script = ExtResource( 527 )
 
 [node name="Tip#1" type="Control" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
@@ -5845,9 +5869,9 @@ position = Vector2( -559, -114 )
 curve = SubResource( 6 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#1/Mask/Path2D"]
-position = Vector2( 704.997, 521.856 )
+position = Vector2( 990.714, 541.406 )
 rotation = -0.979385
-offset = 65.5213
+offset = 429.599
 rotate = false
 
 [node name="Player" type="KinematicBody2D" parent="Tip#1/Mask/Path2D/PathFollow2D"]
@@ -5860,47 +5884,53 @@ __meta__ = {
 
 [node name="BodyOutline" type="AnimatedSprite" parent="Tip#1/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
-animation = "rising"
-frame = 8
+animation = "falling"
+frame = 12
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#1/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
-animation = "rising"
-frame = 8
+animation = "falling"
+frame = 12
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#1/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
-animation = "rising"
-frame = 8
+animation = "falling"
+frame = 12
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#1/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
-animation = "rising"
-frame = 8
+animation = "falling"
+frame = 12
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#1/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
-position = Vector2( -40, 12.8015 )
-amount = 24
+position = Vector2( -46.4238, 22.7291 )
+emitting = false
+amount = 124
 lifetime = 0.3
 local_coords = false
+process_material = ExtResource( 752 )
+texture = ExtResource( 751 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ArmBack" type="AnimatedSprite" parent="Tip#1/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
-animation = "rising"
-frame = 8
+animation = "falling"
+frame = 12
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#1/Mask/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
-animation = "rising"
-frame = 8
+animation = "falling"
+frame = 12
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#1/Mask/Path2D/PathFollow2D/Player"]
@@ -5953,6 +5983,7 @@ position = Vector2( 150, -450 )
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 36 )
 animation = "idle"
+frame = 24
 playing = true
 centered = false
 flip_v = true
@@ -5962,6 +5993,7 @@ script = ExtResource( 587 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 37 )
 animation = "idle"
+frame = 24
 playing = true
 centered = false
 flip_v = true
@@ -5989,6 +6021,7 @@ position = Vector2( 150, 350 )
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 36 )
 animation = "idle"
+frame = 24
 playing = true
 centered = false
 script = ExtResource( 587 )
@@ -5997,6 +6030,7 @@ script = ExtResource( 587 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 37 )
 animation = "idle"
+frame = 24
 playing = true
 centered = false
 script = ExtResource( 631 )
@@ -6027,7 +6061,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 13
+frame = 5
 playing = true
 script = ExtResource( 510 )
 
@@ -6035,7 +6069,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 13
+frame = 5
 playing = true
 script = ExtResource( 527 )
 
@@ -6043,7 +6077,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 13
+frame = 5
 playing = true
 script = ExtResource( 527 )
 
@@ -6058,7 +6092,6 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 8
 playing = true
 flip_h = true
 script = ExtResource( 510 )
@@ -6067,7 +6100,6 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 8
 playing = true
 flip_h = true
 script = ExtResource( 527 )
@@ -6076,7 +6108,6 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 8
 playing = true
 flip_h = true
 script = ExtResource( 527 )
@@ -6134,9 +6165,9 @@ __meta__ = {
 }
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#2/Mask/Path2D"]
-position = Vector2( 894.664, 484.992 )
+position = Vector2( 1156.73, 462.677 )
 rotation = -0.979385
-offset = 271.139
+offset = 538.994
 rotate = false
 
 [node name="Player" type="KinematicBody2D" parent="Tip#2/Mask/Path2D/PathFollow2D"]
@@ -6150,47 +6181,51 @@ __meta__ = {
 [node name="BodyOutline" type="AnimatedSprite" parent="Tip#2/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "falling"
-frame = 8
+frame = 5
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#2/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
 animation = "falling"
-frame = 8
+frame = 5
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#2/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
 animation = "falling"
-frame = 8
+frame = 5
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#2/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "falling"
-frame = 8
+frame = 5
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#2/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
-position = Vector2( -40, 12.8015 )
-emitting = false
-amount = 24
+position = Vector2( -46.4238, 22.7291 )
+amount = 124
 lifetime = 0.3
 local_coords = false
+process_material = ExtResource( 752 )
+texture = ExtResource( 751 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ArmBack" type="AnimatedSprite" parent="Tip#2/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
 animation = "falling"
-frame = 8
+frame = 5
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#2/Mask/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
 animation = "falling"
-frame = 8
+frame = 5
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#2/Mask/Path2D/PathFollow2D/Player"]
@@ -6234,7 +6269,7 @@ margin_top = -65.0
 margin_right = -59.0
 margin_bottom = 101.0
 rect_scale = Vector2( 0.8, 0.8 )
-value = 79.0
+value = 41.0
 
 [node name="Tip#2Animator" type="AnimationPlayer" parent="Tip#2/Mask/Path2D"]
 anims/tutorial = SubResource( 41 )
@@ -6251,7 +6286,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
 animation = "idle"
-frame = 24
+frame = 8
 playing = true
 centered = false
 flip_v = true
@@ -6262,7 +6297,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
 animation = "idle"
-frame = 24
+frame = 8
 playing = true
 centered = false
 flip_v = true
@@ -6290,7 +6325,7 @@ modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
 animation = "idle"
-frame = 24
+frame = 8
 playing = true
 centered = false
 script = ExtResource( 587 )
@@ -6300,7 +6335,7 @@ modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
 animation = "idle"
-frame = 24
+frame = 8
 playing = true
 centered = false
 script = ExtResource( 631 )
@@ -6335,7 +6370,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 510 )
 
@@ -6343,7 +6378,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -6351,7 +6386,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -6366,7 +6401,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 510 )
 
@@ -6374,7 +6409,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 527 )
 
@@ -6382,7 +6417,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 527 )
 
@@ -6412,10 +6447,9 @@ mouse_filter = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
-text = "0000"
+text = "0001"
 
 [node name="Tip#3" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
@@ -6556,9 +6590,9 @@ position = Vector2( -559, -114 )
 curve = SubResource( 42 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#3/Mask/Path2D"]
-position = Vector2( 835.687, 432.56 )
+position = Vector2( 1233.92, 632.559 )
 rotation = -0.979385
-offset = 226.678
+offset = 752.586
 rotate = false
 
 [node name="Player" type="KinematicBody2D" parent="Tip#3/Mask/Path2D/PathFollow2D"]
@@ -6571,43 +6605,51 @@ __meta__ = {
 
 [node name="BodyOutline" type="AnimatedSprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
-animation = "rise_to_fall"
-frame = 7
+animation = "rising"
+playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
-animation = "rise_to_fall"
-frame = 12
+animation = "rising"
+frame = 8
+playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
-animation = "rise_to_fall"
-frame = 12
+animation = "rising"
+frame = 8
+playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
-animation = "rise_to_fall"
-frame = 7
+animation = "rising"
+playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
-position = Vector2( -40, 12.8015 )
-emitting = false
-amount = 24
+position = Vector2( -46.4238, 22.7291 )
+amount = 124
 lifetime = 0.3
 local_coords = false
+process_material = ExtResource( 752 )
+texture = ExtResource( 751 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ArmBack" type="AnimatedSprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
-animation = "rise_to_fall"
-frame = 12
+animation = "rising"
+frame = 8
+playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
-animation = "rise_to_fall"
-frame = 12
+animation = "rising"
+frame = 8
+playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#3/Mask/Path2D/PathFollow2D/Player"]
 autoplay = "base"
@@ -6630,9 +6672,12 @@ anims/shooting = SubResource( 24 )
 [node name="Shield" type="Area2D" parent="Tip#3/Mask/Path2D/PathFollow2D/Player"]
 position = Vector2( -15, 0 )
 input_pickable = false
+monitoring = false
+monitorable = false
 
 [node name="Sprite" type="Sprite" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/Shield"]
-modulate = Color( 0, 0.956863, 1, 1 )
+modulate = Color( 0, 0.956863, 1, 0 )
+scale = Vector2( 1.69482, 1.69482 )
 texture = ExtResource( 493 )
 
 [node name="ShieldAnimator" type="AnimationPlayer" parent="Tip#3/Mask/Path2D/PathFollow2D/Player/Shield"]
@@ -6649,7 +6694,7 @@ margin_top = -65.0
 margin_right = -79.0
 margin_bottom = 101.0
 rect_scale = Vector2( 0.8, 0.8 )
-value = 31.0
+value = 38.0
 
 [node name="Tip#3Animator" type="AnimationPlayer" parent="Tip#3/Mask/Path2D"]
 anims/tutorial = SubResource( 43 )
@@ -6694,8 +6739,8 @@ position = Vector2( 150, -600 )
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
-animation = "idle"
-frame = 26
+animation = "spawn"
+frame = 8
 centered = false
 flip_v = true
 script = ExtResource( 587 )
@@ -6704,8 +6749,8 @@ script = ExtResource( 587 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
-animation = "idle"
-frame = 26
+animation = "spawn"
+frame = 8
 centered = false
 flip_v = true
 script = ExtResource( 631 )
@@ -6731,8 +6776,8 @@ position = Vector2( 150, 150 )
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 light_mask = 2
 frames = SubResource( 36 )
-animation = "idle"
-frame = 26
+animation = "spawn"
+frame = 8
 centered = false
 script = ExtResource( 587 )
 
@@ -6740,8 +6785,8 @@ script = ExtResource( 587 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 light_mask = 2
 frames = SubResource( 37 )
-animation = "idle"
-frame = 26
+animation = "spawn"
+frame = 8
 centered = false
 script = ExtResource( 631 )
 
@@ -6771,7 +6816,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 510 )
 
@@ -6779,7 +6824,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -6787,7 +6832,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -6802,7 +6847,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 510 )
 
@@ -6810,7 +6855,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 527 )
 
@@ -6818,7 +6863,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 527 )
 
@@ -6851,13 +6896,14 @@ custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "0000"
 
 [node name="ShiedIcon3" parent="Tip#3/Mask/Cena2/HUD" instance=ExtResource( 738 )]
-modulate = Color( 1, 1, 1, 0.00935495 )
+modulate = Color( 1, 1, 1, 0.32881 )
 margin_left = 56.0
 margin_top = 692.0
 margin_right = 101.0
 margin_bottom = 732.0
 
 [node name="Tip#4" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -24.0
@@ -6961,9 +7007,9 @@ position = Vector2( -559, -114 )
 curve = SubResource( 42 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Tip#4/Mask/Path2D"]
-position = Vector2( 696.448, 531.739 )
+position = Vector2( 745.704, 481.242 )
 rotation = -0.979385
-offset = 52.465
+offset = 123.122
 rotate = false
 
 [node name="Player" type="KinematicBody2D" parent="Tip#4/Mask/Path2D/PathFollow2D"]
@@ -6977,40 +7023,51 @@ __meta__ = {
 [node name="BodyOutline" type="AnimatedSprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 7 )
 animation = "rising"
+frame = 9
 playing = true
 
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 8 )
-animation = "rising"
+animation = "shooting"
+frame = 3
 playing = true
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/BodyOutline"]
 frames = SubResource( 9 )
-animation = "rising"
+animation = "shooting"
+frame = 3
 playing = true
 
 [node name="Body" type="AnimatedSprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player"]
 frames = SubResource( 10 )
 animation = "rising"
+frame = 9
 playing = true
 
 [node name="JetParticles" type="Particles2D" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
-position = Vector2( -40, 12.8015 )
-amount = 24
+position = Vector2( -46.4238, 22.7291 )
+amount = 124
 lifetime = 0.3
 local_coords = false
+process_material = ExtResource( 752 )
+texture = ExtResource( 751 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="ArmBack" type="AnimatedSprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/Body"]
 show_behind_parent = true
 frames = SubResource( 11 )
-animation = "rising"
+animation = "shooting"
+frame = 3
 playing = true
 
 [node name="ArmFront" type="AnimatedSprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/Body"]
 frames = SubResource( 12 )
-animation = "rising"
+animation = "shooting"
+frame = 3
 playing = true
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="Tip#4/Mask/Path2D/PathFollow2D/Player"]
@@ -7055,33 +7112,25 @@ position = Vector2( 50, -22 )
 z_index = 3
 
 [node name="LaserBody" type="Sprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 8, 0 )
-scale = Vector2( 1, 0.3 )
+position = Vector2( 709, 0 )
 texture = ExtResource( 741 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 16, 24 )
+region_rect = Rect2( 0, 0, 1418, 24 )
 
 [node name="LaserTip" type="Sprite" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 23, 0 )
-scale = Vector2( 1, 0.3 )
+position = Vector2( 1425, 0 )
 texture = ExtResource( 741 )
 region_enabled = true
 region_rect = Rect2( 1418, 0, 14, 24 )
 
 [node name="LaserParticlesTop" type="Particles2D" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0, -2 )
-emitting = false
 amount = 15
 lifetime = 2.3
 texture = ExtResource( 742 )
 
 [node name="LaserParticlesBottom" type="Particles2D" parent="Tip#4/Mask/Path2D/PathFollow2D/Player/BulletSpawn/Bullet"]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 0, 1 )
-emitting = false
 amount = 15
 lifetime = 2.3
 texture = ExtResource( 742 )
@@ -7098,7 +7147,7 @@ margin_top = -65.0
 margin_right = -74.0
 margin_bottom = 101.0
 rect_scale = Vector2( 0.8, 0.8 )
-value = 28.0
+value = 32.0
 
 [node name="Tip#4Animator" type="AnimationPlayer" parent="Tip#4/Mask/Path2D"]
 anims/tutorial = SubResource( 48 )
@@ -7116,7 +7165,7 @@ light_mask = 2
 position = Vector2( 25, -750.066 )
 frames = SubResource( 49 )
 animation = "crush_idle"
-frame = 5
+frame = 13
 centered = false
 flip_v = true
 script = ExtResource( 587 )
@@ -7127,7 +7176,7 @@ light_mask = 2
 position = Vector2( 25, -750.066 )
 frames = SubResource( 50 )
 animation = "crush_idle"
-frame = 5
+frame = 13
 centered = false
 flip_v = true
 script = ExtResource( 631 )
@@ -7155,7 +7204,7 @@ light_mask = 2
 position = Vector2( 25, -50.0661 )
 frames = SubResource( 49 )
 animation = "crush_idle"
-frame = 5
+frame = 13
 centered = false
 script = ExtResource( 587 )
 
@@ -7165,7 +7214,7 @@ light_mask = 2
 position = Vector2( 25, -50.0661 )
 frames = SubResource( 50 )
 animation = "crush_idle"
-frame = 5
+frame = 13
 centered = false
 script = ExtResource( 631 )
 
@@ -7195,7 +7244,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 510 )
 
@@ -7203,7 +7252,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -7211,7 +7260,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 12
+frame = 4
 playing = true
 script = ExtResource( 527 )
 
@@ -7226,7 +7275,7 @@ __meta__ = {
 modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 frames = SubResource( 32 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 510 )
 
@@ -7234,7 +7283,7 @@ script = ExtResource( 510 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 33 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 527 )
 
@@ -7242,7 +7291,7 @@ script = ExtResource( 527 )
 modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
 frames = SubResource( 34 )
 animation = "waves"
-frame = 7
+frame = 15
 playing = true
 script = ExtResource( 527 )
 
@@ -7346,7 +7395,11 @@ show_behind_parent = true
 position = Vector2( 11, 11 )
 amount = 1
 lifetime = 0.5
+process_material = SubResource( 63 )
 texture = ExtResource( 748 )
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="BarrierContainer" parent="Tip#4/Mask/Cena2/HUD/ProgressVisualization2/BarBase" instance=ExtResource( 749 )]
 anchor_right = 0.0
@@ -7363,24 +7416,23 @@ margin_bottom = 680.0
 mouse_filter = 0
 
 [node name="AmmoRoot" parent="Tip#4/Mask/Cena2/HUD/HBoxContainer" instance=ExtResource( 740 )]
-margin_right = 26.0
+margin_right = 0.0
 margin_bottom = 40.0
-rect_min_size = Vector2( 26, 38 )
 
 [node name="AmmoRoot1" parent="Tip#4/Mask/Cena2/HUD/HBoxContainer" instance=ExtResource( 740 )]
-margin_left = 30.0
-margin_right = 56.0
+margin_left = 4.0
+margin_right = 30.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 26, 38 )
 
 [node name="AmmoRoot2" parent="Tip#4/Mask/Cena2/HUD/HBoxContainer" instance=ExtResource( 740 )]
-margin_left = 60.0
-margin_right = 86.0
+margin_left = 34.0
+margin_right = 60.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 26, 38 )
 
 [node name="continue" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0.181928 )
+modulate = Color( 1, 1, 1, 0.804546 )
 margin_top = 980.0
 margin_right = 1537.0
 margin_bottom = 1066.0

@@ -38,10 +38,7 @@
 [ext_resource path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" type="Animation" id=36]
 
 [sub_resource type="Animation" id=1]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BaseColorFrame:rect_position")
 tracks/0/interp = 1
@@ -116,10 +113,6 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BaseColorFrame:rect_size")
 tracks/0/interp = 1
@@ -218,10 +211,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 length = 0.3
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BaseColorFrame:rect_position")
 tracks/0/interp = 1
@@ -320,10 +310,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("BaseColorFrame:rect_position")
 tracks/0/interp = 1
@@ -421,70 +408,31 @@ tracks/7/keys = {
 "values": [ 0.9, 0.9 ]
 }
 
-[node name="LevelSelect" type="CanvasLayer" index="0"]
-
+[node name="LevelSelect" type="CanvasLayer"]
 pause_mode = 2
 layer = 4
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 1 )
 anims/close = SubResource( 2 )
 anims/fade = SubResource( 3 )
 anims/open = SubResource( 4 )
-blend_times = [  ]
 
-[node name="BaseColorFrame" type="ColorRect" parent="." index="1"]
-
+[node name="BaseColorFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 60.0
-margin_right = 1860.0
+margin_left = 960.0
+margin_right = 960.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0.266667, 0.65098, 1, 0.6 )
-_sections_unfolded = [ "Rect" ]
 
-[node name="Map" type="Control" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Map" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Map" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Map"]
 anims/state01 = ExtResource( 2 )
 anims/state01_transition = ExtResource( 3 )
 anims/state02 = ExtResource( 4 )
@@ -508,107 +456,65 @@ anims/state10_transition = ExtResource( 21 )
 anims/state11 = ExtResource( 22 )
 anims/state11_transition = ExtResource( 23 )
 anims/state12 = ExtResource( 24 )
-blend_times = [  ]
 
-[node name="LevelNumber" type="Label" parent="Map" index="1"]
-
+[node name="LevelNumber" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 76.0
 margin_top = 40.0
 margin_right = 1846.0
 margin_bottom = 135.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
 text = "Stage 12"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="LevelTitle" type="Label" parent="Map" index="2"]
-
+[node name="LevelTitle" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 76.0
 margin_top = 197.0
 margin_right = 1846.0
 margin_bottom = 280.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 26 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
 text = "WHatever, Wherever, whenever!"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Highscore" type="Label" parent="Map" index="3"]
-
+[node name="Highscore" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 75.0
 margin_top = 126.0
 margin_right = 1845.0
 margin_bottom = 182.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 27 )
 custom_colors/font_color = Color( 0.0117647, 0.87451, 0.917647, 0.8 )
 text = "Highscore: %s"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="pallet" type="Sprite" parent="Map/Highscore" index="0"]
-
+[node name="pallet" type="Sprite" parent="Map/Highscore"]
 visible = false
 position = Vector2( 1090.42, 284.744 )
 texture = ExtResource( 28 )
 
-[node name="levels_path_bg" type="Sprite" parent="Map" index="4"]
-
+[node name="levels_path_bg" type="Sprite" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
 position = Vector2( 965, 660 )
 texture = ExtResource( 29 )
 region_enabled = true
 region_rect = Rect2( 240, 60, 1800, 720 )
 
-[node name="levels_path_locked" type="Sprite" parent="Map" index="5"]
-
+[node name="levels_path_locked" type="Sprite" parent="Map"]
 modulate = Color( 0.239216, 0.0784314, 0.298039, 1 )
 position = Vector2( 40, 365.868 )
 texture = ExtResource( 30 )
 centered = false
 
-[node name="levels_path_unlocked" type="Sprite" parent="Map" index="6"]
-
-editor/display_folded = true
+[node name="levels_path_unlocked" type="Sprite" parent="Map"]
 modulate = Color( 0, 0.960784, 1, 1 )
 position = Vector2( 40, 365 )
 texture = ExtResource( 30 )
@@ -616,8 +522,7 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 1760, 600 )
 
-[node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked" index="0"]
-
+[node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
 visible = false
 modulate = Color( 0, 0.960784, 1, 1 )
 position = Vector2( 1037, 255 )
@@ -626,337 +531,179 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 1036, 258, 128, 15 )
 
-[node name="LevelButtons" type="Control" parent="Map" index="7"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButtons" type="Control" parent="Map"]
 margin_left = 162.0
 margin_top = 507.0
 margin_right = 202.0
 margin_bottom = 547.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="TutorialButton" parent="Map/LevelButtons" index="0" instance=ExtResource( 32 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 32 )]
 margin_left = -50.0
 margin_top = 220.0
 margin_right = 30.0
 margin_bottom = 312.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton12")
 focus_neighbour_top = NodePath("../LevelButton1")
 focus_neighbour_right = NodePath("../LevelButton1")
 focus_neighbour_bottom = NodePath("../LevelButton1")
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
 level_name = "How to Play"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton1" parent="Map/LevelButtons" index="1" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
+[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 focus_neighbour_left = NodePath("../TutorialButton")
 focus_neighbour_top = NodePath("../TutorialButton")
 focus_neighbour_right = NodePath("../LevelButton2")
 focus_neighbour_bottom = NodePath("../TutorialButton")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 1
 level_name = "Jetpack for your life!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton2" parent="Map/LevelButtons" index="2" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 226.0
 margin_top = -116.0
 margin_right = 274.0
 margin_bottom = -68.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton1")
 focus_neighbour_right = NodePath("../LevelButton3")
 focus_neighbour_bottom = NodePath("../LevelButton3")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 2
 level_name = "Pew pew!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton3" parent="Map/LevelButtons" index="3" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 429.0
 margin_top = 196.0
 margin_right = 477.0
 margin_bottom = 244.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton2")
 focus_neighbour_top = NodePath("../LevelButton2")
 focus_neighbour_right = NodePath("../LevelButton4")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 3
 level_name = "Double Trouble!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton4" parent="Map/LevelButtons" index="4" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 507.0
 margin_top = 54.0
 margin_right = 555.0
 margin_bottom = 102.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton3")
 focus_neighbour_right = NodePath("../LevelButton5")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 4
 level_name = "Triple Trouble!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton5" parent="Map/LevelButtons" index="5" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 653.0
 margin_top = 39.0
 margin_right = 701.0
 margin_bottom = 87.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton4")
 focus_neighbour_top = NodePath("../LevelButton6")
 focus_neighbour_right = NodePath("../LevelButton6")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 5
 level_name = "What was that sound?"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton6" parent="Map/LevelButtons" index="6" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 832.0
 margin_top = -106.0
 margin_right = 880.0
 margin_bottom = -58.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton5")
 focus_neighbour_right = NodePath("../LevelButton7")
 focus_neighbour_bottom = NodePath("../LevelButton7")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 6
 level_name = "Dash like you mean it!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton7" parent="Map/LevelButtons" index="7" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 1029.0
 margin_top = 110.0
 margin_right = 1077.0
 margin_bottom = 158.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton6")
 focus_neighbour_top = NodePath("../LevelButton6")
 focus_neighbour_right = NodePath("../LevelButton8")
 focus_neighbour_bottom = NodePath("../LevelButton8")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 7
 level_name = "I feel like I'm being watched!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton8" parent="Map/LevelButtons" index="8" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 963.0
 margin_top = 231.0
 margin_right = 1011.0
 margin_bottom = 279.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton7")
 focus_neighbour_top = NodePath("../LevelButton7")
 focus_neighbour_right = NodePath("../LevelButton9")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 8
 level_name = "It's right behind me, isn't it?"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton9" parent="Map/LevelButtons" index="9" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 1256.0
 margin_top = 213.0
 margin_right = 1304.0
 margin_bottom = 261.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton8")
 focus_neighbour_right = NodePath("../LevelButton10")
 focus_neighbour_bottom = NodePath("../LevelButton10")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 9
 level_name = "Almost there!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton10" parent="Map/LevelButtons" index="10" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 1244.0
 margin_top = 303.0
 margin_right = 1292.0
 margin_bottom = 351.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton9")
 focus_neighbour_top = NodePath("../LevelButton9")
 focus_neighbour_right = NodePath("../LevelButton11")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 10
 level_name = "Are we there yet?"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton11" parent="Map/LevelButtons" index="11" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 1363.0
 margin_top = 385.0
 margin_right = 1411.0
 margin_bottom = 433.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton10")
 focus_neighbour_right = NodePath("../LevelButton12")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 11
 level_name = "The Calm Before the Storm!"
-highscore_label_path = "../..//Highscore"
 
-[node name="LevelButton12" parent="Map/LevelButtons" index="12" instance=ExtResource( 33 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 33 )]
 margin_left = 1467.0
 margin_top = 375.0
 margin_right = 1515.0
 margin_bottom = 423.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 focus_neighbour_left = NodePath("../LevelButton11")
 focus_neighbour_right = NodePath("../TutorialButton")
-focus_mode = 2
-mouse_default_cursor_shape = 0
 disabled = false
-group = null
 level_num = 12
 level_name = "If that was the 'Calm', what is the 'Storm'?!"
-highscore_label_path = "../..//Highscore"
 
-[node name="ScanlineFx" type="Node2D" parent="." index="3"]
-
-modulate = Color( 1, 1, 1, 0.9 )
+[node name="ScanlineFx" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true
 }
 
-[node name="ScanlineDark" type="Sprite" parent="ScanlineFx" index="0"]
-
+[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
 position = Vector2( 960, 540 )
 texture = ExtResource( 34 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1800, 1080 )
-_sections_unfolded = [ "Region" ]
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlineBright" type="Sprite" parent="ScanlineFx" index="1"]
-
+[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
 modulate = Color( 1, 1, 1, 0.2 )
 position = Vector2( 960, 20 )
 texture = ExtResource( 35 )
@@ -966,50 +713,20 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx" index="2"]
-
-root_node = NodePath("..")
+[node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = ExtResource( 36 )
-blend_times = [  ]
 
-[node name="ColorFrame1" type="ColorRect" parent="." index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 1845.0
-margin_top = -28.0
-margin_right = 1860.0
-margin_bottom = 1086.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+[node name="ColorFrame1" type="ColorRect" parent="."]
+margin_left = 967.0
+margin_top = -1500.0
+margin_right = 982.0
+margin_bottom = -386.0
 color = Color( 0, 0.924107, 1, 1 )
 
-[node name="ColorFrame3" type="ColorRect" parent="." index="5"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 60.0
-margin_top = -28.0
-margin_right = 75.0
-margin_bottom = 1086.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+[node name="ColorFrame3" type="ColorRect" parent="."]
+margin_left = 953.0
+margin_top = -1500.0
+margin_right = 968.0
+margin_bottom = -386.0
 color = Color( 0, 0.924107, 1, 1 )
-
-

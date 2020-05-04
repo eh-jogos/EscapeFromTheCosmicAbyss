@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://JetpackGameMode/Character/Bullet_RayCast.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Character/Fxs/FullLaser.png" type="Texture" id=2]
@@ -652,6 +652,14 @@ tracks/9/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 98, 0, 0 )
+initial_velocity = 600.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
 [node name="Bullet" type="Node2D" groups=[
 "bullet",
 ]]
@@ -692,12 +700,14 @@ region_rect = Rect2( 1418, 0, 14, 24 )
 position = Vector2( 0, -5 )
 amount = 15
 lifetime = 2.3
+process_material = SubResource( 5 )
 texture = ExtResource( 3 )
 
 [node name="LaserParticlesBottom" type="Particles2D" parent="."]
 position = Vector2( 0, 4 )
 amount = 15
 lifetime = 2.3
+process_material = SubResource( 5 )
 texture = ExtResource( 3 )
 
 [node name="TopRaycast" type="RayCast2D" parent="."]
