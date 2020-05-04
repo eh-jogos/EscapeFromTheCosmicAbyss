@@ -1,59 +1,72 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+[gd_resource type="ShaderMaterial" load_steps=6 format=2]
+
+[sub_resource type="VisualShaderNodeColorUniform" id=1]
+uniform_name = "color"
+
+[sub_resource type="VisualShaderNodeInput" id=2]
+input_name = "screen_texture"
+
+[sub_resource type="VisualShaderNodeTexture" id=3]
+source = 2
+
+[sub_resource type="VisualShaderNodeInput" id=4]
+input_name = "uv"
+
+[sub_resource type="VisualShader" id=5]
+code = "shader_type canvas_item;
+uniform vec4 color : hint_color;
 
 
-[sub_resource type="CanvasItemShaderGraph" id=1]
 
-_code = {
-"fragment": "vec3 nd1sl2=vec3(UV,0);
-vec4 rt_default_tex4=tex(TEXTURE,nd1sl2.xy);
-vec3 nd4sl0=rt_default_tex4.rgb;
-float nd4sl1=rt_default_tex4.a;
-uniform color Color=vec4(1,1,1,1);
-vec3 nd2sl0=Color.rgb;
-float nd2sl1=Color.a;
-vec3 nd6sl0=mix(nd4sl0,nd2sl0,nd2sl1);
-vec3 nd3sl0;
-{
-	float base=nd4sl0.x;
-	float blend=nd2sl0.x;
-	if (base < 0.5) {
-		nd3sl0.x = 2.0 * base * blend;
-	} else {
-		nd3sl0.x = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// ColorUniform:2
+	vec3 n_out2p0 = color.rgb;
+	float n_out2p1 = color.a;
+
+// Input:5
+	vec3 n_out5p0 = vec3(UV, 0.0);
+
+// Input:3
+
+// Texture:4
+	vec3 n_out4p0;
+	float n_out4p1;
+	{
+		vec4 _tex_read = texture(TEXTURE, n_out5p0.xy);
+		n_out4p0 = _tex_read.rgb;
+		n_out4p1 = _tex_read.a;
 	}
+
+// Output:0
+	COLOR.rgb = n_out2p0;
+	COLOR.a = n_out4p1;
+
 }
-{
-	float base=nd4sl0.y;
-	float blend=nd2sl0.y;
-	if (base < 0.5) {
-		nd3sl0.y = 2.0 * base * blend;
-	} else {
-		nd3sl0.y = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);
-	}
+
+void light() {
+// Output:0
+
 }
-{
-	float base=nd4sl0.z;
-	float blend=nd2sl0.z;
-	if (base < 0.5) {
-		nd3sl0.z = 2.0 * base * blend;
-	} else {
-		nd3sl0.z = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);
-	}
-}
-COLOR.rgb=nd6sl0;
-",
-"fragment_ofs": 0,
-"light": "",
-"light_ofs": 0,
-"vertex": "",
-"vertex_ofs": 0
-}
-_data = {
-"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 1004, 85 ), null, null, [ 0, 6, 0 ], 1, 0, Vector2( -31.2, 26.4 ), null, null, [  ], 2, 28, Vector2( 302.4, 0 ), "Color", Color( 1, 1, 1, 1 ), [  ], 3, 10, Vector2( 610.8, 0 ), 4, null, [ 0, 4, 0, 1, 2, 0, 2147483647, 0, null, 2147483647, 1, null ], 4, 32, Vector2( 288, 183.6 ), null, null, [ 0, 1, 2, 2147483647, 0, null ], 6, 23, Vector2( 618, 153.6 ), null, null, [ 0, 4, 0, 1, 2, 0, 2, 2, 1, 2147483647, 0, null, 2147483647, 1, null, 2147483647, 2, null ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
-}
+"
+graph_offset = Vector2( -245, 126 )
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2( 480, 280 )
+nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/position = Vector2( 80, 280 )
+nodes/fragment/3/node = SubResource( 2 )
+nodes/fragment/3/position = Vector2( 80, 460 )
+nodes/fragment/4/node = SubResource( 3 )
+nodes/fragment/4/position = Vector2( 300, 400 )
+nodes/fragment/5/node = SubResource( 4 )
+nodes/fragment/5/position = Vector2( 80, 400 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 3, 0, 4, 2, 5, 0, 4, 0, 4, 1, 0, 1 )
 
 [resource]
-
-shader/shader = SubResource( 1 )
-shader/shading_mode = 0
-shader_param/Color = Color( 0, 0.960784, 1, 1 )
+shader = SubResource( 5 )
+shader_param/color = Color( 0, 0.960784, 1, 1 )

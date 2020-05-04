@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://CommonScenes/Buttons/icons/upgrade_icon.png" type="Texture" id=11]
 [ext_resource path="res://CommonScenes/Buttons/icons/retry_icon.png" type="Texture" id=12]
 [ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture" id=13]
+[ext_resource path="res://Shaders/text_horizontal_gradient_shader.tres" type="Material" id=14]
+[ext_resource path="res://Shaders/shader_text_anim.tres" type="Animation" id=15]
 
 [sub_resource type="Animation" id=1]
 resource_name = "base"
@@ -272,9 +274,9 @@ custom_constants/separation = 50
 alignment = 2
 
 [node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
-margin_top = 397.0
+margin_top = 198.0
 margin_right = 1920.0
-margin_bottom = 546.0
+margin_bottom = 347.0
 mouse_filter = 0
 custom_constants/separation = 50
 alignment = 1
@@ -345,7 +347,7 @@ align = 1
 valign = 1
 
 [node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
-visible = false
+material = ExtResource( 14 )
 margin_top = 113.0
 margin_right = 416.0
 margin_bottom = 149.0
@@ -357,8 +359,8 @@ align = 1
 valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/ScoreResults/ScoreContainer/HighscoreText"]
-autoplay = "text_anim"
-anims/text_anim = SubResource( 4 )
+autoplay = "shader_text_anim"
+anims/shader_text_anim = ExtResource( 15 )
 
 [node name="UpgradeContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
 margin_left = 1255.0
@@ -392,10 +394,9 @@ align = 1
 valign = 1
 
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
-visible = false
-margin_top = 398.0
+margin_top = 397.0
 margin_right = 1920.0
-margin_bottom = 547.0
+margin_bottom = 546.0
 mouse_filter = 0
 custom_constants/separation = 50
 alignment = 1
@@ -466,7 +467,7 @@ align = 1
 valign = 1
 
 [node name="HightimeText" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
-visible = false
+material = ExtResource( 14 )
 margin_top = 113.0
 margin_right = 416.0
 margin_bottom = 149.0
@@ -478,8 +479,8 @@ align = 1
 valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/TimeResults/TimeContainer/HightimeText"]
-autoplay = "text_anim"
-anims/text_anim = SubResource( 4 )
+autoplay = "shader_text_anim"
+anims/shader_text_anim = ExtResource( 15 )
 
 [node name="LapsResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false

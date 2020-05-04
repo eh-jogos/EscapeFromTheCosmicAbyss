@@ -1,17 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://CommonScenes/HybridStrategies/SplashScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/HybridStrategies/logo_white.png" type="Texture" id=2]
+[ext_resource path="res://CommonScenes/HybridStrategies/vertical_gradient_shader.tres" type="Material" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 1.6
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material/material:shader_param/End")
+tracks/0/path = NodePath(".:material:shader_param/End")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = false
+tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
@@ -20,7 +21,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-resource_name = "loop"
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Logo:modulate:a")
@@ -74,6 +74,7 @@ __meta__ = {
 }
 
 [node name="Logo" type="Sprite" parent="."]
+material = ExtResource( 3 )
 position = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
