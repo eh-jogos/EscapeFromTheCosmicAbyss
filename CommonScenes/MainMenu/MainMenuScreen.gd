@@ -83,10 +83,14 @@ func toggle_menuitems(game_mode, should_grab_focus = true):
 		
 		if Global.is_story_completed():
 			arcade_btn.set_disabled(false)
+			arcade_btn.focus_mode = Control.FOCUS_ALL
 			speedrun_btn.set_disabled(false)
+			speedrun_btn.focus_mode = Control.FOCUS_ALL
 		else:
 			arcade_btn.set_disabled(true)
+			arcade_btn.focus_mode = Control.FOCUS_NONE
 			speedrun_btn.set_disabled(true)
+			speedrun_btn.focus_mode = Control.FOCUS_NONE
 		
 		if Global.is_tutorial_completed():
 			continue_btn.show()
