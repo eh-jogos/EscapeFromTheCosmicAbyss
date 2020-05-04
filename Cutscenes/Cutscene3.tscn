@@ -213,10 +213,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 2,
-"values": [ "[stop]", "loop" ]
+"values": [ "loop" ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -353,6 +353,18 @@ tracks/10/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Frame3/Balloon2/RichTextLabel:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -812,6 +824,18 @@ tracks/11/keys = {
 "update": 0,
 "values": [ Vector2( 187, 110 ), Vector2( 187, 110 ), Vector2( 197, 80 ) ]
 }
+tracks/12/type = "value"
+tracks/12/path = NodePath("Frame3/Balloon/RichTextLabel:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=13]
 loop = true
@@ -1253,6 +1277,18 @@ tracks/13/keys = {
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("Frame3/Balloon/RichTextLabel:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=20]
 length = 0.01
@@ -1293,7 +1329,7 @@ tracks/2/keys = {
 "values": [ 0.0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Frame3/Sprite:modulate:a")
+tracks/3/path = NodePath("Frame1:modulate:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1305,7 +1341,7 @@ tracks/3/keys = {
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Frame1:modulate:a")
+tracks/4/path = NodePath("Frame2:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1317,7 +1353,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Frame2:modulate:a")
+tracks/5/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1325,28 +1361,16 @@ tracks/5/enabled = true
 tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
+"update": 2,
+"values": [ "[stop]" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Frame2/Fire/AnimationPlayer:playback/play")
+tracks/6/path = NodePath("Frame2/Sfx/AnimationPlayer:playback/play")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "[stop]" ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Frame2/Sfx/AnimationPlayer:playback/play")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 2,
@@ -1669,7 +1693,7 @@ tracks/6/keys = {
 "values": [ Vector2( 660, 60 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Frame3/Sprite:z_index")
+tracks/7/path = NodePath("Frame3/KbroomSfx:z_index")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1681,7 +1705,7 @@ tracks/7/keys = {
 "values": [ 2, 0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Frame3/Sprite:scale")
+tracks/8/path = NodePath("Frame3/KbroomSfx:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1693,7 +1717,7 @@ tracks/8/keys = {
 "values": [ Vector2( 0.6, 0.6 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Frame3/Sprite:modulate:a")
+tracks/9/path = NodePath("Frame3/KbroomSfx:modulate:a")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -1702,7 +1726,7 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 10.0 ]
+"values": [ 0.0, 1.0 ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Frame3:self_modulate:a")
@@ -2363,6 +2387,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("Frame2/Balloons/Balloon1/RichTextLabel:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=41]
 resource_name = "03_frame2_balloon2"
@@ -2450,6 +2486,18 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Frame2/Balloons/Balloon2/RichTextLabel1:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=42]
@@ -2651,6 +2699,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [ 0.0, 0.0, 0.5625, 0.7, 0.890909, 1.0 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Splash/Balloon1/RichTextLabel:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Splash/Balloon1/RichTextLabel1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=47]
 resource_name = "03_balloon2"
@@ -2739,6 +2811,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Splash/Balloon2/RichTextLabel:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="Cutscene3" type="CanvasLayer"]
 pause_mode = 2
@@ -2814,8 +2898,6 @@ mouse_filter = 2
 bbcode_enabled = true
 bbcode_text = "[center]Oh god, oh god,
 oh god, oh god!![/center]"
-visible_characters = 0
-percent_visible = 0.0
 text = "Oh god, oh god,
 oh god, oh god!!"
 
@@ -2865,6 +2947,9 @@ mouse_filter = 2
 bbcode_enabled = true
 bbcode_text = "[center]My [b]escape pod![/b][/center]"
 text = "My escape pod!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RedLight" type="Sprite" parent="Scenes/Scene1/Frame3"]
 modulate = Color( 1, 1, 1, 0.992273 )
@@ -2934,7 +3019,7 @@ margin_bottom = 986.0
 texture = ExtResource( 13 )
 
 [node name="RedLight" type="TextureRect" parent="Scenes/Scene2/Frame2"]
-modulate = Color( 1, 1, 1, 0.380873 )
+modulate = Color( 1, 1, 1, 0.5 )
 margin_left = 561.0
 margin_top = -49.0
 margin_right = 1053.0
@@ -2961,16 +3046,18 @@ margin_bottom = 986.0
 texture = ExtResource( 16 )
 
 [node name="Balloon" type="NinePatchRect" parent="Scenes/Scene2/Frame3"]
-margin_left = 197.0
-margin_top = 80.0
-margin_right = 362.0
-margin_bottom = 221.0
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 187.0
+margin_top = 110.0
+margin_right = 352.0
+margin_bottom = 251.0
 mouse_filter = 1
 theme = ExtResource( 4 )
 texture = ExtResource( 17 )
 region_rect = Rect2( 0, 0, 165, 141 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene2/Frame3/Balloon"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 28.0
@@ -2978,7 +3065,12 @@ margin_bottom = -42.0
 mouse_filter = 2
 bbcode_enabled = true
 bbcode_text = "[center]Phew...[/center]"
+visible_characters = 0
+percent_visible = 0.0
 text = "Phew..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Scene3" type="Control" parent="Scenes"]
 visible = false
@@ -3030,17 +3122,20 @@ texture = ExtResource( 20 )
 
 [node name="Frame3" type="TextureRect" parent="Scenes/Scene3"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 1329.0
+margin_left = 1149.0
 margin_top = 70.0
-margin_right = 1856.0
+margin_right = 1676.0
 margin_bottom = 998.0
 texture = ExtResource( 21 )
 
 [node name="BlamSfx" type="Sprite" parent="Scenes/Scene3/Frame3"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 140, 312 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 22 )
 
 [node name="Balloon" type="NinePatchRect" parent="Scenes/Scene3/Frame3"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 125.0
 margin_top = 665.0
 margin_right = 451.0
@@ -3055,6 +3150,7 @@ patch_margin_right = 35
 patch_margin_bottom = 40
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene3/Frame3/Balloon"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 45.0
@@ -3065,10 +3161,17 @@ mouse_filter = 2
 bbcode_enabled = true
 bbcode_text = "[center]Let's get
 out of here!![/center]"
+visible_characters = 0
+percent_visible = 0.0
 text = "Let's get
 out of here!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Scene4" type="Control" parent="Scenes"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -3095,6 +3198,7 @@ margin_bottom = 1080.0
 texture = ExtResource( 10 )
 
 [node name="Frame3" type="TextureRect" parent="Scenes/Scene4"]
+self_modulate = Color( 1, 1, 1, 0 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 24 )
@@ -3102,14 +3206,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite2" type="Sprite" parent="Scenes/Scene4/Frame3"]
-
-[node name="Sprite" type="Sprite" parent="Scenes/Scene4/Frame3"]
-modulate = Color( 1, 1, 1, 10 )
-position = Vector2( 1624, 592 )
+[node name="KbroomSfx" type="Sprite" parent="Scenes/Scene4/Frame3"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 1619.99, 590.739 )
+scale = Vector2( 0.6, 0.6 )
+z_index = 2
 texture = ExtResource( 25 )
 
 [node name="Frame1" type="TextureRect" parent="Scenes/Scene4"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 25.0
 margin_top = 60.0
 margin_right = 1317.0
@@ -3121,6 +3226,7 @@ position = Vector2( 300, 480 )
 texture = ExtResource( 27 )
 
 [node name="Frame2" type="TextureRect" parent="Scenes/Scene4"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 660.0
 margin_top = 60.0
 margin_right = 1296.0
@@ -3131,7 +3237,6 @@ __meta__ = {
 }
 
 [node name="Fire" type="TextureRect" parent="Scenes/Scene4/Frame2"]
-modulate = Color( 1, 1, 1, 0.773414 )
 margin_left = 95.0
 margin_top = 703.0
 margin_right = 625.0
@@ -3150,48 +3255,48 @@ anims/start = SubResource( 26 )
 anims/stop = SubResource( 27 )
 
 [node name="V" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
-position = Vector2( 101.601, 770.069 )
-rotation = -0.0343127
+position = Vector2( 103.569, 774.662 )
+rotation = -0.0219377
 texture = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/V"]
 anims/loop = SubResource( 28 )
 
 [node name="R1" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
-position = Vector2( 219.414, 712.675 )
-rotation = 0.0496531
+position = Vector2( 222.515, 717.28 )
+rotation = 0.080302
 texture = ExtResource( 31 )
 
 [node name="AnimationPlayer1" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R1"]
 anims/loop = SubResource( 29 )
 
 [node name="R2" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
-position = Vector2( 306.557, 587.734 )
-rotation = 0.0376026
+position = Vector2( 311.561, 595.234 )
+rotation = 0.00696458
 texture = ExtResource( 32 )
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R2"]
 anims/loop = SubResource( 30 )
 
 [node name="R3" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
-position = Vector2( 382.3, 475.688 )
-rotation = -0.0499795
+position = Vector2( 384.289, 478.641 )
+rotation = -0.0657573
 texture = ExtResource( 33 )
 
 [node name="AnimationPlayer3" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R3"]
 anims/loop = SubResource( 31 )
 
 [node name="R4" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
-position = Vector2( 469.327, 367.061 )
-rotation = -0.0370734
+position = Vector2( 471.289, 369.974 )
+rotation = -0.0215091
 texture = ExtResource( 34 )
 
 [node name="AnimationPlayer4" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R4"]
 anims/loop = SubResource( 32 )
 
 [node name="R5" type="Sprite" parent="Scenes/Scene4/Frame2/Sfx"]
-position = Vector2( 556.439, 235.258 )
-rotation = 0.0520521
+position = Vector2( 554.711, 232.692 )
+rotation = 0.0657575
 texture = ExtResource( 35 )
 
 [node name="AnimationPlayer5" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/Sfx/R5"]
@@ -3199,6 +3304,7 @@ anims/loop = SubResource( 33 )
 
 [node name="Scene5" type="Control" parent="Scenes"]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -3330,6 +3436,7 @@ patch_margin_right = 67
 patch_margin_bottom = 151
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene6/Frame2/Balloons/Balloon1"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 54.0
@@ -3345,6 +3452,9 @@ text = "Central Command,
 this is A5-tr0. The 
 objective is secured and
 I'm on my way in."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Balloon2" type="NinePatchRect" parent="Scenes/Scene6/Frame2/Balloons"]
 modulate = Color( 1, 1, 1, 0 )
@@ -3362,6 +3472,7 @@ patch_margin_right = 13
 patch_margin_bottom = 10
 
 [node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene6/Frame2/Balloons/Balloon2"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.0
@@ -3373,12 +3484,12 @@ mouse_filter = 2
 bbcode_enabled = true
 bbcode_text = "[center][b]Congratulations,[/b]
 A5-tr0![/center]"
+visible_characters = 0
+percent_visible = 0.0
 text = "Congratulations,
 A5-tr0!"
 
 [node name="Scene7" type="Control" parent="Scenes"]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -3404,7 +3515,6 @@ margin_bottom = 1080.0
 texture = ExtResource( 46 )
 
 [node name="Balloon1" type="NinePatchRect" parent="Scenes/Scene7/Splash"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 50.0
 margin_top = 40.0
 margin_right = 644.0
@@ -3431,6 +3541,9 @@ bbcode_text = "[center]The universe will [b]never[/b] be
 the [b]same again[/b] after this![/center]"
 text = "The universe will never be 
 the same again after this!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene7/Splash/Balloon1"]
 anchor_right = 1.0
@@ -3454,7 +3567,6 @@ pay at the end of this
 fiscal year!"
 
 [node name="Balloon2" type="NinePatchRect" parent="Scenes/Scene7/Splash"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 1470.0
 margin_top = 932.0
 margin_right = 1861.0

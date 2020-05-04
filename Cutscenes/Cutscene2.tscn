@@ -190,6 +190,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("Frame1/Balloon1/RichTextLabel:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "03_frame1_baloon2"
@@ -277,6 +289,18 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.5, 1.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Frame1/Baloon2/RichTextLabel:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -390,6 +414,18 @@ tracks/8/keys = {
 "update": 0,
 "values": [ 0.0, 0.0, 0.625, 0.625, 1.0 ]
 }
+tracks/9/type = "value"
+tracks/9/path = NodePath("BackgroundGuardian/Baloon2/RichTextLabel:bbcode_enabled")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="Cutscene2" type="CanvasLayer"]
 pause_mode = 2
@@ -413,8 +449,6 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 
 [node name="Scene1" type="Control" parent="Scenes"]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -452,7 +486,6 @@ margin_bottom = 450.0
 texture = ExtResource( 4 )
 
 [node name="Balloon1" type="TextureRect" parent="Scenes/Scene1/Frame1"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 50.0
 margin_top = 49.0
 margin_right = 379.0
@@ -476,9 +509,11 @@ text = "To all units,
 the Guardian of 
 the Abyss has
 awakened!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Baloon2" type="TextureRect" parent="Scenes/Scene1/Frame1"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 233.0
 margin_top = 726.0
 margin_right = 503.0
@@ -506,7 +541,6 @@ protocols are
 active!"
 
 [node name="BackgroundGuardian" type="TextureRect" parent="Scenes/Scene1"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
