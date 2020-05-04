@@ -73,7 +73,7 @@ func _on_Back_pressed():
 	game_mode = "story"
 	toggle_menuitems(game_mode)
 
-func toggle_menuitems(game_mode, should_grab_focus = true):
+func toggle_menuitems(should_grab_focus = true):
 	if game_mode == "story":
 		get_tree().call_group("categorymenu", "hide")
 		get_tree().call_group("mainmenu", "show")
@@ -142,4 +142,4 @@ func _on_Category_pressed(upgrade_points):
 
 func _on_Global_update_main_menu():
 	game_mode = "story"
-	toggle_menuitems(game_mode, false)
+	toggle_menuitems(false)

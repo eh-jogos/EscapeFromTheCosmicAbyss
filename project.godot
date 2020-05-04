@@ -25,6 +25,10 @@ Global="*res://CommonScenes/Global.gd"
 ScreenManager="*res://CommonScenes/LoadingScreen/LoadingScreen.tscn"
 SoundManager="*res://CommonScenes/SoundManager/SoundManager.tscn"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=1920

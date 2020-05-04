@@ -1,13 +1,20 @@
 extends Node
 
+# warning-ignore:unused_signal
 signal update_main_menu
+# warning-ignore:unused_signal
 signal update_invincibility
+# warning-ignore:unused_signal
 signal barrier_tentacle_killed
+# warning-ignore:unused_signal
 signal shield_energy_updated_to(energy)
 
 # Color Menu Signals
+# warning-ignore:unused_signal
 signal page_updated(first_button, last_button)
+# warning-ignore:unused_signal
 signal navigated_to_right
+# warning-ignore:unused_signal
 signal navigated_to_left
 
 

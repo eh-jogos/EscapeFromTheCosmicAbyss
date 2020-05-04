@@ -54,13 +54,13 @@ func load_above(path, focus_path, origin_scene, path_is_node = false):
 
 
 func background_loading(path):
-	var loader = ResourceLoader.load_interactive(path)
+	var bg_loader = ResourceLoader.load_interactive(path)
 	var timer = get_node("Timer")
-	while not loader.poll() == ERR_FILE_EOF:
+	while not bg_loader.poll() == ERR_FILE_EOF:
 		timer.start()
 		yield(timer, "timeout")
 	
-	emit_signal("scene_loaded", loader.get_resource())
+	emit_signal("scene_loaded", bg_loader.get_resource())
 
 
 func clear_above():
@@ -135,12 +135,12 @@ func reveal_invisible_loading_screen():
 	animation.play("fade_in")
 
 
-func _process(delta):
+func _process(_delta):
 	if loader == null:
 		set_process(false)
 		return
 	
-	var t = OS.get_ticks_msec()
+	var _t = OS.get_ticks_msec()
 	if (animation_loaded or load_without_animation):
 		# poll your loader
 		var err = loader.poll()
@@ -168,6 +168,7 @@ func set_new_scene(scene_resource):
 		animation.play("black_transition")
 		yield(animation, "animation_finished")
 	
+# warning-ignore:return_value_discarded
 	get_tree().change_scene_to(scene_resource)
 	
 	if animation_loaded:
@@ -195,6 +196,7 @@ func black_transition_replace(path):
 	animation.play("black_transition")
 	yield(animation, "animation_finished")
 	emit_signal("mid_transition_reached")
+# warning-ignore:return_value_discarded
 	get_tree().change_scene(path)
 	animation.play("black_transition_out")
 	yield(animation, "animation_finished")
