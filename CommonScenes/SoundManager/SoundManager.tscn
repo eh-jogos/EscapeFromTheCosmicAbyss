@@ -9,12 +9,15 @@ pause_mode = 2
 script = ExtResource( 1 )
 
 [node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
+bus = "UiSfx"
 script = ExtResource( 2 )
 
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+bus = "Bgm"
 
 [node name="PreviewPlayer" type="AudioStreamPlayer" parent="."]
+bus = "Bgm"
 
 [node name="FadeOutTimer" type="Timer" parent="."]
 wait_time = 0.16
