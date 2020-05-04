@@ -32,7 +32,7 @@ func setup_next_scene_animator():
 	current_animator = scenes[current_scene].get_node("AnimationPlayer")
 	animator_steps = current_animator.get_animation_list()
 	current_step = 1
-	current_animator.play(animator_steps[current_step])
+	_play_current_animation()
 	#add 1 because the fade anmation automatically transitions to the next one
 	current_step += 1
 
@@ -58,7 +58,7 @@ func scene_has_more_steps():
 
 func go_to_next_animation_step():
 	current_step += 1
-	current_animator.play(animator_steps[current_step])
+	_play_current_animation()
 
 
 func go_to_next_scene():
@@ -92,3 +92,9 @@ func close():
 func _on_Skip_pressed():
 	print("Cutscenes.gd | SKIP PRESSED")
 	close()
+
+
+func _play_current_animation():
+#	current_animator.assigned_animation = animator_steps[current_step]
+#	current_animator.seek(0, true)
+	current_animator.play(animator_steps[current_step])

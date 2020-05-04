@@ -1,7 +1,6 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=86 format=2]
 
 [ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=2]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/backgroun_space.png" type="Texture" id=3]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/spaceship.png" type="Texture" id=4]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/rift.png" type="Texture" id=5]
@@ -53,11 +52,8 @@
 [ext_resource path="res://CommonScenes/Buttons/CutsceneButton.tscn" type="PackedScene" id=51]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "00_base"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -96,11 +92,8 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "01_fade"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -127,11 +120,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "02_text"
 length = 2.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -170,11 +160,9 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
 resource_name = "loop"
 length = 4.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
 tracks/0/interp = 2
@@ -189,11 +177,9 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-
 resource_name = "loop"
 length = 4.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureFrame:rect_scale")
 tracks/0/interp = 1
@@ -232,11 +218,8 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-
 resource_name = "00_base"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -331,15 +314,12 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.0 ]
+"values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=7]
-
 resource_name = "01_fade"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -366,11 +346,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=8]
-
 resource_name = "02_frame1"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -445,11 +422,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=9]
-
 resource_name = "03_frame2"
 length = 0.7
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -584,11 +558,8 @@ tracks/10/keys = {
 }
 
 [sub_resource type="Animation" id=10]
-
 resource_name = "03_frame2 (copy)"
 length = 3.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -783,11 +754,8 @@ tracks/15/keys = {
 }
 
 [sub_resource type="Animation" id=11]
-
 resource_name = "00_base"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -862,11 +830,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=12]
-
 resource_name = "01_fade"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -893,11 +858,8 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=13]
-
 resource_name = "02_frame1"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -948,10 +910,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1007,17 +965,14 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.4, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=15]
-
 length = 0.7
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1104,7 +1059,6 @@ tracks/6/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-
 length = 8.0
 loop = true
 step = 4.0
@@ -1122,10 +1076,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=17]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -1140,10 +1092,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=18]
-
 length = 2.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -1158,10 +1108,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=19]
-
 length = 8.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -1176,10 +1124,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=20]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1254,10 +1199,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=21]
-
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1284,11 +1226,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=22]
-
 resource_name = "02_frame1"
-length = 1.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1332,10 +1270,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.7, 0.9 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Frame1/Interruption/IncomingText/AnimationPlayer:playback/play")
@@ -1363,11 +1301,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=23]
-
 resource_name = "03_frame2_balloon1"
 length = 1.8
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1447,10 +1382,10 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Rect2( 80, 0, 0, 189 ), Rect2( 0, 0, 161, 189 ) ]
+"values": [ Rect2( 80, 0, 0, 189 ), Rect2( 80, 0, 0, 189 ), Rect2( 0, 0, 161, 189 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("Frame1/Interruption/IncomingText/AnimationPlayer:playback/play")
@@ -1478,11 +1413,8 @@ tracks/8/keys = {
 }
 
 [sub_resource type="Animation" id=24]
-
 resource_name = "04_frame2_balloon2"
 length = 3.3
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1581,11 +1513,8 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id=25]
-
 resource_name = "loop"
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -1600,11 +1529,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=26]
-
 resource_name = "still"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -1619,11 +1545,9 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=27]
-
 resource_name = "loop"
 length = 1.3
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("SfxBeep1:rect_position")
 tracks/0/interp = 2
@@ -1698,11 +1622,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=28]
-
 resource_name = "still"
 length = 0.1
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("SfxBeep1:rect_position")
 tracks/0/interp = 2
@@ -1777,10 +1698,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=29]
-
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -1795,10 +1713,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=30]
-
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1873,10 +1788,7 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=31]
-
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1903,10 +1815,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=32]
-
 length = 3.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -1969,10 +1878,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="Animation" id=33]
-
 length = 4.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -2227,10 +2133,7 @@ tracks/20/keys = {
 }
 
 [sub_resource type="Animation" id=34]
-
 length = 1.3
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -2514,10 +2417,10 @@ tracks/23/loop_wrap = true
 tracks/23/imported = false
 tracks/23/enabled = true
 tracks/23/keys = {
-"times": PoolRealArray( 0.1, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/24/type = "value"
 tracks/24/path = NodePath("Frame3/Balloon1/RichTextLabel:percent_visible")
@@ -2526,10 +2429,10 @@ tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 0.2, 0.8 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/25/type = "value"
 tracks/25/path = NodePath("Frame3/Balloon2:modulate:a")
@@ -2538,10 +2441,10 @@ tracks/25/loop_wrap = true
 tracks/25/imported = false
 tracks/25/enabled = true
 tracks/25/keys = {
-"times": PoolRealArray( 0.6, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/26/type = "value"
 tracks/26/path = NodePath("Frame3/Balloon2/RichTextLabel:percent_visible")
@@ -2550,17 +2453,14 @@ tracks/26/loop_wrap = true
 tracks/26/imported = false
 tracks/26/enabled = true
 tracks/26/keys = {
-"times": PoolRealArray( 0.8, 1.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 
 [sub_resource type="Animation" id=35]
-
-length = 1.0
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
@@ -2575,47 +2475,30 @@ tracks/0/keys = {
 }
 
 [node name="Cutscene1" type="CanvasLayer"]
-
 pause_mode = 2
 layer = 10
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="BackPanel" type="ColorRect" parent="." index="0"]
-
+[node name="BackPanel" type="ColorRect" parent="."]
 pause_mode = 2
-anchor_left = 0.0
-anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-theme = ExtResource( 2 )
 color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Scenes" type="Control" parent="." index="1"]
-
+[node name="Scenes" type="Control" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Scene1" type="Control" parent="Scenes" index="0"]
-
-editor/display_folded = true
+[node name="Scene1" type="Control" parent="Scenes"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
@@ -2626,93 +2509,39 @@ margin_left = -960.0
 margin_top = -540.0
 margin_right = 960.0
 margin_bottom = 540.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1"]
 autoplay = "00_base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/00_base = SubResource( 1 )
 anims/01_fade = SubResource( 2 )
 anims/02_text = SubResource( 3 )
 next/01_fade = "02_text"
 blend_times = [ "01_fade", "02_text", 0.05 ]
 
-[node name="BackgrounSpace" type="TextureRect" parent="Scenes/Scene1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BackgrounSpace" type="TextureRect" parent="Scenes/Scene1"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 3 )
-stretch_mode = 0
 
-[node name="SpaceShip" type="TextureRect" parent="Scenes/Scene1" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SpaceShip" type="TextureRect" parent="Scenes/Scene1"]
 margin_top = 57.565
 margin_right = 1006.0
 margin_bottom = 1148.56
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 4 )
-stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/SpaceShip" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/SpaceShip"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 4 )
-blend_times = [  ]
 
-[node name="Rift" type="TextureRect" parent="Scenes/Scene1" index="3"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Rift" type="TextureRect" parent="Scenes/Scene1"]
 margin_left = 1370.0
 margin_top = 50.0
 margin_right = 1778.0
 margin_bottom = 954.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 5 )
-stretch_mode = 0
 
-[node name="TextureFrame" type="TextureRect" parent="Scenes/Scene1/Rift" index="0"]
-
+[node name="TextureFrame" type="TextureRect" parent="Scenes/Scene1/Rift"]
 modulate = Color( 1, 1, 1, 0.591421 )
 show_behind_parent = true
 anchor_left = 0.5
@@ -2724,39 +2553,17 @@ margin_top = -446.987
 margin_right = 433.519
 margin_bottom = 649.013
 rect_scale = Vector2( 0.906203, 0.906203 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 6 )
-stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/Rift" index="1"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene1/Rift"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 5 )
-blend_times = [  ]
 
-[node name="Label" type="Label" parent="Scenes/Scene1" index="4"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="Label" parent="Scenes/Scene1"]
 margin_top = 39.0
 margin_right = 1879.0
 margin_bottom = 154.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -2768,14 +2575,8 @@ text = "Deep Space - at the limits of the Cosmic Abyss
 13th Year of Expedition Serpentine"
 align = 2
 percent_visible = 0.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Scene2" type="Control" parent="Scenes" index="1"]
-
-editor/display_folded = true
-visible = false
-modulate = Color( 1, 1, 1, 0 )
+[node name="Scene2" type="Control" parent="Scenes"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -2784,20 +2585,13 @@ margin_left = -960.0
 margin_top = -540.0
 margin_right = 960.0
 margin_bottom = 540.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene2" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene2"]
 autoplay = "00_base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/00_base = SubResource( 6 )
 anims/01_fade = SubResource( 7 )
 anims/02_frame1 = SubResource( 8 )
@@ -2806,179 +2600,81 @@ anims/03_frame2 = SubResource( 9 )
 next/01_fade = "02_frame1"
 blend_times = [ "01_fade", "02_frame1", 0.05 ]
 
-[node name="ColorFrame" type="ColorRect" parent="Scenes/Scene2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="ColorFrame" type="ColorRect" parent="Scenes/Scene2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0, 0, 0, 1 )
 
-[node name="BackgroundFrame3" type="TextureRect" parent="Scenes/Scene2" index="2"]
-
+[node name="BackgroundFrame3" type="TextureRect" parent="Scenes/Scene2"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 8 )
-stretch_mode = 0
 
-[node name="A5tr0" type="TextureRect" parent="Scenes/Scene2/BackgroundFrame3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="A5tr0" type="TextureRect" parent="Scenes/Scene2/BackgroundFrame3"]
+modulate = Color( 0, 0, 0, 1 )
 margin_left = 1133.0
 margin_top = 290.0
 margin_right = 1800.0
 margin_bottom = 1031.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 9 )
-stretch_mode = 0
 
-[node name="balloon" type="TextureRect" parent="Scenes/Scene2/BackgroundFrame3/A5tr0" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="balloon" type="TextureRect" parent="Scenes/Scene2/BackgroundFrame3/A5tr0"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = -150.0
 margin_top = -241.0
 margin_right = 204.0
 margin_bottom = -2.0
 rect_scale = Vector2( 1, 1.05 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 10 )
-stretch_mode = 0
 
-[node name="Label" type="RichTextLabel" parent="Scenes/Scene2/BackgroundFrame3/A5tr0" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="RichTextLabel" parent="Scenes/Scene2/BackgroundFrame3/A5tr0"]
 margin_left = -150.0
 margin_top = -216.0
 margin_right = 204.0
 margin_bottom = -25.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 11 )
 bbcode_enabled = true
 bbcode_text = "[center]Okay, 
 [b]what[/b] do we
 have here?[/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
+visible_characters = 0
+percent_visible = 0.0
 text = "Okay, 
 what do we
 have here?"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Frame1" type="TextureRect" parent="Scenes/Scene2" index="3"]
-
-modulate = Color( 1, 1, 1, 0 )
-self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene2"]
 margin_left = 50.0
 margin_top = 80.0
 margin_right = 433.0
 margin_bottom = 989.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 12 )
-stretch_mode = 0
 
-[node name="sfx" type="TextureRect" parent="Scenes/Scene2/Frame1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="sfx" type="TextureRect" parent="Scenes/Scene2/Frame1"]
 margin_left = 150.0
 margin_top = 60.0
 margin_right = 323.0
 margin_bottom = 129.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 13 )
-stretch_mode = 0
 
-[node name="Frame2" type="TextureRect" parent="Scenes/Scene2" index="4"]
-
-modulate = Color( 1, 1, 1, 0 )
-self_modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene2"]
 margin_left = 483.0
 margin_top = 80.0
 margin_right = 866.0
 margin_bottom = 989.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 14 )
-stretch_mode = 0
 
-[node name="sfx" type="Sprite" parent="Scenes/Scene2/Frame2" index="0"]
-
+[node name="sfx" type="Sprite" parent="Scenes/Scene2/Frame2"]
 position = Vector2( 209, 796 )
 texture = ExtResource( 15 )
 
-[node name="Scene3" type="Control" parent="Scenes" index="2"]
-
-editor/display_folded = true
+[node name="Scene3" type="Control" parent="Scenes"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
@@ -2989,20 +2685,10 @@ margin_left = -960.0
 margin_top = -540.0
 margin_right = 960.0
 margin_bottom = 540.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3"]
 autoplay = "00_base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/00_base = SubResource( 11 )
 anims/01_fade = SubResource( 12 )
 anims/02_frame1 = SubResource( 13 )
@@ -3012,203 +2698,90 @@ next/01_fade = "02_frame1"
 next/02_frame1 = "02_frame2"
 blend_times = [ "01_fade", "02_frame1", 0.05 ]
 
-[node name="BackgroundGradient" type="TextureRect" parent="Scenes/Scene3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BackgroundGradient" type="TextureRect" parent="Scenes/Scene3"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 16 )
-stretch_mode = 0
 
-[node name="Frame1" type="TextureRect" parent="Scenes/Scene3" index="2"]
-
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene3"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 60.0
 margin_top = 60.0
 margin_right = 600.0
 margin_bottom = 1008.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 17 )
-stretch_mode = 0
 
-[node name="Frame3" type="TextureRect" parent="Scenes/Scene3" index="3"]
-
-editor/display_folded = true
+[node name="Frame3" type="TextureRect" parent="Scenes/Scene3"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 1260.0
 margin_top = 60.0
 margin_right = 1817.0
 margin_bottom = 995.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 18 )
-stretch_mode = 0
 
-[node name="Orb" type="Control" parent="Scenes/Scene3/Frame3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Orb" type="Control" parent="Scenes/Scene3/Frame3"]
 margin_left = 208.0
 margin_top = 422.0
 margin_right = 248.0
 margin_bottom = 462.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Swirl" type="Sprite" parent="Scenes/Scene3/Frame3/Orb" index="0"]
-
+[node name="Swirl" type="Sprite" parent="Scenes/Scene3/Frame3/Orb"]
 position = Vector2( 20, 20 )
 rotation = -5.88385
 texture = ExtResource( 19 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame3/Orb/Swirl" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame3/Orb/Swirl"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 16 )
-blend_times = [  ]
 
-[node name="Glow" type="Sprite" parent="Scenes/Scene3/Frame3/Orb" index="1"]
-
+[node name="Glow" type="Sprite" parent="Scenes/Scene3/Frame3/Orb"]
 modulate = Color( 1, 1, 1, 0.974063 )
 position = Vector2( 66, -50 )
 texture = ExtResource( 20 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame3/Orb/Glow" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame3/Orb/Glow"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 17 )
-blend_times = [  ]
 
-[node name="Frame2" type="TextureRect" parent="Scenes/Scene3" index="4"]
-
-editor/display_folded = true
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene3"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 509.0
 margin_top = 32.0
 margin_right = 1369.0
 margin_bottom = 1028.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 21 )
-stretch_mode = 0
 
-[node name="Orb" type="Control" parent="Scenes/Scene3/Frame2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Orb" type="Control" parent="Scenes/Scene3/Frame2"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="OrbGlow" type="Sprite" parent="Scenes/Scene3/Frame2/Orb" index="0"]
-
+[node name="OrbGlow" type="Sprite" parent="Scenes/Scene3/Frame2/Orb"]
 modulate = Color( 1, 1, 1, 0.900263 )
 position = Vector2( 251.928, 162.501 )
 texture = ExtResource( 22 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame2/Orb/OrbGlow" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame2/Orb/OrbGlow"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 18 )
-blend_times = [  ]
 
-[node name="Swirl" type="Sprite" parent="Scenes/Scene3/Frame2/Orb" index="1"]
-
+[node name="Swirl" type="Sprite" parent="Scenes/Scene3/Frame2/Orb"]
 position = Vector2( 249.928, 150.501 )
 rotation = -0.0265248
 texture = ExtResource( 23 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame2/Orb/Swirl" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene3/Frame2/Orb/Swirl"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 19 )
-blend_times = [  ]
 
-[node name="Jackpot!" type="TextureRect" parent="Scenes/Scene3/Frame2" index="1"]
-
+[node name="Jackpot!" type="TextureRect" parent="Scenes/Scene3/Frame2"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = -48.0
 margin_top = 688.0
 margin_right = 333.0
 margin_bottom = 869.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 24 )
-stretch_mode = 0
 
-[node name="Scene4" type="Control" parent="Scenes" index="3"]
-
+[node name="Scene4" type="Control" parent="Scenes"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
@@ -3219,20 +2792,10 @@ margin_left = -960.0
 margin_top = -540.0
 margin_right = 960.0
 margin_bottom = 540.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4"]
 autoplay = "00_base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/00_base = SubResource( 20 )
 anims/01_fade_in = SubResource( 21 )
 anims/02_frame1 = SubResource( 22 )
@@ -3241,57 +2804,23 @@ anims/04_frame2_balloon2 = SubResource( 24 )
 next/01_fade_in = "02_frame1"
 blend_times = [ "01_fade_in", "02_frame1", 0.05 ]
 
-[node name="BackgroundGradient" type="TextureRect" parent="Scenes/Scene4" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BackgroundGradient" type="TextureRect" parent="Scenes/Scene4"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 16 )
-stretch_mode = 0
 
-[node name="Frame1" type="TextureRect" parent="Scenes/Scene4" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene4"]
 margin_left = 60.0
 margin_right = 1784.0
 margin_bottom = 988.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 25 )
-stretch_mode = 0
 
-[node name="balloon" type="NinePatchRect" parent="Scenes/Scene4/Frame1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="balloon" type="NinePatchRect" parent="Scenes/Scene4/Frame1"]
 margin_left = 120.0
 margin_top = 117.0
 margin_right = 451.0
 margin_bottom = 302.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 26 )
 region_rect = Rect2( 0, 0, 274, 176 )
 patch_margin_left = 64
@@ -3299,169 +2828,70 @@ patch_margin_top = 43
 patch_margin_right = 32
 patch_margin_bottom = 39
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene4/Frame1/balloon" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene4/Frame1/balloon"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 14.0
 margin_top = 45.0
 margin_right = 2.0
 margin_bottom = 6.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 11 )
 bbcode_enabled = true
 bbcode_text = "[center]Time to call 
 central com-[/center]"
 visible_characters = 0
 percent_visible = 0.0
-meta_underlined = true
-tab_size = 4
 text = "Time to call 
 central com-"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Interruption" type="Control" parent="Scenes/Scene4/Frame1" index="1"]
-
+[node name="Interruption" type="Control" parent="Scenes/Scene4/Frame1"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="IncomingText" type="TextureRect" parent="Scenes/Scene4/Frame1/Interruption" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="IncomingText" type="TextureRect" parent="Scenes/Scene4/Frame1/Interruption"]
 margin_left = 33.0
 margin_top = 387.0
 margin_right = 467.0
 margin_bottom = 695.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 27 )
-stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame1/Interruption/IncomingText" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame1/Interruption/IncomingText"]
 anims/loop = SubResource( 25 )
 anims/still = SubResource( 26 )
-blend_times = [  ]
 
-[node name="Control" type="Control" parent="Scenes/Scene4/Frame1/Interruption" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Control" type="Control" parent="Scenes/Scene4/Frame1/Interruption"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="SfxBeep1" type="TextureRect" parent="Scenes/Scene4/Frame1/Interruption/Control" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SfxBeep1" type="TextureRect" parent="Scenes/Scene4/Frame1/Interruption/Control"]
 margin_left = 504.0
 margin_top = 181.0
 margin_right = 777.0
 margin_bottom = 385.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 28 )
-stretch_mode = 0
 
-[node name="SfxBeep2" type="TextureRect" parent="Scenes/Scene4/Frame1/Interruption/Control" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="SfxBeep2" type="TextureRect" parent="Scenes/Scene4/Frame1/Interruption/Control"]
 margin_left = 658.0
 margin_top = 268.0
 margin_right = 894.0
 margin_bottom = 391.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 28 )
-stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame1/Interruption/Control" index="2"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame1/Interruption/Control"]
 anims/loop = SubResource( 27 )
 anims/still = SubResource( 28 )
-blend_times = [  ]
 
-[node name="Frame2" type="TextureRect" parent="Scenes/Scene4" index="3"]
-
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene4"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 1127.0
 margin_top = 80.0
 margin_right = 1842.0
 margin_bottom = 994.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 29 )
-stretch_mode = 0
 
-[node name="BlueLight" type="Sprite" parent="Scenes/Scene4/Frame2" index="0"]
-
+[node name="BlueLight" type="Sprite" parent="Scenes/Scene4/Frame2"]
 modulate = Color( 1, 1, 1, 0.290552 )
 position = Vector2( 388.72, 736.318 )
 texture = ExtResource( 30 )
@@ -3469,86 +2899,41 @@ offset = Vector2( -3.79138, -91.9059 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 161, 189 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/BlueLight" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene4/Frame2/BlueLight"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 29 )
-blend_times = [  ]
 
-[node name="baloon1" type="TextureRect" parent="Scenes/Scene4/Frame2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="baloon1" type="TextureRect" parent="Scenes/Scene4/Frame2"]
 margin_left = -68.0
 margin_top = -51.0
 margin_right = 382.0
 margin_bottom = 279.0
 rect_scale = Vector2( 1.05, 1.05 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 31 )
-stretch_mode = 0
 
-[node name="Label" type="RichTextLabel" parent="Scenes/Scene4/Frame2" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Label" type="RichTextLabel" parent="Scenes/Scene4/Frame2"]
 margin_left = -66.0
 margin_top = -47.0
 margin_right = 405.0
 margin_bottom = 62.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 32 )
 bbcode_enabled = true
 bbcode_text = "[center][b]A5-tr0[/b], this is
 [b]Central Command.[/b] Do you
 copy? Over.[/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
 text = "A5-tr0, this is
 Central Command. Do you
 copy? Over."
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="baloon2" type="NinePatchRect" parent="Scenes/Scene4/Frame2" index="3"]
-
+[node name="baloon2" type="NinePatchRect" parent="Scenes/Scene4/Frame2"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 137.0
 margin_top = 93.0
 margin_right = 779.0
 margin_bottom = 401.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 33 )
 region_rect = Rect2( 0, 0, 473, 269 )
 patch_margin_left = 20
@@ -3556,21 +2941,14 @@ patch_margin_top = 20
 patch_margin_right = 20
 patch_margin_bottom = 100
 
-[node name="Label" type="RichTextLabel" parent="Scenes/Scene4/Frame2/baloon2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="Label" type="RichTextLabel" parent="Scenes/Scene4/Frame2/baloon2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.0
 margin_top = 28.0
 margin_right = 4.0
 margin_bottom = -69.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
 size_flags_vertical = 0
 theme = ExtResource( 11 )
 bbcode_enabled = true
@@ -3579,19 +2957,11 @@ I've just secured what should be
 the [b]Orb of Knowlledge[/b]. Over.[/center]"
 visible_characters = 0
 percent_visible = 0.0
-meta_underlined = true
-tab_size = 4
 text = "Central Command, this is A5-tr0.
 I've just secured what should be 
 the Orb of Knowlledge. Over."
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Scene5" type="Control" parent="Scenes" index="4"]
-
-editor/display_folded = true
+[node name="Scene5" type="Control" parent="Scenes"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
@@ -3602,20 +2972,13 @@ margin_left = -960.0
 margin_top = -540.0
 margin_right = 960.0
 margin_bottom = 540.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5"]
 autoplay = "00_base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/00_base = SubResource( 30 )
 anims/01_fade = SubResource( 31 )
 anims/02_frame1 = SubResource( 32 )
@@ -3624,560 +2987,249 @@ anims/04_frame3 = SubResource( 34 )
 next/01_fade = "02_frame1"
 blend_times = [ "01_fade", "02_frame1", 0.05 ]
 
-[node name="BackgroundGradient" type="TextureRect" parent="Scenes/Scene5" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="BackgroundGradient" type="TextureRect" parent="Scenes/Scene5"]
 margin_right = 1920.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 16 )
-stretch_mode = 0
 
-[node name="Tentacles" type="TextureRect" parent="Scenes/Scene5/BackgroundGradient" index="0"]
-
+[node name="Tentacles" type="TextureRect" parent="Scenes/Scene5/BackgroundGradient"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 290.0
 margin_top = 20.0
 margin_right = 1892.0
 margin_bottom = 1080.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 34 )
-stretch_mode = 0
 
-[node name="Frame1" type="TextureRect" parent="Scenes/Scene5" index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Frame1" type="TextureRect" parent="Scenes/Scene5"]
 margin_left = 40.0
 margin_top = 65.0
 margin_right = 592.0
 margin_bottom = 1008.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 35 )
-stretch_mode = 0
 
-[node name="ScreenEffect" type="Control" parent="Scenes/Scene5/Frame1" index="0"]
-
+[node name="ScreenEffect" type="Control" parent="Scenes/Scene5/Frame1"]
 modulate = Color( 1, 1, 1, 0.977041 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="ScreenReflection" type="TextureRect" parent="Scenes/Scene5/Frame1/ScreenEffect" index="0"]
-
+[node name="ScreenReflection" type="TextureRect" parent="Scenes/Scene5/Frame1/ScreenEffect"]
 modulate = Color( 1, 1, 1, 0.3 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 248.0
 margin_top = 705.0
 margin_right = 295.0
 margin_bottom = 745.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 36 )
-stretch_mode = 0
 
-[node name="Light" type="TextureRect" parent="Scenes/Scene5/Frame1/ScreenEffect" index="1"]
-
+[node name="Light" type="TextureRect" parent="Scenes/Scene5/Frame1/ScreenEffect"]
 modulate = Color( 1, 1, 1, 0.7 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 248.0
 margin_top = 699.0
 margin_right = 293.0
 margin_bottom = 754.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 37 )
-stretch_mode = 0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5/Frame1/ScreenEffect" index="2"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scenes/Scene5/Frame1/ScreenEffect"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 35 )
-blend_times = [  ]
 
-[node name="baloon1" type="TextureRect" parent="Scenes/Scene5/Frame1" index="1"]
-
+[node name="baloon1" type="TextureRect" parent="Scenes/Scene5/Frame1"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = -27.0
 margin_top = 34.0
 margin_right = 571.0
 margin_bottom = 325.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 32 )
 texture = ExtResource( 38 )
 expand = true
-stretch_mode = 0
 
-[node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene5/Frame1/baloon1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel1" type="RichTextLabel" parent="Scenes/Scene5/Frame1/baloon1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 25.0
 margin_right = -89.0
 margin_bottom = -103.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "[center]Copy that, A5-tr0!
 We have just detected an
 energy spike coming towards
 your location.[/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
+visible_characters = 0
+percent_visible = 0.0
 text = "Copy that, A5-tr0!
 We have just detected an
 energy spike coming towards
 your location."
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Scenes/Scene5/Frame1/baloon1" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel2" type="RichTextLabel" parent="Scenes/Scene5/Frame1/baloon1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 206.0
 margin_top = 197.0
 margin_right = -2.0
 margin_bottom = -5.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "[center]Something [b]massive[/b]
 is approaching you![/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
+visible_characters = 0
+percent_visible = 0.0
 text = "Something massive
 is approaching you!"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Frame2" type="TextureRect" parent="Scenes/Scene5" index="3"]
-
+[node name="Frame2" type="TextureRect" parent="Scenes/Scene5"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 650.0
 margin_top = 65.0
 margin_right = 1201.0
 margin_bottom = 1008.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 39 )
-stretch_mode = 0
 
-[node name="Visual Effects" type="Control" parent="Scenes/Scene5/Frame2" index="0"]
-
-editor/display_folded = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Visual Effects" type="Control" parent="Scenes/Scene5/Frame2"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="TentacleEffectt" type="TextureRect" parent="Scenes/Scene5/Frame2/Visual Effects" index="0"]
-
+[node name="TentacleEffectt" type="TextureRect" parent="Scenes/Scene5/Frame2/Visual Effects"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_right = 551.0
 margin_bottom = 943.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 40 )
-stretch_mode = 0
 
-[node name="Exclamation1" type="Sprite" parent="Scenes/Scene5/Frame2/Visual Effects" index="1"]
-
+[node name="Exclamation1" type="Sprite" parent="Scenes/Scene5/Frame2/Visual Effects"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 115.543, 342.928 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 41 )
 
-[node name="Exclamation2" type="Sprite" parent="Scenes/Scene5/Frame2/Visual Effects" index="2"]
-
+[node name="Exclamation2" type="Sprite" parent="Scenes/Scene5/Frame2/Visual Effects"]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 175.543, 342.928 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 42 )
 
-[node name="FallSplash" type="TextureRect" parent="Scenes/Scene5/Frame2/Visual Effects" index="3"]
-
+[node name="FallSplash" type="TextureRect" parent="Scenes/Scene5/Frame2/Visual Effects"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 28.0
 margin_top = 656.0
 margin_right = 199.0
 margin_bottom = 806.0
 rect_scale = Vector2( 0.7, 0.7 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 43 )
-stretch_mode = 0
 
-[node name="FallSfx" type="TextureRect" parent="Scenes/Scene5/Frame2/Visual Effects" index="4"]
-
+[node name="FallSfx" type="TextureRect" parent="Scenes/Scene5/Frame2/Visual Effects"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 25.0
 margin_top = 696.0
 margin_right = 165.0
 margin_bottom = 769.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 44 )
-stretch_mode = 0
 
-[node name="Balloons" type="Control" parent="Scenes/Scene5/Frame2" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Balloons" type="Control" parent="Scenes/Scene5/Frame2"]
 margin_right = 40.0
 margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Balloon1" type="TextureRect" parent="Scenes/Scene5/Frame2/Balloons" index="0"]
-
+[node name="Balloon1" type="TextureRect" parent="Scenes/Scene5/Frame2/Balloons"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 49.0
 margin_top = 70.0
 margin_right = 443.0
 margin_bottom = 177.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 32 )
 texture = ExtResource( 45 )
 expand = true
-stretch_mode = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame2/Balloons/Balloon1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame2/Balloons/Balloon1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 22.0
 margin_right = 3.0
 margin_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "[center]Secure the orb and
 retreat immediately![/center]"
 visible_characters = 0
 percent_visible = 0.0
-meta_underlined = true
-tab_size = 4
 text = "Secure the orb and
 retreat immediately!"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Balloon2" type="TextureRect" parent="Scenes/Scene5/Frame2/Balloons" index="1"]
-
+[node name="Balloon2" type="TextureRect" parent="Scenes/Scene5/Frame2/Balloons"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 266.0
 margin_top = 842.0
 margin_right = 508.0
 margin_bottom = 904.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 32 )
 texture = ExtResource( 46 )
 expand = true
-stretch_mode = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame2/Balloons/Balloon2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame2/Balloons/Balloon2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 2.0
 margin_top = 15.0
 margin_right = 5.0
 margin_bottom = -2.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "[center][b]I REPEAT...[/b][/center]"
 visible_characters = 0
 percent_visible = 0.0
-meta_underlined = true
-tab_size = 4
 text = "I REPEAT..."
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Frame3" type="TextureRect" parent="Scenes/Scene5" index="4"]
-
+[node name="Frame3" type="TextureRect" parent="Scenes/Scene5"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_left = 1132.0
 margin_top = 102.0
 margin_right = 1893.0
 margin_bottom = 983.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 texture = ExtResource( 47 )
-stretch_mode = 0
 
-[node name="Balloon1" type="TextureRect" parent="Scenes/Scene5/Frame3" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Balloon1" type="TextureRect" parent="Scenes/Scene5/Frame3"]
 margin_left = 86.0
 margin_top = -76.0
 margin_right = 661.0
 margin_bottom = 29.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 32 )
 texture = ExtResource( 48 )
 expand = true
-stretch_mode = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame3/Balloon1" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame3/Balloon1"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 35.0
 margin_right = -50.0
 margin_bottom = -9.0
 rect_scale = Vector2( 1.1, 1.1 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "[center][b]...RETREAT IMMEDIATELY...[/b][/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
 text = "...RETREAT IMMEDIATELY..."
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Balloon2" type="TextureRect" parent="Scenes/Scene5/Frame3" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Balloon2" type="TextureRect" parent="Scenes/Scene5/Frame3"]
 margin_left = 403.0
 margin_top = 811.0
 margin_right = 761.0
 margin_bottom = 953.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 theme = ExtResource( 32 )
 texture = ExtResource( 49 )
 expand = true
-stretch_mode = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame3/Balloon2" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="RichTextLabel" type="RichTextLabel" parent="Scenes/Scene5/Frame3/Balloon2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 32.0
 margin_right = -61.0
 margin_bottom = -18.0
 rect_scale = Vector2( 1.2, 1.2 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
 mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 bbcode_enabled = true
 bbcode_text = "[center][b]...AND DO NOT
 LOSE THE ORB![/b][/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
 text = "...AND DO NOT
 LOSE THE ORB!"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
 
-[node name="Buttons" type="HBoxContainer" parent="." index="2"]
-
+[node name="Buttons" type="HBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -4187,63 +3239,25 @@ margin_top = -63.0
 margin_right = 920.0
 margin_bottom = -6.0
 rect_min_size = Vector2( 0, 40 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
-mouse_default_cursor_shape = 0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 theme = ExtResource( 50 )
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Next" parent="Buttons" index="0" instance=ExtResource( 51 )]
+[node name="Next" parent="Buttons" instance=ExtResource( 51 )]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
-align = 1
-
-[node name="separator" type="Control" parent="Buttons" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="separator" type="Control" parent="Buttons"]
 margin_left = 912.0
 margin_right = 937.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 25, 0 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 
-[node name="Skip" parent="Buttons" index="2" instance=ExtResource( 51 )]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
+[node name="Skip" parent="Buttons" instance=ExtResource( 51 )]
 margin_left = 941.0
 margin_right = 1011.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_default_cursor_shape = 0
-group = null
 text = "Skip"
-align = 1
-
 [connection signal="pressed" from="Buttons/Next" to="." method="_on_Next_pressed"]
-
 [connection signal="pressed" from="Buttons/Skip" to="." method="_on_Skip_pressed"]
-
-
