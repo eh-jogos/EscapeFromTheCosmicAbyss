@@ -30,7 +30,7 @@
 [ext_resource path="res://Cutscenes/pngs/IngameCutscene/a5tr0.png" type="Texture" id=28]
 [ext_resource path="res://JetpackGameMode/Boss/ParallaxBackground.gd" type="Script" id=29]
 [ext_resource path="res://JetpackGameMode/Boss/BackgroundBoss.gd" type="Script" id=30]
-[ext_resource path="res://BackRowBossSkin.tscn" type="PackedScene" id=31]
+[ext_resource path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" type="PackedScene" id=31]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=32]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=33]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=34]
@@ -71,6 +71,7 @@
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_5.png" type="Texture" id=69]
 [ext_resource path="res://Shaders/shader_text_pop_up.tres" type="Animation" id=70]
 [ext_resource path="res://Shaders/text_horizontal_gradient_shader.tres" type="Material" id=72]
+
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( -50, 0 )

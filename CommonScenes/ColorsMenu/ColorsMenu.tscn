@@ -6,7 +6,7 @@
 [ext_resource path="res://CommonScenes/ColorsMenu/animations/laser_eye.tres" type="Animation" id=4]
 [ext_resource path="res://CommonScenes/ColorsMenu/laser_eye_loop.tres" type="Animation" id=5]
 [ext_resource path="res://CommonScenes/ColorsMenu/animations/tentacles.tres" type="Animation" id=6]
-[ext_resource path="res://BackRowBossSkin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" type="PackedScene" id=7]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" type="Texture" id=8]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" type="Texture" id=9]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" type="Texture" id=10]
@@ -239,6 +239,7 @@
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=237]
 [ext_resource path="res://CommonScenes/ColorsMenu/colors_menu_light_mask.png" type="Texture" id=238]
 [ext_resource path="res://CommonScenes/pallet.png" type="Texture" id=239]
+
 
 [sub_resource type="SpriteFrames" id=1]
 
