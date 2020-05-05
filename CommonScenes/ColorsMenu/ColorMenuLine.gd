@@ -47,7 +47,7 @@ func _set_description(value):
 
 func _set_category(value):
 	category = value
-	if color_picker == null:
+	if Engine.editor_hint or color_picker == null:
 		return
 	
 	color_picker.category = category
@@ -55,7 +55,7 @@ func _set_category(value):
 
 func _set_selected_part(value):
 	selected_part = value
-	if color_picker == null:
+	if Engine.editor_hint or color_picker == null:
 		return
 	
 	var actual_part = get(selected_part)

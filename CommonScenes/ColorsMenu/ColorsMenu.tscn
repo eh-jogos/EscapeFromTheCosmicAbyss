@@ -601,9 +601,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 53 ) ],
-"loop": false,
-"name": "spawn",
+"frames": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 55 ) ],
+"loop": true,
+"name": "crush_idle",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
@@ -611,9 +611,9 @@ animations = [ {
 "name": "crush",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 55 ) ],
-"loop": true,
-"name": "crush_idle",
+"frames": [ ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 53 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 } ]
 
@@ -629,9 +629,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 59.999
 }, {
-"frames": [ ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 97 ) ],
-"loop": false,
-"name": "spawn",
+"frames": [ ExtResource( 98 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 107 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 99 ) ],
+"loop": true,
+"name": "crush_idle",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 108 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ) ],
@@ -639,9 +639,9 @@ animations = [ {
 "name": "crush",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 98 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 107 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 99 ) ],
-"loop": true,
-"name": "crush_idle",
+"frames": [ ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 97 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 } ]
 
@@ -1560,6 +1560,23 @@ position = Vector2( -50, 0 )
 visible = false
 position = Vector2( 850, 497 )
 
+[node name="EyeShape" parent="ParallaxBackground/BackRowBossSkin/Eye" index="0"]
+animation = "to_scream"
+frame = 4
+
+[node name="Iris" parent="ParallaxBackground/BackRowBossSkin/Eye" index="1"]
+position = Vector2( 1.91187, 5.78522 )
+animation = "to_scream"
+frame = 4
+
+[node name="MouthShape" parent="ParallaxBackground/BackRowBossSkin/Mouth" index="0"]
+animation = "to_scream"
+frame = 4
+
+[node name="Teeth" parent="ParallaxBackground/BackRowBossSkin/Mouth" index="1"]
+animation = "to_scream"
+frame = 4
+
 [node name="BG3" type="AnimatedSprite" parent="ParallaxBackground"]
 position = Vector2( 1010, 540 )
 frames = SubResource( 1 )
@@ -1582,27 +1599,27 @@ position = Vector2( 960, 540 )
 scale = Vector2( 0.9, 0.9 )
 
 [node name="EyeShape" parent="ParallaxBackground/MidRowsBossSkin 2/Eye" index="0"]
-frame = 7
+frame = 0
 
 [node name="IrisShape" parent="ParallaxBackground/MidRowsBossSkin 2/Eye/Iris" index="0"]
-frame = 7
+frame = 0
 
 [node name="IrisOutline" parent="ParallaxBackground/MidRowsBossSkin 2/Eye/Iris" index="1"]
-frame = 7
+frame = 0
 
 [node name="EyeOutline" parent="ParallaxBackground/MidRowsBossSkin 2/Eye" index="2"]
 position = Vector2( 6, 0 )
-frame = 7
+frame = 0
 
 [node name="MouthOutline" parent="ParallaxBackground/MidRowsBossSkin 2/Mouth" index="0"]
-frame = 7
+frame = 0
 
 [node name="MouthShape" parent="ParallaxBackground/MidRowsBossSkin 2/Mouth/MouthOutline" index="0"]
-frame = 7
+frame = 0
 
 [node name="MouthTeeth" parent="ParallaxBackground/MidRowsBossSkin 2/Mouth/MouthOutline" index="1"]
 position = Vector2( 1, 0 )
-frame = 7
+frame = 0
 
 [node name="BG1" type="AnimatedSprite" parent="ParallaxBackground"]
 position = Vector2( 1010, 540 )
@@ -1625,10 +1642,6 @@ __meta__ = {
 "boss",
 ] instance=ExtResource( 25 )]
 visible = false
-position = Vector2( 0, 640 )
-
-[node name="AnimationPlayer" parent="ParallaxBackground/Boss" index="0"]
-blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down", 0.05, "laser_charge_up", "laser_shot_down", 0.05, "laser_shot_down", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
 
 [node name="BodyOutline" parent="ParallaxBackground/Boss/FinalBossSkin" index="1"]
 animation = "to_angry"
@@ -1728,7 +1741,6 @@ frame = 5
 [node name="Tentacles" type="Node2D" parent="Obstaculos" groups=[
 "pipes",
 ]]
-visible = false
 position = Vector2( 330, 540 )
 
 [node name="TentaclePath" type="Path2D" parent="Obstaculos/Tentacles"]
@@ -1750,7 +1762,7 @@ collision_mask = 3
 script = ExtResource( 29 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculos/Tentacles/TentaclePath/TentaclePosition/TentacleTopStatic"]
-position = Vector2( 0, -950 )
+position = Vector2( 0, -75 )
 scale = Vector2( 1, -1 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
@@ -1758,7 +1770,9 @@ polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.06
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 11 )
-animation = "spawn"
+animation = "idle"
+frame = 12
+playing = true
 centered = false
 flip_v = true
 script = ExtResource( 73 )
@@ -1767,7 +1781,9 @@ script = ExtResource( 73 )
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 12 )
-animation = "spawn"
+animation = "idle"
+frame = 12
+playing = true
 centered = false
 flip_v = true
 script = ExtResource( 117 )
@@ -1794,14 +1810,16 @@ collision_mask = 3
 script = ExtResource( 29 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculos/Tentacles/TentaclePath/TentaclePosition/TentacleBottomStatic"]
-position = Vector2( 0, 950 )
+position = Vector2( 0, 75 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
 [node name="OutlineBottom" type="AnimatedSprite" parent="Obstaculos/Tentacles/TentaclePath/TentaclePosition/TentacleBottomStatic"]
 modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 11 )
-animation = "spawn"
+animation = "idle"
+frame = 12
+playing = true
 centered = false
 script = ExtResource( 73 )
 
@@ -1809,7 +1827,9 @@ script = ExtResource( 73 )
 modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 12 )
-animation = "spawn"
+animation = "idle"
+frame = 12
+playing = true
 centered = false
 script = ExtResource( 117 )
 
@@ -1891,7 +1911,9 @@ margin_top = 248.0
 margin_right = 960.0
 margin_bottom = -201.0
 script = ExtResource( 228 )
-current_menu = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="Menu/MenuRoot/MenusBlock"]
 
@@ -2396,6 +2418,7 @@ anchor_top = 0.5
 anchor_bottom = 0.5
 margin_top = -35.5
 margin_bottom = -35.5
+rect_scale = Vector2( -1, 1 )
 texture_normal = ExtResource( 232 )
 texture_pressed = ExtResource( 233 )
 texture_hover = ExtResource( 234 )
@@ -2409,6 +2432,9 @@ margin_bottom = 1060.0
 mouse_filter = 0
 custom_constants/separation = 45
 script = ExtResource( 236 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Exit" type="Button" parent="Menu/MenuRoot/NavButtons"]
 pause_mode = 2

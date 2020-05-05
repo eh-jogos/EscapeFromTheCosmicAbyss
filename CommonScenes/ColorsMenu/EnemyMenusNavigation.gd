@@ -1,5 +1,4 @@
 extends Control
-tool
 
 export(int) var current_menu = 0 setget _set_current_menu
 
@@ -13,7 +12,7 @@ func _ready():
 	set_process_input(false)
 	self.current_menu = current_menu
 	
-	if not get_tree().is_editor_hint():
+	if not Engine.is_editor_hint():
 		Global = get_node("/root/Global")
 		Global.connect("navigated_to_right", self, "_on_Global_navigated_to_right")
 		Global.connect("navigated_to_left", self, "_on_Global_navigated_to_left")
@@ -36,11 +35,11 @@ func _set_current_menu(value):
 	menu_position.x *= -1
 	
 	tween.remove_all()
-	tween.interpolate_property(container_menus, "rect/pos", container_menus.get_position(),   #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	tween.interpolate_property(container_menus, "rect_position", container_menus.get_position(),   #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 			menu_position, 0.3, Tween.TRANS_CUBIC, Tween.EASE_OUT)
 	tween.start()
 	
-	if not get_tree().is_editor_hint():
+	if not Engine.is_editor_hint():
 		menu_node.activate()
 
 
