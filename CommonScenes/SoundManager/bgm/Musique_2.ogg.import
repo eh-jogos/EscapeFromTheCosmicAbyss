@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Musique_2.ogg-962b6b5944e1ff4451d5ab4098043148.oggstr"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/bgm/Musique_2.ogg"
+dest_files=[ "res://.import/Musique_2.ogg-962b6b5944e1ff4451d5ab4098043148.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

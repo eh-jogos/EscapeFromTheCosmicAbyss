@@ -8,4 +8,4 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.waves.body)
+	self_modulate = Global.savedata.colors.waves.body

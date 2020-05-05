@@ -44,7 +44,7 @@ func _ready():
 	stage_number = self.get_node("StageClearedContainer/LevelText/StageNumber")
 	stage_name = self.get_node("StageClearedContainer/LevelText/StageName")
 	
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
 	score_results = self.get_node("ResultsContainer/ScoreResults")
@@ -63,11 +63,11 @@ func _ready():
 	game = get_parent().get_parent()
 	game_mode = game.game_mode
 	
-	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
-		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")
+	if not upgrade_btn.is_connected("focus_entered",self,"_on_focus_enter"):
+		upgrade_btn.connect("focus_entered",self,"_on_focus_enter")
 	
-	if not level_select_btn.is_connected("focus_enter",self,"_on_focus_enter"):
-		level_select_btn.connect("focus_enter",self,"_on_focus_enter")
+	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
+		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
 	
 	
 	if game_mode == "story":
@@ -102,7 +102,7 @@ func open(level_number, level_name):
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	
-	#SoundManager.bgm_set_loop(false)
+	SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
 	
 	var score = game.get_score()
@@ -182,7 +182,7 @@ func _on_replay_pressed():
 
 func restart_game():
 	if game != null:
-		animator.play("fade out")
+		animator.play("fade_out")
 		ScreenManager.black_transition_replace("res://JetpackGameMode/JetpackGame.tscn")
 
 
@@ -225,8 +225,8 @@ func print_time(runtime, label):
 func _on_upgrade_pressed():
 	var path = upgrade_path
 	last_focus = upgrade_btn
-	animator.play("fade out")
-	yield(animator, "finished")
+	animator.play("fade_out")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)
@@ -234,13 +234,10 @@ func _on_upgrade_pressed():
 
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
-	if self.is_hidden():
+	if not self.visible:
 		self.show()
-		animator.play_backwards("fade out")
-		yield(animator, "finished")
-		
-		if SoundManager.bgm_stream.is_paused():
-			SoundManager.pause_bgm()
+		animator.play_backwards("fade_out")
+		yield(animator, "animation_finished")
 		
 		upgrade_points = Global.savedata["story"]["upgrade points"]
 		print_decimal(upgrade_points, label_upgrade)
@@ -249,8 +246,8 @@ func _on_focus_enter():
 func _on_LevelSelect_pressed():
 	var path = level_select_path
 	last_focus = level_select_btn.get_path()
-	animator.play("fade out")
-	yield(animator, "finished")
+	animator.play("fade_out")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)

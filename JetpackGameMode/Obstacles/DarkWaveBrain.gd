@@ -19,14 +19,15 @@ func _on_kill_player(offset_x, flip):
 	deadplayer.set_flip_v(flip)
 	deadplayer_outline.set_flip_v(flip)
 	
-	var relative_pos = offset_x - tentacle_position.get_global_pos().x
-	#print("Offset X: %s | tentacle position: %s | Relative Pos: %s | Unit Relative Pos? %s"%[offset_x, tentacle_position.get_global_pos().x, relative_pos, relative_pos/(790*3)])
+	var relative_pos = offset_x - tentacle_position.get_global_position().x  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	#print("Offset X: %s | tentacle position: %s | Relative Pos: %s | Unit Relative Pos? %s"%[offset_x, tentacle_position.get_global_position().x, relative_pos, relative_pos/(790*3)])  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	
 	tentacle_position.set_offset(relative_pos)
 	
 	animator.play("kill_player")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	darkwave._on_player_killed()
 	
 	tentacle_position.set_unit_offset(0)
 	animator.play("inactive")
+

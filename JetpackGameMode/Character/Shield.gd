@@ -23,8 +23,8 @@ func modulate_shield(should_mute = false):
 	#print("MODULATE SHIELD | Energy:%s"%[energy])
 	
 	if not should_mute and energy != 0:
-		var sfx_player = get_node("SamplePlayer")
-		sfx_player.play("shield_up")
+		var sfx_player = $SfxLibrary/ShieldUp
+		sfx_player.play()
 	
 	if energy == 0:
 		shield_animator.play("disabled")
@@ -68,5 +68,5 @@ func decrease_energy(increment):
 	
 	Global.emit_signal("shield_energy_updated_to", energy)
 	shield_animator.play("burst")
-	yield(shield_animator, "finished")
+	yield(shield_animator, "animation_finished")
 	modulate_shield()

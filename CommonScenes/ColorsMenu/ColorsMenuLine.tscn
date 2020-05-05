@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://CommonScenes/ColorsMenu/ColorMenuLine.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/ColorsMenu/theme_color_picker.tres" type="Theme" id=2]
@@ -7,19 +7,24 @@
 
 [node name="OptionBody" type="HBoxContainer"]
 
-visibility/light_mask = 1024
-material/use_parent = true
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 76.0
-margin/right = 516.0
-margin/bottom = 126.0
+light_mask = 1024
+use_parent_material = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 516.0
+margin_bottom = 126.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 custom_constants/separation = 30
 alignment = 0
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 description = ""
 category = "waves"
 waves_part = "outline"
@@ -30,74 +35,89 @@ mid_bg_boss_part = "outline"
 final_boss_part = "outline"
 selected_part = "waves_part"
 
-[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+[node name="ColorPickerButton" type="ColorPickerButton" parent="." index="0"]
 
-visibility/light_mask = 1024
-material/use_parent = true
-rect/min_size = Vector2( 50, 50 )
-focus_neighbour/left = NodePath(".")
-focus_neighbour/top = NodePath("..")
-focus_neighbour/right = NodePath(".")
-focus_neighbour/bottom = NodePath("..")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 2 )
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 50.0
-margin/bottom = 50.0
+light_mask = 1024
+use_parent_material = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 50.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 50, 50 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("..")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("..")
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 flat = false
 align = 0
 color = Color( 0.121569, 0.392157, 0.356863, 1 )
 edit_alpha = false
-script/script = ExtResource( 3 )
+script = ExtResource( 3 )
 
-[node name="Description" type="Label" parent="ColorPickerButton"]
+[node name="Description" type="Label" parent="ColorPickerButton" index="1"]
 
-visibility/light_mask = 1024
-material/use_parent = true
-focus_neighbour/left = NodePath(".")
-focus_neighbour/right = NodePath(".")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 80.0
-margin/top = 0.0
-margin/right = 167.0
-margin/bottom = 50.0
+light_mask = 1024
+use_parent_material = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 80.0
+margin_right = 167.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_neighbour_left = NodePath(".")
+focus_neighbour_right = NodePath(".")
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="ButtonArea" type="Button" parent="ColorPickerButton"]
+[node name="ButtonArea" type="Button" parent="ColorPickerButton" index="2"]
 
-visibility/opacity = 0.0
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = -466.0
-margin/bottom = 0.0
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 466.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
+group = null
 flat = false
+align = 1
 
-[connection signal="input_event" from="ColorPickerButton" to="ColorPickerButton" method="_on_ColorPickerButton_input_event"]
+[connection signal="gui_input" from="ColorPickerButton" to="ColorPickerButton" method="_on_ColorPickerButton_input_event"]
 
-[connection signal="mouse_enter" from="ColorPickerButton/ButtonArea" to="ColorPickerButton" method="_on_ButtonArea_mouse_enter"]
+[connection signal="mouse_entered" from="ColorPickerButton/ButtonArea" to="ColorPickerButton" method="_on_ButtonArea_mouse_enter"]
 
 

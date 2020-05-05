@@ -6,4 +6,4 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.tentacles.body)
+	self_modulate = Global.savedata.colors.tentacles.body

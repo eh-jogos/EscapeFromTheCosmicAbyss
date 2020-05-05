@@ -1,0 +1,30 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "text_anim"
+length = 1.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/start")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.4, 0.6, 0.8, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.819608, 0, 1 ), Color( 0.243137, 1, 0, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0.639216, 0, 1, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0.678431, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:material:shader_param/end")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.6, 0.8, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.819608, 0, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.678431, 0.266667, 1 ), Color( 0.639216, 0, 1, 1 ), Color( 1, 0.678431, 0.266667, 1 ) ]
+}

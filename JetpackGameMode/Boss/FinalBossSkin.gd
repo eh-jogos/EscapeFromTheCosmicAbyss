@@ -37,5 +37,5 @@ func _set_warning_color(animator, value):
 	if value == 0:
 		animator.play("BASE")
 	else:
-		animator.set_current_animation("charging")
+		animator.assigned_animation = "charging"
 		animator.seek(warning_animator1.get_current_animation_length()*value, true)

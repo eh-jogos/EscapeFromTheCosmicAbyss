@@ -1,4 +1,4 @@
-extends TextureFrame
+extends TextureRect  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 func _ready():
 	add_to_group("interactive_color")
@@ -6,4 +6,5 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.tentacles.outline)
+	self_modulate = Global.savedata.colors.tentacles.outline
+

@@ -14,3 +14,4 @@ func kill_player(offset):
 
 func die():
 	emit_signal("die")
+

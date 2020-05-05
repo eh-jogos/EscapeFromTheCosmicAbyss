@@ -73,20 +73,24 @@ func _on_Back_pressed():
 	game_mode = "story"
 	toggle_menuitems(game_mode)
 
-func toggle_menuitems(game_mode, should_grab_focus = true):
+func toggle_menuitems(should_grab_focus = true):
 	if game_mode == "story":
-		get_tree().call_group(0,"categorymenu", "hide")
-		get_tree().call_group(0,"mainmenu", "show")
+		get_tree().call_group("categorymenu", "hide")
+		get_tree().call_group("mainmenu", "show")
 		
 		arcade_btn.show()
 		speedrun_btn.show()
 		
 		if Global.is_story_completed():
 			arcade_btn.set_disabled(false)
+			arcade_btn.focus_mode = Control.FOCUS_ALL
 			speedrun_btn.set_disabled(false)
+			speedrun_btn.focus_mode = Control.FOCUS_ALL
 		else:
 			arcade_btn.set_disabled(true)
+			arcade_btn.focus_mode = Control.FOCUS_NONE
 			speedrun_btn.set_disabled(true)
+			speedrun_btn.focus_mode = Control.FOCUS_NONE
 		
 		if Global.is_tutorial_completed():
 			continue_btn.show()
@@ -109,8 +113,8 @@ func toggle_menuitems(game_mode, should_grab_focus = true):
 		speedrun_btn.set_focus_neighbour(MARGIN_TOP, "")
 		
 	elif game_mode == "arcade" or game_mode == "speedrun":
-		get_tree().call_group(0,"categorymenu", "show")
-		get_tree().call_group(0,"mainmenu", "hide")
+		get_tree().call_group("categorymenu", "show")
+		get_tree().call_group("mainmenu", "hide")
 		
 		if game_mode == "arcade":
 			arcade_btn.show()
@@ -138,4 +142,4 @@ func _on_Category_pressed(upgrade_points):
 
 func _on_Global_update_main_menu():
 	game_mode = "story"
-	toggle_menuitems(game_mode, false)
+	toggle_menuitems(false)

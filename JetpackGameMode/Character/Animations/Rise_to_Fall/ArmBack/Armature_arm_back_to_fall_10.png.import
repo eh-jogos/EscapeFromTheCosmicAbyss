@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Armature_arm_back_to_fall_10.png-804271e47f172617a4d39ed7786a748d.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://JetpackGameMode/Character/Animations/Rise_to_Fall/ArmBack/Armature_arm_back_to_fall_10.png"
+dest_files=[ "res://.import/Armature_arm_back_to_fall_10.png-804271e47f172617a4d39ed7786a748d.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=true
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

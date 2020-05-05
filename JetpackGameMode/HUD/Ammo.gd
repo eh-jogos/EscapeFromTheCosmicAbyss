@@ -8,7 +8,7 @@ func _ready():
 
 func used():
 	animation.play("shoot")
-	yield(animation, "finished")
+	yield(animation, "animation_finished")
 	self.queue_free()
 
 func play_intro():
@@ -17,5 +17,5 @@ func play_intro():
 
 func reset_anim():
 	self.hide()
-	animation.set_current_animation("intro")
+	animation.assigned_animation = "intro"
 	animation.seek(0.0,true)

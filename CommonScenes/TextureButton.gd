@@ -7,3 +7,4 @@ func _ready():
 
 func _on_mouse_enter():
 	self.grab_focus()
+

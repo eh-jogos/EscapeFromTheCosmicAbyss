@@ -7,5 +7,6 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.final_boss.body)
+	self_modulate = Global.savedata.colors.final_boss.body
+
 

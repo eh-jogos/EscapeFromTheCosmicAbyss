@@ -1,4 +1,4 @@
-extends SamplePlayer
+extends AudioStreamPlayer
 
 func _ready():
 	add_to_group("sfx_player")
@@ -6,4 +6,5 @@ func _ready():
 
 func adjust_volume_to(value):
 	var float_value = value/100.0
-	set_default_volume(float_value)
+	var db_value = (1 - float_value) * -80
+	volume_db = db_value

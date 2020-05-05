@@ -1,20 +1,20 @@
 extends HBoxContainer
 
 # preloaded scenes
-var ammo = preload("res://JetpackGameMode/HUD/Ammo.tscn")
+var ammo_packed_scene = preload("res://JetpackGameMode/HUD/Ammo.tscn")
 
 # Limits
 const TOTAL_SLOTS = 10
 
 
 func initialize_ammo(initial_ammo):
-	for x in range(0,initial_ammo):
+	for _x in range(0,initial_ammo):
 		add_ammo()
 
 
 func add_ammo():
 	if get_child_count() >= TOTAL_SLOTS: return
-	var instance = ammo.instance()
+	var instance = ammo_packed_scene.instance()
 	add_child(instance, true)
 
 

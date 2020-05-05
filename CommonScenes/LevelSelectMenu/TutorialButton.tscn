@@ -1,73 +1,58 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_normal.png" type="Texture" id=1]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_pressed.png" type="Texture" id=2]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_hover.png" type="Texture" id=3]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.gd" type="Script" id=4]
 
-[sub_resource type="ColorRamp" id=1]
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.5, 1 )
+colors = PoolColorArray( 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0 )
 
-offsets = FloatArray( 0, 0.50237, 1 )
-colors = ColorArray( 0.239216, 0.0901961, 0.431373, 0.909804, 0.239216, 0.0901961, 0.431373, 0.896868, 0.239216, 0.0901961, 0.431373, 0 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 6 )
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0.495454 ), 0.0, 0.236364, 0, 1, Vector2( 1, 0.731818 ), 0.236364, 0.0, 1, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 2.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
 
 [node name="TutorialButton" type="TextureButton"]
-
-focus_neighbour/top = NodePath("../../../Buttons/Upgrade")
-focus_neighbour/bottom = NodePath("../../../Buttons/Close")
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 48.0
-margin/bottom = 48.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-textures/normal = ExtResource( 1 )
-textures/pressed = ExtResource( 2 )
-textures/hover = ExtResource( 3 )
-params/resize_mode = 0
-params/stretch_mode = 0
-script/script = ExtResource( 4 )
-level_num = 0
-level_name = "title"
+margin_right = 48.0
+margin_bottom = 48.0
+focus_neighbour_top = NodePath("../../../Buttons/Upgrade")
+focus_neighbour_bottom = NodePath("../../../Buttons/Close")
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 number_label = NodePath("../../LevelNumber")
 title_label = NodePath("../../LevelTitle")
 animator_path = NodePath("../../AnimationPlayer")
 menu_animator_path = NodePath("../../../AnimationPlayer")
 
 [node name="Particles2D" type="Particles2D" parent="."]
-
-visibility/behind_parent = true
-transform/pos = Vector2( 40, 46 )
-config/amount = 1
-config/lifetime = 0.8
-config/emitting = false
-config/process_mode = 1
-config/texture = ExtResource( 1 )
-params/direction = 0.0
-params/spread = 10.0
-params/linear_velocity = 0.0
-params/spin_velocity = 0.0
-params/orbit_velocity = 0.0
-params/gravity_direction = 0.0
-params/gravity_strength = 0.0
-params/radial_accel = 0.0
-params/tangential_accel = 0.0
-params/damping = 0.0
-params/initial_angle = 0.0
-params/initial_size = 1.0
-params/final_size = 1.5
-params/hue_variation = 0.0
-params/anim_speed_scale = 1.0
-params/anim_initial_pos = 0.0
-color/color = Color( 0.239216, 0.0901961, 0.431373, 0.909804 )
-color/color_ramp = SubResource( 1 )
-
-[connection signal="focus_enter" from="." to="." method="_on_LevelButton_focus_enter"]
-
+show_behind_parent = true
+position = Vector2( 29, 48 )
+emitting = false
+amount = 1
+lifetime = 0.8
+process_material = SubResource( 5 )
+texture = ExtResource( 1 )
+[connection signal="focus_entered" from="." to="." method="_on_LevelButton_focus_enter"]
 [connection signal="pressed" from="." to="." method="_on_LevelButton_pressed"]
-
-

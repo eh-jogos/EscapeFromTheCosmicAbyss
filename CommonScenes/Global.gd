@@ -1,13 +1,20 @@
 extends Node
 
+# warning-ignore:unused_signal
 signal update_main_menu
+# warning-ignore:unused_signal
 signal update_invincibility
+# warning-ignore:unused_signal
 signal barrier_tentacle_killed
+# warning-ignore:unused_signal
 signal shield_energy_updated_to(energy)
 
 # Color Menu Signals
+# warning-ignore:unused_signal
 signal page_updated(first_button, last_button)
+# warning-ignore:unused_signal
 signal navigated_to_right
+# warning-ignore:unused_signal
 signal navigated_to_left
 
 
@@ -158,7 +165,7 @@ var base_savedata = {
 
 func _ready():
 	check_savefile()
-	get_tree().call_group(0, "sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
+	get_tree().call_group("sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
 
 
 func check_savefile():
@@ -267,7 +274,7 @@ func read():
 			savedata["options"]["sfx volume"] = old_save["options"]["sfx volume"]
 		
 		savefile.close()
-		
+		print(savedata)
 		save()
 
 func update_highscore(game_mode, points):
@@ -394,7 +401,7 @@ func update_option_bgmvolume(option):
 
 func update_option_sfxvolume(option):
 	savedata["options"]["bgm volume"] = option
-	get_tree().call_group(0, "sfx_player", "adjust_volume_to", option)
+	get_tree().call_group("sfx_player", "adjust_volume_to", option)
 
 func set_game_mode(game_mode, category):
 	savedata["state"]["game mode"] = game_mode

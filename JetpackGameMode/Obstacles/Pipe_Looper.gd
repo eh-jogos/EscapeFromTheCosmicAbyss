@@ -3,6 +3,7 @@ extends Node2D
 export var point_value = 1
 var game
 
+# warning-ignore:unused_signal
 signal die
 
 func _ready():
@@ -14,8 +15,3 @@ func _on_player_killed():
 
 func scored():
 	game._on_scored(point_value)
-
-
-func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")
-	sfx_player.stop_all()

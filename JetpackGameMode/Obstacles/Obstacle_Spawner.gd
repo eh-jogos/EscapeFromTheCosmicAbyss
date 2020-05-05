@@ -41,9 +41,9 @@ func _ready():
 
 func spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
-	var position = self.get_global_pos()
-	obstacle.set_pos(position)
-	obstacle_group.add_child(obstacle)
+	var position = self.get_global_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	obstacle.set_position(position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	obstacle_group.call_deferred("add_child", obstacle)
 	
 	if obstacle_num == 5:
 		emit_signal("setup_laser_eye")
@@ -51,9 +51,9 @@ func spawn(obstacle_num):
 
 func half_spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
-	var position = self.get_global_pos()
-	obstacle.set_pos(position)
-	half_group.add_child(obstacle)
+	var position = self.get_global_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	obstacle.set_position(position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	half_group.call_deferred("add_child", obstacle)
 	
 	if obstacle_num == 5:
 		emit_signal("setup_laser_eye")
@@ -97,3 +97,4 @@ func _on_HalfBeat_area_exit( area ):
 func connect_tutorial_signal(object):
 	if not self.is_connected("update_visualization",object,"beat_countdown"):
 		self.connect("update_visualization",object,"beat_countdown")
+

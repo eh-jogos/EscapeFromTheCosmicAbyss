@@ -38,8 +38,7 @@ func unlock_levels():
 			
 			print(animation_name)
 			map_animator.play(animation_name)
-			yield(map_animator, "finished")
-			yield(map_animator, "finished")
+			yield(map_animator, "animation_finished")
 			last_unlocked_level += 1
 		
 		print("Last: %s | All: %s"%[last_unlocked_level, levels_unlocked])
@@ -60,7 +59,7 @@ func _ready():
 	map_animator = self.get_node("Map/AnimationPlayer")
 	
 	animator = self.get_node("AnimationPlayer")
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0, true)
 	
 	last_played_level = Global.savedata["story"]["current level"]
@@ -75,6 +74,6 @@ func _ready():
 	print(initial_btn.get_name())
 	
 	animator.play_backwards("close")
-	yield(animator,"finished")
+	yield(animator, "animation_finished")
 	
 	unlock_levels()

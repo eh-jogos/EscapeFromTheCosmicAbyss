@@ -7,4 +7,4 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.final_boss.teeth)
+	self_modulate = Global.savedata.colors.final_boss.teeth

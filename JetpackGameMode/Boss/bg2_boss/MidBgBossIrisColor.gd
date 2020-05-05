@@ -7,4 +7,5 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.mid_bg_boss.iris)
+	self_modulate = Global.savedata.colors.mid_bg_boss.iris
+

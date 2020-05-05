@@ -16,14 +16,14 @@ func _ready():
 	set_process(true)
 	pass
 
-func _process(delta):
-#	print("Global Pos: %s | Offset: %s"%[self.get_global_pos(), end_point.get_pos().x-camera.get_pos().x])
-	var limit = end_point.get_global_pos().x-(camera.get_pos().x-1920/2)
+func _process(_delta):
+#	print("Global Pos: %s | Offset: %s"%[self.global_position, end_point.position.x-camera.position.x])
+	var limit = end_point.global_position.x-(camera.position.x-1920/2)
 	
 	if limit < 0:
 #		print("Move Sprite!")
-		var new_pos = Vector2(self.get_pos().x + (2*(790+790+790)), self.get_pos().y)
-		self.set_pos(new_pos)
+		var new_pos = Vector2(self.position.x + (2*(790+790+790)), self.position.y)
+		self.position = new_pos
 	pass
 
 
@@ -39,8 +39,3 @@ func kill_player(offset):
 
 func _on_player_killed():
 	game.game_over()
-
-
-func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")
-	sfx_player.stop_all()

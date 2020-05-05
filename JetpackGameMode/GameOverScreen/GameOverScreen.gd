@@ -41,7 +41,7 @@ func _ready():
 	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
 	
-	animator.set_current_animation("base")
+	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
 	score_results = self.get_node("ResultsContainer/ScoreResults")
@@ -65,8 +65,8 @@ func _ready():
 	game_mode = game.game_mode
 #	replay_btn.grab_focus()
 	
-	if not upgrade_btn.is_connected("focus_enter",self,"_on_focus_enter"):
-		upgrade_btn.connect("focus_enter",self,"_on_focus_enter")
+	if not upgrade_btn.is_connected("focus_entered",self,"_on_focus_enter"):
+		upgrade_btn.connect("focus_entered",self,"_on_focus_enter")
 	
 	if game_mode == "story":
 		replay_btn.show()
@@ -144,9 +144,6 @@ func open():
 	self.show()
 	animator.play("open")
 	
-	#SoundManager.bgm_set_loop(false)
-	#SoundManager.stop_bgm()
-	
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	replay_btn.grab_focus()
@@ -202,7 +199,7 @@ func _on_upgrade_pressed():
 	var path = upgrade_path
 	last_focus = upgrade_btn
 	animator.play("fade out")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)
@@ -210,10 +207,10 @@ func _on_upgrade_pressed():
 
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
-	if self.is_hidden():
+	if not visible:
 		self.show()
 		animator.play_backwards("fade out")
-		yield(animator, "finished")
+		yield(animator, "animation_finished")
 		
 		if SoundManager.bgm_stream.is_paused():
 			SoundManager.pause_bgm()
@@ -226,7 +223,7 @@ func _on_LevelSelect_pressed():
 	var path = level_select_path
 	last_focus = level_select_btn.get_path()
 	animator.play("fade out")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)

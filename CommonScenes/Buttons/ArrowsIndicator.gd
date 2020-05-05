@@ -22,13 +22,14 @@ func focus_parent():
 	get_parent().grab_focus()
 
 
-func _on_RightArrow_mouse_enter():
+func _on_RightArrow_mouse_entered():
 	focus_parent()
 
 
-func _on_LeftArrow_mouse_enter():
+func _on_LeftArrow_mouse_entered():
 	focus_parent()
 
 
-func _on_ArrowsIndicator_mouse_enter():
+func _on_ArrowsIndicator_mouse_entered():
 	focus_parent()
+

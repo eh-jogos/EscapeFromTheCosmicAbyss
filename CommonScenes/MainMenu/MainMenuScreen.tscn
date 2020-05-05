@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture" id=2]
@@ -6,370 +6,194 @@
 [ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=4]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=6]
-[ext_resource path="res://Fonts/OrbitronBold30.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://Fonts/OrbitronBold30.font" type="BitmapFont" id=7]
 
 [node name="MainMenuScreen" type="Node2D"]
-
-process/pause_mode = 2
-script/script = ExtResource( 1 )
-options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
-extras_path = "res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn"
+pause_mode = 2
+script = ExtResource( 1 )
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
-[node name="TextureFrame" type="TextureFrame" parent="."]
-
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = -1856.0
-margin/bottom = -1016.0
+[node name="TextureFrame" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1856.0
+margin_bottom = 1016.0
 texture = ExtResource( 2 )
-stretch_mode = 0
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
-
-rect/min_size = Vector2( 509, 356 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 1276.0
-margin/top = 199.0
-margin/right = 1886.0
-margin/bottom = 938.0
+margin_left = 1276.0
+margin_top = 199.0
+margin_right = 1886.0
+margin_bottom = 938.0
+rect_min_size = Vector2( 509, 356 )
+mouse_filter = 0
 custom_constants/separation = 5
-alignment = 0
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
-[node name="Logo" type="TextureFrame" parent="MenuContainer"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 610.0
-margin/bottom = 287.0
+[node name="Logo" type="TextureRect" parent="MenuContainer"]
+margin_right = 610.0
+margin_bottom = 287.0
 texture = ExtResource( 3 )
-stretch_mode = 0
 
 [node name="MarginContainer" type="Control" parent="MenuContainer"]
-
-rect/min_size = Vector2( 610, 60 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 292.0
-margin/right = 610.0
-margin/bottom = 352.0
+margin_top = 292.0
+margin_right = 610.0
+margin_bottom = 352.0
+rect_min_size = Vector2( 610, 60 )
 
 [node name="Continue" type="Button" parent="MenuContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 357.0
-margin/right = 610.0
-margin/bottom = 413.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 357.0
+margin_right = 610.0
+margin_bottom = 413.0
+theme = ExtResource( 4 )
 text = "Continue"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="NewGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 418.0
-margin/right = 610.0
-margin/bottom = 474.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 418.0
+margin_right = 610.0
+margin_bottom = 474.0
+theme = ExtResource( 4 )
 text = "New Game"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="ArcadeMode" type="Button" parent="MenuContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 479.0
-margin/right = 610.0
-margin/bottom = 535.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 479.0
+margin_right = 610.0
+margin_bottom = 535.0
+theme = ExtResource( 4 )
 text = "Arcade Mode"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_change"
+script = ExtResource( 5 )
 
 [node name="SpeedrunMode" type="Button" parent="MenuContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 540.0
-margin/right = 610.0
-margin/bottom = 596.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 540.0
+margin_right = 610.0
+margin_bottom = 596.0
+theme = ExtResource( 4 )
 text = "Speedrun Mode"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_change"
+script = ExtResource( 5 )
 
 [node name="Category15" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 601.0
-margin/right = 610.0
-margin/bottom = 638.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+visible = false
+margin_top = 601.0
+margin_right = 610.0
+margin_bottom = 638.0
+theme = ExtResource( 6 )
 text = "15 Upgrade Points"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Category30" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 643.0
-margin/right = 610.0
-margin/bottom = 680.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+visible = false
+margin_top = 643.0
+margin_right = 610.0
+margin_bottom = 680.0
+theme = ExtResource( 6 )
 text = "30 Upgrade Points"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Category40" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 685.0
-margin/right = 610.0
-margin/bottom = 722.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+visible = false
+margin_top = 685.0
+margin_right = 610.0
+margin_bottom = 722.0
+theme = ExtResource( 6 )
 text = "40 Upgrade Points"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Unlimited" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 6 )
-margin/left = 0.0
-margin/top = 727.0
-margin/right = 610.0
-margin/bottom = 764.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+visible = false
+margin_top = 727.0
+margin_right = 610.0
+margin_bottom = 764.0
+theme = ExtResource( 6 )
 text = "Unlimited"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Back" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
 ]]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 769.0
-margin/right = 610.0
-margin/bottom = 825.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+visible = false
+margin_top = 769.0
+margin_right = 610.0
+margin_bottom = 825.0
+theme = ExtResource( 4 )
 text = "Back"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_change"
+script = ExtResource( 5 )
 
 [node name="Options" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 601.0
-margin/right = 610.0
-margin/bottom = 657.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 601.0
+margin_right = 610.0
+margin_bottom = 657.0
+theme = ExtResource( 4 )
 text = "Options"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_change"
+script = ExtResource( 5 )
 
 [node name="Extras" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 662.0
-margin/right = 610.0
-margin/bottom = 718.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 662.0
+margin_right = 610.0
+margin_bottom = 718.0
+theme = ExtResource( 4 )
 text = "Extras"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_change"
+script = ExtResource( 5 )
 
 [node name="QuitGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-theme/theme = ExtResource( 4 )
-margin/left = 0.0
-margin/top = 723.0
-margin/right = 610.0
-margin/bottom = 779.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
+margin_top = 723.0
+margin_right = 610.0
+margin_bottom = 779.0
+theme = ExtResource( 4 )
 text = "Quit Game"
-flat = false
-script/script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+script = ExtResource( 5 )
 
 [node name="Timer" type="Timer" parent="MenuContainer/QuitGame"]
-
-process_mode = 1
-wait_time = 1.0
 one_shot = true
-autostart = false
 
 [node name="Label" type="Label" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 3.0
-margin/top = 1024.0
-margin/right = 1916.0
-margin/bottom = 1061.0
+margin_left = 3.0
+margin_top = 1024.0
+margin_right = 1916.0
+margin_bottom = 1061.0
+mouse_filter = 1
+size_flags_vertical = 0
 custom_fonts/font = ExtResource( 7 )
 text = "Game, Art and Animations by: Daniel Queiroz Porto          Music by: Sam Oz          Cutscene Art by: Filipe Stonoga"
 align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="MenuContainer/Continue" to="." method="_on_Continue_pressed"]
-
 [connection signal="pressed" from="MenuContainer/NewGame" to="." method="_on_NewGame_pressed"]
-
 [connection signal="pressed" from="MenuContainer/ArcadeMode" to="." method="_on_ArcadeMode_pressed"]
-
 [connection signal="pressed" from="MenuContainer/SpeedrunMode" to="." method="_on_SpeedrunMode_pressed"]
-
 [connection signal="pressed" from="MenuContainer/Category15" to="." method="_on_Category_pressed" binds= [ 15 ]]
-
 [connection signal="pressed" from="MenuContainer/Category30" to="." method="_on_Category_pressed" binds= [ 30 ]]
-
 [connection signal="pressed" from="MenuContainer/Category40" to="." method="_on_Category_pressed" binds= [ 40 ]]
-
 [connection signal="pressed" from="MenuContainer/Unlimited" to="." method="_on_Category_pressed" binds= [ 59 ]]
-
 [connection signal="pressed" from="MenuContainer/Back" to="." method="_on_Back_pressed"]
-
 [connection signal="pressed" from="MenuContainer/Options" to="." method="_on_options_pressed"]
-
 [connection signal="pressed" from="MenuContainer/Extras" to="." method="_on_Extras_pressed"]
-
 [connection signal="pressed" from="MenuContainer/QuitGame" to="." method="_on_quit_pressed"]
-
-

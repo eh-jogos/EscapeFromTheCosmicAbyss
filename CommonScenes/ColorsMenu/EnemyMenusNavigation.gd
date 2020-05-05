@@ -32,11 +32,11 @@ func _set_current_menu(value):
 	
 	current_menu = clamp(value, 0, container_menus.get_child_count()-1)
 	var menu_node = container_menus.get_child(current_menu)
-	var menu_position = menu_node.get_pos()
+	var menu_position = menu_node.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	menu_position.x *= -1
 	
 	tween.remove_all()
-	tween.interpolate_property(container_menus, "rect/pos", container_menus.get_pos(), 
+	tween.interpolate_property(container_menus, "rect/pos", container_menus.get_position(),   #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 			menu_position, 0.3, Tween.TRANS_CUBIC, Tween.EASE_OUT)
 	tween.start()
 	

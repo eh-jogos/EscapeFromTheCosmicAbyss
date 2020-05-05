@@ -15,6 +15,8 @@ var last_focus
 var game
 
 func _ready():
+	set_process_input(true)
+	
 	animator = self.get_node("AnimationPlayer")
 	
 	resume_btn = self.get_node("ButtonsBlock/Resume")
@@ -25,13 +27,12 @@ func _ready():
 	
 	game = self.get_parent().get_parent()
 	
-	if not options_btn.is_connected("focus_enter",self,"_on_focus_enter"):
-		options_btn.connect("focus_enter",self,"_on_focus_enter")
+	if not options_btn.is_connected("focus_entered",self,"_on_focus_enter"):
+		options_btn.connect("focus_entered",self,"_on_focus_enter")
 	
-	if not level_select_btn.is_connected("focus_enter",self,"_on_focus_enter"):
-		level_select_btn.connect("focus_enter",self,"_on_focus_enter")
+	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
+		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
 	
-	set_process_input(true)
 	pass
 
 func _input(event):
@@ -48,7 +49,7 @@ func pause_game():
 	get_tree().set_pause(true)
 	
 	animator.play_backwards("fade out")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	
 	resume_btn.grab_focus()
 	
@@ -56,10 +57,13 @@ func pause_game():
 	SoundManager.fade_out_start()
 
 func resume_game():
-	game.set_game_state("Playing")
+	if game.is_tutorial:
+		game.set_game_state("Tutorial")
+	else:
+		game.set_game_state("Playing")
 	
 	animator.play("fade out")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	get_tree().set_pause(false)
@@ -85,7 +89,7 @@ func _on_options_pressed():
 	last_focus = options_btn
 	
 	animator.play("fade out")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	
@@ -94,10 +98,10 @@ func _on_options_pressed():
 
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
-	if self.is_hidden():
+	if not visible:
 		self.show()
 		animator.play_backwards("fade out")
-		yield(animator, "finished")
+		yield(animator, "animation_finished")
 		
 		SoundManager.pause_bgm()
 
@@ -107,7 +111,7 @@ func _on_LevelSelect_pressed():
 	last_focus = level_select_btn.get_path()
 	
 	animator.play("fade out")
-	yield(animator, "finished")
+	yield(animator, "animation_finished")
 	
 	self.hide()
 	
@@ -117,3 +121,4 @@ func _on_LevelSelect_pressed():
 func _on_QuitMainMenu_pressed():
 	SoundManager.stop_bgm()
 	ScreenManager.load_screen(main_menu_path)
+

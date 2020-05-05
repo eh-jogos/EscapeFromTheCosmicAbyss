@@ -1,37 +1,37 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://CommonScenes/Buttons/CutsceneButton.gd" type="Script" id=1]
 
 [sub_resource type="Animation" id=6]
 
-resource/name = "base"
+resource_name = "base"
 length = 0.1
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 
 [sub_resource type="Animation" id=7]
 
-resource/name = "loop"
+resource_name = "loop"
 length = 1.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:visibility/opacity")
+tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.5 ]
 }
@@ -40,30 +40,29 @@ tracks/0/keys = {
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 829.0
-margin/top = 0.0
-margin/right = 908.0
-margin/bottom = 57.0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+margin_left = 829.0
+margin_top = 0.0
+margin_right = 908.0
+margin_bottom = 57.0
 custom_constants/hseparation = 50
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Next"
 flat = false
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
+mouse_filter = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("..")
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+root_node = NodePath("..")
 anims/base = SubResource( 6 )
 anims/loop = SubResource( 7 )
-playback/active = true
-playback/speed = 1.0
+playback_active = true
+playback_speed = 1.0
 blend_times = [  ]
 autoplay = "base"
-
-

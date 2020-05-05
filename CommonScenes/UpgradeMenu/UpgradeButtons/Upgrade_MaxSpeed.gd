@@ -50,7 +50,7 @@ func increase_bar():
 		stat_value = get_stat_value()
 		
 		if stat_value+1 <= max_stats:
-			SoundManager.play_sfx("ui_change")
+			SoundManager.play_sfx("Change")
 			upgrade_brain.upgrade_points -= 1
 			upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
 			
@@ -72,7 +72,7 @@ func decrease_bar():
 	stat_value = get_stat_value()
 	
 	if stat_value == initial_speed and stat_value > 0:
-		SoundManager.play_sfx("ui_change")
+		SoundManager.play_sfx("Change")
 		upgrade_brain.upgrade_points += 1
 		upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
 		
@@ -85,7 +85,7 @@ func decrease_bar():
 		var slot = stat_bar.get_child(stat_value)
 		slot.base_slot()
 	elif stat_value-1 >= 0 and stat_value-1 >= initial_speed:
-		SoundManager.play_sfx("ui_change")
+		SoundManager.play_sfx("Change")
 		upgrade_brain.upgrade_points += 1
 		upgrade_brain.up_label.set_text(str(upgrade_brain.upgrade_points))
 		
@@ -128,17 +128,19 @@ func handle_button_states(stat_value, max_stats):
 ###########################
 
 func _ready():
+	set_process_input(false)
+	
 	upgrade_brain = self.get_parent().get_parent()
 	stat_bar = self.get_node("UpgradeBar")
 	
-	if not self.is_connected("mouse_enter",self,"_on_mouse_enter"):
-		self.connect("mouse_enter",self,"_on_mouse_enter")
+	if not self.is_connected("mouse_entered",self,"_on_mouse_enter"):
+		self.connect("mouse_entered",self,"_on_mouse_enter")
 	
-	if not self.is_connected("focus_enter",self,"_on_focus_enter"):
-		self.connect("focus_enter",self,"_on_focus_enter")
+	if not self.is_connected("focus_entered",self,"_on_focus_enter"):
+		self.connect("focus_entered",self,"_on_focus_enter")
 	
-	if not self.is_connected("focus_exit",self,"_on_focus_exit"):
-		self.connect("focus_exit",self,"_on_focus_exit")
+	if not self.is_connected("focus_exited",self,"_on_focus_exit"):
+		self.connect("focus_exited",self,"_on_focus_exit")
 
 
 func _input(event):
@@ -165,6 +167,6 @@ func _on_focus_enter():
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
-	SoundManager.play_sfx("ui_select")
+	SoundManager.play_sfx("Select")
 	self.get_node("AnimationPlayer").play("base")
 	self.get_node("ArrowsIndicator").stop_highlight()

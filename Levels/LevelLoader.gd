@@ -50,7 +50,7 @@ func build_level_procedurally():
 	var total_count = sum_all_beats_and_halfs()
 	
 	var complete_level = []
-	for x in range(total_count):
+	for _x in range(total_count):
 		complete_level.append(null)
 	
 	complete_level = add_fixed_sections_step(complete_level)
@@ -147,10 +147,10 @@ func laser_eye_draw_step(level_array, beats_pool, half_beats_pool):
 func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 	var available_slots
 	
-	print("LevelLoader | Level name: %s"%[level_info.get_name()])
 	var level_name = level_info.get_name()
-	if level_info.get_name() == "Level5":
-		available_slots = get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot)
+	print("LevelLoader | Level name: %s"%[level_name])
+	if level_name == "Level5":
+		available_slots = get_available_slots_on_laser_eye_introductory_level(level_array)
 	else:
 		available_slots = build_available_slots_array(level_array, initial_slot)
 	
@@ -184,7 +184,7 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 	return level_array
 
 
-func get_available_slots_on_laser_eye_introductory_level(level_array, initial_slot):
+func get_available_slots_on_laser_eye_introductory_level(level_array):
 	var available_slots
 	available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[1]+1)
 	
@@ -325,7 +325,7 @@ func build_obstacle_pool(base_array):
 	for key in base_array:
 		if base_array[key] > 0:
 			var value = key_translator(key)
-			for x in range(base_array[key]):
+			for _x in range(base_array[key]):
 				random_pool.append(value)
 	return random_pool
 

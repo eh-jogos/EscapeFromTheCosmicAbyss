@@ -21,7 +21,7 @@ func _ready():
 	progress_bar = get_node("BarBase")
 	icon = get_node("BarBase/IconContainer")
 	icon_length = icon.get_size().x
-	icon_position = icon.get_pos()
+	icon_position = icon.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	
 	total_length = progress_bar.get_size().x - initial_margin - ending_margin
 	Global.connect("barrier_tentacle_killed", self, "_on_Global_barrier_tentacle_killed")
@@ -33,7 +33,7 @@ func create_barrier(step):
 	var position_x = (step * increment)
 	var offset_x = barrier.offset_x
 	var offset_y = barrier.offset_y
-	barrier.set_pos(Vector2(position_x + offset_x, offset_y))
+	barrier.set_position(Vector2(position_x + offset_x, offset_y))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	barriers.append(barrier)
 
 
@@ -69,7 +69,7 @@ func generate_visualization(level_data):
 				create_barrier(step)
 	
 	icon_position.x = initial_margin + player_icon_x_offset
-	icon.set_pos(icon_position)
+	icon.set_position(icon_position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 
 func update_progress():
@@ -82,15 +82,15 @@ func update_progress():
 		else:
 			icon_position.x += increment
 		
-		icon.set_pos(icon_position)
+		icon.set_position(icon_position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 		progress_count += 1
 
 
 func _on_Global_barrier_tentacle_killed():
 	if barriers.size() > 0:
 		var tween = get_node("Tween")
-		tween.interpolate_property(barriers[0], "visibility/opacity", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
+		tween.interpolate_property(barriers[0], "modulate:a", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		tween.start()
-		yield(tween, "tween_complete")
+		yield(tween, "tween_completed")
 		barriers[0].queue_free()
 		barriers.pop_front()

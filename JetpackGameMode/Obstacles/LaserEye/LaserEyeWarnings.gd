@@ -8,4 +8,4 @@ func _ready():
 
 
 func colors_changed():
-	set_modulate(Global.savedata.colors.laser_eye[warning_level])
+	self_modulate = Global.savedata.colors.laser_eye[warning_level]

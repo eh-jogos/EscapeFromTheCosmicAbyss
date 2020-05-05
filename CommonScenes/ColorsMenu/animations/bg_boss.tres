@@ -1,58 +1,59 @@
-[gd_resource type="Animation" format=1]
+[gd_resource type="Animation" load_steps=1 format=2]
+
 
 [resource]
 
-resource/name = "bg_boss"
+resource_name = "bg_boss"
 length = 5.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("ParallaxBackground/BackRowBossSkin:visibility/visible")
+tracks/0/path = NodePath("ParallaxBackground/BackRowBossSkin:visible")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ParallaxBackground/MidRowsBossSkin 2:visibility/visible")
+tracks/1/path = NodePath("ParallaxBackground/MidRowsBossSkin 2:visible")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ParallaxBackground/Boss:visibility/visible")
+tracks/2/path = NodePath("ParallaxBackground/Boss:visible")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Obstaculos/LaserEye:visibility/visible")
+tracks/3/path = NodePath("Obstaculos/LaserEye:visible")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Obstaculos/Tentacles:visibility/visible")
+tracks/4/path = NodePath("Obstaculos/Tentacles:visible")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -61,19 +62,18 @@ tracks/5/path = NodePath("ParallaxBackground/BackRowBossSkin/AnimationPlayer:pla
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
-"times": FloatArray( 0, 1, 1.3, 2, 2.3, 3, 4.5 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1, 1.3, 2, 2.3, 3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 2,
 "values": [ "idle", "to_angry", "angry_loop", "to_scream", "first_scream", "scream_loop", "to_scream" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("ParallaxBackground/BackRowBossSkin:visibility/opacity")
+tracks/6/path = NodePath("ParallaxBackground/BackRowBossSkin:modulate:a")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
-"times": FloatArray( 0, 0.5 ),
-"transitions": FloatArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
-

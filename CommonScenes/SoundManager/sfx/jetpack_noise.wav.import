@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jetpack_noise.wav-a1182492ce225aa1e1313b9c6a4c3f4d.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/jetpack_noise.wav"
+dest_files=[ "res://.import/jetpack_noise.wav-a1182492ce225aa1e1313b9c6a4c3f4d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

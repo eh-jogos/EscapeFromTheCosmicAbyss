@@ -1,8 +1,8 @@
 extends Button
 
 func _ready():
-	connect("focus_enter", self, "_on_focus_enter")
-	connect("focus_exit", self, "_on_focus_exit")
+	connect("focus_entered", self, "_on_focus_enter")
+	connect("focus_exited", self, "_on_focus_exit")
 
 
 func _on_focus_enter():
