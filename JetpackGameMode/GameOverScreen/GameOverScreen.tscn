@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
@@ -206,35 +206,9 @@ tracks/6/keys = {
 "values": [ 0.0, 0.0, 1.0 ]
 }
 
-[sub_resource type="Animation" id=4]
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:material/material:shader_param/Start")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.4, 0.6, 0.6, 0.8, 0.8, 1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0.819608, 0, 1 ), Color( 0.242188, 1, 0, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0.640625, 0, 1, 1 ), Color( 0.640625, 0, 1, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0.819608, 0, 1 ), Color( 1, 0.819608, 0, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:material/material:shader_param/End")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = false
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.4, 0.6, 0.6, 0.8, 0.8, 1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.902604, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.679167, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
-}
-
 [node name="GameOverScreen" type="Node2D"]
 pause_mode = 2
+modulate = Color( 1, 1, 1, 0 )
 script = ExtResource( 1 )
 main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
@@ -252,10 +226,11 @@ margin_bottom = 1082.0
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="GameOver" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 335.0
-margin_top = 95.0
+margin_top = -205.0
 margin_right = 834.0
-margin_bottom = 190.0
+margin_bottom = -110.0
 rect_scale = Vector2( 2.5, 2.5 )
 mouse_filter = 1
 size_flags_vertical = 0
@@ -274,6 +249,7 @@ custom_constants/separation = 50
 alignment = 2
 
 [node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
+modulate = Color( 1, 1, 1, 0 )
 margin_top = 198.0
 margin_right = 1920.0
 margin_bottom = 347.0
@@ -394,6 +370,7 @@ align = 1
 valign = 1
 
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
+modulate = Color( 1, 1, 1, 0 )
 margin_top = 397.0
 margin_right = 1920.0
 margin_bottom = 546.0
@@ -484,6 +461,7 @@ anims/shader_text_anim = ExtResource( 15 )
 
 [node name="LapsResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false
+modulate = Color( 1, 1, 1, 0 )
 margin_top = 398.0
 margin_right = 1920.0
 margin_bottom = 547.0
@@ -558,6 +536,7 @@ valign = 1
 
 [node name="HighlapsText" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
 visible = false
+material = ExtResource( 14 )
 margin_top = 113.0
 margin_right = 416.0
 margin_bottom = 149.0
@@ -569,10 +548,10 @@ align = 1
 valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/LapsResults/LapsContainer/HighlapsText"]
-autoplay = "text_anim"
-anims/text_anim = SubResource( 4 )
+anims/shader_text_anim = ExtResource( 15 )
 
 [node name="Buttons" type="HBoxContainer" parent="ResultsContainer"]
+modulate = Color( 1, 1, 1, 0 )
 margin_top = 596.0
 margin_right = 1920.0
 margin_bottom = 676.0

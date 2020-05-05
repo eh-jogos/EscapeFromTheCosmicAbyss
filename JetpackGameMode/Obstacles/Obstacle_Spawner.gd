@@ -43,7 +43,7 @@ func spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
 	var position = self.get_global_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	obstacle.set_position(position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	obstacle_group.add_child(obstacle)
+	obstacle_group.call_deferred("add_child", obstacle)
 	
 	if obstacle_num == 5:
 		emit_signal("setup_laser_eye")
@@ -53,7 +53,7 @@ func half_spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()
 	var position = self.get_global_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	obstacle.set_position(position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	half_group.add_child(obstacle)
+	half_group.call_deferred("add_child", obstacle)
 	
 	if obstacle_num == 5:
 		emit_signal("setup_laser_eye")

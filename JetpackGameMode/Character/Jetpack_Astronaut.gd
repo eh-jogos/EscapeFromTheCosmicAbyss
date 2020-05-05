@@ -159,7 +159,7 @@ func _physics_process(delta):
 			take_hit()
 			
 			var normal = collision.normal
-			var final_motion = normal.slide(motion)
+			var final_motion = motion.slide(normal)
 			
 			if collider.has_method("die"):
 				collider.die()
@@ -266,7 +266,7 @@ func stop_shooting():
 	shooting = false
 	arms_animator.play("reloading")
 	yield(arms_animator, "animation_finished")
-	var current_anim = body_animator.current_animation
+	var current_anim = body_animator.assigned_animation
 	var current_anim_pos = body_animator.current_animation_position
 	
 	arms_animator.assigned_animation = current_anim

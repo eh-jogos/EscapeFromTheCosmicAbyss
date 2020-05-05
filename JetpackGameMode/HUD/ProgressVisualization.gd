@@ -89,7 +89,7 @@ func update_progress():
 func _on_Global_barrier_tentacle_killed():
 	if barriers.size() > 0:
 		var tween = get_node("Tween")
-		tween.interpolate_property(barriers[0], "visibility/opacity", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
+		tween.interpolate_property(barriers[0], "modulate:a", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		tween.start()
 		yield(tween, "tween_completed")
 		barriers[0].queue_free()
