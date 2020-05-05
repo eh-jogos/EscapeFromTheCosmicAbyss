@@ -144,9 +144,6 @@ func open():
 	self.show()
 	animator.play("open")
 	
-	#SoundManager.bgm_set_loop(false)
-	#SoundManager.stop_bgm()
-	
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	replay_btn.grab_focus()

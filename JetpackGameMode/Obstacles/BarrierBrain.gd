@@ -12,6 +12,7 @@ var animation
 var tentacle_trigger
 var is_alive = true
 
+# warning-ignore:unused_signal
 signal player_killed
 
 func _ready():
@@ -36,7 +37,7 @@ func initialize_node_variables():
 #	print(tentacle_trigger.get_name())
 
 
-func _on_TentacleTrigger( body ):
+func _on_TentacleTrigger( _body ):
 	pass
 
 

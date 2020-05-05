@@ -21,6 +21,9 @@ func _ready():
 	up_down_count = randi()%2
 
 
+# warning-ignore:shadowed_variable
+# warning-ignore:shadowed_variable
+# warning-ignore:shadowed_variable
 func set_boss_data(laser_targets, animation_targets, animations):
 	self.laser_targets = laser_targets
 	self.animation_targets = animation_targets
@@ -77,8 +80,3 @@ func _on_beat_spawned():
 			set_current_laser()
 		
 		print("BackgroundBoss | _on_beat_spawned | LASER! | is_up: %s"%[is_up])
-
-
-func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	# sfx_player.stop()

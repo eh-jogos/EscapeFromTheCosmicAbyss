@@ -51,6 +51,7 @@ margin_bottom = 413.0
 theme = ExtResource( 4 )
 text = "Continue"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="NewGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
@@ -61,6 +62,7 @@ margin_bottom = 474.0
 theme = ExtResource( 4 )
 text = "New Game"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="ArcadeMode" type="Button" parent="MenuContainer"]
 margin_top = 479.0
@@ -88,6 +90,7 @@ margin_bottom = 638.0
 theme = ExtResource( 6 )
 text = "15 Upgrade Points"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Category30" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -99,6 +102,7 @@ margin_bottom = 680.0
 theme = ExtResource( 6 )
 text = "30 Upgrade Points"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Category40" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -110,6 +114,7 @@ margin_bottom = 722.0
 theme = ExtResource( 6 )
 text = "40 Upgrade Points"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Unlimited" type="Button" parent="MenuContainer" groups=[
 "categorymenu",
@@ -121,6 +126,7 @@ margin_bottom = 764.0
 theme = ExtResource( 6 )
 text = "Unlimited"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Back" type="Button" parent="MenuContainer" groups=[
 "categorymenu",

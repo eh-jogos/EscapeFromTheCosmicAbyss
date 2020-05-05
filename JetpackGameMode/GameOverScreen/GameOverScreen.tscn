@@ -589,7 +589,7 @@ rect_min_size = Vector2( 147, 79 )
 text = "Main Menu"
 icon = ExtResource( 8 )
 script = ExtResource( 9 )
-pressed_sfx = "ui_confirm"
+pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
 margin_left = 651.0
@@ -618,7 +618,7 @@ theme = ExtResource( 10 )
 text = "Play Again"
 icon = ExtResource( 12 )
 script = ExtResource( 9 )
-pressed_sfx = "ui_confirm"
+pressed_sfx = "Confirm"
 [connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]

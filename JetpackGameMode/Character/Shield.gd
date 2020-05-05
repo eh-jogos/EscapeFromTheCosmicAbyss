@@ -23,8 +23,8 @@ func modulate_shield(should_mute = false):
 	#print("MODULATE SHIELD | Energy:%s"%[energy])
 	
 	if not should_mute and energy != 0:
-		var sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-		#sfx_player.play("shield_up") # -- AUDIO REFACTOR
+		var sfx_player = $SfxLibrary/ShieldUp
+		sfx_player.play()
 	
 	if energy == 0:
 		shield_animator.play("disabled")

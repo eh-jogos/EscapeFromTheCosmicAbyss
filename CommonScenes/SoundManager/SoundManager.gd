@@ -12,40 +12,61 @@ var track_offset
 
 var bgm_stream
 var bgm_preview
-var sfx_player
-var fade_out
-var fade_in
+var sfx_list: Node
 
-var initial_volume
+var bgm_bus: int = AudioServer.get_bus_index("Bgm")
+var sfx_ui_bus: int = AudioServer.get_bus_index("UiSfx")
+var sfx_game_bus: int = AudioServer.get_bus_index("GameSfx")
+
+var initial_volume: int
+var current_volume: int
 
 func _ready():
 	bgm_stream = self.get_node("BGMPlayer")
 	bgm_preview = self.get_node("PreviewPlayer")
-	sfx_player = self.get_node("SfxPlayer")
-	
-	fade_out = self.get_node("FadeOutTimer")
-	fade_in = self.get_node("FadeInTimer")
+	sfx_list = self.get_node("UiSfx")
 	
 	track_offset = 0
+	
+	initial_volume = Global.savedata["options"]["bgm volume"]
+	current_volume = Global.savedata["options"]["bgm volume"]
 
 
-func play_sfx(sfx_name, is_unique = false):
-	# sfx_player.play(sfx_name, is_unique) # -- AUDIO REFACTOR
-	pass
+func reset_ui_bus_effects() -> void:
+	if AudioServer.is_bus_effect_enabled(sfx_ui_bus, 0):
+		AudioServer.set_bus_effect_enabled(sfx_ui_bus, 0, false)
 
 
-func play_sfx_with_reverb(sfx_name, is_unique = false, reverb_size = 1, reverb_strenght = 0.5):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	# sfx_player.set_reverb(sfx_player.play(sfx_name, is_unique), reverb_size, reverb_strenght) # -- AUDIO REFACTOR
-	pass
+func play_sfx(sfx_name: String, is_unique: = false, reset_effects: = true) -> void:
+	if reset_effects:
+		reset_ui_bus_effects()
+	
+	if sfx_list.has_node(sfx_name):
+		var sfx: AudioStreamPlayer = sfx_list.get_node(sfx_name)
+		sfx.play()
+		
+		if is_unique:
+			var other_sfx_list: Array = sfx_list.get_children()
+			other_sfx_list.erase(sfx)
+			for other_sfx in other_sfx_list:
+				other_sfx.stop()
+	else:
+		push_warning("There is no %s in UI Sfx List"%[sfx_name])
+
+
+func play_sfx_with_reverb(sfx_name: String, is_unique: = false) -> void:
+	AudioServer.set_bus_effect_enabled(sfx_ui_bus, 0, true)
+	play_sfx(sfx_name, is_unique, false)
 
 
 func play_bgm():
 	var track = Global.savedata["options"]["track"]
-	var volume = float(Global.savedata["options"]["bgm volume"])/100
-	print("Track: %s | Volume: %s"%[track, volume])
+	var volume = float(Global.savedata["options"]["bgm volume"])
+#	print("Track: %s | Volume: %s"%[track, volume])
+	
+	change_bgm_volume(volume)
 	
 	bgm_stream.set_stream(track_list[track])
-	bgm_stream.volume_db = (1 - volume) * -80 
 	bgm_stream.play(track_offset)
 
 func pause_bgm():
@@ -73,14 +94,15 @@ func reset_track():
 	track_offset = 0
 
 func bgm_set_loop(boolean):
-	bgm_stream.set_loop(boolean)
+	bgm_stream.stream.set_loop(boolean)
 
 func preview_bgm(track):
 	var volume = float(Global.savedata["options"]["bgm volume"])/100
-	print("Track: %s | Volume: %s"%[track, volume])
+#	print("Track: %s | Volume: %s"%[track, volume])
+	
+	change_bgm_volume(volume)
 	
 	bgm_preview.set_stream(track_list[track])
-	bgm_preview.volume_db = (1 - volume) * -80
 	bgm_preview.play()
 
 func preview_bgm_play():
@@ -92,73 +114,40 @@ func stop_preview_bgm():
 	bgm_preview.stop()
 
 func change_bgm_volume(vol):
-	var float_vol = float(vol)/100
-	var vol_db = (1 - float_vol) * -80
-	print("Vol: %s | Volume: %s | Volume db: %s"%[vol, float_vol, vol_db])
-	bgm_stream.volume_db = vol_db
-	bgm_preview.volume_db = vol_db
+	current_volume = vol
+	
+	var vol_db = _get_volume_in_db(vol)
+	AudioServer.set_bus_volume_db(bgm_bus, vol_db)
+
+
+func mute_game_sfx():
+	AudioServer.set_bus_mute(sfx_game_bus, true)
+
+
+func unmute_game_sfx():
+	AudioServer.set_bus_mute(sfx_game_bus, false)
+
 
 func fade_out_start():
-	if fade_in.time_left != 0:
-		fade_in_stop()
-	initial_volume = Global.savedata["options"]["bgm volume"]*0.01
-	fade_out.start()
+	initial_volume = Global.savedata["options"]["bgm volume"]
+	var tween = $Tween
 	
-	print("Initial Volume: %s"%[initial_volume])
+	tween.interpolate_method(self, "change_bgm_volume", initial_volume, initial_volume-20, 1, 
+			Tween.TRANS_BACK, Tween.EASE_IN)
+	tween.start()
 
-func fade_out_stop():
-	fade_out.stop()
-	print("Stop Volume: %s"%[bgm_stream.volume_db])
 
 func fade_in_start():
-	if fade_out.time_left != 0:
-		fade_out_stop()
-	initial_volume = bgm_stream.volume_db
-	fade_in.start()
+	var tween = $Tween
+	if tween.is_active():
+		tween.remove_all()
 	
-	print("Initial Volume: %s"%[initial_volume])
-
-func fade_in_stop():
-	fade_in.stop()
-	print("Stop Volume: %s"%[bgm_stream.volume_db])
-
-func _on_FadeOutTimer_timeout():
-	print("fade out!")
-	var current_vol = bgm_stream.volume_db
-	current_vol -= 1
-	
-	if current_vol < 0:
-		current_vol = 0
-	
-	if initial_volume - 15 >= 0:
-		if current_vol > initial_volume - 15:
-			bgm_stream.volume_db = current_vol
-		else:
-			fade_out_stop()
-	else:
-		if current_vol > 0:
-			bgm_stream.volume_db = current_vol
-		else:
-			fade_out_stop()
-
-func _on_FadeInTimer_timeout():
-	print("fade in!")
-	var target_volume =  Global.savedata["options"]["bgm volume"]
-	var target_volume_db = (1 - (target_volume*0.01)) * -80
-	var current_vol = bgm_stream.volume_db
-	current_vol += 1
-	
-	if initial_volume + 15 <= target_volume_db:
-		if current_vol < target_volume_db:
-			bgm_stream.volume_db = current_vol
-		else:
-			bgm_stream.volume_db = target_volume_db
-			fade_in_stop()
-	else:
-		if current_vol < target_volume_db:
-			bgm_stream.volume_db = current_vol
-		else:
-			bgm_stream.volume_db = target_volume_db
-			fade_in_stop()
+	tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 1, 
+			Tween.TRANS_BACK, Tween.EASE_IN)
+	tween.start()
 
 
+func _get_volume_in_db(vol: int) -> float:
+	var float_vol: float = vol * 0.01
+	var volume_db: float = (1 - float_vol) * -80
+	return volume_db

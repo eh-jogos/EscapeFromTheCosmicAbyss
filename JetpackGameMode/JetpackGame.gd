@@ -242,15 +242,9 @@ func setup_game_mode_level():
 		#print("JetPackGame.gd | End? %s"%[level_end_cutscene])
 	
 	elif game_mode == "arcade":
-		var num = 1
-		var level = load_level(num, true, true)
-		
 		level_num = "Arcade Arena!"
 		level_title = "How many laps can you survive?"
 	elif game_mode == "speedrun":
-		var num = 1
-		var level = load_level(num, true, false)
-		
 		level_num = "Speedrun Track!"
 		level_title = "Gotta Go Fast!"
 
@@ -299,14 +293,9 @@ func load_level(level_choice, load_all = false, loop = false):
 func set_game_state(string):
 	current_state = STATE[string]
 	if current_state != STATE.Playing:
-		interrupt_all_sfx()
-
-
-func interrupt_all_sfx():
-	player.stop_all_sfx()
-	get_tree().call_group("pipes", "stop_all_sfx")
-	get_tree().call_group("enemy", "stop_all_sfx")
-	get_tree().call_group("boss", "stop_all_sfx")
+		SoundManager.mute_game_sfx()
+	else:
+		SoundManager.unmute_game_sfx()
 
 
 func get_game_state():
@@ -319,7 +308,6 @@ func get_laps():
 	return arcade_laps
 
 func get_time():
-	var runtime_label = self.get_node("HUD/CenterArea/RunTime")
 	return runtime_label.run_time
 
 func game_over():

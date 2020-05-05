@@ -1260,7 +1260,7 @@ focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
 theme = ExtResource( 27 )
 text = "Confirm"
 script = ExtResource( 26 )
-pressed_sfx = "ui_confirm"
+pressed_sfx = "Confirm"
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
 margin_left = 1845.0

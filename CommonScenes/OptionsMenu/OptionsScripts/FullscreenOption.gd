@@ -32,7 +32,7 @@ func _input(event):
 
 
 func change_screen_mode():
-	SoundManager.play_sfx("ui_change", true)
+	SoundManager.play_sfx("Change", true)
 	
 	if fullscreen:
 		OS.set_window_fullscreen(false)
@@ -62,7 +62,7 @@ func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	arrows_highlight.stop_highlight()
-	SoundManager.play_sfx("ui_select")
+	SoundManager.play_sfx("Select")
 
 
 

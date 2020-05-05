@@ -11,6 +11,7 @@ var animation
 
 var tentacle_trigger
 
+# warning-ignore:unused_signal
 signal player_killed
 
 func _ready():

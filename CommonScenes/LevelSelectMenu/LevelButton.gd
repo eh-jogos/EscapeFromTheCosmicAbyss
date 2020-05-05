@@ -39,14 +39,14 @@ func _on_focus_enter():
 
 
 func _on_focus_exit():
-	SoundManager.play_sfx("ui_select")
+	SoundManager.play_sfx("Select")
 
 
 func _on_LevelButton_pressed():
 	if self.is_connected("focus_exited", self, "_on_focus_exit"):
 		self.disconnect("focus_exited", self, "_on_focus_exit")
 	
-	SoundManager.play_sfx_with_reverb("ui_confirm")
+	SoundManager.play_sfx_with_reverb("Confirm")
 	
 	print("%s | Level Num: %s"%[self.get_name(),level_num])
 	Global.is_retry = false

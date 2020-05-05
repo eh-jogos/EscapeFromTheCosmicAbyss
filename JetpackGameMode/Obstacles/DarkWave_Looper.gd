@@ -16,7 +16,7 @@ func _ready():
 	set_process(true)
 	pass
 
-func _process(delta):
+func _process(_delta):
 #	print("Global Pos: %s | Offset: %s"%[self.global_position, end_point.position.x-camera.position.x])
 	var limit = end_point.global_position.x-(camera.position.x-1920/2)
 	
@@ -39,8 +39,3 @@ func kill_player(offset):
 
 func _on_player_killed():
 	game.game_over()
-
-
-func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	# sfx_player.stop()

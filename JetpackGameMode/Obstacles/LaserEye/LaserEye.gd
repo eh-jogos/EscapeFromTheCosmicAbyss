@@ -29,7 +29,7 @@ func _ready():
 	raycast_right = get_node("Root/Raycasts/Right")
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_tracking:
 		global_position = Vector2(get_parent().player_position.x -480, global_position.y)
 	else:
@@ -67,7 +67,7 @@ func stop_tracking():
 	is_tracking = false
 
 
-func kill_player(offset):
+func kill_player(_offset):
 	#play player killing animation here in the future, if you want/have to
 	#at the end of that animation, either from a signal or by calling it directly, call _on_player_killed
 	_on_player_killed()
@@ -79,8 +79,3 @@ func _on_cycle_ended():
 	set_physics_process(false)
 	if should_score:
 		game._on_scored(point_value)
-
-
-func stop_all_sfx():
-	var sfx_player = get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	# sfx_player.stop()

@@ -88,7 +88,7 @@ focus_neighbour_bottom = NodePath("../LevelSelect")
 theme = ExtResource( 4 )
 text = "Restart"
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ButtonsBlock"]
 pause_mode = 2
@@ -128,7 +128,7 @@ focus_neighbour_bottom = NodePath("../Quit")
 theme = ExtResource( 4 )
 text = "Back to Main Menu"
 script = ExtResource( 5 )
-pressed_sfx = "ui_confirm"
+pressed_sfx = "Confirm"
 
 [node name="Quit" type="Button" parent="ButtonsBlock"]
 pause_mode = 2

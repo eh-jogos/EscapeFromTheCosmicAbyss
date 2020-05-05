@@ -10,7 +10,7 @@ func _ready():
 	set_process(true)
 	pass
 
-func _process(delta):
+func _process(_delta):
 	#print("Global Pos: %s | Pos: %s"%[self.get_global_position(), self.get_position()])  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	if end_point.get_global_position().x < 0:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 		var new_pos = Vector2(self.get_position().x + (4*1920), self.get_position().y)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review

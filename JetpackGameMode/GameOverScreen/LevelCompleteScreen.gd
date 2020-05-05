@@ -102,7 +102,7 @@ func open(level_number, level_name):
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	
-	#SoundManager.bgm_set_loop(false)
+	SoundManager.bgm_set_loop(false)
 	#SoundManager.stop_bgm()
 	
 	var score = game.get_score()

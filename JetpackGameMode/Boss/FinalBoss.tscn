@@ -1,4 +1,4 @@
-[gd_scene load_steps=209 format=2]
+[gd_scene load_steps=212 format=2]
 
 [ext_resource path="res://JetpackGameMode/Boss/Boss.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=2]
@@ -168,13 +168,13 @@
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_03.png" type="Texture" id=166]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_05.png" type="Texture" id=167]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/eye/eye_lines/eye_lines_scream_transition_06.png" type="Texture" id=168]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_laser_loop.wav" type="AudioStream" id=169]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_laser_charging.wav" type="AudioStream" id=170]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" type="AudioStream" id=171]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "base"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -295,12 +295,46 @@ tracks/9/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/10/type = "value"
+tracks/10/path = NodePath("BossSfxLibrary/LaserLoop:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("BossSfxLibrary/LaserCharging:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("BossSfxLibrary/Scream:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=2]
-
 resource_name = "entrance"
-length = 1.84
-loop = false
+length = 2.5
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -375,20 +409,31 @@ tracks/5/keys = {
 "values": [ 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/path = NodePath("BossSfxLibrary/Scream:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "boss_scream" ]
+"times": PoolRealArray( 0, 2.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BossSfxLibrary/Scream:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.68, 2.16, 2.48 ),
+"transitions": PoolRealArray( 1, 1, 0, 1 ),
+"update": 0,
+"values": [ -6.0, -6.0, -40.0, -6.0 ]
 }
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "idle"
 length = 0.64
 loop = true
@@ -525,9 +570,44 @@ tracks/10/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("BossSfxLibrary/LaserLoop:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("BossSfxLibrary/LaserCharging:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BossSfxLibrary/Scream:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=4]
-
 resource_name = "idle_angry"
 length = 0.4
 loop = true
@@ -664,12 +744,46 @@ tracks/10/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("BossSfxLibrary/LaserLoop:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("BossSfxLibrary/LaserCharging:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BossSfxLibrary/Scream:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=5]
-
 resource_name = "laser_charge_down"
 length = 2.0
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -744,23 +858,33 @@ tracks/5/keys = {
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/path = NodePath("BossSfxLibrary/LaserCharging:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.8, 1.28, 1.76 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 2,
-"values": [ "enemy_laser_charging", "enemy_laser_charging", "enemy_laser_charging" ]
+"times": PoolRealArray( 0, 0.64, 1.12, 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BossSfxLibrary/LaserLoop:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=6]
-
 resource_name = "laser_charge_up"
 length = 2.0
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -835,23 +959,21 @@ tracks/5/keys = {
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/path = NodePath("BossSfxLibrary/LaserCharging:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.8, 1.28, 1.76 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 2,
-"values": [ "enemy_laser_charging", "enemy_laser_charging", "enemy_laser_charging" ]
+"times": PoolRealArray( 0, 0.64, 1.12, 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, true, false ]
 }
 
 [sub_resource type="Animation" id=7]
-
 resource_name = "laser_shot_down"
 length = 2.32
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -998,23 +1120,33 @@ tracks/11/keys = {
 "values": [ 1.0, 1.0, 0.0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("SamplePlayer:play/play")
+tracks/12/path = NodePath("BossSfxLibrary/LaserLoop:playing")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
-tracks/12/enabled = false
+tracks/12/enabled = true
 tracks/12/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 2,
-"values": [ "enemy_laser_loop", "" ]
+"update": 1,
+"values": [ true, false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BossSfxLibrary/LaserLoop:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1.84, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -18.0, -18.0, -40.0 ]
 }
 
 [sub_resource type="Animation" id=8]
-
 resource_name = "laser_shot_up"
 length = 2.32
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -1161,22 +1293,32 @@ tracks/11/keys = {
 "values": [ 1.0, 1.0, 0.0 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("SamplePlayer:play/play")
+tracks/12/path = NodePath("BossSfxLibrary/LaserLoop:playing")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
-tracks/12/enabled = false
+tracks/12/enabled = true
 tracks/12/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 2,
-"values": [ "enemy_laser_loop", "" ]
+"update": 1,
+"values": [ true, false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BossSfxLibrary/LaserLoop:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1.84, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -18.0, -18.0, -40.0 ]
 }
 
 [sub_resource type="Animation" id=9]
-
 length = 3.28
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1251,22 +1393,20 @@ tracks/5/keys = {
 "values": [ 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/path = NodePath("BossSfxLibrary/Scream:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.32 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "boss_scream" ]
+"times": PoolRealArray( 0, 0.48, 2.96 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
 }
 
 [sub_resource type="Animation" id=10]
-
 length = 2.96
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1341,23 +1481,20 @@ tracks/5/keys = {
 "values": [ 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("SamplePlayer:play/play")
+tracks/6/path = NodePath("BossSfxLibrary/Scream:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
-tracks/6/enabled = false
+tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0.48 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "boss_scream" ]
+"times": PoolRealArray( 0, 0.48, 2.96 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
 }
 
 [sub_resource type="Animation" id=11]
-
 length = 3.0
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 2
@@ -1432,10 +1569,8 @@ tracks/5/keys = {
 }
 
 [sub_resource type="Animation" id=12]
-
 resource_name = "to_angry"
 length = 0.16
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1569,11 +1704,45 @@ tracks/10/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("BossSfxLibrary/LaserLoop:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("BossSfxLibrary/LaserCharging:playing")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BossSfxLibrary/Scream:playing")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=13]
-
 length = 0.24
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:animation")
@@ -1925,9 +2094,7 @@ tracks/28/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-
 length = 0.16
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("FaceOutline:animation")
@@ -2171,9 +2338,7 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-
 length = 0.16
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:animation")
@@ -2417,9 +2582,7 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-
 length = 0.4
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:animation")
@@ -2759,7 +2922,6 @@ tracks/27/keys = {
 }
 
 [sub_resource type="Animation" id=17]
-
 length = 0.64
 loop = true
 step = 0.08
@@ -3005,7 +3167,6 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=18]
-
 length = 0.4
 loop = true
 step = 0.08
@@ -3251,7 +3412,6 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=19]
-
 length = 0.4
 loop = true
 step = 0.08
@@ -3497,7 +3657,6 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=20]
-
 length = 0.24
 loop = true
 step = 0.08
@@ -3851,9 +4010,7 @@ tracks/28/keys = {
 }
 
 [sub_resource type="Animation" id=21]
-
 length = 0.16
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:animation")
@@ -4097,9 +4254,7 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=22]
-
 length = 0.16
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:animation")
@@ -4343,9 +4498,7 @@ tracks/19/keys = {
 }
 
 [sub_resource type="Animation" id=23]
-
 length = 0.4
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath("BodyOutline:animation")
@@ -4649,7 +4802,6 @@ tracks/24/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=24]
-
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
@@ -4688,7 +4840,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=25]
-
 animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ) ],
 "loop": true,
@@ -4727,10 +4878,8 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=26]
-
 length = 0.4
 loop = true
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_scale")
 tracks/0/interp = 1
@@ -4757,7 +4906,6 @@ tracks/1/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=27]
-
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": true,
@@ -4771,9 +4919,7 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=28]
-
 length = 0.01
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -4825,9 +4971,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=29]
-
 length = 0.4
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -4879,9 +5023,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=30]
-
 length = 0.01
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -4933,9 +5075,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=31]
-
 length = 0.4
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -4987,9 +5127,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=32]
-
 length = 0.01
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -5041,9 +5179,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=33]
-
 length = 0.4
-loop = false
 step = 0.08
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:animation")
@@ -5095,7 +5231,6 @@ tracks/3/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=34]
-
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": false,
@@ -5114,7 +5249,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=35]
-
 animations = [ {
 "frames": [ ExtResource( 78 ) ],
 "loop": false,
@@ -5133,7 +5267,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=36]
-
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": false,
@@ -5147,7 +5280,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=37]
-
 animations = [ {
 "frames": [ ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 90 ) ],
 "loop": true,
@@ -5186,7 +5318,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=38]
-
 animations = [ {
 "frames": [ ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 119 ), ExtResource( 118 ) ],
 "loop": true,
@@ -5215,7 +5346,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=39]
-
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": true,
@@ -5234,7 +5364,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=40]
-
 animations = [ {
 "frames": [ ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 146 ), ExtResource( 145 ), ExtResource( 144 ) ],
 "loop": true,
@@ -5273,17 +5402,10 @@ animations = [ {
 } ]
 
 [node name="Boss" type="Node2D"]
-
 script = ExtResource( 1 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "base"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/base = SubResource( 1 )
 anims/entrance = SubResource( 2 )
 anims/idle = SubResource( 3 )
@@ -5307,40 +5429,38 @@ next/tired_retreat = "base"
 next/to_angry = "idle_angry"
 blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down", 0.05, "laser_charge_up", "laser_shot_down", 0.05, "laser_shot_down", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
 
-[node name="SamplePlayer" type="AudioStreamPlayer" parent="." index="1"]
+[node name="BossSfxLibrary" type="Node" parent="."]
 
-stream = null
-volume_db = 0.0
-pitch_scale = 1.0
-autoplay = false
-mix_target = 0
-bus = "Master"
+[node name="Scream" type="AudioStreamPlayer" parent="BossSfxLibrary"]
+stream = ExtResource( 171 )
+volume_db = -6.0
+bus = "GameSfx"
 script = ExtResource( 2 )
 
-[node name="CollisionTimer" type="Timer" parent="." index="2"]
+[node name="LaserCharging" type="AudioStreamPlayer" parent="BossSfxLibrary"]
+stream = ExtResource( 170 )
+volume_db = -12.0
+bus = "GameSfx"
+script = ExtResource( 2 )
 
-process_mode = 1
-wait_time = 1.0
+[node name="LaserLoop" type="AudioStreamPlayer" parent="BossSfxLibrary"]
+stream = ExtResource( 169 )
+volume_db = -40.0
+bus = "GameSfx"
+script = ExtResource( 2 )
+
+[node name="CollisionTimer" type="Timer" parent="."]
 one_shot = true
-autostart = false
 
-[node name="FinalBossSkin" type="Node2D" parent="." index="3"]
-
+[node name="FinalBossSkin" type="Node2D" parent="."]
 show_behind_parent = true
 position = Vector2( -520, 0 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 warning_color_1 = 0.0
 warning_color_2 = 0.0
 warning_color_3 = 0.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin"]
 anims/first_scream = SubResource( 13 )
 anims/from_angry = SubResource( 14 )
 anims/from_laser = SubResource( 15 )
@@ -5360,308 +5480,196 @@ next/idle_laser = "idle_angry"
 next/to_angry = "idle_angry"
 next/to_laser = "idle_laser"
 next/to_scream = "first_scream"
-blend_times = [  ]
 
-[node name="BodyOutline" type="AnimatedSprite" parent="FinalBossSkin" index="1"]
-
+[node name="BodyOutline" type="AnimatedSprite" parent="FinalBossSkin"]
 modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -900 )
 frames = SubResource( 24 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
+frame = 1
 centered = false
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="FaceOutline" type="AnimatedSprite" parent="FinalBossSkin" index="2"]
-
+[node name="FaceOutline" type="AnimatedSprite" parent="FinalBossSkin"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -901 )
 frames = SubResource( 25 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
+frame = 1
 centered = false
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="EyeOutline" type="Sprite" parent="FinalBossSkin/FaceOutline" index="0"]
-
+[node name="EyeOutline" type="Sprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 show_behind_parent = true
-position = Vector2( 632, 603 )
-rotation = -0.0110522
+position = Vector2( 481, 763 )
 texture = ExtResource( 57 )
 centered = false
 offset = Vector2( -40, -162 )
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="LaserMargins" type="ColorRect" parent="FinalBossSkin/FaceOutline/EyeOutline" index="0"]
-
-editor/display_folded = true
+[node name="LaserMargins" type="ColorRect" parent="FinalBossSkin/FaceOutline/EyeOutline"]
 show_behind_parent = true
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 margin_top = -100.0
 margin_right = 10.0
 margin_bottom = 289.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
 color = Color( 0.780392, 0.223529, 0.211765, 1 )
 
-[node name="LaserCenter" type="ColorRect" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="LaserCenter" type="ColorRect" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 62.0
 margin_right = -4.0
 margin_bottom = -58.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-color = Color( 1, 1, 1, 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter" index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter"]
 autoplay = "loop"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/loop = SubResource( 26 )
-blend_times = [  ]
 
-[node name="Raycasts" type="Node2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter" index="1"]
+[node name="Raycasts" type="Node2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter"]
 
-[node name="RayCast2D1" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts" index="0"]
-
+[node name="RayCast2D1" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
 position = Vector2( -3e-06, -45 )
 rotation = -1.5708
 scale = Vector2( 0.873991, 1 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
 
-[node name="RayCast2D2" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts" index="1"]
-
+[node name="RayCast2D2" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
 position = Vector2( -3e-06, 35 )
 rotation = -1.5708
 scale = Vector2( 0.873991, 1 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
 
-[node name="RayCast2D3" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts" index="2"]
-
+[node name="RayCast2D3" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
 position = Vector2( -4e-06, 115 )
 rotation = -1.5708
 scale = Vector2( 0.873991, 1 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
 
-[node name="RayCast2D4" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts" index="3"]
-
+[node name="RayCast2D4" type="RayCast2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts"]
 position = Vector2( 0, 190 )
 rotation = -1.5708
 scale = Vector2( 0.873991, 1 )
 enabled = true
-exclude_parent = true
 cast_to = Vector2( 0, 10 )
-collision_mask = 1
 
-[node name="Eye" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline" index="1"]
-
+[node name="Eye" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 texture = ExtResource( 58 )
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 59 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="ColorChange1" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye" index="0"]
-
+[node name="ColorChange1" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 0.78125, 1, 0, 1 )
 frames = SubResource( 27 )
-animation = "default"
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 67 )
-_sections_unfolded = [ "Visibility" ]
-warning_level = "warning1"
 
-[node name="ColorChanger1" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange1" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="ColorChanger1" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange1"]
 anims/BASE = SubResource( 28 )
 anims/charging = SubResource( 29 )
-blend_times = [  ]
 
-[node name="ColorChange2" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye" index="1"]
-
+[node name="ColorChange2" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 1, 0.515625, 0, 1 )
 frames = SubResource( 27 )
-animation = "default"
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 67 )
-_sections_unfolded = [ "Visibility" ]
 warning_level = "warning2"
 
-[node name="ColorChanger2" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange2" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="ColorChanger2" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange2"]
 anims/BASE = SubResource( 30 )
 anims/charging = SubResource( 31 )
-blend_times = [  ]
 
-[node name="ColorChange3" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye" index="2"]
-
+[node name="ColorChange3" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 1, 0, 0.257812, 1 )
 frames = SubResource( 27 )
-animation = "default"
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 67 )
-_sections_unfolded = [ "Visibility" ]
 warning_level = "warning3"
 
-[node name="ColorChanger3" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange3" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
+[node name="ColorChanger3" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange3"]
 anims/BASE = SubResource( 32 )
 anims/charging = SubResource( 33 )
-blend_times = [  ]
 
-[node name="IrisOutline" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye" index="3"]
-
+[node name="IrisOutline" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 position = Vector2( 291, 15 )
 texture = ExtResource( 68 )
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Iris" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/IrisOutline" index="0"]
-
+[node name="Iris" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/IrisOutline"]
 self_modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 texture = ExtResource( 69 )
 offset = Vector2( 3, 0 )
 script = ExtResource( 70 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Pupil" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/IrisOutline/Iris" index="0"]
-
+[node name="Pupil" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/IrisOutline/Iris"]
 self_modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
 position = Vector2( 22, 0 )
 texture = ExtResource( 71 )
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Tongue" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="1"]
-
+[node name="Tongue" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 show_behind_parent = true
-position = Vector2( 476, 982 )
+position = Vector2( 473, 1014 )
 frames = SubResource( 34 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
 centered = false
 script = ExtResource( 77 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Teeth" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="2"]
-
+[node name="Teeth" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 show_behind_parent = true
-position = Vector2( 659.182, 836.19 )
+position = Vector2( 471.182, 1105.19 )
 frames = SubResource( 35 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
 centered = false
 script = ExtResource( 84 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Gengiva" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="3"]
-
+[node name="Gengiva" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.152941, 0.309804, 0.270588, 1 )
 show_behind_parent = true
 position = Vector2( 597.804, 843.095 )
 frames = SubResource( 36 )
-animation = "scream"
-frame = 3
 centered = false
 script = ExtResource( 88 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Body" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="4"]
-
+[node name="Body" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.137255, 0.4, 0.364706, 1 )
 position = Vector2( 8, 9 )
 frames = SubResource( 37 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
 centered = false
 script = ExtResource( 116 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="MouthLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="5"]
-
+[node name="MouthLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 654.153, 866.54 )
+position = Vector2( 536.153, 1139.54 )
 frames = SubResource( 38 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
 centered = false
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Perdigotos" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="6"]
-
+[node name="Perdigotos" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 position = Vector2( 716.634, 919.854 )
 frames = SubResource( 39 )
-animation = "default"
 centered = false
 script = ExtResource( 84 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="EyeLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline" index="7"]
-
+[node name="EyeLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 559, 492 )
+position = Vector2( 505, 602 )
 frames = SubResource( 40 )
-animation = "scream"
-frame = 3
+animation = "to_scream"
 centered = false
 script = ExtResource( 30 )
-_sections_unfolded = [ "Visibility" ]
-
 [connection signal="timeout" from="CollisionTimer" to="." method="_on_CollisionTimer_timeout"]
-
-

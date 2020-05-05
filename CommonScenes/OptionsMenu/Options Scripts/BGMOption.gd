@@ -40,7 +40,7 @@ func change_bgm_track(direction):
 	var current_index = track_values.find(track)
 	var next_index
 	
-	SoundManager.play_sfx("ui_change", true)
+	SoundManager.play_sfx("Change", true)
 	
 	if current_index == -1:
 		print("ERROR | TRACK NOT FOUND")
@@ -77,7 +77,7 @@ func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	arrows_highlight.stop_highlight()
-	SoundManager.play_sfx("ui_select")
+	SoundManager.play_sfx("Select")
 
 func _on_ArrowsIndicator_left_pressed():
 	change_bgm_track(false)

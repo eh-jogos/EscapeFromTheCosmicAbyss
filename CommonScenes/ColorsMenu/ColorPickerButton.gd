@@ -54,15 +54,15 @@ func _ready():
 
 
 func set_current_color():
-	if not Globals.has_singleton("Global"):
+	if not Engine.has_singleton("Global"):
 		return
 	
 	if Global:
-		set_color(Global.savedata.colors[category][selected_part])
+		color = Global.savedata.colors[category][selected_part]
 
 
 func _on_color_changed(color):
-	if not Globals.has_singleton("Global"):
+	if not Engine.has_singleton("Global"):
 		return
 	
 	if Global:
@@ -75,7 +75,7 @@ func _on_modal_closed():
 	yield(get_tree(), "idle_frame")
 	
 	if SoundManager:
-		SoundManager.play_sfx("ui_change")
+		SoundManager.play_sfx("Change")
 	
 	self.grab_focus()
 
@@ -87,7 +87,7 @@ func _on_focus_entered():
 
 func _on_focus_exited():
 	if SoundManager:
-		SoundManager.play_sfx("ui_select")
+		SoundManager.play_sfx("Select")
 	var description = get_node("Description")
 	description.add_color_override("font_color", Color("00f5ff"))
 

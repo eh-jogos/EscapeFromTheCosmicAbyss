@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=2]
+[gd_scene load_steps=93 format=2]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -70,8 +70,8 @@
 [ext_resource path="res://JetpackGameMode/BG/BG_LooperH_Bg2.gd" type="Script" id=68]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_5.png" type="Texture" id=69]
 [ext_resource path="res://Shaders/shader_text_pop_up.tres" type="Animation" id=70]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" type="AudioStream" id=71]
 [ext_resource path="res://Shaders/text_horizontal_gradient_shader.tres" type="Material" id=72]
-
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( -50, 0 )
@@ -329,7 +329,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=9]
-length = 2.5
+length = 2.9
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
 tracks/0/interp = 1
@@ -361,7 +361,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 1.8, 2.5 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 1.8, 2.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 950, 515 ), Vector2( 950, 515 ), Vector2( 900, 540 ), Vector2( 850, 490 ), Vector2( 850, 490 ), Vector2( -130, 490 ) ]
@@ -391,16 +391,16 @@ tracks/4/keys = {
 "values": [ "to_scream", "first_scream" ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("SamplePlayer:play/play")
+tracks/5/path = NodePath("SamplePlayer:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
-tracks/5/enabled = false
+tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "boss_scream" ]
+"times": PoolRealArray( 0.3, 2.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="SpriteFrames" id=10]
@@ -439,7 +439,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=12]
-length = 2.0
+length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -477,16 +477,16 @@ tracks/2/keys = {
 "values": [ "warning" ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("SamplePlayer:play/play")
+tracks/3/path = NodePath("SamplePlayer:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "boss_scream" ]
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="SpriteFrames" id=13]
@@ -537,7 +537,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-length = 2.0
+length = 2.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -575,16 +575,16 @@ tracks/2/keys = {
 "values": [ "warning" ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("SamplePlayer:play/play")
+tracks/3/path = NodePath("SamplePlayer:playing")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "boss_scream" ]
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="SpriteFrames" id=16]
@@ -1006,9 +1006,7 @@ __meta__ = {
 [node name="BackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
 ]]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 650, 540 )
+position = Vector2( -130, 490 )
 script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/BackRowBoss"]
@@ -1019,8 +1017,31 @@ anims/get_angry = SubResource( 8 )
 anims/scream = SubResource( 9 )
 
 [node name="SamplePlayer" type="AudioStreamPlayer" parent="ParallaxBackground/BackRowBoss"]
+stream = ExtResource( 71 )
+volume_db = -6.0
+bus = "GameSfx"
 
 [node name="BackRowBossSkin" parent="ParallaxBackground/BackRowBoss" instance=ExtResource( 31 )]
+
+[node name="EyeShape" parent="ParallaxBackground/BackRowBoss/BackRowBossSkin/Eye" index="0"]
+animation = "scream_loop"
+frame = 7
+
+[node name="Iris" parent="ParallaxBackground/BackRowBoss/BackRowBossSkin/Eye" index="1"]
+position = Vector2( 1.91187, 5.78522 )
+animation = "scream_loop"
+frame = 7
+
+[node name="Mouth" parent="ParallaxBackground/BackRowBoss/BackRowBossSkin" index="2"]
+position = Vector2( 8.70447, 64.9854 )
+
+[node name="MouthShape" parent="ParallaxBackground/BackRowBoss/BackRowBossSkin/Mouth" index="0"]
+animation = "scream_loop"
+frame = 7
+
+[node name="Teeth" parent="ParallaxBackground/BackRowBoss/BackRowBossSkin/Mouth" index="1"]
+animation = "scream_loop"
+frame = 7
 
 [node name="Parallax3" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.25, 1 )
@@ -1058,8 +1079,7 @@ position = Vector2( 1010, 540 )
 [node name="MidBackRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
 ]]
-visible = false
-position = Vector2( -430, 620 )
+position = Vector2( 2695, 620 )
 script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/MidBackRowBoss"]
@@ -1067,7 +1087,10 @@ autoplay = "base"
 anims/base = SubResource( 11 )
 anims/scream = SubResource( 12 )
 
-[node name="SamplePlayer" type="Node" parent="ParallaxBackground/MidBackRowBoss"]
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="ParallaxBackground/MidBackRowBoss"]
+stream = ExtResource( 71 )
+volume_db = -6.0
+bus = "GameSfx"
 
 [node name="MidRowsBossSkin" parent="ParallaxBackground/MidBackRowBoss" instance=ExtResource( 38 )]
 position = Vector2( -200, -100 )
@@ -1117,7 +1140,10 @@ script = ExtResource( 30 )
 anims/base = SubResource( 14 )
 anims/scream = SubResource( 15 )
 
-[node name="SamplePlayer" type="Node" parent="ParallaxBackground/MidFrontRowBoss"]
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="ParallaxBackground/MidFrontRowBoss"]
+stream = ExtResource( 71 )
+volume_db = -6.0
+bus = "GameSfx"
 
 [node name="MidRowsBossSkin" parent="ParallaxBackground/MidFrontRowBoss" instance=ExtResource( 38 )]
 position = Vector2( 400, -50 )

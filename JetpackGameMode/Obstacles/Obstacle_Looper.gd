@@ -14,7 +14,7 @@ func _ready():
 	set_process(true)
 	pass
 
-func _process(delta):
+func _process(_delta):
 #	print("Global Pos: %s | Offset: %s"%[self.get_global_position(), end_point.get_position().x-camera.get_position().x])  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	var limit = end_point.get_global_position().x-(camera.get_position().x-1920/2)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	

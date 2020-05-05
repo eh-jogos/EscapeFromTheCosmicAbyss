@@ -62,7 +62,7 @@ func _ready():
 	
 	# Inside Nodes
 	jet_particles = self.get_node("JetParticles")
-	jet_sfx = jet_particles.get_node("SamplePlayer")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	jet_sfx = jet_particles.get_node("SamplePlayer")
 	body_animator = self.get_node("BodyAnimator")
 	arms_animator = self.get_node("ArmsAnimator")
 	bullet_spawn = self.get_node("BulletSpawn")
@@ -89,6 +89,8 @@ func _ready():
 func _physics_process(delta):
 	if game.get_game_state() != game.STATE.Playing and game.get_game_state() != game.STATE.Tutorial:
 		return
+	
+	SoundManager.reset_ui_bus_effects()
 	
 	var heat = overheat_bar.get_value()
 	if not dashing:
@@ -208,8 +210,7 @@ func handle_overheat_bar_color(heat):
 func handle_boost(delta, heat):
 	jet_particles.set_emitting(true)
 	if not jet_sfx.playing:
-#		jet_sfx.play("jetpack_noise")  # -- AUDIO REFACTOR
-		pass
+		jet_sfx.play()
 	
 	if falling: 
 		falling = false
@@ -317,12 +318,6 @@ func take_hit():
 		return
 	
 	shield.decrease_energy(1)
-
-
-func stop_all_sfx():
-	var shield_sfx = shield.get_node("SamplePlayer")
-	# jet_sfx.stop()
-	# shield_sfx.stop()
 
 
 func _on_update_invincibility():

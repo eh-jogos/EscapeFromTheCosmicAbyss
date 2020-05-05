@@ -1,4 +1,4 @@
-extends AudioStreamPlayer  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+extends AudioStreamPlayer
 
 func _ready():
 	add_to_group("sfx_player")

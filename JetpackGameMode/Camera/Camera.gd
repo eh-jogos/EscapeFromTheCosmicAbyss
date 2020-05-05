@@ -14,7 +14,7 @@ func _ready():
 	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 
-func _physics_process(delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+func _physics_process(_delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	player_position = player.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	set_position(Vector2(player.get_position().x+camera_offset_x,get_position().y))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 

@@ -28,7 +28,7 @@ func _input(event):
 
 
 func toggle_invincibility():
-	SoundManager.play_sfx("ui_change", true)
+	SoundManager.play_sfx("Change", true)
 
 	Global.is_invincible = !Global.is_invincible
 	is_invincible = Global.is_invincible
@@ -48,7 +48,7 @@ func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
 	arrows_highlight.stop_highlight()
-	SoundManager.play_sfx("ui_select")
+	SoundManager.play_sfx("Select")
 
 func _update_text():
 	if is_invincible:
