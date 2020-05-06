@@ -16,23 +16,24 @@ signal page_updated(first_button, last_button)
 signal navigated_to_right
 # warning-ignore:unused_signal
 signal navigated_to_left
+# warning-ignore:unused_signal
+signal reset_color_pickers
 
 
-const DEFAULT_SILHOUETTE_COLOR = Color(0,0,1,1) #Color("041411") #OR Color("1f122d")
-const DEFAULT_BODY_COLOR = Color(1,0,0,1) #Color("1f645b") 
-const DEFAULT_EYE_COLOR = Color(0,0.5,1,1) #Color("00ffc3")
-const DEFAULT_EYE_WARNING_COLOR1 = Color(0.2,0,0.2,1) #Color("c7ff00")
-const DEFAULT_EYE_WARNING_COLOR2 = Color(0,0.6,0.6,1) #Color("ff8300")
-const DEFAULT_EYE_WARNING_COLOR3 = Color(1,0,1,1) #Color("ff0041")
+const DEFAULT_SILHOUETTE_COLOR = Color("1f122d") #Color("041411") #OR Color("1f122d")
+const DEFAULT_BODY_COLOR = Color("1f645b") 
+const DEFAULT_EYE_COLOR = Color("00ffc3")
+const DEFAULT_EYE_WARNING_COLOR1 = Color("c7ff00")
+const DEFAULT_EYE_WARNING_COLOR2 = Color("ff8300")
+const DEFAULT_EYE_WARNING_COLOR3 = Color("ff0041")
 
-const DEFAULT_ENEMY_LASER_OUTLINE = Color(1,1,0,1) #Color("c63836")
-const DEFAULT_ENEMY_LASER_CENTER = Color(0,1,1,1) #Color("ffffff")
+const DEFAULT_ENEMY_LASER_OUTLINE = Color("c63836")
+const DEFAULT_ENEMY_LASER_CENTER = Color("ffffff")
 
-const DEFAULT_BOSS_IRIS_COLOR = Color(0.5,0,0.5,1) #Color("c63836")
-const DEFAULT_BOSS_TEETH_COLOR = Color(0.8, 0.2, 0, 1) #Color("00ffc3")
-const DEFAULT_BOSS_GENGIVA_COLOR = Color(0.1,0.9,0.3,1) #Color("264f44")
-const DEFAULT_BOSS_TONGUE_COLOR = Color(0.5,0.2,0.9,1) #Color("c63836")
-
+const DEFAULT_BOSS_IRIS_COLOR = Color("c63836")
+const DEFAULT_BOSS_TEETH_COLOR = Color("00ffc3")
+const DEFAULT_BOSS_GENGIVA_COLOR = Color("264f44")
+const DEFAULT_BOSS_TONGUE_COLOR = Color("c63836")
 
 
 var savefile = File.new()
@@ -47,6 +48,54 @@ var is_retry = false
 var base_stats = 15
 var max_upgrade_level = 40
 var base_upgrade = 30
+
+var default_color_scheme: Dictionary = {
+	"waves" : {
+		"outline": DEFAULT_SILHOUETTE_COLOR,
+		"body": DEFAULT_BODY_COLOR,
+	},
+	"tentacles" : {
+		"outline": DEFAULT_SILHOUETTE_COLOR,
+		"body": DEFAULT_BODY_COLOR,
+	},
+	"laser_eye": {
+		"outline": DEFAULT_SILHOUETTE_COLOR,
+		"body": DEFAULT_BODY_COLOR,
+		"eye": DEFAULT_EYE_COLOR,
+		"warning1": DEFAULT_EYE_WARNING_COLOR1,
+		"warning2": DEFAULT_EYE_WARNING_COLOR2,
+		"warning3": DEFAULT_EYE_WARNING_COLOR3,
+		"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
+		"laser_core": DEFAULT_ENEMY_LASER_CENTER,
+	},
+	"bg_boss":{
+		"eye": DEFAULT_EYE_COLOR,
+		"iris": DEFAULT_BOSS_IRIS_COLOR,
+		"mouth": DEFAULT_BOSS_GENGIVA_COLOR,
+		"teeth": DEFAULT_BOSS_TEETH_COLOR,
+	},
+	"mid_bg_boss":{
+		"outline": DEFAULT_SILHOUETTE_COLOR,
+		"body": DEFAULT_BODY_COLOR,
+		"teeth": DEFAULT_BOSS_TEETH_COLOR,
+		"eye": DEFAULT_EYE_COLOR,
+		"iris": DEFAULT_BOSS_IRIS_COLOR,
+	},
+	"final_boss":{
+		"outline": DEFAULT_SILHOUETTE_COLOR,
+		"body": DEFAULT_BODY_COLOR,
+		"eye": DEFAULT_EYE_COLOR,
+		"warning1": DEFAULT_EYE_WARNING_COLOR1,
+		"warning2": DEFAULT_EYE_WARNING_COLOR2,
+		"warning3": DEFAULT_EYE_WARNING_COLOR3,
+		"iris": DEFAULT_BOSS_IRIS_COLOR,
+		"tongue": DEFAULT_BOSS_TONGUE_COLOR,
+		"teeth": DEFAULT_BOSS_TEETH_COLOR,
+		"gengiva": DEFAULT_BOSS_GENGIVA_COLOR,
+		"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
+		"laser_core": DEFAULT_ENEMY_LASER_CENTER,
+	},
+}
 
 var base_savedata = {
 	"version" : version,
@@ -113,57 +162,12 @@ var base_savedata = {
 		"game mode" : "test_mode",
 		"sub-mode": "15",
 	},
-	"colors":{
-		"waves" : {
-			"outline": DEFAULT_SILHOUETTE_COLOR,
-			"body": DEFAULT_BODY_COLOR,
-		},
-		"tentacles" : {
-			"outline": DEFAULT_SILHOUETTE_COLOR,
-			"body": DEFAULT_BODY_COLOR,
-		},
-		"laser_eye": {
-			"outline": DEFAULT_SILHOUETTE_COLOR,
-			"body": DEFAULT_BODY_COLOR,
-			"eye": DEFAULT_EYE_COLOR,
-			"warning1": DEFAULT_EYE_WARNING_COLOR1,
-			"warning2": DEFAULT_EYE_WARNING_COLOR2,
-			"warning3": DEFAULT_EYE_WARNING_COLOR3,
-			"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
-			"laser_core": DEFAULT_ENEMY_LASER_CENTER,
-		},
-		"bg_boss":{
-			"eye": DEFAULT_EYE_COLOR,
-			"iris": DEFAULT_BOSS_IRIS_COLOR,
-			"mouth": DEFAULT_BOSS_GENGIVA_COLOR,
-			"teeth": DEFAULT_BOSS_TEETH_COLOR,
-		},
-		"mid_bg_boss":{
-			"outline": DEFAULT_SILHOUETTE_COLOR,
-			"body": DEFAULT_BODY_COLOR,
-			"teeth": DEFAULT_BOSS_TEETH_COLOR,
-			"eye": DEFAULT_EYE_COLOR,
-			"iris": DEFAULT_BOSS_IRIS_COLOR,
-		},
-		"final_boss":{
-			"outline": DEFAULT_ENEMY_LASER_OUTLINE,
-			"body": DEFAULT_BODY_COLOR,
-			"eye": DEFAULT_EYE_COLOR,
-			"warning1": DEFAULT_EYE_WARNING_COLOR1,
-			"warning2": DEFAULT_EYE_WARNING_COLOR2,
-			"warning3": DEFAULT_EYE_WARNING_COLOR3,
-			"iris": DEFAULT_BOSS_IRIS_COLOR,
-			"tongue": DEFAULT_BOSS_TONGUE_COLOR,
-			"teeth": DEFAULT_BOSS_TEETH_COLOR,
-			"gengiva": DEFAULT_BOSS_GENGIVA_COLOR,
-			"laser_outline": DEFAULT_ENEMY_LASER_OUTLINE,
-			"laser_core": DEFAULT_ENEMY_LASER_CENTER,
-		},
-	},
+	"colors": {},
 }
 
 
 func _ready():
+	base_savedata.colors = default_color_scheme.duplicate(true)
 	check_savefile()
 	get_tree().call_group("sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
 
@@ -181,14 +185,12 @@ func check_savefile():
 	
 	print(savedata)
 
-func reset_savefile():
-	savedata = base_savedata
-	save()
 
 func save():
 	savefile.open(savepath,File.WRITE)
 	savefile.store_var(savedata)
 	savefile.close()
+
 
 func read():
 	savefile.open(savepath,File.READ)
@@ -277,6 +279,7 @@ func read():
 		print(savedata)
 		save()
 
+
 func update_highscore(game_mode, points):
 	if game_mode == "story":
 		var index = savedata[game_mode]["current level"]
@@ -287,13 +290,16 @@ func update_highscore(game_mode, points):
 		print("ERROR SAVING HIGHSCORE | Invalid game_mode: %s"%[game_mode]) 
 	save()
 
+
 func update_hightime(time_duration):
 	savedata["speedrun"]["hightime"] = time_duration
 	save()
 
+
 func update_highlaps(total_laps):
 	savedata["arcade"]["highlaps"] = total_laps
 	save()
+
 
 func update_story_upgrade(points):
 	savedata["story"]["upgrade points"] = points
@@ -318,13 +324,16 @@ func update_story_unlocks(level):
 	savedata["story"]["levels unlocked"] = level
 	save()
 
+
 func update_story_last_unlock(level):
 	savedata["story"]["last unlock"] = level
 	save()
 
+
 func set_current_story_level(level):
 	savedata["story"]["current level"] = level
 	set_game_mode("story","level selected")
+
 
 func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade):
 	savedata["story"]["cooldown"] = cooldown
@@ -335,6 +344,81 @@ func update_story_stats(cooldown, ammo, shield, i_speed, m_speed, laser, upgrade
 	savedata["story"]["laser strength"] = laser
 	savedata["story"]["upgrade points"] = upgrade
 	save()
+
+
+func reset_category_progress(game_mode_dict):
+	var game_mode = game_mode_dict["game mode"]
+	var points = int(game_mode_dict["sub-mode"])
+	
+	savedata[game_mode]["cooldown"] = 0
+	savedata[game_mode]["initial ammo"] = 0
+	savedata[game_mode]["initial shield"] = 0
+	savedata[game_mode]["initial speed"] = 0
+	savedata[game_mode]["max speed"] = 0
+	savedata[game_mode]["laser strength"] = 0
+	savedata[game_mode]["upgrade points"] = points
+	save()
+
+
+func update_category_stats(game_mode, cooldown, ammo, shield, i_speed, m_speed, laser, upgrade):
+	savedata[game_mode]["cooldown"] = cooldown
+	savedata[game_mode]["initial ammo"] = ammo
+	savedata[game_mode]["initial shield"] = shield
+	savedata[game_mode]["initial speed"] = i_speed
+	savedata[game_mode]["max speed"] = m_speed
+	savedata[game_mode]["laser strength"] = laser
+	savedata[game_mode]["upgrade points"] = upgrade
+	save()
+
+
+func update_option_fullscreen(option):
+	savedata["options"]["fullscreen"] = option
+
+
+func update_option_track(option):
+	savedata["options"]["track"] = option
+
+
+func update_option_bgmvolume(option):
+	savedata["options"]["bgm volume"] = option
+
+
+func update_option_sfxvolume(option):
+	savedata["options"]["bgm volume"] = option
+	get_tree().call_group("sfx_player", "adjust_volume_to", option)
+
+
+func set_game_mode(game_mode, category):
+	savedata["state"]["game mode"] = game_mode
+	savedata["state"]["sub-mode"] = category
+	save()
+
+
+func get_game_mode():
+	return savedata["state"]
+
+
+func tutorial_completed():
+	savedata["story"]["tutorial beaten"] = true
+	save()
+
+func story_completed():
+	savedata["story"]["story beaten"] = true
+	save()
+
+
+func is_tutorial_completed():
+	return savedata["story"]["tutorial beaten"]
+
+
+func is_story_completed():
+	return savedata["story"]["story beaten"]
+
+
+func reset_savefile():
+	savedata = base_savedata
+	save()
+
 
 func reset_story_progress():
 	savedata["story"]["highscore"] = [
@@ -367,60 +451,6 @@ func reset_story_progress():
 	savedata["story"]["last unlock"] = 0
 	savedata["story"]["tutorial beaten"] = false
 
-func reset_category_progress(game_mode_dict):
-	var game_mode = game_mode_dict["game mode"]
-	var points = int(game_mode_dict["sub-mode"])
-	
-	savedata[game_mode]["cooldown"] = 0
-	savedata[game_mode]["initial ammo"] = 0
-	savedata[game_mode]["initial shield"] = 0
-	savedata[game_mode]["initial speed"] = 0
-	savedata[game_mode]["max speed"] = 0
-	savedata[game_mode]["laser strength"] = 0
-	savedata[game_mode]["upgrade points"] = points
-	save()
 
-func update_category_stats(game_mode, cooldown, ammo, shield, i_speed, m_speed, laser, upgrade):
-	savedata[game_mode]["cooldown"] = cooldown
-	savedata[game_mode]["initial ammo"] = ammo
-	savedata[game_mode]["initial shield"] = shield
-	savedata[game_mode]["initial speed"] = i_speed
-	savedata[game_mode]["max speed"] = m_speed
-	savedata[game_mode]["laser strength"] = laser
-	savedata[game_mode]["upgrade points"] = upgrade
-	save()
-
-func update_option_fullscreen(option):
-	savedata["options"]["fullscreen"] = option
-
-func update_option_track(option):
-	savedata["options"]["track"] = option
-
-func update_option_bgmvolume(option):
-	savedata["options"]["bgm volume"] = option
-
-func update_option_sfxvolume(option):
-	savedata["options"]["bgm volume"] = option
-	get_tree().call_group("sfx_player", "adjust_volume_to", option)
-
-func set_game_mode(game_mode, category):
-	savedata["state"]["game mode"] = game_mode
-	savedata["state"]["sub-mode"] = category
-	save()
-
-func get_game_mode():
-	return savedata["state"]
-
-func tutorial_completed():
-	savedata["story"]["tutorial beaten"] = true
-	save()
-
-func story_completed():
-	savedata["story"]["story beaten"] = true
-	save()
-
-func is_tutorial_completed():
-	return savedata["story"]["tutorial beaten"]
-
-func is_story_completed():
-	return savedata["story"]["story beaten"]
+func reset_colors() -> void:
+	savedata.colors = default_color_scheme.duplicate(true)

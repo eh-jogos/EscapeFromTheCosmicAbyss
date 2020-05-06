@@ -6,4 +6,4 @@ func _ready():
 
 
 func colors_changed():
-	set_frame_color(Global.savedata.colors.laser_eye.laser_core)
+	color = Global.savedata.colors.laser_eye.laser_core

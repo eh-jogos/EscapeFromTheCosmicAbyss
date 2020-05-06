@@ -6,4 +6,4 @@ func _ready():
 
 
 func colors_changed():
-	color = Global.savedata.colors.laser_eye.laser_outline
+	color = Global.savedata.colors.final_boss.laser_outline
