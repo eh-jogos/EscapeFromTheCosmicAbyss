@@ -29,17 +29,20 @@ func _set_current_menu(value):
 	if container_menus == null:
 		return
 	
+	var previous_menu_node = container_menus.get_child(current_menu)
 	current_menu = clamp(value, 0, container_menus.get_child_count()-1)
 	var menu_node = container_menus.get_child(current_menu)
-	var menu_position = menu_node.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	var menu_position = menu_node.rect_position
 	menu_position.x *= -1
 	
 	tween.remove_all()
-	tween.interpolate_property(container_menus, "rect_position", container_menus.get_position(),   #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-			menu_position, 0.3, Tween.TRANS_CUBIC, Tween.EASE_OUT)
+	tween.interpolate_property(container_menus, "rect_position", 
+			container_menus.rect_position, menu_position, 0.3, 
+			Tween.TRANS_CUBIC, Tween.EASE_OUT)
 	tween.start()
 	
 	if not Engine.is_editor_hint():
+		previous_menu_node.deactivate()
 		menu_node.activate()
 
 

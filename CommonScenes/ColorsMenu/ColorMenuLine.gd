@@ -11,13 +11,15 @@ export(String, "outline", "body") var tentacles_part = "outline"
 export(String, "outline", "body", "eye", "warning1", "warning2", "warning3", \
 		"laser_outline", "laser_core") var laser_eye_part = "outline"
 export(String, "eye", "iris", "mouth", "teeth") var bg_boss_part = "eye"
-export(String, "outline", "body", "teeth", "eye", "iris") var mid_bg_boss_part = "outline"
+export(String, "outline", "body", "teeth", "eye", "iris") \
+		var mid_bg_boss_part = "outline"
 export(String, "outline", "body", "eye", "warning1", "warning2", "warning3", \
 		"iris", "tongue", "teeth", "gengiva", "laser_outline", "laser_core") \
 		var final_boss_part = "outline"
 
 export(String, "waves_part", "tentacles_part", "laser_eye_part", "bg_boss_part", \
-		"mid_bg_boss_part", "final_boss_part") var selected_part = "waves_part" setget _set_selected_part
+		"mid_bg_boss_part", "final_boss_part") \
+		var selected_part = "waves_part" setget _set_selected_part
 
 
 var color_picker = null
@@ -35,6 +37,18 @@ func _ready():
 	self.description = description
 	self.category = category
 	self.selected_part = selected_part
+
+
+func enable_buttons() -> void:
+	var button_area = $ColorPickerButton/ButtonArea
+	color_picker.mouse_filter = Control.MOUSE_FILTER_STOP
+	button_area.mouse_filter = Control.MOUSE_FILTER_PASS
+
+
+func disable_buttons() -> void:
+	var button_area = $ColorPickerButton/ButtonArea
+	color_picker.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	button_area.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
 func _set_description(value):
