@@ -5011,9 +5011,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 394 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 395 ), ExtResource( 392 ), ExtResource( 263 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 261 ), ExtResource( 262 ), ExtResource( 402 ), ExtResource( 264 ), ExtResource( 402 ), ExtResource( 262 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 247 ), ExtResource( 251 ), ExtResource( 250 ), ExtResource( 251 ) ],
@@ -5031,9 +5031,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 261 ), ExtResource( 262 ), ExtResource( 402 ), ExtResource( 264 ), ExtResource( 402 ), ExtResource( 262 ) ],
-"loop": true,
-"name": "idle_angry",
+"frames": [ ExtResource( 394 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 395 ), ExtResource( 392 ), ExtResource( 263 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5049,9 +5049,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 341 ), ExtResource( 341 ), ExtResource( 339 ), ExtResource( 339 ), ExtResource( 338 ), ExtResource( 337 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 370 ), ExtResource( 371 ), ExtResource( 396 ), ExtResource( 350 ), ExtResource( 396 ), ExtResource( 371 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 374 ), ExtResource( 373 ), ExtResource( 372 ), ExtResource( 373 ) ],
@@ -5069,9 +5069,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 370 ), ExtResource( 371 ), ExtResource( 396 ), ExtResource( 350 ), ExtResource( 396 ), ExtResource( 371 ) ],
-"loop": true,
-"name": "idle_angry",
+"frames": [ ExtResource( 341 ), ExtResource( 341 ), ExtResource( 339 ), ExtResource( 339 ), ExtResource( 338 ), ExtResource( 337 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5423,14 +5423,14 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 329 ), ExtResource( 255 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 357 ), ExtResource( 382 ), ExtResource( 322 ), ExtResource( 382 ) ],
 "loop": true,
 "name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 329 ), ExtResource( 255 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5441,14 +5441,14 @@ animations = [ {
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 361 ), ExtResource( 361 ), ExtResource( 361 ), ExtResource( 361 ), ExtResource( 335 ), ExtResource( 336 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 326 ), ExtResource( 324 ), ExtResource( 352 ), ExtResource( 324 ) ],
 "loop": true,
 "name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 361 ), ExtResource( 361 ), ExtResource( 361 ), ExtResource( 361 ), ExtResource( 335 ), ExtResource( 336 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5477,9 +5477,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 279 ), ExtResource( 280 ), ExtResource( 273 ), ExtResource( 273 ), ExtResource( 278 ), ExtResource( 270 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 294 ), ExtResource( 291 ), ExtResource( 286 ), ExtResource( 289 ), ExtResource( 286 ), ExtResource( 291 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 308 ), ExtResource( 307 ), ExtResource( 365 ), ExtResource( 307 ) ],
@@ -5497,9 +5497,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 294 ), ExtResource( 291 ), ExtResource( 286 ), ExtResource( 289 ), ExtResource( 286 ), ExtResource( 291 ) ],
-"loop": true,
-"name": "idle_angry",
+"frames": [ ExtResource( 279 ), ExtResource( 280 ), ExtResource( 273 ), ExtResource( 273 ), ExtResource( 278 ), ExtResource( 270 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5515,9 +5515,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 360 ), ExtResource( 345 ), ExtResource( 309 ), ExtResource( 290 ), ExtResource( 364 ), ExtResource( 358 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 302 ), ExtResource( 285 ), ExtResource( 265 ), ExtResource( 292 ), ExtResource( 265 ), ExtResource( 285 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 266 ), ExtResource( 268 ), ExtResource( 276 ), ExtResource( 268 ) ],
@@ -5525,9 +5525,9 @@ animations = [ {
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 302 ), ExtResource( 285 ), ExtResource( 265 ), ExtResource( 292 ), ExtResource( 265 ), ExtResource( 285 ) ],
-"loop": true,
-"name": "idle_angry",
+"frames": [ ExtResource( 360 ), ExtResource( 345 ), ExtResource( 309 ), ExtResource( 290 ), ExtResource( 364 ), ExtResource( 358 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5538,14 +5538,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 318 ), ExtResource( 301 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 354 ), ExtResource( 317 ), ExtResource( 271 ), ExtResource( 244 ) ],
 "loop": false,
 "name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 244 ), ExtResource( 318 ), ExtResource( 301 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5561,9 +5561,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 277 ), ExtResource( 277 ), ExtResource( 314 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 310 ), ExtResource( 311 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 297 ), ExtResource( 311 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 296 ), ExtResource( 353 ), ExtResource( 376 ), ExtResource( 353 ) ],
@@ -5581,9 +5581,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 310 ), ExtResource( 311 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 297 ), ExtResource( 311 ) ],
-"loop": true,
-"name": "idle_angry",
+"frames": [ ExtResource( 277 ), ExtResource( 277 ), ExtResource( 314 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -7533,6 +7533,14 @@ text = "Reset to Defaults"
 script = ExtResource( 235 )
 pressed_sfx = "Confirm"
 
+[node name="BackgroundColor" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.12549, 0.101961, 0.203922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ParallaxBackground" type="Node2D" parent="."]
 position = Vector2( -50, 0 )
 
@@ -7923,7 +7931,7 @@ self_modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 55 )
 animation = "idle"
-frame = 19
+frame = 2
 playing = true
 centered = false
 flip_v = true
@@ -7934,7 +7942,7 @@ self_modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 56 )
 animation = "idle"
-frame = 19
+frame = 2
 playing = true
 centered = false
 flip_v = true
@@ -7969,7 +7977,7 @@ self_modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 55 )
 animation = "idle"
-frame = 19
+frame = 2
 playing = true
 centered = false
 script = ExtResource( 73 )
@@ -7979,7 +7987,7 @@ self_modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 56 )
 animation = "idle"
-frame = 19
+frame = 2
 playing = true
 centered = false
 script = ExtResource( 117 )

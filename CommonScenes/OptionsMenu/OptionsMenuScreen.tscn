@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/InvincibilityOption.gd" type="Script" id=10]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=11]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/ColorsMenu/ColorsMenu.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -159,6 +160,9 @@ pause_mode = 2
 layer = 4
 script = ExtResource( 1 )
 
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+resources = [ PoolStringArray( "ColorsMenu" ), [ ExtResource( 13 ) ] ]
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/close = SubResource( 1 )
 
@@ -168,6 +172,9 @@ margin_top = -3.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0.247059, 0.054902, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ScreenBase" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
@@ -255,7 +262,6 @@ margin_bottom = 461.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_right = NodePath(".")
 theme = ExtResource( 2 )
-disabled = true
 text = "Edit Colors"
 script = ExtResource( 8 )
 pressed_sfx = "Confirm"
@@ -343,6 +349,9 @@ focus_neighbour_bottom = NodePath("../../FullscreenOption")
 theme = ExtResource( 2 )
 text = "Exit Options"
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 pressed_sfx = "Confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
@@ -403,6 +412,7 @@ one_shot = true
 [connection signal="right_pressed" from="MenuContainer/BGM_volume/ArrowsIndicator" to="MenuContainer/BGM_volume" method="_on_ArrowsIndicator_right_pressed"]
 [connection signal="left_pressed" from="MenuContainer/SfxVolume/ArrowsIndicator" to="MenuContainer/SfxVolume" method="_on_ArrowsIndicator_left_pressed"]
 [connection signal="right_pressed" from="MenuContainer/SfxVolume/ArrowsIndicator" to="MenuContainer/SfxVolume" method="_on_ArrowsIndicator_right_pressed"]
+[connection signal="pressed" from="MenuContainer/EditColors" to="." method="_on_EditColors_pressed"]
 [connection signal="pressed" from="MenuContainer/ResetSave" to="." method="_on_ResetSave_pressed"]
 [connection signal="pressed" from="MenuContainer/DebugMenu/Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="MenuContainer/DebugMenu/UnlockEverything" to="." method="_on_UnlockEverything_pressed"]

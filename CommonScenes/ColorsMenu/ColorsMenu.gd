@@ -9,8 +9,14 @@ func _ready():
 	menu_block.current_menu = menu_block.current_menu
 
 
-func _on_Exit_pressed():
-	close()
+func close():
+	Global.save()
+	if get_tree().get_current_scene() == self:
+		var menu_root = get_node("Menu/MenuRoot")
+		menu_root.hide()
+		hide()
+	else:
+		ScreenManager.black_transition_from_above()
 
 
 func _on_Reset_pressed():
@@ -25,14 +31,8 @@ func _on_ResetDefaults_pressed():
 	get_tree().call_group("interactive_color", "colors_changed")
 
 
-func close():
-	Global.save()
-	if get_tree().get_current_scene() == self:
-		var menu_root = get_node("Menu/MenuRoot")
-		menu_root.hide()
-		hide()
-	else:
-		ScreenManager.black_transition_from_above()
+func _on_Exit_pressed():
+	close()
 
 
 func _on_MenuWaves_activated():

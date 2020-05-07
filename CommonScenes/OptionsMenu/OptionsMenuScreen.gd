@@ -10,9 +10,10 @@ func _ready():
 	
 	animator = self.get_node("AnimationPlayer")
 	animator.assigned_animation = "close"
-	animator.seek(animator.get_current_animation_length(), true)
+	animator.seek(animator.current_animation_length, true)
 	animator.play_backwards("close")
 	
+	ScreenManager.connect("mid_transition_reached", self, "_on_ScreenManager_mid_transition_reached")
 	
 	if OS.is_debug_build():
 		_toggle_debug_menu(true)
@@ -26,6 +27,13 @@ func _toggle_debug_menu(value):
 	debug_menu_container.visible = !(!value)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	for button in debug_menu_container.get_children():
 		button.set_disabled(!value)
+
+
+func _on_ScreenManager_mid_transition_reached():
+	if ScreenManager.scene_above == self:
+		animator.seek(0, true)
+	else:
+		animator.seek(animator.current_animation_length, true)
 
 
 func _on_options_exit_pressed():
@@ -76,3 +84,8 @@ func _on_DebugButton_pressed():
 func _on_DebugTimer_timeout():
 	debug_count = 0
 
+
+
+func _on_EditColors_pressed():
+	var colors_menu = $ResourcePreloader.get_resource("ColorsMenu")
+	ScreenManager.black_transition(colors_menu, $MenuContainer/EditColors, self, true)

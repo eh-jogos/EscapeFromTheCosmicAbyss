@@ -33,9 +33,9 @@ func reset():
 	animation_loaded = false
 	load_without_animation = false
 
-func load_above(path, focus_path, origin_scene, path_is_node = false):
+func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 	scenes_bellow.append(origin_scene)
-	previous_focuses.append(focus_path)
+	previous_focuses.append(origin_focus_path)
 	
 	if path_is_node:
 		scene_above = path.instance()
@@ -182,11 +182,11 @@ func animation_ready():
 	animation_loaded = true
 	emit_signal("loading_started")
 
-func black_transition(path, focus_path, origin_scene):
+func black_transition(path, focus_path, origin_scene, path_is_node = false):
 	animation.play("black_transition")
 	yield(animation, "animation_finished")
+	load_above(path, focus_path, origin_scene, path_is_node)
 	emit_signal("mid_transition_reached")
-	load_above(path, focus_path, origin_scene)
 	animation.play("black_transition_out")
 	yield(animation, "animation_finished")
 	reset()
@@ -206,8 +206,8 @@ func black_transition_replace(path):
 func black_transition_from_above():
 	animation.play("black_transition")
 	yield(animation, "animation_finished")
-	emit_signal("mid_transition_reached")
 	clear_above()
+	emit_signal("mid_transition_reached")
 	animation.play("black_transition_out")
 	yield(animation, "animation_finished")
 	reset()
