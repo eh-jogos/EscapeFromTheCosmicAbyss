@@ -5,14 +5,14 @@ var animator
 func _ready():
 	animator = get_node("AnimationPlayer")
 	
-	var menu_block = get_node("Menu/MenuRoot/MenusBlock")
+	var menu_block = get_node("ColorsMenuLayer/MenuRoot/MenusBlock")
 	menu_block.current_menu = menu_block.current_menu
 
 
 func close():
 	Global.save()
 	if get_tree().get_current_scene() == self:
-		var menu_root = get_node("Menu/MenuRoot")
+		var menu_root = get_node("ColorsMenuLayer/MenuRoot")
 		menu_root.hide()
 		hide()
 	else:

@@ -4,7 +4,7 @@
 resource_name = "laser_eye"
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("ParallaxBackground/BackRowBossSkin:visible")
+tracks/0/path = NodePath("ColorsMenuLayer/ParallaxBackground/BackRowBossSkin:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -16,7 +16,7 @@ tracks/0/keys = {
 "values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ParallaxBackground/MidRowsBossSkin:visible")
+tracks/1/path = NodePath("ColorsMenuLayer/ParallaxBackground/MidRowsBossSkin:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -28,7 +28,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ParallaxBackground/FinalBoss/Boss:visible")
+tracks/2/path = NodePath("ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -40,7 +40,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Obstaculos/LaserEye:visible")
+tracks/3/path = NodePath("ColorsMenuLayer/Obstaculos/LaserEye:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -52,7 +52,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Obstaculos/Tentacles:visible")
+tracks/4/path = NodePath("ColorsMenuLayer/Obstaculos/Tentacles:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -64,7 +64,7 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Obstaculos/LaserEye/AnimationPlayer:playback/play")
+tracks/5/path = NodePath("ColorsMenuLayer/Obstaculos/LaserEye/AnimationPlayer:playback/play")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -76,7 +76,7 @@ tracks/5/keys = {
 "values": [ "hidden", "enter" ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("ParallaxBackground/MidBackRowsBossSkin:visible")
+tracks/6/path = NodePath("ColorsMenuLayer/ParallaxBackground/MidBackRowsBossSkin:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
