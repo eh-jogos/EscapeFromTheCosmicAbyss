@@ -1,8 +1,6 @@
 extends Node2D
 
 #Menu Paths
-export(String, FILE) var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
-export(String, FILE) var extras_path = "res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn"
 export(String, FILE) var game_path
 
 var continue_btn
@@ -18,8 +16,8 @@ var game_mode = "story"
 var last_focus
 var intro_cutscene = preload("res://Cutscenes/Cutscene1.tscn")
 
-onready var options_scene = load(options_path)
-onready var extras_scene = load(extras_path)
+onready var options_scene = $ResourcePreloader.get_resource("OptionsMenuScreen")
+onready var extras_scene = $ResourcePreloader.get_resource("ExtrasMenuScreen")
 
 func _ready():
 	
