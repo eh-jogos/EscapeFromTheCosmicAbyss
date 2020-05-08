@@ -30,9 +30,9 @@ __meta__ = {
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 margin_left = 1276.0
-margin_top = 199.0
+margin_top = 148.0
 margin_right = 1886.0
-margin_bottom = 938.0
+margin_bottom = 927.0
 rect_min_size = Vector2( 509, 356 )
 mouse_filter = 0
 custom_constants/separation = 5

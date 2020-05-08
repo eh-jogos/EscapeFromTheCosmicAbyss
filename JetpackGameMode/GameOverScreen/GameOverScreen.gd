@@ -212,7 +212,7 @@ func _on_focus_enter():
 		animator.play_backwards("fade out")
 		yield(animator, "animation_finished")
 		
-		if SoundManager.bgm_stream.is_paused():
+		if not SoundManager.bgm_stream.is_playing():
 			SoundManager.pause_bgm()
 		
 		upgrade_points = Global.savedata["story"]["upgrade points"]
