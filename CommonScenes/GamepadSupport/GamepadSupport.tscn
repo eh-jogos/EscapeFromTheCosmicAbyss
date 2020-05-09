@@ -1,7 +1,6 @@
-[gd_scene load_steps=154 format=2]
+[gd_scene load_steps=150 format=2]
 
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Keyboard/Keyboard_Black_6.png" type="Texture" id=1]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
 [ext_resource path="res://CommonScenes/GamepadSupport/GamepadSupport.gd" type="Script" id=3]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Keyboard/Keyboard_Black_0.png" type="Texture" id=4]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Keyboard/Keyboard_Black_1.png" type="Texture" id=5]
@@ -96,13 +95,11 @@
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/PS4/PS4_Dpad_Right.png" type="Texture" id=94]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_Square.png" type="Texture" id=95]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_Y.png" type="Texture" id=96]
-[ext_resource path="res://Fonts/OrbitronBlack30.font" type="BitmapFont" id=97]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_Left_Stick.png" type="Texture" id=98]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_LT.png" type="Texture" id=99]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_Minus.png" type="Texture" id=100]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_Plus.png" type="Texture" id=101]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_RB.png" type="Texture" id=102]
-[ext_resource path="res://CommonScenes/GamepadSupport/ButtonPrompt.tscn" type="PackedScene" id=103]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_Right_Stick.png" type="Texture" id=104]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Switch/Switch_RT.png" type="Texture" id=105]
 [ext_resource path="res://CommonScenes/GamepadSupport/Prompts/Xbox One/XboxOne_LB.png" type="Texture" id=106]
@@ -225,19 +222,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 )
 }
 
-[sub_resource type="Theme" id=5]
-Label/colors/font_color = Color( 1, 1, 1, 1 )
-Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
-Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
-Label/constants/line_spacing = 3
-Label/constants/shadow_as_outline = 0
-Label/constants/shadow_offset_x = 1
-Label/constants/shadow_offset_y = 1
-Label/fonts/font = ExtResource( 97 )
-Label/styles/normal = null
-
-[sub_resource type="Animation" id=3]
-resource_name = "base"
+[sub_resource type="Animation" id=4]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -252,8 +237,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "blink_loop"
+[sub_resource type="Animation" id=5]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -268,7 +252,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.4 ) ]
 }
 
-[node name="GamepadSupport" type="CanvasLayer"]
+[node name="JoypadSupport" type="CanvasLayer"]
 layer = 99
 script = ExtResource( 3 )
 
@@ -291,80 +275,6 @@ resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2"
 autoplay = "base"
 anims/base = SubResource( 1 )
 anims/press_button = SubResource( 2 )
-
-[node name="DebugControls" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="DebugControls"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_top = -7.0
-margin_bottom = 7.0
-grow_horizontal = 2
-grow_vertical = 2
-custom_fonts/font = ExtResource( 2 )
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Prompt" type="TextureRect" parent="DebugControls"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-stretch_mode = 4
-
-[node name="HBoxContainer" type="HBoxContainer" parent="DebugControls"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -256.0
-margin_top = -128.0
-margin_right = -50.0
-margin_bottom = -88.0
-grow_horizontal = 0
-grow_vertical = 2
-theme = SubResource( 5 )
-custom_constants/separation = 15
-alignment = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Prompt_ui_confirm" parent="DebugControls/HBoxContainer" instance=ExtResource( 103 )]
-
-[node name="Confirm" type="Label" parent="DebugControls/HBoxContainer"]
-margin_left = 65.0
-margin_top = 7.0
-margin_right = 197.0
-margin_bottom = 43.0
-text = "Confirm"
-
-[node name="Prompt_ui_cancel" parent="DebugControls/HBoxContainer" instance=ExtResource( 103 )]
-margin_left = 212.0
-margin_right = 262.0
-
-[node name="Cancel" type="Label" parent="DebugControls/HBoxContainer"]
-margin_left = 277.0
-margin_top = 7.0
-margin_right = 393.0
-margin_bottom = 43.0
-text = "Cancel"
 
 [node name="BackPanel" type="ColorRect" parent="."]
 visible = false
@@ -396,5 +306,5 @@ __meta__ = {
 
 [node name="LabelLooper" type="AnimationPlayer" parent="BackPanel/Label"]
 autoplay = "base"
-anims/base = SubResource( 3 )
-anims/blink_loop = SubResource( 4 )
+anims/base = SubResource( 4 )
+anims/blink_loop = SubResource( 5 )
