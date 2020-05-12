@@ -8,9 +8,38 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Button",
+"class": "BaseArrowsButton",
+"language": "GDScript",
+"path": "res://CommonScenes/Buttons/BaseArrowsButton.gd"
+}, {
+"base": "Resource",
+"class": "JS_InputMapAction",
+"language": "GDScript",
+"path": "res://CommonScenes/JoypadSupport/Resources/JS_InputMapAction.gd"
+}, {
+"base": "Node",
+"class": "JS_InputMapProfiles",
+"language": "GDScript",
+"path": "res://CommonScenes/JoypadSupport/ComponentScripts/JS_InputMapProfiles.gd"
+}, {
+"base": "Node",
+"class": "JS_JoypadIdentifier",
+"language": "GDScript",
+"path": "res://CommonScenes/JoypadSupport/ComponentScripts/JS_JoypadIdentifier.gd"
+}, {
+"base": "Node",
+"class": "JS_JoypadMapButton",
+"language": "GDScript",
+"path": "res://CommonScenes/JoypadSupport/ComponentScripts/JS_JoypadMapButton.gd"
+} ]
 _global_script_class_icons={
-
+"BaseArrowsButton": "",
+"JS_InputMapAction": "",
+"JS_InputMapProfiles": "",
+"JS_JoypadIdentifier": "",
+"JS_JoypadMapButton": ""
 }
 
 [application]

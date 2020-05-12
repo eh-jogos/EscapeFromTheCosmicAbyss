@@ -4,8 +4,11 @@ var fullscreen_btn
 var animator
 var debug_count = 0
 
+onready var options_menu = $OptionsContainer
+onready var controls_menu = $ControlsContainer
+
 func _ready():
-	fullscreen_btn = get_node("MenuContainer/FullscreenOption")
+	fullscreen_btn = get_node("OptionsContainer/FullscreenOption")
 	fullscreen_btn.grab_focus()
 	
 	animator = self.get_node("AnimationPlayer")
@@ -22,9 +25,9 @@ func _ready():
 
 
 func _toggle_debug_menu(value):
-	var debug_menu_container = get_node("MenuContainer/DebugMenu")
+	var debug_menu_container = get_node("OptionsContainer/DebugMenu")
 	
-	debug_menu_container.visible = !(!value)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	debug_menu_container.visible = value
 	for button in debug_menu_container.get_children():
 		button.set_disabled(!value)
 
@@ -68,7 +71,7 @@ func _on_UnlockEverything_pressed():
 
 
 func _on_DebugButton_pressed():
-	var debug_menu_container = get_node("MenuContainer/DebugMenu")
+	var debug_menu_container = get_node("OptionsContainer/DebugMenu")
 	var debug_timer = get_node("DebugButton/DebugTimer")
 	var is_visible = debug_menu_container.is_visible()
 	debug_count += 1
@@ -88,4 +91,16 @@ func _on_DebugTimer_timeout():
 
 func _on_EditColors_pressed():
 	var colors_menu = $ResourcePreloader.get_resource("ColorsMenu")
-	ScreenManager.black_transition(colors_menu, $MenuContainer/EditColors, self, true)
+	ScreenManager.black_transition(colors_menu, $OptionsContainer/EditColors, self, true)
+
+
+func _on_EditControls_pressed():
+	var first_control_butto = $ControlsContainer/Type
+	first_control_butto.grab_focus()
+	animator.play("go_to_controls")
+
+
+func _on_ControsMenuExit_pressed():
+	var previous_focus = $OptionsContainer/EditControls
+	previous_focus.grab_focus()
+	animator.play("go_to_menu")
