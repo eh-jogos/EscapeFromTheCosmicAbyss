@@ -1,14 +1,34 @@
+tool
 extends MarginContainer
-# Write your doc striing for this file here
+# Class to automatize almost everything related to showing Input Prompts. Just Instance the scene
+# where you need, set the export variables and it should always show the correct input prompt or a 
+# fallback label. Even though it's a tool, it doesn't work well on the editor, better tested on 
+# runtime.
+#
+# Exports:
+# - input_action - the name of the action you configured in the ProjectSettings or through code
+# - force_type - Default is NONE, and in this state it will prefer to show Joypad Prompts if there
+# 				 there is any in this action and if a Joypad is connected, otherwise it will show
+# 				 a Keyboard/Mouse prompt. KEYBOARD will force it to only show KEYBOARD/MOUSE prompts
+# 				 and JOYPAD will force it to only show JOYPAD prompts. (This is usefull if you want
+# 				 to let the user have different profiles for KEYBOARD/JOYPAD so that each menu only
+# 				 its relevant Prompts)
 
 ### Member Variables and Dependencies -----
 # signals 
 # enums
+enum ForceType {
+	NONE,
+	KEYBOARD,
+	JOYPAD
+}
 # constants
 # export variables
+export var input_action: = "" setget _set_input_action
+export(ForceType) var force_type: = ForceType.NONE
+
 # public variables
 # private variables
-var _input_action: String = ""
 var _event_keyboard: String = ""
 var _event_mouse: String = ""
 var _event_joybutton: String = ""
@@ -24,26 +44,22 @@ onready var _fallback: Label = get_node("Fallback")
 ### Built in Engine Methods ---------------
 
 func _ready():
-	_input_action = name.lstrip("Prompt_")
-	
-	if get_tree().current_scene == self:
-		randomize()
-		var actions_list: =InputMap.get_actions()
-		var random_index = randi() % actions_list.size()
-		_input_action = actions_list[random_index]
-	
-	_setup(_input_action)
+	if input_action == "":
+		push_warning("Undefined input_action")
+	_setup()
 	
 	if not get_tree().get_root().has_node("/root/JoypadSupport"):
 		push_error("Please register the JoypadSupport scene as an autoload on Project Settings " + \
 				"with JoypadSupport as name.Or change the code below to point to where " + \
-				"JoypadSupport is or it's equivalent.1")
+				"JoypadSupport is or it's equivalent.")
 		assert(false)
 	
 	# Both call backs do the same thing here, but kept them separate to facilitade customization
 	# or expansion of each event separately
 	JoypadSupport.connect("joypad_connected", self, "_on_JoypadSupport_joypad_connected")
 	JoypadSupport.connect("joypad_disconnected", self, "_on_JoypadSupport_joypad_disconnected")
+	JoypadSupport.connect("joypad_manually_changed", self, "_on_JoypadSupport_joypad_manually_changed")
+	JoypadSupport.connect("input_remapped", self, "_on_JoypadSupport_input_remapped")
 
 ### ---------------------------------------
 
@@ -53,26 +69,33 @@ func _ready():
 
 
 ### Private Methods -----------------------
-func _reset_event_variables():
-	_event_keyboard = ""
-	_event_mouse = ""
-	_event_joybutton = ""
-	_event_joyaxis = ""
+func _set_input_action(value) -> void:
+	input_action = value
+	if _prompt != null:
+		_setup()
 
 
-func _setup(input_action) -> void:
+func _setup() -> void:
 	_reset_event_variables()
 	var actions_list: = InputMap.get_actions()
 	if actions_list.has(input_action):
 		_setup_event_variables()
 		_setup_prompt_appearence()
 	else:
-		push_error("Couldn't find %s in input map list: %s"%[_input_action, actions_list])
-		assert(false)
+		if not Engine.editor_hint:
+			push_warning("Couldn't find %s in input map list: %s"%[input_action, actions_list])
+			assert(false)
+
+
+func _reset_event_variables() -> void:
+	_event_keyboard = ""
+	_event_mouse = ""
+	_event_joybutton = ""
+	_event_joyaxis = ""
 
 
 func _setup_event_variables() -> void:
-	var event_list: = InputMap.get_action_list(_input_action)
+	var event_list: = InputMap.get_action_list(input_action)
 	if event_list.size() > 0:
 		for event in event_list:
 			if event is InputEventKey and _event_keyboard == "":
@@ -84,12 +107,16 @@ func _setup_event_variables() -> void:
 			elif event is InputEventJoypadMotion and _event_joyaxis == "":
 				_event_joyaxis = str((event as InputEventJoypadMotion).axis)
 	else:
-		push_error("input map action has no events in it!" + \
-				" Register events for it in the Project Settings or through code")
-		assert(false)
+		if not Engine.editor_hint:
+			push_error("input map action has no events in it!" + \
+					" Register events for it in the Project Settings or through code")
+			assert(false)
 
 
 func _setup_prompt_appearence() -> void:
+	_prompt.texture = null
+	_fallback.text = ""
+	
 	var success: = false
 	success = _set_prompt_texture()
 	
@@ -102,17 +129,19 @@ func _setup_prompt_appearence() -> void:
 
 func _set_prompt_texture() -> bool:
 	var success: = false
-	if JoypadSupport.joypad_type == JoypadSupport.JoyPads.NO_JOYPAD:
-		if _event_keyboard != "":
-			success = _set_prompt_for(_event_keyboard)
-		elif _event_mouse != "":
-			success = _set_prompt_for(_event_mouse)
-	else:
+	
+	if (JoypadSupport.joypad_type != JoypadSupport.JoyPads.NO_JOYPAD \
+	or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
 		if _event_joybutton != "":
 			success = _set_prompt_for(_event_joybutton)
 		elif _event_joyaxis != "":
 			success = _set_prompt_for(_event_joyaxis)
 		elif _event_keyboard != "":
+			success = _set_prompt_for(_event_keyboard)
+		elif _event_mouse != "":
+			success = _set_prompt_for(_event_mouse)
+	else:
+		if _event_keyboard != "":
 			success = _set_prompt_for(_event_keyboard)
 		elif _event_mouse != "":
 			success = _set_prompt_for(_event_mouse)
@@ -141,8 +170,9 @@ func _get_prompt_texture_for(string_index: String) -> Texture:
 		_event_joybutton:
 			prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joybutton)
 		_event_joybutton:
-			print("Change this line once Joy Axis support is implemented")
-			assert(false)
+			print_debug("Change this line once Joy Axis support is implemented")
+			if not Engine.editor_hint:
+				assert(false)
 		_:
 			push_match_event_variables_error()
 	
@@ -151,17 +181,19 @@ func _get_prompt_texture_for(string_index: String) -> Texture:
 
 func _set_fallback_label() -> bool:
 	var success: = false
-	if JoypadSupport.joypad_type == JoypadSupport.JoyPads.NO_JOYPAD:
-		if _event_keyboard != "":
-			success = _set_fallback_for(_event_keyboard)
-		elif _event_mouse != "":
-			success = _set_fallback_for(_event_mouse)
-	else:
+	
+	if (JoypadSupport.joypad_type != JoypadSupport.JoyPads.NO_JOYPAD \
+	or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
 		if _event_joybutton != "":
 			success = _set_fallback_for(_event_joybutton)
 		elif _event_joyaxis != "":
 			success = _set_fallback_for(_event_joyaxis)
 		elif _event_keyboard != "":
+			success = _set_fallback_for(_event_keyboard)
+		elif _event_mouse != "":
+			success = _set_fallback_for(_event_mouse)
+	else:
+		if _event_keyboard != "":
 			success = _set_fallback_for(_event_keyboard)
 		elif _event_mouse != "":
 			success = _set_fallback_for(_event_mouse)
@@ -211,18 +243,24 @@ func _get_keyboard_string(scancode: int) -> String:
 
 
 func push_match_event_variables_error() -> void:
+	if Engine.editor_hint:
+		return
+	
 	push_error("If you got here it's because the string index doesn't match any " + \
 			"of the registered _event_* variables. That may mean the event list for " + \
 			"this particular action (%s) is empty, though if that's the case this " + \
 			"should have been caught by another exception already and you shouldn't be" + \
-			"here. Anyway, I hope this helps in debugging."
+			"here. Anyway, I hope this helps in debugging."%[input_action]
 	)
 	assert(false)
 
 
 func _push_fallback_failed_error() -> void:
+	if Engine.editor_hint:
+		return
+	
 	push_error("Unable to set prompt or fallback text for any of the events in %s: "\
-			%[_input_action] + \
+			%[input_action] + \
 			"_event_keyboard: %s | "%[_event_keyboard] + \
 			"_event_mouse: %s | "%[_event_mouse] + \
 			"_event_joybutton: %s | "%[_event_joybutton] + \
@@ -232,10 +270,22 @@ func _push_fallback_failed_error() -> void:
 
 
 func _on_JoypadSupport_joypad_connected() -> void:
-	_setup(_input_action)
+	_setup()
 
 
 func _on_JoypadSupport_joypad_disconnected() -> void:
-	_setup(_input_action)
+	_setup()
+
+
+func _on_JoypadSupport_joypad_manually_changed() -> void:
+	if force_type == ForceType.KEYBOARD \
+	or force_type == ForceType.NONE and Input.get_connected_joypads().size() == 0:
+		return
+	
+	_setup()
+
+
+func _on_JoypadSupport_input_remapped() -> void:
+	_setup()
 
 ### ---------------------------------------

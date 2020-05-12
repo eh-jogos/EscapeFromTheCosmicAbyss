@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://CommonScenes/JoypadSupport/PromptInputAction.gd" type="Script" id=1]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.gd" type="Script" id=1]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_Esc.png" type="Texture" id=2]
 
-
-[node name="Prompt_input_action" type="MarginContainer"]
+[node name="PromptInputAction" type="MarginContainer"]
 margin_right = 100.0
 margin_bottom = 100.0
 script = ExtResource( 1 )
@@ -14,6 +14,7 @@ __meta__ = {
 [node name="Prompt" type="TextureRect" parent="."]
 margin_right = 100.0
 margin_bottom = 100.0
+texture = ExtResource( 2 )
 expand = true
 stretch_mode = 6
 
