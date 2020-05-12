@@ -1,6 +1,7 @@
-[gd_scene load_steps=150 format=2]
+[gd_scene load_steps=154 format=2]
 
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_6.png" type="Texture" id=1]
+[ext_resource path="res://CommonScenes/JoypadSupport/PressAnyInput.gd" type="Script" id=2]
 [ext_resource path="res://CommonScenes/JoypadSupport/JoypadSupport.gd" type="Script" id=3]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_0.png" type="Texture" id=4]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_1.png" type="Texture" id=5]
@@ -95,11 +96,13 @@
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Right.png" type="Texture" id=94]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Square.png" type="Texture" id=95]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Y.png" type="Texture" id=96]
+[ext_resource path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_JoypadIdentifier.gd" type="Script" id=97]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick.png" type="Texture" id=98]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LT.png" type="Texture" id=99]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Minus.png" type="Texture" id=100]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Plus.png" type="Texture" id=101]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_RB.png" type="Texture" id=102]
+[ext_resource path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_InputMapProfiles.gd" type="Script" id=103]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick.png" type="Texture" id=104]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_RT.png" type="Texture" id=105]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_LB.png" type="Texture" id=106]
@@ -124,6 +127,7 @@
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Windows.png" type="Texture" id=125]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick.png" type="Texture" id=126]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_X.png" type="Texture" id=127]
+[ext_resource path="res://CommonScenes/JoypadSupport/JS_ConfigSaver.gd" type="Script" id=128]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LB.png" type="Texture" id=130]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Triangle.png" type="Texture" id=131]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_B.png" type="Texture" id=132]
@@ -174,7 +178,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "animation"
-tracks/2/path = NodePath("BackPanel/Label/LabelLooper")
+tracks/2/path = NodePath("BackPanel/PressAnyInput/LabelLooper")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -186,7 +190,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "press_button"
-length = 1.5
+length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("BackPanel:visible")
 tracks/0/interp = 1
@@ -206,20 +210,20 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "animation"
-tracks/2/path = NodePath("BackPanel/Label/LabelLooper")
+tracks/2/path = NodePath("BackPanel/PressAnyInput/LabelLooper")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "clips": PoolStringArray( "", "blink_loop" ),
-"times": PoolRealArray( 0, 0.5 )
+"times": PoolRealArray( 0, 0.3 )
 }
 
 [sub_resource type="Animation" id=3]
@@ -256,6 +260,15 @@ tracks/0/keys = {
 layer = 99
 script = ExtResource( 3 )
 
+[node name="JoypadIdentifier" type="Node" parent="."]
+script = ExtResource( 97 )
+
+[node name="ControlProfiles" type="Node" parent="."]
+script = ExtResource( 103 )
+
+[node name="ConfigSaver" type="Node" parent="."]
+script = ExtResource( 128 )
+
 [node name="Keyboard" type="ResourcePreloader" parent="."]
 resources = [ PoolStringArray( "126", "16777217", "16777218", "16777220", "16777221", "16777222", "16777223", "16777224", "16777226", "16777229", "16777230", "16777231", "16777232", "16777233", "16777234", "16777235", "16777236", "16777237", "16777238", "16777239", "16777240", "16777241", "16777242", "16777244", "16777245", "16777246", "16777247", "16777248", "16777249", "16777250", "16777251", "16777252", "16777253", "16777254", "16777255", "16777260", "16777261", "16777345", "16777346", "16777347", "16777349", "16777350", "16777351", "16777352", "16777353", "16777354", "16777355", "16777356", "16777357", "16777358", "16777359", "32", "34", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "59", "61", "63", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93" ), [ ExtResource( 84 ), ExtResource( 37 ), ExtResource( 83 ), ExtResource( 24 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 55 ), ExtResource( 32 ), ExtResource( 71 ), ExtResource( 53 ), ExtResource( 34 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 68 ), ExtResource( 67 ), ExtResource( 78 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 17 ), ExtResource( 28 ), ExtResource( 64 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 22 ), ExtResource( 80 ), ExtResource( 62 ), ExtResource( 70 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 81 ), ExtResource( 74 ), ExtResource( 69 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 80 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 77 ), ExtResource( 69 ), ExtResource( 73 ), ExtResource( 16 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 72 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 82 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 26 ) ] ]
 
@@ -286,8 +299,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="BackPanel"]
-modulate = Color( 1, 1, 1, 0.4 )
+[node name="PressAnyInput" type="Label" parent="BackPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -299,12 +311,15 @@ margin_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = ExtResource( 151 )
-text = "Press any Button"
+text = "Press any key"
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LabelLooper" type="AnimationPlayer" parent="BackPanel/Label"]
+[node name="LabelLooper" type="AnimationPlayer" parent="BackPanel/PressAnyInput"]
 autoplay = "base"
 anims/base = SubResource( 3 )
 anims/blink_loop = SubResource( 4 )
+[connection signal="joypad_connected" from="." to="BackPanel/PressAnyInput" method="_on_JoypadSupport_joypad_connected"]
+[connection signal="joypad_disconnected" from="." to="BackPanel/PressAnyInput" method="_on_JoypadSupport_joypad_disconnected"]
