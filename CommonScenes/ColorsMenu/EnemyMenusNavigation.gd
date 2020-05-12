@@ -12,7 +12,7 @@ func _ready():
 	set_process_input(false)
 	self.current_menu = current_menu
 	
-	if not Engine.is_editor_hint():
+	if not Engine.editor_hint:
 		Global = get_node("/root/Global")
 		Global.connect("navigated_to_right", self, "_on_Global_navigated_to_right")
 		Global.connect("navigated_to_left", self, "_on_Global_navigated_to_left")
@@ -41,7 +41,7 @@ func _set_current_menu(value):
 			Tween.TRANS_CUBIC, Tween.EASE_OUT)
 	tween.start()
 	
-	if not Engine.is_editor_hint():
+	if not Engine.editor_hint:
 		previous_menu_node.deactivate()
 		menu_node.activate()
 
