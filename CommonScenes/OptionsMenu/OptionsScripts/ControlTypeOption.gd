@@ -19,7 +19,7 @@ func _ready():
 	JoypadSupport.connect("joypad_connected", self, "_on_JoypadSupport_joypad_connected")
 	JoypadSupport.connect("joypad_disconnected", self, "_on_JoypadSupport_joypad_disconnected")
 	
-	if JoypadSupport.joypad_type == JoypadSupport.JoyPads.NO_JOYPAD:
+	if JoypadSupport.get_joypad_type() == JS_JoypadIdentifier.JoyPads.NO_JOYPAD:
 		animator.play("keyboard_menu")
 	else:
 		animator.play("joypad_menu")

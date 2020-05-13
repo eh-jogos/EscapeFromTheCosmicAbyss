@@ -14,7 +14,7 @@ func _ready():
 	animator = self.get_node("AnimationPlayer")
 	animator.assigned_animation = "close"
 	animator.seek(animator.current_animation_length, true)
-	animator.play_backwards("close")
+	animator.play("open")
 	
 	ScreenManager.connect("mid_transition_reached", self, "_on_ScreenManager_mid_transition_reached")
 	

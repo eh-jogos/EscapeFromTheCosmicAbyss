@@ -6,9 +6,9 @@ extends BaseArrowsButton
 # enums
 # constants
 const possible_skins: = {
-	"Xbox": JoypadSupport.JoyPads.XBOX,
-	"Playstation": JoypadSupport.JoyPads.PLAYSTATION,
-	"Switch": JoypadSupport.JoyPads.NINTENDO,
+	"Xbox": JS_JoypadIdentifier.JoyPads.XBOX,
+	"Playstation": JS_JoypadIdentifier.JoyPads.PLAYSTATION,
+	"Switch": JS_JoypadIdentifier.JoyPads.NINTENDO,
 }
 
 const text_string = "Gamepad Skin: %s"
@@ -60,12 +60,12 @@ func _set_option(increment: int) -> void:
 func _translate_chosen_skin() -> String:
 	var key: = ""
 	match _chosen_skin:
-		JoypadSupport.JoyPads.UNINDENTIFIED, \
-		JoypadSupport.JoyPads.XBOX:
+		JS_JoypadIdentifier.JoyPads.UNINDENTIFIED, \
+		JS_JoypadIdentifier.JoyPads.XBOX:
 			key = "Xbox"
-		JoypadSupport.JoyPads.PLAYSTATION:
+		JS_JoypadIdentifier.JoyPads.PLAYSTATION:
 			key = "Playstation"
-		JoypadSupport.JoyPads.NINTENDO:
+		JS_JoypadIdentifier.JoyPads.NINTENDO:
 			key = "Switch"
 		_:
 			push_error("Uregistered possible skin: %s | Possible Skins: %s"%[
