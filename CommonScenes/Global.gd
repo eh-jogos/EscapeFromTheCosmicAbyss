@@ -182,8 +182,11 @@ func check_savefile():
 		OS.set_window_fullscreen(savedata["options"]["fullscreen"])
 	else:
 		print("NO FULLSCREEN OPTION ON SAVE")
-	
-	print(savedata)
+
+
+func reset_savefile():
+	savedata = base_savedata
+	save()
 
 
 func save():
@@ -276,8 +279,11 @@ func read():
 			savedata["options"]["sfx volume"] = old_save["options"]["sfx volume"]
 		
 		savefile.close()
-		print(savedata)
 		save()
+	
+	if OS.is_debug_build():
+		printraw(var2str(savedata))
+		printraw("\n")
 
 
 func update_highscore(game_mode, points):
@@ -413,11 +419,6 @@ func is_tutorial_completed():
 
 func is_story_completed():
 	return savedata["story"]["story beaten"]
-
-
-func reset_savefile():
-	savedata = base_savedata
-	save()
 
 
 func reset_story_progress():
