@@ -5,6 +5,7 @@ signal transition_ended
 signal loading_started
 
 signal scene_above_loaded(scene_node)
+signal scene_above_cleared(scene_below)
 signal scene_loaded(scene)
 
 # I learned this in this link 
@@ -92,6 +93,7 @@ func clear_above():
 	if previous_focus != null and previous_focus.has_method("grab_focus"):
 		previous_focus.grab_focus()
 	
+	emit_signal("scene_above_cleared", scene_below)
 	print("Scenes Below: %s | Scene Below: %s | Previous Focus: %s "%[
 			_get_scenes_below_names(),
 			scene_below.get_name(),

@@ -33,13 +33,18 @@ func _ready():
 	toggle_menuitems(game_mode)
 	
 	Global.connect("update_main_menu", self, "_on_Global_update_main_menu")
+	ScreenManager.connect("scene_above_cleared", self, "_on_ScreenManager_scene_abovel_cleared")
+	
+	$TextureFrame/PromptLegendConfirmCancel.fade_in()
 
 func _on_options_pressed():
 	last_focus = options_btn
+	$TextureFrame/PromptLegendConfirmCancel.fade_out()
 	ScreenManager.load_above(options_scene, last_focus, self, true)
 
 func _on_Extras_pressed():
 	last_focus = extras_btn
+	$TextureFrame/PromptLegendConfirmCancel.fade_out()
 	ScreenManager.load_above(extras_scene, last_focus, self, true)
 
 func _on_quit_pressed():
@@ -141,3 +146,8 @@ func _on_Category_pressed(upgrade_points):
 func _on_Global_update_main_menu():
 	game_mode = "story"
 	toggle_menuitems(false)
+
+
+func _on_ScreenManager_scene_abovel_cleared(back_to_scene: Node) -> void:
+	if self == back_to_scene:
+		$TextureFrame/PromptLegendConfirmCancel.fade_in()

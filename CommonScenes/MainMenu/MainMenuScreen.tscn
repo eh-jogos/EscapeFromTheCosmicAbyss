@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Fonts/OrbitronBold30.font" type="BitmapFont" id=7]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=10]
 
 [node name="MainMenuScreen" type="Node2D"]
 pause_mode = 2
@@ -27,6 +28,10 @@ texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PromptLegendConfirmCancel" parent="TextureFrame" instance=ExtResource( 10 )]
+margin_top = -43.0
+margin_bottom = -43.0
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 margin_left = 1276.0
