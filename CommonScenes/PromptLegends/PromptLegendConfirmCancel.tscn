@@ -1,9 +1,103 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=1]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.gd" type="Script" id=3]
 
-[node name="PromptLegendConfirmCancel" type="HBoxContainer"]
+[sub_resource type="Animation" id=3]
+resource_name = "base"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "editor"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="PromptLegendConfirmCancel" type="Control"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "base"
+anims/base = SubResource( 3 )
+anims/editor = SubResource( 4 )
+anims/fade_in = SubResource( 1 )
+anims/fade_out = SubResource( 2 )
+
+[node name="BGStrip" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -98.0
+margin_bottom = -17.0
+mouse_filter = 2
+color = Color( 0.14, 0.06, 0.15, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LegendContainer" type="HBoxContainer" parent="."]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -22,42 +116,41 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AcceptPrompt" type="HBoxContainer" parent="."]
-margin_left = 259.0
-margin_right = 780.0
+[node name="AcceptPrompt" type="HBoxContainer" parent="LegendContainer"]
+margin_right = 577.0
 margin_bottom = 80.0
+mouse_filter = 2
 custom_constants/separation = 10
 
-[node name="Prompt_ui_accept" parent="AcceptPrompt" instance=ExtResource( 2 )]
-margin_right = 80.0
+[node name="Prompt_ui_accept" parent="LegendContainer/AcceptPrompt" instance=ExtResource( 2 )]
+margin_right = 136.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
-mouse_filter = 2
 input_action = "ui_accept"
 
-[node name="ConfirmChange" type="Label" parent="AcceptPrompt"]
-margin_left = 90.0
+[node name="ConfirmChange" type="Label" parent="LegendContainer/AcceptPrompt"]
+margin_left = 146.0
 margin_top = 12.0
-margin_right = 521.0
+margin_right = 577.0
 margin_bottom = 68.0
 text = "Confirm / Change"
 
-[node name="CancelPrompt" type="HBoxContainer" parent="."]
-margin_left = 810.0
-margin_right = 1072.0
+[node name="CancelPrompt" type="HBoxContainer" parent="LegendContainer"]
+margin_left = 607.0
+margin_right = 977.0
 margin_bottom = 80.0
+mouse_filter = 2
 custom_constants/separation = 10
 
-[node name="Prompt_ui_accept" parent="CancelPrompt" instance=ExtResource( 2 )]
-margin_right = 80.0
+[node name="Prompt_ui_accept" parent="LegendContainer/CancelPrompt" instance=ExtResource( 2 )]
+margin_right = 188.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
-mouse_filter = 2
 input_action = "ui_cancel"
 
-[node name="Cancel" type="Label" parent="CancelPrompt"]
-margin_left = 90.0
+[node name="Cancel" type="Label" parent="LegendContainer/CancelPrompt"]
+margin_left = 198.0
 margin_top = 12.0
-margin_right = 262.0
+margin_right = 370.0
 margin_bottom = 68.0
 text = "Cancel"
