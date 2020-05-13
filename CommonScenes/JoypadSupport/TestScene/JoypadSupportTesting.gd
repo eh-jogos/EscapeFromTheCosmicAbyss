@@ -79,7 +79,7 @@ func _update_joypad_name():
 	var joypad_layout: Label = get_node("IdentifiedLayout")
 	var device_name: = Input.get_joy_name(0)
 	joypad_name.text = device_name
-	joypad_layout.text = JoypadSupport.JoyPads.keys()[JoypadSupport.joypad_type]
+	joypad_layout.text = JS_JoypadIdentifier.JoyPads.keys()[JoypadSupport.get_joypad_type()]
 
 
 func _on_JoypadSupport_joypad_connected() -> void:

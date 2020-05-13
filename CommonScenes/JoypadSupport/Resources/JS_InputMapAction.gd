@@ -1,7 +1,7 @@
-tool
 extends Resource
 class_name JS_InputMapAction
-# Write your doc striing for this file here
+# Custom Resource to help create Input Map Profiles and change events in actions. Used by and in
+# conjunction with JoypadSupport autoload.
 
 ### Member Variables and Dependencies -----
 # signals 

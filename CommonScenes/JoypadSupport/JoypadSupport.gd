@@ -1,4 +1,3 @@
-tool
 extends CanvasLayer
 # Takes care of identifying Joypads and providing prompt images for registered actions, either
 # Joypad prompts if there is any Joypad Connected or Keyboard/Mouse prompts if there isn't any.
@@ -28,13 +27,6 @@ signal input_entered(input_map_action)
 signal input_remapped
 
 # enums
-enum JoyPads {
-	NO_JOYPAD,
-	XBOX,
-	PLAYSTATION,
-	NINTENDO,
-	UNINDENTIFIED,
-}
 
 enum Modes {
 	NONE,
@@ -45,12 +37,9 @@ enum Modes {
 # constants
 # export variables
 # public variables
-var joypad_type: int = JoyPads.NO_JOYPAD
-var was_ui_accept_manually_swapped: = false
-
 onready var prompts_keyboard: ResourcePreloader = get_node("Keyboard")
 onready var prompts_mouse: ResourcePreloader = get_node("Mouse")
-onready var prompts_joypad: ResourcePreloader = get_node("Xbox")
+onready var prompts_joypad: ResourcePreloader = get_node("JoypadIdentifier/Xbox")
 
 # private variables
 var _listen_mode = Modes.NONE
@@ -64,6 +53,7 @@ var _swapped_accept_event = JS_InputMapAction.new("ui_accept",
 var _swapped_cancel_event = JS_InputMapAction.new("ui_cancel", 
 		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_DS_B)
 
+onready var _configs: JS_Config = get_node("Configs") as JS_Config
 onready var _joypad_identifier: JS_JoypadIdentifier = get_node("JoypadIdentifier")
 onready var _animator: AnimationPlayer = get_node("AnimationPlayer")
 
@@ -73,14 +63,14 @@ onready var _animator: AnimationPlayer = get_node("AnimationPlayer")
 ### Built in Engine Methods ---------------
 
 func _ready() -> void:
-	if Engine.editor_hint:
-		$BackPanel.hide()
+	if not get_autodetect():
+		update_joypad_prompts_manually()
 	
 	set_process_input(false)
 	Input.connect("joy_connection_changed", self, "_on_Input_joy_connection_changed")
 	var input_devices = Input.get_connected_joypads()
 	if input_devices.size() > 0:
-		_set_joypad_type(input_devices[0], true)
+		_set_joypad(input_devices[0], true)
 
 
 func _input(event) -> void:
@@ -134,8 +124,8 @@ func change_action_event_type(input_map_action: JS_InputMapAction):
 	_erase_all_event_type_from(action_name, event)
 	InputMap.action_add_event(action_name, event)
 	emit_signal("input_remapped")
-	var event_list = InputMap.get_action_list(action_name)
-	print("Event List: %s"%[event_list])
+	_configs.rebuild_actions()
+	_configs.save()
 
 
 func change_profile_to(profile_name: String) -> void:
@@ -148,28 +138,48 @@ func change_profile_to(profile_name: String) -> void:
 
 
 func set_autodetect_to(on_off: bool) -> void:
-	_joypad_identifier._set_autodetect_to(on_off)
+	_configs.should_autodetect_joypad_skin = on_off
+	_configs.save()
 	if get_autodetect():
 		var input_devices = Input.get_connected_joypads()
 		if input_devices.size() > 0:
-			_set_joypad_type(input_devices[0], true)
+			_set_joypad(input_devices[0], true)
+	else:
+		update_joypad_prompts_manually()
 
 
 func get_autodetect() -> bool:
-	return _joypad_identifier._get_autodetect()
+	return _configs.should_autodetect_joypad_skin
 
 
 func set_chosen_skin(skin: int) -> void:
-	_joypad_identifier._set_chosen_skin(skin)
-	update_joypad_prompts_manually()
+	_configs.chosen_skin = skin
+	_configs.save()
+	if not get_autodetect():
+		update_joypad_prompts_manually()
 
 
 func get_chosen_skin() -> int:
-	return _joypad_identifier._get_chosen_skin()
+	return _configs.chosen_skin
+
+
+func get_joypad_type() -> int:
+	if not get_autodetect():
+		return get_chosen_skin()
+	
+	return _joypad_identifier.joypad_type
+
+
+func set_was_ui_accept_manually_swapped(on_off: bool) -> void:
+	_configs.was_ui_accept_manually_swapped = on_off
+	_configs.save()
+
+
+func was_ui_accept_manually_swapped() -> bool:
+	return _configs.was_ui_accept_manually_swapped
 
 
 func update_joypad_prompts_manually() -> void:
-	joypad_type = _joypad_identifier.get_joypad_type("")
 	_handle_swap_ui_accept_cancel()
 	prompts_joypad = _joypad_identifier.get_joypad_prompts()
 	emit_signal("joypad_manually_changed")
@@ -183,10 +193,9 @@ func swap_ui_accept_and_cancel(was_manually_swapped: = false):
 		change_action_event_type(_swapped_accept_event)
 		change_action_event_type(_swapped_cancel_event)
 	
-	if was_manually_swapped != was_ui_accept_manually_swapped:
+	if was_manually_swapped != was_ui_accept_manually_swapped():
 		emit_signal("joypad_manually_changed")
-	
-	was_ui_accept_manually_swapped = was_manually_swapped
+		set_was_ui_accept_manually_swapped(was_manually_swapped)
 
 
 func are_ui_accept_and_cancel_swapped() -> bool:
@@ -228,15 +237,14 @@ func _listen_input() -> Dictionary:
 	return input_dictionary
 
 
-func _set_joypad_type(device: int, is_connected: bool) -> void:
+func _set_joypad(device: int, is_connected: bool) -> void:
 	if is_connected:
-		var device_name: = Input.get_joy_name(device)
-		joypad_type = _joypad_identifier.get_joypad_type(device_name)
+		_joypad_identifier.set_joypad_type_for(device)
 		_handle_swap_ui_accept_cancel()
 		prompts_joypad = _joypad_identifier.get_joypad_prompts()
 		emit_signal("joypad_connected")
 	else:
-		joypad_type = JoyPads.NO_JOYPAD
+		_joypad_identifier.reset_joypad_type()
 		emit_signal("joypad_disconnected")
 
 
@@ -255,25 +263,36 @@ func _get_prompt_for(loader: ResourcePreloader, index: String) -> Texture:
 
 
 func _handle_swap_ui_accept_cancel():
-	var is_auto_swapped: = are_ui_accept_and_cancel_swapped() and not was_ui_accept_manually_swapped
-	var is_user_swapped: = are_ui_accept_and_cancel_swapped() and was_ui_accept_manually_swapped 
-	var should_be_autoswapped: = not are_ui_accept_and_cancel_swapped() and not was_ui_accept_manually_swapped
-	var should_be_user_swapped: = not are_ui_accept_and_cancel_swapped() and was_ui_accept_manually_swapped
-	match joypad_type:
-		JoyPads.NINTENDO:
+	var is_auto_swapped: = \
+			are_ui_accept_and_cancel_swapped() \
+			and not was_ui_accept_manually_swapped()
+	var is_user_swapped: = \
+			are_ui_accept_and_cancel_swapped() \
+			and was_ui_accept_manually_swapped()
+	var should_be_autoswapped: = \
+			not are_ui_accept_and_cancel_swapped() \
+			and not was_ui_accept_manually_swapped()
+	var should_be_user_swapped: = \
+			not are_ui_accept_and_cancel_swapped() \
+			and was_ui_accept_manually_swapped()
+	
+	match get_joypad_type():
+		JS_JoypadIdentifier.JoyPads.NINTENDO:
 			if should_be_autoswapped:
 				swap_ui_accept_and_cancel()
 			elif is_user_swapped:
-				swap_ui_accept_and_cancel(was_ui_accept_manually_swapped)
-		JoyPads.PLAYSTATION, JoyPads.XBOX, JoyPads.UNINDENTIFIED:
+				swap_ui_accept_and_cancel(was_ui_accept_manually_swapped())
+		JS_JoypadIdentifier.JoyPads.PLAYSTATION, \
+		JS_JoypadIdentifier.JoyPads.XBOX, \
+		JS_JoypadIdentifier.JoyPads.UNINDENTIFIED:
 			if is_auto_swapped:
 				swap_ui_accept_and_cancel()
 			elif should_be_user_swapped:
-				swap_ui_accept_and_cancel(was_ui_accept_manually_swapped)
-		JoyPads.NO_JOYPAD:
+				swap_ui_accept_and_cancel(was_ui_accept_manually_swapped())
+		JS_JoypadIdentifier.JoyPads.NO_JOYPAD:
 			pass
 		_:
-			push_error("Undefined Joypad: %s"%[joypad_type])
+			push_error("Undefined Joypad: %s"%[get_joypad_type()])
 			assert(false)
 
 
@@ -292,4 +311,4 @@ func _erase_all_event_type_from(action_name: String, new_event: InputEvent) -> v
 
 func _on_Input_joy_connection_changed(device: int, is_connected: bool) -> void:
 	#print("Input device: %s, is_connected: %s"%[device, is_connected])
-	_set_joypad_type(device, is_connected)
+	_set_joypad(device, is_connected)

@@ -1,24 +1,35 @@
-tool
 extends Node
 class_name JS_JoypadIdentifier
 # Class to be used as a component of JoypadSupport. It abstracts the logic of Identifying which
 # Joypad is connected, and delaing with other related functionality, like setting Joypad Prompts
-# skin or setting a fixed one.
+# skin or setting a fixed one. 
+#
+# To use it standalone you'll either have to remove the autodetect checks from `_get_joypad_type_for`
+# and `get_joypad_prompts` methods, extend this script to override then. You'll also have to detect
+# when a Joypad was plugged in elsewhere, as this is what JoypadSupport autoload is for, and then
+# call the methods in this class from there. For an example check `_set_joypad` on the JoypadSupport
+# autoload and when/how it's called there.
 
 ### Member Variables and Dependencies -----
 # signals 
 # enums
+enum JoyPads {
+	NO_JOYPAD,
+	XBOX,
+	PLAYSTATION,
+	NINTENDO,
+	UNINDENTIFIED,
+}
+
 # constants
 # export variables
 # public variables
+var joypad_type: int = JoyPads.NO_JOYPAD
+
 # private variables
-var _should_autodetect_joypad_skin: = true
-
-onready var _chosen_skin = JoypadSupport.JoyPads.UNINDENTIFIED
-
-onready var _prompts_ps: ResourcePreloader = owner.get_node("Playstation")
-onready var _prompts_xbox: ResourcePreloader = owner.get_node("Xbox")
-onready var _prompts_nintendo: ResourcePreloader = owner.get_node("Nintendo")
+onready var _prompts_ps: ResourcePreloader = get_node("Playstation")
+onready var _prompts_xbox: ResourcePreloader = get_node("Xbox")
+onready var _prompts_nintendo: ResourcePreloader = get_node("Nintendo")
 
 ### ---------------------------------------
 
@@ -29,18 +40,18 @@ onready var _prompts_nintendo: ResourcePreloader = owner.get_node("Nintendo")
 
 
 ### Public Methods ------------------------
-func get_joypad_type(device_name: String) -> int:
-	if not _should_autodetect_joypad_skin:
-		return _chosen_skin
-	
-	var type: = _get_type_for(device_name)
-	return type
+func reset_joypad_type():
+	joypad_type = JoyPads.NO_JOYPAD
+
+
+func set_joypad_type_for(device: int) -> void:
+	var device_name: = Input.get_joy_name(device)
+	joypad_type = _get_joypad_type_for(device_name)
 
 
 func get_joypad_prompts() -> ResourcePreloader:
-	var joypad_type = JoypadSupport.joypad_type
-	if not _should_autodetect_joypad_skin:
-		joypad_type = _chosen_skin
+	if not JoypadSupport.get_autodetect():
+		joypad_type = JoypadSupport.get_chosen_skin()
 	
 	var joypad_prompts: = _get_prompt_for(joypad_type)
 	return joypad_prompts
@@ -49,17 +60,24 @@ func get_joypad_prompts() -> ResourcePreloader:
 
 
 ### Private Methods -----------------------
+func _get_joypad_type_for(device_name: String) -> int:
+	if not JoypadSupport.get_autodetect():
+		return JoypadSupport.get_chosen_skin()
+	
+	return _get_type_for(device_name)
+
+
 func _get_type_for(device_name: String) -> int:
-	var type: int = JoypadSupport.JoyPads.UNINDENTIFIED
+	var type: int = JoyPads.UNINDENTIFIED
 	
 	if device_name.find("PS") != -1:
-		type = JoypadSupport.JoyPads.PLAYSTATION
-	elif device_name.find("Nintendo") != -1 or device_name.find("Steam") != -1:
-		type = JoypadSupport.JoyPads.NINTENDO
+		type = JoyPads.PLAYSTATION
+	elif device_name.find("Nintendo") != -1:
+		type = JoyPads.NINTENDO
 	elif device_name.find("Xbox") != -1 or \
 		device_name.find("XBOX") != -1 or \
 		device_name.find("X360") != -1:
-		type = JoypadSupport.JoyPads.XBOX
+		type = JoyPads.XBOX
 	
 	return type
 
@@ -68,39 +86,23 @@ func _get_prompt_for(type: int) -> ResourcePreloader:
 	var joypad_prompts: ResourcePreloader = null
 	
 	match type:
-		JoypadSupport.JoyPads.PLAYSTATION:
+		JoyPads.PLAYSTATION:
 			joypad_prompts = _prompts_ps
-		JoypadSupport.JoyPads.NINTENDO:
+		JoyPads.NINTENDO:
 			joypad_prompts = _prompts_nintendo
-		JoypadSupport.JoyPads.XBOX, JoypadSupport.JoyPads.UNINDENTIFIED:
+		JoyPads.XBOX, JoyPads.UNINDENTIFIED:
 			joypad_prompts = _prompts_xbox
 		_:
-			if JoypadSupport.joypad_type == JoypadSupport.JoyPads.NO_JOYPAD:
+			if joypad_type == JoyPads.NO_JOYPAD:
 				push_error("There should be no joypad, what are you doing here? Or if there" \
 					+ "is a joypad, what AM I doing here?")
 				assert(false)
 			else:
 				print_debug("unregistered joypad type (%s), defaulting to xbox"%[
-					JoypadSupport.JoyPads.keys()[JoypadSupport.joypad_type]])
+					JoyPads.keys()[joypad_type]])
 			joypad_prompts = _prompts_xbox
 	
 	return joypad_prompts
-
-
-func _set_autodetect_to(on_off: bool) -> void:
-	_should_autodetect_joypad_skin = on_off
-
-
-func _get_autodetect() -> bool:
-	return _should_autodetect_joypad_skin
-
-
-func _set_chosen_skin(skin: int) -> void:
-	_chosen_skin = skin
-
-
-func _get_chosen_skin() -> int:
-	return _chosen_skin
 
 ### ---------------------------------------
 

@@ -127,7 +127,7 @@
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Windows.png" type="Texture" id=125]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick.png" type="Texture" id=126]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_X.png" type="Texture" id=127]
-[ext_resource path="res://CommonScenes/JoypadSupport/JS_ConfigSaver.gd" type="Script" id=128]
+[ext_resource path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_Config.gd" type="Script" id=128]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LB.png" type="Texture" id=130]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Triangle.png" type="Texture" id=131]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_B.png" type="Texture" id=132]
@@ -263,26 +263,29 @@ script = ExtResource( 3 )
 [node name="JoypadIdentifier" type="Node" parent="."]
 script = ExtResource( 97 )
 
+[node name="Playstation" type="ResourcePreloader" parent="JoypadIdentifier"]
+resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2", "3", "4", "5", "6", "7", "8", "9", "Dpad", "Screenshot" ), [ ExtResource( 147 ), ExtResource( 115 ), ExtResource( 141 ), ExtResource( 108 ), ExtResource( 111 ), ExtResource( 139 ), ExtResource( 138 ), ExtResource( 94 ), ExtResource( 137 ), ExtResource( 131 ), ExtResource( 143 ), ExtResource( 116 ), ExtResource( 145 ), ExtResource( 134 ), ExtResource( 107 ), ExtResource( 123 ), ExtResource( 142 ), ExtResource( 148 ) ] ]
+
+[node name="Xbox" type="ResourcePreloader" parent="JoypadIdentifier"]
+resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2", "3", "4", "5", "6", "7", "8", "9", "Dpad" ), [ ExtResource( 150 ), ExtResource( 132 ), ExtResource( 125 ), ExtResource( 120 ), ExtResource( 112 ), ExtResource( 135 ), ExtResource( 124 ), ExtResource( 110 ), ExtResource( 93 ), ExtResource( 119 ), ExtResource( 106 ), ExtResource( 121 ), ExtResource( 136 ), ExtResource( 122 ), ExtResource( 126 ), ExtResource( 109 ), ExtResource( 133 ) ] ]
+
+[node name="Nintendo" type="ResourcePreloader" parent="JoypadIdentifier"]
+resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2", "3", "4", "5", "6", "7", "8", "9", "Dpad", "Screenshot" ), [ ExtResource( 146 ), ExtResource( 117 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 118 ), ExtResource( 149 ), ExtResource( 114 ), ExtResource( 140 ), ExtResource( 96 ), ExtResource( 127 ), ExtResource( 130 ), ExtResource( 102 ), ExtResource( 99 ), ExtResource( 105 ), ExtResource( 98 ), ExtResource( 104 ), ExtResource( 113 ), ExtResource( 95 ) ] ]
+
 [node name="ControlProfiles" type="Node" parent="."]
 script = ExtResource( 103 )
 
-[node name="ConfigSaver" type="Node" parent="."]
+[node name="Configs" type="Node" parent="."]
 script = ExtResource( 128 )
+_dir_path = "user://config/"
+_file_name = "joypad_settings.save"
+_actions_to_save = [ "boost", "dash", "shoot" ]
 
 [node name="Keyboard" type="ResourcePreloader" parent="."]
 resources = [ PoolStringArray( "126", "16777217", "16777218", "16777220", "16777221", "16777222", "16777223", "16777224", "16777226", "16777229", "16777230", "16777231", "16777232", "16777233", "16777234", "16777235", "16777236", "16777237", "16777238", "16777239", "16777240", "16777241", "16777242", "16777244", "16777245", "16777246", "16777247", "16777248", "16777249", "16777250", "16777251", "16777252", "16777253", "16777254", "16777255", "16777260", "16777261", "16777345", "16777346", "16777347", "16777349", "16777350", "16777351", "16777352", "16777353", "16777354", "16777355", "16777356", "16777357", "16777358", "16777359", "32", "34", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "59", "61", "63", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93" ), [ ExtResource( 84 ), ExtResource( 37 ), ExtResource( 83 ), ExtResource( 24 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 55 ), ExtResource( 32 ), ExtResource( 71 ), ExtResource( 53 ), ExtResource( 34 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 68 ), ExtResource( 67 ), ExtResource( 78 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 17 ), ExtResource( 28 ), ExtResource( 64 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 22 ), ExtResource( 80 ), ExtResource( 62 ), ExtResource( 70 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 81 ), ExtResource( 74 ), ExtResource( 69 ), ExtResource( 60 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 80 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 77 ), ExtResource( 69 ), ExtResource( 73 ), ExtResource( 16 ), ExtResource( 23 ), ExtResource( 27 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 63 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 72 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 82 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 25 ), ExtResource( 13 ), ExtResource( 26 ) ] ]
 
 [node name="Mouse" type="ResourcePreloader" parent="."]
 resources = [ PoolStringArray( "1", "2", "3", "4", "5", "NeutralMouse" ), [ ExtResource( 14 ), ExtResource( 92 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 15 ) ] ]
-
-[node name="Playstation" type="ResourcePreloader" parent="."]
-resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2", "3", "4", "5", "6", "7", "8", "9", "Dpad", "Screenshot" ), [ ExtResource( 147 ), ExtResource( 115 ), ExtResource( 141 ), ExtResource( 108 ), ExtResource( 111 ), ExtResource( 139 ), ExtResource( 138 ), ExtResource( 94 ), ExtResource( 137 ), ExtResource( 131 ), ExtResource( 143 ), ExtResource( 116 ), ExtResource( 145 ), ExtResource( 134 ), ExtResource( 107 ), ExtResource( 123 ), ExtResource( 142 ), ExtResource( 148 ) ] ]
-
-[node name="Xbox" type="ResourcePreloader" parent="."]
-resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2", "3", "4", "5", "6", "7", "8", "9", "Dpad" ), [ ExtResource( 150 ), ExtResource( 132 ), ExtResource( 125 ), ExtResource( 120 ), ExtResource( 112 ), ExtResource( 135 ), ExtResource( 124 ), ExtResource( 110 ), ExtResource( 93 ), ExtResource( 119 ), ExtResource( 106 ), ExtResource( 121 ), ExtResource( 136 ), ExtResource( 122 ), ExtResource( 126 ), ExtResource( 109 ), ExtResource( 133 ) ] ]
-
-[node name="Nintendo" type="ResourcePreloader" parent="."]
-resources = [ PoolStringArray( "0", "1", "10", "11", "12", "13", "14", "15", "2", "3", "4", "5", "6", "7", "8", "9", "Dpad", "Screenshot" ), [ ExtResource( 146 ), ExtResource( 117 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 118 ), ExtResource( 149 ), ExtResource( 114 ), ExtResource( 140 ), ExtResource( 96 ), ExtResource( 127 ), ExtResource( 130 ), ExtResource( 102 ), ExtResource( 99 ), ExtResource( 105 ), ExtResource( 98 ), ExtResource( 104 ), ExtResource( 113 ), ExtResource( 95 ) ] ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "base"
@@ -311,7 +314,7 @@ margin_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
 custom_fonts/font = ExtResource( 151 )
-text = "Press any key"
+text = "Press any button"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false

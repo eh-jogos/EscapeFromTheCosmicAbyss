@@ -1,4 +1,3 @@
-tool
 extends Label
 # Write your doc striing for this file here
 
@@ -19,6 +18,7 @@ const button_text = "Press any button"
 ### Built in Engine Methods ---------------
 
 func _ready():
+	yield(JoypadSupport, "ready")
 	_choose_text()
 	pass
 
@@ -31,8 +31,8 @@ func _ready():
 
 ### Private Methods -----------------------
 func _choose_text() -> void:
-	match owner.joypad_type:
-		owner.JoyPads.NO_JOYPAD:
+	match JoypadSupport.get_joypad_type():
+		JS_JoypadIdentifier.JoyPads.NO_JOYPAD:
 			text = key_text
 		_:
 			text = button_text

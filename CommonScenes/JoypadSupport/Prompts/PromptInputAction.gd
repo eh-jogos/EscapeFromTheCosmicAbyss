@@ -1,4 +1,3 @@
-tool
 extends MarginContainer
 # Class to automatize almost everything related to showing Input Prompts. Just Instance the scene
 # where you need, set the export variables and it should always show the correct input prompt or a 
@@ -130,7 +129,7 @@ func _setup_prompt_appearence() -> void:
 func _set_prompt_texture() -> bool:
 	var success: = false
 	
-	if (JoypadSupport.joypad_type != JoypadSupport.JoyPads.NO_JOYPAD \
+	if (JoypadSupport.get_joypad_type() != JS_JoypadIdentifier.JoyPads.NO_JOYPAD \
 	or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
 		if _event_joybutton != "":
 			success = _set_prompt_for(_event_joybutton)
@@ -182,7 +181,7 @@ func _get_prompt_texture_for(string_index: String) -> Texture:
 func _set_fallback_label() -> bool:
 	var success: = false
 	
-	if (JoypadSupport.joypad_type != JoypadSupport.JoyPads.NO_JOYPAD \
+	if (JoypadSupport.get_joypad_type() != JS_JoypadIdentifier.JoyPads.NO_JOYPAD \
 	or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
 		if _event_joybutton != "":
 			success = _set_fallback_for(_event_joybutton)
