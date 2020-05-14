@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=2]
-[ext_resource path="res://CommonScenes/PromptLegends/BaseLegend.tscn" type="PackedScene" id=3]
+[ext_resource path="res://CommonScenes/PromptLegends/BaseLegend.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=3]
 
-[node name="LegendConfirmCancel" instance=ExtResource( 3 )]
+[node name="LegendConfirmChangeCancel" instance=ExtResource( 2 )]
 
 [node name="AcceptPrompt" type="HBoxContainer" parent="RootControl/LegendContainer" index="0"]
-margin_right = 282.0
+margin_right = 521.0
 margin_bottom = 80.0
 mouse_filter = 2
 custom_constants/separation = 10
@@ -14,27 +14,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Prompt_ui_accept" parent="RootControl/LegendContainer/AcceptPrompt" index="0" instance=ExtResource( 2 )]
+[node name="Prompt_ui_accept" parent="RootControl/LegendContainer/AcceptPrompt" index="0" instance=ExtResource( 3 )]
 margin_right = 80.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
 input_action = "ui_accept"
 
-[node name="Confirm" type="Label" parent="RootControl/LegendContainer/AcceptPrompt" index="1"]
+[node name="ConfirmChange" type="Label" parent="RootControl/LegendContainer/AcceptPrompt" index="1"]
 margin_left = 90.0
 margin_top = 12.0
-margin_right = 282.0
+margin_right = 521.0
 margin_bottom = 68.0
-text = "Confirm"
+text = "Confirm / Change"
 
 [node name="CancelPrompt" type="HBoxContainer" parent="RootControl/LegendContainer" index="1"]
-margin_left = 312.0
-margin_right = 574.0
+margin_left = 551.0
+margin_right = 813.0
 margin_bottom = 80.0
 mouse_filter = 2
 custom_constants/separation = 10
 
-[node name="Prompt_ui_accept" parent="RootControl/LegendContainer/CancelPrompt" index="0" instance=ExtResource( 2 )]
+[node name="Prompt_ui_accept" parent="RootControl/LegendContainer/CancelPrompt" index="0" instance=ExtResource( 3 )]
 margin_right = 80.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 80, 80 )
