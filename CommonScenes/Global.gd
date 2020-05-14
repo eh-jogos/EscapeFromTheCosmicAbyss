@@ -18,6 +18,10 @@ signal navigated_to_right
 signal navigated_to_left
 # warning-ignore:unused_signal
 signal reset_color_pickers
+# warning-ignore:unused_signal
+signal color_picker_opened
+# warning-ignore:unused_signal
+signal color_picker_closed
 
 
 const DEFAULT_SILHOUETTE_COLOR = Color("1f122d") #Color("041411") #OR Color("1f122d")
@@ -170,6 +174,10 @@ func _ready():
 	base_savedata.colors = default_color_scheme.duplicate(true)
 	check_savefile()
 	get_tree().call_group("sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
+
+
+func _input(event):
+	_handle_mouse_pointer(event)
 
 
 func check_savefile():
@@ -455,3 +463,17 @@ func reset_story_progress():
 
 func reset_colors() -> void:
 	savedata.colors = default_color_scheme.duplicate(true)
+
+
+func _handle_mouse_pointer(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
+			var pointer_timer: Timer = $MousePointer
+			if pointer_timer.is_stopped():
+				pointer_timer.start()
+
+
+func _on_MousePointer_timeout():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
