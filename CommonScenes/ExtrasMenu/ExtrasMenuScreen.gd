@@ -29,9 +29,19 @@ func _ready():
 		if not button.is_connected("pressed", self, "_on_button_pressed"):
 			button.connect("pressed", self, "_on_button_pressed", [button])
 	
+	if credits_scene_path == "":
+		back.grab_focus()
+		intro.focus_neighbour_top = intro.get_path_to(back)
+	else:
+		credits.set_disabled(false)
+		credits.focus_mode = Control.FOCUS_ALL
+		credits.grab_focus()
+	
 	if Global.is_tutorial_completed() or Global.is_story_completed():
 		intro.set_disabled(false)
 		intro.focus_mode = Control.FOCUS_ALL
+		if back.has_focus():
+			intro.grab_focus()
 	
 	if last_unlocked_level > 5 or Global.is_story_completed():
 		level5.set_disabled(false)
@@ -41,16 +51,21 @@ func _ready():
 		ending.set_disabled(false)
 		ending.focus_mode = Control.FOCUS_ALL
 	
-	if credits_scene_path == "":
-		back.grab_focus()
-		intro.focus_neighbour_top = intro.get_path_to(back)
-	else:
-		credits.set_disabled(false)
-		credits.focus_mode = Control.FOCUS_ALL
-		credits.grab_focus()
 	
 	animator = self.get_node("AnimationPlayer")
-	animator.play_backwards("close")
+	animator.play("open")
+
+
+func _unhandled_input(event):
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
+	
+	if event.is_action_released("ui_cancel"):
+		var focus_button: Button = back
+		if focus_button.has_focus():
+			_on_Back_pressed()
+		else:
+			focus_button.grab_focus()
 
 
 func _on_button_pressed(node):
@@ -70,6 +85,7 @@ func _on_button_pressed(node):
 
 func _on_Back_pressed():
 	animator.play("close")
+	SoundManager.play_sfx("Confirm")
 	yield(animator, "animation_finished")
 	ScreenManager.clear_above()
 

@@ -14,7 +14,7 @@
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=12]
 [ext_resource path="res://CommonScenes/ColorsMenu/ColorsMenu.tscn" type="PackedScene" id=13]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=14]
-[ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=15]
+[ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmChangeCancel.tscn" type="PackedScene" id=15]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/ControlTypeOption.gd" type="Script" id=16]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/AutodetectSkinOption.gd" type="Script" id=17]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/PromptsSkinOption.gd" type="Script" id=18]
@@ -132,7 +132,7 @@ tracks/8/keys = {
 "values": [ false, false ]
 }
 tracks/9/type = "method"
-tracks/9/path = NodePath("PromptLegendConfirmCancel")
+tracks/9/path = NodePath("LegendConfirmChangeCancel")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -394,7 +394,7 @@ tracks/9/keys = {
 "values": [ Vector2( 1920, 840 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=4]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorFrame1:modulate:a")
@@ -505,7 +505,7 @@ tracks/8/keys = {
 "values": [ false, false ]
 }
 tracks/9/type = "method"
-tracks/9/path = NodePath("PromptLegendConfirmCancel")
+tracks/9/path = NodePath("LegendConfirmChangeCancel")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -519,8 +519,7 @@ tracks/9/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "joypad_menu"
+[sub_resource type="Animation" id=5]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:text")
@@ -633,8 +632,7 @@ tracks/8/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "keyboard_menu"
+[sub_resource type="Animation" id=6]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:text")
@@ -747,8 +745,7 @@ tracks/8/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "off"
+[sub_resource type="Animation" id=7]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:text")
@@ -799,8 +796,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, 513 ), Vector2( 0, 594 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "on"
+[sub_resource type="Animation" id=8]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:text")
@@ -851,7 +847,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, 594 ), Vector2( 0, 513 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -903,7 +899,7 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 0.1 ), Color( 1, 1, 1, 0.6 ), Color( 1, 1, 1, 0.3 ), Color( 1, 1, 1, 0.7 ), Color( 1, 1, 1, 0.2 ), Color( 1, 1, 1, 0.5 ) ]
 }
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxEmpty" id=10]
 
 [node name="OptionsMenuScreen" type="CanvasLayer"]
 pause_mode = 2
@@ -917,10 +913,10 @@ resources = [ PoolStringArray( "ColorsMenu" ), [ ExtResource( 13 ) ] ]
 anims/close = SubResource( 1 )
 anims/go_to_controls = SubResource( 2 )
 anims/go_to_menu = SubResource( 3 )
-anims/open = SubResource( 10 )
+anims/open = SubResource( 4 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color( 1, 1, 1, 0 )
 margin_top = -3.0
 margin_right = 1920.0
 margin_bottom = 1080.0
@@ -931,13 +927,13 @@ __meta__ = {
 
 [node name="ScreenBase" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_top = 121.0
+margin_top = 657.0
 margin_right = 1920.0
-margin_bottom = 961.0
+margin_bottom = 657.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 
 [node name="OptionsContainer" type="VBoxContainer" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -275.0
@@ -1102,7 +1098,6 @@ pressed_sfx = "Confirm"
 
 [node name="ControlsContainer" type="VBoxContainer" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -430.0
@@ -1131,8 +1126,8 @@ script = ExtResource( 16 )
 [node name="ArrowsIndicator" parent="ControlsContainer/Type" instance=ExtResource( 4 )]
 
 [node name="ControlTypeSelector" type="AnimationPlayer" parent="ControlsContainer/Type"]
-anims/joypad_menu = SubResource( 4 )
-anims/keyboard_menu = SubResource( 5 )
+anims/joypad_menu = SubResource( 5 )
+anims/keyboard_menu = SubResource( 6 )
 
 [node name="PromptsArea" type="MarginContainer" parent="ControlsContainer"]
 margin_top = 81.0
@@ -1334,8 +1329,8 @@ script = ExtResource( 17 )
 [node name="ArrowsIndicator" parent="ControlsContainer/AutodetectSkin" instance=ExtResource( 4 )]
 
 [node name="AutodetectSelector" type="AnimationPlayer" parent="ControlsContainer/AutodetectSkin"]
-anims/off = SubResource( 6 )
-anims/on = SubResource( 7 )
+anims/off = SubResource( 7 )
+anims/on = SubResource( 8 )
 
 [node name="PromptsSkin" type="Button" parent="ControlsContainer"]
 visible = false
@@ -1388,6 +1383,7 @@ __meta__ = {
 pressed_sfx = "Confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1407,18 +1403,20 @@ region_rect = Rect2( 0, 760, 1920, 0 )
 
 [node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
 autoplay = "loop"
-anims/loop = SubResource( 8 )
+anims/loop = SubResource( 9 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
-margin_top = 115.0
-margin_right = 1920.0
-margin_bottom = 130.0
+margin_left = -2220.0
+margin_top = 652.0
+margin_right = -300.0
+margin_bottom = 667.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="BottomEdge" type="ColorRect" parent="."]
-margin_top = 952.0
-margin_right = 1920.0
-margin_bottom = 967.0
+margin_left = -2220.0
+margin_top = 652.0
+margin_right = -300.0
+margin_bottom = 667.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="DebugButton" type="Button" parent="."]
@@ -1428,17 +1426,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -200.0
 margin_top = -200.0
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 9 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/disabled = SubResource( 9 )
-custom_styles/normal = SubResource( 9 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 10 )
+custom_styles/normal = SubResource( 10 )
 
 [node name="DebugTimer" type="Timer" parent="DebugButton"]
 wait_time = 3.0
 one_shot = true
 
-[node name="PromptLegendConfirmCancel" parent="." instance=ExtResource( 15 )]
+[node name="LegendConfirmChangeCancel" parent="." instance=ExtResource( 15 )]
 [connection signal="left_pressed" from="OptionsContainer/FullscreenOption/ArrowsIndicator" to="OptionsContainer/FullscreenOption" method="_on_ArrowsIndicator_left_pressed"]
 [connection signal="right_pressed" from="OptionsContainer/FullscreenOption/ArrowsIndicator" to="OptionsContainer/FullscreenOption" method="_on_ArrowsIndicator_right_pressed"]
 [connection signal="left_pressed" from="OptionsContainer/BGM/ArrowsIndicator" to="OptionsContainer/BGM" method="_on_ArrowsIndicator_left_pressed"]

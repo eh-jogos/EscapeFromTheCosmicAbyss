@@ -103,6 +103,21 @@ func _ready():
 		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
 
 
+func _unhandled_input(event) -> void:
+	if not visible:
+		return
+	
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
+	
+	if event.is_action_pressed("ui_cancel"):
+		var focus_button: Button = quit_btn
+		if focus_button.has_focus():
+			_on_quit_pressed()
+		else:
+			focus_button.grab_focus()
+
+
 func open():
 	var score = game.get_score()
 	print_score(score, label_score)

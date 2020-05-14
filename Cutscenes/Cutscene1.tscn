@@ -1,6 +1,7 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=1]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/backgroun_space.png" type="Texture" id=3]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/spaceship.png" type="Texture" id=4]
 [ext_resource path="res://Cutscenes/pngs/Cutscene1/page01/rift.png" type="Texture" id=5]
@@ -3342,12 +3343,22 @@ rect_min_size = Vector2( 0, 40 )
 mouse_filter = 0
 size_flags_horizontal = 3
 theme = ExtResource( 50 )
+custom_constants/separation = 5
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PromptInputAction" parent="Buttons" instance=ExtResource( 2 )]
+margin_left = 766.0
+margin_right = 823.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 57, 57 )
+input_action = "ui_accept"
+
 [node name="Next" parent="Buttons" instance=ExtResource( 51 )]
+margin_left = 828.0
+margin_right = 907.0
 
 [node name="separator" type="Control" parent="Buttons"]
 margin_left = 912.0
@@ -3355,9 +3366,16 @@ margin_right = 937.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 25, 0 )
 
+[node name="PromptInputAction2" parent="Buttons" instance=ExtResource( 2 )]
+margin_left = 942.0
+margin_right = 999.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 57, 57 )
+input_action = "ui_cancel"
+
 [node name="Skip" parent="Buttons" instance=ExtResource( 51 )]
-margin_left = 941.0
-margin_right = 1011.0
+margin_left = 1004.0
+margin_right = 1074.0
 text = "Skip"
 [connection signal="pressed" from="Buttons/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Buttons/Skip" to="." method="_on_Skip_pressed"]

@@ -35,6 +35,22 @@ func _ready():
 	
 	pass
 
+
+func _unhandled_input(event) -> void:
+	if not visible:
+		return
+	
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
+	
+	if event.is_action_pressed("ui_cancel"):
+		var focus_button: Button = $ButtonsBlock/Quit
+		if focus_button.has_focus():
+			_on_quit_pressed()
+		else:
+			focus_button.grab_focus()
+
+
 func _input(event):
 	if event.is_action_pressed("pause") and (game.get_game_state() == 0 or game.get_game_state() == 2):
 		if self.is_visible():

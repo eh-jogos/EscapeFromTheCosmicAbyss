@@ -76,3 +76,4 @@ func _set_selected_part(value):
 	print(actual_part)
 	color_picker.selected_part = actual_part
 	color_picker.set_current_color()
+

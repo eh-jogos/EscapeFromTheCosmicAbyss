@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
 [ext_resource path="res://Fonts/OrbitronMedium67.font" type="BitmapFont" id=3]
 [ext_resource path="res://Fonts/OrbitronBlack72.font" type="BitmapFont" id=4]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "base"
@@ -69,7 +70,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Label:self_modulate:a")
+tracks/5/path = NodePath("HBoxContainer:self_modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -144,7 +145,7 @@ tracks/4/keys = {
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Label:self_modulate:a")
+tracks/5/path = NodePath("HBoxContainer:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -153,27 +154,36 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.6, 1 ),
 "transitions": PoolRealArray( 1, 4, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "", "blinking" ),
+"times": PoolRealArray( 0, 1 )
 }
 
 [sub_resource type="Animation" id=3]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate:a")
+tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.5, 0.9 ),
+"times": PoolRealArray( 0, 0.5, 0.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.2, 1.0 ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.3 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="CountdownScreen" type="Node2D"]
 pause_mode = 2
-modulate = Color( 1, 1, 1, 0 )
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -188,10 +198,8 @@ margin_bottom = 1080.0
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="LevelNum" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -100.0
 margin_top = 180.0
-margin_right = 1826.0
+margin_right = 1926.0
 margin_bottom = 275.0
 mouse_filter = 1
 size_flags_vertical = 0
@@ -200,10 +208,8 @@ text = "Level Num"
 align = 1
 
 [node name="LevelTitle" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -100.0
 margin_top = 282.0
-margin_right = 1823.0
+margin_right = 1923.0
 margin_bottom = 377.0
 mouse_filter = 1
 size_flags_vertical = 0
@@ -211,18 +217,53 @@ custom_fonts/font = ExtResource( 3 )
 text = "Level Title"
 align = 1
 
-[node name="Label" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 1.1 )
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
 margin_top = 454.0
 margin_right = 1920.0
 margin_bottom = 540.0
-mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 4 )
-text = "Press \"up\" to start"
-align = 1
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
-autoplay = "blinking"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer"]
 anims/blinking = SubResource( 3 )
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+modulate = Color( 1, 1, 1, 1.1 )
+margin_left = 615.0
+margin_top = 7.0
+margin_right = 858.0
+margin_bottom = 93.0
+mouse_filter = 1
+custom_fonts/font = ExtResource( 4 )
+text = "Press"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PromptInputAction" parent="HBoxContainer" instance=ExtResource( 5 )]
+margin_left = 878.0
+margin_right = 978.0
+rect_min_size = Vector2( 100, 100 )
+input_action = "boost"
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+margin_left = 998.0
+margin_top = 7.0
+margin_right = 1304.0
+margin_bottom = 93.0
+mouse_filter = 1
+custom_fonts/font = ExtResource( 4 )
+text = "to start"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

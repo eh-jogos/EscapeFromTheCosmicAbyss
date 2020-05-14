@@ -18,6 +18,7 @@ var intro_cutscene = preload("res://Cutscenes/Cutscene1.tscn")
 
 onready var options_scene = $ResourcePreloader.get_resource("OptionsMenuScreen")
 onready var extras_scene = $ResourcePreloader.get_resource("ExtrasMenuScreen")
+onready var prompt_legend = $PromptLegendConfirmCancel
 
 func _ready():
 	
@@ -35,16 +36,36 @@ func _ready():
 	Global.connect("update_main_menu", self, "_on_Global_update_main_menu")
 	ScreenManager.connect("scene_above_cleared", self, "_on_ScreenManager_scene_abovel_cleared")
 	
-	$TextureFrame/PromptLegendConfirmCancel.fade_in()
+	prompt_legend.fade_in()
+
+
+func _unhandled_input(event):
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
+	
+	if event.is_action_released("ui_cancel"):
+		if game_mode == "story":
+			var focus_button: Button = $MenuContainer/QuitGame
+			if focus_button.has_focus():
+				_on_quit_pressed()
+			else:
+				focus_button.grab_focus()
+		else:
+			var focus_button: Button = $MenuContainer/Back
+			if focus_button.has_focus():
+				_on_Back_pressed()
+			else:
+				focus_button.grab_focus()
+
 
 func _on_options_pressed():
 	last_focus = options_btn
-	$TextureFrame/PromptLegendConfirmCancel.fade_out()
+	prompt_legend.fade_out()
 	ScreenManager.load_above(options_scene, last_focus, self, true)
 
 func _on_Extras_pressed():
 	last_focus = extras_btn
-	$TextureFrame/PromptLegendConfirmCancel.fade_out()
+	prompt_legend.fade_out()
 	ScreenManager.load_above(extras_scene, last_focus, self, true)
 
 func _on_quit_pressed():
@@ -55,12 +76,13 @@ func _on_quit_pressed():
 
 func _on_Continue_pressed():
 	Global.set_game_mode("story", "select level")
+	prompt_legend.fade_out()
 	ScreenManager.load_screen(game_path)
 
 func _on_NewGame_pressed():
 	Global.reset_story_progress()
 	Global.set_game_mode("story", "level selected")
-	
+	prompt_legend.fade_out()
 	ScreenManager.load_screen(game_path)
 
 
@@ -150,4 +172,4 @@ func _on_Global_update_main_menu():
 
 func _on_ScreenManager_scene_abovel_cleared(back_to_scene: Node) -> void:
 	if self == back_to_scene:
-		$TextureFrame/PromptLegendConfirmCancel.fade_in()
+		prompt_legend.fade_in()

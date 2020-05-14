@@ -136,6 +136,15 @@ func _ready():
 	_on_Reset_pressed()
 	
 	animator.play_backwards("close")
+
+
+func _unhandled_input(event) -> void:
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
 	
-	
-	pass
+	if event.is_action_pressed("ui_cancel"):
+		var focus_button: Button = close_btn
+		if focus_button.has_focus():
+			_on_Close_pressed()
+		else:
+			focus_button.grab_focus()

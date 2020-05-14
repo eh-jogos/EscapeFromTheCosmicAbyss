@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=1]
+[ext_resource path="res://CommonScenes/Buttons/CutsceneButton.gd" type="Script" id=2]
 [ext_resource path="res://Cutscenes/pngs/Cutscene2/background_column.png" type="Texture" id=3]
 [ext_resource path="res://Cutscenes/pngs/Cutscene2/frame1/image.png" type="Texture" id=4]
 [ext_resource path="res://Cutscenes/pngs/Cutscene2/frame1/ballons/balloon1_blank.png" type="Texture" id=5]
@@ -10,6 +11,8 @@
 [ext_resource path="res://Cutscenes/pngs/Cutscene2/frame2/balloon1_blank.png" type="Texture" id=9]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=10]
 [ext_resource path="res://CommonScenes/Buttons/CutsceneButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.gd" type="Script" id=12]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "00_base"
@@ -583,9 +586,31 @@ rect_min_size = Vector2( 0, 40 )
 mouse_filter = 0
 size_flags_horizontal = 3
 theme = ExtResource( 10 )
+custom_constants/separation = 5
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Next" parent="Buttons" instance=ExtResource( 11 )]
+[node name="PromptInputAction" type="MarginContainer" parent="Buttons" instance=ExtResource( 13 )]
+margin_left = 766.0
+margin_right = 823.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 57, 57 )
+mouse_filter = 2
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+input_action = "ui_accept"
+
+[node name="Next" type="Button" parent="Buttons" instance=ExtResource( 11 )]
+margin_left = 828.0
+margin_right = 907.0
+margin_bottom = 57.0
+custom_constants/hseparation = 50
+text = "Next"
+script = ExtResource( 2 )
 
 [node name="separator" type="Control" parent="Buttons"]
 margin_left = 912.0
@@ -593,9 +618,24 @@ margin_right = 937.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 25, 0 )
 
-[node name="Skip" parent="Buttons" instance=ExtResource( 11 )]
-margin_left = 941.0
-margin_right = 1011.0
+[node name="PromptInputAction2" type="MarginContainer" parent="Buttons" instance=ExtResource( 13 )]
+margin_left = 942.0
+margin_right = 999.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 57, 57 )
+mouse_filter = 2
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+input_action = "ui_cancel"
+
+[node name="Skip" type="Button" parent="Buttons" instance=ExtResource( 11 )]
+margin_left = 1004.0
+margin_right = 1074.0
+margin_bottom = 57.0
+custom_constants/hseparation = 50
 text = "Skip"
+script = ExtResource( 2 )
 [connection signal="pressed" from="Buttons/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Buttons/Skip" to="." method="_on_Skip_pressed"]

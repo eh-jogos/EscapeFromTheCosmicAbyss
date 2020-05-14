@@ -19,12 +19,21 @@ func _ready():
 	
 	next_button = get_node("Buttons/Next")
 	next_button.grab_focus()
+	next_button.release_focus()
 	
 	scenes = get_node("Scenes").get_children()
 	current_scene = 0
 	setup_next_scene_animator()
+
+
+func _unhandled_input(event):
+	if event.is_action("ui_cancel") or event.is_action("ui_accept"):
+		get_viewport().set_input_as_handled()
 	
-	
+	if event.is_action_released("ui_cancel") and not event.is_echo():
+		_on_Skip_pressed()
+	elif event.is_action_released("ui_accept") and not event.is_echo():
+		_on_Next_pressed()
 
 
 func setup_next_scene_animator():
@@ -90,7 +99,7 @@ func close():
 
 
 func _on_Skip_pressed():
-	print("Cutscenes.gd | SKIP PRESSED")
+	print_debug("Cutscenes.gd | SKIP PRESSED")
 	close()
 
 

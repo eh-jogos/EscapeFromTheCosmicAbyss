@@ -40,6 +40,8 @@ func _ready():
 	connect("focus_entered", self, "_on_focus_entered")
 	connect("focus_exited", self, "_on_focus_exited")
 	back_panel.connect("popup_hide", self, "_on_popup_hide")
+	back_panel.connect("visibility_changed", self, "_on_backpanel_visibility_changed")
+	
 	Global.connect("reset_color_pickers", self, "_on_Global_reset_color_pickers")
 
 func set_current_color():
@@ -179,3 +181,10 @@ func _name_color_picker_elements() -> void:
 	toggle_output_button.name = "ToggleOutputFormatButton"
 	hex_code_line_edit.name = "HexCodeLineEdit"
 	presets_line.name = "PresetsLine"
+
+
+func _on_backpanel_visibility_changed():
+	if back_panel.visible:
+		Global.emit_signal("color_picker_opened")
+	else:
+		Global.emit_signal("color_picker_closed")

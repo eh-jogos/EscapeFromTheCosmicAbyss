@@ -128,6 +128,9 @@ focus_neighbour_bottom = NodePath("../Quit")
 theme = ExtResource( 4 )
 text = "Back to Main Menu"
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 pressed_sfx = "Confirm"
 
 [node name="Quit" type="Button" parent="ButtonsBlock"]
@@ -142,6 +145,9 @@ focus_neighbour_bottom = NodePath("../Resume")
 theme = ExtResource( 4 )
 text = "Quit Game"
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="ButtonsBlock/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="ButtonsBlock/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="ButtonsBlock/LevelSelect" to="." method="_on_LevelSelect_pressed"]

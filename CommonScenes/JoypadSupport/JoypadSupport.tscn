@@ -257,7 +257,7 @@ tracks/0/keys = {
 }
 
 [node name="JoypadSupport" type="CanvasLayer"]
-layer = 99
+layer = 100
 script = ExtResource( 3 )
 
 [node name="JoypadIdentifier" type="Node" parent="."]

@@ -1,9 +1,9 @@
 extends CanvasLayer
 
 var fullscreen_btn
-var animator
 var debug_count = 0
 
+onready var animator = $AnimationPlayer
 onready var options_menu = $OptionsContainer
 onready var controls_menu = $ControlsContainer
 
@@ -11,9 +11,6 @@ func _ready():
 	fullscreen_btn = get_node("OptionsContainer/FullscreenOption")
 	fullscreen_btn.grab_focus()
 	
-	animator = self.get_node("AnimationPlayer")
-	animator.assigned_animation = "close"
-	animator.seek(animator.current_animation_length, true)
 	animator.play("open")
 	
 	ScreenManager.connect("mid_transition_reached", self, "_on_ScreenManager_mid_transition_reached")
@@ -22,6 +19,26 @@ func _ready():
 		_toggle_debug_menu(true)
 	else:
 		_toggle_debug_menu(false)
+
+
+func _unhandled_input(event):
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
+	
+	if event.is_action_released("ui_cancel"):
+		get_viewport().set_input_as_handled()
+		if animator.assigned_animation == "go_to_controls":
+			var focus_button: Button = $ControlsContainer/Control/ControsMenuExit
+			if focus_button.has_focus():
+				_on_ControsMenuExit_pressed()
+			else:
+				focus_button.grab_focus()
+		else:
+			var focus_button: Button = $OptionsContainer/Control/OptionsExit
+			if focus_button.has_focus():
+				_on_options_exit_pressed()
+			else:
+				focus_button.grab_focus()
 
 
 func _toggle_debug_menu(value):
@@ -33,10 +50,15 @@ func _toggle_debug_menu(value):
 
 
 func _on_ScreenManager_mid_transition_reached():
+	var legend_confirm_cancel: BaseLegend = $LegendConfirmChangeCancel
 	if ScreenManager.scene_above == self:
-		animator.seek(0, true)
-	else:
+		animator.assigned_animation = "open"
 		animator.seek(animator.current_animation_length, true)
+		legend_confirm_cancel.show()
+	else:
+		animator.assigned_animation = "close"
+		animator.seek(animator.current_animation_length, true)
+		legend_confirm_cancel.hide()
 
 
 func _on_options_exit_pressed():
@@ -45,7 +67,7 @@ func _on_options_exit_pressed():
 	SoundManager.change_bgm_track()
 	
 	animator.play("close")
-	
+	SoundManager.play_sfx("Confirm")
 	yield(animator, "animation_finished")
 	
 	ScreenManager.clear_above()
@@ -86,7 +108,6 @@ func _on_DebugButton_pressed():
 
 func _on_DebugTimer_timeout():
 	debug_count = 0
-
 
 
 func _on_EditColors_pressed():

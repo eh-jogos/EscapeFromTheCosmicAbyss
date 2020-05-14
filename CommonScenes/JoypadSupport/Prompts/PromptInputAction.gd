@@ -168,10 +168,8 @@ func _get_prompt_texture_for(string_index: String) -> Texture:
 			prompt_texture = JoypadSupport.get_mouse_prompt_for(_event_mouse)
 		_event_joybutton:
 			prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joybutton)
-		_event_joybutton:
-			print_debug("Change this line once Joy Axis support is implemented")
-			if not Engine.editor_hint:
-				assert(false)
+		_event_joyaxis:
+			push_warning("Change this line once Joy Axis support is implemented")
 		_:
 			push_match_event_variables_error()
 	
@@ -221,7 +219,7 @@ func _get_fallback_string_for(string_index: String) -> String:
 			fallback_string = "Mouse Button %s"%[index]
 		_event_joybutton:
 			fallback_string = Input.get_joy_button_string(index)
-		_event_joybutton:
+		_event_joyaxis:
 			fallback_string = "Axis %s"%[index]
 		_:
 			push_match_event_variables_error()
@@ -247,11 +245,12 @@ func push_match_event_variables_error() -> void:
 	
 	push_error("If you got here it's because the string index doesn't match any " + \
 			"of the registered _event_* variables. That may mean the event list for " + \
-			"this particular action (%s) is empty, though if that's the case this " + \
-			"should have been caught by another exception already and you shouldn't be" + \
-			"here. Anyway, I hope this helps in debugging."%[input_action]
+			"this particular action (%s) is empty, though if that's the case "%[input_action] + \
+			"this should have been caught by another exception already and you shouldn't be" + \
+			"here. Anyway, I hope this helps in debugging."
 	)
 	assert(false)
+	
 
 
 func _push_fallback_failed_error() -> void:

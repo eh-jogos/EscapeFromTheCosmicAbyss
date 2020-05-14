@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=100 format=2]
 
 [ext_resource path="res://Cutscenes/Cutscenes.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=2]
@@ -50,6 +50,8 @@
 [ext_resource path="res://Cutscenes/pngs/Cutscene3/page7/balloons/balloon2_blank.png" type="Texture" id=48]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=49]
 [ext_resource path="res://CommonScenes/Buttons/CutsceneButton.tscn" type="PackedScene" id=50]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.gd" type="Script" id=51]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=52]
 
 [sub_resource type="Animation" id=1]
 resource_name = "00_base"
@@ -3605,6 +3607,21 @@ mouse_filter = 0
 size_flags_horizontal = 3
 theme = ExtResource( 49 )
 alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PromptAccept" type="MarginContainer" parent="Buttons" instance=ExtResource( 52 )]
+margin_left = 768.0
+margin_right = 825.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 57, 57 )
+mouse_filter = 2
+script = ExtResource( 51 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+input_action = "ui_accept"
 
 [node name="Next" parent="Buttons" instance=ExtResource( 50 )]
 
@@ -3614,9 +3631,21 @@ margin_right = 937.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 25, 0 )
 
-[node name="Skip" parent="Buttons" instance=ExtResource( 50 )]
+[node name="PromptCancel" type="MarginContainer" parent="Buttons" instance=ExtResource( 52 )]
 margin_left = 941.0
-margin_right = 1011.0
+margin_right = 998.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 57, 57 )
+mouse_filter = 2
+script = ExtResource( 51 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+input_action = "ui_cancel"
+
+[node name="Skip" parent="Buttons" instance=ExtResource( 50 )]
+margin_left = 1002.0
+margin_right = 1072.0
 text = "Skip"
 [connection signal="pressed" from="Buttons/Next" to="." method="_on_Next_pressed"]
 [connection signal="pressed" from="Buttons/Skip" to="." method="_on_Skip_pressed"]
