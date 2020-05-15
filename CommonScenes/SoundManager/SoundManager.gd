@@ -15,8 +15,8 @@ var bgm_preview
 var sfx_list: Node
 
 var bgm_bus: int = AudioServer.get_bus_index("Bgm")
-var sfx_ui_bus: int = AudioServer.get_bus_index("UiSfx")
-var sfx_game_bus: int = AudioServer.get_bus_index("GameSfx")
+var sfx_bus_ui: int = AudioServer.get_bus_index("UiSfx")
+var sfx_bus_game: int = AudioServer.get_bus_index("GameSfx")
 
 var initial_volume: int
 var current_volume: int
@@ -33,8 +33,8 @@ func _ready():
 
 
 func reset_ui_bus_effects() -> void:
-	if AudioServer.is_bus_effect_enabled(sfx_ui_bus, 0):
-		AudioServer.set_bus_effect_enabled(sfx_ui_bus, 0, false)
+	if AudioServer.is_bus_effect_enabled(sfx_bus_ui, 0):
+		AudioServer.set_bus_effect_enabled(sfx_bus_ui, 0, false)
 
 
 func play_sfx(sfx_name: String, is_unique: = false, reset_effects: = true) -> void:
@@ -55,7 +55,7 @@ func play_sfx(sfx_name: String, is_unique: = false, reset_effects: = true) -> vo
 
 
 func play_sfx_with_reverb(sfx_name: String, is_unique: = false) -> void:
-	AudioServer.set_bus_effect_enabled(sfx_ui_bus, 0, true)
+	AudioServer.set_bus_effect_enabled(sfx_bus_ui, 0, true)
 	play_sfx(sfx_name, is_unique, false)
 
 
@@ -120,12 +120,20 @@ func change_bgm_volume(vol):
 	AudioServer.set_bus_volume_db(bgm_bus, vol_db)
 
 
+func change_sfx_volume(vol):
+	current_volume = vol
+	
+	var vol_db = _get_volume_in_db(vol)
+	AudioServer.set_bus_volume_db(sfx_bus_game, vol_db)
+	AudioServer.set_bus_volume_db(sfx_bus_ui, vol_db)
+
+
 func mute_game_sfx():
-	AudioServer.set_bus_mute(sfx_game_bus, true)
+	AudioServer.set_bus_mute(sfx_bus_game, true)
 
 
 func unmute_game_sfx():
-	AudioServer.set_bus_mute(sfx_game_bus, false)
+	AudioServer.set_bus_mute(sfx_bus_game, false)
 
 
 func fade_out_start():

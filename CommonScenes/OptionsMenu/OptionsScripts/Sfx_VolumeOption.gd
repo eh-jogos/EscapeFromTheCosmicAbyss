@@ -41,6 +41,7 @@ func change_sfx_volume(direction):
 	
 	_set_text_value(sfx_volume)
 	
+	SoundManager.change_sfx_volume(sfx_volume)
 	Global.update_option_sfxvolume(sfx_volume)
 	SoundManager.play_sfx("Select")
 

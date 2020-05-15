@@ -399,7 +399,6 @@ func update_option_bgmvolume(option):
 
 func update_option_sfxvolume(option):
 	savedata["options"]["bgm volume"] = option
-	get_tree().call_group("sfx_player", "adjust_volume_to", option)
 
 
 func set_game_mode(game_mode, category):
