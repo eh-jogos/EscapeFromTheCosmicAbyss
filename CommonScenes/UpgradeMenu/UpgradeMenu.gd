@@ -119,10 +119,13 @@ func _ready():
 	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
+	var next_group = $SectionLabels/NextGroup
 	if is_extra_mode():
 		close_btn.set_text("Start")
+		next_group.hide()
 	else:
 		close_btn.set_text("Confirm")
+		next_group.show()
 	
 	cooldown_bar = get_node("SectionLabels/Cooldown")
 	shield_bar = get_node("SectionLabels/Shields")

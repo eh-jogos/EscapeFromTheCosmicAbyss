@@ -8,6 +8,9 @@ var upgrade_brain
 var stat_bar
 var stat_value
 
+onready var plus = get_node("Plus")
+onready var minus = get_node("Minus")
+
 ##################
 # Custom Methods #
 ##################
@@ -102,7 +105,7 @@ func decrease_bar():
 
 
 func validate_stat_value():
-	var stat_value = get_stat_value()
+	stat_value = get_stat_value()
 	var max_value = stat_bar.get_child_count()
 	if stat_value > max_value:
 		set_stat_value(max_value)
@@ -110,15 +113,13 @@ func validate_stat_value():
 		set_stat_value(0)
 
 
-func handle_button_states(stat_value, max_stats):
-	var plus = get_node("Plus")
-	var minus = get_node("Minus")
+func handle_button_states(value, max_stats):
 	var max_speed_value = upgrade_brain.max_speed
 	
-	if stat_value == max_stats or\
+	if value == max_stats or\
 	   (stat_value == max_speed_value and upgrade_brain.upgrade_points < 2):
 		plus.set_disabled(true)
-	elif stat_value == 0:
+	elif value == 0:
 		minus.set_disabled(true)
 	else:
 		plus.set_disabled(false)
@@ -163,12 +164,20 @@ func _on_mouse_enter():
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
 	set_process_input(true)
+	
+	plus.simulate_hover()
+	minus.simulate_hover()
+	
 	self.get_node("AnimationPlayer").play("blink")
 	self.get_node("ArrowsIndicator").show_highlight()
 
 func _on_focus_exit():
 	#print("FOCUS LOST")
 	set_process_input(false)
+	
+	plus.reset()
+	minus.reset()
+	
 	SoundManager.play_sfx("Select")
 	self.get_node("AnimationPlayer").play("base")
 	self.get_node("ArrowsIndicator").stop_highlight()

@@ -777,7 +777,14 @@ custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "--"
 
-[node name="Next" type="Label" parent="SectionLabels"]
+[node name="NextGroup" type="Control" parent="SectionLabels"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="Label" parent="SectionLabels/NextGroup"]
 margin_left = 938.0
 margin_top = 25.0
 margin_right = 1139.0
@@ -787,8 +794,11 @@ size_flags_vertical = 0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 0.227451, 0.172549, 1 )
 text = "Next:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="ProgressBar" type="ProgressBar" parent="SectionLabels"]
+[node name="ProgressBar" type="ProgressBar" parent="SectionLabels/NextGroup"]
 margin_left = 1152.0
 margin_top = 41.0
 margin_right = 1759.0
@@ -838,8 +848,7 @@ position = Vector2( 215, 0 )
 [node name="Plus" parent="SectionLabels/Cooldown" instance=ExtResource( 11 )]
 
 [node name="Highlight" type="Sprite" parent="SectionLabels/Cooldown"]
-visible = false
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.65 )
 position = Vector2( -493.595, 377.153 )
 texture = ExtResource( 12 )
 
@@ -1224,9 +1233,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -895.0
-margin_top = -127.0
+margin_top = -90.0
 margin_right = -110.0
-margin_bottom = -17.0
+margin_bottom = -30.0
 mouse_filter = 0
 custom_constants/separation = 15
 alignment = 2
@@ -1238,8 +1247,8 @@ __meta__ = {
 [node name="Reset" type="Button" parent="Buttons"]
 margin_left = 223.0
 margin_right = 559.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 147, 110 )
+margin_bottom = 60.0
+rect_min_size = Vector2( 147, 0 )
 focus_neighbour_left = NodePath("../Confirm")
 focus_neighbour_top = NodePath("../../SectionLabels/Shields")
 focus_neighbour_right = NodePath("../Confirm")
@@ -1251,8 +1260,8 @@ script = ExtResource( 26 )
 [node name="Confirm" type="Button" parent="Buttons"]
 margin_left = 574.0
 margin_right = 785.0
-margin_bottom = 110.0
-rect_min_size = Vector2( 147, 110 )
+margin_bottom = 60.0
+rect_min_size = Vector2( 147, 0 )
 focus_neighbour_left = NodePath("../Reset")
 focus_neighbour_top = NodePath("../../SectionLabels/Shields")
 focus_neighbour_right = NodePath("../Reset")
