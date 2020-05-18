@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/GameOverScreen/textures/cleared_smear_effect.png" type="Texture" id=2]
@@ -20,6 +20,8 @@
 [ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=18]
 [ext_resource path="res://CommonScenes/Buttons/icons/play_icon.png" type="Texture" id=19]
 [ext_resource path="res://Shaders/shader_text_anim.tres" type="Animation" id=20]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/level_complete_highscore.wav" type="AudioStream" id=21]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/level_complete.wav" type="AudioStream" id=22]
 
 [sub_resource type="Animation" id=1]
 resource_name = "base"
@@ -522,6 +524,9 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_right = 1920.0
 margin_bottom = 515.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ClearedSmear" type="TextureRect" parent="StageClearedContainer"]
 anchor_left = 0.5
@@ -929,6 +934,18 @@ text = "Next Level"
 icon = ExtResource( 19 )
 script = ExtResource( 14 )
 pressed_sfx = "Confirm"
+
+[node name="SfxLibrary" type="Node" parent="."]
+
+[node name="LevelComplete" type="AudioStreamPlayer" parent="SfxLibrary"]
+stream = ExtResource( 22 )
+volume_db = -6.0
+bus = "UiSfx"
+
+[node name="LevelCompleteHighscore" type="AudioStreamPlayer" parent="SfxLibrary"]
+stream = ExtResource( 21 )
+volume_db = -6.0
+bus = "UiSfx"
 [connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]

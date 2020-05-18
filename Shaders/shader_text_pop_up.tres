@@ -51,3 +51,15 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Color( 1, 0.266667, 0.486275, 1 ), Color( 1, 0.819608, 0, 1 ), Color( 0.702083, 1, 0.266667, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0.639216, 0, 1, 1 ), Color( 1, 0.678431, 0.266667, 1 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("UpgradeSfx:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}

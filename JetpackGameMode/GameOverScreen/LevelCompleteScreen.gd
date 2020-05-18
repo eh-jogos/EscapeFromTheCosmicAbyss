@@ -114,6 +114,8 @@ func open(level_number, level_name):
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
+	var sfx_player = $SfxLibrary/LevelComplete
+	
 	game.set_game_state("GameOver")
 	get_tree().set_pause(true)
 	
@@ -130,6 +132,8 @@ func open(level_number, level_name):
 		score_congrats.show()
 		game.highscore = score
 		Global.update_highscore(game_mode, score)
+		
+		sfx_player = $SfxLibrary/LevelCompleteHighscore
 	else:
 		score_congrats.hide()
 	
@@ -178,6 +182,7 @@ func open(level_number, level_name):
 		stage_number.hide()
 	stage_name.set_text(level_name)
 	animator.play("open")
+	sfx_player.play()
 
 
 func play_unlock_animations():

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/upgrade_point.wav-f8c55c4a3aa6caa25bfafb7f262a27c1.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/upgrade_point.wav"
+dest_files=[ "res://.import/upgrade_point.wav-f8c55c4a3aa6caa25bfafb7f262a27c1.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

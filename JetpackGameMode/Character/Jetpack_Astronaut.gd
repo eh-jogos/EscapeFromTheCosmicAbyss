@@ -232,6 +232,9 @@ func handle_dash(delta, dash_force, heat):
 	dashing = true
 	emit_signal("dashing", dashing)
 	
+	var dash_sfx = $SfxLibrary/Dash
+	dash_sfx.play()
+	
 	speed.x = (10*unit.x)+(dash_force*delta)
 	#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
 	speed.y = 0

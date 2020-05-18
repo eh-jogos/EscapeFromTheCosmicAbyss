@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/level_complete.wav-78e5b9b6785cf0970ca81e12c6a8e070.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/level_complete.wav"
+dest_files=[ "res://.import/level_complete.wav-78e5b9b6785cf0970ca81e12c6a8e070.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
