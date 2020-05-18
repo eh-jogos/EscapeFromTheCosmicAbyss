@@ -72,12 +72,10 @@ func _on_Reset_pressed():
 	if is_story_mode():
 		var max_progress_value = Global.calculate_next_upgrade()
 		var current_progress_value = max_progress_value - Global.savedata["story"]["next upgrade"]
-		upgrade_progress.show()
 		upgrade_progress.set_max(max_progress_value)
 		upgrade_progress.set_value(current_progress_value)
 		init_store(store["game mode"])
 	elif is_extra_mode():
-		upgrade_progress.hide()
 		init_store(store["game mode"])
 	else:
 		print("ERROR | Unexpected Store Mode: %s"%[store])
@@ -110,7 +108,7 @@ func is_story_mode():
 func _ready():
 	store = Global.get_game_mode()
 	
-	upgrade_progress = get_node("SectionLabels/ProgressBar")
+	upgrade_progress = get_node("SectionLabels/NextGroup/ProgressBar")
 	close_btn = get_node("Buttons/Confirm")
 	initial_btn = get_node("SectionLabels/Cooldown")
 	initial_btn.grab_focus()

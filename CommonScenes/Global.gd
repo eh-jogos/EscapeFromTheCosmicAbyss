@@ -173,7 +173,6 @@ var base_savedata = {
 func _ready():
 	base_savedata.colors = default_color_scheme.duplicate(true)
 	check_savefile()
-	get_tree().call_group("sfx_player", "adjust_volume_to", savedata.options["sfx volume"])
 
 
 func _input(event):
@@ -465,11 +464,12 @@ func reset_colors() -> void:
 
 
 func _handle_mouse_pointer(event: InputEvent) -> void:
+	var pointer_timer: Timer = $MousePointer
 	if event is InputEventMouseMotion:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		pointer_timer.start()
 	else:
 		if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
-			var pointer_timer: Timer = $MousePointer
 			if pointer_timer.is_stopped():
 				pointer_timer.start()
 

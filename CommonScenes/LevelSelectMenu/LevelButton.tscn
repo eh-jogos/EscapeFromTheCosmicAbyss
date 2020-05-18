@@ -11,13 +11,13 @@
 offsets = PoolRealArray( 0, 0.5, 1 )
 colors = PoolColorArray( 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0 )
 
-[sub_resource type="GradientTexture" id=6]
+[sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
 
 [sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 0.495454 ), 0.0, 0.504546, 0, 1, Vector2( 1, 1 ), 0.504546, 0.0, 1, 0 ]
 
-[sub_resource type="CurveTexture" id=7]
+[sub_resource type="CurveTexture" id=4]
 curve = SubResource( 3 )
 
 [sub_resource type="ParticlesMaterial" id=5]
@@ -28,12 +28,13 @@ gravity = Vector3( 0, 0, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 2.5
-scale_curve = SubResource( 7 )
-color_ramp = SubResource( 6 )
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
 
 [node name="LevelButton1" type="TextureButton"]
 margin_right = 48.0
 margin_bottom = 48.0
+focus_mode = 0
 disabled = true
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )

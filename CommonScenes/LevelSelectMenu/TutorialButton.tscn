@@ -5,12 +5,12 @@
 [ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_hover.png" type="Texture" id=3]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.gd" type="Script" id=4]
 
-[sub_resource type="Gradient" id=6]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.5, 1 )
 colors = PoolColorArray( 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0 )
 
 [sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 6 )
+gradient = SubResource( 1 )
 
 [sub_resource type="Curve" id=3]
 _data = [ Vector2( 0, 0.495454 ), 0.0, 0.236364, 0, 1, Vector2( 1, 0.731818 ), 0.236364, 0.0, 1, 0 ]
@@ -34,6 +34,7 @@ margin_right = 48.0
 margin_bottom = 48.0
 focus_neighbour_top = NodePath("../../../Buttons/Upgrade")
 focus_neighbour_bottom = NodePath("../../../Buttons/Close")
+focus_mode = 0
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
