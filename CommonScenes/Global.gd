@@ -175,10 +175,6 @@ func _ready():
 	check_savefile()
 
 
-func _input(event):
-	_handle_mouse_pointer(event)
-
-
 func check_savefile():
 	if not savefile.file_exists(savepath):
 		reset_savefile()
@@ -461,18 +457,3 @@ func reset_story_progress():
 
 func reset_colors() -> void:
 	savedata.colors = default_color_scheme.duplicate(true)
-
-
-func _handle_mouse_pointer(event: InputEvent) -> void:
-	var pointer_timer: Timer = $MousePointer
-	if event is InputEventMouseMotion:
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		pointer_timer.start()
-	else:
-		if Input.get_mouse_mode() != Input.MOUSE_MODE_CAPTURED:
-			if pointer_timer.is_stopped():
-				pointer_timer.start()
-
-
-func _on_MousePointer_timeout():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
