@@ -22,6 +22,8 @@ func _ready():
 	ending = get_node("MenuContainer/Ending")
 	back = get_node("MenuContainer/Back")
 	
+	ScreenManager.connect("mid_transition_reached", self, "_on_ScreenManager_mid_transition_reached")
+	
 	var buttons = [credits, intro, level5, ending]
 	for button in buttons:
 		button.set_disabled(true)
@@ -89,3 +91,14 @@ func _on_Back_pressed():
 	yield(animator, "animation_finished")
 	ScreenManager.clear_above()
 
+
+func _on_ScreenManager_mid_transition_reached():
+	var legend_confirm_cancel: BaseLegend = $LegendConfirmCancel
+	if ScreenManager.scene_above == self:
+		animator.assigned_animation = "open"
+		animator.seek(animator.current_animation_length, true)
+		legend_confirm_cancel.show()
+	else:
+		animator.assigned_animation = "close"
+		animator.seek(animator.current_animation_length, true)
+		legend_confirm_cancel.hide()

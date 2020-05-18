@@ -279,6 +279,9 @@ margin_top = -3.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 color = Color( 0.247059, 0.054902, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorFrame2" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )

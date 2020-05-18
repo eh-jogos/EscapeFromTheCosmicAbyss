@@ -550,7 +550,7 @@ tracks/0/keys = {
 
 [node name="LoadingScreen" type="CanvasLayer"]
 pause_mode = 2
-layer = 10
+layer = 100
 script = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
