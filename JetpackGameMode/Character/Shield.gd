@@ -19,7 +19,7 @@ func _ready():
 	shield_animator.play("disabled")
 
 func modulate_shield(should_mute = false):
-	var animation = shield_animator.get_current_animation()
+	var animation = shield_animator.assigned_animation
 	#print("MODULATE SHIELD | Energy:%s"%[energy])
 	
 	if not should_mute and energy != 0:
