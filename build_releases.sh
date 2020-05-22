@@ -16,12 +16,13 @@ length=${#export_profiles[@]}
 for ((i = 1; i <= $length; i++));
 do
 	profile=${export_profiles[i]}
+	filename=$(sed -e 's/^"//' -e 's/"$//' <<< ${export_paths[i]})
 	# This is to accept other modifiers in case you want
 	# to have separate scripts for building steam releases
 	# or building itch.io releases. Just add them as cases below
 	case $2 in
 		*)
-			./build_standalone_releases.sh $version $profile
+			./build_standalone_releases.sh $version $profile $filename
 			;;
 	esac
 done
