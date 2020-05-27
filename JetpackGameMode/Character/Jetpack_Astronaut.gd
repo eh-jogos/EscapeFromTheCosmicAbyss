@@ -290,10 +290,6 @@ func fall_to_rise():
 func shield_up(increment, should_mute = false):
 	shield.increase_energy(increment, should_mute)
 
-func score():
-	
-	game._on_scored(5)
-
 func reset_y():
 	speed.y = 0
 
