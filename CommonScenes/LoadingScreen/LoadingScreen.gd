@@ -6,7 +6,7 @@ signal loading_started
 
 signal scene_above_loaded(scene_node)
 signal scene_above_cleared(scene_below)
-signal scene_loaded(scene)
+signal background_loading_finished(results_dict)
 
 # I learned this in this link 
 # http://docs.godotengine.org/en/stable/learning/features/misc/background_loading.html
@@ -56,12 +56,21 @@ func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 
 func background_loading(path):
 	var bg_loader = ResourceLoader.load_interactive(path)
-	var timer = get_node("Timer")
-	while not bg_loader.poll() == ERR_FILE_EOF:
-		timer.start()
-		yield(timer, "timeout")
+	var poll_results = bg_loader.poll()
+	while not poll_results == ERR_FILE_EOF:
+		if poll_results == OK:
+			update_progress(bg_loader)
+		else: # error during loading
+			print(poll_results)
+			#show_error()
+			loader = null
+			emit_signal("background_loading_finished", {error = poll_results, scene = null})
+			return 
+		
+		poll_results = bg_loader.poll()
 	
-	emit_signal("scene_loaded", bg_loader.get_resource())
+	emit_signal("background_loading_finished", {error = OK, scene = bg_loader.get_resource()})
+	return
 
 
 func clear_above():
@@ -127,10 +136,22 @@ func load_screen(path):
 
 func load_screen_invisible(path):
 	load_without_animation = true
-	background_loading(path)
-	var loaded_scene = yield(self, "scene_loaded")
-	set_new_scene(loaded_scene)
-#	set_process(true)
+	var loading_thread = Thread.new()
+	var thread_status = loading_thread.start(self, "background_loading", path)
+	if thread_status == OK:
+		var results_dict: Dictionary = yield(self, "background_loading_finished")
+		if results_dict.error == OK: 
+			set_new_scene(results_dict.scene)
+		else:
+			push_error("Error while loading %s | Error: %s"%[path, results_dict.error])
+			assert(false)
+	else:
+		push_error("Error while starting thread for %s | Error: %s"%[path, thread_status])
+		assert(false)
+
+	if loading_thread.is_active():
+		loading_thread.wait_to_finish()
+	set_process(true)
 
 
 func reveal_invisible_loading_screen():
@@ -152,14 +173,17 @@ func _process(_delta):
 			loader = null
 			set_new_scene(resource)
 		elif err == OK:
-			update_progress()
+			update_progress(loader)
 		else: # error during loading
 			print(err)
 			#show_error()
 			loader = null
 
-func update_progress():
-	var progress = (float(loader.get_stage()) / loader.get_stage_count())*100
+func update_progress(current_loader: ResourceInteractiveLoader):
+	var stages_current: = current_loader.get_stage()
+	var stages_total: = current_loader.get_stage_count()
+	var progress = (float(stages_current) / stages_total)*100
+	print("Loading is at: %s | Stage: %s | Total: %s"%[progress, stages_current, stages_total])
 	# update your progress bar?
 	progress_bar.set_value(progress)
 

@@ -61,18 +61,18 @@ func _unhandled_input(event):
 func _on_options_pressed():
 	last_focus = options_btn
 	prompt_legend.fade_out()
-	ScreenManager.load_above(options_scene, last_focus, self, true)
+	ScreenManager.load_above(options_scene, last_focus, self, options_scene is PackedScene)
 
 func _on_Extras_pressed():
 	last_focus = extras_btn
 	prompt_legend.fade_out()
-	ScreenManager.load_above(extras_scene, last_focus, self, true)
+	ScreenManager.load_above(extras_scene, last_focus, self, options_scene is PackedScene)
 
 func _on_quit_pressed():
 	var quit_timer = get_node("MenuContainer/QuitGame/Timer")
 	quit_timer.start()
 	yield(quit_timer, "timeout")
-	get_tree().quit()
+	Global.quit_game()
 
 func _on_Continue_pressed():
 	Global.set_game_mode("story", "select level")

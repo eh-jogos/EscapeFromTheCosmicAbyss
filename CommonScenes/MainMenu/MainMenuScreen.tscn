@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://CommonScenes/MainMenu/VersionLabel.gd" type="Script" id=11]
 
 [node name="MainMenuScreen" type="Node2D"]
 pause_mode = 2
@@ -190,8 +191,9 @@ margin_bottom = 1061.0
 mouse_filter = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 7 )
-text = "Game, Art and Animations by: Daniel Queiroz Porto          Music by: Sam Oz          Cutscene Art by: Filipe Stonoga"
-align = 1
+text = "v0.00"
+align = 2
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

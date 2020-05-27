@@ -566,7 +566,6 @@ anims/fade_in = SubResource( 4 )
 anims/fade_out = SubResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 1920.0
 margin_bottom = 1080.0
@@ -576,7 +575,6 @@ __meta__ = {
 }
 
 [node name="TextureProgress" type="TextureProgress" parent="ColorRect"]
-modulate = Color( 1, 1, 1, 0 )
 margin_top = 945.0
 margin_right = 1920.0
 margin_bottom = 970.0
