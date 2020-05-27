@@ -96,4 +96,4 @@ nodes/fragment/connections = PoolIntArray( 3, 0, 2, 0, 4, 0, 2, 1, 5, 0, 6, 0, 6
 [resource]
 shader = SubResource( 8 )
 shader_param/Start = Color( 1, 0.819608, 0, 1 )
-shader_param/End = Color( 0.993585, 0.160843, 0.262011, 1 )
+shader_param/End = Color( 1, 0.266667, 0.490196, 1 )

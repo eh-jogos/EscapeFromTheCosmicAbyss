@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo_white.png-a5c0fa2ee92fd739f5d025ff240d9e36.stex"
+path="res://.import/logo_white.png-0be60b8137ddbeab4bffc391d731caa0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CommonScenes/HybridStrategies/logo_white.png"
-dest_files=[ "res://.import/logo_white.png-a5c0fa2ee92fd739f5d025ff240d9e36.stex" ]
+source_file="res://CommonScenes/eh_jogos/logos/logo_white.png"
+dest_files=[ "res://.import/logo_white.png-0be60b8137ddbeab4bffc391d731caa0.stex" ]
 
 [params]
 

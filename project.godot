@@ -57,8 +57,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Escape From The Cosmic Abyss"
-run/main_scene="res://CommonScenes/HybridStrategies/SplashScreen.tscn"
+run/main_scene="res://CommonScenes/eh_jogos/SplashScreen.tscn"
 config/icon="res://icon.png"
+config/version="v0.98"
 
 [autoload]
 
@@ -66,6 +67,7 @@ Global="*res://CommonScenes/Global.tscn"
 ScreenManager="*res://CommonScenes/LoadingScreen/LoadingScreen.tscn"
 SoundManager="*res://CommonScenes/SoundManager/SoundManager.tscn"
 JoypadSupport="*res://CommonScenes/JoypadSupport/JoypadSupport.tscn"
+InputBlocker="*res://CommonScenes/InputBlocker.tscn"
 
 [debug]
 
