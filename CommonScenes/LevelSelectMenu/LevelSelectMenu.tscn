@@ -546,6 +546,7 @@ focus_neighbour_left = NodePath("../LevelButton12")
 focus_neighbour_top = NodePath("../LevelButton1")
 focus_neighbour_right = NodePath("../LevelButton1")
 focus_neighbour_bottom = NodePath("../LevelButton1")
+focus_mode = 2
 level_name = "How to Play"
 
 [node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 33 )]
@@ -553,6 +554,7 @@ focus_neighbour_left = NodePath("../TutorialButton")
 focus_neighbour_top = NodePath("../TutorialButton")
 focus_neighbour_right = NodePath("../LevelButton2")
 focus_neighbour_bottom = NodePath("../TutorialButton")
+focus_mode = 2
 disabled = false
 level_num = 1
 level_name = "Jetpack for your life!"
