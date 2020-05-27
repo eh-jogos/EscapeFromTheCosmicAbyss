@@ -47,6 +47,7 @@ var version = 0.9191
 
 var is_invincible = false
 var is_retry = false
+var was_credits_called_from_extras = false
 
 #total sum of points that can be distributed in the player build in the base savedata
 var base_stats = 15
@@ -457,3 +458,7 @@ func reset_story_progress():
 
 func reset_colors() -> void:
 	savedata.colors = default_color_scheme.duplicate(true)
+
+
+func quit_game() -> void:
+	get_tree().quit()
