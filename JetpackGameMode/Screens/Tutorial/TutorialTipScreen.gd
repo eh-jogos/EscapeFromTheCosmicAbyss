@@ -10,6 +10,8 @@ var tips_countdown = [0,3,7,2,9]
 var next_countdown = 0
 var countdown
 
+var is_showing_tip: = false
+
 func _ready():
 	game = self.get_parent().get_parent()
 	level_num = self.get_node(level_num)
@@ -42,6 +44,7 @@ func _input(event):
 		game.player_reset_y()
 		self.get_tree().set_pause(false)
 		self.hide()
+		is_showing_tip = false
 		#Process is being set to true by TipSelector when needed
 		self.set_process_input(false)
 		
@@ -54,6 +57,7 @@ func beat_countdown():
 		show_tip()
 
 func load_next_tip():
+	is_showing_tip = true
 	tip_selector.play("TipScreen_%s"%[next_countdown])
 	next_countdown += 1
 	
