@@ -1,10 +1,8 @@
 extends Node
 
-var bgm1 = preload("res://CommonScenes/SoundManager/bgm/Musique_1.ogg")
 var bgm2 = preload("res://CommonScenes/SoundManager/bgm/Musique_2.ogg")
 var bgm3 = preload("res://CommonScenes/SoundManager/bgm/Musique_electro.ogg")
 var track_list = {
-	"1" : bgm1,
 	"2" : bgm2,
 	"electro" : bgm3
 }
@@ -59,8 +57,8 @@ func play_sfx_with_reverb(sfx_name: String, is_unique: = false) -> void:
 	play_sfx(sfx_name, is_unique, false)
 
 
-func play_bgm():
-	var track = Global.savedata["options"]["track"]
+func play_bgm(chosen_track: String):
+	var track = chosen_track
 	var volume = float(Global.savedata["options"]["bgm volume"])
 #	print("Track: %s | Volume: %s"%[track, volume])
 	
@@ -107,7 +105,7 @@ func preview_bgm(track):
 
 func preview_bgm_play():
 	if not bgm_preview.is_playing():
-		var track = Global.savedata["options"]["track"]
+		var track = "2"
 		self.preview_bgm(track)
 
 func stop_preview_bgm():
@@ -136,6 +134,15 @@ func unmute_game_sfx():
 	AudioServer.set_bus_mute(sfx_bus_game, false)
 
 
+func fade_out_credits_bgm():
+	initial_volume = Global.savedata["options"]["bgm volume"]
+	var tween = $Tween
+	
+	tween.interpolate_method(self, "change_bgm_volume", initial_volume, 0, 3, 
+			Tween.TRANS_BACK, Tween.EASE_IN)
+	tween.start()
+
+
 func fade_out_start():
 	initial_volume = Global.savedata["options"]["bgm volume"]
 	var tween = $Tween
@@ -157,5 +164,5 @@ func fade_in_start():
 
 func _get_volume_in_db(vol: int) -> float:
 	var float_vol: float = vol * 0.01
-	var volume_db: float = (1 - float_vol) * -80
+	var volume_db: float = linear2db(float_vol)
 	return volume_db

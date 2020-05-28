@@ -292,7 +292,7 @@ func load_level(level_choice, load_all = false, loop = false):
 
 func set_game_state(string):
 	current_state = STATE[string]
-	if current_state != STATE.Playing:
+	if current_state == STATE.Pause:
 		SoundManager.mute_game_sfx()
 	else:
 		SoundManager.unmute_game_sfx()

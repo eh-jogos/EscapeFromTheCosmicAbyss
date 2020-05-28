@@ -916,7 +916,7 @@ anims/go_to_menu = SubResource( 3 )
 anims/open = SubResource( 4 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.9 )
 margin_top = -3.0
 margin_right = 1920.0
 margin_bottom = 1080.0
@@ -927,13 +927,13 @@ __meta__ = {
 
 [node name="ScreenBase" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_top = 657.0
+margin_top = 121.0
 margin_right = 1920.0
-margin_bottom = 657.0
+margin_bottom = 961.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 
 [node name="OptionsContainer" type="VBoxContainer" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.9 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -275.0
@@ -960,6 +960,7 @@ script = ExtResource( 3 )
 [node name="ArrowsIndicator" parent="OptionsContainer/FullscreenOption" instance=ExtResource( 4 )]
 
 [node name="BGM" type="Button" parent="OptionsContainer"]
+visible = false
 margin_top = 81.0
 margin_right = 560.0
 margin_bottom = 137.0
@@ -971,9 +972,9 @@ script = ExtResource( 5 )
 [node name="ArrowsIndicator" parent="OptionsContainer/BGM" instance=ExtResource( 4 )]
 
 [node name="BGM_volume" type="Button" parent="OptionsContainer"]
-margin_top = 162.0
+margin_top = 81.0
 margin_right = 560.0
-margin_bottom = 218.0
+margin_bottom = 137.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_right = NodePath(".")
 text = "Music Volume: --"
@@ -982,9 +983,9 @@ script = ExtResource( 6 )
 [node name="ArrowsIndicator" parent="OptionsContainer/BGM_volume" instance=ExtResource( 4 )]
 
 [node name="SfxVolume" type="Button" parent="OptionsContainer"]
-margin_top = 243.0
+margin_top = 162.0
 margin_right = 560.0
-margin_bottom = 299.0
+margin_bottom = 218.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_right = NodePath(".")
 text = "Sounds Volume: --"
@@ -993,9 +994,9 @@ script = ExtResource( 7 )
 [node name="ArrowsIndicator" parent="OptionsContainer/SfxVolume" instance=ExtResource( 4 )]
 
 [node name="EditControls" type="Button" parent="OptionsContainer"]
-margin_top = 324.0
+margin_top = 243.0
 margin_right = 560.0
-margin_bottom = 380.0
+margin_bottom = 299.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_right = NodePath(".")
 text = "Edit Controls"
@@ -1003,9 +1004,9 @@ script = ExtResource( 8 )
 pressed_sfx = "Confirm"
 
 [node name="EditColors" type="Button" parent="OptionsContainer"]
-margin_top = 405.0
+margin_top = 324.0
 margin_right = 560.0
-margin_bottom = 461.0
+margin_bottom = 380.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_right = NodePath(".")
 text = "Edit Colors"
@@ -1013,9 +1014,9 @@ script = ExtResource( 8 )
 pressed_sfx = "Confirm"
 
 [node name="ResetSave" type="Button" parent="OptionsContainer"]
-margin_top = 486.0
+margin_top = 405.0
 margin_right = 560.0
-margin_bottom = 542.0
+margin_bottom = 461.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_right = NodePath(".")
 text = "Reset Save"
@@ -1070,7 +1071,7 @@ script = ExtResource( 10 )
 [node name="ArrowsIndicator" parent="OptionsContainer/DebugMenu/Invincibility" instance=ExtResource( 4 )]
 
 [node name="Control" type="Control" parent="OptionsContainer"]
-margin_top = 567.0
+margin_top = 486.0
 margin_right = 560.0
 margin_bottom = 796.0
 size_flags_vertical = 3
@@ -1383,7 +1384,6 @@ __meta__ = {
 pressed_sfx = "Confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1406,17 +1406,15 @@ autoplay = "loop"
 anims/loop = SubResource( 9 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
-margin_left = -2220.0
-margin_top = 652.0
-margin_right = -300.0
-margin_bottom = 667.0
+margin_top = 115.0
+margin_right = 1920.0
+margin_bottom = 130.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="BottomEdge" type="ColorRect" parent="."]
-margin_left = -2220.0
-margin_top = 652.0
-margin_right = -300.0
-margin_bottom = 667.0
+margin_top = 952.0
+margin_right = 1920.0
+margin_bottom = 967.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="DebugButton" type="Button" parent="."]

@@ -578,6 +578,7 @@ rect_min_size = Vector2( 262, 79 )
 text = "Stage Select"
 icon = ExtResource( 13 )
 script = ExtResource( 9 )
+pressed_sfx = "Confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
 margin_left = 1005.0
@@ -587,6 +588,7 @@ rect_min_size = Vector2( 192, 79 )
 text = "Upgrade"
 icon = ExtResource( 11 )
 script = ExtResource( 9 )
+pressed_sfx = "Confirm"
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
 margin_left = 1268.0

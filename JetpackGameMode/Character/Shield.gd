@@ -68,4 +68,4 @@ func decrease_energy(increment):
 	Global.emit_signal("shield_energy_updated_to", energy)
 	shield_animator.play("burst")
 	yield(shield_animator, "animation_finished")
-	modulate_shield()
+	modulate_shield(true)

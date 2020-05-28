@@ -9,6 +9,8 @@ func _ready():
 
 
 func _on_focus_entered():
+	SoundManager.stop_preview_bgm()
+	
 	if not self.is_connected("focus_exited", self, "_on_focus_exited"):
 		self.connect("focus_exited", self, "_on_focus_exited")
 	if not self.is_connected("pressed", self, "_on_pressed"):
@@ -29,7 +31,7 @@ func _on_pressed():
 		self.disconnect("focus_exited", self, "_on_focus_exited")
 	
 	if pressed_sfx == "Confirm":
-		SoundManager.play_sfx_with_reverb(pressed_sfx)
+		SoundManager.play_sfx(pressed_sfx)
 	else:
 		SoundManager.play_sfx(pressed_sfx, true)
 		yield(get_tree(), "idle_frame")

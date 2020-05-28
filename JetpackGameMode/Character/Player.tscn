@@ -540,6 +540,11 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
+"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ) ],
+"loop": true,
+"name": "reloading",
+"speed": 60.0
+}, {
 "frames": [ ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ) ],
 "loop": false,
 "name": "rise_to_fall",
@@ -548,11 +553,6 @@ animations = [ {
 "frames": [ ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ) ],
 "loop": false,
 "name": "fall_to_rise",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ) ],
-"loop": true,
-"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -573,6 +573,11 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
+"loop": true,
+"name": "reloading",
+"speed": 60.0
+}, {
 "frames": [ ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ) ],
 "loop": false,
 "name": "rise_to_fall",
@@ -581,11 +586,6 @@ animations = [ {
 "frames": [ ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ), ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ), ExtResource( 234 ), ExtResource( 235 ), ExtResource( 236 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 239 ), ExtResource( 240 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 243 ), ExtResource( 244 ), ExtResource( 245 ) ],
 "loop": false,
 "name": "fall_to_rise",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
-"loop": true,
-"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -629,6 +629,11 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
+"frames": [ ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ) ],
+"loop": true,
+"name": "reloading",
+"speed": 60.0
+}, {
 "frames": [ ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ), ExtResource( 339 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 342 ), ExtResource( 343 ), ExtResource( 344 ) ],
 "loop": false,
 "name": "rise_to_fall",
@@ -637,11 +642,6 @@ animations = [ {
 "frames": [ ExtResource( 377 ), ExtResource( 378 ), ExtResource( 379 ), ExtResource( 380 ), ExtResource( 381 ), ExtResource( 382 ), ExtResource( 383 ), ExtResource( 384 ), ExtResource( 385 ), ExtResource( 386 ), ExtResource( 387 ), ExtResource( 388 ), ExtResource( 389 ), ExtResource( 390 ), ExtResource( 391 ), ExtResource( 392 ), ExtResource( 393 ), ExtResource( 394 ), ExtResource( 395 ), ExtResource( 396 ), ExtResource( 397 ), ExtResource( 398 ), ExtResource( 399 ), ExtResource( 400 ), ExtResource( 401 ) ],
 "loop": false,
 "name": "fall_to_rise",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ) ],
-"loop": true,
-"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -662,6 +662,11 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
+"frames": [ ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ) ],
+"loop": true,
+"name": "reloading",
+"speed": 60.0
+}, {
 "frames": [ ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ), ExtResource( 429 ), ExtResource( 430 ), ExtResource( 431 ), ExtResource( 432 ), ExtResource( 433 ), ExtResource( 434 ) ],
 "loop": false,
 "name": "rise_to_fall",
@@ -670,11 +675,6 @@ animations = [ {
 "frames": [ ExtResource( 467 ), ExtResource( 468 ), ExtResource( 469 ), ExtResource( 470 ), ExtResource( 471 ), ExtResource( 472 ), ExtResource( 473 ), ExtResource( 474 ), ExtResource( 475 ), ExtResource( 476 ), ExtResource( 477 ), ExtResource( 478 ), ExtResource( 479 ), ExtResource( 480 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 483 ), ExtResource( 484 ), ExtResource( 485 ), ExtResource( 486 ), ExtResource( 487 ), ExtResource( 488 ), ExtResource( 489 ), ExtResource( 490 ), ExtResource( 491 ) ],
 "loop": false,
 "name": "fall_to_rise",
-"speed": 60.0
-}, {
-"frames": [ ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ) ],
-"loop": true,
-"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -2998,7 +2998,7 @@ texture = ExtResource( 495 )
 
 [node name="SamplePlayer" type="AudioStreamPlayer" parent="JetParticles"]
 stream = ExtResource( 246 )
-volume_db = -30.0
+volume_db = -4.0
 pitch_scale = 0.5
 bus = "GameSfx"
 script = ExtResource( 247 )
@@ -3048,8 +3048,6 @@ position = Vector2( -430, -22 )
 [node name="Shield" type="Area2D" parent="."]
 position = Vector2( -485, 0 )
 input_pickable = false
-monitoring = false
-monitorable = false
 script = ExtResource( 492 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
@@ -3057,8 +3055,7 @@ visible = false
 shape = SubResource( 20 )
 
 [node name="Sprite" type="Sprite" parent="Shield"]
-modulate = Color( 0.6, 0.27, 1, 0 )
-scale = Vector2( 1.69482, 1.69482 )
+modulate = Color( 0.6, 0.27, 1, 1 )
 texture = ExtResource( 493 )
 
 [node name="ShieldAnimator" type="AnimationPlayer" parent="Shield"]
@@ -3075,13 +3072,11 @@ next/open = "idle"
 [node name="ShieldUp" type="AudioStreamPlayer" parent="Shield/SfxLibrary"]
 stream = ExtResource( 497 )
 volume_db = -18.0
-pitch_scale = 2.0
 bus = "GameSfx"
 
 [node name="ShieldPop" type="AudioStreamPlayer" parent="Shield/SfxLibrary"]
 stream = ExtResource( 498 )
-volume_db = -6.0
-pitch_scale = 1.75
+volume_db = -18.0
 bus = "GameSfx"
 
 [node name="OverheatBar" parent="." instance=ExtResource( 494 )]

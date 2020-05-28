@@ -158,6 +158,7 @@ margin_bottom = 657.0
 theme = ExtResource( 4 )
 text = "Options"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Extras" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
@@ -168,6 +169,7 @@ margin_bottom = 718.0
 theme = ExtResource( 4 )
 text = "Extras"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="QuitGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",

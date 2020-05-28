@@ -197,7 +197,7 @@
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" type="Texture" id=195]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles_KillPlayerAnim.tres" type="Animation" id=196]
 [ext_resource path="res://CommonScenes/SoundManager/SfxPlayer.gd" type="Script" id=197]
-[ext_resource path="res://CommonScenes/SoundManager/sfx/player_death_by_crushing.wav" type="AudioStream" id=198]
+[ext_resource path="res://CommonScenes/SoundManager/sfx/player_death_by_crushing2.wav" type="AudioStream" id=198]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_death_by_laser.wav" type="AudioStream" id=199]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_spawn.wav" type="AudioStream" id=200]
 
@@ -1129,7 +1129,7 @@ tracks/18/keys = {
 } ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("SfxLibrary/KillPLayer:playing")
+tracks/19/path = NodePath("SfxLibrary/Spawn:playing")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -2109,7 +2109,7 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 0.32, 1.52 ),
+"times": PoolRealArray( 0, 0.08, 1.52 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -3330,7 +3330,7 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 0.32, 1.52 ),
+"times": PoolRealArray( 0, 0.08, 1.52 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -3594,14 +3594,14 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 38 ) ],
-"loop": false,
-"name": "kill_player",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": false,
 "name": "spawn",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 38 ) ],
+"loop": false,
+"name": "kill_player",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 28 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ) ],
@@ -3622,15 +3622,15 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 82 ) ],
-"loop": false,
-"name": "kill_player",
-"speed": 59.999
-}, {
 "frames": [ ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 70 ), ExtResource( 71 ) ],
 "loop": false,
 "name": "spawn",
 "speed": 60.0
+}, {
+"frames": [ ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 82 ) ],
+"loop": false,
+"name": "kill_player",
+"speed": 59.999
 }, {
 "frames": [ ExtResource( 72 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ) ],
 "loop": false,
@@ -3688,8 +3688,6 @@ script = ExtResource( 197 )
 
 [node name="KillPLayer" type="AudioStreamPlayer" parent="SfxLibrary"]
 stream = ExtResource( 198 )
-volume_db = -18.0
-pitch_scale = 1.15
 bus = "GameSfx"
 script = ExtResource( 197 )
 
@@ -3739,7 +3737,7 @@ collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic"]
-position = Vector2( 0, -320 )
+position = Vector2( 0, -75 )
 scale = Vector2( 1, -1 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
@@ -3748,6 +3746,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 16 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 script = ExtResource( 47 )
@@ -3757,6 +3756,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 17 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 script = ExtResource( 91 )
@@ -3781,7 +3781,7 @@ collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
-position = Vector2( 0, 320 )
+position = Vector2( 0, 75 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
 [node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic"]
@@ -3789,6 +3789,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 16 )
 animation = "spawn"
+frame = 26
 centered = false
 script = ExtResource( 47 )
 
@@ -3797,6 +3798,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 17 )
 animation = "spawn"
+frame = 26
 centered = false
 script = ExtResource( 91 )
 
@@ -3821,7 +3823,7 @@ collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic1"]
-position = Vector2( 121, -320 )
+position = Vector2( 121, -75 )
 scale = Vector2( 1, -1 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
@@ -3830,6 +3832,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 121, -875 )
 frames = SubResource( 16 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 script = ExtResource( 47 )
@@ -3839,6 +3842,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 121, -875 )
 frames = SubResource( 17 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 script = ExtResource( 91 )
@@ -3848,11 +3852,13 @@ show_behind_parent = true
 position = Vector2( 215, -75 )
 frames = SubResource( 18 )
 animation = "dying"
+frame = 32
 
 [node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic1/TentacleTop/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 19 )
 animation = "dying"
+frame = 32
 
 [node name="TentacleBottomStatic1" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
 "enemy",
@@ -3864,7 +3870,7 @@ collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1"]
-position = Vector2( 121, 320 )
+position = Vector2( 121, 75 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
 [node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic1"]
@@ -3872,6 +3878,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 121, 75 )
 frames = SubResource( 16 )
 animation = "spawn"
+frame = 26
 centered = false
 script = ExtResource( 47 )
 
@@ -3880,6 +3887,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 121, 75 )
 frames = SubResource( 17 )
 animation = "spawn"
+frame = 26
 centered = false
 script = ExtResource( 91 )
 
@@ -3888,6 +3896,7 @@ show_behind_parent = true
 position = Vector2( 215, 875 )
 frames = SubResource( 18 )
 animation = "dying"
+frame = 32
 __meta__ = {
 "_edit_group_": true
 }
@@ -3896,6 +3905,7 @@ __meta__ = {
 show_behind_parent = true
 frames = SubResource( 19 )
 animation = "dying"
+frame = 32
 
 [node name="TentacleTopStatic2" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
 "enemy",
@@ -3907,7 +3917,7 @@ collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleTopStatic2"]
-position = Vector2( 121, -320 )
+position = Vector2( 121, -75 )
 scale = Vector2( 1, -1 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
@@ -3916,6 +3926,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 121, -875 )
 frames = SubResource( 16 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 script = ExtResource( 47 )
@@ -3925,6 +3936,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 121, -875 )
 frames = SubResource( 17 )
 animation = "spawn"
+frame = 26
 centered = false
 flip_v = true
 script = ExtResource( 91 )
@@ -3934,11 +3946,13 @@ show_behind_parent = true
 position = Vector2( 215, -75 )
 frames = SubResource( 18 )
 animation = "dying"
+frame = 32
 
 [node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleTopStatic2/TentacleTop/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 19 )
 animation = "dying"
+frame = 32
 
 [node name="TentacleBottomStatic2" type="StaticBody2D" parent="TentaclePath/TentaclePosition" groups=[
 "enemy",
@@ -3950,7 +3964,7 @@ collision_mask = 3
 script = ExtResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TentaclePath/TentaclePosition/TentacleBottomStatic2"]
-position = Vector2( 121, 320 )
+position = Vector2( 121, 75 )
 polygon = PoolVector2Array( 103, 796.066, 97, 530.066, 162, 376.066, 178, 242.066, 172, 147.066, 226, 147.066, 226, 244.066, 250, 379.066, 312, 537.066, 306, 799.066 )
 
 [node name="OutlineBottom" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic2"]
@@ -3958,6 +3972,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 121, 75 )
 frames = SubResource( 16 )
 animation = "spawn"
+frame = 26
 centered = false
 script = ExtResource( 47 )
 
@@ -3966,6 +3981,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 121, 75 )
 frames = SubResource( 17 )
 animation = "spawn"
+frame = 26
 centered = false
 script = ExtResource( 91 )
 
@@ -3974,6 +3990,7 @@ show_behind_parent = true
 position = Vector2( 215, 875 )
 frames = SubResource( 18 )
 animation = "dying"
+frame = 32
 __meta__ = {
 "_edit_group_": true
 }
@@ -3982,11 +3999,12 @@ __meta__ = {
 show_behind_parent = true
 frames = SubResource( 19 )
 animation = "dying"
+frame = 32
 
 [node name="ScoringArea" type="Area2D" parent="." groups=[
 "score",
 ]]
-position = Vector2( 820, -1080 )
+position = Vector2( 600, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoringArea"]
 position = Vector2( 0, -350 )

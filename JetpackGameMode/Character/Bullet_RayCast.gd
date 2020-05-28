@@ -64,7 +64,8 @@ func play_loop_sfx():
 func start_fade_out_sfx():
 	var tween = $Tween
 	var loop = $SfxLibrary/Loop
-	tween.interpolate_property(loop, "volume_db", loop.volume_db, -60.0, 0.5, 
+	tween.interpolate_property(loop, "volume_db", loop.volume_db, -40.0, 0.5, 
 			Tween.TRANS_LINEAR, Tween.EASE_IN)
+	tween.start()
 
 

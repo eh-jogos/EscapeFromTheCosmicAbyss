@@ -42,6 +42,7 @@ func change_bgm_volume(direction):
 	
 	_set_text_value(track_volume)
 	
+	SoundManager.preview_bgm_play()
 	SoundManager.change_bgm_volume(track_volume)
 	Global.update_option_bgmvolume(track_volume)
 

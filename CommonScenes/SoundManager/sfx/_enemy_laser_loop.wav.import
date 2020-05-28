@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/_enemy_laser_loop.wav-97888b5539a6371e289f06b35c2d7f97.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/_enemy_laser_loop.wav"
+dest_files=[ "res://.import/_enemy_laser_loop.wav-97888b5539a6371e289f06b35c2d7f97.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

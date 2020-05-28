@@ -15,6 +15,7 @@ onready var _animator: AnimationPlayer = $AnimationPlayer
 ### Built in Engine Methods ---------------
 func _ready():
 	set_process(false)
+	SoundManager.play_bgm("electro")
 
 
 func _process(_delta):
@@ -44,6 +45,10 @@ func _process(_delta):
 ### Private Methods -----------------------
 func _activate_navigation() -> void:
 	set_process(true)
+
+
+func _fade_out_music() -> void:
+	SoundManager.fade_out_credits_bgm()
 
 
 func _exit_credits() -> void:

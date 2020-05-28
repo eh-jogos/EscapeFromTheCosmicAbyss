@@ -102,6 +102,7 @@ focus_neighbour_bottom = NodePath("../Options")
 theme = ExtResource( 4 )
 text = "Stage Select"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="Options" type="Button" parent="ButtonsBlock"]
 pause_mode = 2
@@ -115,6 +116,7 @@ focus_neighbour_bottom = NodePath("../QuitMainMenu")
 theme = ExtResource( 4 )
 text = "Options"
 script = ExtResource( 5 )
+pressed_sfx = "Confirm"
 
 [node name="QuitMainMenu" type="Button" parent="ButtonsBlock"]
 pause_mode = 2

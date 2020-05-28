@@ -49,7 +49,7 @@ func _input(event):
 		self.set_process_input(false)
 		
 		if not SoundManager.bgm_stream.is_playing():
-			SoundManager.play_bgm()
+			SoundManager.play_bgm("2")
 
 func beat_countdown():
 	countdown -= 1

@@ -54,6 +54,7 @@ func _on_mouse_enter():
 
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
+	SoundManager.stop_preview_bgm()
 	set_process_input(true)
 	arrows_highlight.show_highlight()
 

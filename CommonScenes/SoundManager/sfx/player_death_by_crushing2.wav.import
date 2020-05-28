@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/player_death_by_crushing2.wav-8de8e6417e5dd8b995f0e29dcbff8cca.sample"
+
+[deps]
+
+source_file="res://CommonScenes/SoundManager/sfx/player_death_by_crushing2.wav"
+dest_files=[ "res://.import/player_death_by_crushing2.wav-8de8e6417e5dd8b995f0e29dcbff8cca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
