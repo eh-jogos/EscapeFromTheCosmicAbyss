@@ -11,7 +11,7 @@
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 2 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=2]
 resource_name = "credits"
 length = 61.0
 step = 0.5
@@ -58,18 +58,21 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 5, 61 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 5, 58, 61 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "_activate_navigation"
+}, {
+"args": [  ],
+"method": "_fade_out_music"
 }, {
 "args": [  ],
 "method": "_exit_credits"
 } ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=3]
 resource_name = "editor"
 length = 0.001
 step = 0.5
@@ -110,22 +113,22 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 size = 55
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=5]
 size = 40
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 50
 use_filter = true
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=7]
 size = 80
 use_filter = true
 font_data = ExtResource( 4 )
@@ -142,13 +145,13 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "credits"
-anims/credits = SubResource( 5 )
-anims/editor = SubResource( 7 )
+anims/credits = SubResource( 2 )
+anims/editor = SubResource( 3 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
-margin_top = 52.0
-margin_bottom = 6862.0
+margin_top = -5997.0
+margin_bottom = 813.0
 custom_constants/separation = 300
 alignment = 1
 __meta__ = {
@@ -170,14 +173,14 @@ size_flags_horizontal = 4
 [node name="Name" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
 margin_right = 800.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Daniel Queiroz Porto"
 
 [node name="Name2" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
 margin_top = 60.0
 margin_right = 800.0
 margin_bottom = 100.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "eh_jogos"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
@@ -226,14 +229,14 @@ size_flags_horizontal = 4
 [node name="Name" type="Label" parent="CreditsContainer/MainCredits/Sam"]
 margin_right = 600.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Sam Oz"
 
 [node name="SamOzTwitter" type="LinkButton" parent="CreditsContainer/MainCredits/Sam"]
 margin_top = 60.0
 margin_right = 600.0
 margin_bottom = 100.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "@SamOz_official"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Sam"]
@@ -261,14 +264,14 @@ size_flags_horizontal = 4
 [node name="Name" type="Label" parent="CreditsContainer/MainCredits/Madruga"]
 margin_right = 600.0
 margin_bottom = 56.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Filipe Stonoga"
 
 [node name="MadrugaTwitter" type="LinkButton" parent="CreditsContainer/MainCredits/Madruga"]
 margin_top = 60.0
 margin_right = 600.0
 margin_bottom = 100.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
 text = "@artbycoltz"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Madruga"]
@@ -291,7 +294,7 @@ custom_constants/separation = 15
 margin_right = 1080.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 1080, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Made With Godot thanks to:"
 
 [node name="GodotTeamLink" type="LinkButton" parent="CreditsContainer/Godot"]
@@ -350,7 +353,7 @@ custom_constants/separation = 0
 margin_right = 1177.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 1080, 0 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Special Thanks to..."
 
 [node name="FamilyGroup" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
@@ -373,7 +376,7 @@ margin_bottom = 101.0
 [node name="ChatMeninao" type="Label" parent="CreditsContainer/SpecialThanks/FamilyGroup/Family/Title2"]
 margin_right = 1177.0
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "My Family"
 align = 1
 
@@ -417,7 +420,7 @@ margin_bottom = 101.0
 [node name="ChatMeninao" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Title"]
 margin_right = 1177.0
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Everyone at \"Chat  do  Meniñ\":"
 align = 1
 
@@ -568,7 +571,7 @@ margin_bottom = 101.0
 [node name="ChucrutzLabel" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Title"]
 margin_right = 1177.0
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Everyone at \"Clube da Baixa Autoestima\":"
 align = 1
 
@@ -677,7 +680,7 @@ custom_constants/separation = 10
 [node name="ExJavaryLabel" type="Label" parent="CreditsContainer/SpecialThanks/LittleLeoGroup/Leo"]
 margin_right = 1177.0
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Léo \"LittleLeo\" Castanho"
 align = 1
 
@@ -714,7 +717,7 @@ margin_bottom = 253.0
 [node name="ExJavaryLabel" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary/Title"]
 margin_right = 1177.0
 margin_bottom = 105.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "My current and ex coworkers 
 (and aggregates) at my day job!"
 align = 1
@@ -788,7 +791,7 @@ custom_constants/separation = 10
 [node name="ExJavaryLabel" type="Label" parent="CreditsContainer/SpecialThanks/Prompts/Leo"]
 margin_right = 1177.0
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 6 )
 text = "Nicolae Berbece "
 align = 1
 
@@ -824,7 +827,7 @@ __meta__ = {
 [node name="ThankYouForPlaying" type="Label" parent="CreditsContainer/VBoxContainer"]
 margin_right = 1920.0
 margin_bottom = 80.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "...and YOU for playing!"
 align = 1
 
@@ -837,9 +840,6 @@ texture = ExtResource( 6 )
 stretch_mode = 6
 
 [node name="CreditsLegend" parent="." instance=ExtResource( 7 )]
-
-[node name="RootControl" parent="CreditsLegend" index="1"]
-modulate = Color( 1, 1, 1, 1 )
 [connection signal="pressed" from="CreditsContainer/MainCredits/Sam/SamOzTwitter" to="." method="_on_SamOzTwitter_pressed"]
 [connection signal="pressed" from="CreditsContainer/MainCredits/Madruga/MadrugaTwitter" to="." method="_on_MadrugaTwitter_pressed"]
 [connection signal="pressed" from="CreditsContainer/Godot/GodotTeamLink" to="." method="_on_GodotTeamLink_pressed"]
