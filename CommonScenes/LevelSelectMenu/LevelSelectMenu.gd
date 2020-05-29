@@ -28,6 +28,7 @@ func init_level_map():
 
 func unlock_levels():
 	if last_unlocked_level < levels_unlocked:
+		var animations_to_play: = []
 		while last_unlocked_level < levels_unlocked:
 			print("Last: %s | All: %s"%[last_unlocked_level, levels_unlocked])
 			var animation_name = 0
@@ -35,11 +36,13 @@ func unlock_levels():
 				animation_name = "state0%s_transition"%[last_unlocked_level]
 			else:
 				animation_name = "state%s_transition"%[last_unlocked_level]
-			
-			print(animation_name)
-			map_animator.play(animation_name)
-			yield(map_animator, "animation_finished")
+			animations_to_play.push_back(animation_name)
 			last_unlocked_level += 1
+		
+		for animation_name in animations_to_play:
+			print("Playing animation: %s"%[animation_name])
+			map_animator.play(animation_name)
+			yield(get_tree().create_timer(map_animator.current_animation_length), "timeout")
 		
 		print("Last: %s | All: %s"%[last_unlocked_level, levels_unlocked])
 		Global.update_story_last_unlock(last_unlocked_level)
@@ -71,7 +74,6 @@ func _ready():
 	if last_played_level > levels_unlocked:
 		last_played_level = last_unlocked_level
 	initial_btn = level_buttons.get_child(last_played_level)
-	print(initial_btn.get_name())
 	
 	animator.play_backwards("close")
 	yield(animator, "animation_finished")

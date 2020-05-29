@@ -469,6 +469,9 @@ custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
 text = "Stage 12"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LevelTitle" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
@@ -516,11 +519,11 @@ centered = false
 
 [node name="levels_path_unlocked" type="Sprite" parent="Map"]
 modulate = Color( 0, 0.960784, 1, 1 )
-position = Vector2( 40, 365.868 )
+position = Vector2( 40, 365 )
 texture = ExtResource( 30 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 146, 600 )
+region_rect = Rect2( 0, 0, 1760, 600 )
 
 [node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
 visible = false
@@ -554,7 +557,6 @@ focus_neighbour_left = NodePath("../TutorialButton")
 focus_neighbour_top = NodePath("../TutorialButton")
 focus_neighbour_right = NodePath("../LevelButton2")
 focus_neighbour_bottom = NodePath("../TutorialButton")
-focus_mode = 2
 disabled = false
 level_num = 1
 level_name = "Jetpack for your life!"
@@ -567,7 +569,7 @@ margin_bottom = -68.0
 focus_neighbour_left = NodePath("../LevelButton1")
 focus_neighbour_right = NodePath("../LevelButton3")
 focus_neighbour_bottom = NodePath("../LevelButton3")
-enabled_focus_mode = 0
+disabled = false
 level_num = 2
 level_name = "Pew pew!"
 
@@ -579,7 +581,7 @@ margin_bottom = 244.0
 focus_neighbour_left = NodePath("../LevelButton2")
 focus_neighbour_top = NodePath("../LevelButton2")
 focus_neighbour_right = NodePath("../LevelButton4")
-enabled_focus_mode = 0
+disabled = false
 level_num = 3
 level_name = "Double Trouble!"
 
@@ -590,7 +592,7 @@ margin_right = 555.0
 margin_bottom = 102.0
 focus_neighbour_left = NodePath("../LevelButton3")
 focus_neighbour_right = NodePath("../LevelButton5")
-enabled_focus_mode = 0
+disabled = false
 level_num = 4
 level_name = "Triple Trouble!"
 
@@ -602,7 +604,7 @@ margin_bottom = 87.0
 focus_neighbour_left = NodePath("../LevelButton4")
 focus_neighbour_top = NodePath("../LevelButton6")
 focus_neighbour_right = NodePath("../LevelButton6")
-enabled_focus_mode = 0
+disabled = false
 level_num = 5
 level_name = "What was that sound?"
 
@@ -614,7 +616,7 @@ margin_bottom = -58.0
 focus_neighbour_left = NodePath("../LevelButton5")
 focus_neighbour_right = NodePath("../LevelButton7")
 focus_neighbour_bottom = NodePath("../LevelButton7")
-enabled_focus_mode = 0
+disabled = false
 level_num = 6
 level_name = "Dash like you mean it!"
 
@@ -627,7 +629,7 @@ focus_neighbour_left = NodePath("../LevelButton6")
 focus_neighbour_top = NodePath("../LevelButton6")
 focus_neighbour_right = NodePath("../LevelButton8")
 focus_neighbour_bottom = NodePath("../LevelButton8")
-enabled_focus_mode = 0
+disabled = false
 level_num = 7
 level_name = "I feel like I'm being watched!"
 
@@ -639,7 +641,7 @@ margin_bottom = 279.0
 focus_neighbour_left = NodePath("../LevelButton7")
 focus_neighbour_top = NodePath("../LevelButton7")
 focus_neighbour_right = NodePath("../LevelButton9")
-enabled_focus_mode = 0
+disabled = false
 level_num = 8
 level_name = "It's right behind me, isn't it?"
 
@@ -651,7 +653,7 @@ margin_bottom = 261.0
 focus_neighbour_left = NodePath("../LevelButton8")
 focus_neighbour_right = NodePath("../LevelButton10")
 focus_neighbour_bottom = NodePath("../LevelButton10")
-enabled_focus_mode = 0
+disabled = false
 level_num = 9
 level_name = "Almost there!"
 
@@ -663,7 +665,7 @@ margin_bottom = 351.0
 focus_neighbour_left = NodePath("../LevelButton9")
 focus_neighbour_top = NodePath("../LevelButton9")
 focus_neighbour_right = NodePath("../LevelButton11")
-enabled_focus_mode = 0
+disabled = false
 level_num = 10
 level_name = "Are we there yet?"
 
@@ -674,7 +676,7 @@ margin_right = 1411.0
 margin_bottom = 433.0
 focus_neighbour_left = NodePath("../LevelButton10")
 focus_neighbour_right = NodePath("../LevelButton12")
-enabled_focus_mode = 0
+disabled = false
 level_num = 11
 level_name = "The Calm Before the Storm!"
 
@@ -685,7 +687,7 @@ margin_right = 1515.0
 margin_bottom = 423.0
 focus_neighbour_left = NodePath("../LevelButton11")
 focus_neighbour_right = NodePath("../TutorialButton")
-enabled_focus_mode = 0
+disabled = false
 level_num = 12
 level_name = "If that was the 'Calm', what is the 'Storm'?!"
 
