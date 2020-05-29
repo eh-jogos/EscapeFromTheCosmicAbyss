@@ -41,12 +41,17 @@ func _unhandled_input(event):
 				focus_button.grab_focus()
 
 
-func _toggle_debug_menu(value):
+func _toggle_debug_menu(to_on):
 	var debug_menu_container = get_node("OptionsContainer/DebugMenu")
 	
-	debug_menu_container.visible = value
+	debug_menu_container.visible = to_on
 	for button in debug_menu_container.get_children():
-		button.set_disabled(!value)
+		if to_on:
+			button.set_disabled(false)
+			button.focus_mode = Control.FOCUS_ALL
+		else:
+			button.set_disabled(true)
+			button.focus_mode = Control.FOCUS_NONE
 
 
 func _on_ScreenManager_mid_transition_reached():
@@ -74,7 +79,7 @@ func _on_options_exit_pressed():
 
 
 func _on_Restart_pressed():
-	get_tree().change_scene("res://CommonScenes/HybridStrategies/SplashScreen.tscn")
+	get_tree().change_scene("res://CommonScenes/eh_jogos/SplashScreen.tscn")
 	ScreenManager.reset_above_below()
 
 
@@ -97,6 +102,7 @@ func _on_DebugButton_pressed():
 	var debug_timer = get_node("DebugButton/DebugTimer")
 	var is_visible = debug_menu_container.is_visible()
 	debug_count += 1
+	print("Debug Count: %s"%[debug_count])
 	if debug_count >= 5 or is_visible:
 		debug_count = 0
 		debug_timer.stop()
