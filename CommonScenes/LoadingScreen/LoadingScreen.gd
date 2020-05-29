@@ -183,7 +183,7 @@ func update_progress(current_loader: ResourceInteractiveLoader):
 	var stages_current: = current_loader.get_stage()
 	var stages_total: = current_loader.get_stage_count()
 	var progress = (float(stages_current) / stages_total)*100
-	print("Loading is at: %s | Stage: %s | Total: %s"%[progress, stages_current, stages_total])
+#	print("Loading is at: %s | Stage: %s | Total: %s"%[progress, stages_current, stages_total])
 	# update your progress bar?
 	progress_bar.set_value(progress)
 
