@@ -59,10 +59,6 @@ func play_sfx_with_reverb(sfx_name: String, is_unique: = false) -> void:
 
 func play_bgm(chosen_track: String):
 	var track = chosen_track
-	var volume = float(Global.savedata["options"]["bgm volume"])
-#	print("Track: %s | Volume: %s"%[track, volume])
-	
-	change_bgm_volume(volume)
 	
 	bgm_stream.set_stream(track_list[track])
 	bgm_stream.play(track_offset)
@@ -120,7 +116,7 @@ func change_bgm_volume(vol):
 
 func change_sfx_volume(vol):
 	current_volume = vol
-	
+	print("Changing SFX volume")
 	var vol_db = _get_volume_in_db(vol)
 	AudioServer.set_bus_volume_db(sfx_bus_game, vol_db)
 	AudioServer.set_bus_volume_db(sfx_bus_ui, vol_db)
@@ -143,26 +139,37 @@ func fade_out_credits_bgm():
 	tween.start()
 
 
-func fade_out_start():
+func fade_out_start(shoul_be_immediate: = false):
 	initial_volume = Global.savedata["options"]["bgm volume"]
-	var tween = $Tween
-	
-	tween.interpolate_method(self, "change_bgm_volume", initial_volume, initial_volume-20, 1, 
-			Tween.TRANS_BACK, Tween.EASE_IN)
-	tween.start()
-
-
-func fade_in_start():
+	var target_volume = max(initial_volume-30, 0)
 	var tween = $Tween
 	if tween.is_active():
 		tween.remove_all()
 	
-	tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 1, 
-			Tween.TRANS_BACK, Tween.EASE_IN)
-	tween.start()
+	if shoul_be_immediate:
+		change_bgm_volume(target_volume)
+	else:
+		tween.interpolate_method(self, "change_bgm_volume", initial_volume, target_volume, 0.5, 
+				Tween.TRANS_BACK, Tween.EASE_IN)
+		tween.start()
+
+
+func fade_in_start(shoul_be_immediate: = false):
+	initial_volume = Global.savedata["options"]["bgm volume"]
+	var tween = $Tween
+	if tween.is_active():
+		tween.remove_all()
+	
+	if shoul_be_immediate:
+		change_bgm_volume(initial_volume)
+	else:
+		tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 0.5, 
+				Tween.TRANS_BACK, Tween.EASE_IN)
+		tween.start()
 
 
 func _get_volume_in_db(vol: int) -> float:
 	var float_vol: float = vol * 0.01
+	print("Float Vol: %s"%[float_vol])
 	var volume_db: float = linear2db(float_vol)
 	return volume_db

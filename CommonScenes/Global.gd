@@ -107,8 +107,8 @@ var base_savedata = {
 	"options": {
 		"fullscreen": true,
 		"track": "2",
-		"bgm volume": 60,
-		"sfx volume": 100
+		"bgm volume": 50,
+		"sfx volume": 50
 	},
 	"story": {
 		"highscore": [
@@ -394,7 +394,7 @@ func update_option_bgmvolume(option):
 
 
 func update_option_sfxvolume(option):
-	savedata["options"]["bgm volume"] = option
+	savedata["options"]["sfx volume"] = option
 
 
 func set_game_mode(game_mode, category):

@@ -33,6 +33,9 @@ level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 margin_right = 1920.0
 margin_bottom = 1080.0
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/fade out" = SubResource( 1 )

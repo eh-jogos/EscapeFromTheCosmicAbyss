@@ -36,27 +36,12 @@ func _ready():
 	pass
 
 
-func _unhandled_input(event) -> void:
-	if not visible:
-		return
-	
-	if event.is_action("ui_cancel"):
-		get_viewport().set_input_as_handled()
-	
-	if event.is_action_pressed("ui_cancel"):
-		var focus_button: Button = $ButtonsBlock/Quit
-		if focus_button.has_focus():
-			_on_quit_pressed()
-		else:
-			focus_button.grab_focus()
-
-
 func _input(event):
-	if event.is_action_pressed("pause") and (game.get_game_state() == 0 or game.get_game_state() == 2):
-		if self.is_visible():
-			resume_game()
-		else:
+	if event.is_action_pressed("pause"):
+		if game.get_game_state() == 0:
 			pause_game()
+		elif game.get_game_state() == 2 and ScreenManager.scene_above == null:
+			resume_game()
 
 func pause_game():
 	game.set_game_state("Pause")
@@ -113,13 +98,17 @@ func _on_options_pressed():
 	SoundManager.pause_bgm()
 
 func _on_focus_enter():
+	#called when focus_enters on options or level select and checks if pause is not visible
+	#so this is probably meant to run when coming back from one of these menus
+	
 	#print("FOCUS GRABBED")
 	if not visible:
 		self.show()
 		animator.play_backwards("fade out")
 		yield(animator, "animation_finished")
 		
-		SoundManager.pause_bgm()
+		SoundManager.fade_out_start(true)
+		SoundManager.play_bgm("2")
 
 
 func _on_LevelSelect_pressed():

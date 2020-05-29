@@ -932,6 +932,7 @@ script = ExtResource( 1 )
 resources = [ PoolStringArray( "ColorsMenu" ), [ ExtResource( 13 ) ] ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "open"
 anims/close = SubResource( 1 )
 anims/go_to_controls = SubResource( 2 )
 anims/go_to_menu = SubResource( 3 )
@@ -953,8 +954,12 @@ margin_top = 121.0
 margin_right = 1920.0
 margin_bottom = 961.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="OptionsContainer" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0.9 )
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -275.0
