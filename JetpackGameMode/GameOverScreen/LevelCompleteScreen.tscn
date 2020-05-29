@@ -887,8 +887,8 @@ theme = ExtResource( 11 )
 alignment = 1
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 185.0
-margin_right = 490.0
+margin_left = 163.0
+margin_right = 468.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Main Menu"
@@ -897,8 +897,8 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 494.0
-margin_right = 753.0
+margin_left = 472.0
+margin_right = 731.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Upgrade"
@@ -907,8 +907,8 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 757.0
-margin_right = 1067.0
+margin_left = 735.0
+margin_right = 1045.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Play Again"
@@ -917,8 +917,8 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1071.0
-margin_right = 1421.0
+margin_left = 1049.0
+margin_right = 1399.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Stage Select"
@@ -927,12 +927,24 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="NextLevel" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1425.0
-margin_right = 1735.0
+visible = false
+margin_left = 1246.0
+margin_right = 1556.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 theme = ExtResource( 18 )
 text = "Next Level"
+icon = ExtResource( 19 )
+script = ExtResource( 14 )
+pressed_sfx = "Confirm"
+
+[node name="WatchEnding" type="Button" parent="ResultsContainer/Buttons"]
+margin_left = 1403.0
+margin_right = 1757.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 192, 0 )
+theme = ExtResource( 18 )
+text = "Watch Ending"
 icon = ExtResource( 19 )
 script = ExtResource( 14 )
 pressed_sfx = "Confirm"
@@ -953,3 +965,4 @@ bus = "UiSfx"
 [connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/NextLevel" to="." method="_on_NextLevel_pressed"]
+[connection signal="pressed" from="ResultsContainer/Buttons/WatchEnding" to="." method="_on_WatchEnding_pressed"]

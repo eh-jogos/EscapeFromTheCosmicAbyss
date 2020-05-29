@@ -912,7 +912,6 @@ title = "The Calm Before the Storm!"
 [node name="Level12" type="Node" parent="LevelLoader"]
 script = ExtResource( 15 )
 title = "If that was the 'Calm', what is the 'Storm'?!"
-end_cutscene = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 960, 540 )

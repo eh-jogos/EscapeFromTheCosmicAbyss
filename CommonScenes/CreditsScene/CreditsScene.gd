@@ -14,26 +14,37 @@ onready var _animator: AnimationPlayer = $AnimationPlayer
 
 ### Built in Engine Methods ---------------
 func _ready():
+	if not Global.was_credits_called_from_extras:
+		ScreenManager.reset_above_below()
 	set_process(false)
+	grab_focus()
 	SoundManager.play_bgm("electro")
+
+
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_accept"):
+		if _animator.is_playing():
+			_animator.stop(false)
+		else:
+			_animator.play()
+	
+	if event.is_action_pressed("ui_cancel"):
+		_exit_credits()
 
 
 func _process(_delta):
 	if Input.is_action_pressed("ui_up"):
 		_animator.playback_speed = -SPEED_MODIFIER
 	elif Input.is_action_pressed("ui_down"):
+		if not _animator.is_playing() and _animator.current_animation_position == 0:
+			_animator.play()
+		
 		_animator.playback_speed = SPEED_MODIFIER
 	else:
-		_animator.playback_speed = 1
-	
-	if Input.is_action_just_pressed("ui_accept"):
-		if _animator.is_playing():
-			_animator.stop(false)
-		else:
+		if not _animator.is_playing() and _animator.current_animation_position == 0:
 			_animator.play()
-	
-	if Input.is_action_just_pressed("ui_cancel"):
-		_exit_credits()
+		
+		_animator.playback_speed = 1
 
 ### ---------------------------------------
 
@@ -52,8 +63,10 @@ func _fade_out_music() -> void:
 
 
 func _exit_credits() -> void:
+	SoundManager.stop_bgm()
 	if Global.was_credits_called_from_extras:
-		ScreenManager.load_screen("res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn")
+		Global.was_credits_called_from_extras = false
+		ScreenManager.black_transition_from_above()
 	else:
 		ScreenManager.load_screen("res://CommonScenes/MainMenu/MainMenuScreen.tscn")
 

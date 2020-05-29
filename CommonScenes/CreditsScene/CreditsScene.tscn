@@ -136,6 +136,7 @@ font_data = ExtResource( 4 )
 [node name="CreditsScene" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+focus_mode = 2
 theme = SubResource( 1 )
 color = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
 script = ExtResource( 3 )
@@ -149,9 +150,10 @@ anims/credits = SubResource( 2 )
 anims/editor = SubResource( 3 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
-margin_top = -5997.0
-margin_bottom = 813.0
+margin_top = 52.0
+margin_bottom = 6862.0
 custom_constants/separation = 300
 alignment = 1
 __meta__ = {

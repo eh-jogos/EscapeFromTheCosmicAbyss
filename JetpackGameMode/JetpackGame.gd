@@ -102,6 +102,12 @@ func _ready():
 	show_pre_game()
 
 
+func _input(event):
+	if event.is_action_pressed("debug_win_level") and current_state == STATE.Playing \
+			and OS.is_debug_build():
+		level_completed()
+
+
 func show_pre_game():
 	print("JetpackGame.gd | Game Mode: %s | Is Retry: %s"%[game_mode, Global.is_retry])
 	

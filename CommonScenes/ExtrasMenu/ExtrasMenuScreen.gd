@@ -73,6 +73,7 @@ func _unhandled_input(event):
 func _on_button_pressed(node):
 	var path
 	if node == credits:
+		Global.was_credits_called_from_extras = true
 		path = credits_scene_path
 	elif node == intro:
 		path = cutscene_intro_path

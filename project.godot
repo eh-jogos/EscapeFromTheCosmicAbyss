@@ -59,7 +59,7 @@ _global_script_class_icons={
 config/name="Escape From The Cosmic Abyss"
 run/main_scene="res://CommonScenes/eh_jogos/SplashScreen.tscn"
 config/icon="res://icon.png"
-config/version="v0.98"
+config/version="v0.99"
 
 [autoload]
 
@@ -189,6 +189,11 @@ color_hue_down={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
+ ]
+}
+debug_win_level={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":true,"control":false,"meta":false,"command":false,"pressed":false,"scancode":39,"unicode":0,"echo":false,"script":null)
  ]
 }
 

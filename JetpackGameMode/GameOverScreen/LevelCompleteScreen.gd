@@ -4,6 +4,7 @@ export(String, FILE) var main_menu_path
 
 var replay_btn
 var next_level_btn
+var watch_ending_btn
 var upgrade_btn
 var level_select_btn
 var quit_btn
@@ -35,27 +36,29 @@ var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 
 func _ready():
-	replay_btn = self.get_node("ResultsContainer/Buttons/Replay")
-	next_level_btn = self.get_node("ResultsContainer/Buttons/NextLevel")
-	upgrade_btn = self.get_node("ResultsContainer/Buttons/Upgrade")
-	level_select_btn = self.get_node("ResultsContainer/Buttons/LevelSelect")
-	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
-	animator = self.get_node("AnimationPlayer")
-	stage_number = self.get_node("StageClearedContainer/LevelText/StageNumber")
-	stage_name = self.get_node("StageClearedContainer/LevelText/StageName")
+	replay_btn = $ResultsContainer/Buttons/Replay
+	next_level_btn = $ResultsContainer/Buttons/NextLevel
+	watch_ending_btn = $ResultsContainer/Buttons/WatchEnding
+	upgrade_btn = $ResultsContainer/Buttons/Upgrade
+	level_select_btn = $ResultsContainer/Buttons/LevelSelect
+	quit_btn = $ResultsContainer/Buttons/Quit
+	animator = $AnimationPlayer
+	stage_number = $StageClearedContainer/LevelText/StageNumber
+	stage_name = $StageClearedContainer/LevelText/StageName
 	
+	watch_ending_btn.hide()
 	animator.assigned_animation = "base"
 	animator.seek(0,true)
 	
-	score_results = self.get_node("ResultsContainer/ScoreResults")
+	score_results = $ResultsContainer/ScoreResults
 	label_score = score_results.get_node("ScoreContainer/Score")
 	label_highscore = score_results.get_node("HighScoreContainer/Highscore")
 	upgrade_container = score_results.get_node("UpgradeContainer")
 	label_upgrade = score_results.get_node("UpgradeContainer/UpgradePoints")
 	score_congrats = score_results.get_node("ScoreContainer/HighscoreText")
 	
-	unlock_results = self.get_node("ResultsContainer/ModeUnlock")
-	time_results = self.get_node("ResultsContainer/TimeResults")
+	unlock_results = $ResultsContainer/ModeUnlock
+	time_results = $ResultsContainer/TimeResults
 	label_time = time_results.get_node("TimeContainer/Time")
 	label_hightime = time_results.get_node("HighTimeContainer/HighTime")
 	time_congrats = time_results.get_node("TimeContainer/HightimeText")
@@ -155,7 +158,8 @@ func open(level_number, level_name):
 			next_level_btn.grab_focus()
 		else:
 			next_level_btn.hide()
-			level_select_btn.grab_focus()
+			watch_ending_btn.show()
+			watch_ending_btn.grab_focus()
 	elif game_mode == "speedrun":
 		upgrade_container.hide()
 		upgrade_btn.hide()
@@ -279,3 +283,8 @@ func _on_NextLevel_pressed():
 	Global.set_current_story_level(level)
 	 
 	restart_game()
+
+
+func _on_WatchEnding_pressed() -> void:
+	var ending_path: = "res://Cutscenes/Cutscene3.tscn"
+	ScreenManager.black_transition(ending_path, null, self)
