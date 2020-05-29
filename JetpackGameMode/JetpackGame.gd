@@ -166,6 +166,9 @@ func game_start():
 	initialize_game_stats()
 	setup_game_mode_level()
 	
+	player.set_player_stats(is_tutorial and not is_tutorial_completed())
+	ammunition.initialize_ammo(initial_ammo)
+	
 	if level_intro_cutscene != null and not Global.is_retry:
 		set_game_state("Cutscene")
 		ScreenManager.black_transition(level_intro_cutscene, null, self)
@@ -221,9 +224,6 @@ func initialize_game_stats():
 		max_speed = 4 + Global.savedata[game_mode]["max speed"]
 		laser_strength = Global.savedata[game_mode]["laser strength"]
 		cooldown = Global.savedata[game_mode]["cooldown"]
-	
-	player.set_player_stats()
-	ammunition.initialize_ammo(initial_ammo)
 
 func setup_game_mode_level():
 	if game_mode == "story":

@@ -441,11 +441,11 @@ func reset_story_progress():
 			380, #12
 	]
 	
-	savedata["story"]["cooldown"] = 0
+	savedata["story"]["cooldown"] = 1
 	savedata["story"]["initial ammo"] = 0
-	savedata["story"]["initial shield"] = 0
+	savedata["story"]["initial shield"] = 1
 	savedata["story"]["initial speed"] = 4.0
-	savedata["story"]["max speed"] = 11.0
+	savedata["story"]["max speed"] = 9.0
 	savedata["story"]["laser strength"] = 0
 	savedata["story"]["upgrade level"] = 1
 	savedata["story"]["next upgrade"] = base_upgrade
