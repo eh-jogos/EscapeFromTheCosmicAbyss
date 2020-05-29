@@ -65,26 +65,24 @@ tracks/4/keys = {
 "values": [ false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorsMenuLayer/Obstaculos/LaserEye/AnimationPlayer:playback/play")
+tracks/5/path = NodePath("ColorsMenuLayer/ParallaxBackground/MidBackRowsBossSkin:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 2.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 2,
-"values": [ "charging", "shooting" ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("ColorsMenuLayer/ParallaxBackground/MidBackRowsBossSkin:visible")
+tracks/6/type = "animation"
+tracks/6/path = NodePath("ColorsMenuLayer/Obstaculos/LaserEye/AnimationPlayer")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"clips": PoolStringArray( "charging", "shooting", "hide" ),
+"times": PoolRealArray( 0, 2.2, 2.9 )
 }

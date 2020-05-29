@@ -5018,9 +5018,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 261 ), ExtResource( 262 ), ExtResource( 402 ), ExtResource( 264 ), ExtResource( 402 ), ExtResource( 262 ) ],
+"frames": [ ExtResource( 247 ), ExtResource( 251 ), ExtResource( 250 ), ExtResource( 251 ) ],
 "loop": true,
-"name": "idle_angry",
+"name": "scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 256 ), ExtResource( 253 ), ExtResource( 252 ), ExtResource( 260 ), ExtResource( 252 ), ExtResource( 253 ) ],
@@ -5033,9 +5033,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 247 ), ExtResource( 251 ), ExtResource( 250 ), ExtResource( 251 ) ],
+"frames": [ ExtResource( 261 ), ExtResource( 262 ), ExtResource( 402 ), ExtResource( 264 ), ExtResource( 402 ), ExtResource( 262 ) ],
 "loop": true,
-"name": "scream",
+"name": "idle_angry",
 "speed": 12.0
 } ]
 
@@ -5056,9 +5056,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 370 ), ExtResource( 371 ), ExtResource( 396 ), ExtResource( 350 ), ExtResource( 396 ), ExtResource( 371 ) ],
+"frames": [ ExtResource( 374 ), ExtResource( 373 ), ExtResource( 372 ), ExtResource( 373 ) ],
 "loop": true,
-"name": "idle_angry",
+"name": "scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 393 ), ExtResource( 366 ), ExtResource( 363 ), ExtResource( 387 ), ExtResource( 363 ), ExtResource( 366 ) ],
@@ -5071,9 +5071,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 374 ), ExtResource( 373 ), ExtResource( 372 ), ExtResource( 373 ) ],
+"frames": [ ExtResource( 370 ), ExtResource( 371 ), ExtResource( 396 ), ExtResource( 350 ), ExtResource( 396 ), ExtResource( 371 ) ],
 "loop": true,
-"name": "scream",
+"name": "idle_angry",
 "speed": 12.0
 } ]
 
@@ -5484,9 +5484,9 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 294 ), ExtResource( 291 ), ExtResource( 286 ), ExtResource( 289 ), ExtResource( 286 ), ExtResource( 291 ) ],
+"frames": [ ExtResource( 308 ), ExtResource( 307 ), ExtResource( 365 ), ExtResource( 307 ) ],
 "loop": true,
-"name": "idle_angry",
+"name": "scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 343 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 299 ), ExtResource( 304 ), ExtResource( 303 ) ],
@@ -5499,9 +5499,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 308 ), ExtResource( 307 ), ExtResource( 365 ), ExtResource( 307 ) ],
+"frames": [ ExtResource( 294 ), ExtResource( 291 ), ExtResource( 286 ), ExtResource( 289 ), ExtResource( 286 ), ExtResource( 291 ) ],
 "loop": true,
-"name": "scream",
+"name": "idle_angry",
 "speed": 12.0
 } ]
 
@@ -5522,14 +5522,14 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 302 ), ExtResource( 285 ), ExtResource( 265 ), ExtResource( 292 ), ExtResource( 265 ), ExtResource( 285 ) ],
-"loop": true,
-"name": "idle_angry",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 266 ), ExtResource( 268 ), ExtResource( 276 ), ExtResource( 268 ) ],
 "loop": true,
 "name": "scream",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 302 ), ExtResource( 285 ), ExtResource( 265 ), ExtResource( 292 ), ExtResource( 265 ), ExtResource( 285 ) ],
+"loop": true,
+"name": "idle_angry",
 "speed": 12.0
 } ]
 
@@ -5568,10 +5568,10 @@ animations = [ {
 "name": "to_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 310 ), ExtResource( 311 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 297 ), ExtResource( 311 ) ],
+"frames": [ ExtResource( 296 ), ExtResource( 353 ), ExtResource( 376 ), ExtResource( 353 ) ],
 "loop": true,
-"name": "idle_angry",
-"speed": 12.0
+"name": "scream",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 305 ), ExtResource( 287 ), ExtResource( 288 ), ExtResource( 379 ), ExtResource( 288 ), ExtResource( 287 ) ],
 "loop": true,
@@ -5583,10 +5583,10 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 296 ), ExtResource( 353 ), ExtResource( 376 ), ExtResource( 353 ) ],
+"frames": [ ExtResource( 310 ), ExtResource( 311 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 297 ), ExtResource( 311 ) ],
 "loop": true,
-"name": "scream",
-"speed": 5.0
+"name": "idle_angry",
+"speed": 12.0
 } ]
 
 [sub_resource type="Animation" id=49]
@@ -5808,31 +5808,31 @@ tracks/1/keys = {
 "values": [ Vector2( -81, 0 ), Vector2( -81, 0 ), Vector2( -81, 1093 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Root/ColorFrame/ColorFrame:rect_size")
+tracks/2/path = NodePath("Root/ColorFrame:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 122, 40 ), Vector2( 122, 1106 ), Vector2( 122, 13 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Root/ColorFrame:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Root/LaseEyeSkin:warning_color_1")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 tracks/4/type = "value"
-tracks/4/path = NodePath("Root/LaseEyeSkin:warning_color_1")
+tracks/4/path = NodePath("Root/LaseEyeSkin:warning_color_2")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -5844,24 +5844,12 @@ tracks/4/keys = {
 "values": [ 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Root/LaseEyeSkin:warning_color_2")
+tracks/5/path = NodePath("Root/LaseEyeSkin:warning_color_3")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Root/LaseEyeSkin:warning_color_3")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -5880,14 +5868,14 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 53 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 55 ) ],
 "loop": false,
 "name": "kill_player",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 53 ) ],
+"loop": false,
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 64 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
@@ -5908,15 +5896,15 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 97 ) ],
-"loop": false,
-"name": "spawn",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 108 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 107 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 99 ) ],
 "loop": false,
 "name": "kill_player",
 "speed": 59.999
+}, {
+"frames": [ ExtResource( 85 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 97 ) ],
+"loop": false,
+"name": "spawn",
+"speed": 60.0
 }, {
 "frames": [ ExtResource( 108 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ) ],
 "loop": false,
@@ -6971,8 +6959,8 @@ next/to_scream = "first_scream"
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -900 )
 frames = SubResource( 32 )
-animation = "scream"
-frame = 3
+animation = "idle"
+frame = 7
 centered = false
 script = ExtResource( 223 )
 
@@ -6980,16 +6968,15 @@ script = ExtResource( 223 )
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -901 )
 frames = SubResource( 33 )
-animation = "scream"
-frame = 3
+animation = "idle"
+frame = 7
 centered = false
 script = ExtResource( 223 )
 
 [node name="EyeOutline" type="Sprite" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 show_behind_parent = true
-position = Vector2( 632, 603 )
-rotation = -0.0110522
+position = Vector2( 471.3, 742.87 )
 texture = ExtResource( 398 )
 centered = false
 offset = Vector2( -40, -162 )
@@ -6997,8 +6984,9 @@ script = ExtResource( 223 )
 
 [node name="LaserMargins" type="ColorRect" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline"]
 show_behind_parent = true
+margin_left = 1930.0
 margin_top = -100.0
-margin_right = 10.0
+margin_right = 1940.0
 margin_bottom = 289.0
 color = Color( 0.780392, 0.223529, 0.211765, 1 )
 script = ExtResource( 25 )
@@ -7067,8 +7055,7 @@ anims/charging = SubResource( 41 )
 
 [node name="IrisOutline" type="Sprite" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
-position = Vector2( 289, 20 )
-rotation = 0.0383972
+position = Vector2( 291, 15 )
 texture = ExtResource( 389 )
 script = ExtResource( 223 )
 
@@ -7089,18 +7076,14 @@ self_modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 show_behind_parent = true
 position = Vector2( 476, 982 )
 frames = SubResource( 42 )
-animation = "scream"
-frame = 3
 centered = false
 script = ExtResource( 240 )
 
 [node name="Teeth" type="AnimatedSprite" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 show_behind_parent = true
-position = Vector2( 659.182, 836.19 )
+position = Vector2( 450.182, 1088.19 )
 frames = SubResource( 43 )
-animation = "scream"
-frame = 3
 centered = false
 script = ExtResource( 351 )
 
@@ -7109,8 +7092,6 @@ self_modulate = Color( 0.152941, 0.309804, 0.270588, 1 )
 show_behind_parent = true
 position = Vector2( 597.804, 843.095 )
 frames = SubResource( 44 )
-animation = "scream"
-frame = 3
 centered = false
 script = ExtResource( 257 )
 
@@ -7118,35 +7099,33 @@ script = ExtResource( 257 )
 self_modulate = Color( 0.137255, 0.4, 0.364706, 1 )
 position = Vector2( 8, 9 )
 frames = SubResource( 45 )
-animation = "scream"
-frame = 3
+animation = "idle"
+frame = 7
 centered = false
 script = ExtResource( 313 )
 
 [node name="MouthLines" type="AnimatedSprite" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 654.153, 866.54 )
+position = Vector2( 580.834, 1144.76 )
 frames = SubResource( 46 )
-animation = "scream"
-frame = 3
+animation = "idle"
+frame = 7
 centered = false
 script = ExtResource( 223 )
 
 [node name="Perdigotos" type="AnimatedSprite" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
-position = Vector2( 753.634, 943.854 )
+position = Vector2( 716.634, 919.854 )
 frames = SubResource( 47 )
-animation = "scream"
-frame = 3
 centered = false
 script = ExtResource( 351 )
 
 [node name="EyeLines" type="AnimatedSprite" parent="ColorsMenuLayer/ParallaxBackground/FinalBoss/Boss/FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 559, 492 )
+position = Vector2( 503.717, 604.095 )
 frames = SubResource( 48 )
-animation = "scream"
-frame = 3
+animation = "idle"
+frame = 7
 centered = false
 script = ExtResource( 223 )
 
@@ -7155,7 +7134,6 @@ script = ExtResource( 223 )
 [node name="LaserEye" type="Node2D" parent="ColorsMenuLayer/Obstaculos" groups=[
 "enemy",
 ]]
-visible = false
 position = Vector2( 510, 75 )
 z_index = 3
 
@@ -7181,13 +7159,15 @@ margin_right = 86.0
 margin_bottom = 40.0
 color = Color( 0.780392, 0.223529, 0.211765, 1 )
 script = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ColorFrame" type="ColorRect" parent="ColorsMenuLayer/Obstaculos/LaserEye/Root/ColorFrame"]
-anchor_left = 0.5
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -61.0
-margin_right = 61.0
+margin_left = 20.0
+margin_right = -20.0
 script = ExtResource( 27 )
 
 [node name="LaseEyeSkin" parent="ColorsMenuLayer/Obstaculos/LaserEye/Root" instance=ExtResource( 28 )]
@@ -7226,7 +7206,7 @@ self_modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 55 )
 animation = "idle"
-frame = 13
+frame = 1
 playing = true
 centered = false
 flip_v = true
@@ -7237,7 +7217,7 @@ self_modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 position = Vector2( 0, -875 )
 frames = SubResource( 56 )
 animation = "idle"
-frame = 13
+frame = 1
 playing = true
 centered = false
 flip_v = true
@@ -7272,7 +7252,7 @@ self_modulate = Color( 0.0196078, 0.0784314, 0.0705882, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 55 )
 animation = "idle"
-frame = 13
+frame = 1
 playing = true
 centered = false
 script = ExtResource( 73 )
@@ -7282,7 +7262,7 @@ self_modulate = Color( 0.12549, 0.392157, 0.356863, 1 )
 position = Vector2( 0, 75 )
 frames = SubResource( 56 )
 animation = "idle"
-frame = 13
+frame = 1
 playing = true
 centered = false
 script = ExtResource( 117 )
@@ -7449,13 +7429,28 @@ margin_top = 0.0
 margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Outline"
+category = "waves"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
+selected_part = "waves_part"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuWaves/List/Buttons" instance=ExtResource( 231 )]
 margin_top = 70.0
 margin_bottom = 120.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Body"
+category = "waves"
 waves_part = "body"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
+selected_part = "waves_part"
 
 [node name="MenuTentacles" type="MarginContainer" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus"]
 light_mask = 1024
@@ -7506,6 +7501,12 @@ margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Outline"
 category = "tentacles"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "tentacles_part"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuTentacles/List/Buttons" instance=ExtResource( 231 )]
@@ -7514,7 +7515,12 @@ margin_bottom = 120.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Body"
 category = "tentacles"
+waves_part = "outline"
 tentacles_part = "body"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "tentacles_part"
 
 [node name="MenuLaserEye" type="MarginContainer" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus"]
@@ -7566,6 +7572,12 @@ margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Outline"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7573,7 +7585,12 @@ margin_top = 70.0
 margin_bottom = 120.0
 description = "Body"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "body"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionEye" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7581,7 +7598,12 @@ margin_top = 140.0
 margin_bottom = 190.0
 description = "Eye"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "eye"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionWarning1" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7589,7 +7611,12 @@ margin_top = 210.0
 margin_bottom = 260.0
 description = "Warning 1"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "warning1"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionWarning2" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7597,7 +7624,12 @@ margin_top = 280.0
 margin_bottom = 330.0
 description = "Warning 2"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "warning2"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionWarning3" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7605,7 +7637,12 @@ margin_top = 350.0
 margin_bottom = 400.0
 description = "Warning 3"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "warning3"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionLaserBorders" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7613,7 +7650,12 @@ margin_top = 420.0
 margin_bottom = 470.0
 description = "Laser Borders"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "laser_outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="OptionLaserCore" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource( 231 )]
@@ -7622,7 +7664,12 @@ margin_bottom = 540.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Laser Core"
 category = "laser_eye"
+waves_part = "outline"
+tentacles_part = "outline"
 laser_eye_part = "laser_core"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "laser_eye_part"
 
 [node name="MenuBgBoss" type="MarginContainer" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus"]
@@ -7674,6 +7721,12 @@ margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Eye"
 category = "bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "bg_boss_part"
 
 [node name="OptionIris" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuBgBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7681,7 +7734,12 @@ margin_top = 70.0
 margin_bottom = 120.0
 description = "Iris"
 category = "bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
 bg_boss_part = "iris"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "bg_boss_part"
 
 [node name="OptionMouth" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuBgBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7689,7 +7747,12 @@ margin_top = 140.0
 margin_bottom = 190.0
 description = "Mouth"
 category = "bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
 bg_boss_part = "mouth"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "bg_boss_part"
 
 [node name="OptionTeeth" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuBgBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7698,7 +7761,12 @@ margin_bottom = 260.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Teeth"
 category = "bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
 bg_boss_part = "teeth"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "bg_boss_part"
 
 [node name="MenuMidBoss" type="MarginContainer" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus"]
@@ -7750,6 +7818,12 @@ margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Outline"
 category = "mid_bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "mid_bg_boss_part"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuMidBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7757,7 +7831,12 @@ margin_top = 70.0
 margin_bottom = 120.0
 description = "Body"
 category = "mid_bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
 mid_bg_boss_part = "body"
+final_boss_part = "outline"
 selected_part = "mid_bg_boss_part"
 
 [node name="OptionTeeth" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuMidBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7765,7 +7844,12 @@ margin_top = 140.0
 margin_bottom = 190.0
 description = "Teeth"
 category = "mid_bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
 mid_bg_boss_part = "teeth"
+final_boss_part = "outline"
 selected_part = "mid_bg_boss_part"
 
 [node name="OptionEye" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuMidBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7773,7 +7857,12 @@ margin_top = 210.0
 margin_bottom = 260.0
 description = "Eye"
 category = "mid_bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
 mid_bg_boss_part = "eye"
+final_boss_part = "outline"
 selected_part = "mid_bg_boss_part"
 
 [node name="OptionIris" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuMidBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7782,7 +7871,12 @@ margin_bottom = 330.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Iris"
 category = "mid_bg_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
 mid_bg_boss_part = "iris"
+final_boss_part = "outline"
 selected_part = "mid_bg_boss_part"
 
 [node name="MenuFinalBoss" type="MarginContainer" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus"]
@@ -7834,6 +7928,12 @@ margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Outline"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
+final_boss_part = "outline"
 selected_part = "final_boss_part"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuFinalBoss/List/Buttons" instance=ExtResource( 231 )]
@@ -7841,6 +7941,11 @@ margin_top = 70.0
 margin_bottom = 120.0
 description = "Body"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "body"
 selected_part = "final_boss_part"
 
@@ -7849,6 +7954,11 @@ margin_top = 140.0
 margin_bottom = 190.0
 description = "Eye"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "eye"
 selected_part = "final_boss_part"
 
@@ -7857,6 +7967,11 @@ margin_top = 210.0
 margin_bottom = 260.0
 description = "Iris"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "iris"
 selected_part = "final_boss_part"
 
@@ -7865,6 +7980,11 @@ margin_top = 280.0
 margin_bottom = 330.0
 description = "Tongue"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "tongue"
 selected_part = "final_boss_part"
 
@@ -7873,6 +7993,11 @@ margin_top = 350.0
 margin_bottom = 400.0
 description = "Teeth"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "teeth"
 selected_part = "final_boss_part"
 
@@ -7882,6 +8007,11 @@ margin_bottom = 470.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Gum"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "gengiva"
 selected_part = "final_boss_part"
 
@@ -7934,6 +8064,11 @@ margin_bottom = 50.0
 focus_neighbour_top = NodePath("../../../../../NavButtons/Exit")
 description = "Laser Borders"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "laser_outline"
 selected_part = "final_boss_part"
 
@@ -7942,6 +8077,11 @@ margin_top = 70.0
 margin_bottom = 120.0
 description = "Laser Core"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "laser_core"
 selected_part = "final_boss_part"
 
@@ -7950,6 +8090,11 @@ margin_top = 140.0
 margin_bottom = 190.0
 description = "Warning 1"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "warning1"
 selected_part = "final_boss_part"
 
@@ -7958,6 +8103,11 @@ margin_top = 210.0
 margin_bottom = 260.0
 description = "Warning 2"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "warning2"
 selected_part = "final_boss_part"
 
@@ -7967,6 +8117,11 @@ margin_bottom = 330.0
 focus_neighbour_bottom = NodePath("../../../../../NavButtons/Exit")
 description = "Warning 3"
 category = "final_boss"
+waves_part = "outline"
+tentacles_part = "outline"
+laser_eye_part = "outline"
+bg_boss_part = "eye"
+mid_bg_boss_part = "outline"
 final_boss_part = "warning3"
 selected_part = "final_boss_part"
 
