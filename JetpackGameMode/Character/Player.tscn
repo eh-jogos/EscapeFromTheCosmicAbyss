@@ -530,9 +530,9 @@ animations = [ {
 "name": "rising",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ) ],
+"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ) ],
 "loop": true,
-"name": "falling",
+"name": "reloading",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ) ],
@@ -540,9 +540,9 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ) ],
+"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ) ],
 "loop": true,
-"name": "reloading",
+"name": "falling",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ) ],
@@ -563,9 +563,9 @@ animations = [ {
 "name": "rising",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
 "loop": true,
-"name": "falling",
+"name": "reloading",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ) ],
@@ -573,9 +573,9 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
+"frames": [ ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ) ],
 "loop": true,
-"name": "reloading",
+"name": "falling",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 187 ), ExtResource( 188 ) ],
@@ -619,9 +619,9 @@ animations = [ {
 "name": "rising",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ), ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ) ],
+"frames": [ ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ) ],
 "loop": true,
-"name": "falling",
+"name": "reloading",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 312 ), ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ) ],
@@ -629,9 +629,9 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ) ],
+"frames": [ ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 325 ), ExtResource( 326 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 330 ), ExtResource( 331 ) ],
 "loop": true,
-"name": "reloading",
+"name": "falling",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 332 ), ExtResource( 333 ), ExtResource( 334 ), ExtResource( 335 ), ExtResource( 336 ), ExtResource( 337 ), ExtResource( 338 ), ExtResource( 339 ), ExtResource( 340 ), ExtResource( 341 ), ExtResource( 342 ), ExtResource( 343 ), ExtResource( 344 ) ],
@@ -652,9 +652,9 @@ animations = [ {
 "name": "rising",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ), ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ) ],
+"frames": [ ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ) ],
 "loop": true,
-"name": "falling",
+"name": "reloading",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 402 ), ExtResource( 403 ), ExtResource( 404 ), ExtResource( 405 ), ExtResource( 406 ), ExtResource( 407 ), ExtResource( 408 ) ],
@@ -662,9 +662,9 @@ animations = [ {
 "name": "shooting",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ) ],
+"frames": [ ExtResource( 409 ), ExtResource( 410 ), ExtResource( 411 ), ExtResource( 412 ), ExtResource( 413 ), ExtResource( 414 ), ExtResource( 415 ), ExtResource( 416 ), ExtResource( 417 ), ExtResource( 418 ), ExtResource( 419 ), ExtResource( 420 ), ExtResource( 421 ) ],
 "loop": true,
-"name": "reloading",
+"name": "falling",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 422 ), ExtResource( 423 ), ExtResource( 424 ), ExtResource( 425 ), ExtResource( 426 ), ExtResource( 427 ), ExtResource( 428 ), ExtResource( 429 ), ExtResource( 430 ), ExtResource( 431 ), ExtResource( 432 ), ExtResource( 433 ), ExtResource( 434 ) ],

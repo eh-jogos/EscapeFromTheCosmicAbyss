@@ -53,7 +53,7 @@ void light() {
 
 }
 "
-graph_offset = Vector2( -245, 126 )
+graph_offset = Vector2( 16, 243 )
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2( 480, 280 )
@@ -69,4 +69,4 @@ nodes/fragment/connections = PoolIntArray( 2, 0, 0, 0, 3, 0, 4, 2, 5, 0, 4, 0, 4
 
 [resource]
 shader = SubResource( 5 )
-shader_param/color = Color( 0, 0.960784, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )

@@ -38,7 +38,8 @@ var is_bouncing = false
 var gravity = 1200.0
 var speed_y = -900.0
 var dash_modifier = 90.0
-var base_dash_cost = 65.0
+var base_dash_cost = 50
+var dash_cost_decrement = 6.4 # so that at max upgrade, dash cost is 18
 var dash_cost
 var speed_x 
 var shield_energy
@@ -94,13 +95,13 @@ func _physics_process(delta):
 	
 	var heat = overheat_bar.get_value()
 	if not dashing:
-		heat -= cooldown if heat >= cooldown else 0
+		heat = max(heat-cooldown, 0)
 	
 	handle_overheat_bar_color(heat)
 	
 	speed.y += delta * gravity_force
 	
-	if Input.is_action_pressed("boost") and not overheated:
+	if Input.is_action_pressed("boost") and not overheated and not dashing:
 		heat = handle_boost(delta, heat)
 	else:
 		jet_particles.set_emitting(false)
@@ -193,17 +194,20 @@ func _physics_process(delta):
 
 
 func handle_overheat_bar_color(heat): 
-	var is_already_playing = overheat_bar_animator.is_playing()
-	if overheated and not is_already_playing:
-		overheat_bar_animator.play("overheated")
-	elif heat <= OVERHEAT_THRESHOLD and overheated and not is_already_playing:
+	var current_animation = overheat_bar_animator.assigned_animation
+	var overheat_relief_point = min(OVERHEAT_THRESHOLD, 100-dash_cost)
+	if overheated and heat > 100-dash_cost:
+		if current_animation != "overheated":
+			overheat_bar_animator.play("overheated")
+	elif heat <= overheat_relief_point and overheated:
 		overheated = false
-		overheat_bar_animator.play_backwards("overheated")
-	elif heat > OVERHEAT_THRESHOLD-dash_cost and not undashable and not is_already_playing:
+		overheat_bar_animator.assigned_animation = "undashable"
+		overheat_bar_animator.seek(overheat_bar_animator.current_animation_length, true)
+	elif heat > OVERHEAT_THRESHOLD-dash_cost and not undashable:
 		overheat_bar_animator.play("undashable")
 		undashable = true
-	elif heat <= OVERHEAT_THRESHOLD-dash_cost and undashable and not is_already_playing:
-		overheat_bar_animator.play_backwards("undashable")
+	elif can_dash(heat) and undashable:
+		overheat_bar_animator.play("base")
 		undashable = false
 
 
@@ -224,6 +228,7 @@ func handle_boost(delta, heat):
 	if heat >= 100:
 		heat = 100
 		overheated = true
+		dashing = false
 	
 	return heat
 
@@ -243,6 +248,7 @@ func handle_dash(delta, dash_force, heat):
 	if heat >= 100:
 		heat = 100
 		overheated = true
+		dashing = false
 	
 	return heat
 
@@ -295,15 +301,18 @@ func reset_y():
 
 
 func can_dash(heat):
-	return not dashing and not overheated and heat < OVERHEAT_THRESHOLD-dash_cost
+	return not dashing and not overheated and heat <= OVERHEAT_THRESHOLD-dash_cost 
 
 
-func set_player_stats():
+func set_player_stats(is_tutorial: bool):
 	speed_x = min_speed + game.initial_speed
-	shield_energy = game.initial_shield
+	if is_tutorial:
+		shield_energy = 0
+	else:
+		shield_energy = game.initial_shield
 	laser_strength = 1.5 + (0.5*game.laser_strength)
-	cooldown = 1.5 + (0.1 * game.cooldown)
-	dash_cost = base_dash_cost - (base_dash_cost * 0.15 * game.cooldown)
+	cooldown = 1.0 + (0.14 * game.cooldown)
+	dash_cost = base_dash_cost - (dash_cost_decrement * game.cooldown)
 	
 	if is_invincible and shield_energy == 0:
 			shield_energy = 1

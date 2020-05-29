@@ -5,7 +5,7 @@
 [ext_resource path="res://JetpackGameMode/HUD/pngs/overheat_bar_mid.png" type="Texture" id=3]
 [ext_resource path="res://JetpackGameMode/HUD/OverheatBarColorShader.tres" type="Material" id=4]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=1]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material:shader_param/color")
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [ Color( 0, 0.960784, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=2]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material:shader_param/color")
@@ -32,10 +32,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 0.227451, 0.172549, 1 ), Color( 0.265625, 0.126587, 0.201667, 1 ) ]
+"values": [ Color( 1, 0.227451, 0.172549, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material:shader_param/color")
@@ -57,7 +57,6 @@ margin_top = -81.0
 margin_right = -551.0
 margin_bottom = 85.0
 mouse_filter = 0
-value = 50.0
 texture_under = ExtResource( 1 )
 texture_over = ExtResource( 2 )
 texture_progress = ExtResource( 3 )
@@ -67,6 +66,6 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/base = SubResource( 7 )
-anims/overheated = SubResource( 8 )
-anims/undashable = SubResource( 9 )
+anims/base = SubResource( 1 )
+anims/overheated = SubResource( 2 )
+anims/undashable = SubResource( 3 )
