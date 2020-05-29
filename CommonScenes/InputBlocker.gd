@@ -13,6 +13,8 @@ onready var _blocker = $Blocker
 
 
 ### Built in Engine Methods ---------------
+func _ready() -> void:
+	_blocker.hide()
 
 ### ---------------------------------------
 
