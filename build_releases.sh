@@ -1,15 +1,29 @@
 #!/bin/zsh
 project_settings="project.godot"
 export_configs="export_presets.cfg"
-export_output=$1
-game_version=$2
+include_debug=$1
+export_output=$2
+game_version=$3
+
+
+if [[ -z $include_debug || $include_debug = "false" ]]
+then
+   	include_debug=false
+elif [[ $include_debug = "true" ]]
+then
+	include_debug=true
+else
+	echo "Unrecognized option for include_debug: $include_debug | changing to false"
+	include_debug=false
+fi
+
 
 if [[ -z $game_version ]]
 then
    	game_version=$(cat $project_settings | grep "^config/version" | cut -d'=' -f2)
 	game_version=$(sed -e 's/^"//' -e 's/"$//' <<< $game_version)
 fi
-echo "Exporting $game_version"
+echo "Exporting $game_version with debug turned: $include_debug"
 
 
 function getProperty {
@@ -32,7 +46,7 @@ do
 	# or building itch.io releases. Just add them as cases below
 	case $export_output in
 		*)
-			./build_standalone_releases.sh $game_version $profile $filename
+			./build_standalone_releases.sh $game_version $profile $filename $include_debug
 			;;
 	esac
 done
