@@ -47,6 +47,7 @@ func reset_joypad_type():
 func set_joypad_type_for(device: int) -> void:
 	var device_name: = Input.get_joy_name(device)
 	joypad_type = _get_joypad_type_for(device_name)
+	print("device_name: %s | joypad_type: %s"%[device_name, joypad_type])
 
 
 func get_joypad_prompts() -> ResourcePreloader:

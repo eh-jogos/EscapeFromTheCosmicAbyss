@@ -310,5 +310,5 @@ func _erase_all_event_type_from(action_name: String, new_event: InputEvent) -> v
 
 
 func _on_Input_joy_connection_changed(device: int, is_connected: bool) -> void:
-	#print("Input device: %s, is_connected: %s"%[device, is_connected])
+	print("Input device: %s, is_connected: %s"%[device, is_connected])
 	_set_joypad(device, is_connected)
