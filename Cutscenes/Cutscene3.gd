@@ -7,6 +7,13 @@ func close():
 		for child in get_children():
 			child.hide()
 	else:
-		var credits_scene_path: = "res://CommonScenes/CreditsScene/CreditsScene.tscn"
-		ScreenManager.load_screen_invisible(credits_scene_path)
+		if Global.was_ending_called_from_extras:
+			Global.was_ending_called_from_extras = false
+			ScreenManager.black_transition_from_above()
+		else:
+			if not Global.achievements_handler.has_changed_the_univese:
+				Global.achievements_handler.has_changed_the_univese = true
+				Global.achievements_handler.save()
+			var credits_scene_path: = "res://CommonScenes/CreditsScene/CreditsScene.tscn"
+			ScreenManager.load_screen_invisible(credits_scene_path)
 

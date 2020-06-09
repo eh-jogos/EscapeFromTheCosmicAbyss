@@ -80,6 +80,7 @@ func _on_button_pressed(node):
 	elif node == level5:
 		path = cutscene_level5_path
 	elif node == ending:
+		Global.was_ending_called_from_extras = true
 		path = cutscene_ending_path
 	else:
 		print("ERROR | INVALID BUTTON PRESSED: %s"%node)
