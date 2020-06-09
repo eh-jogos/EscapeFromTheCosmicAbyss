@@ -48,6 +48,7 @@ var version = 0.9191
 var is_invincible = false
 var is_retry = false
 var was_credits_called_from_extras = false
+var was_ending_called_from_extras = false
 
 #total sum of points that can be distributed in the player build in the base savedata
 var base_stats = 15
@@ -170,6 +171,7 @@ var base_savedata = {
 	"colors": {},
 }
 
+onready var achievements_handler: AchievementsHandler = $AchievementsHandler
 
 func _ready():
 	base_savedata.colors = default_color_scheme.duplicate(true)
@@ -294,6 +296,9 @@ func update_highscore(game_mode, points):
 	if game_mode == "story":
 		var index = savedata[game_mode]["current level"]
 		savedata[game_mode]["highscore"][index] = points
+		if achievements_handler.has_highscore_on.has(index):
+			achievements_handler.has_highscore_on[index] = true
+			achievements_handler.set_highscore_achievements()
 	elif game_mode == "arcade" or game_mode == "speedrun":
 		savedata[game_mode]["highscore"] = points
 	else:
@@ -332,6 +337,8 @@ func update_story_next_upgrade(countdown):
 
 func update_story_unlocks(level):
 	savedata["story"]["levels unlocked"] = level
+	if level >= 1:
+		achievements_handler.has_completed_safety_first = true
 	save()
 
 
