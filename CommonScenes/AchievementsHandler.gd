@@ -81,22 +81,12 @@ var _base_serialized_data = {}
 func _ready():
 	_full_path = _dir_path.plus_file(_file_name)
 	_base_serialized_data = _build_serialized_data()
-	check_savefile()
+	_check_savefile()
 
 ### ---------------------------------------
 
 
 ### Public Methods ------------------------
-func check_savefile():
-	if not _directory.dir_exists(_dir_path):
-		_directory.make_dir_recursive(_dir_path)
-	
-	if not _file.file_exists(_full_path):
-		reset_savefile()
-	
-	read()
-
-
 func reset_savefile():
 	if not _serialized_data.empty():
 		_translate_serialized_data(_base_serialized_data)
@@ -131,6 +121,7 @@ func read() -> void:
 	_file.close()
 	
 	_translate_serialized_data(_serialized_data)
+	check_all_achievements()
 	if OS.is_debug_build():
 		printraw(var2str(_serialized_data))
 		printraw("\n")
@@ -142,6 +133,7 @@ func set_arcade_laps_achievement(num_of_laps: int) -> void:
 		return
 	elif num_of_laps >= TARGET_LAPS:
 		has_completed_arcade = true
+		emit_signal("infinite_jetpacker_achieved")
 		save()
 
 
@@ -172,10 +164,51 @@ func has_enough_broken_barriers() -> bool:
 func has_enough_laser_dodges() -> bool:
 	return current_lasers >= TARGET_LASER_DODGES
 
+
+func increment_screams_heard() -> void:
+	if not has_heard_the_scream:
+		has_heard_the_scream = true
+		emit_signal("heard_the_scream_achieved")
+		save()
+	
+	screams_heard += 1
+
+
+func check_all_achievements() -> void:
+	if has_completed_safety_first:
+		emit_signal("safety_first_achieved")
+	if has_heard_the_scream:
+		emit_signal("heard_the_scream_achieved")
+	if has_changed_the_univese:
+		emit_signal("changed_the_universe_achieved")
+	if has_completed_speedrun:
+		emit_signal("slow_and_steady_achieved")
+	if has_completed_arcade:
+		emit_signal("infinite_jetpacker_achieved")
+	if has_heard_enough_screams():
+		emit_signal("shut_up_achieved")
+	if has_enough_mileage():
+		emit_signal("mileage_achieved")
+	if has_enough_broken_barriers():
+		emit_signal("break_barriers_achieved")
+	if has_enough_laser_dodges():
+		emit_signal("nothing_to_see_achieved")
+	set_highscore_achievements()
+
+
 ### ---------------------------------------
 
 
 ### Private Methods -----------------------
+func _check_savefile():
+	if not _directory.dir_exists(_dir_path):
+		_directory.make_dir_recursive(_dir_path)
+	
+	if not _file.file_exists(_full_path):
+		reset_savefile()
+	
+	read()
+
 func _push_reading_file_error(error) -> void:
 	push_error("Error while reading %s: %s"%[_file_name, error])
 	assert(false)
@@ -186,10 +219,12 @@ func _build_serialized_data() -> Dictionary:
 	settings["version"] = _version
 	
 	settings["has_completed_safety_first"] = has_completed_safety_first
-	settings["has_completed_arcade"] = has_completed_arcade
+	settings["has_heard_the_scream"] = has_heard_the_scream
 	settings["has_changed_the_univese"] = has_changed_the_univese
 	settings["has_completed_speedrun"] = has_completed_speedrun
 	settings["has_completed_arcade"] = has_completed_arcade
+	settings["has_any_highscore"] = has_any_highscore
+	settings["has_all_highscores"] = has_all_highscores
 	settings["screams_heard"] = screams_heard
 	settings["current_mileage"] = current_mileage
 	settings["current_barriers"] = current_barriers
@@ -203,43 +238,18 @@ func _build_serialized_data() -> Dictionary:
 func _translate_serialized_data(data: Dictionary) -> void:
 	#This should be a 'virtual' function if you turn this into a BaseSaveFile class
 	has_completed_safety_first = data["has_completed_safety_first"]
-	if has_completed_safety_first:
-		emit_signal("safety_first_achieved")
-	
 	has_heard_the_scream = data["has_heard_the_scream"]
-	if has_heard_the_scream:
-		emit_signal("heard_the_scream_achieved")
-	
 	has_changed_the_univese = data["has_changed_the_univese"]
-	if has_changed_the_univese:
-		emit_signal("changed_the_universe_achieved")
-	
 	has_completed_speedrun = data["has_completed_speedrun"]
-	if has_completed_speedrun:
-		emit_signal("slow_and_steady_achieved")
-	
 	has_completed_arcade = data["has_completed_arcade"]
-	if has_completed_arcade:
-		emit_signal("infinite_jetpacker_achieved")
-	
+	has_any_highscore = data["has_any_highscore"]
+	has_all_highscores = data["has_all_highscores"]
 	screams_heard = data["screams_heard"]
-	if has_heard_enough_screams():
-		emit_signal("shut_up_achieved")
-	
 	current_mileage = data["current_mileage"]
-	if has_enough_mileage():
-		emit_signal("mileage_achieved")
-	
 	current_barriers = data["current_barriers"]
-	if has_enough_broken_barriers():
-		emit_signal("break_barriers_achieved")
-	
 	current_lasers = data["current_lasers"]
-	if has_enough_laser_dodges():
-		emit_signal("nothing_to_see_achieved")
 	
 	has_highscore_on = str2var(data["has_highscore_on"])
-	set_highscore_achievements()
 
 
 # Bellow Here things would go into the extended script if you change this to extend a Futur BaseSaveFile
