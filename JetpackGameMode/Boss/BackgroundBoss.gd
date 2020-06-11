@@ -80,3 +80,7 @@ func _on_beat_spawned():
 			set_current_laser()
 		
 		print("BackgroundBoss | _on_beat_spawned | LASER! | is_up: %s"%[is_up])
+
+
+func _check_scream_achievement():
+	Global.achievements_handler.increment_screams_heard()

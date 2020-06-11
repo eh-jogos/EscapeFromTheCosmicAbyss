@@ -374,15 +374,7 @@ func _on_scored(num):
 	pass # replace with function body
 
 func update_score():
-	var points_str
-	if points < 10:
-		points_str = "000"+str(points)
-	elif points < 100:
-		points_str = "00"+str(points)
-	elif points < 1000:
-		points_str = "0"+str(points)
-	else:
-		points_str = str(points)
+	var points_str = "%04d"%[points]
 	points_label.set_text(points_str)
 
 func dash_score():

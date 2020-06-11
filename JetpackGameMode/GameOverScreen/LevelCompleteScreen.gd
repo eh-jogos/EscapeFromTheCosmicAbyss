@@ -187,6 +187,9 @@ func open(level_number, level_name):
 	stage_name.set_text(level_name)
 	animator.play("open")
 	sfx_player.play()
+	
+	Global.achievements_handler.check_all_achievements()
+	Global.achievements_handler.save()
 
 
 func play_unlock_animations():

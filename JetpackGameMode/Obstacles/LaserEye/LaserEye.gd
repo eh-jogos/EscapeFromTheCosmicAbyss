@@ -79,3 +79,5 @@ func _on_cycle_ended():
 	set_physics_process(false)
 	if should_score:
 		game._on_scored(point_value)
+	
+	Global.achievements_handler.current_lasers += 1

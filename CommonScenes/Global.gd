@@ -308,11 +308,15 @@ func update_highscore(game_mode, points):
 
 func update_hightime(time_duration):
 	savedata["speedrun"]["hightime"] = time_duration
+	if not achievements_handler.has_completed_speedrun:
+		achievements_handler.has_completed_speedrun = true
+		achievements_handler.emit_signal("slow_and_steady_achieved")
 	save()
 
 
 func update_highlaps(total_laps):
 	savedata["arcade"]["highlaps"] = total_laps
+	Global.achievements_handler.set_arcade_laps_achievement(total_laps)
 	save()
 
 
@@ -339,6 +343,8 @@ func update_story_unlocks(level):
 	savedata["story"]["levels unlocked"] = level
 	if level >= 1:
 		achievements_handler.has_completed_safety_first = true
+		achievements_handler.emit_signal("safety_first_achieved")
+		achievements_handler.save()
 	save()
 
 

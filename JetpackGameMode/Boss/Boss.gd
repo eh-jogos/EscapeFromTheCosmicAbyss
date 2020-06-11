@@ -23,6 +23,10 @@ func _physics_process(_delta):
 			handle_collision(raycast)
 
 
+func increment_laser_count() -> void:
+	Global.achievements_handler.current_lasers +=1
+
+
 func handle_collision(raycast):
 	var collider = raycast.get_collider()
 	print("Boss | Raycast: %s | Collider: %s" %[raycast.get_name(), collider.get_name()])

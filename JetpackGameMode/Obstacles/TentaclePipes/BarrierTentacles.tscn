@@ -1,6 +1,6 @@
 [gd_scene load_steps=212 format=2]
 
-[ext_resource path="res://JetpackGameMode/Obstacles/Pipe_Looper.gd" type="Script" id=1]
+[ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/BarrierBrain.gd" type="Script" id=2]
 [ext_resource path="res://JetpackGameMode/Obstacles/EnemyObstacle.gd" type="Script" id=3]
 [ext_resource path="res://JetpackGameMode/Obstacles/TentaclePipes/obstacles_02_idle/outline/idle_outline0000.png" type="Texture" id=4]
@@ -1729,7 +1729,6 @@ b = Vector2( 0, 700 )
 ]]
 position = Vector2( 1920, 540 )
 script = ExtResource( 1 )
-point_value = 3
 
 [node name="PipeBrain" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -1796,7 +1795,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -750 )
 frames = SubResource( 8 )
 animation = "crush_idle"
-frame = 20
+frame = 23
 playing = true
 centered = false
 flip_v = true
@@ -1807,7 +1806,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 0, -750 )
 frames = SubResource( 9 )
 animation = "crush_idle"
-frame = 20
+frame = 23
 playing = true
 centered = false
 flip_v = true
@@ -1841,7 +1840,7 @@ self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -50 )
 frames = SubResource( 8 )
 animation = "crush_idle"
-frame = 20
+frame = 23
 playing = true
 centered = false
 script = ExtResource( 47 )
@@ -1851,7 +1850,7 @@ self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 0, -50 )
 frames = SubResource( 9 )
 animation = "crush_idle"
-frame = 20
+frame = 23
 playing = true
 centered = false
 script = ExtResource( 91 )
