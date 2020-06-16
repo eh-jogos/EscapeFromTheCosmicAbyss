@@ -23,6 +23,10 @@ signal color_picker_opened
 # warning-ignore:unused_signal
 signal color_picker_closed
 
+#Achievements Menu Signals
+# warning-ignore:unused_signal
+signal achievement_info_sent(title, description)
+
 
 const DEFAULT_SILHOUETTE_COLOR = Color("1f122d") #Color("041411") #OR Color("1f122d")
 const DEFAULT_BODY_COLOR = Color("1f645b") 

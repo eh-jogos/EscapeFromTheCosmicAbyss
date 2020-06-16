@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Upgrade.tres" type="Theme" id=2]
@@ -7,6 +7,226 @@
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=5]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=6]
 [ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=8]
+[ext_resource path="res://Fonts/OrbitronBold40.font" type="BitmapFont" id=9]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/mystery_@0.5x.png" type="Texture" id=10]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/change_the_universe_@0.5x.png" type="Texture" id=11]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/safety_first_@0.5x.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/infinite_jetpacker_@0.5x.png" type="Texture" id=13]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/slow_and_steady_@0.5x.png" type="Texture" id=14]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/all_highscores_@0.5x.png" type="Texture" id=15]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/mileage_points_@0.5x.png" type="Texture" id=16]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/for_a_world_without_barriers_@0.5x.png" type="Texture" id=17]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/safety_first_@0.5x.png" type="Texture" id=18]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/for_a_world_without_barriers_@0.5x.png" type="Texture" id=19]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/level_highscore_@0.5x.png" type="Texture" id=20]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/ok_shut_up_@0.5x.png" type="Texture" id=21]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/mileage_points_@0.5x.png" type="Texture" id=22]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/nothing_to_see_@0.5x.png" type="Texture" id=23]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/nothing_to_see_@0.5x.png" type="Texture" id=24]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/hear_the_scream_@0.5x.png" type="Texture" id=25]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/slow_and_steady_@0.5x.png" type="Texture" id=26]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/all_highscores_@0.5x.png" type="Texture" id=27]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/level_highscore_@0.5x.png" type="Texture" id=28]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/AchievementDisplay.tscn" type="PackedScene" id=29]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/ok_shut_up_@0.5x.png" type="Texture" id=30]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/infinite_jetpacker_@0.5x.png" type="Texture" id=31]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/AchievementInfo.gd" type="Script" id=32]
+
+[sub_resource type="Animation" id=9]
+resource_name = "_editor"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorFrame1:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 42 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 952 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuContainer:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScanlineFx:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ColorFrame2:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 54 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ColorFrame2:rect_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1920, 910 ) ]
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("StatePlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "extras_menu" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "base"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorFrame1:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2220, 652 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2220, 652 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScanlineFx:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ColorFrame2:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 660 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ColorFrame2:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1920, 0 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("LegendConfirmCancel")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("StatePlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "base" ),
+"times": PoolRealArray( 0 )
+}
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -31,7 +251,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 352 ), Vector2( 0, 352 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
+"values": [ Vector2( 0, 42 ), Vector2( 0, 42 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("BottomEdge:rect_position")
@@ -79,7 +299,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 360 ), Vector2( 0, 360 ), Vector2( 0, 660 ) ]
+"values": [ Vector2( 0, 54 ), Vector2( 0, 54 ), Vector2( 0, 660 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("ColorFrame2:rect_size")
@@ -91,7 +311,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1920, 604 ), Vector2( 1920, 604 ), Vector2( 1920, 0 ) ]
+"values": [ Vector2( 1920, 910 ), Vector2( 1920, 910 ), Vector2( 1920, 0 ) ]
 }
 tracks/7/type = "method"
 tracks/7/path = NodePath("LegendConfirmCancel")
@@ -106,6 +326,16 @@ tracks/7/keys = {
 "args": [  ],
 "method": "fade_out"
 } ]
+}
+tracks/8/type = "animation"
+tracks/8/path = NodePath("StatePlayer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"clips": PoolStringArray( "close", "base" ),
+"times": PoolRealArray( 0, 0.3 )
 }
 
 [sub_resource type="Animation" id=2]
@@ -132,7 +362,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 352 ), Vector2( 0, 352 ) ]
+"values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 42 ), Vector2( 0, 42 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("BottomEdge:rect_position")
@@ -147,7 +377,7 @@ tracks/2/keys = {
 "values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 952 ), Vector2( 0, 952 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("MenuContainer:modulate:a")
+tracks/3/path = NodePath("ScanlineFx:modulate:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -156,22 +386,22 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 0.9 ]
+"values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ScanlineFx:modulate:a")
+tracks/4/path = NodePath("ColorFrame2:rect_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [ Vector2( 0, 660 ), Vector2( 0, 660 ), Vector2( 0, 54 ), Vector2( 0, 54 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame2:rect_position")
+tracks/5/path = NodePath("ColorFrame2:rect_size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -180,27 +410,15 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 660 ), Vector2( 0, 660 ), Vector2( 0, 360 ), Vector2( 0, 360 ) ]
+"values": [ Vector2( 1920, 0 ), Vector2( 1920, 0 ), Vector2( 1920, 910 ), Vector2( 1920, 910 ) ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("ColorFrame2:rect_size")
+tracks/6/type = "method"
+tracks/6/path = NodePath("LegendConfirmCancel")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1920, 0 ), Vector2( 1920, 0 ), Vector2( 1920, 604 ), Vector2( 1920, 604 ) ]
-}
-tracks/7/type = "method"
-tracks/7/path = NodePath("LegendConfirmCancel")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
 "times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -208,9 +426,206 @@ tracks/7/keys = {
 "method": "fade_in"
 } ]
 }
+tracks/7/type = "animation"
+tracks/7/path = NodePath("StatePlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "base", "extras_menu" ),
+"times": PoolRealArray( 0, 0.7 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "achievements_menu"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AchievementsMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("AchievementsMenu/Line1/SafetyFirst")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "grab_focus"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AchievementsMenu:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
-length = 2.0
+resource_name = "base"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AchievementsMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "close"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AchievementsMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("MenuContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.901961 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AchievementsMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("MenuContainer/Achievements")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "grab_focus"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AchievementsMenu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MenuContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 3.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("ScanlineFx/ScanlineBright:modulate:a")
@@ -219,10 +634,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.1, 0.6, 0.3, 0.7 ]
+"values": [ 0.1, 0.6, 0.3, 0.7, 0.6, 0.3 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("ScanlineFx/ScanlineBright:position")
@@ -231,10 +646,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 960, 390 ), Vector2( 960, 930 ) ]
+"values": [ Vector2( 960, 50 ), Vector2( 960, 90 ), Vector2( 960, 930 ), Vector2( 960, 970 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("ScanlineFx/ScanlineBright:region_rect")
@@ -243,10 +658,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 1920, 80 ), Rect2( 0, 1000, 1920, 80 ) ]
+"values": [ Rect2( 0, 0, 1920, 0 ), Rect2( 0, 0, 1920, 80 ), Rect2( 0, 1000, 1920, 80 ), Rect2( 0, 1000, 1920, 0 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ScanlineFx/ScanlineBright:region_enabled")
@@ -271,8 +686,18 @@ cutscene_level5_path = "res://Cutscenes/Cutscene2.tscn"
 cutscene_ending_path = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "base"
+anims/_editor = SubResource( 9 )
+anims/base = SubResource( 8 )
 anims/close = SubResource( 1 )
 anims/open = SubResource( 2 )
+
+[node name="StatePlayer" type="AnimationPlayer" parent="."]
+autoplay = "base"
+anims/achievements_menu = SubResource( 7 )
+anims/base = SubResource( 3 )
+anims/close = SubResource( 4 )
+anims/extras_menu = SubResource( 5 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
@@ -286,10 +711,13 @@ __meta__ = {
 
 [node name="ColorFrame2" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_top = 360.0
+margin_top = 54.0
 margin_right = 1920.0
 margin_bottom = 964.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
@@ -298,14 +726,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -521.0
-margin_top = -153.0
+margin_top = -459.0
 margin_right = 224.0
-margin_bottom = 236.0
+margin_bottom = 148.0
 rect_scale = Vector2( 1.4, 1.4 )
 mouse_filter = 0
 theme = ExtResource( 2 )
+custom_constants/separation = 15
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="MenuContainer"]
@@ -318,86 +748,301 @@ custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "EXTRAS"
 align = 1
 
-[node name="Credits" type="Button" parent="MenuContainer"]
-margin_top = 75.0
+[node name="Achievements" type="Button" parent="MenuContainer"]
+margin_top = 86.0
 margin_right = 745.0
-margin_bottom = 124.0
+margin_bottom = 135.0
 focus_neighbour_top = NodePath("../Back")
+text = "Achievements"
+script = ExtResource( 4 )
+pressed_sfx = "Confirm"
+
+[node name="Credits" type="Button" parent="MenuContainer"]
+margin_top = 150.0
+margin_right = 745.0
+margin_bottom = 199.0
 text = "Credits"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Intro" type="Button" parent="MenuContainer"]
-margin_top = 128.0
+margin_top = 214.0
 margin_right = 745.0
-margin_bottom = 177.0
+margin_bottom = 263.0
 disabled = true
 text = "Intro Cutscene"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Level5" type="Button" parent="MenuContainer"]
-margin_top = 181.0
+margin_top = 278.0
 margin_right = 745.0
-margin_bottom = 230.0
+margin_bottom = 327.0
 disabled = true
 text = "The Guardian Sees You"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Ending" type="Button" parent="MenuContainer"]
-margin_top = 234.0
+margin_top = 342.0
 margin_right = 745.0
-margin_bottom = 283.0
+margin_bottom = 391.0
 disabled = true
 text = "Ending Cutscene"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Back" type="Button" parent="MenuContainer"]
-margin_top = 287.0
+margin_top = 558.0
 margin_right = 745.0
-margin_bottom = 336.0
-focus_neighbour_bottom = NodePath("../Credits")
+margin_bottom = 607.0
+focus_neighbour_bottom = NodePath("../Achievements")
+size_flags_vertical = 10
 text = "Back"
+script = ExtResource( 4 )
+pressed_sfx = "Confirm"
+
+[node name="AchievementsMenu" type="VBoxContainer" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -459.0
+margin_bottom = 399.0
+mouse_filter = 0
+theme = ExtResource( 2 )
+custom_constants/separation = 60
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="AchievementsMenu"]
+margin_right = 1920.0
+margin_bottom = 95.0
+mouse_filter = 1
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+text = "Achievements"
+align = 1
+
+[node name="Line1" type="HBoxContainer" parent="AchievementsMenu"]
+margin_top = 155.0
+margin_right = 1920.0
+margin_bottom = 315.0
+custom_constants/separation = 60
+alignment = 1
+
+[node name="SafetyFirst" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
+margin_left = 440.0
+margin_right = 600.0
+focus_neighbour_left = NodePath("../../Line2/Lasers")
+focus_neighbour_top = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Safety First"
+_description = "Complete the tutorial"
+_unachieved = ExtResource( 12 )
+_achieved = ExtResource( 18 )
+_achievement_variable = "has_completed_safety_first"
+
+[node name="HearScream" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
+margin_left = 660.0
+margin_right = 820.0
+focus_neighbour_top = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Hear the Scream"
+_description = "Hear the Guardian's scream for the first time"
+_unachieved = ExtResource( 10 )
+_achieved = ExtResource( 25 )
+_achievement_variable = "has_heard_the_scream"
+
+[node name="ChangeUniverse" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
+margin_left = 880.0
+margin_right = 1040.0
+focus_neighbour_top = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Change the Universe"
+_description = "Beat the Game"
+_unachieved = ExtResource( 10 )
+_achieved = ExtResource( 11 )
+_achievement_variable = "has_changed_the_univese"
+
+[node name="LevelHighscore" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
+margin_left = 1100.0
+margin_right = 1260.0
+focus_neighbour_top = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Level Highscore"
+_description = "Beat the highscore on any level"
+_unachieved = ExtResource( 28 )
+_achieved = ExtResource( 20 )
+_achievement_variable = "has_any_highscore"
+
+[node name="AllHighscores" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
+margin_left = 1320.0
+margin_right = 1480.0
+focus_neighbour_top = NodePath("../../BackToExtras")
+focus_neighbour_right = NodePath("../../Line2/SlowSteady")
+focus_mode = 2
+_title = "All Highscores"
+_description = "Beat the highscore in all story levels"
+_unachieved = ExtResource( 15 )
+_achieved = ExtResource( 27 )
+_achievement_variable = "has_all_highscores"
+
+[node name="Line2" type="HBoxContainer" parent="AchievementsMenu"]
+margin_top = 375.0
+margin_right = 1920.0
+margin_bottom = 535.0
+custom_constants/separation = 60
+alignment = 1
+
+[node name="SlowSteady" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
+focus_neighbour_left = NodePath("../../Line1/AllHighscores")
+focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Slow and Steady"
+_description = "Complete the game on speedrun mode with any time record"
+_unachieved = ExtResource( 26 )
+_achieved = ExtResource( 14 )
+_achievement_variable = "has_completed_speedrun"
+
+[node name="InfiniteJetpacker" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
+margin_left = 550.0
+margin_right = 710.0
+focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Infinite Jetpacker"
+_description = "Complete at least 2 full laps on Arcade Mode"
+_unachieved = ExtResource( 31 )
+_achieved = ExtResource( 13 )
+_achievement_variable = "has_completed_arcade"
+
+[node name="ShutUp" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
+margin_left = 770.0
+margin_right = 930.0
+focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Ok, just shut up!"
+_description = "Hear the Guardian's scream 50 times"
+_unachieved = ExtResource( 30 )
+_achieved = ExtResource( 21 )
+_type = 1
+_achievement_variable = "has_heard_enough_screams"
+
+[node name="Mileage" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
+margin_left = 990.0
+margin_right = 1150.0
+focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "That's some mileage points!"
+_description = "Dodge 1000 tentacles"
+_unachieved = ExtResource( 22 )
+_achieved = ExtResource( 16 )
+_type = 1
+_achievement_variable = "has_enough_mileage"
+
+[node name="Bariers" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
+margin_left = 1210.0
+margin_right = 1370.0
+focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "For a world without Barriers!"
+_description = "Clear 500 Barrier tentacles"
+_unachieved = ExtResource( 17 )
+_achieved = ExtResource( 19 )
+_type = 1
+_achievement_variable = "has_enough_broken_barriers"
+
+[node name="Lasers" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
+margin_left = 1430.0
+margin_right = 1590.0
+focus_neighbour_right = NodePath("../../Line1/SafetyFirst")
+focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_mode = 2
+_title = "Nothing to See here!"
+_description = "Dodge 250 lasers"
+_unachieved = ExtResource( 23 )
+_achieved = ExtResource( 24 )
+_type = 1
+_achievement_variable = "has_enough_laser_dodges"
+
+[node name="Info" type="VBoxContainer" parent="AchievementsMenu"]
+margin_top = 595.0
+margin_right = 1920.0
+margin_bottom = 730.0
+custom_constants/separation = 15
+script = ExtResource( 32 )
+
+[node name="Title" type="Label" parent="AchievementsMenu/Info"]
+margin_right = 1920.0
+margin_bottom = 71.0
+mouse_filter = 1
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+text = "For a world without Barriers!"
+align = 1
+autowrap = true
+
+[node name="Description" type="Label" parent="AchievementsMenu/Info"]
+margin_top = 86.0
+margin_right = 1920.0
+margin_bottom = 135.0
+mouse_filter = 1
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+text = "Complete the game on speedrun mode with any time record"
+align = 1
+autowrap = true
+
+[node name="BackToExtras" type="Button" parent="AchievementsMenu"]
+margin_top = 809.0
+margin_right = 1920.0
+margin_bottom = 858.0
+focus_neighbour_left = NodePath("../Line2/Lasers")
+focus_neighbour_top = NodePath("../Line2/SlowSteady")
+focus_neighbour_right = NodePath("../Line1/SafetyFirst")
+focus_neighbour_bottom = NodePath("../Line1/SafetyFirst")
+size_flags_vertical = 10
+text = "Back to Extras"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
-position = Vector2( 960, 660 )
+position = Vector2( 960, 505 )
 texture = ExtResource( 5 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 1920, 615 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2( 0, 0, 1920, 915 )
 
 [node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
-modulate = Color( 1, 1, 1, 0.365847 )
-position = Vector2( 960, 682.223 )
+modulate = Color( 1, 1, 1, 0.357656 )
+position = Vector2( 960, 317.416 )
 texture = ExtResource( 6 )
 region_enabled = true
-region_rect = Rect2( 0, 541.155, 1920, 80 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2( 0, 270.733, 1920, 80 )
 
 [node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
 root_node = NodePath("../..")
 autoplay = "scanline loop"
-"anims/scanline loop" = SubResource( 3 )
+"anims/scanline loop" = SubResource( 6 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
-margin_top = 352.0
+margin_top = 42.0
 margin_right = 1920.0
-margin_bottom = 367.0
+margin_bottom = 57.0001
 color = Color( 0, 0.921569, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="BottomEdge" type="ColorRect" parent="."]
 margin_top = 952.0
@@ -406,4 +1051,6 @@ margin_bottom = 967.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="LegendConfirmCancel" parent="." instance=ExtResource( 7 )]
+[connection signal="pressed" from="MenuContainer/Achievements" to="." method="_on_Achievements_pressed"]
 [connection signal="pressed" from="MenuContainer/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="AchievementsMenu/BackToExtras" to="." method="_on_BackToExtras_pressed"]

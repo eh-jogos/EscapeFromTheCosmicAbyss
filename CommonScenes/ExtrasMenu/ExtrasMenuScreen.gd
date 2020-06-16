@@ -13,6 +13,8 @@ var ending
 var back
 var animator
 
+onready var state_animator = $StatePlayer
+
 func _ready():
 	var last_unlocked_level = Global.savedata["story"]["last unlock"]
 	
@@ -32,12 +34,10 @@ func _ready():
 			button.connect("pressed", self, "_on_button_pressed", [button])
 	
 	if credits_scene_path == "":
-		back.grab_focus()
 		intro.focus_neighbour_top = intro.get_path_to(back)
 	else:
 		credits.set_disabled(false)
 		credits.focus_mode = Control.FOCUS_ALL
-		credits.grab_focus()
 	
 	if Global.is_tutorial_completed() or Global.is_story_completed():
 		intro.set_disabled(false)
@@ -104,3 +104,11 @@ func _on_ScreenManager_mid_transition_reached():
 		animator.assigned_animation = "close"
 		animator.seek(animator.current_animation_length, true)
 		legend_confirm_cancel.hide()
+
+
+func _on_Achievements_pressed():
+	state_animator.play("achievements_menu")
+
+
+func _on_BackToExtras_pressed():
+	state_animator.play("extras_menu")
