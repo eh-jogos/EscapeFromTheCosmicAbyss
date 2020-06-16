@@ -3,18 +3,6 @@ class_name AchievementsHandler
 
 ### Member Variables and Dependencies -----
 # signals 
-signal safety_first_achieved
-signal heard_the_scream_achieved
-signal changed_the_universe_achieved
-signal level_highscore_achieved
-signal all_hihscores_achieved
-signal slow_and_steady_achieved
-signal infinite_jetpacker_achieved
-signal shut_up_achieved
-signal mileage_achieved
-signal break_barriers_achieved
-signal nothing_to_see_achieved
-
 # enums
 # constants
 const TARGET_LAPS = 2
@@ -61,7 +49,8 @@ var current_barriers: = 0
 # for this one only dodged Lasers should count, Shield hits shouldn't count 
 # 'Nothing to see here" achievement
 var current_lasers: = 0 
-
+# only used by SteamStatsSupport to make the implementation there easier
+var levels_with_highscores: = 0 setget , _get_levels_with_highscores
 
 # private variables
 export var _version: = 1.0
@@ -121,7 +110,6 @@ func read() -> void:
 	_file.close()
 	
 	_translate_serialized_data(_serialized_data)
-	check_all_achievements()
 	if OS.is_debug_build():
 		printraw(var2str(_serialized_data))
 		printraw("\n")
@@ -133,18 +121,12 @@ func set_arcade_laps_achievement(num_of_laps: int) -> void:
 		return
 	elif num_of_laps >= TARGET_LAPS:
 		has_completed_arcade = true
-		emit_signal("infinite_jetpacker_achieved")
 		save()
 
 
 func set_highscore_achievements() -> void:
 	has_any_highscore = _has_at_least_one_highscore()
-	if has_any_highscore:
-		emit_signal("level_highscore_achieved")
-	
 	has_all_highscores = _has_all_highscores()
-	if has_all_highscores:
-		emit_signal("all_hihscores_achieved")
 	
 	save()
 
@@ -168,33 +150,9 @@ func has_enough_laser_dodges() -> bool:
 func increment_screams_heard() -> void:
 	if not has_heard_the_scream:
 		has_heard_the_scream = true
-		emit_signal("heard_the_scream_achieved")
 		save()
 	
 	screams_heard += 1
-
-
-func check_all_achievements() -> void:
-	if has_completed_safety_first:
-		emit_signal("safety_first_achieved")
-	if has_heard_the_scream:
-		emit_signal("heard_the_scream_achieved")
-	if has_changed_the_univese:
-		emit_signal("changed_the_universe_achieved")
-	if has_completed_speedrun:
-		emit_signal("slow_and_steady_achieved")
-	if has_completed_arcade:
-		emit_signal("infinite_jetpacker_achieved")
-	if has_heard_enough_screams():
-		emit_signal("shut_up_achieved")
-	if has_enough_mileage():
-		emit_signal("mileage_achieved")
-	if has_enough_broken_barriers():
-		emit_signal("break_barriers_achieved")
-	if has_enough_laser_dodges():
-		emit_signal("nothing_to_see_achieved")
-	set_highscore_achievements()
-
 
 ### ---------------------------------------
 
@@ -268,4 +226,7 @@ func _has_at_least_one_highscore() -> bool:
 func _has_all_highscores() -> bool:
 	return _get_highscore_count() == has_highscore_on.size()
 
+
+func _get_levels_with_highscores() -> int:
+	return _get_highscore_count()
 ### ---------------------------------------

@@ -163,8 +163,9 @@ func open():
 	get_tree().set_pause(true)
 	replay_btn.grab_focus()
 	
-	Global.achievements_handler.check_all_achievements()
 	Global.achievements_handler.save()
+	Global.steam_handler.emit_signal("steam_stats_stored")
+
 
 func _on_replay_pressed():
 	if game != null:

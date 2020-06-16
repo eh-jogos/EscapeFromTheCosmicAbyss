@@ -13,7 +13,6 @@ func close():
 		else:
 			if not Global.achievements_handler.has_changed_the_univese:
 				Global.achievements_handler.has_changed_the_univese = true
-				Global.achievements_handler.emit_signal("changed_the_universe_achieved")
 				Global.achievements_handler.save()
 			var credits_scene_path: = "res://CommonScenes/CreditsScene/CreditsScene.tscn"
 			ScreenManager.load_screen_invisible(credits_scene_path)
