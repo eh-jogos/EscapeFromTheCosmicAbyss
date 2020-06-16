@@ -18,7 +18,8 @@ func _on_focus_entered():
 
 
 func _on_mouse_entered():
-	self.grab_focus()
+	if not disabled:
+		self.grab_focus()
 
 
 func _on_focus_exited():
