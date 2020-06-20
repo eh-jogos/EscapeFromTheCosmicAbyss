@@ -189,7 +189,6 @@ func open(level_number, level_name):
 	sfx_player.play()
 	
 	Global.achievements_handler.save()
-	Global.steam_handler.emit_signal("steam_stats_stored")
 
 
 func play_unlock_animations():

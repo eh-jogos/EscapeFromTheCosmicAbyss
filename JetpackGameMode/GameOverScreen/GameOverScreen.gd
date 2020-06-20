@@ -164,7 +164,6 @@ func open():
 	replay_btn.grab_focus()
 	
 	Global.achievements_handler.save()
-	Global.steam_handler.emit_signal("steam_stats_stored")
 
 
 func _on_replay_pressed():
