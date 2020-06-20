@@ -3,7 +3,6 @@ project_settings="project.godot"
 export_configs="export_presets.cfg"
 include_debug=$1
 export_output=$2
-game_version=$3
 
 
 if [[ -z $include_debug || $include_debug = "false" ]]
@@ -18,11 +17,8 @@ else
 fi
 
 
-if [[ -z $game_version ]]
-then
-   	game_version=$(cat $project_settings | grep "^config/version" | cut -d'=' -f2)
-	game_version=$(sed -e 's/^"//' -e 's/"$//' <<< $game_version)
-fi
+game_version=$(cat $project_settings | grep "^config/version" | cut -d'=' -f2)
+game_version=$(sed -e 's/^"//' -e 's/"$//' <<< $game_version)
 echo "Exporting $game_version with debug turned: $include_debug"
 
 
