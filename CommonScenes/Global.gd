@@ -47,7 +47,7 @@ const DEFAULT_BOSS_TONGUE_COLOR = Color("c63836")
 var savefile = File.new()
 var savepath = "user://savegame.save"
 var savedata = {}
-var version = 0.9191
+var version = 1.1
 
 var is_invincible = false
 var is_retry = false
@@ -208,88 +208,12 @@ func save():
 func read():
 	savefile.open(savepath,File.READ)
 	var old_save = savefile.get_var()
-	if old_save.has("version") and old_save["version"] >= version:
+	if old_save.has("version") and old_save["version"] >= 0.9191:
 		savedata = old_save
 		savefile.close()
 	else:
-		#print("SAVE ERROR")
-		if old_save.has("version") and old_save["version"] <= 0.34:
-			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
-			savedata["options"]["track"] = old_save["options"]["track"]
-			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
-		elif old_save.has("version") and old_save["version"] <= 0.62:
-			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
-			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
-			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
-			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
-			savedata["story"]["max speed"] = old_save["story"]["max speed"]
-			savedata["story"]["laser duration"] = old_save["story"]["laser duration"]
-			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
-			
-			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
-			savedata["options"]["track"] = old_save["options"]["track"]
-			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
-		elif old_save.has("version") and old_save["version"] <= 0.91:
-			savedata = base_savedata
-			
-			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
-			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
-			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
-			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
-			savedata["story"]["max speed"] = old_save["story"]["max speed"]
-			savedata["story"]["laser strength"] = old_save["story"]["laser duration"] if old_save["story"].has("laser duration") else old_save["story"]["laser strength"]
-			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
-			savedata["story"]["upgrade level"] = old_save["story"]["upgrade level"]
-			savedata["story"]["next upgrade"] = old_save["story"]["next upgrade"]
-			savedata["story"]["levels unlocked"] = old_save["story"]["levels unlocked"]
-			savedata["story"]["last unlock"] = old_save["story"]["last unlock"]
-			savedata["story"]["current level"] = old_save["story"]["current level"]
-			savedata["story"]["story beaten"] = old_save["story"]["story beaten"]
-			savedata["story"]["tutorial beaten"] = old_save["story"]["tutorial beaten"]
-			savedata["story"]["highscore"] = old_save["story"]["highscore"]
-			
-			savedata["arcade"]["highlaps"] = old_save["arcade"]["highlaps"]
-			savedata["arcade"]["highscore"] = old_save["arcade"]["highscore"]
-			
-			savedata["speedrun"]["hightime"] = old_save["speedrun"]["hightime"]
-			savedata["speedrun"]["highscore"] = old_save["speedrun"]["highscore"]
-			
-			
-			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
-			savedata["options"]["track"] = old_save["options"]["track"]
-			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
-		elif old_save.has("version") and old_save["version"] < version: #Add Colors from base savedata
-			savedata = base_savedata
-			
-			savedata["story"]["cooldown"] = old_save["story"]["cooldown"]
-			savedata["story"]["initial ammo"] = old_save["story"]["initial ammo"]
-			savedata["story"]["initial shield"] = old_save["story"]["initial shield"]
-			savedata["story"]["initial speed"] = old_save["story"]["initial speed"]
-			savedata["story"]["max speed"] = old_save["story"]["max speed"]
-			savedata["story"]["laser strength"] = old_save["story"]["laser strength"]
-			savedata["story"]["upgrade points"] = old_save["story"]["upgrade points"]
-			savedata["story"]["upgrade level"] = old_save["story"]["upgrade level"]
-			savedata["story"]["next upgrade"] = old_save["story"]["next upgrade"]
-			savedata["story"]["levels unlocked"] = old_save["story"]["levels unlocked"]
-			savedata["story"]["last unlock"] = old_save["story"]["last unlock"]
-			savedata["story"]["current level"] = old_save["story"]["current level"]
-			savedata["story"]["story beaten"] = old_save["story"]["story beaten"]
-			savedata["story"]["tutorial beaten"] = old_save["story"]["tutorial beaten"]
-			savedata["story"]["highscore"] = old_save["story"]["highscore"]
-			
-			savedata["arcade"]["highlaps"] = old_save["arcade"]["highlaps"]
-			savedata["arcade"]["highscore"] = old_save["arcade"]["highscore"]
-			
-			savedata["speedrun"]["hightime"] = old_save["speedrun"]["hightime"]
-			savedata["speedrun"]["highscore"] = old_save["speedrun"]["highscore"]
-			
-			savedata["options"]["fullscreen"] = old_save["options"]["fullscreen"]
-			savedata["options"]["track"] = old_save["options"]["track"]
-			savedata["options"]["bgm volume"] = old_save["options"]["bgm volume"]
-			savedata["options"]["sfx volume"] = old_save["options"]["sfx volume"]
-		
 		savefile.close()
-		save()
+		reset_savefile()
 	
 	if OS.is_debug_build():
 		printraw(var2str(savedata))
