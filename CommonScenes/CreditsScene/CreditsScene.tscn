@@ -156,7 +156,6 @@ anims/credits = SubResource( 2 )
 anims/editor = SubResource( 3 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 margin_top = 52.0
 margin_bottom = 6862.0
@@ -244,7 +243,9 @@ text = "Sam Oz"
 margin_top = 60.0
 margin_right = 600.0
 margin_bottom = 100.0
+focus_mode = 1
 custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 1
 text = "@SamOz_official"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Sam"]
@@ -279,7 +280,9 @@ text = "Filipe Stonoga"
 margin_top = 60.0
 margin_right = 600.0
 margin_bottom = 100.0
+focus_mode = 1
 custom_fonts/font = SubResource( 5 )
+enabled_focus_mode = 1
 text = "@artbycoltz"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Madruga"]
@@ -310,8 +313,10 @@ margin_left = 620.0
 margin_top = 71.0
 margin_right = 1080.0
 margin_bottom = 127.0
+focus_mode = 1
 size_flags_horizontal = 8
 custom_constants/underline_spacing = 8
+enabled_focus_mode = 1
 text = "Godot Engine team"
 
 [node name="GDQuest" type="LinkButton" parent="CreditsContainer/Godot"]
@@ -319,8 +324,10 @@ margin_left = 615.0
 margin_top = 142.0
 margin_right = 1080.0
 margin_bottom = 198.0
+focus_mode = 1
 size_flags_horizontal = 8
 custom_constants/underline_spacing = 8
+enabled_focus_mode = 1
 text = "GDQuest and team"
 
 [node name="GodotSteam" type="LinkButton" parent="CreditsContainer/Godot"]
@@ -328,8 +335,10 @@ margin_left = 341.0
 margin_top = 213.0
 margin_right = 1080.0
 margin_bottom = 269.0
+focus_mode = 1
 size_flags_horizontal = 8
 custom_constants/underline_spacing = 8
+enabled_focus_mode = 1
 text = "Godot Steam and contributors"
 
 [node name="GodorReddit" type="LinkButton" parent="CreditsContainer/Godot"]
@@ -337,8 +346,10 @@ margin_left = 606.0
 margin_top = 284.0
 margin_right = 1080.0
 margin_bottom = 340.0
+focus_mode = 1
 size_flags_horizontal = 8
 custom_constants/underline_spacing = 8
+enabled_focus_mode = 1
 text = "r/godot Community"
 
 [node name="Role1" type="Label" parent="CreditsContainer/Godot"]
@@ -819,8 +830,10 @@ margin_left = 331.0
 margin_top = 117.0
 margin_right = 845.0
 margin_bottom = 163.0
+focus_mode = 1
 size_flags_horizontal = 4
 custom_fonts/font = ExtResource( 1 )
+enabled_focus_mode = 1
 text = "available at OpenGameArt.com"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer"]

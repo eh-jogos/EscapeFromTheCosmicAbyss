@@ -11,7 +11,7 @@ signal background_loading_finished(results_dict)
 # I learned this in this link 
 # http://docs.godotengine.org/en/stable/learning/features/misc/background_loading.html
 
-var animation
+var animation: AnimationPlayer
 var progress_bar
 
 var loader
@@ -209,6 +209,8 @@ func animation_ready():
 	emit_signal("loading_started")
 
 func black_transition(path, focus_path, origin_scene, path_is_node = false):
+	if animation.is_playing():
+		return 
 	animation.play("black_transition")
 	yield(animation, "animation_finished")
 	load_above(path, focus_path, origin_scene, path_is_node)

@@ -97,16 +97,22 @@ func _on_Back_pressed():
 func _on_ScreenManager_mid_transition_reached():
 	var legend_confirm_cancel: BaseLegend = $LegendConfirmCancel
 	var menu_container: VBoxContainer = $MenuContainer
+	var bg_dark = $ColorFrame1
+	var bg_screen = $ColorFrame2
 	if ScreenManager.scene_above == self:
 		animator.assigned_animation = "open"
 		animator.seek(animator.current_animation_length, true)
 		legend_confirm_cancel.show()
 		menu_container.show()
+		bg_dark.show()
+		bg_screen.show()
 	else:
 		animator.assigned_animation = "close"
 		animator.seek(animator.current_animation_length, true)
 		legend_confirm_cancel.hide()
 		menu_container.hide()
+		bg_dark.hide()
+		bg_screen.hide()
 
 
 func _on_Achievements_pressed():
