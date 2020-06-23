@@ -208,12 +208,14 @@ func save():
 func read():
 	savefile.open(savepath,File.READ)
 	var old_save = savefile.get_var()
-	if old_save.has("version") and old_save["version"] >= 0.9191:
-		savedata = old_save
-		savefile.close()
-	else:
+	
+	if old_save == null:
 		savefile.close()
 		reset_savefile()
+	else:
+		if old_save.has("version") and old_save["version"] >= 0.9191:
+			savedata = old_save
+			savefile.close()
 	
 	if OS.is_debug_build():
 		printraw(var2str(savedata))
