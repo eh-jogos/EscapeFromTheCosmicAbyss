@@ -29,8 +29,9 @@ fi
 # In the future, maybe try to use the same folder structure you use for steam, but add some ignores to separate the versions
 # for OSX you can just send the zip directly
 function push_linux {
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux32 $itch_game_adress:linux32
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux64 $itch_game_adress:linux64
+	echo $itch_game_adress
+	butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux32 $itch_game_adress\:linux32
+	butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux64 $itch_game_adress\:linux64
 }
 
 function push_windows {
