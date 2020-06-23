@@ -17,7 +17,7 @@ else
 fi
 
 
-game_version=$(cat $project_settings | grep "^config/version_folder" | cut -d'=' -f2)
+game_version=$(cat $project_settings | grep "^config/build_folder" | cut -d'=' -f2)
 game_version=$(sed -e 's/^"//' -e 's/"$//' <<< $game_version)
 echo "Exporting $game_version with debug turned: $include_debug"
 
