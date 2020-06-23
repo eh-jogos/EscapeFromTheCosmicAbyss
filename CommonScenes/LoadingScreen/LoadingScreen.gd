@@ -24,6 +24,8 @@ var scene_above
 var scenes_bellow = []
 var previous_focuses = []
 
+var loading_path: = ""
+
 func _ready():
 	animation = self.get_node("AnimationPlayer")
 	progress_bar = self.get_node("ColorRect/TextureProgress")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
@@ -209,8 +211,10 @@ func animation_ready():
 	emit_signal("loading_started")
 
 func black_transition(path, focus_path, origin_scene, path_is_node = false):
-	if animation.is_playing():
-		return 
+	if loading_path == "":
+		loading_path = path
+	elif loading_path == path:
+		return
 	animation.play("black_transition")
 	yield(animation, "animation_finished")
 	load_above(path, focus_path, origin_scene, path_is_node)
@@ -219,6 +223,7 @@ func black_transition(path, focus_path, origin_scene, path_is_node = false):
 	yield(animation, "animation_finished")
 	reset()
 	emit_signal("transition_ended")
+	loading_path = ""
 
 func black_transition_replace(path):
 	animation.play("black_transition")
