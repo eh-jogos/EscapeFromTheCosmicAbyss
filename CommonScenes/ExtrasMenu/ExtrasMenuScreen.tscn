@@ -33,7 +33,7 @@
 [ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/infinite_jetpacker_@0.5x.png" type="Texture" id=31]
 [ext_resource path="res://CommonScenes/ExtrasMenu/achievements/AchievementInfo.gd" type="Script" id=32]
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=1]
 resource_name = "_editor"
 length = 0.001
 tracks/0/type = "value"
@@ -131,7 +131,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=2]
 resource_name = "base"
 length = 0.001
 tracks/0/type = "value"
@@ -228,7 +228,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 )
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=3]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorFrame1:modulate:a")
 tracks/0/interp = 1
@@ -338,8 +338,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0, 0.3 )
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "open"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorFrame1:modulate:a")
 tracks/0/interp = 1
@@ -437,7 +436,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 0.7 )
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "achievements_menu"
 length = 0.3
 tracks/0/type = "value"
@@ -503,8 +502,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "base"
+[sub_resource type="Animation" id=6]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuContainer:modulate")
@@ -530,9 +528,32 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("AchievementsMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("MenuContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[sub_resource type="Animation" id=4]
-resource_name = "close"
+[sub_resource type="Animation" id=7]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuContainer:modulate")
@@ -558,8 +579,32 @@ tracks/1/keys = {
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("MenuContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AchievementsMenu:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ false ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=8]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("MenuContainer:modulate")
@@ -624,7 +669,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=9]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -687,20 +732,20 @@ cutscene_ending_path = "res://Cutscenes/Cutscene3.tscn"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "base"
-anims/_editor = SubResource( 9 )
-anims/base = SubResource( 8 )
-anims/close = SubResource( 1 )
-anims/open = SubResource( 2 )
+anims/_editor = SubResource( 1 )
+anims/base = SubResource( 2 )
+anims/close = SubResource( 3 )
+anims/open = SubResource( 4 )
 
 [node name="StatePlayer" type="AnimationPlayer" parent="."]
 autoplay = "base"
-anims/achievements_menu = SubResource( 7 )
-anims/base = SubResource( 3 )
-anims/close = SubResource( 4 )
-anims/extras_menu = SubResource( 5 )
+anims/achievements_menu = SubResource( 5 )
+anims/base = SubResource( 6 )
+anims/close = SubResource( 7 )
+anims/extras_menu = SubResource( 8 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color( 1, 1, 1, 0 )
 margin_top = -3.0
 margin_right = 1920.0
 margin_bottom = 1080.0
@@ -711,16 +756,17 @@ __meta__ = {
 
 [node name="ColorFrame2" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_top = 54.0
+margin_top = 660.0
 margin_right = 1920.0
-margin_bottom = 964.0
+margin_bottom = 660.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+visible = false
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -1013,6 +1059,7 @@ script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -1033,21 +1080,23 @@ region_rect = Rect2( 0, 270.733, 1920, 80 )
 [node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
 root_node = NodePath("../..")
 autoplay = "scanline loop"
-"anims/scanline loop" = SubResource( 6 )
+"anims/scanline loop" = SubResource( 9 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
-margin_top = 42.0
-margin_right = 1920.0
-margin_bottom = 57.0001
+margin_left = -2220.0
+margin_top = 652.0
+margin_right = -300.0
+margin_bottom = 667.0
 color = Color( 0, 0.921569, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BottomEdge" type="ColorRect" parent="."]
-margin_top = 952.0
-margin_right = 1920.0
-margin_bottom = 967.0
+margin_left = -2220.0
+margin_top = 652.0
+margin_right = -300.0
+margin_bottom = 667.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="LegendConfirmCancel" parent="." instance=ExtResource( 7 )]

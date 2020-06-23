@@ -17,8 +17,10 @@ func _ready():
 	if not Global.was_credits_called_from_extras:
 		ScreenManager.reset_above_below()
 	set_process(false)
+	set_process_unhandled_input(false)
 	grab_focus()
 	SoundManager.play_bgm("electro")
+	_animator.play("credits")
 
 
 func _unhandled_input(event):
@@ -56,6 +58,7 @@ func _process(_delta):
 ### Private Methods -----------------------
 func _activate_navigation() -> void:
 	set_process(true)
+	set_process_unhandled_input(true)
 
 
 func _fade_out_music() -> void:
