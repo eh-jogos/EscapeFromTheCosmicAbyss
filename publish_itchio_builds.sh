@@ -1,10 +1,12 @@
 #!/bin/zsh
 project_settings="project.godot"
 export_configs="export_presets.cfg"
+version_folder=$(cat $project_settings | grep "^config/version_folder" | cut -d'=' -f2)
+version_folder=$(sed -e 's/^"//' -e 's/"$//' <<< $version_folder)
 game_version=$(cat $project_settings | grep "^config/version" | cut -d'=' -f2)
 game_version=$(sed -e 's/^"//' -e 's/"$//' <<< $game_version)
 project_path=$(pwd)
-base_builds_path="$(dirname $project_path)/GameBuilds/$game_version/Release"
+base_builds_path="$(dirname $project_path)/GameBuilds/$version_folder/Release"
 itch_game_adress=eh-jogos/cosmicabyss
 
 builds_to_push=$1
