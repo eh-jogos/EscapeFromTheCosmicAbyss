@@ -124,6 +124,12 @@ func set_arcade_laps_achievement(num_of_laps: int) -> void:
 		save()
 
 
+func set_highscore_achieved_on(level: String):
+	if has_highscore_on.has(level):
+		has_highscore_on[level] = true
+		set_highscore_achievements()
+
+
 func set_highscore_achievements() -> void:
 	has_any_highscore = _has_at_least_one_highscore()
 	has_all_highscores = _has_all_highscores()

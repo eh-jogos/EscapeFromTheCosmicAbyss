@@ -43,6 +43,18 @@ const DEFAULT_BOSS_TEETH_COLOR = Color("00ffc3")
 const DEFAULT_BOSS_GENGIVA_COLOR = Color("264f44")
 const DEFAULT_BOSS_TONGUE_COLOR = Color("c63836")
 
+const HIGHSCORE_LVL_1 = 25
+const HIGHSCORE_LVL_2 = 38
+const HIGHSCORE_LVL_3 = 60
+const HIGHSCORE_LVL_4 = 85
+const HIGHSCORE_LVL_5 = 120
+const HIGHSCORE_LVL_6 = 130
+const HIGHSCORE_LVL_7 = 110
+const HIGHSCORE_LVL_8 = 175
+const HIGHSCORE_LVL_9 = 120
+const HIGHSCORE_LVL_10 = 220
+const HIGHSCORE_LVL_11 = 175
+const HIGHSCORE_LVL_12 = 340
 
 var savefile = File.new()
 var savepath = "user://savegame.save"
@@ -118,18 +130,18 @@ var base_savedata = {
 	"story": {
 		"highscore": [
 				0, #0
-				25, #1
-				38, #2
-				60, #3
-				85, #4
-				120, #5
-				130, #6
-				110, #7
-				175, #8
-				120, #9
-				220, #10
-				175, #11
-				340, #12
+				HIGHSCORE_LVL_1, #1
+				HIGHSCORE_LVL_2, #2
+				HIGHSCORE_LVL_3, #3
+				HIGHSCORE_LVL_4, #4
+				HIGHSCORE_LVL_5, #5
+				HIGHSCORE_LVL_6, #6
+				HIGHSCORE_LVL_7, #7
+				HIGHSCORE_LVL_8, #8
+				HIGHSCORE_LVL_9, #9
+				HIGHSCORE_LVL_10, #10
+				HIGHSCORE_LVL_11, #11
+				HIGHSCORE_LVL_12, #12
 		],
 		"cooldown": 1,
 		"initial ammo": 0,
@@ -192,6 +204,16 @@ func check_savefile():
 		OS.set_window_fullscreen(savedata["options"]["fullscreen"])
 	else:
 		print("NO FULLSCREEN OPTION ON SAVE")
+	
+	if savedata.has("story"):
+		if savedata["story"].has("highscore"):
+			for index in range(1, savedata["story"]["highscore"].size()):
+				var score = savedata["story"]["highscore"][index]
+				var goal_score = get("HIGHSCORE_LVL_%s"%[index])
+				if score > goal_score:
+					achievements_handler.set_highscore_achieved_on(str(index))
+			
+			achievements_handler.save()
 
 
 func reset_savefile():
@@ -226,9 +248,7 @@ func update_highscore(game_mode, points):
 	if game_mode == "story":
 		var index = savedata[game_mode]["current level"]
 		savedata[game_mode]["highscore"][index] = points
-		if achievements_handler.has_highscore_on.has(index):
-			achievements_handler.has_highscore_on[index] = true
-			achievements_handler.set_highscore_achievements()
+		achievements_handler.set_highscore_achieved_on(index)
 	elif game_mode == "arcade" or game_mode == "speedrun":
 		savedata[game_mode]["highscore"] = points
 	else:
@@ -368,18 +388,18 @@ func is_story_completed():
 func reset_story_progress():
 	savedata["story"]["highscore"] = [
 			0, #0
-			25, #1
-			38, #2
-			60, #3
-			85, #4
-			120, #5
-			130, #6
-			110, #7
-			199, #8
-			90, #9
-			220, #10
-			175, #11
-			380, #12
+			HIGHSCORE_LVL_1, #1
+			HIGHSCORE_LVL_2, #2
+			HIGHSCORE_LVL_3, #3
+			HIGHSCORE_LVL_4, #4
+			HIGHSCORE_LVL_5, #5
+			HIGHSCORE_LVL_6, #6
+			HIGHSCORE_LVL_7, #7
+			HIGHSCORE_LVL_8, #8
+			HIGHSCORE_LVL_9, #9
+			HIGHSCORE_LVL_10, #10
+			HIGHSCORE_LVL_11, #11
+			HIGHSCORE_LVL_12, #12
 	]
 	
 	savedata["story"]["cooldown"] = 1
