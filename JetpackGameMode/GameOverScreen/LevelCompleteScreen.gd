@@ -56,12 +56,14 @@ func _ready():
 	upgrade_container = score_results.get_node("UpgradeContainer")
 	label_upgrade = score_results.get_node("UpgradeContainer/UpgradePoints")
 	score_congrats = score_results.get_node("ScoreContainer/HighscoreText")
+	score_congrats.hide()
 	
 	unlock_results = $ResultsContainer/ModeUnlock
 	time_results = $ResultsContainer/TimeResults
 	label_time = time_results.get_node("TimeContainer/Time")
 	label_hightime = time_results.get_node("HighTimeContainer/HighTime")
 	time_congrats = time_results.get_node("TimeContainer/HightimeText")
+	time_congrats.hide()
 	
 	game = get_parent().get_parent()
 	game_mode = game.game_mode

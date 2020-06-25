@@ -50,16 +50,19 @@ func _ready():
 	upgrade_container = score_results.get_node("UpgradeContainer")
 	label_upgrade = score_results.get_node("UpgradeContainer/UpgradePoints")
 	score_congrats = score_results.get_node("ScoreContainer/HighscoreText")
+	score_congrats.hide()
 	
 	time_results = self.get_node("ResultsContainer/TimeResults")
 	label_time = time_results.get_node("TimeContainer/Time")
 	label_hightime = time_results.get_node("HighTimeContainer/HighTime")
 	time_congrats = time_results.get_node("TimeContainer/HightimeText")
+	time_congrats.hide()
 	
 	laps_results = self.get_node("ResultsContainer/LapsResults")
 	label_laps = laps_results.get_node("LapsContainer/Laps")
 	label_highlaps = laps_results.get_node("HighLapsContainer/HighLaps")
 	laps_congrats = laps_results.get_node("LapsContainer/HighlapsText")
+	laps_congrats.hide()
 	
 	game = get_parent().get_parent()
 	game_mode = game.game_mode
