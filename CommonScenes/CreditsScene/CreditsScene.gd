@@ -18,9 +18,14 @@ func _ready():
 		ScreenManager.reset_above_below()
 	set_process(false)
 	set_process_unhandled_input(false)
+	set_process_input(true)
 	grab_focus()
 	SoundManager.play_bgm("electro")
 	_animator.play("credits")
+
+
+func _input(_event):
+	get_viewport().set_input_as_handled()
 
 
 func _unhandled_input(event):
@@ -59,6 +64,7 @@ func _process(_delta):
 func _activate_navigation() -> void:
 	set_process(true)
 	set_process_unhandled_input(true)
+	set_process_input(false)
 
 
 func _fade_out_music() -> void:

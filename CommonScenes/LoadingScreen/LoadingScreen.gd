@@ -37,13 +37,19 @@ func reset():
 	load_without_animation = false
 
 func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
+	if origin_scene in scenes_bellow:
+		return
+	
+	var node
+	if path_is_node:
+		node = path
+	else:
+		node = load(path)
+	
 	scenes_bellow.append(origin_scene)
 	previous_focuses.append(origin_focus_path)
 	
-	if path_is_node:
-		scene_above = path.instance()
-	else:
-		scene_above = load(path).instance()
+	scene_above = node.instance()
 	
 	emit_signal("scene_above_loaded", scene_above)
 	
