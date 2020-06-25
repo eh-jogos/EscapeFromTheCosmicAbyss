@@ -79,7 +79,7 @@ func next_half_beat():
 
 func set_level(level_dict):
 	level = level_dict
-	print(level)
+	print("Obstacle_Spawner.gd | Level: %s"%[level])
 	
 	emit_signal("level_ready", level)
 	next_beat()
