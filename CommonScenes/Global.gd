@@ -248,7 +248,7 @@ func update_highscore(game_mode, points):
 	if game_mode == "story":
 		var index = savedata[game_mode]["current level"]
 		savedata[game_mode]["highscore"][index] = points
-		achievements_handler.set_highscore_achieved_on(index)
+		achievements_handler.set_highscore_achieved_on(str(index))
 	elif game_mode == "arcade" or game_mode == "speedrun":
 		savedata[game_mode]["highscore"] = points
 	else:
