@@ -63,9 +63,20 @@ func _unhandled_input(event):
 		get_viewport().set_input_as_handled()
 	
 	if event.is_action_released("ui_cancel"):
-		var focus_button: Button = back
+		var focus_button: Button
+		var back_to_extras = $AchievementsMenu/BackToExtras
+		if state_animator.assigned_animation == "achievements_menu":
+			focus_button = back_to_extras
+		else:
+			focus_button = back
+		
 		if focus_button.has_focus():
-			_on_Back_pressed()
+			if focus_button == back:
+				_on_Back_pressed()
+			elif focus_button == back_to_extras:
+				_on_BackToExtras_pressed()
+			else:
+				_on_Back_pressed()
 		else:
 			focus_button.grab_focus()
 
