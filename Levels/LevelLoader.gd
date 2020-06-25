@@ -7,8 +7,19 @@ func load_level(num, load_all, loop):
 	if load_all:
 		level["beats"] = []
 		level["half_beats"] = []
+		level["bosses_nodes"] = {}
+		
 		for x in range(num, self.get_max_levels()):
 			level_info = get_child(x)
+			if level_info.boss.boss_node != null:
+				level["bosses_nodes"][level_info.boss.boss_node] = {
+					"is_a_boss_level" : level_info.boss.boss_level,
+					"animations" : level_info.boss.animations,
+					"animation_countdowns" : shift_countdowns_by(
+								level_info.boss.animations_countdowns, level["beats"].size()),
+					"laser_countdowns" : shift_countdowns_by(
+								level_info.boss.laser_countdowns,level["beats"].size()),
+				}
 			
 			build_level_procedurally()
 			
@@ -42,8 +53,16 @@ func load_level(num, load_all, loop):
 		
 		build_level_procedurally()
 		
+		level["beats_count"] = level["beats"].size()
+		level["half_count"] = level["half_beats"].size()
 		level["total_count"] = level["beats"].size() + level["half_beats"].size()
 	return level
+
+
+func shift_countdowns_by(countdown_array: Array, offset: int) -> Array:
+	for index in countdown_array.size():
+		countdown_array[index] += offset
+	return countdown_array
 
 
 func build_level_procedurally():

@@ -250,9 +250,11 @@ func setup_game_mode_level():
 	elif game_mode == "arcade":
 		level_num = "Arcade Arena!"
 		level_title = "How many laps can you survive?"
+		load_level(1, true, true)
 	elif game_mode == "speedrun":
 		level_num = "Speedrun Track!"
 		level_title = "Gotta Go Fast!"
+		load_level(1, true)
 
 func valid_level_choice(level_to_check):
 	return level_to_check < level_loader.get_max_levels()
@@ -327,12 +329,9 @@ func _on_scored(num):
 	var last_point_level = points_level
 	var last_multiple_level = multiples_level
 	#print("LPL: %s | LML: %s"%[last_point_level, last_multiple_level])
-	points += (num*multiplyer)
+	points += round(num*multiplyer)
 	points_level = int(points/(point_multiple*multiplyer))
-	if multiplyer <= 1:
-		multiples_level = int(points/(upgrade_multiple))
-	else:
-		multiples_level = int(points/(upgrade_multiple+(upgrade_multiple*multiplyer)))
+	multiples_level -= 1
 	#print("PL: %s | ML: %s"%[points_level, multiples_level])
 	
 	if points_level > last_point_level:
@@ -352,13 +351,15 @@ func _on_scored(num):
 				player.speed.x = player.speed_x* player.unit.x
 	#			print(player.speed.x)
 	
-		if multiples_level > last_multiple_level:
+		if multiples_level <= 0:
 			if game_mode == "arcade" or game_mode == "speedrun":
 				multiplyer += 1
 				
 				score_label.set_text("Score %sx"%[multiplyer])
 				upgrade_label.set_text("%sx Multiplyer"%[multiplyer])
 				upgrade_messager.play("text_anim")
+				multiples_level =  multiplyer * 0.5 * upgrade_multiple
+				print("Next Multiplyer: %s"%[multiples_level])
 				pass
 	
 	if game_mode == "story":
@@ -400,7 +401,7 @@ func _on_ObstacleSpawner_level_end():
 		max_speed += MAX_SPEED_INCREMENT_PER_LAP
 		speed_messager.play_max_speed_increased_message()
 		restart_background_bosses_count()
-		load_level(1, true)
+		load_level(1, true, true)
 	else:
 		printerr("ERROR | Invalid Game Mode: %s"%[game_settings])
 
