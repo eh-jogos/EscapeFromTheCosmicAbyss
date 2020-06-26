@@ -251,6 +251,8 @@ func update_highscore(game_mode, points):
 		achievements_handler.set_highscore_achieved_on(str(index))
 	elif game_mode == "arcade" or game_mode == "speedrun":
 		savedata[game_mode]["highscore"] = points
+		if game_mode == "arcade":
+			Global.achievements_handler.set_arcade_achievement(points)
 	else:
 		print("ERROR SAVING HIGHSCORE | Invalid game_mode: %s"%[game_mode]) 
 	save()
@@ -265,7 +267,6 @@ func update_hightime(time_duration):
 
 func update_highlaps(total_laps):
 	savedata["arcade"]["highlaps"] = total_laps
-	Global.achievements_handler.set_arcade_laps_achievement(total_laps)
 	save()
 
 

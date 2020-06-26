@@ -12,4 +12,5 @@ script = ExtResource( 1 )
 
 [node name="AchievementsHandler" type="Node" parent="."]
 script = ExtResource( 4 )
+_version = 1.1
 _file_name = "achievements.save"

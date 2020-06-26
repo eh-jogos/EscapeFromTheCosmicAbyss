@@ -1,6 +1,6 @@
 extends Node2D
 
-const MAX_SPEED_INCREMENT_PER_LAP = 5
+const MAX_SPEED_INCREMENT_PER_LAP = 1
 
 # Nodes this script will interact with
 var score_label
@@ -41,7 +41,7 @@ var category = game_settings["sub-mode"]
 var last_level_choice
 var points = 0
 var points_level = 0
-var multiples_level = 0
+var multiples_level = upgrade_multiple
 var arcade_laps = 0
 var level_num
 var level_title
@@ -350,16 +350,16 @@ func _on_scored(num):
 				player.speed.x = player.speed_x* player.unit.x
 	#			print(player.speed.x)
 	
-		if multiples_level <= 0:
-			if game_mode == "arcade" or game_mode == "speedrun":
-				multiplyer += 1
-				
-				score_label.set_text("Score %sx"%[multiplyer])
-				upgrade_label.set_text("%sx Multiplyer"%[multiplyer])
-				upgrade_messager.play("text_anim")
-				multiples_level =  multiplyer * 0.5 * upgrade_multiple
-				print("Next Multiplyer: %s"%[multiples_level])
-				pass
+	if multiples_level <= 0:
+		if game_mode == "arcade" or game_mode == "speedrun":
+			multiplyer += 1
+			
+			score_label.set_text("Score %sx"%[multiplyer])
+			upgrade_label.set_text("%sx Multiplyer"%[multiplyer])
+			upgrade_messager.play("text_anim")
+			multiples_level =  multiplyer * 0.5 * upgrade_multiple
+			print("Next Multiplyer: %s"%[multiples_level])
+			pass
 	
 	if game_mode == "story":
 		next_upgrade -= num
@@ -397,8 +397,6 @@ func _on_ObstacleSpawner_level_end():
 		level_completed()
 	elif game_mode == "arcade":
 		arcade_laps += 1
-		max_speed += MAX_SPEED_INCREMENT_PER_LAP
-		speed_messager.play_max_speed_increased_message()
 		restart_background_bosses_count()
 		load_level(1, true, true)
 	else:

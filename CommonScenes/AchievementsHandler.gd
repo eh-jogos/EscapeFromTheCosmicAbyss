@@ -5,7 +5,7 @@ class_name AchievementsHandler
 # signals 
 # enums
 # constants
-const TARGET_LAPS = 2
+const TARGET_ARCADE_SCORE = 15000
 const TARGET_SCREAMS = 50
 const TARGET_MILEAGE = 1000
 const TARGET_BARRIERS = 500
@@ -18,8 +18,6 @@ var has_heard_the_scream: = false
 var has_changed_the_univese: = false
 # Slow and Steady Achievement
 var has_completed_speedrun: = false 
-# Infinie JetPacker Achievement
-var has_completed_arcade: = false 
 var has_any_highscore: = false
 var has_all_highscores: = false
 
@@ -51,6 +49,8 @@ var current_barriers: = 0
 var current_lasers: = 0 
 # only used by SteamStatsSupport to make the implementation there easier
 var levels_with_highscores: = 0 setget , _get_levels_with_highscores
+
+var arcade_highscore: = 0
 
 # private variables
 export var _version: = 1.0
@@ -104,8 +104,7 @@ func read() -> void:
 	if old_settings.has("version") and old_settings["version"] >= _version:
 		_serialized_data = old_settings
 	else:
-		push_error("Missing Methods to convert old save data")
-		assert(false)
+		_serialized_data = _get_data_converted_to_version(old_settings, _version)
 	
 	_file.close()
 	
@@ -116,11 +115,9 @@ func read() -> void:
 
 
 # Bellow Here things would go into the extended script if you change this to extend a Futur BaseSaveFile
-func set_arcade_laps_achievement(num_of_laps: int) -> void:
-	if has_completed_arcade:
-		return
-	elif num_of_laps >= TARGET_LAPS:
-		has_completed_arcade = true
+func set_arcade_achievement(score: int) -> void:
+	if score > arcade_highscore:
+		arcade_highscore = score
 		save()
 
 
@@ -177,6 +174,19 @@ func _push_reading_file_error(error) -> void:
 	push_error("Error while reading %s: %s"%[_file_name, error])
 	assert(false)
 
+
+func _get_data_converted_to_version(data: Dictionary, version: float) -> Dictionary:
+	var converted_data: = data.duplicate(true)
+	match version:
+		1.1:
+			if data["has_completed_arcade"]:
+				converted_data["arcade_highscore"] = TARGET_ARCADE_SCORE
+			else:
+				converted_data["arcade_highscore"] = 0
+			converted_data.erase("has_completed_arcade")
+	return converted_data
+
+
 func _build_serialized_data() -> Dictionary:
 	#This should be a 'virtual' function if you turn this into a BaseSaveFile class
 	var settings: = {}
@@ -186,13 +196,13 @@ func _build_serialized_data() -> Dictionary:
 	settings["has_heard_the_scream"] = has_heard_the_scream
 	settings["has_changed_the_univese"] = has_changed_the_univese
 	settings["has_completed_speedrun"] = has_completed_speedrun
-	settings["has_completed_arcade"] = has_completed_arcade
 	settings["has_any_highscore"] = has_any_highscore
 	settings["has_all_highscores"] = has_all_highscores
 	settings["screams_heard"] = screams_heard
 	settings["current_mileage"] = current_mileage
 	settings["current_barriers"] = current_barriers
 	settings["current_lasers"] = current_lasers
+	settings["arcade_highscore"] = arcade_highscore
 	
 	settings["has_highscore_on"] = var2str(has_highscore_on)
 	
@@ -205,13 +215,13 @@ func _translate_serialized_data(data: Dictionary) -> void:
 	has_heard_the_scream = data["has_heard_the_scream"]
 	has_changed_the_univese = data["has_changed_the_univese"]
 	has_completed_speedrun = data["has_completed_speedrun"]
-	has_completed_arcade = data["has_completed_arcade"]
 	has_any_highscore = data["has_any_highscore"]
 	has_all_highscores = data["has_all_highscores"]
 	screams_heard = data["screams_heard"]
 	current_mileage = data["current_mileage"]
 	current_barriers = data["current_barriers"]
 	current_lasers = data["current_lasers"]
+	arcade_highscore = data["arcade_highscore"]
 	
 	has_highscore_on = str2var(data["has_highscore_on"])
 
