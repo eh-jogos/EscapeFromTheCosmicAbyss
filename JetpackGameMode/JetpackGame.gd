@@ -327,7 +327,6 @@ func game_over():
 
 func _on_scored(num):
 	var last_point_level = points_level
-	var last_multiple_level = multiples_level
 	#print("LPL: %s | LML: %s"%[last_point_level, last_multiple_level])
 	points += round(num*multiplyer)
 	points_level = int(points/(point_multiple*multiplyer))

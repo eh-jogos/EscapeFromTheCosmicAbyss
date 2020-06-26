@@ -27,7 +27,10 @@ func _ready():
 	track_offset = 0
 	
 	initial_volume = Global.savedata["options"]["bgm volume"]
-	current_volume = Global.savedata["options"]["bgm volume"]
+	current_volume = initial_volume
+	
+	change_bgm_volume(initial_volume)
+	change_sfx_volume(Global.savedata["options"]["sfx volume"])
 
 
 func reset_ui_bus_effects() -> void:
