@@ -170,6 +170,7 @@ func fade_in_start(shoul_be_immediate: = false):
 		change_bgm_volume(initial_volume)
 	else:
 		var current_volume_db = AudioServer.get_bus_volume_db(bgm_bus)
+		# warning-ignore:narrowing_conversion
 		current_volume = db2linear(current_volume_db)
 		tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 0.5, 
 				Tween.TRANS_BACK, Tween.EASE_IN)

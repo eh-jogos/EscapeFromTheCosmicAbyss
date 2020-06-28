@@ -55,9 +55,11 @@ func _on_PipeTentacles_Reset():
 	animation2.play("hidden")
 	tentacle_position.set_unit_offset(0.5)
 
+
 func _on_player_pass( body ):
 	if body.is_in_group("player"):
 		tentacle_pipe.scored()
+
 
 func _on_kill_player(body, offset_y):
 	#print(offset_y)
