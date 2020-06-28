@@ -6,6 +6,7 @@ var replay_btn
 var next_level_btn
 var watch_ending_btn
 var upgrade_btn
+var notification_circle
 var level_select_btn
 var quit_btn
 var animator
@@ -40,6 +41,7 @@ func _ready():
 	next_level_btn = $ResultsContainer/Buttons/NextLevel
 	watch_ending_btn = $ResultsContainer/Buttons/WatchEnding
 	upgrade_btn = $ResultsContainer/Buttons/Upgrade
+	notification_circle = $ResultsContainer/Buttons/Upgrade/NotificationCircle
 	level_select_btn = $ResultsContainer/Buttons/LevelSelect
 	quit_btn = $ResultsContainer/Buttons/Quit
 	animator = $AnimationPlayer
@@ -146,6 +148,7 @@ func open(level_number, level_name):
 		upgrade_container.show()
 		upgrade_points = game.upgrade_points
 		print_decimal(upgrade_points, label_upgrade)
+		notification_circle.set_notification_points(upgrade_points)
 		
 		var last_level = game.level_loader.get_max_levels()-1
 		var current_level = Global.savedata["story"]["current level"]
@@ -232,10 +235,7 @@ func print_score(points, label):
 
 func print_decimal(points, label):
 	var points_str
-	if points < 10:
-		points_str = "0"+str(points)
-	else:
-		points_str = str(points)
+	points_str = "%02d"%[points]
 	label.set_text(points_str)
 
 func print_time(runtime, label):
@@ -269,7 +269,8 @@ func _on_focus_enter():
 		
 		upgrade_points = Global.savedata["story"]["upgrade points"]
 		print_decimal(upgrade_points, label_upgrade)
-		
+		notification_circle.set_notification_points(upgrade_points)
+
 
 func _on_LevelSelect_pressed():
 	var path = level_select_path

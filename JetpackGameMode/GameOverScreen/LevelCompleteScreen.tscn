@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/GameOverScreen/textures/cleared_smear_effect.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Shaders/shader_text_anim.tres" type="Animation" id=20]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/level_complete_highscore.wav" type="AudioStream" id=21]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/level_complete.wav" type="AudioStream" id=22]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/NotificationCircle.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Animation" id=1]
 resource_name = "base"
@@ -896,19 +897,19 @@ icon = ExtResource( 13 )
 script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
-[node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
+[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
 margin_left = 472.0
-margin_right = 731.0
+margin_right = 822.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
-text = "Upgrade"
-icon = ExtResource( 15 )
+text = "Stage Select"
+icon = ExtResource( 17 )
 script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 735.0
-margin_right = 1045.0
+margin_left = 826.0
+margin_right = 1136.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Play Again"
@@ -916,15 +917,17 @@ icon = ExtResource( 16 )
 script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
-[node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1049.0
+[node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
+margin_left = 1140.0
 margin_right = 1399.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
-text = "Stage Select"
-icon = ExtResource( 17 )
+text = "Upgrade"
+icon = ExtResource( 15 )
 script = ExtResource( 14 )
 pressed_sfx = "Confirm"
+
+[node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource( 23 )]
 
 [node name="NextLevel" type="Button" parent="ResultsContainer/Buttons"]
 visible = false
@@ -961,8 +964,8 @@ stream = ExtResource( 21 )
 volume_db = -6.0
 bus = "UiSfx"
 [connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
-[connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
+[connection signal="pressed" from="ResultsContainer/Buttons/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/NextLevel" to="." method="_on_NextLevel_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/WatchEnding" to="." method="_on_WatchEnding_pressed"]

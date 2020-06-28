@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture" id=13]
 [ext_resource path="res://Shaders/text_horizontal_gradient_shader.tres" type="Material" id=14]
 [ext_resource path="res://Shaders/shader_text_anim.tres" type="Animation" id=15]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/NotificationCircle.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "base"
@@ -208,7 +209,6 @@ tracks/6/keys = {
 
 [node name="GameOverScreen" type="Node2D"]
 pause_mode = 2
-modulate = Color( 1, 1, 1, 0 )
 script = ExtResource( 1 )
 main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
@@ -226,11 +226,10 @@ margin_bottom = 1082.0
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="GameOver" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 335.0
-margin_top = -205.0
+margin_top = 95.0
 margin_right = 834.0
-margin_bottom = -110.0
+margin_bottom = 190.0
 rect_scale = Vector2( 2.5, 2.5 )
 mouse_filter = 1
 size_flags_vertical = 0
@@ -249,7 +248,6 @@ custom_constants/separation = 50
 alignment = 2
 
 [node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
-modulate = Color( 1, 1, 1, 0 )
 margin_top = 198.0
 margin_right = 1920.0
 margin_bottom = 347.0
@@ -370,7 +368,6 @@ align = 1
 valign = 1
 
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
-modulate = Color( 1, 1, 1, 0 )
 margin_top = 397.0
 margin_right = 1920.0
 margin_bottom = 546.0
@@ -461,7 +458,6 @@ anims/shader_text_anim = ExtResource( 15 )
 
 [node name="LapsResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
 margin_top = 398.0
 margin_right = 1920.0
 margin_bottom = 547.0
@@ -551,7 +547,6 @@ valign = 1
 anims/shader_text_anim = ExtResource( 15 )
 
 [node name="Buttons" type="HBoxContainer" parent="ResultsContainer"]
-modulate = Color( 1, 1, 1, 0 )
 margin_top = 596.0
 margin_right = 1920.0
 margin_bottom = 676.0
@@ -589,6 +584,8 @@ text = "Upgrade"
 icon = ExtResource( 11 )
 script = ExtResource( 9 )
 pressed_sfx = "Confirm"
+
+[node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource( 16 )]
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
 margin_left = 1268.0

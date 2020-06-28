@@ -4,6 +4,7 @@ export(String, FILE) var main_menu_path
 
 var replay_btn
 var upgrade_btn
+var notification_circle
 var level_select_btn
 var quit_btn
 var animator
@@ -37,6 +38,7 @@ var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn
 func _ready():
 	replay_btn = self.get_node("ResultsContainer/Buttons/Replay")
 	upgrade_btn = self.get_node("ResultsContainer/Buttons/Upgrade")
+	notification_circle = $ResultsContainer/Buttons/Upgrade/NotificationCircle
 	level_select_btn = self.get_node("ResultsContainer/Buttons/LevelSelect")
 	quit_btn = self.get_node("ResultsContainer/Buttons/Quit")
 	animator = self.get_node("AnimationPlayer")
@@ -137,6 +139,7 @@ func open():
 		upgrade_container.show()
 		upgrade_points = game.upgrade_points
 		print_decimal(upgrade_points, label_upgrade)
+		notification_circle.set_notification_points(upgrade_points)
 	elif game_mode == "speedrun":
 		upgrade_container.hide()
 		
@@ -198,10 +201,7 @@ func print_score(points, label):
 
 func print_decimal(points, label):
 	var points_str
-	if points < 10:
-		points_str = "0"+str(points)
-	else:
-		points_str = str(points)
+	points_str = "%02d"%[points]
 	label.set_text(points_str)
 
 func print_time(runtime, label):
@@ -238,6 +238,7 @@ func _on_focus_enter():
 		
 		upgrade_points = Global.savedata["story"]["upgrade points"]
 		print_decimal(upgrade_points, label_upgrade)
+		notification_circle.set_notification_points(upgrade_points)
 		
 
 func _on_LevelSelect_pressed():

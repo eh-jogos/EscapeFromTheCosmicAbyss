@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://JetpackGameMode/GameOverScreen/textures/notification_circle.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/OrbitronBlack30.font" type="BitmapFont" id=2]
+[ext_resource path="res://JetpackGameMode/GameOverScreen/NotificationCircle.gd" type="Script" id=3]
+
+[node name="NotificationCircle" type="TextureRect"]
+self_modulate = Color( 0.909804, 0.0980392, 0.211765, 1 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -55.0509
+margin_top = -26.6533
+margin_right = -0.0509033
+margin_bottom = 28.3467
+grow_horizontal = 2
+texture = ExtResource( 1 )
+stretch_mode = 6
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.5
+margin_top = -27.5
+margin_right = 27.5
+margin_bottom = 27.5
+grow_horizontal = 2
+rect_scale = Vector2( 0.9, 0.9 )
+rect_pivot_offset = Vector2( 27, 27 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "40"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
