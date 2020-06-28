@@ -104,7 +104,8 @@ func _setup_event_variables() -> void:
 			elif event is InputEventJoypadButton and _event_joybutton == "":
 				_event_joybutton = str((event as InputEventJoypadButton).button_index)
 			elif event is InputEventJoypadMotion and _event_joyaxis == "":
-				_event_joyaxis = str((event as InputEventJoypadMotion).axis)
+				var event_axis = event as InputEventJoypadMotion
+				_event_joyaxis = "%s|%s"%[event_axis.axis, event_axis.axis_value]
 	else:
 		if not Engine.editor_hint:
 			push_error("input map action has no events in it!" + \
@@ -130,7 +131,7 @@ func _set_prompt_texture() -> bool:
 	var success: = false
 	
 	if (JoypadSupport.get_joypad_type() != JS_JoypadIdentifier.JoyPads.NO_JOYPAD \
-	or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
+			or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
 		if _event_joybutton != "":
 			success = _set_prompt_for(_event_joybutton)
 		elif _event_joyaxis != "":
@@ -169,7 +170,7 @@ func _get_prompt_texture_for(string_index: String) -> Texture:
 		_event_joybutton:
 			prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joybutton)
 		_event_joyaxis:
-			push_warning("Change this line once Joy Axis support is implemented")
+			prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joyaxis)
 		_:
 			push_match_event_variables_error()
 	
@@ -220,7 +221,7 @@ func _get_fallback_string_for(string_index: String) -> String:
 		_event_joybutton:
 			fallback_string = Input.get_joy_button_string(index)
 		_event_joyaxis:
-			fallback_string = "Axis %s"%[index]
+			fallback_string = "Axis %s"%[string_index]
 		_:
 			push_match_event_variables_error()
 	
@@ -283,7 +284,10 @@ func _on_JoypadSupport_joypad_manually_changed() -> void:
 	_setup()
 
 
-func _on_JoypadSupport_input_remapped() -> void:
+func _on_JoypadSupport_input_remapped(action_name: String) -> void:
+	if input_action != action_name:
+		return
+	
 	_setup()
 
 ### ---------------------------------------

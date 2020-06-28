@@ -24,7 +24,7 @@ signal joypad_connected
 signal joypad_disconnected
 signal joypad_manually_changed
 signal input_entered(input_map_action)
-signal input_remapped
+signal input_remapped(action_name)
 
 # enums
 
@@ -79,14 +79,16 @@ func _input(event) -> void:
 		return 
 	
 	var input_code: int = -1
+	var axis_value: float = 0.0
 	var event_type: int = -1
 	
 	if _listen_mode == Modes.JOYPAD:
 		if event is InputEventJoypadButton:
 			input_code = event.button_index
 			event_type = JS_InputMapAction.Types.JOYPAD_BUTTON
-		elif event is InputEventJoypadMotion:
+		elif event is InputEventJoypadMotion and abs(event.axis_value) == 1:
 			input_code = event.axis
+			axis_value = event.axis_value
 			event_type = JS_InputMapAction.Types.JOYPAD_AXIS
 	elif _listen_mode == Modes.KEYBOARD_AND_MOUSE:
 		if event is InputEventKey:
@@ -99,7 +101,13 @@ func _input(event) -> void:
 	get_viewport().set_input_as_handled()
 	
 	if input_code != -1:
-		emit_signal("input_entered", {event_type = event_type, input_code = input_code})
+		emit_signal("input_entered", 
+			{
+				event_type = event_type, 
+				input_code = input_code, 
+				axis_value = axis_value
+			}
+		)
 
 
 ### ---------------------------------------
@@ -114,7 +122,10 @@ func listen_input_for(action_name: String, mode: int):
 	set_process_input(false)
 	
 	var new_input_map_action: = JS_InputMapAction.new(action_name, 
-			new_input_dictionary.event_type, new_input_dictionary.input_code)
+			new_input_dictionary.event_type, 
+			new_input_dictionary.input_code, 
+			new_input_dictionary.axis_value
+	)
 	change_action_event_type(new_input_map_action)
 
 
@@ -123,7 +134,7 @@ func change_action_event_type(input_map_action: JS_InputMapAction):
 	var event = input_map_action.event
 	_erase_all_event_type_from(action_name, event)
 	InputMap.action_add_event(action_name, event)
-	emit_signal("input_remapped")
+	emit_signal("input_remapped", action_name)
 	_configs.rebuild_actions()
 	_configs.save()
 
@@ -299,13 +310,11 @@ func _handle_swap_ui_accept_cancel():
 func _erase_all_event_type_from(action_name: String, new_event: InputEvent) -> void:
 	var event_list = InputMap.get_action_list(action_name)
 	for event in event_list:
-		if event is InputEventKey and new_event is InputEventKey:
+		if (event is InputEventKey or event is InputEventMouseButton) \
+				and (new_event is InputEventKey or new_event is InputEventMouseButton):
 			InputMap.action_erase_event(action_name, event)
-		elif event is InputEventMouseButton and new_event is InputEventMouseButton:
-			InputMap.action_erase_event(action_name, event)
-		elif event is InputEventJoypadButton and new_event is InputEventJoypadButton:
-			InputMap.action_erase_event(action_name, event)
-		elif event is InputEventJoypadMotion and new_event is InputEventJoypadMotion:
+		elif (event is InputEventJoypadButton or event is InputEventJoypadMotion) \
+				and (new_event is InputEventJoypadButton or new_event is InputEventJoypadMotion):
 			InputMap.action_erase_event(action_name, event)
 
 
