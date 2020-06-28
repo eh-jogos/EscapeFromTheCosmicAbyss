@@ -22,13 +22,15 @@ var event: InputEvent = null
 var _action: = ""
 var _event_type: int = Types.KEY
 var _input_code: int = -1
+var _input_axis_value: float = 0.0
 
 ### Built in Engine Methods ---------------
-func _init(action: String, event_type: int, input_code: int) -> void:
+func _init(action: String, event_type: int, input_code: int, axis_value: = 0.0) -> void:
 	_action = action
 	_event_type = event_type
 	_input_code = input_code
-	event = _get_new_event_of_type(_event_type, _input_code)
+	_input_axis_value = axis_value
+	event = _get_new_event_of_type(_event_type, _input_code, _input_axis_value)
 
 ### ---------------------------------------
 
@@ -49,7 +51,7 @@ func get_input_code() -> int:
 
 
 ### Private Methods -----------------------
-func _get_new_event_of_type(event_type: int, new_input_code:int) -> InputEvent:
+func _get_new_event_of_type(event_type: int, new_input_code:int, new_axis_value:float) -> InputEvent:
 	var new_event: InputEvent = null
 	
 	match event_type:
@@ -60,7 +62,7 @@ func _get_new_event_of_type(event_type: int, new_input_code:int) -> InputEvent:
 		Types.JOYPAD_BUTTON:
 			new_event = _get_new_joypad_button_event(new_input_code)
 		Types.JOYPAD_AXIS:
-			new_event = _get_new_joypad_axis_event(new_input_code)
+			new_event = _get_new_joypad_axis_event(new_input_code, new_axis_value)
 		_:
 			push_error("Invalid event_type: %s"%[event_type])
 			assert(false)
@@ -86,9 +88,10 @@ func _get_new_joypad_button_event(button_index: int) -> InputEventJoypadButton:
 	return new_event
 
 
-func _get_new_joypad_axis_event(axis: int) -> InputEventJoypadMotion:
+func _get_new_joypad_axis_event(axis: int, axis_value: float) -> InputEventJoypadMotion:
 	var new_event: = InputEventJoypadMotion.new()
 	new_event.axis = axis
+	new_event.axis_value = axis_value
 	return new_event
 
 ### ---------------------------------------
