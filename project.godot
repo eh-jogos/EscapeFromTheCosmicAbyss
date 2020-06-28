@@ -71,7 +71,7 @@ _global_script_class_icons={
 config/name="Escape From The Cosmic Abyss"
 run/main_scene="res://CommonScenes/eh_jogos/SplashScreen.tscn"
 config/icon="res://icon.png"
-config/version="v1.1.6"
+config/version="v1.1.7"
 config/build_folder="v1.1"
 
 [autoload]
