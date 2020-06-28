@@ -28,6 +28,12 @@ func _ready():
 	highscore_label = get_node(highscore_label_path)
 	particle_fx = get_node("Particles2D")
 	game_settings = Global.get_game_mode()
+	
+	if Global.achievements_handler.has_highscore_on.has(str(level_num)):
+		if Global.achievements_handler.has_highscore_on[str(level_num)]:
+			$Star.show()
+		else:
+			$Star.hide()
 
 
 func _on_mouse_enter():
