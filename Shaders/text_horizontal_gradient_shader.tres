@@ -79,6 +79,7 @@ void light() {
 
 }
 "
+custom_defines = ""
 graph_offset = Vector2( -227, 97 )
 mode = 1
 flags/light_only = false

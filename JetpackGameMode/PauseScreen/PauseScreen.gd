@@ -43,11 +43,19 @@ func _input(event):
 		elif game.get_game_state() == 2 and ScreenManager.scene_above == null:
 			resume_game()
 
+
 func pause_game():
 	game.set_game_state("Pause")
 	game.hud_animator.play("fade_out")
 	self.show()
 	get_tree().set_pause(true)
+	
+	if game.game_mode != "story":
+		level_select_btn.disabled = true
+		level_select_btn.focus_mode = Control.FOCUS_NONE
+	else:
+		level_select_btn.disabled = false
+		level_select_btn.focus_mode = Control.FOCUS_ALL
 	
 	animator.play_backwards("fade out")
 	yield(animator, "animation_finished")
@@ -56,6 +64,7 @@ func pause_game():
 	
 	#SoundManager.pause_bgm()
 	SoundManager.fade_out_start()
+
 
 func resume_game():
 	if game.is_tutorial:
@@ -76,10 +85,12 @@ func resume_game():
 func _on_resume_pressed():
 	resume_game()
 
+
 func _on_replay_pressed():
 	if game != null:
 		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
 		resume_game()
+
 
 func _on_quit_pressed():
 	get_tree().quit()
@@ -96,6 +107,7 @@ func _on_options_pressed():
 	
 	ScreenManager.load_above(path, last_focus, self)
 	SoundManager.pause_bgm()
+
 
 func _on_focus_enter():
 	#called when focus_enters on options or level select and checks if pause is not visible

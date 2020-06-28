@@ -427,6 +427,9 @@ margin_left = 60.0
 margin_right = 1860.0
 margin_bottom = 1080.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Map" type="Control" parent="."]
 margin_right = 40.0

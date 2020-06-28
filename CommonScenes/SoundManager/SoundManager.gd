@@ -18,6 +18,7 @@ var sfx_bus_game: int = AudioServer.get_bus_index("GameSfx")
 
 var initial_volume: int
 var current_volume: int
+var is_faded_out: bool = false
 
 func _ready():
 	bgm_stream = self.get_node("BGMPlayer")
@@ -143,6 +144,7 @@ func fade_out_credits_bgm():
 
 
 func fade_out_start(shoul_be_immediate: = false):
+	is_faded_out = true
 	initial_volume = Global.savedata["options"]["bgm volume"]
 	var target_volume = max(initial_volume-30, 0)
 	var tween = $Tween
@@ -158,6 +160,7 @@ func fade_out_start(shoul_be_immediate: = false):
 
 
 func fade_in_start(shoul_be_immediate: = false):
+	is_faded_out = false
 	initial_volume = Global.savedata["options"]["bgm volume"]
 	var tween = $Tween
 	if tween.is_active():
@@ -166,6 +169,8 @@ func fade_in_start(shoul_be_immediate: = false):
 	if shoul_be_immediate:
 		change_bgm_volume(initial_volume)
 	else:
+		var current_volume_db = AudioServer.get_bus_volume_db(bgm_bus)
+		current_volume = db2linear(current_volume_db)
 		tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 0.5, 
 				Tween.TRANS_BACK, Tween.EASE_IN)
 		tween.start()

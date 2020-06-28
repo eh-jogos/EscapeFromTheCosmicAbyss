@@ -58,11 +58,11 @@ func _on_LevelButton_pressed():
 func set_level_and_close():
 	Global.set_current_story_level(level_num)
 	menu_animator.play("close")
+	if SoundManager.is_faded_out:
+		SoundManager.fade_in_start()
 	yield(menu_animator, "animation_finished")
 	
 	var game = get_tree().get_root().get_node("JetpackGame")
-	print(game.get_children())
-	print(game.get_name())
 	game.game_start()
 	
 	ScreenManager.reset_above_below()
@@ -72,6 +72,8 @@ func set_level_and_reload():
 	
 	Global.set_current_story_level(level_num)
 	ScreenManager.load_screen(game_path)
+	if SoundManager.is_faded_out:
+		SoundManager.fade_in_start()
 	menu_animator.play("close")
 	
 	yield(menu_animator, "animation_finished")

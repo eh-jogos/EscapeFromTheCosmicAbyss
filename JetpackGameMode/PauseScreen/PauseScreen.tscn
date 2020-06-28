@@ -48,6 +48,9 @@ margin_left = 1282.0
 margin_top = 297.0
 margin_right = 1835.0
 margin_bottom = 297.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Pause" type="Label" parent="ButtonsBlock"]
 margin_left = -14.0
