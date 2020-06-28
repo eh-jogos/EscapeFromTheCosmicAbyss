@@ -119,10 +119,10 @@ func _ready():
 	
 	var next_group = $SectionLabels/NextGroup
 	if is_extra_mode():
-		close_btn.set_text("Start")
+		close_btn.set_text("   Start")
 		next_group.hide()
 	else:
-		close_btn.set_text("Confirm")
+		close_btn.set_text("   Confirm")
 		next_group.show()
 	
 	cooldown_bar = get_node("SectionLabels/Cooldown")
@@ -140,12 +140,11 @@ func _ready():
 
 
 func _unhandled_input(event) -> void:
-	if event.is_action("ui_cancel"):
+	if event.is_action("ui_cancel") or event.is_action_pressed("ui_accept"):
 		get_viewport().set_input_as_handled()
 	
 	if event.is_action_pressed("ui_cancel"):
-		var focus_button: Button = close_btn
-		if focus_button.has_focus():
-			_on_Close_pressed()
-		else:
-			focus_button.grab_focus()
+		_on_Reset_pressed()
+	
+	if event.is_action_pressed("ui_accept"):
+		_on_Close_pressed()

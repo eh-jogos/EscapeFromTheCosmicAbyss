@@ -24,7 +24,7 @@ var scene_above
 var scenes_bellow = []
 var previous_focuses = []
 
-var loading_path: = ""
+var loading_path = ""
 
 func _ready():
 	animation = self.get_node("AnimationPlayer")

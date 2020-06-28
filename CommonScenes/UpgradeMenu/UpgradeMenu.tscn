@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeMenu.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=25]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=26]
 [ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=27]
+[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=28]
 
 [sub_resource type="Animation" id=1]
 length = 0.01
@@ -1245,8 +1246,8 @@ __meta__ = {
 }
 
 [node name="Reset" type="Button" parent="Buttons"]
-margin_left = 223.0
-margin_right = 559.0
+margin_left = 169.0
+margin_right = 532.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 147, 0 )
 focus_neighbour_left = NodePath("../Confirm")
@@ -1254,11 +1255,20 @@ focus_neighbour_top = NodePath("../../SectionLabels/Shields")
 focus_neighbour_right = NodePath("../Confirm")
 focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
 theme = ExtResource( 25 )
-text = "Reset Changes"
+text = "   Reset Changes"
 script = ExtResource( 26 )
 
+[node name="ui_cancel" parent="Buttons/Reset" instance=ExtResource( 28 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 13.0
+margin_top = -25.0
+margin_right = 63.0
+margin_bottom = 25.0
+input_action = "ui_cancel"
+
 [node name="Confirm" type="Button" parent="Buttons"]
-margin_left = 574.0
+margin_left = 547.0
 margin_right = 785.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 147, 0 )
@@ -1267,9 +1277,18 @@ focus_neighbour_top = NodePath("../../SectionLabels/Shields")
 focus_neighbour_right = NodePath("../Reset")
 focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
 theme = ExtResource( 27 )
-text = "Confirm"
+text = "   Confirm"
 script = ExtResource( 26 )
 pressed_sfx = "Confirm"
+
+[node name="PromptInputAction" parent="Buttons/Confirm" instance=ExtResource( 28 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 13.0
+margin_top = -25.0
+margin_right = 63.0
+margin_bottom = 25.0
+input_action = "ui_accept"
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
 margin_left = 1845.0
