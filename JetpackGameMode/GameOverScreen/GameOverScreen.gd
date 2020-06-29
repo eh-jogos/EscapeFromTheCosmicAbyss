@@ -73,6 +73,9 @@ func _ready():
 	if not upgrade_btn.is_connected("focus_entered",self,"_on_focus_enter"):
 		upgrade_btn.connect("focus_entered",self,"_on_focus_enter")
 	
+	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
+		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
+	
 	if game_mode == "story":
 		replay_btn.show()
 		upgrade_btn.show()
@@ -227,7 +230,7 @@ func _on_upgrade_pressed():
 
 
 func _on_focus_enter():
-	#print("FOCUS GRABBED")
+#	print("FOCUS GRABBED")
 	if not visible:
 		self.show()
 		animator.play_backwards("fade out")
@@ -243,7 +246,7 @@ func _on_focus_enter():
 
 func _on_LevelSelect_pressed():
 	var path = level_select_path
-	last_focus = level_select_btn.get_path()
+	last_focus = level_select_btn
 	animator.play("fade out")
 	yield(animator, "animation_finished")
 	

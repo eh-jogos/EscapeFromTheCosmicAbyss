@@ -274,7 +274,7 @@ func _on_focus_enter():
 
 func _on_LevelSelect_pressed():
 	var path = level_select_path
-	last_focus = level_select_btn.get_path()
+	last_focus = level_select_btn
 	animator.play("fade_out")
 	yield(animator, "animation_finished")
 	

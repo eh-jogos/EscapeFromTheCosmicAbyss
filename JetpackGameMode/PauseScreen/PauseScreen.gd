@@ -119,13 +119,16 @@ func _on_focus_enter():
 		animator.play_backwards("fade out")
 		yield(animator, "animation_finished")
 		
-		SoundManager.fade_out_start(true)
-		SoundManager.play_bgm("2")
+		if not SoundManager.is_faded_out:
+			SoundManager.fade_out_start(true)
+		
+		if not SoundManager.bgm_stream.playing:
+			SoundManager.play_bgm("2")
 
 
 func _on_LevelSelect_pressed():
 	var path = level_select_path
-	last_focus = level_select_btn.get_path()
+	last_focus = level_select_btn
 	
 	animator.play("fade out")
 	yield(animator, "animation_finished")

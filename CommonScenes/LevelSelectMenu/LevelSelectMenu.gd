@@ -75,7 +75,28 @@ func _ready():
 		last_played_level = last_unlocked_level
 	initial_btn = level_buttons.get_child(last_played_level)
 	
-	animator.play_backwards("close")
+	if is_above_some_menu():
+		print("Screen Below: %s "%[ScreenManager.scenes_bellow[0].name])
+		$LegendLevelSelect.show_cancel_prompt()
+	else:
+		$LegendLevelSelect.hide_cancel_prompt()
+	
+	animator.play("open")
 	yield(animator, "animation_finished")
 	
 	unlock_levels()
+
+
+func _unhandled_input(event):
+	if event.is_action("ui_cancel"):
+		get_viewport().set_input_as_handled()
+	
+	if event.is_action_pressed("ui_cancel") and is_above_some_menu():
+		ScreenManager.clear_above()
+
+
+func is_above_some_menu():
+	if ScreenManager.scenes_bellow.size() > 0:
+		return ScreenManager.scenes_bellow[0].name != "JetpackGame"
+	else:
+		return false
