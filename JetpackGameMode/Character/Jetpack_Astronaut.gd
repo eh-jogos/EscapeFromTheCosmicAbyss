@@ -18,6 +18,7 @@ var points_label
 
 # Inside Nodes I'll interact with
 var jet_particles
+var dash_particles: Particles2D
 var jet_sfx
 var body_animator
 var arms_animator
@@ -62,11 +63,13 @@ func _ready():
 	points_label = game.get_node("HUD/CenterArea/Points")
 	
 	# Inside Nodes
-	jet_particles = self.get_node("JetParticles")
+	jet_particles = self.get_node("Skin/JetParticles")
 	jet_sfx = jet_particles.get_node("SamplePlayer")
+	dash_particles = get_node("Skin/FinalSkin/DashParticles")
+	dash_particles.emitting = false
 	body_animator = self.get_node("BodyAnimator")
 	arms_animator = self.get_node("ArmsAnimator")
-	bullet_spawn = self.get_node("BulletSpawn")
+	bullet_spawn = self.get_node("Skin/BulletSpawn")
 	shield = self.get_node("Shield")
 	
 	falling = true
@@ -124,6 +127,7 @@ func _physics_process(delta):
 			speed.y = 0
 		else:
 			dashing = false
+			dash_particles.emitting = dashing
 			emit_signal("dashing", dashing)
 			speed.x += speed_x*unit.x*delta
 			speed.x = clamp(speed.x, 0, speed_x*unit.x)
@@ -229,6 +233,7 @@ func handle_boost(delta, heat):
 		heat = 100
 		overheated = true
 		dashing = false
+		dash_particles.emitting = dashing
 	
 	return heat
 
@@ -249,6 +254,8 @@ func handle_dash(delta, dash_force, heat):
 		heat = 100
 		overheated = true
 		dashing = false
+	
+	dash_particles.emitting = dashing
 	
 	return heat
 
