@@ -675,9 +675,8 @@ bus = "GameSfx"
 position = Vector2( 0, -150 )
 
 [node name="OuterLaser" type="ColorRect" parent="Root"]
-visible = false
-margin_left = -76.0
-margin_right = 86.0
+margin_left = -81.0
+margin_right = 81.0
 margin_bottom = 40.0
 color = Color( 1.56, 0.22, 0.21, 1 )
 script = ExtResource( 2 )
@@ -738,6 +737,9 @@ __meta__ = {
 
 [node name="LaseEyeSkin" parent="Root" instance=ExtResource( 4 )]
 position = Vector2( 0, 14 )
+warning_color_1 = 1.0
+warning_color_2 = 1.0
+warning_color_3 = 1.0
 
 [node name="Raycasts" type="Node2D" parent="Root"]
 position = Vector2( -5, 0 )
@@ -745,20 +747,20 @@ position = Vector2( -5, 0 )
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( -55, 4 )
+position = Vector2( -55, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Middle" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 5, 4 )
+position = Vector2( 5, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Right" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 65, 4 )
+position = Vector2( 65, 3.83282 )
 enabled = true
 cast_to = Vector2( 0, 60 )

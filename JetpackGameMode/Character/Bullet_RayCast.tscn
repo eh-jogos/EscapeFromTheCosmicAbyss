@@ -661,11 +661,11 @@ colors = PoolColorArray( 1, 1, 1, 1, 0.164706, 1, 1, 1, 0.0705882, 0.560784, 0.7
 [sub_resource type="GradientTexture" id=6]
 gradient = SubResource( 5 )
 
-[sub_resource type="Curve" id=7]
-_data = [ Vector2( 0.372642, 0.818182 ), 0.0, -0.0287652, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+[sub_resource type="Curve" id=85]
+_data = [ Vector2( 0.375, 1 ), 0.0, -0.0287652, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=8]
-curve = SubResource( 7 )
+curve = SubResource( 85 )
 
 [sub_resource type="ParticlesMaterial" id=9]
 lifetime_randomness = 0.25
@@ -681,20 +681,20 @@ orbit_velocity_random = 0.0
 scale_curve = SubResource( 8 )
 color_ramp = SubResource( 6 )
 
-[sub_resource type="Gradient" id=10]
+[sub_resource type="Gradient" id=48]
 offsets = PoolRealArray( 0.15873, 0.613757, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.164706, 1, 1, 1, 0, 0.290196, 0.658824, 0 )
 
-[sub_resource type="GradientTexture" id=11]
-gradient = SubResource( 10 )
+[sub_resource type="GradientTexture" id=49]
+gradient = SubResource( 48 )
 
-[sub_resource type="Curve" id=12]
+[sub_resource type="Curve" id=88]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.495283, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=13]
-curve = SubResource( 12 )
+[sub_resource type="CurveTexture" id=51]
+curve = SubResource( 88 )
 
-[sub_resource type="ParticlesMaterial" id=14]
+[sub_resource type="ParticlesMaterial" id=52]
 emission_shape = 2
 emission_box_extents = Vector3( 716, 10, 1 )
 flag_disable_z = true
@@ -705,8 +705,8 @@ orbit_velocity_random = 0.0
 tangential_accel = 80.0
 tangential_accel_random = 1.0
 scale = 0.3
-scale_curve = SubResource( 13 )
-color_ramp = SubResource( 11 )
+scale_curve = SubResource( 51 )
+color_ramp = SubResource( 49 )
 
 [node name="Bullet" type="Node2D" groups=[
 "bullet",
@@ -789,6 +789,6 @@ lifetime = 0.8
 randomness = 1.0
 local_coords = false
 draw_order = 1
-process_material = SubResource( 14 )
+process_material = SubResource( 52 )
 texture = ExtResource( 7 )
 [connection signal="timeout" from="IdleTimer" to="." method="_on_IdleTimer_timeout"]
