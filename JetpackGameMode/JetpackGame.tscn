@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -637,68 +637,16 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="Animation" id=17]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("CenterArea:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("UpgradeLabel:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ProgressVisualization:modulate:a")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../Player/OverheatBar:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Meters:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
+[sub_resource type="Environment" id=17]
+background_mode = 4
+background_canvas_max_layer = 10
+glow_enabled = true
+glow_levels/2 = true
+glow_levels/4 = true
+glow_levels/5 = false
+glow_blend_mode = 0
+glow_bicubic_upscale = true
+adjustment_saturation = 0.01
 
 [sub_resource type="Animation" id=18]
 length = 0.01
@@ -712,6 +660,69 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UpgradeLabel:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ProgressVisualization:modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Player/OverheatBar:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Meters:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=19]
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterArea:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
 "values": [ 1.0 ]
 }
 tracks/1/type = "value"
@@ -763,7 +774,7 @@ tracks/4/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=20]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -826,7 +837,7 @@ tracks/4/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=21]
 length = 1.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -1185,7 +1196,8 @@ position = Vector2( 1010, 540 )
 [node name="MidFrontRowBoss" type="Node2D" parent="ParallaxBackground" groups=[
 "boss",
 ]]
-position = Vector2( -1428, 540 )
+visible = false
+position = Vector2( 2600, 540 )
 script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxBackground/MidFrontRowBoss"]
@@ -1291,14 +1303,20 @@ scale = Vector2( 1, -1 )
 position = Vector2( 2370, 61 )
 scale = Vector2( 1, -1 )
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 17 )
+__meta__ = {
+"_editor_description_": ""
+}
+
 [node name="HUD" type="CanvasLayer" parent="."]
 pause_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HUD"]
 autoplay = "base"
-anims/base = SubResource( 17 )
-anims/editor = SubResource( 18 )
-anims/fade_out = SubResource( 19 )
+anims/base = SubResource( 18 )
+anims/editor = SubResource( 19 )
+anims/fade_out = SubResource( 20 )
 
 [node name="pallet" type="Sprite" parent="HUD"]
 position = Vector2( 959.021, 1335.47 )
@@ -1443,7 +1461,7 @@ __meta__ = {
 }
 
 [node name="Messager" type="AnimationPlayer" parent="HUD/SpeedLabel"]
-anims/text_anim = SubResource( 20 )
+anims/text_anim = SubResource( 21 )
 
 [node name="SpeedSfx" type="AudioStreamPlayer" parent="HUD/SpeedLabel"]
 stream = ExtResource( 74 )
