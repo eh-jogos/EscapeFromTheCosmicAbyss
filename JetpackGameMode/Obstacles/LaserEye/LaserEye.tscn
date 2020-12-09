@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeLaserOutline.gd" type="Script" id=2]
@@ -171,11 +171,23 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, -150 ), Vector2( 0, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Root/OuterLaser:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("Root/ColorFrame:rect_size")
+tracks/0/path = NodePath("Root/OuterLaser:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -187,7 +199,7 @@ tracks/0/keys = {
 "values": [ Vector2( 162, 40 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Root/ColorFrame:rect_position")
+tracks/1/path = NodePath("Root/OuterLaser:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -199,7 +211,7 @@ tracks/1/keys = {
 "values": [ Vector2( -76, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Root/ColorFrame/ColorFrame:rect_size")
+tracks/2/path = NodePath("Root/OuterLaser/InnerLaser:rect_size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -223,7 +235,7 @@ tracks/3/keys = {
 "values": [ Vector2( 0, -150 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Root/ColorFrame:visible")
+tracks/4/path = NodePath("Root/OuterLaser:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -269,6 +281,42 @@ tracks/7/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Root/Raycasts/Middle:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 4 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Root/Raycasts/Left:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -55, 4 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Root/Raycasts/Right:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 65, 4 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -375,7 +423,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=5]
 length = 0.7
 tracks/0/type = "value"
-tracks/0/path = NodePath("Root/ColorFrame:rect_size")
+tracks/0/path = NodePath("Root/OuterLaser:rect_size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -387,7 +435,7 @@ tracks/0/keys = {
 "values": [ Vector2( 162, 40 ), Vector2( 162, 1106 ), Vector2( 162, 13 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Root/ColorFrame:rect_position")
+tracks/1/path = NodePath("Root/OuterLaser:rect_position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -399,7 +447,7 @@ tracks/1/keys = {
 "values": [ Vector2( -81, 0 ), Vector2( -81, 0 ), Vector2( -81, 1093 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Root/ColorFrame/ColorFrame:rect_size")
+tracks/2/path = NodePath("Root/OuterLaser/InnerLaser:rect_size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -411,7 +459,7 @@ tracks/2/keys = {
 "values": [ Vector2( 122, 40 ), Vector2( 122, 1106 ), Vector2( 122, 13 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Root/ColorFrame:visible")
+tracks/3/path = NodePath("Root/OuterLaser:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -559,13 +607,39 @@ tracks/15/path = NodePath("SfxLibrary/Loop:playing")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
-tracks/15/enabled = true
+tracks/15/enabled = false
 tracks/15/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
+tracks/16/type = "value"
+tracks/16/path = NodePath("Root/OuterLaser/InnerLaser:rect_position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 20, 0 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0.219608, 0.207843, 1 )
+corner_radius_top_left = 81
+corner_radius_top_right = 81
+corner_radius_bottom_right = 81
+corner_radius_bottom_left = 81
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 61
+corner_radius_top_right = 61
+corner_radius_bottom_right = 61
+corner_radius_bottom_left = 61
 
 [node name="LaserEye" type="Node2D" groups=[
 "enemy",
@@ -598,29 +672,72 @@ volume_db = -18.0
 bus = "GameSfx"
 
 [node name="Root" type="Node2D" parent="."]
+position = Vector2( 0, -150 )
 
-[node name="ColorFrame" type="ColorRect" parent="Root"]
+[node name="OuterLaser" type="ColorRect" parent="Root"]
 visible = false
-margin_left = -81.0
-margin_top = 1093.0
-margin_right = 81.0
-margin_bottom = 1106.0
-color = Color( 0.780392, 0.223529, 0.211765, 1 )
+margin_left = -76.0
+margin_right = 86.0
+margin_bottom = 40.0
+color = Color( 1.56, 0.22, 0.21, 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="ColorFrame" type="ColorRect" parent="Root/ColorFrame"]
+[node name="Panel" type="Panel" parent="Root/OuterLaser"]
+modulate = Color( 1.3, 1.3, 1.3, 1 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -81.0
+margin_bottom = 81.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="Root/OuterLaser"]
+anchor_right = 1.0
+margin_top = -81.0
+margin_bottom = 81.0
+custom_styles/panel = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InnerLaser" type="ColorRect" parent="Root/OuterLaser"]
+modulate = Color( 1.2, 1.2, 1.2, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -61.0
 margin_right = 61.0
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Root/OuterLaser/InnerLaser"]
+modulate = Color( 1.3, 1.3, 1.3, 1 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -61.0
+margin_bottom = 61.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Panel2" type="Panel" parent="Root/OuterLaser/InnerLaser"]
+anchor_right = 1.0
+margin_top = -61.0
+margin_bottom = 61.0
+custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="LaseEyeSkin" parent="Root" instance=ExtResource( 4 )]
 position = Vector2( 0, 14 )
-warning_color_1 = 1.0
-warning_color_2 = 1.0
-warning_color_3 = 1.0
 
 [node name="Raycasts" type="Node2D" parent="Root"]
 position = Vector2( -5, 0 )
@@ -628,20 +745,20 @@ position = Vector2( -5, 0 )
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( -55, 1084 )
+position = Vector2( -55, 4 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Middle" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 5, 1084 )
+position = Vector2( 5, 4 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Right" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 65, 1084 )
+position = Vector2( 65, 4 )
 enabled = true
 cast_to = Vector2( 0, 60 )
