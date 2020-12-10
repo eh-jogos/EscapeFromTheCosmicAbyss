@@ -334,7 +334,9 @@ func _on_scored(num):
 	#print("PL: %s | ML: %s"%[points_level, multiples_level])
 	
 	if points_level > last_point_level:
-		ammunition.add_ammo()
+		if not ammunition.is_maxed_out():
+			ammunition.add_ammo()
+			player.charge_ammo()
 		
 		print("initial_speed: %s | max_speed: %s"%[player.speed_x, max_speed])
 		if player.speed_x < max_speed:
