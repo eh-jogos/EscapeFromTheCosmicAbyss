@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeLaserOutline.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_laser_loop.wav" type="AudioStream" id=5]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_laser_charging.wav" type="AudioStream" id=6]
+[ext_resource path="res://JetpackGameMode/Obstacles/Fx/white_glowing_diamond.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "charging"
@@ -155,6 +156,42 @@ tracks/11/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true, true, false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Root/LaseEyeSkin/ChargingParticles:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.5, 1.9, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1.1, 1.1, 1.1, 1 ), Color( 1.3, 1.3, 1.3, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1.8, 1.8, 1.8, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Root/LaseEyeSkin/ChargingParticles:speed_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 1.9, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 2.0, 3.0, 5.0, 5.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Root/LaseEyeSkin/ChargingParticles:emitting")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -317,6 +354,42 @@ tracks/10/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 65, 4 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Root/LaseEyeSkin/ChargingParticles:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1.1, 1.1, 1.1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Root/LaseEyeSkin/ChargingParticles:speed_scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Root/LaseEyeSkin/ChargingParticles:emitting")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -607,7 +680,7 @@ tracks/15/path = NodePath("SfxLibrary/Loop:playing")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
-tracks/15/enabled = false
+tracks/15/enabled = true
 tracks/15/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -640,6 +713,31 @@ corner_radius_top_left = 61
 corner_radius_top_right = 61
 corner_radius_bottom_right = 61
 corner_radius_bottom_left = 61
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.243386, 0.497355, 0.751323, 1 )
+colors = PoolColorArray( 1, 0.286275, 0.270588, 0, 1, 0.286275, 0.270588, 1, 0.917969, 0.168533, 0.361747, 1, 1, 0.286275, 0.270588, 1, 1, 0.286275, 0.270588, 0 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+
+[sub_resource type="Curve" id=10]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.495283, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=11]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=12]
+emission_shape = 1
+emission_sphere_radius = 128.0
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = -0.1
+orbit_velocity_random = 0.0
+radial_accel = -100.0
+tangential_accel = -30.0
+scale_curve = SubResource( 11 )
+color_ramp = SubResource( 9 )
 
 [node name="LaserEye" type="Node2D" groups=[
 "enemy",
@@ -675,8 +773,9 @@ bus = "GameSfx"
 position = Vector2( 0, -150 )
 
 [node name="OuterLaser" type="ColorRect" parent="Root"]
-margin_left = -81.0
-margin_right = 81.0
+visible = false
+margin_left = -76.0
+margin_right = 86.0
 margin_bottom = 40.0
 color = Color( 1.56, 0.22, 0.21, 1 )
 script = ExtResource( 2 )
@@ -725,6 +824,9 @@ anchor_bottom = 1.0
 margin_top = -61.0
 margin_bottom = 61.0
 custom_styles/panel = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Panel2" type="Panel" parent="Root/OuterLaser/InnerLaser"]
 anchor_right = 1.0
@@ -737,9 +839,14 @@ __meta__ = {
 
 [node name="LaseEyeSkin" parent="Root" instance=ExtResource( 4 )]
 position = Vector2( 0, 14 )
-warning_color_1 = 1.0
-warning_color_2 = 1.0
-warning_color_3 = 1.0
+
+[node name="ChargingParticles" type="Particles2D" parent="Root/LaseEyeSkin"]
+self_modulate = Color( 1.1, 1.1, 1.1, 1 )
+position = Vector2( 0, 72 )
+emitting = false
+amount = 16
+process_material = SubResource( 12 )
+texture = ExtResource( 7 )
 
 [node name="Raycasts" type="Node2D" parent="Root"]
 position = Vector2( -5, 0 )
@@ -747,20 +854,20 @@ position = Vector2( -5, 0 )
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( -55, 3.83282 )
+position = Vector2( -55, 4 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Middle" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 5, 3.83282 )
+position = Vector2( 5, 4 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Right" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 65, 3.83282 )
+position = Vector2( 65, 4 )
 enabled = true
 cast_to = Vector2( 0, 60 )
