@@ -19,6 +19,7 @@ var points_label
 # Inside Nodes I'll interact with
 var jet_particles
 var dash_particles: Particles2D
+var charge_particles: Particles2D
 var jet_sfx
 var body_animator
 var arms_animator
@@ -67,6 +68,8 @@ func _ready():
 	jet_sfx = jet_particles.get_node("SamplePlayer")
 	dash_particles = get_node("Skin/FinalSkin/DashParticles")
 	dash_particles.emitting = false
+	charge_particles = get_node("Skin/FinalSkin/ChargeParticles")
+	charge_particles.emitting = false
 	body_animator = self.get_node("BodyAnimator")
 	arms_animator = self.get_node("ArmsAnimator")
 	bullet_spawn = self.get_node("Skin/BulletSpawn")
@@ -339,3 +342,7 @@ func _on_update_invincibility():
 	is_invincible = Global.is_invincible
 	if is_invincible and shield.energy == 0:
 		shield_up(1)
+
+
+func charge_ammo():
+	charge_particles.start_charge()
