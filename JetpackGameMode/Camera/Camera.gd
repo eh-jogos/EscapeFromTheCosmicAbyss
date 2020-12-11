@@ -4,9 +4,11 @@ var camera_offset_x = 0
 var target_offset_x = 0
 var base_offset = 0
 
+export var path_player: NodePath
+
 var player_position
 
-onready var player = get_node("../Player")
+onready var player = get_node(path_player)
 onready var tween = get_node("Tween")
 onready var obstacle_spawner = get_node("ObstacleSpawner")
 

@@ -93,11 +93,11 @@ func _ready():
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
 	speed_messager = self.get_node("HUD/SpeedLabel")
 	hud_animator = self.get_node("HUD/AnimationPlayer")
-	player = self.get_node("Player")
+	player = self.get_node("WorldLayer/ViewportContainer/Viewport/Player")
 	level_loader = self.get_node("LevelLoader")
-	camera = self.get_node("Camera2D")
+	camera = self.get_node("WorldLayer/ViewportContainer/Viewport/Camera2D")
 	object_spawner = camera.get_node("ObstacleSpawner")
-	parallax_background = self.get_node("ParallaxBackground")
+	parallax_background = self.get_node("WorldLayer/ViewportContainer/Viewport/ParallaxBackground")
 	
 	show_pre_game()
 
@@ -282,7 +282,7 @@ func load_level(level_choice, load_all = false, loop = false):
 			var animations = level.bosses_nodes[key].animations
 			
 			if level.bosses_nodes[key].is_a_boss_level:
-				boss_node = get_node("Camera2D/FinalBoss/Boss")
+				boss_node = camera.get_node("FinalBoss/Boss")
 				boss_node.set_boss_data(laser_countdowns, animation_countdowns, animations)
 			else:
 				boss_node = parallax_background.set_background_bosses(key, laser_countdowns, animation_countdowns, animations)

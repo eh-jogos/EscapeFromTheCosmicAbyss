@@ -32,7 +32,8 @@ func initialize_node_variables():
 	
 	animation = tentacle_pipe.get_node("AnimationPlayer")
 	
-	tentacle_trigger = self.get_tree().get_root().get_node("JetpackGame/Camera2D/TentacleTrigger")
+	tentacle_trigger = \
+			self.get_tree().get_root().get_node("JetpackGame").camera.get_node("TentacleTrigger")
 #	print(tentacle_trigger.get_name())
 
 

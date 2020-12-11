@@ -10,13 +10,18 @@ const OVERHEAT_THRESHOLD = 80
 # OTHER SCENES TO BE PRELOADED
 var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 
+
+# Paths to Outer Nodes I'll interact with
+export var path_game: NodePath
+export var path_points_label: NodePath
+
 # Outer Nodes I'll interact with
 var game
-var overheat_bar
-var overheat_bar_animator
 var points_label
 
 # Inside Nodes I'll interact with
+var overheat_bar
+var overheat_bar_animator
 var jet_particles
 var dash_particles: Particles2D
 var charge_particles: Particles2D
@@ -58,12 +63,12 @@ var speed = Vector2(0, 0)
 
 func _ready():
 	# Outer Nodes
-	game = self.get_parent()
-	overheat_bar = get_node("OverheatBar")
-	overheat_bar_animator = get_node("OverheatBar/AnimationPlayer")
-	points_label = game.get_node("HUD/CenterArea/Points")
+	game = get_node(path_game)
+	points_label = get_node(path_points_label)
 	
 	# Inside Nodes
+	overheat_bar = get_node("OverheatBar")
+	overheat_bar_animator = get_node("OverheatBar/AnimationPlayer")
 	jet_particles = self.get_node("Skin/JetParticles")
 	jet_sfx = jet_particles.get_node("SamplePlayer")
 	dash_particles = get_node("Skin/FinalSkin/DashParticles")
