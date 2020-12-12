@@ -2,7 +2,7 @@ shader_type canvas_item;
 
 uniform float torus_thickness : hint_range(0.001, 1.0) = 0.5;
 uniform float torus_hardness : hint_range(0.0, 8.0) = 1.0;
-uniform float torus_radius : hint_range(-0.1, 2.0) = 1.0;
+uniform float torus_radius : hint_range(-0.1, 3.0) = 1.0;
 uniform float torus_invert : hint_range(-1.0, 1.0) = -1.0;
 uniform vec2 torus_center = vec2(0.5, 0.5);
 uniform vec2 torus_resolution = vec2(1.0, 1.0);

@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=107 format=2]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -80,7 +80,7 @@
 [ext_resource path="res://JetpackGameMode/TorusMask.gd" type="Script" id=78]
 [ext_resource path="res://JetpackGameMode/PostProcessedGame.gd" type="Script" id=79]
 
-[sub_resource type="Environment" id=23]
+[sub_resource type="Environment" id=1]
 background_mode = 4
 background_canvas_max_layer = 10
 glow_enabled = true
@@ -91,20 +91,20 @@ glow_blend_mode = 0
 glow_bicubic_upscale = true
 adjustment_saturation = 0.01
 
-[sub_resource type="World" id=42]
-environment = SubResource( 23 )
+[sub_resource type="World" id=2]
+environment = SubResource( 1 )
 
-[sub_resource type="SegmentShape2D" id=43]
+[sub_resource type="SegmentShape2D" id=3]
 a = Vector2( -50, 0 )
 b = Vector2( 1970, 0 )
 
-[sub_resource type="RectangleShape2D" id=44]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 629.357 )
 
-[sub_resource type="RectangleShape2D" id=45]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 55.4252, 2224.51 )
 
-[sub_resource type="Animation" id=46]
+[sub_resource type="Animation" id=6]
 resource_name = "base"
 length = 0.01
 tracks/0/type = "value"
@@ -156,7 +156,7 @@ tracks/3/keys = {
 "values": [ Vector2( 504.4, 18.1768 ) ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=7]
 resource_name = "warning"
 length = 1.3
 tracks/0/type = "value"
@@ -208,7 +208,7 @@ tracks/3/keys = {
 "values": [ Vector2( 924.4, 18.1768 ), Vector2( 924.4, 18.1768 ), Vector2( 504.4, 18.1768 ), Vector2( 504.4, 18.1768 ), Vector2( 504.4, 198.177 ) ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -258,7 +258,7 @@ tracks/3/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=9]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -297,7 +297,7 @@ tracks/2/keys = {
 "values": [ Vector2( 650, 540 ) ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=10]
 resource_name = "get_angry"
 length = 1.7
 tracks/0/type = "value"
@@ -349,7 +349,7 @@ tracks/3/keys = {
 "values": [ "to_angry" ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=11]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -437,8 +437,92 @@ tracks/6/keys = {
 "method": "_check_scream_achievement"
 } ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.6, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 0.707107, 0, 1 ),
+"update": 0,
+"values": [ 0.051, 0.051, 0.274, 0.051 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.6, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 0.5, 0, 1 ),
+"update": 0,
+"values": [ -0.1, -0.1, 1.5, -0.1 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.645, 1.645 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.5, 1.8, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 943.191, 561.409 ), Vector2( 943.191, 561.409 ), Vector2( 888.037, 586.865 ), Vector2( 841.368, 534.539 ), Vector2( 841.368, 534.539 ), Vector2( -121, 534.539 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.645, 1.645 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 0.707107, 0, 1 ),
+"update": 0,
+"values": [ 0.051, 0.051, 0.274, 0.051 ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 0.5, 0, 1 ),
+"update": 0,
+"values": [ -0.1, -0.1, 1.7, -0.1 ]
+}
 
-[sub_resource type="SpriteFrames" id=52]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 69 ) ],
 "loop": false,
@@ -446,7 +530,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=13]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -473,7 +557,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=54]
+[sub_resource type="Animation" id=14]
 length = 3.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -537,8 +621,92 @@ tracks/4/keys = {
 "method": "_check_scream_achievement"
 } ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -447, 602.324 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.6, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 0.707107, 0, 1 ),
+"update": 0,
+"values": [ 0.106, 0.106, 0.31, 0.106 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.6, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 0.5, 0, 1 ),
+"update": 0,
+"values": [ -0.1, -0.1, 2.7, -0.1 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.645, 1.645 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.645, 1.645 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 0.707107, 0, 1 ),
+"update": 0,
+"values": [ 0.106, 0.106, 0.31, 0.106 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 0.5, 0, 1 ),
+"update": 0,
+"values": [ -0.1, -0.1, 2.7, -0.1 ]
+}
 
-[sub_resource type="SpriteFrames" id=55]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
 "frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
 "loop": false,
@@ -546,7 +714,7 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="Animation" id=56]
+[sub_resource type="Animation" id=16]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -585,7 +753,7 @@ tracks/2/keys = {
 "values": [ "stop" ]
 }
 
-[sub_resource type="Animation" id=57]
+[sub_resource type="Animation" id=17]
 length = 3.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -647,8 +815,92 @@ tracks/4/keys = {
 "method": "_check_scream_achievement"
 } ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.6, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 0.707107, 0, 1 ),
+"update": 0,
+"values": [ 0.106, 0.106, 0.31, 0.106 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.6, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 0.5, 0, 1 ),
+"update": 0,
+"values": [ -0.1, -0.1, 2.9, -0.1 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.645, 1.645 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.645, 1.645 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 0.707107, 0, 1 ),
+"update": 0,
+"values": [ 0.106, 0.106, 0.31, 0.106 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.9, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 0.5, 0, 1 ),
+"update": 0,
+"values": [ -0.1, -0.1, 2.9, -0.1 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2620, 678.941 ) ]
+}
 
-[sub_resource type="SpriteFrames" id=58]
+[sub_resource type="SpriteFrames" id=18]
 animations = [ {
 "frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
 "loop": false,
@@ -656,31 +908,40 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="ShaderMaterial" id=41]
+[sub_resource type="ShaderMaterial" id=19]
 shader = ExtResource( 76 )
-shader_param/torus_thickness = 0.183
+shader_param/torus_thickness = 0.106
 shader_param/torus_hardness = 1.645
 shader_param/torus_radius = -0.1
 shader_param/torus_invert = -1.0
-shader_param/torus_center = Vector2( 0.0918063, 0.730288 )
+shader_param/torus_center = Vector2( 1.36458, 0.628649 )
 shader_param/torus_resolution = Vector2( 1.77778, 1 )
 
-[sub_resource type="ViewportTexture" id=59]
+[sub_resource type="ShaderMaterial" id=20]
+shader = ExtResource( 76 )
+shader_param/torus_thickness = 0.106
+shader_param/torus_hardness = 1.645
+shader_param/torus_radius = -0.1
+shader_param/torus_invert = -1.0
+shader_param/torus_center = Vector2( 1.36458, 0.628649 )
+shader_param/torus_resolution = Vector2( 1.77778, 1 )
+
+[sub_resource type="ViewportTexture" id=21]
 viewport_path = NodePath("RawLayer/MaskViewport/Viewport")
 
-[sub_resource type="ShaderMaterial" id=60]
+[sub_resource type="ShaderMaterial" id=22]
 resource_local_to_scene = true
 shader = ExtResource( 75 )
 shader_param/displacement_amount = 0.09581
-shader_param/displacement_center = Vector2( 0.0918063, 0.730288 )
+shader_param/displacement_center = Vector2( 1.36458, 0.628649 )
 shader_param/screen_resolution = Vector2( 1.77778, 1 )
-shader_param/displacement_texture = SubResource( 59 )
+shader_param/displacement_texture = SubResource( 21 )
 
-[sub_resource type="ViewportTexture" id=61]
+[sub_resource type="ViewportTexture" id=23]
 flags = 5
 viewport_path = NodePath("RawLayer/WorldVieport/Viewport")
 
-[sub_resource type="Animation" id=62]
+[sub_resource type="Animation" id=24]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -743,7 +1004,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=25]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -806,7 +1067,7 @@ tracks/4/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=26]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -869,7 +1130,7 @@ tracks/4/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=65]
+[sub_resource type="Animation" id=27]
 length = 1.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -1012,7 +1273,7 @@ __meta__ = {
 
 [node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport"]
 size = Vector2( 1920, 1080 )
-world = SubResource( 42 )
+world = SubResource( 2 )
 handle_input_locally = false
 render_target_update_mode = 3
 
@@ -1039,29 +1300,29 @@ path_player = NodePath("../Player")
 position = Vector2( -960, -540 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RawLayer/WorldVieport/Viewport/Camera2D/Limites"]
-shape = SubResource( 43 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D1" type="CollisionShape2D" parent="RawLayer/WorldVieport/Viewport/Camera2D/Limites"]
 position = Vector2( 0, 1080 )
-shape = SubResource( 43 )
+shape = SubResource( 3 )
 
 [node name="TentacleTrigger" type="Area2D" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 position = Vector2( 650, 0 )
 
 [node name="Collision" type="CollisionShape2D" parent="RawLayer/WorldVieport/Viewport/Camera2D/TentacleTrigger"]
 position = Vector2( 230, 0 )
-shape = SubResource( 44 )
+shape = SubResource( 4 )
 
 [node name="Beat" type="Area2D" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 position = Vector2( -960, 0 )
 
 [node name="Collision" type="CollisionShape2D" parent="RawLayer/WorldVieport/Viewport/Camera2D/Beat"]
-shape = SubResource( 45 )
+shape = SubResource( 5 )
 
 [node name="HalfBeat" type="Area2D" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 
 [node name="Collision" type="CollisionShape2D" parent="RawLayer/WorldVieport/Viewport/Camera2D/HalfBeat"]
-shape = SubResource( 45 )
+shape = SubResource( 5 )
 
 [node name="ObstacleSpawner" type="Position2D" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 position = Vector2( 960, 0 )
@@ -1095,8 +1356,8 @@ z_index = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/Camera2D/WarningCutscene"]
 autoplay = "base"
-anims/base = SubResource( 46 )
-anims/warning = SubResource( 47 )
+anims/base = SubResource( 6 )
+anims/warning = SubResource( 7 )
 next/warning = "base"
 
 [node name="Guardian" type="Sprite" parent="RawLayer/WorldVieport/Viewport/Camera2D/WarningCutscene"]
@@ -1121,15 +1382,15 @@ __meta__ = {
 [node name="BackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
 "boss",
 ]]
-position = Vector2( -130, 490 )
+position = Vector2( 950, 515 )
 script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/BackRowBoss"]
 autoplay = "base"
-anims/awaken = SubResource( 48 )
-anims/base = SubResource( 49 )
-anims/get_angry = SubResource( 50 )
-anims/scream = SubResource( 51 )
+anims/awaken = SubResource( 8 )
+anims/base = SubResource( 9 )
+anims/get_angry = SubResource( 10 )
+anims/scream = SubResource( 11 )
 
 [node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/BackRowBoss"]
 stream = ExtResource( 71 )
@@ -1147,7 +1408,7 @@ __meta__ = {
 
 [node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3"]
 position = Vector2( 1010, 540 )
-frames = SubResource( 52 )
+frames = SubResource( 12 )
 frame = 2
 script = ExtResource( 37 )
 __meta__ = {
@@ -1160,7 +1421,7 @@ position = Vector2( 1010, 540 )
 
 [node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3"]
 position = Vector2( 3030, 540 )
-frames = SubResource( 52 )
+frames = SubResource( 12 )
 frame = 2
 script = ExtResource( 37 )
 __meta__ = {
@@ -1179,8 +1440,8 @@ script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidBackRowBoss"]
 autoplay = "base"
-anims/base = SubResource( 53 )
-anims/scream = SubResource( 54 )
+anims/base = SubResource( 13 )
+anims/scream = SubResource( 14 )
 
 [node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidBackRowBoss"]
 stream = ExtResource( 71 )
@@ -1200,7 +1461,7 @@ __meta__ = {
 
 [node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2"]
 position = Vector2( 1010, 540 )
-frames = SubResource( 55 )
+frames = SubResource( 15 )
 frame = 1
 script = ExtResource( 68 )
 __meta__ = {
@@ -1213,7 +1474,7 @@ position = Vector2( 1010, 540 )
 
 [node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2"]
 position = Vector2( 3030, 540 )
-frames = SubResource( 55 )
+frames = SubResource( 15 )
 frame = 3
 script = ExtResource( 68 )
 __meta__ = {
@@ -1227,13 +1488,12 @@ position = Vector2( 1010, 540 )
 [node name="MidFrontRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
 "boss",
 ]]
-visible = false
-position = Vector2( 2600, 540 )
+position = Vector2( -1428, 540 )
 script = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidFrontRowBoss"]
-anims/base = SubResource( 56 )
-anims/scream = SubResource( 57 )
+anims/base = SubResource( 16 )
+anims/scream = SubResource( 17 )
 
 [node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidFrontRowBoss"]
 stream = ExtResource( 71 )
@@ -1250,7 +1510,7 @@ motion_scale = Vector2( 0.5, 1 )
 
 [node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1"]
 position = Vector2( 1010, 540 )
-frames = SubResource( 58 )
+frames = SubResource( 18 )
 frame = 2
 script = ExtResource( 44 )
 __meta__ = {
@@ -1263,7 +1523,7 @@ position = Vector2( 1010, 540 )
 
 [node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1"]
 position = Vector2( 3030, 540 )
-frames = SubResource( 58 )
+frames = SubResource( 18 )
 frame = 4
 script = ExtResource( 44 )
 __meta__ = {
@@ -1360,7 +1620,15 @@ margin_bottom = 40.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="TorusMask" type="ColorRect" parent="RawLayer/MaskViewport/Viewport"]
-material = SubResource( 41 )
+material = SubResource( 19 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 78 )
+
+[node name="TorusMask2" type="ColorRect" parent="RawLayer/MaskViewport/Viewport"]
+material = SubResource( 20 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 40.0
@@ -1371,13 +1639,13 @@ script = ExtResource( 78 )
 layer = 0
 
 [node name="PostProcessedGame" type="TextureRect" parent="ProcessedLayer"]
-material = SubResource( 60 )
+material = SubResource( 22 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 2.24487
 margin_right = 2.24487
 mouse_filter = 2
-texture = SubResource( 61 )
+texture = SubResource( 23 )
 flip_v = true
 script = ExtResource( 79 )
 __meta__ = {
@@ -1386,7 +1654,7 @@ __meta__ = {
 }
 
 [node name="ShockwaveGuide" type="Position2D" parent="ProcessedLayer"]
-position = Vector2( 176.268, 788.711 )
+position = Vector2( 2620, 678.941 )
 script = ExtResource( 77 )
 __meta__ = {
 "_gizmo_extents_": 30.0
@@ -1397,9 +1665,9 @@ pause_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HUD"]
 autoplay = "base"
-anims/base = SubResource( 62 )
-anims/editor = SubResource( 63 )
-anims/fade_out = SubResource( 64 )
+anims/base = SubResource( 24 )
+anims/editor = SubResource( 25 )
+anims/fade_out = SubResource( 26 )
 
 [node name="pallet" type="Sprite" parent="HUD"]
 position = Vector2( 959.021, 1335.47 )
@@ -1544,7 +1812,7 @@ __meta__ = {
 }
 
 [node name="Messager" type="AnimationPlayer" parent="HUD/SpeedLabel"]
-anims/text_anim = SubResource( 65 )
+anims/text_anim = SubResource( 27 )
 
 [node name="SpeedSfx" type="AudioStreamPlayer" parent="HUD/SpeedLabel"]
 stream = ExtResource( 74 )
@@ -1581,6 +1849,7 @@ visible = false
 [connection signal="update_visualization" from="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
 [connection signal="dashing" from="RawLayer/WorldVieport/Viewport/Player" to="RawLayer/WorldVieport/Viewport/Camera2D" method="_on_Player_dashing"]
 [connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask" method="_on_ShockwaveGuide_position_changed"]
+[connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask2" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="ProcessedLayer/PostProcessedGame" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="sort_children" from="HUD/Meters/Ammunition" to="HUD/Meters/Ammunition" method="_on_Ammunition_sort_children"]
 [connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
