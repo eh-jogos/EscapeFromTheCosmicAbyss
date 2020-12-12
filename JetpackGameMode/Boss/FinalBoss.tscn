@@ -5294,7 +5294,7 @@ curve = SubResource( 36 )
 
 [sub_resource type="ParticlesMaterial" id=38]
 emission_shape = 2
-emission_box_extents = Vector3( 965, 130, 1 )
+emission_box_extents = Vector3( 0, 130, 1 )
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
@@ -5870,7 +5870,7 @@ script = ExtResource( 2 )
 
 [node name="LaserLoop" type="AudioStreamPlayer" parent="BossSfxLibrary"]
 stream = ExtResource( 169 )
-volume_db = -40.0
+volume_db = -18.0
 bus = "GameSfx"
 script = ExtResource( 2 )
 
@@ -5910,7 +5910,8 @@ next/to_scream = "first_scream"
 modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -900 )
 frames = SubResource( 24 )
-animation = "to_laser"
+animation = "idle"
+frame = 3
 centered = false
 script = ExtResource( 30 )
 
@@ -5918,14 +5919,15 @@ script = ExtResource( 30 )
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -901 )
 frames = SubResource( 25 )
-animation = "to_laser"
+animation = "idle"
+frame = 3
 centered = false
 script = ExtResource( 30 )
 
 [node name="EyeOutline" type="Sprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 show_behind_parent = true
-position = Vector2( 471.3, 742.87 )
+position = Vector2( 476.595, 729.651 )
 texture = ExtResource( 57 )
 centered = false
 offset = Vector2( -40, -162 )
@@ -5935,7 +5937,7 @@ script = ExtResource( 30 )
 show_behind_parent = true
 margin_top = -100.0
 margin_right = 10.0
-margin_bottom = 160.0
+margin_bottom = 289.0
 color = Color( 1.56078, 0.219608, 0.211765, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -6043,7 +6045,7 @@ texture = ExtResource( 173 )
 
 [node name="BeamParticles2D" type="Particles2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 modulate = Color( 1.3, 1.3, 1.3, 1 )
-position = Vector2( 965, 130 )
+position = Vector2( 0, 130 )
 emitting = false
 amount = 100
 lifetime = 0.8
@@ -6124,7 +6126,7 @@ script = ExtResource( 77 )
 [node name="Teeth" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 show_behind_parent = true
-position = Vector2( 457.182, 1081.19 )
+position = Vector2( 450.182, 1088.19 )
 frames = SubResource( 47 )
 centered = false
 script = ExtResource( 84 )
@@ -6141,15 +6143,17 @@ script = ExtResource( 88 )
 self_modulate = Color( 0.137255, 0.4, 0.364706, 1 )
 position = Vector2( 8, 9 )
 frames = SubResource( 49 )
-animation = "to_laser"
+animation = "idle"
+frame = 3
 centered = false
 script = ExtResource( 116 )
 
 [node name="MouthLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 587.153, 1130.54 )
+position = Vector2( 557.558, 1152.75 )
 frames = SubResource( 50 )
-animation = "to_angry"
+animation = "idle"
+frame = 3
 centered = false
 script = ExtResource( 30 )
 
@@ -6162,19 +6166,19 @@ script = ExtResource( 84 )
 
 [node name="EyeLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 505, 602 )
+position = Vector2( 502.333, 602.476 )
 frames = SubResource( 52 )
-animation = "to_laser"
+animation = "idle"
+frame = 3
 centered = false
 script = ExtResource( 30 )
 
 [node name="ChargingParticles" type="Particles2D" parent="FinalBossSkin"]
-self_modulate = Color( 1.8, 1.8, 1.8, 1 )
+self_modulate = Color( 1.1, 1.1, 1.1, 1 )
 position = Vector2( 855.533, -170.537 )
 scale = Vector2( 2, 2 )
 emitting = false
 amount = 16
-speed_scale = 5.0
 process_material = SubResource( 57 )
 texture = ExtResource( 173 )
 [connection signal="timeout" from="CollisionTimer" to="." method="_on_CollisionTimer_timeout"]

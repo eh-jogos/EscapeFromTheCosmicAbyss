@@ -93,11 +93,11 @@ func _ready():
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
 	speed_messager = self.get_node("HUD/SpeedLabel")
 	hud_animator = self.get_node("HUD/AnimationPlayer")
-	player = self.get_node("WorldLayer/ViewportContainer/Viewport/Player")
+	player = self.get_node("RawLayer/WorldVieport/Viewport/Player")
 	level_loader = self.get_node("LevelLoader")
-	camera = self.get_node("WorldLayer/ViewportContainer/Viewport/Camera2D")
+	camera = self.get_node("RawLayer/WorldVieport/Viewport/Camera2D")
 	object_spawner = camera.get_node("ObstacleSpawner")
-	parallax_background = self.get_node("WorldLayer/ViewportContainer/Viewport/ParallaxBackground")
+	parallax_background = self.get_node("RawLayer/WorldVieport/Viewport/ParallaxBackground")
 	
 	show_pre_game()
 
