@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -79,6 +79,8 @@
 [ext_resource path="res://JetpackGameMode/ShockwaveGuide.gd" type="Script" id=77]
 [ext_resource path="res://JetpackGameMode/TorusMask.gd" type="Script" id=78]
 [ext_resource path="res://JetpackGameMode/PostProcessedGame.gd" type="Script" id=79]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_lava.png" type="Texture" id=80]
+[ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_lava.png" type="Texture" id=81]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -1353,47 +1355,6 @@ position = Vector2( -56.16, 41.52 )
 [node name="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss" index="0"]
 blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down", 0.05, "laser_charge_up", "laser_shot_down", 0.05, "laser_shot_down", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
 
-[node name="BodyOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="1"]
-animation = "scream"
-frame = 0
-
-[node name="FaceOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="2"]
-animation = "scream"
-frame = 0
-
-[node name="EyeOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="0"]
-position = Vector2( 632, 603 )
-rotation = -0.0110522
-
-[node name="IrisOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/Eye" index="3"]
-position = Vector2( 291, 15 )
-rotation = -3.57698e-08
-
-[node name="Tongue" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="1"]
-position = Vector2( 476, 982 )
-animation = "scream"
-
-[node name="Teeth" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="2"]
-position = Vector2( 659.182, 836.19 )
-animation = "scream"
-
-[node name="Gengiva" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="3"]
-animation = "scream"
-
-[node name="Body" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="4"]
-animation = "scream"
-frame = 0
-
-[node name="MouthLines" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="5"]
-position = Vector2( 658.153, 857.54 )
-animation = "scream"
-frame = 0
-
-[node name="EyeLines" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="7"]
-position = Vector2( 561, 489 )
-animation = "scream"
-frame = 0
-
 [node name="WarningCutscene" type="Node2D" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 position = Vector2( 0, 50 )
 scale = Vector2( 0.5, 0.5 )
@@ -1463,6 +1424,11 @@ __meta__ = {
 [node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite0"]
 position = Vector2( 1010, 540 )
 
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite0"]
+self_modulate = Color( 1.2, 1.2, 1.2, 1 )
+texture = ExtResource( 80 )
+offset = Vector2( 0, 321 )
+
 [node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3"]
 position = Vector2( 3030, 540 )
 frames = SubResource( 12 )
@@ -1475,6 +1441,11 @@ __meta__ = {
 [node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite1"]
 visible = false
 position = Vector2( 1010, 540 )
+
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite1"]
+self_modulate = Color( 1.2, 1.2, 1.2, 1 )
+texture = ExtResource( 80 )
+offset = Vector2( 0, 321 )
 
 [node name="MidBackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
 "boss",
@@ -1516,6 +1487,11 @@ __meta__ = {
 visible = false
 position = Vector2( 1010, 540 )
 
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2/Sprite0"]
+self_modulate = Color( 1.1, 1.1, 1.1, 1 )
+texture = ExtResource( 81 )
+offset = Vector2( 0, 405 )
+
 [node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2"]
 position = Vector2( 3030, 540 )
 frames = SubResource( 15 )
@@ -1529,10 +1505,14 @@ __meta__ = {
 visible = false
 position = Vector2( 1010, 540 )
 
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2/Sprite1"]
+self_modulate = Color( 1.1, 1.1, 1.1, 1 )
+texture = ExtResource( 81 )
+offset = Vector2( 0, 405 )
+
 [node name="MidFrontRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
 "boss",
 ]]
-visible = false
 position = Vector2( 2600, 540 )
 script = ExtResource( 30 )
 
@@ -1580,7 +1560,6 @@ visible = false
 position = Vector2( 1010, 540 )
 
 [node name="Parallax0" type="ParallaxLayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
-visible = false
 z_as_relative = false
 motion_scale = Vector2( 0.75, 1 )
 motion_offset = Vector2( 480, 0 )
