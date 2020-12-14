@@ -283,12 +283,15 @@ func load_level(level_choice, load_all = false, loop = false):
 			var laser_countdowns = level.bosses_nodes[key].laser_countdowns
 			var animation_countdowns = level.bosses_nodes[key].animation_countdowns
 			var animations = level.bosses_nodes[key].animations
+			var danger_duration = level.bosses_nodes[key].danger_durations
 			
 			if level.bosses_nodes[key].is_a_boss_level:
-				boss_node = camera.get_node("FinalBoss/Boss")
-				boss_node.set_boss_data(laser_countdowns, animation_countdowns, animations)
+				boss_node = get_node(path_final_boss)
+				boss_node.set_boss_data(laser_countdowns, animation_countdowns, 
+						animations, danger_duration)
 			else:
-				boss_node = parallax_background.set_background_bosses(key, laser_countdowns, animation_countdowns, animations)
+				boss_node = parallax_background.set_background_bosses(\
+						key, laser_countdowns, animation_countdowns, animations, danger_duration)
 				
 			if boss_node != null:
 				if not object_spawner.is_connected("beat_spawned", boss_node, "_on_beat_spawned"):

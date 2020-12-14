@@ -31,6 +31,7 @@ var boss = {
 	"boss_node": "Boss",
 	"animations": ["entrance", "to_angry", "scream", "to_angry", "scream", "to_angry", "scream", "to_angry", "last_scream", "tired_retreat"],
 	"animations_countdowns": [2, 19, 24, 39, 44, 59, 64, 74, 79, 95],
+	"danger_durations": [10, 0, 10, 0, 10, 0, 10, 0, 10],
 }
 
 var beats = {
