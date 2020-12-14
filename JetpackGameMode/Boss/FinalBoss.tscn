@@ -1511,7 +1511,7 @@ tracks/18/keys = {
 "values": [ Vector2( 0, 130 ), Vector2( 965, 130 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=8]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -1586,7 +1586,7 @@ tracks/5/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 resource_name = "to_angry"
 length = 0.16
 step = 0.08
@@ -1759,7 +1759,7 @@ tracks/13/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 length = 0.24
 step = 0.08
 tracks/0/type = "value"
@@ -2111,7 +2111,7 @@ tracks/28/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=11]
 length = 0.16
 step = 0.08
 tracks/0/type = "value"
@@ -2355,7 +2355,7 @@ tracks/19/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 length = 0.16
 step = 0.08
 tracks/0/type = "value"
@@ -2599,7 +2599,7 @@ tracks/19/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=13]
 length = 0.4
 step = 0.08
 tracks/0/type = "value"
@@ -2939,7 +2939,7 @@ tracks/27/keys = {
 "values": [ 1, 0, 5, 4, 0, 1 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=14]
 length = 0.64
 loop = true
 step = 0.08
@@ -3184,7 +3184,7 @@ tracks/19/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=15]
 length = 0.4
 loop = true
 step = 0.08
@@ -3429,7 +3429,7 @@ tracks/19/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=16]
 length = 0.4
 loop = true
 step = 0.08
@@ -3674,7 +3674,7 @@ tracks/19/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=17]
 length = 0.24
 loop = true
 step = 0.08
@@ -4027,7 +4027,7 @@ tracks/28/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=18]
 length = 0.16
 step = 0.08
 tracks/0/type = "value"
@@ -4271,7 +4271,7 @@ tracks/19/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=19]
 length = 0.16
 step = 0.08
 tracks/0/type = "value"
@@ -4515,7 +4515,7 @@ tracks/19/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=20]
 length = 0.4
 step = 0.08
 tracks/0/type = "value"
@@ -4819,11 +4819,16 @@ tracks/24/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=23]
+[sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ) ],
@@ -4836,16 +4841,6 @@ animations = [ {
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
 "loop": false,
 "name": "to_angry",
@@ -4855,13 +4850,23 @@ animations = [ {
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=24]
+[sub_resource type="SpriteFrames" id=22]
 animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 40 ) ],
@@ -4874,16 +4879,6 @@ animations = [ {
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 53 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 37 ) ],
-"loop": true,
-"name": "scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": false,
 "name": "to_angry",
@@ -4893,23 +4888,28 @@ animations = [ {
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 53 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="StyleBoxFlat" id=25]
+[sub_resource type="StyleBoxFlat" id=23]
 bg_color = Color( 1.8, 0.22, 0.21, 1 )
 corner_radius_top_left = 130
 corner_radius_top_right = 130
 corner_radius_bottom_right = 130
 corner_radius_bottom_left = 130
 
-[sub_resource type="StyleBoxFlat" id=26]
+[sub_resource type="StyleBoxFlat" id=24]
 bg_color = Color( 1, 1, 1, 1 )
 corner_radius_top_left = 70
 corner_radius_top_right = 70
 corner_radius_bottom_right = 70
 corner_radius_bottom_left = 70
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=25]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -4925,20 +4925,20 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1.15 ) ]
 }
 
-[sub_resource type="Gradient" id=28]
+[sub_resource type="Gradient" id=26]
 offsets = PoolRealArray( 0.121693, 0.278607, 0.81592, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.992157, 0.309804, 0.301961, 0 )
 
-[sub_resource type="GradientTexture" id=29]
-gradient = SubResource( 28 )
+[sub_resource type="GradientTexture" id=27]
+gradient = SubResource( 26 )
 
-[sub_resource type="Curve" id=30]
+[sub_resource type="Curve" id=28]
 _data = [ Vector2( 0.375, 1 ), 0.0, -0.0287652, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=31]
-curve = SubResource( 30 )
+[sub_resource type="CurveTexture" id=29]
+curve = SubResource( 28 )
 
-[sub_resource type="ParticlesMaterial" id=32]
+[sub_resource type="ParticlesMaterial" id=30]
 lifetime_randomness = 0.25
 emission_shape = 2
 emission_box_extents = Vector3( 1, 5, 1 )
@@ -4950,25 +4950,25 @@ initial_velocity_random = 0.5
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 4.5
-scale_curve = SubResource( 31 )
-color_ramp = SubResource( 29 )
+scale_curve = SubResource( 29 )
+color_ramp = SubResource( 27 )
 
-[sub_resource type="Gradient" id=33]
+[sub_resource type="Gradient" id=31]
 offsets = PoolRealArray( 0.15873, 0.613757, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 1, 0.219608, 0.207843, 1, 0.843137, 0.0980392, 0.180392, 0 )
 
-[sub_resource type="GradientTexture" id=34]
-gradient = SubResource( 33 )
+[sub_resource type="GradientTexture" id=32]
+gradient = SubResource( 31 )
 
-[sub_resource type="Curve" id=35]
+[sub_resource type="Curve" id=33]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.495283, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=36]
-curve = SubResource( 35 )
+[sub_resource type="CurveTexture" id=34]
+curve = SubResource( 33 )
 
-[sub_resource type="ParticlesMaterial" id=37]
+[sub_resource type="ParticlesMaterial" id=35]
 emission_shape = 2
-emission_box_extents = Vector3( 0, 130, 1 )
+emission_box_extents = Vector3( 965, 130, 1 )
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
@@ -4976,10 +4976,10 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 tangential_accel = 80.0
 tangential_accel_random = 1.0
-scale_curve = SubResource( 36 )
-color_ramp = SubResource( 34 )
+scale_curve = SubResource( 34 )
+color_ramp = SubResource( 32 )
 
-[sub_resource type="SpriteFrames" id=38]
+[sub_resource type="SpriteFrames" id=36]
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": true,
@@ -4991,6 +4991,110 @@ animations = [ {
 "name": "change_color",
 "speed": 12.0
 } ]
+
+[sub_resource type="Animation" id=37]
+length = 0.01
+step = 0.08
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "default" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../IrisOutline:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../IrisOutline/Iris/Pupil:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
+}
+
+[sub_resource type="Animation" id=38]
+length = 0.4
+step = 0.08
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "change_color" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.24, 0.32, 0.4, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../IrisOutline:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ), Color( 0.28125, 0.28125, 0.28125, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../IrisOutline/Iris/Pupil:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ), Color( 0.28125, 0.28125, 0.28125, 1 ) ]
+}
 
 [sub_resource type="Animation" id=39]
 length = 0.01
@@ -5081,7 +5185,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ), Color( 0.28125, 0.28125, 0.28125, 1 ) ]
+"values": [ Color( 0.28125, 0.28125, 0.28125, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../IrisOutline/Iris/Pupil:self_modulate")
@@ -5093,7 +5197,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ), Color( 0.28125, 0.28125, 0.28125, 1 ) ]
+"values": [ Color( 0.28125, 0.28125, 0.28125, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ) ]
 }
 
 [sub_resource type="Animation" id=41]
@@ -5185,110 +5289,6 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0.28125, 0.28125, 0.28125, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../IrisOutline/Iris/Pupil:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.28125, 0.28125, 0.28125, 1 ), Color( 0.558594, 0.558594, 0.558594, 1 ) ]
-}
-
-[sub_resource type="Animation" id=43]
-length = 0.01
-step = 0.08
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "default" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../IrisOutline:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../IrisOutline/Iris/Pupil:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0.12549, 0.0745098, 0.180392, 1 ) ]
-}
-
-[sub_resource type="Animation" id=44]
-length = 0.4
-step = 0.08
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "change_color" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.08, 0.16, 0.24, 0.32, 0.4, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3, 4, 5, 1 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../IrisOutline:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
 "values": [ Color( 0.558594, 0.558594, 0.558594, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
@@ -5304,43 +5304,43 @@ tracks/3/keys = {
 "values": [ Color( 0.558594, 0.558594, 0.558594, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=45]
+[sub_resource type="SpriteFrames" id=43]
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": false,
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 76 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 73 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 75 ), ExtResource( 76 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=46]
+[sub_resource type="SpriteFrames" id=44]
 animations = [ {
 "frames": [ ExtResource( 78 ) ],
 "loop": false,
 "name": "default",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 82 ), ExtResource( 83 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 80 ) ],
 "loop": true,
 "name": "scream",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 82 ), ExtResource( 83 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=47]
+[sub_resource type="SpriteFrames" id=45]
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": false,
@@ -5353,11 +5353,16 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=48]
+[sub_resource type="SpriteFrames" id=46]
 animations = [ {
 "frames": [ ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 90 ) ],
 "loop": true,
 "name": "idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 95 ) ],
+"loop": true,
+"name": "scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 99 ), ExtResource( 98 ) ],
@@ -5370,16 +5375,6 @@ animations = [ {
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 95 ) ],
-"loop": true,
-"name": "scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ) ],
 "loop": false,
 "name": "to_angry",
@@ -5389,23 +5384,18 @@ animations = [ {
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=49]
+[sub_resource type="SpriteFrames" id=47]
 animations = [ {
 "frames": [ ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 119 ), ExtResource( 118 ) ],
 "loop": true,
 "name": "idle",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 126 ) ],
-"loop": true,
-"name": "idle_angry",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ) ],
-"loop": false,
-"name": "to_scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 123 ) ],
@@ -5413,36 +5403,51 @@ animations = [ {
 "name": "scream",
 "speed": 12.0
 }, {
+"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 126 ) ],
+"loop": true,
+"name": "idle_angry",
+"speed": 12.0
+}, {
 "frames": [ ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ) ],
 "loop": false,
 "name": "to_angry",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=50]
+[sub_resource type="SpriteFrames" id=48]
 animations = [ {
 "frames": [ ExtResource( 60 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 141 ), ExtResource( 142 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 138 ), ExtResource( 139 ), ExtResource( 140 ), ExtResource( 60 ) ],
 "loop": false,
 "name": "scream",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 141 ), ExtResource( 142 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="SpriteFrames" id=51]
+[sub_resource type="SpriteFrames" id=49]
 animations = [ {
 "frames": [ ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 146 ), ExtResource( 145 ), ExtResource( 144 ) ],
 "loop": true,
 "name": "idle",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 149 ) ],
+"loop": true,
+"name": "scream",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 153 ), ExtResource( 152 ) ],
 "loop": true,
@@ -5454,16 +5459,6 @@ animations = [ {
 "name": "idle_angry",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 165 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 149 ) ],
-"loop": true,
-"name": "scream",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ) ],
 "loop": false,
 "name": "to_angry",
@@ -5473,22 +5468,27 @@ animations = [ {
 "loop": false,
 "name": "to_laser",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 165 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 } ]
 
-[sub_resource type="Gradient" id=52]
+[sub_resource type="Gradient" id=50]
 offsets = PoolRealArray( 0, 0.243386, 0.497355, 0.751323, 1 )
 colors = PoolColorArray( 1, 0.286275, 0.270588, 0, 1, 0.286275, 0.270588, 1, 0.917969, 0.168533, 0.361747, 1, 1, 0.286275, 0.270588, 1, 1, 0.286275, 0.270588, 0 )
 
-[sub_resource type="GradientTexture" id=53]
-gradient = SubResource( 52 )
+[sub_resource type="GradientTexture" id=51]
+gradient = SubResource( 50 )
 
-[sub_resource type="Curve" id=54]
+[sub_resource type="Curve" id=52]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.495283, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=55]
-curve = SubResource( 54 )
+[sub_resource type="CurveTexture" id=53]
+curve = SubResource( 52 )
 
-[sub_resource type="ParticlesMaterial" id=56]
+[sub_resource type="ParticlesMaterial" id=54]
 emission_shape = 1
 emission_sphere_radius = 128.0
 flag_disable_z = true
@@ -5497,11 +5497,10 @@ orbit_velocity = -0.1
 orbit_velocity_random = 0.0
 radial_accel = -100.0
 tangential_accel = -30.0
-scale_curve = SubResource( 55 )
-color_ramp = SubResource( 53 )
+scale_curve = SubResource( 53 )
+color_ramp = SubResource( 51 )
 
 [node name="Boss" type="Node2D"]
-position = Vector2( -500, 0 )
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -5516,8 +5515,8 @@ anims/laser_shot_down = SubResource( 6 )
 anims/laser_shot_up = SubResource( 7 )
 anims/last_scream = ExtResource( 174 )
 anims/scream = ExtResource( 175 )
-anims/tired_retreat = SubResource( 10 )
-anims/to_angry = SubResource( 11 )
+anims/tired_retreat = SubResource( 8 )
+anims/to_angry = SubResource( 9 )
 next/entrance = "idle"
 next/laser_charge_down = "laser_shot_down"
 next/laser_charge_up = "laser_shot_up"
@@ -5545,7 +5544,7 @@ script = ExtResource( 2 )
 
 [node name="LaserLoop" type="AudioStreamPlayer" parent="BossSfxLibrary"]
 stream = ExtResource( 169 )
-volume_db = -18.0
+volume_db = -40.0
 bus = "GameSfx"
 script = ExtResource( 2 )
 
@@ -5556,22 +5555,19 @@ one_shot = true
 show_behind_parent = true
 position = Vector2( -520, 0 )
 script = ExtResource( 3 )
-warning_color_1 = 0.0
-warning_color_2 = 0.0
-warning_color_3 = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin"]
-anims/first_scream = SubResource( 12 )
-anims/from_angry = SubResource( 13 )
-anims/from_laser = SubResource( 14 )
-anims/from_scream = SubResource( 15 )
-anims/idle = SubResource( 16 )
-anims/idle_angry = SubResource( 17 )
-anims/idle_laser = SubResource( 18 )
-anims/scream = SubResource( 19 )
-anims/to_angry = SubResource( 20 )
-anims/to_laser = SubResource( 21 )
-anims/to_scream = SubResource( 22 )
+anims/first_scream = SubResource( 10 )
+anims/from_angry = SubResource( 11 )
+anims/from_laser = SubResource( 12 )
+anims/from_scream = SubResource( 13 )
+anims/idle = SubResource( 14 )
+anims/idle_angry = SubResource( 15 )
+anims/idle_laser = SubResource( 16 )
+anims/scream = SubResource( 17 )
+anims/to_angry = SubResource( 18 )
+anims/to_laser = SubResource( 19 )
+anims/to_scream = SubResource( 20 )
 next/first_scream = "scream"
 next/from_angry = "idle"
 next/from_laser = "idle"
@@ -5584,7 +5580,7 @@ next/to_scream = "first_scream"
 [node name="BodyOutline" type="AnimatedSprite" parent="FinalBossSkin"]
 modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -900 )
-frames = SubResource( 23 )
+frames = SubResource( 21 )
 animation = "scream"
 centered = false
 script = ExtResource( 30 )
@@ -5592,7 +5588,7 @@ script = ExtResource( 30 )
 [node name="FaceOutline" type="AnimatedSprite" parent="FinalBossSkin"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -901 )
-frames = SubResource( 24 )
+frames = SubResource( 22 )
 animation = "scream"
 centered = false
 script = ExtResource( 30 )
@@ -5611,7 +5607,7 @@ script = ExtResource( 30 )
 show_behind_parent = true
 margin_top = -100.0
 margin_right = 10.0
-margin_bottom = 289.0
+margin_bottom = 160.0
 color = Color( 1.56078, 0.219608, 0.211765, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5621,7 +5617,7 @@ __meta__ = {
 anchor_bottom = 1.0
 margin_left = -130.0
 margin_right = 130.0
-custom_styles/panel = SubResource( 25 )
+custom_styles/panel = SubResource( 23 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5632,7 +5628,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -130.0
 margin_right = 130.0
-custom_styles/panel = SubResource( 25 )
+custom_styles/panel = SubResource( 23 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5655,7 +5651,7 @@ margin_left = -70.0
 margin_right = 70.0
 grow_horizontal = 2
 grow_vertical = 2
-custom_styles/panel = SubResource( 26 )
+custom_styles/panel = SubResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -5669,14 +5665,14 @@ margin_left = -70.0
 margin_right = 70.0
 grow_horizontal = 2
 grow_vertical = 2
-custom_styles/panel = SubResource( 26 )
+custom_styles/panel = SubResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter"]
 autoplay = "loop"
-anims/loop = SubResource( 27 )
+anims/loop = SubResource( 25 )
 
 [node name="Raycasts" type="Node2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter"]
 
@@ -5714,19 +5710,19 @@ position = Vector2( 334.79, 122.898 )
 emitting = false
 lifetime = 0.5
 draw_order = 1
-process_material = SubResource( 32 )
+process_material = SubResource( 30 )
 texture = ExtResource( 173 )
 
 [node name="BeamParticles2D" type="Particles2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 modulate = Color( 1.3, 1.3, 1.3, 1 )
-position = Vector2( 0, 130 )
+position = Vector2( 965, 130 )
 emitting = false
 amount = 100
 lifetime = 0.8
 randomness = 1.0
 local_coords = false
 draw_order = 1
-process_material = SubResource( 37 )
+process_material = SubResource( 35 )
 texture = ExtResource( 173 )
 
 [node name="Eye" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline"]
@@ -5738,38 +5734,38 @@ script = ExtResource( 59 )
 
 [node name="ColorChange1" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 0.78125, 1, 0, 1 )
-frames = SubResource( 38 )
+frames = SubResource( 36 )
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 67 )
 
 [node name="ColorChanger1" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange1"]
-anims/BASE = SubResource( 39 )
-anims/charging = SubResource( 40 )
+anims/BASE = SubResource( 37 )
+anims/charging = SubResource( 38 )
 
 [node name="ColorChange2" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 1, 0.515625, 0, 1 )
-frames = SubResource( 38 )
+frames = SubResource( 36 )
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 67 )
 warning_level = "warning2"
 
 [node name="ColorChanger2" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange2"]
-anims/BASE = SubResource( 41 )
-anims/charging = SubResource( 42 )
+anims/BASE = SubResource( 39 )
+anims/charging = SubResource( 40 )
 
 [node name="ColorChange3" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 1, 0, 0.254902, 1 )
-frames = SubResource( 38 )
+frames = SubResource( 36 )
 centered = false
 offset = Vector2( -30, -152 )
 script = ExtResource( 67 )
 warning_level = "warning3"
 
 [node name="ColorChanger3" type="AnimationPlayer" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/ColorChange3"]
-anims/BASE = SubResource( 43 )
-anims/charging = SubResource( 44 )
+anims/BASE = SubResource( 41 )
+anims/charging = SubResource( 42 )
 
 [node name="IrisOutline" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
@@ -5794,7 +5790,7 @@ script = ExtResource( 30 )
 self_modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 show_behind_parent = true
 position = Vector2( 476, 982 )
-frames = SubResource( 45 )
+frames = SubResource( 43 )
 animation = "scream"
 centered = false
 script = ExtResource( 77 )
@@ -5803,7 +5799,7 @@ script = ExtResource( 77 )
 self_modulate = Color( 0, 1, 0.764706, 1 )
 show_behind_parent = true
 position = Vector2( 659.182, 836.19 )
-frames = SubResource( 46 )
+frames = SubResource( 44 )
 animation = "scream"
 centered = false
 script = ExtResource( 84 )
@@ -5812,7 +5808,7 @@ script = ExtResource( 84 )
 self_modulate = Color( 0.152941, 0.309804, 0.270588, 1 )
 show_behind_parent = true
 position = Vector2( 597.804, 843.095 )
-frames = SubResource( 47 )
+frames = SubResource( 45 )
 animation = "scream"
 centered = false
 script = ExtResource( 88 )
@@ -5820,7 +5816,7 @@ script = ExtResource( 88 )
 [node name="Body" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.137255, 0.4, 0.364706, 1 )
 position = Vector2( 8, 9 )
-frames = SubResource( 48 )
+frames = SubResource( 46 )
 animation = "scream"
 centered = false
 script = ExtResource( 116 )
@@ -5828,7 +5824,7 @@ script = ExtResource( 116 )
 [node name="MouthLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 658.153, 857.54 )
-frames = SubResource( 49 )
+frames = SubResource( 47 )
 animation = "scream"
 centered = false
 script = ExtResource( 30 )
@@ -5836,14 +5832,14 @@ script = ExtResource( 30 )
 [node name="Perdigotos" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 position = Vector2( 716.634, 919.854 )
-frames = SubResource( 50 )
+frames = SubResource( 48 )
 centered = false
 script = ExtResource( 84 )
 
 [node name="EyeLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 561, 489 )
-frames = SubResource( 51 )
+frames = SubResource( 49 )
 animation = "scream"
 centered = false
 script = ExtResource( 30 )
@@ -5854,6 +5850,6 @@ position = Vector2( 855.533, -170.537 )
 scale = Vector2( 2, 2 )
 emitting = false
 amount = 16
-process_material = SubResource( 56 )
+process_material = SubResource( 54 )
 texture = ExtResource( 173 )
 [connection signal="timeout" from="CollisionTimer" to="." method="_on_CollisionTimer_timeout"]

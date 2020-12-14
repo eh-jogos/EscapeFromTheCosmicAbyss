@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=132 format=2]
 
 [ext_resource path="res://JetpackGameMode/JetpackGame.gd" type="Script" id=1]
 [ext_resource path="res://Levels/LevelLoader.gd" type="Script" id=2]
@@ -81,6 +81,12 @@
 [ext_resource path="res://JetpackGameMode/PostProcessedGame.gd" type="Script" id=79]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_lava.png" type="Texture" id=80]
 [ext_resource path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_lava.png" type="Texture" id=81]
+[ext_resource path="res://Shaders/gaussian_blur_gles3.shader" type="Shader" id=82]
+[ext_resource path="res://JetpackGameMode/BlurViewport.gd" type="Script" id=83]
+[ext_resource path="res://JetpackGameMode/BlurAnimator.gd" type="Script" id=84]
+[ext_resource path="res://Shaders/transition.shader" type="Shader" id=85]
+[ext_resource path="res://JetpackGameMode/Obstacles/Fx/danger_vignette.png" type="Texture" id=86]
+[ext_resource path="res://JetpackGameMode/DangerVignette.gd" type="Script" id=87]
 
 [sub_resource type="Environment" id=1]
 background_mode = 4
@@ -211,6 +217,420 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=8]
+resource_name = "back_row_boss"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax3Viewport:blur_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.654902, 0.596078, 0.839216, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax2Viewport:blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.7, 0.4 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax2Viewport/Viewport/BlurX/Viewport/CanvasModulate2:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.764706, 0.945098, 1 ), Color( 0.788235, 0.678431, 0.639216, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax1Viewport:blur_amount")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.4, 0.7 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax1Viewport/Viewport/BlurX/Viewport/CanvasModulate3:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.92549, 0.862745, 1 ), Color( 0.776471, 0.596078, 0.733333, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Parallax0Viewport:blur_amount")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Parallax0Viewport/Viewport/BlurX/Viewport/CanvasModulate5:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.654902, 0.596078, 0.839216, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite0/Lava:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1.4, 1.4, 1.4, 1 ), Color( 1.2, 1.2, 1.2, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite1/Lava:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1.4, 1.4, 1.4, 1 ), Color( 1.2, 1.2, 1.2, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../CanvasModulate4:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.639216, 0.537255, 0.8, 1 ) ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "back_row_boss_end"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax3Viewport:blur_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.654902, 0.596078, 0.839216, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax2Viewport:blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.4, 0.7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax2Viewport/Viewport/BlurX/Viewport/CanvasModulate2:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.788235, 0.678431, 0.639216, 1 ), Color( 1, 0.764706, 0.945098, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax1Viewport:blur_amount")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.7, 0.4 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax1Viewport/Viewport/BlurX/Viewport/CanvasModulate3:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.776471, 0.596078, 0.733333, 1 ), Color( 1, 0.92549, 0.862745, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Parallax0Viewport:blur_amount")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Parallax0Viewport/Viewport/BlurX/Viewport/CanvasModulate5:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.654902, 0.596078, 0.839216, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite0/Lava:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1.2, 1.2, 1.2, 1 ), Color( 1.4, 1.4, 1.4, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite1/Lava:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1.2, 1.2, 1.2, 1 ), Color( 1.4, 1.4, 1.4, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../CanvasModulate4:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.639216, 0.537255, 0.8, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "base"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Parallax3Viewport:blur_amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/CanvasModulate:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.654902, 0.596078, 0.839216, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Parallax2Viewport:blur_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parallax2Viewport/Viewport/BlurX/Viewport/CanvasModulate2:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.764706, 0.945098, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Parallax1Viewport:blur_amount")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.4 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Parallax1Viewport/Viewport/BlurX/Viewport/CanvasModulate3:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.92549, 0.862745, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Parallax0Viewport:blur_amount")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Parallax0Viewport/Viewport/BlurX/Viewport/CanvasModulate5:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite0/Lava:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1.4, 1.4, 1.4, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite1/Lava:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1.4, 1.4, 1.4, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../CanvasModulate4:color")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=11]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 1, 0 )
+
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -260,7 +680,7 @@ tracks/3/keys = {
 "values": [ "idle" ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=13]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -299,8 +719,7 @@ tracks/2/keys = {
 "values": [ Vector2( 650, 540 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "get_angry"
+[sub_resource type="Animation" id=14]
 length = 1.7
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -350,8 +769,18 @@ tracks/3/keys = {
 "update": 2,
 "values": [ "to_angry" ]
 }
+tracks/4/type = "animation"
+tracks/4/path = NodePath("../../../../../BlurAnimator")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "back_row_boss" ),
+"times": PoolRealArray( 0 )
+}
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=15]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:visible")
@@ -390,7 +819,7 @@ tracks/2/keys = {
 "values": [ Vector2( 950, 515 ), Vector2( 950, 515 ), Vector2( 900, 540 ), Vector2( 850, 490 ), Vector2( 850, 490 ), Vector2( -130, 490 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../../Camera2D/WarningCutscene/AnimationPlayer:playback/play")
+tracks/3/path = NodePath("../../../../../../Camera2D/WarningCutscene/AnimationPlayer:playback/play")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -440,7 +869,7 @@ tracks/6/keys = {
 } ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
+tracks/7/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -452,7 +881,7 @@ tracks/7/keys = {
 "values": [ 0.051, 0.051, 0.274, 0.051 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
+tracks/8/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -464,7 +893,7 @@ tracks/8/keys = {
 "values": [ -0.1, -0.1, 1.5, -0.1 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
+tracks/9/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -476,7 +905,7 @@ tracks/9/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/10/path = NodePath("../../../../../../../../../ProcessedLayer/ShockwaveGuide:position")
 tracks/10/interp = 2
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -488,7 +917,7 @@ tracks/10/keys = {
 "values": [ Vector2( 943.191, 561.409 ), Vector2( 943.191, 561.409 ), Vector2( 888.037, 586.865 ), Vector2( 841.368, 534.539 ), Vector2( 841.368, 534.539 ), Vector2( -121, 534.539 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/11/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -500,7 +929,7 @@ tracks/11/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/12/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -512,7 +941,7 @@ tracks/12/keys = {
 "values": [ 0.051, 0.051, 0.274, 0.051 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
+tracks/13/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -523,8 +952,18 @@ tracks/13/keys = {
 "update": 0,
 "values": [ -0.1, -0.1, 1.7, -0.1 ]
 }
+tracks/14/type = "animation"
+tracks/14/path = NodePath("../../../../../BlurAnimator")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"clips": PoolStringArray( "back_row_boss_end" ),
+"times": PoolRealArray( 0.6 )
+}
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=16]
 animations = [ {
 "frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 69 ) ],
 "loop": false,
@@ -532,7 +971,15 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="ShaderMaterial" id=17]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0, 0.7 )
+
+[sub_resource type="ShaderMaterial" id=18]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0.7, 0 )
+
+[sub_resource type="Animation" id=19]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -559,7 +1006,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=20]
 length = 3.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -586,7 +1033,7 @@ tracks/1/keys = {
 "values": [ false, true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../../Camera2D/WarningCutscene/AnimationPlayer:playback/play")
+tracks/2/path = NodePath("../../../../../../Camera2D/WarningCutscene/AnimationPlayer:playback/play")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -624,7 +1071,7 @@ tracks/4/keys = {
 } ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/5/path = NodePath("../../../../../../../../../ProcessedLayer/ShockwaveGuide:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -636,7 +1083,7 @@ tracks/5/keys = {
 "values": [ Vector2( -447, 602.324 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
+tracks/6/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -648,7 +1095,7 @@ tracks/6/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
+tracks/7/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -660,7 +1107,7 @@ tracks/7/keys = {
 "values": [ -0.1, -0.1, 2.7, -0.1 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
+tracks/8/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -672,7 +1119,7 @@ tracks/8/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/9/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -684,7 +1131,7 @@ tracks/9/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/10/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -696,7 +1143,7 @@ tracks/10/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
+tracks/11/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -708,7 +1155,7 @@ tracks/11/keys = {
 "values": [ -0.1, -0.1, 2.7, -0.1 ]
 }
 
-[sub_resource type="SpriteFrames" id=15]
+[sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ],
 "loop": false,
@@ -716,7 +1163,15 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="ShaderMaterial" id=22]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0, 0.4 )
+
+[sub_resource type="ShaderMaterial" id=23]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0.4, 0 )
+
+[sub_resource type="Animation" id=24]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -743,7 +1198,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../../Camera2D/WarningCutscene/AnimationPlayer:playback/play")
+tracks/2/path = NodePath("../../../../../../Camera2D/WarningCutscene/AnimationPlayer:playback/play")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -755,7 +1210,7 @@ tracks/2/keys = {
 "values": [ "stop" ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=25]
 length = 3.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -794,7 +1249,7 @@ tracks/2/keys = {
 "values": [ true, false ]
 }
 tracks/3/type = "animation"
-tracks/3/path = NodePath("../../Camera2D/WarningCutscene/AnimationPlayer")
+tracks/3/path = NodePath("../../../../../../Camera2D/WarningCutscene/AnimationPlayer")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -818,7 +1273,7 @@ tracks/4/keys = {
 } ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
+tracks/5/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_thickness")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -830,7 +1285,7 @@ tracks/5/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
+tracks/6/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_radius")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -842,7 +1297,7 @@ tracks/6/keys = {
 "values": [ -0.1, -0.1, 2.9, -0.1 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
+tracks/7/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask:material:shader_param/torus_hardness")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -854,7 +1309,7 @@ tracks/7/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/8/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_hardness")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -866,7 +1321,7 @@ tracks/8/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/9/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_thickness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -878,7 +1333,7 @@ tracks/9/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
+tracks/10/path = NodePath("../../../../../../../../MaskViewport/Viewport/TorusMask2:material:shader_param/torus_radius")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -890,7 +1345,7 @@ tracks/10/keys = {
 "values": [ -0.1, -0.1, 2.9, -0.1 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/11/path = NodePath("../../../../../../../../../ProcessedLayer/ShockwaveGuide:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -902,7 +1357,7 @@ tracks/11/keys = {
 "values": [ Vector2( 2620, 678.941 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=18]
+[sub_resource type="SpriteFrames" id=26]
 animations = [ {
 "frames": [ ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
 "loop": false,
@@ -910,40 +1365,122 @@ animations = [ {
 "speed": 0.0
 } ]
 
-[sub_resource type="ShaderMaterial" id=19]
-shader = ExtResource( 76 )
-shader_param/torus_thickness = 0.106
-shader_param/torus_hardness = 2.38
-shader_param/torus_radius = 1.83
-shader_param/torus_invert = -1.0
-shader_param/torus_center = Vector2( 0.125723, 0.692514 )
-shader_param/torus_resolution = Vector2( 1.77778, 1 )
+[sub_resource type="ShaderMaterial" id=27]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0, 0 )
 
-[sub_resource type="ShaderMaterial" id=20]
+[sub_resource type="ShaderMaterial" id=28]
+shader = ExtResource( 82 )
+shader_param/blur_scale = Vector2( 0, 0 )
+
+[sub_resource type="ViewportTexture" id=29]
+flags = 5
+viewport_path = NodePath("RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport")
+
+[sub_resource type="ShaderMaterial" id=30]
 shader = ExtResource( 76 )
-shader_param/torus_thickness = 0.106
+shader_param/torus_thickness = 0.051
 shader_param/torus_hardness = 1.645
-shader_param/torus_radius = 1.83
+shader_param/torus_radius = -0.1
 shader_param/torus_invert = -1.0
-shader_param/torus_center = Vector2( 0.125723, 0.692514 )
+shader_param/torus_center = Vector2( 0.438785, 0.493356 )
 shader_param/torus_resolution = Vector2( 1.77778, 1 )
 
-[sub_resource type="ViewportTexture" id=21]
+[sub_resource type="ShaderMaterial" id=31]
+shader = ExtResource( 76 )
+shader_param/torus_thickness = 0.051
+shader_param/torus_hardness = 1.645
+shader_param/torus_radius = -0.1
+shader_param/torus_invert = -1.0
+shader_param/torus_center = Vector2( 0.438785, 0.493356 )
+shader_param/torus_resolution = Vector2( 1.77778, 1 )
+
+[sub_resource type="ViewportTexture" id=32]
 viewport_path = NodePath("RawLayer/MaskViewport/Viewport")
 
-[sub_resource type="ShaderMaterial" id=22]
+[sub_resource type="ShaderMaterial" id=33]
 resource_local_to_scene = true
 shader = ExtResource( 75 )
 shader_param/displacement_amount = 0.09581
-shader_param/displacement_center = Vector2( 0.125723, 0.692514 )
+shader_param/displacement_center = Vector2( 0.438785, 0.493356 )
 shader_param/screen_resolution = Vector2( 1.77778, 1 )
-shader_param/displacement_texture = SubResource( 21 )
+shader_param/displacement_texture = SubResource( 32 )
 
-[sub_resource type="ViewportTexture" id=23]
+[sub_resource type="ViewportTexture" id=34]
 flags = 5
 viewport_path = NodePath("RawLayer/WorldVieport/Viewport")
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="ShaderMaterial" id=40]
+shader = ExtResource( 85 )
+shader_param/cutoff = 0.206829
+shader_param/smooth_size = 0.442
+shader_param/mask = ExtResource( 86 )
+
+[sub_resource type="Animation" id=41]
+resource_name = "BASE"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "end"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 3,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.347, 0.18 ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.347 ]
+}
+
+[sub_resource type="Animation" id=35]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -1006,7 +1543,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=36]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -1069,7 +1606,7 @@ tracks/4/keys = {
 "values": [ 1.0 ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=37]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CenterArea:modulate:a")
@@ -1132,7 +1669,7 @@ tracks/4/keys = {
 "values": [ 1.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=38]
 length = 1.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_position")
@@ -1198,6 +1735,9 @@ tracks/4/keys = {
 [node name="JetpackGame" type="Node2D"]
 position = Vector2( -539.391, -116.868 )
 script = ExtResource( 1 )
+path_player = NodePath("RawLayer/WorldVieport/Viewport/Player")
+path_final_boss = NodePath("RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss")
+path_camera = NodePath("RawLayer/WorldVieport/Viewport/Camera2D")
 test_mode = "speedrun"
 test_level_or_points = 10
 
@@ -1350,10 +1890,47 @@ z_index = 1
 [node name="Boss" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss" groups=[
 "boss",
 ] instance=ExtResource( 26 )]
-position = Vector2( -56.16, 41.52 )
+position = Vector2( 0, -29.299 )
 
 [node name="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss" index="0"]
 blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down", 0.05, "laser_charge_up", "laser_shot_down", 0.05, "laser_shot_down", "idle", 0.05, "last_scream", "idle", 0.05, "scream", "idle", 0.05, "tired_retreat", "base", 0.05 ]
+
+[node name="BodyOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="1"]
+animation = "idle"
+frame = 3
+
+[node name="FaceOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="2"]
+animation = "idle"
+frame = 3
+
+[node name="EyeOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="0"]
+position = Vector2( 476.084, 727.02 )
+rotation = 0.0
+
+[node name="Tongue" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="1"]
+position = Vector2( 473, 1014 )
+animation = "default"
+
+[node name="Teeth" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="2"]
+position = Vector2( 450.182, 1088.19 )
+animation = "default"
+
+[node name="Gengiva" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="3"]
+animation = "default"
+
+[node name="Body" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="4"]
+animation = "idle"
+frame = 3
+
+[node name="MouthLines" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="5"]
+position = Vector2( 557.558, 1152.75 )
+animation = "idle"
+frame = 3
+
+[node name="EyeLines" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="7"]
+position = Vector2( 502.333, 602.476 )
+animation = "idle"
+frame = 3
 
 [node name="WarningCutscene" type="Node2D" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 position = Vector2( 0, 50 )
@@ -1368,12 +1945,12 @@ next/warning = "base"
 
 [node name="Guardian" type="Sprite" parent="RawLayer/WorldVieport/Viewport/Camera2D/WarningCutscene"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 901.091, -213.431 )
+position = Vector2( 1331.09, -33.4312 )
 texture = ExtResource( 27 )
 
 [node name="Astro" type="Sprite" parent="RawLayer/WorldVieport/Viewport/Camera2D/WarningCutscene"]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 924.4, 18.1768 )
+position = Vector2( 504.4, 198.177 )
 texture = ExtResource( 28 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="RawLayer/WorldVieport/Viewport"]
@@ -1384,26 +1961,17 @@ script = ExtResource( 29 )
 __meta__ = {
 "_editor_description_": ""
 }
+boss_dict = {
+"BackRowBoss": NodePath("Parallax3Viewport/Viewport/BlurX/Viewport/BackRowBoss"),
+"MidBackRowBoss": NodePath("Parallax2Viewport/Viewport/BlurX/Viewport/MidBackRowBoss"),
+"MidFrontRowBoss": NodePath("Parallax1Viewport/Viewport/BlurX/Viewport/MidFrontRowBoss")
+}
 
-[node name="BackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
-"boss",
-]]
-position = Vector2( 950, 515 )
-script = ExtResource( 30 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/BackRowBoss"]
-autoplay = "base"
-anims/awaken = SubResource( 8 )
+[node name="BlurAnimator" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
+anims/back_row_boss = SubResource( 8 )
+anims/back_row_boss_end = SubResource( 39 )
 anims/base = SubResource( 9 )
-anims/get_angry = SubResource( 10 )
-anims/scream = SubResource( 11 )
-
-[node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/BackRowBoss"]
-stream = ExtResource( 71 )
-volume_db = -6.0
-bus = "GameSfx"
-
-[node name="BackRowBossSkin" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/BackRowBoss" instance=ExtResource( 31 )]
+script = ExtResource( 84 )
 
 [node name="Parallax3" type="ParallaxLayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
 motion_scale = Vector2( 0.25, 1 )
@@ -1412,60 +1980,101 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3"]
-position = Vector2( 1010, 540 )
-frames = SubResource( 12 )
-frame = 2
-script = ExtResource( 37 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3"]
+remote_path = NodePath("../../Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3")
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite0"]
-position = Vector2( 1010, 540 )
+[node name="Parallax3Viewport" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
+material = SubResource( 10 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+script = ExtResource( 83 )
+blur_amount = 1.0
 
-[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite0"]
-self_modulate = Color( 1.2, 1.2, 1.2, 1 )
-texture = ExtResource( 80 )
-offset = Vector2( 0, 321 )
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport"]
+size = Vector2( 1960, 1120 )
+own_world = true
+handle_input_locally = false
+render_target_update_mode = 3
 
-[node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3"]
-position = Vector2( 3030, 540 )
-frames = SubResource( 12 )
-frame = 2
-script = ExtResource( 37 )
-__meta__ = {
-"_edit_lock_": true
-}
+[node name="BlurX" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport"]
+material = SubResource( 11 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite1"]
-visible = false
-position = Vector2( 1010, 540 )
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX"]
+size = Vector2( 2000, 1160 )
+own_world = true
+handle_input_locally = false
+render_target_update_mode = 3
 
-[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3/Sprite1"]
-self_modulate = Color( 1.2, 1.2, 1.2, 1 )
-texture = ExtResource( 80 )
-offset = Vector2( 0, 321 )
-
-[node name="MidBackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
+[node name="BackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport" groups=[
 "boss",
 ]]
-position = Vector2( 2695, 620 )
+position = Vector2( 950, 515 )
 script = ExtResource( 30 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidBackRowBoss"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/BackRowBoss"]
 autoplay = "base"
+anims/awaken = SubResource( 12 )
 anims/base = SubResource( 13 )
-anims/scream = SubResource( 14 )
+anims/get_angry = SubResource( 14 )
+anims/scream = SubResource( 15 )
 
-[node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidBackRowBoss"]
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/BackRowBoss"]
 stream = ExtResource( 71 )
 volume_db = -6.0
 bus = "GameSfx"
 
-[node name="MidRowsBossSkin" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidBackRowBoss" instance=ExtResource( 38 )]
-position = Vector2( -200, -100 )
-scale = Vector2( -0.5, 0.5 )
+[node name="BackRowBossSkin" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/BackRowBoss" instance=ExtResource( 31 )]
+
+[node name="RemoteParallax3" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3"]
+position = Vector2( 1010, 540 )
+frames = SubResource( 16 )
+frame = 2
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite0"]
+position = Vector2( 1010, 540 )
+
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite0"]
+self_modulate = Color( 1.4, 1.4, 1.4, 1 )
+texture = ExtResource( 80 )
+offset = Vector2( 0, 321 )
+
+[node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3"]
+position = Vector2( 3030, 540 )
+frames = SubResource( 16 )
+frame = 2
+script = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite1"]
+visible = false
+position = Vector2( 1010, 540 )
+
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport/RemoteParallax3/Sprite1"]
+self_modulate = Color( 1.4, 1.4, 1.4, 1 )
+texture = ExtResource( 80 )
+offset = Vector2( 0, 321 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport/Viewport/BlurX/Viewport"]
+color = Color( 0.654902, 0.596078, 0.839216, 1 )
 
 [node name="Parallax2" type="ParallaxLayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
 motion_scale = Vector2( 0.4, 1 )
@@ -1474,97 +2083,244 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2"]
+remote_path = NodePath("../../Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2")
+
+[node name="Parallax2Viewport" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
+material = SubResource( 17 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+script = ExtResource( 83 )
+blur_amount = 0.7
+
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport"]
+size = Vector2( 1960, 1120 )
+own_world = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="BlurX" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport"]
+material = SubResource( 18 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX"]
+size = Vector2( 2000, 1160 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="MidBackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport" groups=[
+"boss",
+]]
+visible = false
+position = Vector2( -430, 620 )
+script = ExtResource( 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/MidBackRowBoss"]
+autoplay = "base"
+anims/base = SubResource( 19 )
+anims/scream = SubResource( 20 )
+
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/MidBackRowBoss"]
+stream = ExtResource( 71 )
+volume_db = -6.0
+bus = "GameSfx"
+
+[node name="MidRowsBossSkin" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/MidBackRowBoss" instance=ExtResource( 38 )]
+position = Vector2( -200, -100 )
+scale = Vector2( -0.5, 0.5 )
+
+[node name="RemoteParallax2" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2"]
 position = Vector2( 1010, 540 )
-frames = SubResource( 15 )
+frames = SubResource( 21 )
 frame = 1
 script = ExtResource( 68 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2/Sprite0"]
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2/Sprite0"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2/Sprite0"]
-self_modulate = Color( 1.1, 1.1, 1.1, 1 )
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2/Sprite0"]
+self_modulate = Color( 1.2, 1.2, 1.2, 1 )
 texture = ExtResource( 81 )
 offset = Vector2( 0, 405 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2"]
+[node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2"]
 position = Vector2( 3030, 540 )
-frames = SubResource( 15 )
+frames = SubResource( 21 )
 frame = 3
 script = ExtResource( 68 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2/Sprite1"]
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2/Sprite1"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2/Sprite1"]
-self_modulate = Color( 1.1, 1.1, 1.1, 1 )
+[node name="Lava" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport/RemoteParallax2/Sprite1"]
+self_modulate = Color( 1.2, 1.2, 1.2, 1 )
 texture = ExtResource( 81 )
 offset = Vector2( 0, 405 )
 
-[node name="MidFrontRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground" groups=[
-"boss",
-]]
-position = Vector2( 2600, 540 )
-script = ExtResource( 30 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidFrontRowBoss"]
-anims/base = SubResource( 16 )
-anims/scream = SubResource( 17 )
-
-[node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidFrontRowBoss"]
-stream = ExtResource( 71 )
-volume_db = -6.0
-bus = "GameSfx"
-
-[node name="MidRowsBossSkin" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/MidFrontRowBoss" instance=ExtResource( 38 )]
-position = Vector2( 400, -50 )
-scale = Vector2( 0.9, 0.9 )
+[node name="CanvasModulate2" type="CanvasModulate" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax2Viewport/Viewport/BlurX/Viewport"]
+color = Color( 1, 0.764706, 0.945098, 1 )
 
 [node name="Parallax1" type="ParallaxLayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
 z_as_relative = false
 motion_scale = Vector2( 0.5, 1 )
 
-[node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1"]
+remote_path = NodePath("../../Parallax1Viewport/Viewport/BlurX/Viewport/RemoteParallax1")
+
+[node name="Parallax1Viewport" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
+material = SubResource( 22 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+script = ExtResource( 83 )
+blur_amount = 0.4
+
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport"]
+size = Vector2( 1960, 1120 )
+own_world = true
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="BlurX" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport"]
+material = SubResource( 23 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX"]
+size = Vector2( 2000, 1160 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="MidFrontRowBoss" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport" groups=[
+"boss",
+]]
+visible = false
+position = Vector2( 2600, 540 )
+script = ExtResource( 30 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/MidFrontRowBoss"]
+anims/base = SubResource( 24 )
+anims/scream = SubResource( 25 )
+
+[node name="SamplePlayer" type="AudioStreamPlayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/MidFrontRowBoss"]
+stream = ExtResource( 71 )
+volume_db = -6.0
+bus = "GameSfx"
+
+[node name="MidRowsBossSkin" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/MidFrontRowBoss" instance=ExtResource( 38 )]
+position = Vector2( 400, -50 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="RemoteParallax1" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite0" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/RemoteParallax1"]
 position = Vector2( 1010, 540 )
-frames = SubResource( 18 )
+frames = SubResource( 26 )
 frame = 2
 script = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1/Sprite0"]
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/RemoteParallax1/Sprite0"]
 visible = false
 position = Vector2( 1010, 540 )
 
-[node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1"]
+[node name="Sprite1" type="AnimatedSprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/RemoteParallax1"]
 position = Vector2( 3030, 540 )
-frames = SubResource( 18 )
+frames = SubResource( 26 )
 frame = 4
 script = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1/Sprite1"]
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport/RemoteParallax1/Sprite1"]
 visible = false
 position = Vector2( 1010, 540 )
+
+[node name="CanvasModulate3" type="CanvasModulate" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax1Viewport/Viewport/BlurX/Viewport"]
+color = Color( 1, 0.92549, 0.862745, 1 )
 
 [node name="Parallax0" type="ParallaxLayer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
 z_as_relative = false
 motion_scale = Vector2( 0.75, 1 )
 motion_offset = Vector2( 480, 0 )
 
-[node name="Sprite0" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0"]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0"]
+remote_path = NodePath("../../Parallax0Viewport/Viewport/BlurX/Viewport/RemoteParallax0")
+
+[node name="Parallax0Viewport" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 27 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+script = ExtResource( 83 )
+blur_amount = 0.0
+
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport"]
+size = Vector2( 1960, 1120 )
+own_world = true
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="BlurX" type="ViewportContainer" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport"]
+material = SubResource( 28 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 40.0
+margin_bottom = 40.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport/BlurX"]
+size = Vector2( 2000, 1160 )
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="RemoteParallax0" type="Node2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport/BlurX/Viewport"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite0" type="Sprite" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport/BlurX/Viewport/RemoteParallax0"]
 light_mask = 1024
 position = Vector2( 960, 540 )
 texture = ExtResource( 50 )
@@ -1573,9 +2329,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0/Sprite0"]
+[node name="EndPoint" type="Position2D" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport/BlurX/Viewport/RemoteParallax0/Sprite0"]
 visible = false
 position = Vector2( 960, 540 )
+
+[node name="CanvasModulate5" type="CanvasModulate" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax0Viewport/Viewport/BlurX/Viewport"]
+
+[node name="TextureRect" type="TextureRect" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = SubResource( 29 )
 
 [node name="Player" parent="RawLayer/WorldVieport/Viewport" instance=ExtResource( 52 )]
 position = Vector2( 961, 554 )
@@ -1620,6 +2383,8 @@ scale = Vector2( 1, -1 )
 position = Vector2( 2370, 61 )
 scale = Vector2( 1, -1 )
 
+[node name="CanvasModulate4" type="CanvasModulate" parent="RawLayer/WorldVieport/Viewport"]
+
 [node name="MaskViewport" type="ViewportContainer" parent="RawLayer"]
 self_modulate = Color( 1, 1, 1, 0.25098 )
 anchor_right = 1.0
@@ -1644,7 +2409,7 @@ margin_bottom = 40.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="TorusMask" type="ColorRect" parent="RawLayer/MaskViewport/Viewport"]
-material = SubResource( 19 )
+material = SubResource( 30 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 40.0
@@ -1652,7 +2417,7 @@ margin_bottom = 40.0
 script = ExtResource( 78 )
 
 [node name="TorusMask2" type="ColorRect" parent="RawLayer/MaskViewport/Viewport"]
-material = SubResource( 20 )
+material = SubResource( 31 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 40.0
@@ -1663,13 +2428,13 @@ script = ExtResource( 78 )
 layer = 0
 
 [node name="PostProcessedGame" type="TextureRect" parent="ProcessedLayer"]
-material = SubResource( 22 )
+material = SubResource( 33 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 2.24487
 margin_right = 2.24487
 mouse_filter = 2
-texture = SubResource( 23 )
+texture = SubResource( 34 )
 flip_v = true
 script = ExtResource( 79 )
 __meta__ = {
@@ -1678,20 +2443,39 @@ __meta__ = {
 }
 
 [node name="ShockwaveGuide" type="Position2D" parent="ProcessedLayer"]
-position = Vector2( 241.388, 747.915 )
+position = Vector2( 842.467, 532.824 )
 script = ExtResource( 77 )
 __meta__ = {
 "_gizmo_extents_": 30.0
 }
+
+[node name="DangerVignette" type="ColorRect" parent="ProcessedLayer"]
+material = SubResource( 40 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.792157, 0.0117647, 0.235294, 1 )
+script = ExtResource( 87 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ProcessedLayer/DangerVignette"]
+autoplay = "BASE"
+anims/BASE = SubResource( 41 )
+anims/end = SubResource( 42 )
+anims/idle = SubResource( 43 )
+anims/start = SubResource( 44 )
+next/end = "BASE"
+next/start = "idle"
 
 [node name="HUD" type="CanvasLayer" parent="."]
 pause_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HUD"]
 autoplay = "base"
-anims/base = SubResource( 24 )
-anims/editor = SubResource( 25 )
-anims/fade_out = SubResource( 26 )
+anims/base = SubResource( 35 )
+anims/editor = SubResource( 36 )
+anims/fade_out = SubResource( 37 )
 
 [node name="pallet" type="Sprite" parent="HUD"]
 position = Vector2( 959.021, 1335.47 )
@@ -1836,7 +2620,7 @@ __meta__ = {
 }
 
 [node name="Messager" type="AnimationPlayer" parent="HUD/SpeedLabel"]
-anims/text_anim = SubResource( 27 )
+anims/text_anim = SubResource( 38 )
 
 [node name="SpeedSfx" type="AudioStreamPlayer" parent="HUD/SpeedLabel"]
 stream = ExtResource( 74 )
@@ -1867,14 +2651,15 @@ visible = false
 visible = false
 [connection signal="area_exited" from="RawLayer/WorldVieport/Viewport/Camera2D/Beat" to="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" method="_on_Beat_area_exit"]
 [connection signal="area_exited" from="RawLayer/WorldVieport/Viewport/Camera2D/HalfBeat" to="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" method="_on_HalfBeat_area_exit"]
+[connection signal="half_beat_spawned" from="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" to="ProcessedLayer/DangerVignette" method="_on_ObstacleSpawner_half_beat_spawned"]
 [connection signal="level_end" from="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" to="." method="_on_ObstacleSpawner_level_end"]
 [connection signal="level_ready" from="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
 [connection signal="setup_laser_eye" from="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" to="RawLayer/WorldVieport/Viewport/Camera2D" method="_on_ObstacleSpawner_setup_laser_eye"]
 [connection signal="update_visualization" from="RawLayer/WorldVieport/Viewport/Camera2D/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
 [connection signal="dashing" from="RawLayer/WorldVieport/Viewport/Player" to="RawLayer/WorldVieport/Viewport/Camera2D" method="_on_Player_dashing"]
+[connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="ProcessedLayer/PostProcessedGame" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask2" method="_on_ShockwaveGuide_position_changed"]
-[connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="ProcessedLayer/PostProcessedGame" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="sort_children" from="HUD/Meters/Ammunition" to="HUD/Meters/Ammunition" method="_on_Ammunition_sort_children"]
 [connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
 

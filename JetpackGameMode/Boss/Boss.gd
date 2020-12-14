@@ -31,7 +31,7 @@ func handle_collision(raycast):
 	var collider = raycast.get_collider()
 	print("Boss | Raycast: %s | Collider: %s" %[raycast.get_name(), collider.get_name()])
 	if collider.is_in_group("player"):
-		set_physics_process(false)
+		set_physics_process(false) 
 		collision_timer.start()
 		if not collider.is_dead and collider.shield_energy > 0:
 			collider.take_hit()
