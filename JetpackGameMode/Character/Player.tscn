@@ -807,7 +807,7 @@ tracks/5/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -129.373 ), Vector2( 0, -95.2441 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=18]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline:playing")
@@ -882,7 +882,7 @@ tracks/5/keys = {
 "values": [ "falling" ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=19]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline:playing")
@@ -971,7 +971,7 @@ tracks/6/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=20]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline:playing")
@@ -1046,7 +1046,7 @@ tracks/5/keys = {
 "values": [ "falling" ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=21]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline:playing")
@@ -1135,7 +1135,7 @@ tracks/6/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=22]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline:playing")
@@ -1210,7 +1210,7 @@ tracks/5/keys = {
 "values": [ "rising" ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=23]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
@@ -1405,7 +1405,7 @@ tracks/15/keys = {
 "values": [ "falling" ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=24]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
@@ -1600,7 +1600,7 @@ tracks/15/keys = {
 "values": [ "fall_to_rise" ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=25]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
@@ -1795,7 +1795,7 @@ tracks/15/keys = {
 "values": [ "falling" ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=26]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
@@ -1990,7 +1990,7 @@ tracks/15/keys = {
 "values": [ "reloading" ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=27]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
@@ -2185,6 +2185,201 @@ tracks/15/keys = {
 "values": [ "rise_to_fall" ]
 }
 
+[sub_resource type="Animation" id=28]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "rising" ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:animation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "rising" ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:animation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "rising" ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:animation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "rising" ]
+}
+
 [sub_resource type="Animation" id=29]
 length = 0.1
 tracks/0/type = "value"
@@ -2341,201 +2536,6 @@ tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ "rising" ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:animation")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ "rising" ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:animation")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ "rising" ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:animation")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ "rising" ]
-}
-
-[sub_resource type="Animation" id=30]
-length = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:playing")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:playing")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:playing")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:playing")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:frame")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmBackOutline:frame")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmFront:frame")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("Skin/ViewportContainer/Viewport/Body/ArmBack:frame")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("Skin/ViewportContainer/Viewport/BodyOutline/ArmFrontOutline:animation")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
 "values": [ "shooting" ]
 }
 tracks/13/type = "value"
@@ -2575,13 +2575,13 @@ tracks/15/keys = {
 "values": [ "shooting" ]
 }
 
-[sub_resource type="RectangleShape2D" id=31]
+[sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 24.6781, 27.1512 )
 
-[sub_resource type="CircleShape2D" id=32]
+[sub_resource type="CircleShape2D" id=31]
 radius = 80.0
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=32]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
@@ -2656,7 +2656,7 @@ tracks/5/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=34]
+[sub_resource type="Animation" id=33]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
@@ -2743,7 +2743,7 @@ tracks/6/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=34]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
@@ -2818,7 +2818,7 @@ tracks/5/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=36]
+[sub_resource type="Animation" id=35]
 length = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
@@ -2893,7 +2893,7 @@ tracks/5/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=37]
+[sub_resource type="Animation" id=36]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:position")
@@ -3110,27 +3110,27 @@ texture = ExtResource( 502 )
 
 [node name="BodyAnimator" type="AnimationPlayer" parent="."]
 autoplay = "base"
-anims/base = SubResource( 19 )
-anims/fall_to_rise = SubResource( 20 )
-anims/falling = SubResource( 21 )
-anims/rise_to_fall = SubResource( 22 )
-anims/rising = SubResource( 23 )
+anims/base = SubResource( 18 )
+anims/fall_to_rise = SubResource( 19 )
+anims/falling = SubResource( 20 )
+anims/rise_to_fall = SubResource( 21 )
+anims/rising = SubResource( 22 )
 
 [node name="ArmsAnimator" type="AnimationPlayer" parent="."]
 autoplay = "base"
-anims/base = SubResource( 24 )
-anims/fall_to_rise = SubResource( 25 )
-anims/falling = SubResource( 26 )
-anims/reloading = SubResource( 27 )
-anims/rise_to_fall = SubResource( 28 )
-anims/rising = SubResource( 29 )
-anims/shooting = SubResource( 30 )
+anims/base = SubResource( 23 )
+anims/fall_to_rise = SubResource( 24 )
+anims/falling = SubResource( 25 )
+anims/reloading = SubResource( 26 )
+anims/rise_to_fall = SubResource( 27 )
+anims/rising = SubResource( 28 )
+anims/shooting = SubResource( 29 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2( -491.24, -11.2123 )
 scale = Vector2( 1, 1.07969 )
-shape = SubResource( 31 )
+shape = SubResource( 30 )
 
 [node name="Shield" type="Area2D" parent="."]
 position = Vector2( -485, 0 )
@@ -3139,7 +3139,7 @@ script = ExtResource( 492 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
 visible = false
-shape = SubResource( 32 )
+shape = SubResource( 31 )
 
 [node name="Sprite" type="Sprite" parent="Shield"]
 visible = false
@@ -3148,11 +3148,11 @@ texture = ExtResource( 493 )
 
 [node name="ShieldAnimator" type="AnimationPlayer" parent="Shield"]
 autoplay = "disabled"
-anims/base = SubResource( 33 )
-anims/burst = SubResource( 34 )
-anims/disabled = SubResource( 35 )
-anims/idle = SubResource( 36 )
-anims/open = SubResource( 37 )
+anims/base = SubResource( 32 )
+anims/burst = SubResource( 33 )
+anims/disabled = SubResource( 34 )
+anims/idle = SubResource( 35 )
+anims/open = SubResource( 36 )
 next/open = "idle"
 
 [node name="SfxLibrary" type="Node" parent="Shield"]

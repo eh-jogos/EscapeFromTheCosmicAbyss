@@ -19,6 +19,7 @@ func load_level(num, load_all, loop):
 								level_info.boss.animations_countdowns, level["beats"].size()),
 					"laser_countdowns" : shift_countdowns_by(
 								level_info.boss.laser_countdowns,level["beats"].size()),
+					"danger_durations" : level_info.boss.danger_durations,
 				}
 			
 			build_level_procedurally()
@@ -49,6 +50,7 @@ func load_level(num, load_all, loop):
 				"animations" : level_info.boss.animations,
 				"animation_countdowns" : level_info.boss.animations_countdowns,
 				"laser_countdowns" : level_info.boss.laser_countdowns,
+				"danger_durations" : level_info.boss.danger_durations,
 			}
 		
 		build_level_procedurally()

@@ -34,43 +34,43 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1.5 ), Vector2( 1, 0.3 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("LaserParticlesTop:modulate:a")
+tracks/2/path = NodePath("LaserTip:region_rect")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("LaserParticlesBottom:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("LaserTip:region_rect")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Rect2( 1418, 0, 14, 24 ), Rect2( 1418, 0, 14, 24 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("LaserTip:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1425, 0 ), Vector2( 1425, 0 ), Vector2( 23, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LaserBody:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 709, 0 ), Vector2( 709, 0 ), Vector2( 8, 0 ) ]
+}
 tracks/5/type = "value"
-tracks/5/path = NodePath("LaserTip:position")
+tracks/5/path = NodePath("LaserBody:region_rect")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -79,87 +79,63 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1425, 0 ), Vector2( 1425, 0 ), Vector2( 23, 0 ) ]
+"values": [ Rect2( 0, 0, 1418, 24 ), Rect2( 0, 0, 1418, 24 ), Rect2( 0, 0, 16, 24 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("LaserBody:position")
+tracks/6/path = NodePath("LaserTip:modulate:a")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 709, 0 ), Vector2( 709, 0 ), Vector2( 8, 0 ) ]
+"values": [ 1.0, 0.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("LaserBody:region_rect")
+tracks/7/path = NodePath("LaserBody:modulate:a")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Rect2( 0, 0, 1418, 24 ), Rect2( 0, 0, 1418, 24 ), Rect2( 0, 0, 16, 24 ) ]
+"values": [ 1.0, 0.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("LaserTip:modulate:a")
+tracks/8/path = NodePath("BottomRaycast:cast_to")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [ Vector2( 1430, 0 ), Vector2( 1430, 0 ), Vector2( 10, 0 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("LaserBody:modulate:a")
+tracks/9/path = NodePath("TopRaycast:cast_to")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [ Vector2( 1430, 0 ), Vector2( 1430, 0 ), Vector2( 10, 0 ) ]
 }
-tracks/10/type = "value"
-tracks/10/path = NodePath("BottomRaycast:cast_to")
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1430, 0 ), Vector2( 1430, 0 ), Vector2( 10, 0 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("TopRaycast:cast_to")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1430, 0 ), Vector2( 1430, 0 ), Vector2( 10, 0 ) ]
-}
-tracks/12/type = "method"
-tracks/12/path = NodePath(".")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
@@ -236,31 +212,31 @@ tracks/4/keys = {
 "values": [ Vector2( 23, 0 ), Vector2( 1425, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("LaserParticlesTop:modulate:a")
+tracks/5/path = NodePath("LaserBody:modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 1.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("LaserParticlesBottom:modulate:a")
+tracks/6/path = NodePath("LaserTip:modulate:a")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [ 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("LaserBody:modulate:a")
+tracks/7/path = NodePath("LaserBody:scale")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -269,10 +245,10 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.0 ]
+"values": [ Vector2( 1, 1 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("LaserTip:modulate:a")
+tracks/8/path = NodePath("LaserTip:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -281,87 +257,39 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.0 ]
+"values": [ Vector2( 1, 1 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("LaserParticlesBottom:emitting")
+tracks/9/path = NodePath("TopRaycast:cast_to")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10, 0 ), Vector2( 1430, 0 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("LaserParticlesTop:emitting")
+tracks/10/path = NodePath("BottomRaycast:cast_to")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10, 0 ), Vector2( 1430, 0 ) ]
 }
-tracks/11/type = "value"
-tracks/11/path = NodePath("LaserBody:scale")
+tracks/11/type = "method"
+tracks/11/path = NodePath(".")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("LaserTip:scale")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("TopRaycast:cast_to")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 10, 0 ), Vector2( 1430, 0 ) ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("BottomRaycast:cast_to")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 10, 0 ), Vector2( 1430, 0 ) ]
-}
-tracks/15/type = "method"
-tracks/15/path = NodePath(".")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -444,7 +372,7 @@ tracks/5/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1.5 ), Vector2( 1, 1 ), Vector2( 1, 1.5 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("LaserParticlesBottom:modulate:a")
+tracks/6/path = NodePath("LaserBody:modulate:a")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -456,7 +384,7 @@ tracks/6/keys = {
 "values": [ 1.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("LaserParticlesTop:modulate:a")
+tracks/7/path = NodePath("LaserTip:modulate:a")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -468,7 +396,7 @@ tracks/7/keys = {
 "values": [ 1.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("LaserBody:modulate:a")
+tracks/8/path = NodePath("TopRaycast:cast_to")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -477,10 +405,10 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.0 ]
+"values": [ Vector2( 1430, 0 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("LaserTip:modulate:a")
+tracks/9/path = NodePath("BottomRaycast:cast_to")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -489,39 +417,15 @@ tracks/9/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.0 ]
+"values": [ Vector2( 1430, 0 ) ]
 }
-tracks/10/type = "value"
-tracks/10/path = NodePath("TopRaycast:cast_to")
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1430, 0 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("BottomRaycast:cast_to")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1430, 0 ) ]
-}
-tracks/12/type = "method"
-tracks/12/path = NodePath(".")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -582,7 +486,7 @@ tracks/3/keys = {
 "values": [ Vector2( 23, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("LaserParticlesTop:modulate:a")
+tracks/4/path = NodePath("LaserBody:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -594,7 +498,7 @@ tracks/4/keys = {
 "values": [ 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("LaserParticlesBottom:modulate:a")
+tracks/5/path = NodePath("LaserTip:modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -605,54 +509,6 @@ tracks/5/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
-tracks/6/type = "value"
-tracks/6/path = NodePath("LaserBody:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("LaserTip:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("LaserParticlesTop:emitting")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("LaserParticlesBottom:emitting")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
 
 [sub_resource type="Gradient" id=5]
 offsets = PoolRealArray( 0.121693, 0.343915, 0.550265, 1 )
@@ -661,11 +517,11 @@ colors = PoolColorArray( 1, 1, 1, 1, 0.164706, 1, 1, 1, 0.0705882, 0.560784, 0.7
 [sub_resource type="GradientTexture" id=6]
 gradient = SubResource( 5 )
 
-[sub_resource type="Curve" id=85]
+[sub_resource type="Curve" id=7]
 _data = [ Vector2( 0.375, 1 ), 0.0, -0.0287652, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=8]
-curve = SubResource( 85 )
+curve = SubResource( 7 )
 
 [sub_resource type="ParticlesMaterial" id=9]
 lifetime_randomness = 0.25
@@ -681,20 +537,20 @@ orbit_velocity_random = 0.0
 scale_curve = SubResource( 8 )
 color_ramp = SubResource( 6 )
 
-[sub_resource type="Gradient" id=48]
+[sub_resource type="Gradient" id=10]
 offsets = PoolRealArray( 0.15873, 0.613757, 1 )
 colors = PoolColorArray( 1, 1, 1, 1, 0.164706, 1, 1, 1, 0, 0.290196, 0.658824, 0 )
 
-[sub_resource type="GradientTexture" id=49]
-gradient = SubResource( 48 )
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
 
-[sub_resource type="Curve" id=88]
+[sub_resource type="Curve" id=12]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.495283, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=51]
-curve = SubResource( 88 )
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 12 )
 
-[sub_resource type="ParticlesMaterial" id=52]
+[sub_resource type="ParticlesMaterial" id=14]
 emission_shape = 2
 emission_box_extents = Vector3( 716, 10, 1 )
 flag_disable_z = true
@@ -705,8 +561,8 @@ orbit_velocity_random = 0.0
 tangential_accel = 80.0
 tangential_accel_random = 1.0
 scale = 0.3
-scale_curve = SubResource( 51 )
-color_ramp = SubResource( 49 )
+scale_curve = SubResource( 13 )
+color_ramp = SubResource( 11 )
 
 [node name="Bullet" type="Node2D" groups=[
 "bullet",
@@ -745,17 +601,15 @@ bus = "UiSfx"
 script = ExtResource( 4 )
 
 [node name="LaserBody" type="Sprite" parent="."]
-modulate = Color( 1, 1.2, 1.4, 1 )
-position = Vector2( 709, 0 )
-scale = Vector2( 1, 1.5 )
+modulate = Color( 1, 1.2, 1.4, 0 )
+position = Vector2( 8, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 1418, 24 )
+region_rect = Rect2( 0, 0, 16, 24 )
 
 [node name="LaserTip" type="Sprite" parent="."]
-modulate = Color( 1, 1.2, 1.4, 1 )
-position = Vector2( 1425, 0 )
-scale = Vector2( 1, 1.5 )
+modulate = Color( 1, 1.2, 1.4, 0 )
+position = Vector2( 23, 0 )
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 1418, 0, 14, 24 )
@@ -789,6 +643,6 @@ lifetime = 0.8
 randomness = 1.0
 local_coords = false
 draw_order = 1
-process_material = SubResource( 52 )
+process_material = SubResource( 14 )
 texture = ExtResource( 7 )
 [connection signal="timeout" from="IdleTimer" to="." method="_on_IdleTimer_timeout"]

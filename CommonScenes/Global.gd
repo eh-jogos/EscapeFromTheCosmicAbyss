@@ -27,6 +27,13 @@ signal color_picker_closed
 # warning-ignore:unused_signal
 signal achievement_info_sent(title, description)
 
+# Camera Shake Signal
+# warning-ignore:unused_signal
+signal shake_trauma_added(trauma)
+
+#Boss signals
+# warning-ignore:unused_signal
+signal start_danger(duration)
 
 const DEFAULT_SILHOUETTE_COLOR = Color("1f122d") #Color("041411") #OR Color("1f122d")
 const DEFAULT_BODY_COLOR = Color("1f645b") 
