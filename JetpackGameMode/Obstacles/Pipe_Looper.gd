@@ -16,3 +16,7 @@ func _on_player_killed():
 func scored():
 	game._on_scored(point_value)
 	Global.achievements_handler.current_mileage += point_value
+
+
+func shake_camera() -> void:
+	Global.emit_signal("shake_trauma_added", 6.0)

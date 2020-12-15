@@ -138,3 +138,15 @@ tracks/10/keys = {
 "update": 0,
 "values": [ -0.1, -0.1, 1.83, -0.1, 1.83 ]
 }
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../Shaker:trauma")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.8, 1.2, 1.68, 2.08, 3.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, 1.5, 1.2, 1.0, 0.8, 0.0 ]
+}

@@ -99,7 +99,7 @@ func _ready():
 	player = self.get_node(path_player)
 	level_loader = self.get_node("LevelLoader")
 	camera = self.get_node(path_camera)
-	object_spawner = camera.get_node("ObstacleSpawner")
+	object_spawner = self.get_node("RawLayer/WorldVieport/Viewport/Obstaculos/ObstacleSpawner")
 	parallax_background = self.get_node("RawLayer/WorldVieport/Viewport/ParallaxBackground")
 	
 	show_pre_game()

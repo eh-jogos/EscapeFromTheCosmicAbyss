@@ -72,6 +72,11 @@ func kill_player(_offset):
 	#at the end of that animation, either from a signal or by calling it directly, call _on_player_killed
 	_on_player_killed()
 
+
+func shake_camera() -> void:
+	Global.emit_signal("shake_trauma_added", 0.3)
+
+
 func _on_player_killed():
 	game.game_over()
 

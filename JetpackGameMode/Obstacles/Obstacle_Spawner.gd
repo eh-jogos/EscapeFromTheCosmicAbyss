@@ -7,6 +7,7 @@ signal update_visualization
 signal beat_spawned
 signal half_beat_spawned
 
+export(NodePath) var path_camera
 export(NodePath) var obstacle_parent
 export(NodePath) var obstacle_half_parent
 export(PackedScene) var none
@@ -20,12 +21,14 @@ export(PackedScene) var ammo_up
 
 var obstacles = []
 
+var camera
 var obstacle_group
 var half_group
 var level
 var half_countdown = 4
 
 func _ready():
+	camera = get_node(path_camera)
 	obstacle_group = get_node(obstacle_parent)
 	half_group = get_node(obstacle_half_parent)
 	obstacles = [
@@ -38,6 +41,10 @@ func _ready():
 		shield_up, #6
 		ammo_up #7
 	]
+
+func _physics_process(_delta):
+	global_position.x = camera.global_position.x + 960
+
 
 func spawn(obstacle_num):
 	var obstacle = obstacles[obstacle_num].instance()

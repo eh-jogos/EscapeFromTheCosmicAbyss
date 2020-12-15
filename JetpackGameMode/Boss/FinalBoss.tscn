@@ -175,6 +175,8 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/Fx/white_glowing_diamond.png" type="Texture" id=173]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/animations/Boss_last_scream.tres" type="Animation" id=174]
 [ext_resource path="res://JetpackGameMode/Boss/final_boss/animations/Boss_scream.tres" type="Animation" id=175]
+[ext_resource path="res://JetpackGameMode/Boss/final_boss/animations/Boss_laser_shot_down.tres" type="Animation" id=176]
+[ext_resource path="res://JetpackGameMode/Boss_laser_shot_up.tres" type="Animation" id=177]
 
 [sub_resource type="Animation" id=1]
 resource_name = "base"
@@ -1040,475 +1042,6 @@ tracks/9/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "laser_shot_down"
-length = 2.32
-step = 0.08
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2, 2.32 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 350 ), Vector2( 0, 350 ), Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 2.16 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 2,
-"values": [ "idle_laser", "from_laser" ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:rect_size")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.08 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 10, 260 ), Vector2( 1930, 260 ), Vector2( 1930, 260 ), Vector2( 10, 260 ), Vector2( 10, 260 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:rect_position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 1.8, 2, 2.08 ),
-"transitions": PoolRealArray( 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -100 ), Vector2( 0, -100 ), Vector2( 1930, -100 ), Vector2( 0, -100 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("FinalBossSkin:warning_color_3")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 1.92, 2.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("FinalBossSkin:warning_color_2")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 2, 2.24 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.0 ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("FinalBossSkin:warning_color_1")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 2.08, 2.32 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.0 ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("BossSfxLibrary/LaserLoop:playing")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("BossSfxLibrary/LaserLoop:volume_db")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 1.84, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -18.0, -18.0, -40.0 ]
-}
-tracks/14/type = "method"
-tracks/14/path = NodePath(".")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 2.32 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "increment_laser_count"
-} ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/CastingParticles:emitting")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0, 1.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/BeamParticles2D:emitting")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
-"times": PoolRealArray( 0, 1.76 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/BeamParticles2D:process_material:emission_box_extents")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 130, 1 ), Vector3( 965, 130, 1 ) ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/BeamParticles2D:position")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 130 ), Vector2( 965, 130 ) ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "laser_shot_up"
-length = 2.32
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 2, 2.32 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -30 ), Vector2( 0, -30 ), Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("FinalBossSkin/AnimationPlayer:playback/play")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 2.16 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 2,
-"values": [ "idle_laser", "from_laser" ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:rect_size")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 10, 260 ), Vector2( 1930, 260 ), Vector2( 1930, 260 ), Vector2( 10, 260 ), Vector2( 10, 260 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:rect_position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -100 ), Vector2( 0, -100 ), Vector2( 1930, -100 ), Vector2( 0, -100 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0, 0.2, 1.8, 2, 2.1 ),
-"transitions": PoolRealArray( 1, 1, 1, 0, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 10 ), Vector2( 0, 1930 ), Vector2( 0, 1930 ), Vector2( 0, 10 ), Vector2( 0, 10 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("FinalBossSkin:warning_color_1")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0, 2.08, 2.32 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("FinalBossSkin:warning_color_2")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0, 2, 2.24 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.0 ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("FinalBossSkin:warning_color_3")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0, 1.92, 2.16 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.0 ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("BossSfxLibrary/LaserLoop:playing")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("BossSfxLibrary/LaserLoop:volume_db")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0, 1.84, 2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -18.0, -18.0, -40.0 ]
-}
-tracks/14/type = "method"
-tracks/14/path = NodePath(".")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 2.32 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "increment_laser_count"
-} ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/CastingParticles:emitting")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0, 1.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/BeamParticles2D:emitting")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
-"times": PoolRealArray( 0, 1.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/17/type = "value"
-tracks/17/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/BeamParticles2D:process_material:emission_box_extents")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 130, 1 ), Vector3( 965, 130, 1 ) ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/BeamParticles2D:position")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 130 ), Vector2( 965, 130 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -4831,9 +4364,9 @@ animations = [ {
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "idle_laser",
+"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 20 ) ],
@@ -4851,9 +4384,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "idle_laser",
 "speed": 12.0
 } ]
 
@@ -4869,9 +4402,9 @@ animations = [ {
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 40 ) ],
-"loop": true,
-"name": "idle_laser",
+"frames": [ ExtResource( 53 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 48 ), ExtResource( 47 ) ],
@@ -4889,9 +4422,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 53 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "idle_laser",
 "speed": 12.0
 } ]
 
@@ -4968,7 +4501,7 @@ curve = SubResource( 33 )
 
 [sub_resource type="ParticlesMaterial" id=35]
 emission_shape = 2
-emission_box_extents = Vector3( 965, 130, 1 )
+emission_box_extents = Vector3( 0, 130, 1 )
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
@@ -5365,10 +4898,10 @@ animations = [ {
 "name": "scream",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 99 ), ExtResource( 98 ) ],
-"loop": true,
-"name": "idle_laser",
-"speed": 5.0
+"frames": [ ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 106 ), ExtResource( 105 ) ],
 "loop": true,
@@ -5385,10 +4918,10 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ) ],
-"loop": false,
-"name": "to_scream",
-"speed": 12.0
+"frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 99 ), ExtResource( 98 ) ],
+"loop": true,
+"name": "idle_laser",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=47]
@@ -5403,6 +4936,11 @@ animations = [ {
 "name": "scream",
 "speed": 12.0
 }, {
+"frames": [ ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ) ],
+"loop": false,
+"name": "to_scream",
+"speed": 12.0
+}, {
 "frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 126 ) ],
 "loop": true,
 "name": "idle_angry",
@@ -5411,11 +4949,6 @@ animations = [ {
 "frames": [ ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ) ],
 "loop": false,
 "name": "to_angry",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 132 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ) ],
-"loop": false,
-"name": "to_scream",
 "speed": 12.0
 } ]
 
@@ -5449,9 +4982,9 @@ animations = [ {
 "name": "scream",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 153 ), ExtResource( 152 ) ],
-"loop": true,
-"name": "idle_laser",
+"frames": [ ExtResource( 165 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ) ],
+"loop": false,
+"name": "to_scream",
 "speed": 12.0
 }, {
 "frames": [ ExtResource( 158 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 160 ), ExtResource( 159 ) ],
@@ -5469,9 +5002,9 @@ animations = [ {
 "name": "to_laser",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 165 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ) ],
-"loop": false,
-"name": "to_scream",
+"frames": [ ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 153 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "idle_laser",
 "speed": 12.0
 } ]
 
@@ -5501,6 +5034,7 @@ scale_curve = SubResource( 53 )
 color_ramp = SubResource( 51 )
 
 [node name="Boss" type="Node2D"]
+position = Vector2( 0, -13.6938 )
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -5511,8 +5045,8 @@ anims/idle = SubResource( 2 )
 anims/idle_angry = SubResource( 3 )
 anims/laser_charge_down = SubResource( 4 )
 anims/laser_charge_up = SubResource( 5 )
-anims/laser_shot_down = SubResource( 6 )
-anims/laser_shot_up = SubResource( 7 )
+anims/laser_shot_down = ExtResource( 176 )
+anims/laser_shot_up = ExtResource( 177 )
 anims/last_scream = ExtResource( 174 )
 anims/scream = ExtResource( 175 )
 anims/tired_retreat = SubResource( 8 )
@@ -5532,7 +5066,7 @@ blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down"
 
 [node name="Scream" type="AudioStreamPlayer" parent="BossSfxLibrary"]
 stream = ExtResource( 171 )
-volume_db = -6.0
+volume_db = -23.0
 bus = "GameSfx"
 script = ExtResource( 2 )
 
@@ -5581,7 +5115,8 @@ next/to_scream = "first_scream"
 modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -900 )
 frames = SubResource( 21 )
-animation = "scream"
+animation = "idle"
+frame = 6
 centered = false
 script = ExtResource( 30 )
 
@@ -5589,15 +5124,15 @@ script = ExtResource( 30 )
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, -901 )
 frames = SubResource( 22 )
-animation = "scream"
+animation = "idle"
+frame = 6
 centered = false
 script = ExtResource( 30 )
 
 [node name="EyeOutline" type="Sprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 show_behind_parent = true
-position = Vector2( 632, 603 )
-rotation = -0.0110522
+position = Vector2( 471.117, 735.053 )
 texture = ExtResource( 57 )
 centered = false
 offset = Vector2( -40, -162 )
@@ -5607,7 +5142,7 @@ script = ExtResource( 30 )
 show_behind_parent = true
 margin_top = -100.0
 margin_right = 10.0
-margin_bottom = 160.0
+margin_bottom = 289.0
 color = Color( 1.56078, 0.219608, 0.211765, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -5769,8 +5304,8 @@ anims/charging = SubResource( 42 )
 
 [node name="IrisOutline" type="Sprite" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color( 0.12549, 0.0745098, 0.180392, 1 )
-position = Vector2( 291, 15 )
-rotation = -3.57698e-08
+position = Vector2( 288, 10 )
+rotation = -0.0384072
 texture = ExtResource( 68 )
 script = ExtResource( 30 )
 
@@ -5791,16 +5326,14 @@ self_modulate = Color( 0.780392, 0.223529, 0.211765, 1 )
 show_behind_parent = true
 position = Vector2( 476, 982 )
 frames = SubResource( 43 )
-animation = "scream"
 centered = false
 script = ExtResource( 77 )
 
 [node name="Teeth" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 show_behind_parent = true
-position = Vector2( 659.182, 836.19 )
+position = Vector2( 450.182, 1088.19 )
 frames = SubResource( 44 )
-animation = "scream"
 centered = false
 script = ExtResource( 84 )
 
@@ -5809,7 +5342,6 @@ self_modulate = Color( 0.152941, 0.309804, 0.270588, 1 )
 show_behind_parent = true
 position = Vector2( 597.804, 843.095 )
 frames = SubResource( 45 )
-animation = "scream"
 centered = false
 script = ExtResource( 88 )
 
@@ -5817,15 +5349,17 @@ script = ExtResource( 88 )
 self_modulate = Color( 0.137255, 0.4, 0.364706, 1 )
 position = Vector2( 8, 9 )
 frames = SubResource( 46 )
-animation = "scream"
+animation = "idle"
+frame = 6
 centered = false
 script = ExtResource( 116 )
 
 [node name="MouthLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 658.153, 857.54 )
+position = Vector2( 576.515, 1148.99 )
 frames = SubResource( 47 )
-animation = "scream"
+animation = "idle"
+frame = 6
 centered = false
 script = ExtResource( 30 )
 
@@ -5838,9 +5372,10 @@ script = ExtResource( 84 )
 
 [node name="EyeLines" type="AnimatedSprite" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
-position = Vector2( 561, 489 )
+position = Vector2( 499.867, 602.381 )
 frames = SubResource( 49 )
-animation = "scream"
+animation = "idle"
+frame = 6
 centered = false
 script = ExtResource( 30 )
 

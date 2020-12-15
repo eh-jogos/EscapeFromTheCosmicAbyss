@@ -220,6 +220,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [ false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 length = 0.01
@@ -390,6 +402,18 @@ tracks/13/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath(".:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -699,6 +723,26 @@ tracks/16/keys = {
 "update": 0,
 "values": [ Vector2( 20, 0 ) ]
 }
+tracks/17/type = "method"
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "shake_camera"
+}, {
+"args": [  ],
+"method": "shake_camera"
+}, {
+"args": [  ],
+"method": "shake_camera"
+} ]
+}
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 1, 0.219608, 0.207843, 1 )
@@ -774,9 +818,10 @@ position = Vector2( 0, -150 )
 
 [node name="OuterLaser" type="ColorRect" parent="Root"]
 visible = false
-margin_left = -76.0
-margin_right = 86.0
-margin_bottom = 40.0
+margin_left = -81.0
+margin_top = 1093.0
+margin_right = 81.0
+margin_bottom = 1106.0
 color = Color( 1.56, 0.22, 0.21, 1 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -839,6 +884,9 @@ __meta__ = {
 
 [node name="LaseEyeSkin" parent="Root" instance=ExtResource( 4 )]
 position = Vector2( 0, 14 )
+warning_color_1 = 1.0
+warning_color_2 = 1.0
+warning_color_3 = 1.0
 
 [node name="ChargingParticles" type="Particles2D" parent="Root/LaseEyeSkin"]
 self_modulate = Color( 1.1, 1.1, 1.1, 1 )
@@ -854,20 +902,20 @@ position = Vector2( -5, 0 )
 [node name="Left" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( -55, 4 )
+position = Vector2( -55, 1084 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Middle" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 5, 4 )
+position = Vector2( 5, 1084 )
 enabled = true
 cast_to = Vector2( 0, 60 )
 
 [node name="Right" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
-position = Vector2( 65, 4 )
+position = Vector2( 65, 1084 )
 enabled = true
 cast_to = Vector2( 0, 60 )

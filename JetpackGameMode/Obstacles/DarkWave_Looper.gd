@@ -35,5 +35,10 @@ func kill_player(offset):
 	darkwave_brain._on_kill_player(offset_x, flip_dead_player)
 	pass
 
+
+func shake_camera() -> void:
+	Global.emit_signal("shake_trauma_added", 6.0)
+
+
 func _on_player_killed():
 	game.game_over()
