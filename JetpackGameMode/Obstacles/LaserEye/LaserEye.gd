@@ -31,7 +31,7 @@ func _ready():
 
 func _physics_process(_delta):
 	if is_tracking:
-		global_position = Vector2(get_parent().player_position.x -480, global_position.y)
+		global_position.x = get_parent().player_position - 480
 	else:
 		global_position = global_position
 
@@ -86,3 +86,5 @@ func _on_cycle_ended():
 		game._on_scored(point_value)
 	
 	Global.achievements_handler.current_lasers += 1
+	
+	position = Vector2(0, POSITION_Y)

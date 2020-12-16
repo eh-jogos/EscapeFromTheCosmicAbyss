@@ -257,7 +257,9 @@ func handle_dash(delta, dash_force, heat):
 	#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
 	speed.y = 0
 	
-	heat += dash_cost
+	if not is_invincible:
+		heat += dash_cost
+	
 	if heat >= 100:
 		heat = 100
 		overheated = true
@@ -316,7 +318,8 @@ func reset_y():
 
 
 func can_dash(heat):
-	return not dashing and not overheated and heat <= OVERHEAT_THRESHOLD-dash_cost 
+	return (not dashing or is_invincible) \
+			and not overheated and heat <= OVERHEAT_THRESHOLD-dash_cost 
 
 
 func set_player_stats(is_tutorial: bool):
@@ -337,7 +340,7 @@ func set_player_stats(is_tutorial: bool):
 
 
 func take_hit():
-	if is_invincible and shield_energy <= 1:
+	if is_invincible:
 		return
 	
 	shield.decrease_energy(1)

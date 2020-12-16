@@ -36,7 +36,6 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/body_details/laser_eye_body_details_05.png" type="Texture" id=34]
 
 [sub_resource type="Animation" id=1]
-
 resource_name = "idle"
 length = 0.7
 loop = true
@@ -127,7 +126,6 @@ tracks/6/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=2]
-
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 4 ) ],
 "loop": false,
@@ -136,11 +134,8 @@ animations = [ {
 } ]
 
 [sub_resource type="Animation" id=3]
-
 resource_name = "BASE"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -155,11 +150,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-
 resource_name = "charging"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -174,11 +166,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-
 resource_name = "BASE"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -193,11 +182,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-
 resource_name = "charging"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -212,11 +198,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=7]
-
 resource_name = "BASE"
 length = 0.01
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -231,11 +214,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=8]
-
 resource_name = "charging"
 length = 0.5
-loop = false
-step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
@@ -250,7 +230,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="SpriteFrames" id=9]
-
 animations = [ {
 "frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ) ],
 "loop": true,
@@ -259,7 +238,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=10]
-
 animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 21 ) ],
 "loop": true,
@@ -268,7 +246,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=11]
-
 animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 26 ) ],
 "loop": true,
@@ -277,7 +254,6 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=12]
-
 animations = [ {
 "frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 31 ) ],
 "loop": true,
@@ -285,123 +261,79 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[node name="LaseEyeSkin" type="Node2D" index="0"]
-
+[node name="LaseEyeSkin" type="Node2D"]
 script = ExtResource( 1 )
-warning_color_1 = 0.0
-warning_color_2 = 0.0
-warning_color_3 = 0.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
-
-root_node = NodePath("..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/idle = SubResource( 1 )
-blend_times = [  ]
 
-[node name="Eye" type="Node2D" parent="." index="1"]
+[node name="Eye" type="Node2D" parent="."]
 
-[node name="EyeSilhouette" type="Sprite" parent="Eye" index="0"]
-
+[node name="EyeSilhouette" type="Sprite" parent="Eye"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Eye" type="Sprite" parent="Eye" index="1"]
-
+[node name="Eye" type="Sprite" parent="Eye"]
 self_modulate = Color( 0, 1, 0.764706, 1 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="ColorChange1" type="AnimatedSprite" parent="Eye/Eye" index="0"]
-
+[node name="ColorChange1" type="AnimatedSprite" parent="Eye/Eye"]
 self_modulate = Color( 0.78125, 1, 0, 1 )
 frames = SubResource( 2 )
 animation = "change_color"
 centered = false
 offset = Vector2( -99, -86 )
 script = ExtResource( 11 )
-_sections_unfolded = [ "Visibility" ]
-warning_level = "warning1"
 
-[node name="ColorChanger1" type="AnimationPlayer" parent="Eye/Eye/ColorChange1" index="0"]
-
-root_node = NodePath("..")
+[node name="ColorChanger1" type="AnimationPlayer" parent="Eye/Eye/ColorChange1"]
 autoplay = "BASE"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/BASE = SubResource( 3 )
 anims/charging = SubResource( 4 )
-blend_times = [  ]
 
-[node name="ColorChange2" type="AnimatedSprite" parent="Eye/Eye" index="1"]
-
+[node name="ColorChange2" type="AnimatedSprite" parent="Eye/Eye"]
 self_modulate = Color( 1, 0.515625, 0, 1 )
 frames = SubResource( 2 )
 animation = "change_color"
 centered = false
 offset = Vector2( -99, -86 )
 script = ExtResource( 11 )
-_sections_unfolded = [ "Visibility" ]
 warning_level = "warning2"
 
-[node name="ColorChanger2" type="AnimationPlayer" parent="Eye/Eye/ColorChange2" index="0"]
-
-root_node = NodePath("..")
+[node name="ColorChanger2" type="AnimationPlayer" parent="Eye/Eye/ColorChange2"]
 autoplay = "BASE"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/BASE = SubResource( 5 )
 anims/charging = SubResource( 6 )
-blend_times = [  ]
 
-[node name="ColorChange3" type="AnimatedSprite" parent="Eye/Eye" index="2"]
-
+[node name="ColorChange3" type="AnimatedSprite" parent="Eye/Eye"]
 self_modulate = Color( 1, 0, 0.257812, 1 )
 frames = SubResource( 2 )
 animation = "change_color"
 centered = false
 offset = Vector2( -99, -86 )
 script = ExtResource( 11 )
-_sections_unfolded = [ "Visibility" ]
 warning_level = "warning3"
 
-[node name="ColorChanger3" type="AnimationPlayer" parent="Eye/Eye/ColorChange3" index="0"]
-
-root_node = NodePath("..")
+[node name="ColorChanger3" type="AnimationPlayer" parent="Eye/Eye/ColorChange3"]
 autoplay = "BASE"
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
 anims/BASE = SubResource( 7 )
 anims/charging = SubResource( 8 )
-blend_times = [  ]
 
-[node name="Iris" type="Sprite" parent="Eye/Eye" index="3"]
-
+[node name="Iris" type="Sprite" parent="Eye/Eye"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 position = Vector2( 0, 64 )
 texture = ExtResource( 12 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="EyeShadow" type="Sprite" parent="Eye/Eye" index="4"]
-
+[node name="EyeShadow" type="Sprite" parent="Eye/Eye"]
 self_modulate = Color( 0.276263, 0.08638, 0.433594, 0.415294 )
 texture = ExtResource( 13 )
 centered = false
 offset = Vector2( -99, -86 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Body" type="AnimatedSprite" parent="." index="2"]
-
+[node name="Body" type="AnimatedSprite" parent="."]
 self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 position = Vector2( 0, -12 )
 frames = SubResource( 9 )
@@ -409,35 +341,27 @@ animation = "idle"
 centered = false
 offset = Vector2( -246, -181 )
 script = ExtResource( 19 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="BodySilhouette" type="AnimatedSprite" parent="Body" index="0"]
-
+[node name="BodySilhouette" type="AnimatedSprite" parent="Body"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 z_index = -1
+z_as_relative = false
 frames = SubResource( 10 )
 animation = "idle"
 offset = Vector2( 52, -49 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="Shadows" type="AnimatedSprite" parent="Body" index="1"]
-
+[node name="Shadows" type="AnimatedSprite" parent="Body"]
 self_modulate = Color( 0.133333, 0.396078, 0.360784, 1 )
 frames = SubResource( 11 )
 animation = "idle"
 centered = false
 offset = Vector2( -246, -181 )
 script = ExtResource( 19 )
-_sections_unfolded = [ "Visibility" ]
 
-[node name="InnerDetails" type="AnimatedSprite" parent="Body" index="2"]
-
+[node name="InnerDetails" type="AnimatedSprite" parent="Body"]
 self_modulate = Color( 0.0235294, 0.0823529, 0.0627451, 1 )
 frames = SubResource( 12 )
 animation = "idle"
 offset = Vector2( 1, 23 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Visibility" ]
-
-
