@@ -72,6 +72,7 @@ var is_invincible = false
 var is_retry = false
 var was_credits_called_from_extras = false
 var was_ending_called_from_extras = false
+var game
 
 #total sum of points that can be distributed in the player build in the base savedata
 var base_stats = 15

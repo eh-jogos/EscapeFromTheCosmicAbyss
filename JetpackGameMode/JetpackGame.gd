@@ -79,6 +79,11 @@ const STATE = {
 
 var current_state = STATE["Start"]
 
+
+func _init():
+	Global.game = self
+
+
 func _ready():
 	#TODO? - Change the nodes according to game mode?
 	tutorial = self.get_node("AboveScreen/TutorialTipScreen")

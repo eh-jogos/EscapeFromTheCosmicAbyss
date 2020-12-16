@@ -25,6 +25,7 @@ var laser_bar
 
 var up_label
 
+var is_closing = false
 
 ####################
 # Internal Methods #
@@ -82,6 +83,10 @@ func _on_Reset_pressed():
 		init_store("story")
 
 func _on_Close_pressed():
+	if is_closing:
+		return
+	
+	is_closing = true
 	_on_SaveApply_pressed()
 	
 	animator.play("close")
@@ -91,8 +96,7 @@ func _on_Close_pressed():
 	if is_story_mode():
 		ScreenManager.clear_above()
 	elif is_extra_mode():
-		var game = get_tree().get_root().get_node("JetpackGame")
-		game.game_start()
+		Global.game.game_start()
 		ScreenManager.clear_above()
 
 func is_extra_mode():
