@@ -285,9 +285,13 @@ func _on_LevelSelect_pressed():
 func _on_NextLevel_pressed():
 	Global.is_retry = false
 	var level = Global.savedata["story"]["current level"] + 1
-	Global.set_current_story_level(level)
-	 
-	restart_game()
+	
+	if OS.has_feature("demo") and level > 5:
+		var buy_screen_path = "res://CommonScenes/DemoThankYou/DemoThankYou.tscn"
+		ScreenManager.black_transition(buy_screen_path, next_level_btn, self, false)
+	else:
+		Global.set_current_story_level(level)
+		restart_game()
 
 
 func _on_WatchEnding_pressed() -> void:
