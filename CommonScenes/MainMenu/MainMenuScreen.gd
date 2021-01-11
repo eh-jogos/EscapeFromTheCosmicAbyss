@@ -22,7 +22,6 @@ onready var extras_scene = $ResourcePreloader.get_resource("ExtrasMenuScreen")
 onready var prompt_legend = $PromptLegendConfirmCancel
 
 func _ready():
-	
 	continue_btn = get_node("MenuContainer/Continue")
 	new_game_btn = get_node("MenuContainer/NewGame")
 	arcade_btn = get_node("MenuContainer/ArcadeMode")
@@ -120,6 +119,7 @@ func toggle_menuitems(should_grab_focus = true):
 		
 		if Global.is_tutorial_completed():
 			continue_btn.show()
+			new_game_btn.hide()
 			if should_grab_focus:
 				continue_btn.grab_focus()
 			
@@ -128,6 +128,7 @@ func toggle_menuitems(should_grab_focus = true):
 			quit_btn.set_focus_neighbour(MARGIN_BOTTOM, continue_btn.get_path())
 		else:
 			continue_btn.hide()
+			new_game_btn.show()
 			if should_grab_focus:
 				new_game_btn.grab_focus()
 			
