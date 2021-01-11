@@ -31,7 +31,7 @@ func _ready():
 
 func _physics_process(_delta):
 	if is_tracking:
-		global_position = Vector2(get_parent().player_position.x -480, global_position.y)
+		global_position.x = get_parent().player_position - 480
 	else:
 		global_position = global_position
 
@@ -72,6 +72,11 @@ func kill_player(_offset):
 	#at the end of that animation, either from a signal or by calling it directly, call _on_player_killed
 	_on_player_killed()
 
+
+func shake_camera() -> void:
+	Global.emit_signal("shake_trauma_added", 0.3)
+
+
 func _on_player_killed():
 	game.game_over()
 
@@ -81,3 +86,5 @@ func _on_cycle_ended():
 		game._on_scored(point_value)
 	
 	Global.achievements_handler.current_lasers += 1
+	
+	position = Vector2(0, POSITION_Y)

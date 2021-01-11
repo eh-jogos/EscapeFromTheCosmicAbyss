@@ -3,6 +3,10 @@ extends Node2D
 const MAX_SPEED_INCREMENT_PER_LAP = 1
 
 # Nodes this script will interact with
+export var path_player: NodePath = NodePath()
+export var path_final_boss: NodePath = NodePath()
+export var path_camera: NodePath = NodePath()
+
 var score_label
 var points_label
 var time_laps_label
@@ -33,7 +37,6 @@ export(String, FILE) var level_select_path = "res://CommonScenes/LevelSelectMenu
 export(String, FILE) var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 export(String, "story", "arcade", "speedrun") var test_mode = "story"
 export(int) var test_level_or_points = 0
-
 
 var game_settings = Global.get_game_mode()
 var game_mode = game_settings["game mode"]
@@ -76,6 +79,11 @@ const STATE = {
 
 var current_state = STATE["Start"]
 
+
+func _init():
+	Global.game = self
+
+
 func _ready():
 	#TODO? - Change the nodes according to game mode?
 	tutorial = self.get_node("AboveScreen/TutorialTipScreen")
@@ -93,11 +101,11 @@ func _ready():
 	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
 	speed_messager = self.get_node("HUD/SpeedLabel")
 	hud_animator = self.get_node("HUD/AnimationPlayer")
-	player = self.get_node("Player")
+	player = self.get_node(path_player)
 	level_loader = self.get_node("LevelLoader")
-	camera = self.get_node("Camera2D")
-	object_spawner = camera.get_node("ObstacleSpawner")
-	parallax_background = self.get_node("ParallaxBackground")
+	camera = self.get_node(path_camera)
+	object_spawner = self.get_node("RawLayer/WorldVieport/Viewport/Obstaculos/ObstacleSpawner")
+	parallax_background = self.get_node("RawLayer/WorldVieport/Viewport/ParallaxBackground")
 	
 	show_pre_game()
 
@@ -280,12 +288,15 @@ func load_level(level_choice, load_all = false, loop = false):
 			var laser_countdowns = level.bosses_nodes[key].laser_countdowns
 			var animation_countdowns = level.bosses_nodes[key].animation_countdowns
 			var animations = level.bosses_nodes[key].animations
+			var danger_duration = level.bosses_nodes[key].danger_durations
 			
 			if level.bosses_nodes[key].is_a_boss_level:
-				boss_node = get_node("Camera2D/FinalBoss/Boss")
-				boss_node.set_boss_data(laser_countdowns, animation_countdowns, animations)
+				boss_node = get_node(path_final_boss)
+				boss_node.set_boss_data(laser_countdowns, animation_countdowns, 
+						animations, danger_duration)
 			else:
-				boss_node = parallax_background.set_background_bosses(key, laser_countdowns, animation_countdowns, animations)
+				boss_node = parallax_background.set_background_bosses(\
+						key, laser_countdowns, animation_countdowns, animations, danger_duration)
 				
 			if boss_node != null:
 				if not object_spawner.is_connected("beat_spawned", boss_node, "_on_beat_spawned"):
@@ -334,7 +345,9 @@ func _on_scored(num):
 	#print("PL: %s | ML: %s"%[points_level, multiples_level])
 	
 	if points_level > last_point_level:
-		ammunition.add_ammo()
+		if not ammunition.is_maxed_out():
+			ammunition.add_ammo()
+			player.charge_ammo()
 		
 		print("initial_speed: %s | max_speed: %s"%[player.speed_x, max_speed])
 		if player.speed_x < max_speed:

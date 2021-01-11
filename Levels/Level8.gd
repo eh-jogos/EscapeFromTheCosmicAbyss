@@ -19,6 +19,7 @@ var boss = {
 	"boss_node": "MidBackRowBoss",
 	"animations": ["scream"],
 	"animations_countdowns": [5],
+	"danger_durations": [11],
 }
 
 var beats = {

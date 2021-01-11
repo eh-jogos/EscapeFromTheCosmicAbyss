@@ -12,8 +12,14 @@ func initialize_ammo(initial_ammo):
 		add_ammo()
 
 
+func is_maxed_out() -> bool:
+	return get_child_count() >= TOTAL_SLOTS
+
+
 func add_ammo():
-	if get_child_count() >= TOTAL_SLOTS: return
+	if is_maxed_out(): 
+		return
+	
 	var instance = ammo_packed_scene.instance()
 	add_child(instance, true)
 
@@ -26,7 +32,9 @@ func has_ammo():
 
 
 func use_ammo():
-	if get_child_count() == 0 : return false
+	if get_child_count() == 0 : 
+		return false
+	
 	var ammo = get_child(0)
 	
 	ammo.used()

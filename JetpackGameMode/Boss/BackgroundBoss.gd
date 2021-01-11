@@ -9,10 +9,12 @@ var animation_index = 0
 var laser_targets = []
 var animation_targets = []
 var animations = []
+var danger_durations = []
 
 var current_laser_target
 var current_animation_target
 var current_animation
+var current_danger_duration
 var up_down_count = 0
 
 
@@ -24,10 +26,11 @@ func _ready():
 # warning-ignore:shadowed_variable
 # warning-ignore:shadowed_variable
 # warning-ignore:shadowed_variable
-func set_boss_data(laser_targets, animation_targets, animations):
+func set_boss_data(laser_targets, animation_targets, animations, danger):
 	self.laser_targets = laser_targets
 	self.animation_targets = animation_targets
 	self.animations = animations
+	self.danger_durations = danger
 	
 	set_current_laser()
 	set_current_animation_variables()
@@ -43,6 +46,7 @@ func set_current_laser():
 func set_current_animation_variables():
 	current_animation_target = animation_targets[animation_index]
 	current_animation = animations[animation_index]
+	current_danger_duration = danger_durations[animation_index]
 
 
 func restart_count():
@@ -60,6 +64,7 @@ func _on_beat_spawned():
 		if animator.has_animation(current_animation):
 			print("BackgroundBoss | _on_beat_spawned | Animation! | key: %s"%[current_animation])
 			animator.play(current_animation)
+			Global.emit_signal("start_danger", current_danger_duration)
 		else:
 			print("BackgroundBoss | _on_beat_spawned | Invalid animation key: %s"%[current_animation])
 			assert(false)

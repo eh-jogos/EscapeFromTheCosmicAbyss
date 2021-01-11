@@ -16,9 +16,10 @@ func load_level(num, load_all, loop):
 					"is_a_boss_level" : level_info.boss.boss_level,
 					"animations" : level_info.boss.animations,
 					"animation_countdowns" : shift_countdowns_by(
-								level_info.boss.animations_countdowns, level["beats"].size()),
+								level_info.boss.animations_countdowns.duplicate(), level["beats"].size()),
 					"laser_countdowns" : shift_countdowns_by(
-								level_info.boss.laser_countdowns,level["beats"].size()),
+								level_info.boss.laser_countdowns.duplicate(),level["beats"].size()),
+					"danger_durations" : level_info.boss.danger_durations,
 				}
 			
 			build_level_procedurally()
@@ -49,6 +50,7 @@ func load_level(num, load_all, loop):
 				"animations" : level_info.boss.animations,
 				"animation_countdowns" : level_info.boss.animations_countdowns,
 				"laser_countdowns" : level_info.boss.laser_countdowns,
+				"danger_durations" : level_info.boss.danger_durations,
 			}
 		
 		build_level_procedurally()
@@ -69,8 +71,7 @@ func build_level_procedurally():
 	var total_count = sum_all_beats_and_halfs()
 	
 	var complete_level = []
-	for _x in range(total_count):
-		complete_level.append(null)
+	complete_level.resize(total_count)
 	
 	complete_level = add_fixed_sections_step(complete_level)
 	
@@ -120,8 +121,8 @@ func add_fixed_sections_step(level_array):
 	add_fixed_section(duplicate_level, intro_halfs, 1)
 	
 	if level_info.boss.scream:
-		var boss_scream_beats =  [] + level_info.boss["sequence_beats"]
-		var boss_scream_halfs =  [] + level_info.boss["sequence_halfs"]
+		var boss_scream_beats =  [] + level_info.boss["sequence_beats"].duplicate(true)
+		var boss_scream_halfs =  [] + level_info.boss["sequence_halfs"].duplicate(true)
 		
 		for scream_iteration in range(level_info.boss.countdown.size()):
 			var starting_beat = level_info.boss.countdown[scream_iteration] * 2

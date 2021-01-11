@@ -10,14 +10,21 @@ const OVERHEAT_THRESHOLD = 80
 # OTHER SCENES TO BE PRELOADED
 var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 
+
+# Paths to Outer Nodes I'll interact with
+export var path_game: NodePath
+export var path_points_label: NodePath
+
 # Outer Nodes I'll interact with
 var game
-var overheat_bar
-var overheat_bar_animator
 var points_label
 
 # Inside Nodes I'll interact with
+var overheat_bar
+var overheat_bar_animator
 var jet_particles
+var dash_particles: Particles2D
+var charge_particles: Particles2D
 var jet_sfx
 var body_animator
 var arms_animator
@@ -56,17 +63,21 @@ var speed = Vector2(0, 0)
 
 func _ready():
 	# Outer Nodes
-	game = self.get_parent()
-	overheat_bar = get_node("OverheatBar")
-	overheat_bar_animator = get_node("OverheatBar/AnimationPlayer")
-	points_label = game.get_node("HUD/CenterArea/Points")
+	game = get_node(path_game)
+	points_label = get_node(path_points_label)
 	
 	# Inside Nodes
-	jet_particles = self.get_node("JetParticles")
+	overheat_bar = get_node("OverheatBar")
+	overheat_bar_animator = get_node("OverheatBar/AnimationPlayer")
+	jet_particles = self.get_node("Skin/JetParticles")
 	jet_sfx = jet_particles.get_node("SamplePlayer")
+	dash_particles = get_node("Skin/FinalSkin/DashParticles")
+	dash_particles.emitting = false
+	charge_particles = get_node("Skin/FinalSkin/ChargeParticles")
+	charge_particles.emitting = false
 	body_animator = self.get_node("BodyAnimator")
 	arms_animator = self.get_node("ArmsAnimator")
-	bullet_spawn = self.get_node("BulletSpawn")
+	bullet_spawn = self.get_node("Skin/BulletSpawn")
 	shield = self.get_node("Shield")
 	
 	falling = true
@@ -124,6 +135,7 @@ func _physics_process(delta):
 			speed.y = 0
 		else:
 			dashing = false
+			dash_particles.emitting = dashing
 			emit_signal("dashing", dashing)
 			speed.x += speed_x*unit.x*delta
 			speed.x = clamp(speed.x, 0, speed_x*unit.x)
@@ -229,6 +241,7 @@ func handle_boost(delta, heat):
 		heat = 100
 		overheated = true
 		dashing = false
+		dash_particles.emitting = dashing
 	
 	return heat
 
@@ -244,11 +257,15 @@ func handle_dash(delta, dash_force, heat):
 	#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
 	speed.y = 0
 	
-	heat += dash_cost
+	if not is_invincible:
+		heat += dash_cost
+	
 	if heat >= 100:
 		heat = 100
 		overheated = true
 		dashing = false
+	
+	dash_particles.emitting = dashing
 	
 	return heat
 
@@ -301,7 +318,8 @@ func reset_y():
 
 
 func can_dash(heat):
-	return not dashing and not overheated and heat <= OVERHEAT_THRESHOLD-dash_cost 
+	return (not dashing or is_invincible) \
+			and not overheated and heat <= OVERHEAT_THRESHOLD-dash_cost 
 
 
 func set_player_stats(is_tutorial: bool):
@@ -322,7 +340,7 @@ func set_player_stats(is_tutorial: bool):
 
 
 func take_hit():
-	if is_invincible and shield_energy <= 1:
+	if is_invincible:
 		return
 	
 	shield.decrease_energy(1)
@@ -332,3 +350,7 @@ func _on_update_invincibility():
 	is_invincible = Global.is_invincible
 	if is_invincible and shield.energy == 0:
 		shield_up(1)
+
+
+func charge_ammo():
+	charge_particles.start_charge()

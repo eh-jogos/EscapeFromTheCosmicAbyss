@@ -487,28 +487,30 @@ tracks/10/keys = {
 "values": [ true ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("SfxCrushPlayer:play/play")
+tracks/11/path = NodePath("SfxCrushPlayer:playing")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
-tracks/11/enabled = false
+tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0.32 ),
-"transitions": PoolRealArray( 1 ),
-"update": 2,
-"values": [ "player_death_by_crushing" ]
+"times": PoolRealArray( 0, 0.08, 1.52 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
 }
-tracks/12/type = "value"
-tracks/12/path = NodePath("SfxCrushPlayer:playing")
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.08, 1.52 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, false ]
+"times": PoolRealArray( 0.32 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "shake_camera"
+} ]
 }
 
 [sub_resource type="SpriteFrames" id=3]
@@ -534,9 +536,9 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ) ],
+"frames": [ ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": false,
-"name": "spawn",
+"name": "crush",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 54 ) ],
@@ -544,9 +546,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"frames": [ ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 43 ) ],
 "loop": false,
-"name": "crush",
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 62 ), ExtResource( 61 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 60 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 54 ) ],
@@ -562,9 +564,9 @@ animations = [ {
 "name": "idle",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ) ],
+"frames": [ ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ) ],
 "loop": false,
-"name": "spawn",
+"name": "crush",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 98 ) ],
@@ -572,9 +574,9 @@ animations = [ {
 "name": "kill_player",
 "speed": 59.999
 }, {
-"frames": [ ExtResource( 88 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ) ],
+"frames": [ ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 86 ), ExtResource( 87 ) ],
 "loop": false,
-"name": "crush",
+"name": "spawn",
 "speed": 60.0
 }, {
 "frames": [ ExtResource( 97 ), ExtResource( 98 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 106 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 101 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 100 ), ExtResource( 99 ), ExtResource( 99 ), ExtResource( 98 ) ],
@@ -687,10 +689,12 @@ show_behind_parent = true
 position = Vector2( 215, 114 )
 frames = SubResource( 8 )
 animation = "dying"
+frame = 18
 offset = Vector2( -200, -200 )
 
 [node name="DeadPlayerOutline" type="AnimatedSprite" parent="TentaclePath/TentaclePosition/TentacleBottomStatic/TentacleBottom/DeadPlayer"]
 show_behind_parent = true
 frames = SubResource( 9 )
 animation = "dying"
+frame = 18
 offset = Vector2( -200, -200 )

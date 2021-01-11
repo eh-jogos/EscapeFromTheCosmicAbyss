@@ -4,19 +4,22 @@ var camera_offset_x = 0
 var target_offset_x = 0
 var base_offset = 0
 
+export var path_player: NodePath
+
 var player_position
 
-onready var player = get_node("../Player")
+onready var player = get_node(path_player)
 onready var tween = get_node("Tween")
-onready var obstacle_spawner = get_node("ObstacleSpawner")
+onready var shaker: Shaker = $Shaker
 
 func _ready():
 	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	Global.connect("shake_trauma_added", self, "_on_Global_shake_trauma_added")
 
 
 func _physics_process(_delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	player_position = player.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	set_position(Vector2(player.get_position().x+camera_offset_x,get_position().y))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	player_position = player.position.x
+	position.x = player_position + camera_offset_x
 
 
 func set_camera_offset_x(value, seconds, easing = Tween.EASE_IN):
@@ -46,3 +49,5 @@ func _on_ObstacleSpawner_setup_laser_eye():
 	laser_eye.start()
 
 
+func _on_Global_shake_trauma_added(trauma: float) -> void:
+	shaker.add_trauma(trauma)
