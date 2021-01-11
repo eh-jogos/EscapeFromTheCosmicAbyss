@@ -29,7 +29,7 @@ func init_level_map():
 func unlock_levels():
 	if last_unlocked_level < levels_unlocked:
 		var animations_to_play: = []
-		while last_unlocked_level < levels_unlocked:
+		while last_unlocked_level < levels_unlocked :
 			print("Last: %s | All: %s"%[last_unlocked_level, levels_unlocked])
 			var animation_name = 0
 			if last_unlocked_level < 10:
@@ -68,6 +68,10 @@ func _ready():
 	last_played_level = Global.savedata["story"]["current level"]
 	last_unlocked_level = Global.savedata["story"]["last unlock"] 
 	levels_unlocked = Global.savedata["story"]["levels unlocked"]
+	
+	if OS.has_feature("demo") or get_tree().get_current_scene() == self:
+		levels_unlocked = min(levels_unlocked, 5)
+		last_unlocked_level = min(last_unlocked_level, 5)
 	
 	init_level_map()
 	

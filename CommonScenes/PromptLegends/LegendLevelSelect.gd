@@ -12,6 +12,7 @@ extends BaseLegend
 
 ### Built in Engine Methods ---------------
 func _ready():
+	ScreenManager.connect("scene_above_cleared", self, "_on_ScreenManager_scene_above_cleared")
 	pass
 
 ### ---------------------------------------
@@ -28,5 +29,9 @@ func hide_cancel_prompt():
 
 
 ### Private Methods -----------------------
+
+func _on_ScreenManager_scene_above_cleared(current_scene: Node) -> void:
+	if current_scene == owner:
+		show()
 
 ### ---------------------------------------
