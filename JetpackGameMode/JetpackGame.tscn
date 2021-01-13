@@ -1874,6 +1874,11 @@ path_player = NodePath("../Player")
 
 [node name="Shaker" type="Node" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 script = ExtResource( 88 )
+shake_target = NodePath("..")
+decay = 0.8
+max_offset = Vector2( 100, 75 )
+max_roll = 0.1
+trauma = 0.0
 
 [node name="Tween" type="Tween" parent="RawLayer/WorldVieport/Viewport/Camera2D"]
 
@@ -1924,6 +1929,11 @@ blend_times = [ "entrance", "idle", 0.05, "laser_charge_down", "laser_shot_down"
 
 [node name="Scream" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/BossSfxLibrary" index="0"]
 volume_db = -6.0
+
+[node name="FinalBossSkin" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss" index="3"]
+warning_color_1 = 0.0
+warning_color_2 = 0.0
+warning_color_3 = 0.0
 
 [node name="BodyOutline" parent="RawLayer/WorldVieport/Viewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="1"]
 animation = "scream"
@@ -2030,6 +2040,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 stretch = true
 script = ExtResource( 83 )
+blur_amount = 1.0
 
 [node name="Viewport" type="Viewport" parent="RawLayer/WorldVieport/Viewport/ParallaxBackground/Parallax3Viewport"]
 size = Vector2( 1960, 1120 )
@@ -2710,9 +2721,9 @@ visible = false
 [connection signal="level_ready" from="RawLayer/WorldVieport/Viewport/Obstaculos/ObstacleSpawner" to="HUD/ProgressVisualization" method="generate_visualization"]
 [connection signal="setup_laser_eye" from="RawLayer/WorldVieport/Viewport/Obstaculos/ObstacleSpawner" to="RawLayer/WorldVieport/Viewport/Camera2D" method="_on_ObstacleSpawner_setup_laser_eye"]
 [connection signal="update_visualization" from="RawLayer/WorldVieport/Viewport/Obstaculos/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
-[connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask2" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="ProcessedLayer/PostProcessedGame" method="_on_ShockwaveGuide_position_changed"]
+[connection signal="position_changed" from="ProcessedLayer/ShockwaveGuide" to="RawLayer/MaskViewport/Viewport/TorusMask" method="_on_ShockwaveGuide_position_changed"]
 [connection signal="sort_children" from="HUD/Meters/Ammunition" to="HUD/Meters/Ammunition" method="_on_Ammunition_sort_children"]
 [connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
 
