@@ -12,7 +12,10 @@ extends Label
 
 ### Built in Engine Methods ---------------
 func _ready():
-	text = ProjectSettings.get("application/config/version")
+	if OS.has_feature("demo"):
+		text = "%s-demo"%[ProjectSettings.get("application/config/version")]
+	else:
+		text = ProjectSettings.get("application/config/version")
 	pass
 
 ### ---------------------------------------

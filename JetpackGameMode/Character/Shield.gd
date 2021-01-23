@@ -1,9 +1,14 @@
+tool
 extends Area2D
+
+export var call_method_increase_energy: = {"text": "Increase Energy", "arguments": [3]}
+export var call_method_decrease_energy: = {"text": "Decrease Energy", "arguments": [3]}
 
 # node variables
 var player
 var shield_animator
-var shield_sprite
+
+onready var shield_bubble = $ShieldBubble
 
 # member variables
 var energy = 0
@@ -14,7 +19,6 @@ const MAX_SHIELD = 3
 func _ready():
 	player = self.get_parent()
 	shield_animator = self.get_node("ShieldAnimator")
-	shield_sprite = self.get_node("Sprite")
 	
 	shield_animator.play("disabled")
 
@@ -28,44 +32,31 @@ func modulate_shield(should_mute = false):
 	
 	if energy == 0:
 		shield_animator.play("disabled")
-	elif energy == 1:
-		shield_sprite.set_modulate(Color(0,0.96,1,1))
-		shield_animator.play("open")
-	elif energy == 2:
-		shield_sprite.set_modulate(Color(0.6,0.27,1,1))
-		if animation == "burst" or animation == "disabled":
-			shield_animator.play("open")
-	elif energy == 3:
-		shield_sprite.set_modulate(Color(0.84,0,1,1))
-		if animation == "burst" or animation == "disabled":
-			shield_animator.play("open")
-	else:
-		print("SHIELD ERROR | UNKNOW VALUE OF ENERGY: %s"%[energy])
 	
-	player.shield_energy = energy
+	if not Engine.editor_hint:
+		player.shield_energy = energy
+
 
 func increase_energy(increment, should_mute = false):
-	if energy+increment > MAX_SHIELD:
-		energy = MAX_SHIELD
-	elif energy+increment <= MAX_SHIELD:
-		energy += increment
-	else:
-		print("SHIELD ERROR | UNKNOW VALUE OF INCREMENT: %s"%[increment])
-	
-	Global.emit_signal("shield_energy_updated_to", energy)
-	print("Shield Energy: %s | Incremet: %s"%[energy,increment])
-	
-	modulate_shield(should_mute)
+	for _index in range(1, increment + 1):
+		energy = min(energy + 1, MAX_SHIELD)
+		
+		Global.emit_signal("shield_energy_updated_to", energy)
+		print("Shield Energy: %s | Incremet: %s"%[energy,increment])
+		
+		shield_animator.play("open")
+		modulate_shield(should_mute)
+		shield_bubble.energy = energy
+		yield(shield_animator, "animation_finished")
 
 func decrease_energy(increment):
-	if energy-increment < 0:
-		energy = 0
-	elif energy-increment >= 0:
-		energy -= increment
-	else:
-		print("SHIELD ERROR | UNKNOW VALUE OF INCREMENT: %s"%[increment])
-	
-	Global.emit_signal("shield_energy_updated_to", energy)
-	shield_animator.play("burst")
-	yield(shield_animator, "animation_finished")
-	modulate_shield(true)
+	for _index in range(1, increment + 1):
+		energy = max(energy - 1, 0)
+		
+		Global.emit_signal("shield_energy_updated_to", energy)
+		print("Shield Energy: %s | Incremet: %s"%[energy,increment])
+		
+		shield_animator.play("burst")
+		yield(shield_animator, "animation_finished")
+		modulate_shield(true)
+		shield_bubble.energy = energy

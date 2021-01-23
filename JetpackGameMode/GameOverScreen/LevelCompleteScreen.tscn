@@ -888,8 +888,8 @@ theme = ExtResource( 11 )
 alignment = 1
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 163.0
-margin_right = 468.0
+margin_left = 185.0
+margin_right = 490.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Main Menu"
@@ -898,8 +898,8 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 472.0
-margin_right = 822.0
+margin_left = 494.0
+margin_right = 844.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Stage Select"
@@ -908,8 +908,8 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 826.0
-margin_right = 1136.0
+margin_left = 848.0
+margin_right = 1158.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Play Again"
@@ -918,8 +918,8 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1140.0
-margin_right = 1399.0
+margin_left = 1162.0
+margin_right = 1421.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 text = "Upgrade"
@@ -930,9 +930,8 @@ pressed_sfx = "Confirm"
 [node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource( 23 )]
 
 [node name="NextLevel" type="Button" parent="ResultsContainer/Buttons"]
-visible = false
-margin_left = 1246.0
-margin_right = 1556.0
+margin_left = 1425.0
+margin_right = 1735.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 theme = ExtResource( 18 )
@@ -942,8 +941,9 @@ script = ExtResource( 14 )
 pressed_sfx = "Confirm"
 
 [node name="WatchEnding" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1403.0
-margin_right = 1757.0
+visible = false
+margin_left = 1560.0
+margin_right = 1914.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 192, 0 )
 theme = ExtResource( 18 )

@@ -63,9 +63,7 @@ text = "Continue"
 script = ExtResource( 5 )
 pressed_sfx = "Confirm"
 
-[node name="NewGame" type="Button" parent="MenuContainer" groups=[
-"mainmenu",
-]]
+[node name="NewGame" type="Button" parent="MenuContainer"]
 margin_top = 418.0
 margin_right = 610.0
 margin_bottom = 474.0
@@ -203,6 +201,7 @@ __meta__ = {
 [node name="PromptLegendConfirmCancel" parent="." instance=ExtResource( 10 )]
 
 [node name="RootControl" parent="PromptLegendConfirmCancel" index="1"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_top = 0.0
 margin_top = 1034.0
 margin_bottom = -46.0

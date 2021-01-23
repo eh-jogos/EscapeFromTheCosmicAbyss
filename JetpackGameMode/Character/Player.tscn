@@ -1,4 +1,4 @@
-[gd_scene load_steps=539 format=2]
+[gd_scene load_steps=545 format=2]
 
 [ext_resource path="res://JetpackGameMode/Character/Jetpack_Astronaut.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/Character/OutlineAnimations/Falling/Body/falling_body_outline0000.png" type="Texture" id=2]
@@ -492,7 +492,6 @@
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_23.png" type="Texture" id=490]
 [ext_resource path="res://JetpackGameMode/Character/Animations/Fall_to_Rise/ArmFront/Armature_arm_front_fall_to_rise_24.png" type="Texture" id=491]
 [ext_resource path="res://JetpackGameMode/Character/Shield.gd" type="Script" id=492]
-[ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=493]
 [ext_resource path="res://JetpackGameMode/Character/OverheatBar.tscn" type="PackedScene" id=494]
 [ext_resource path="res://JetpackGameMode/Character/Fxs/jetpack_particle.png" type="Texture" id=495]
 [ext_resource path="res://JetpackGameMode/Character/jetpack_particles.tres" type="Material" id=496]
@@ -502,6 +501,9 @@
 [ext_resource path="res://JetpackGameMode/Character/Fxs/white_glowing_circle.png" type="Texture" id=500]
 [ext_resource path="res://JetpackGameMode/Character/ChargeParticles.gd" type="Script" id=501]
 [ext_resource path="res://JetpackGameMode/HUD/pngs/ammo.png" type="Texture" id=502]
+[ext_resource path="res://Shaders/shield.shader" type="Shader" id=503]
+[ext_resource path="res://JetpackGameMode/Character/ShieldBubble.gd" type="Script" id=504]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/shield_dissolve_linear_gradient.tres" type="Gradient" id=505]
 
 [sub_resource type="World" id=1]
 
@@ -550,14 +552,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -583,14 +585,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 208 ), ExtResource( 209 ), ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ), ExtResource( 213 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ), ExtResource( 192 ), ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ), ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -639,14 +641,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 364 ), ExtResource( 365 ), ExtResource( 366 ), ExtResource( 367 ), ExtResource( 368 ), ExtResource( 369 ), ExtResource( 370 ), ExtResource( 371 ), ExtResource( 372 ), ExtResource( 373 ), ExtResource( 374 ), ExtResource( 375 ), ExtResource( 376 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 345 ), ExtResource( 346 ), ExtResource( 347 ), ExtResource( 348 ), ExtResource( 349 ), ExtResource( 350 ), ExtResource( 351 ), ExtResource( 352 ), ExtResource( 353 ), ExtResource( 354 ), ExtResource( 355 ), ExtResource( 356 ), ExtResource( 357 ), ExtResource( 358 ), ExtResource( 359 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 362 ), ExtResource( 363 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -672,14 +674,14 @@ animations = [ {
 "name": "fall_to_rise",
 "speed": 60.0
 }, {
-"frames": [ ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ) ],
-"loop": true,
-"name": "reloading",
-"speed": 60.0
-}, {
 "frames": [ ExtResource( 454 ), ExtResource( 455 ), ExtResource( 456 ), ExtResource( 457 ), ExtResource( 458 ), ExtResource( 459 ), ExtResource( 460 ), ExtResource( 461 ), ExtResource( 462 ), ExtResource( 463 ), ExtResource( 464 ), ExtResource( 465 ), ExtResource( 466 ) ],
 "loop": true,
 "name": "rising",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 435 ), ExtResource( 436 ), ExtResource( 437 ), ExtResource( 438 ), ExtResource( 439 ), ExtResource( 440 ), ExtResource( 441 ), ExtResource( 442 ), ExtResource( 443 ), ExtResource( 444 ), ExtResource( 445 ), ExtResource( 446 ), ExtResource( 447 ), ExtResource( 448 ), ExtResource( 449 ), ExtResource( 450 ), ExtResource( 451 ), ExtResource( 452 ), ExtResource( 453 ) ],
+"loop": true,
+"name": "reloading",
 "speed": 60.0
 } ]
 
@@ -2579,175 +2581,31 @@ tracks/15/keys = {
 extents = Vector2( 24.6781, 27.1512 )
 
 [sub_resource type="CircleShape2D" id=31]
-radius = 80.0
+radius = 75.0
 
-[sub_resource type="Animation" id=32]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:modulate:a")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath(".:monitoring")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath(".:monitorable")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
+[sub_resource type="GradientTexture" id=32]
+gradient = ExtResource( 505 )
 
-[sub_resource type="Animation" id=33]
-length = 0.4
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.69482, 1.69482 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:modulate:a")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath(".:monitoring")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath(".:monitorable")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("SfxLibrary/ShieldPop:playing")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
+[sub_resource type="ShaderMaterial" id=33]
+shader = ExtResource( 503 )
+shader_param/torus_thickness = 0.011
+shader_param/torus_radius = 0.367
+shader_param/torus_center = Vector2( 0.5, 0.5 )
+shader_param/torus_resolution = Vector2( 1, 1 )
+shader_param/inner_opacity = 0.5
+shader_param/burn_size = 0.08
+shader_param/dissolve_amount = 1.0
+shader_param/emission_amount = 1.6
+shader_param/has_shield_below = false
+shader_param/color_in = Color( 0.443137, 0.443137, 1, 0 )
+shader_param/color_out = Color( 0.443137, 0.443137, 1, 0 )
+shader_param/dissolve_texture = SubResource( 32 )
 
 [sub_resource type="Animation" id=34]
-length = 0.1
+length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
+tracks/0/path = NodePath(".:material:shader_param/torus_thickness")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2755,73 +2613,28 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:modulate:a")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath(".:monitoring")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath(".:monitorable")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ false ]
+"values": [ 0.011 ]
 }
 
 [sub_resource type="Animation" id=35]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/torus_thickness")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.011, 0.018, 0.011 ]
+}
+
+[sub_resource type="Animation" id=36]
 length = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath(".:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2829,11 +2642,11 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"update": 1,
+"values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
+tracks/1/path = NodePath(".:monitorable")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2841,11 +2654,11 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
+"update": 1,
+"values": [ true ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:modulate:a")
+tracks/2/path = NodePath("ShieldBubble:material:shader_param/dissolve_amount")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2856,116 +2669,161 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath(".:monitoring")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath(".:monitorable")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
 
-[sub_resource type="Animation" id=36]
-length = 0.2
+[sub_resource type="Animation" id=37]
+length = 0.4
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath(".:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1.7854, 10.6384 ), Vector2( 0, 0 ) ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
+tracks/1/path = NodePath(".:monitorable")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0.0896026, 0.0896026 ), Vector2( 1, 1 ) ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:modulate:a")
+tracks/2/path = NodePath("ShieldBubble:material:shader_param/dissolve_amount")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2 ),
+"times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("Sprite:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
+
+[sub_resource type="Animation" id=38]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:monitorable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ShieldBubble:material:shader_param/dissolve_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=39]
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
-tracks/4/type = "value"
-tracks/4/path = NodePath(".:monitoring")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:monitorable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
-tracks/5/type = "value"
-tracks/5/path = NodePath(".:monitorable")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
+tracks/2/type = "value"
+tracks/2/path = NodePath("ShieldBubble:material:shader_param/dissolve_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=40]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:monitorable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ShieldBubble:material:shader_param/dissolve_amount")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0 ]
 }
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -3023,13 +2881,11 @@ animation = "falling"
 [node name="ArmBackOutline" type="AnimatedSprite" parent="Skin/ViewportContainer/Viewport/BodyOutline"]
 show_behind_parent = true
 frames = SubResource( 3 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
 
 [node name="ArmFrontOutline" type="AnimatedSprite" parent="Skin/ViewportContainer/Viewport/BodyOutline"]
 frames = SubResource( 4 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
 
 [node name="Body" type="AnimatedSprite" parent="Skin/ViewportContainer/Viewport"]
 position = Vector2( 71, 64 )
@@ -3039,13 +2895,11 @@ animation = "falling"
 [node name="ArmBack" type="AnimatedSprite" parent="Skin/ViewportContainer/Viewport/Body"]
 show_behind_parent = true
 frames = SubResource( 6 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
 
 [node name="ArmFront" type="AnimatedSprite" parent="Skin/ViewportContainer/Viewport/Body"]
 frames = SubResource( 7 )
-animation = "rise_to_fall"
-frame = 12
+animation = "falling"
 
 [node name="JetParticles" type="Particles2D" parent="Skin"]
 position = Vector2( -537.497, 27.8015 )
@@ -3133,26 +2987,53 @@ scale = Vector2( 1, 1.07969 )
 shape = SubResource( 30 )
 
 [node name="Shield" type="Area2D" parent="."]
+pause_mode = 2
 position = Vector2( -485, 0 )
 input_pickable = false
+monitoring = false
+monitorable = false
 script = ExtResource( 492 )
+call_method_increase_energy = {
+"arguments": [ 1 ],
+"text": "Increase Energy"
+}
+call_method_decrease_energy = {
+"arguments": [ 3 ],
+"text": "Decrease Energy"
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
 visible = false
 shape = SubResource( 31 )
 
-[node name="Sprite" type="Sprite" parent="Shield"]
-visible = false
-modulate = Color( 0.6, 0.27, 1, 1 )
-texture = ExtResource( 493 )
+[node name="ShieldBubble" type="ColorRect" parent="Shield"]
+self_modulate = Color( 1.15, 1.15, 1.15, 1 )
+material = SubResource( 33 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -100.0
+margin_right = 100.0
+margin_bottom = 100.0
+script = ExtResource( 504 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shield/ShieldBubble"]
+autoplay = "base"
+anims/base = SubResource( 34 )
+anims/idle = SubResource( 35 )
 
 [node name="ShieldAnimator" type="AnimationPlayer" parent="Shield"]
 autoplay = "disabled"
-anims/base = SubResource( 32 )
-anims/burst = SubResource( 33 )
-anims/disabled = SubResource( 34 )
-anims/idle = SubResource( 35 )
-anims/open = SubResource( 36 )
+anims/base = SubResource( 36 )
+anims/burst = SubResource( 37 )
+anims/disabled = SubResource( 38 )
+anims/idle = SubResource( 39 )
+anims/open = SubResource( 40 )
 next/open = "idle"
 
 [node name="SfxLibrary" type="Node" parent="Shield"]

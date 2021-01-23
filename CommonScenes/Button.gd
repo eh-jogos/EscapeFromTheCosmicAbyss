@@ -1,3 +1,4 @@
+class_name BasicGameButton
 extends BaseButton
 
 export(String, "Confirm", "Change") var pressed_sfx = "Change"
