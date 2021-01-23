@@ -7,7 +7,7 @@ export_output=$2
 
 if [[ -z $include_debug || $include_debug = "false" ]]
 then
-   	include_debug=false
+	include_debug=false
 elif [[ $include_debug = "true" ]]
 then
 	include_debug=true
