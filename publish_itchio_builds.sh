@@ -1,4 +1,7 @@
 #!/bin/zsh
+
+main_folder=${PWD##*/}
+
 project_settings="project.godot"
 export_configs="export_presets.cfg"
 build_folder=$(cat $project_settings | grep "^config/build_folder" | cut -d'=' -f2)
@@ -32,19 +35,26 @@ fi
 # for OSX you can just send the zip directly
 function push_linux {
 	echo $itch_game_adress
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux32 $itch_game_adress\:linux32
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux64 $itch_game_adress\:linux64
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux32 $itch_game_adress\:linux32
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux32_demo $itch_game_adress\:linux32_demo
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux64 $itch_game_adress\:linux64
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssLinux64_demo $itch_game_adress\:linux64_demo
 }
 
 function push_windows {
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssWindows32 $itch_game_adress:windows32
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssWindows64 $itch_game_adress:windows64
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssWindows32 $itch_game_adress:windows32
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssWindows32_demo $itch_game_adress:windows32_demo
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssWindows64 $itch_game_adress:windows64
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssWindows64_demo $itch_game_adress:windows64_demo
 }
 
 function push_osx {
-	butler push --userversion=$game_version $base_builds_path/CosmicAbyssOSX $itch_game_adress:osx-universal
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssOSX $itch_game_adress:osx-universal
+	./butler push --userversion=$game_version $base_builds_path/CosmicAbyssOSX_demo $itch_game_adress:osx-universal_demo
 }
 
+
+cd butler
 
 case $builds_to_push in
 	"linux")
