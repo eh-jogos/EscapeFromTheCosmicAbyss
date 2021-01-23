@@ -41,22 +41,26 @@ func increase_energy(increment, should_mute = false):
 	for _index in range(1, increment + 1):
 		energy = min(energy + 1, MAX_SHIELD)
 		
-		Global.emit_signal("shield_energy_updated_to", energy)
-		print("Shield Energy: %s | Incremet: %s"%[energy,increment])
-		
-		shield_animator.play("open")
-		modulate_shield(should_mute)
-		shield_bubble.energy = energy
-		yield(shield_animator, "animation_finished")
+		if shield_bubble.energy != energy:
+			Global.emit_signal("shield_energy_updated_to", energy)
+			print("Shield Energy: %s | Incremet: %s"%[energy,increment])
+			
+			shield_animator.play("open")
+			modulate_shield(should_mute)
+			shield_bubble.energy = energy
+			yield(shield_animator, "animation_finished")
+		else:
+			Global.game._on_scored(5)
 
 func decrease_energy(increment):
 	for _index in range(1, increment + 1):
 		energy = max(energy - 1, 0)
 		
-		Global.emit_signal("shield_energy_updated_to", energy)
-		print("Shield Energy: %s | Incremet: %s"%[energy,increment])
-		
-		shield_animator.play("burst")
-		yield(shield_animator, "animation_finished")
-		modulate_shield(true)
-		shield_bubble.energy = energy
+		if shield_bubble.energy != energy:
+			Global.emit_signal("shield_energy_updated_to", energy)
+			print("Shield Energy: %s | Incremet: %s"%[energy,increment])
+			
+			shield_animator.play("burst")
+			yield(shield_animator, "animation_finished")
+			modulate_shield(true)
+			shield_bubble.energy = energy

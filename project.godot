@@ -90,7 +90,7 @@ config/name="Escape From The Cosmic Abyss"
 run/main_scene="res://CommonScenes/eh_jogos/SplashScreen.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
-config/version="v1.2.0"
+config/version="v1.2.1"
 config/build_folder="v1.2"
 
 [autoload]
