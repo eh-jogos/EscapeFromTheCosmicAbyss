@@ -10,7 +10,7 @@ func can_handle(object):
 func parse_property(object, type, path, hint, hint_text, usage):
 	var should_handle: = false
 	if type == TYPE_DICTIONARY:
-		if path.find(InspectorButtonWidget.PATH_PREFIX) != -1:
+		if path.find(PATH_PREFIX) != -1:
 			var button = button_scene.instance()
 			add_custom_control(button)
 			button.object = object

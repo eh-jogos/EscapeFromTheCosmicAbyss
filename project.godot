@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://CommonScenes/Button.gd"
 }, {
+"base": "Button",
+"class": "InspectorButton",
+"language": "GDScript",
+"path": "res://addons/eh_jogos.export_button/ui/inspector_button.gd"
+}, {
 "base": "Node",
 "class": "JS_Config",
 "language": "GDScript",
@@ -70,6 +75,7 @@ _global_script_class_icons={
 "BaseArrowsButton": "",
 "BaseLegend": "",
 "BasicGameButton": "",
+"InspectorButton": "",
 "JS_Config": "",
 "JS_InputMapAction": "",
 "JS_InputMapProfiles": "",
@@ -83,8 +89,8 @@ _global_script_class_icons={
 config/name="Escape From The Cosmic Abyss"
 run/main_scene="res://CommonScenes/eh_jogos/SplashScreen.tscn"
 config/icon="res://icon.png"
-config/version="v1.1.8"
-config/build_folder="v1.1"
+config/version="v1.2.0"
+config/build_folder="v1.2"
 
 [autoload]
 
@@ -106,6 +112,10 @@ window/size/test_width=960
 window/size/test_height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "eh_jogos.export_button" )
 
 [importer_defaults]
 
