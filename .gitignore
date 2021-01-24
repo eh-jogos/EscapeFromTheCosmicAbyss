@@ -25,6 +25,7 @@ data_*/
 
 
 # Steam-specific ignores
+_00_steam_publishing_scripts/*
 libsteam_api.so
 steam_api64.*
 
