@@ -28,6 +28,3 @@ data_*/
 _00_steam_publishing_scripts/*
 libsteam_api.so
 steam_api64.*
-
-# Itch.io specific ignores
-butler/
