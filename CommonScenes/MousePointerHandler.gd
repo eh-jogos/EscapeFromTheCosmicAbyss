@@ -48,6 +48,7 @@ func _input(event):
 
 
 ### Public Methods ------------------------
+
 func set_active_mouse_mode(value: int) -> void:
 	if is_valid_mouse_moude(value):
 		active_mouse_mode = value

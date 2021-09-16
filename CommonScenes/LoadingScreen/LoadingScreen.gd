@@ -26,6 +26,8 @@ var previous_focuses = []
 
 var loading_path = ""
 
+var _loading_thread: Thread = Thread.new()
+
 func _ready():
 	animation = self.get_node("AnimationPlayer")
 	progress_bar = self.get_node("ColorRect/TextureProgress")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
@@ -144,8 +146,11 @@ func load_screen(path):
 
 func load_screen_invisible(path):
 	load_without_animation = true
-	var loading_thread = Thread.new()
-	var thread_status = loading_thread.start(self, "background_loading", path)
+	
+	if _loading_thread.is_active():
+		_loading_thread.wait_to_finish()
+	
+	var thread_status = _loading_thread.start(self, "background_loading", path)
 	if thread_status == OK:
 		var results_dict: Dictionary = yield(self, "background_loading_finished")
 		if results_dict.error == OK: 
@@ -156,9 +161,7 @@ func load_screen_invisible(path):
 	else:
 		push_error("Error while starting thread for %s | Error: %s"%[path, thread_status])
 		assert(false)
-
-	if loading_thread.is_active():
-		loading_thread.wait_to_finish()
+	
 	set_process(true)
 
 
