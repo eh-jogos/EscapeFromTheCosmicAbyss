@@ -12,9 +12,9 @@ extends BasicGameButton
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
-export var _prompt_path: NodePath = NodePath(".")
+@export var _prompt_path: NodePath = NodePath(".")
 
-onready var _prompt: BaseLegend = get_node(_prompt_path) as BaseLegend
+@onready var _prompt: BaseLegend = get_node(_prompt_path) as BaseLegend
 
 ### -----------------------------------------------------------------------------------------------
 
@@ -29,8 +29,8 @@ func _ready():
 		hide()
 		disabled = true
 	
-	yield(owner, "ready")
-	focus_neighbour_top = get_path_to(owner.initial_btn)
+	await owner.ready
+	focus_neighbor_top = get_path_to(owner.initial_btn)
 
 
 func _pressed() -> void:

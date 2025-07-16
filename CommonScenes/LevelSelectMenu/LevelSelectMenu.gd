@@ -42,7 +42,7 @@ func unlock_levels():
 		for animation_name in animations_to_play:
 			print("Playing animation: %s"%[animation_name])
 			map_animator.play(animation_name)
-			yield(get_tree().create_timer(map_animator.current_animation_length), "timeout")
+			await get_tree().create_timer(map_animator.current_animation_length).timeout
 		
 		print("Last: %s | All: %s"%[last_unlocked_level, levels_unlocked])
 		Global.update_story_last_unlock(last_unlocked_level)
@@ -86,7 +86,7 @@ func _ready():
 		$LegendLevelSelect.hide_cancel_prompt()
 	
 	animator.play("open")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	unlock_levels()
 

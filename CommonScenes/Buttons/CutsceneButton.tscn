@@ -13,8 +13,8 @@ tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -30,8 +30,8 @@ tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.5 ]
 }
@@ -42,13 +42,13 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags_horizontal = 1
 size_flags_vertical = 1
-margin_left = 829.0
-margin_top = 0.0
-margin_right = 908.0
-margin_bottom = 57.0
-custom_constants/hseparation = 50
+offset_left = 829.0
+offset_top = 0.0
+offset_right = 908.0
+offset_bottom = 57.0
+theme_override_constants/h_separation = 50
 toggle_mode = false
-enabled_focus_mode = 2
+focus_mode = 2
 shortcut = null
 text = "Next"
 flat = false

@@ -1,9 +1,9 @@
 extends CanvasLayer
 
-export(String, FILE, "*.tscn") var credits_scene_path
-export(String, FILE, "*.tscn") var cutscene_intro_path
-export(String, FILE, "*.tscn") var cutscene_level5_path
-export(String, FILE, "*.tscn") var cutscene_ending_path
+@export var credits_scene_path # (String, FILE, "*.tscn")
+@export var cutscene_intro_path # (String, FILE, "*.tscn")
+@export var cutscene_level5_path # (String, FILE, "*.tscn")
+@export var cutscene_ending_path # (String, FILE, "*.tscn")
 
 # node variables
 var credits
@@ -13,7 +13,7 @@ var ending
 var back
 var animator
 
-onready var state_animator = $StatePlayer
+@onready var state_animator = $StatePlayer
 
 func _ready():
 	var last_unlocked_level = Global.savedata["story"]["last unlock"]
@@ -24,17 +24,17 @@ func _ready():
 	ending = get_node("MenuContainer/Ending")
 	back = get_node("MenuContainer/Back")
 	
-	ScreenManager.connect("mid_transition_reached", self, "_on_ScreenManager_mid_transition_reached")
+	ScreenManager.connect("mid_transition_reached", Callable(self, "_on_ScreenManager_mid_transition_reached"))
 	
 	var buttons = [credits, intro, level5, ending]
 	for button in buttons:
 		button.set_disabled(true)
 		button.focus_mode = Control.FOCUS_NONE
-		if not button.is_connected("pressed", self, "_on_button_pressed"):
-			button.connect("pressed", self, "_on_button_pressed", [button])
+		if not button.is_connected("pressed", Callable(self, "_on_button_pressed")):
+			button.connect("pressed", Callable(self, "_on_button_pressed").bind(button))
 	
 	if credits_scene_path == "":
-		intro.focus_neighbour_top = intro.get_path_to(back)
+		intro.focus_neighbor_top = intro.get_path_to(back)
 	else:
 		credits.set_disabled(false)
 		credits.focus_mode = Control.FOCUS_ALL
@@ -101,7 +101,7 @@ func _on_button_pressed(node):
 func _on_Back_pressed():
 	animator.play("close")
 	SoundManager.play_sfx("Confirm")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	ScreenManager.clear_above()
 
 

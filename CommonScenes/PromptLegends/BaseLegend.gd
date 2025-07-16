@@ -10,14 +10,14 @@ class_name BaseLegend
 var visible: = false
 
 # private variables - order: export > normal var > onready 
-onready var _animator: AnimationPlayer = $AnimationPlayer
+@onready var _animator: AnimationPlayer = $AnimationPlayer
 
 ### ---------------------------------------
 
 
 ### Built in Engine Methods ---------------
 func _ready() -> void:
-	_animator.connect("animation_finished", self, "_on_animator_animation_finished")
+	_animator.connect("animation_finished", Callable(self, "_on_animator_animation_finished"))
 ### ---------------------------------------
 
 

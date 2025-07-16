@@ -8,10 +8,10 @@
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/BGM_VolumeOption.gd" type="Script" id=6]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/Sfx_VolumeOption.gd" type="Script" id=7]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=8]
-[ext_resource path="res://Fonts/OrbitronMedium30.font" type="BitmapFont" id=9]
+[ext_resource path="res://Fonts/OrbitronMedium30.font" type="FontFile" id=9]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/InvincibilityOption.gd" type="Script" id=10]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=11]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=11]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=12]
 [ext_resource path="res://CommonScenes/ColorsMenu/ColorsMenu.tscn" type="PackedScene" id=13]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=14]
 [ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmChangeCancel.tscn" type="PackedScene" id=15]
@@ -30,32 +30,32 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.9, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/path = NodePath("TopEdge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 115 ), Vector2( 0, 115 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/path = NodePath("BottomEdge:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 952 ), Vector2( 0, 952 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
@@ -66,8 +66,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -78,32 +78,32 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ScreenBase:rect_position")
+tracks/5/path = NodePath("ScreenBase:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 121 ), Vector2( 0, 121 ), Vector2( 0, 657 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("ScreenBase:rect_size")
+tracks/6/path = NodePath("ScreenBase:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 840 ), Vector2( 1920, 840 ), Vector2( 1920, 0 ) ]
 }
@@ -114,8 +114,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
 }
@@ -126,8 +126,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
@@ -138,8 +138,8 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "fade_out"
@@ -156,8 +156,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -168,8 +168,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -180,8 +180,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
@@ -192,8 +192,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.6 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -204,32 +204,32 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.9 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("TopEdge:rect_position")
+tracks/5/path = NodePath("TopEdge:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 115 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BottomEdge:rect_position")
+tracks/6/path = NodePath("BottomEdge:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 952 ) ]
 }
@@ -240,32 +240,32 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("ScreenBase:rect_position")
+tracks/8/path = NodePath("ScreenBase:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 121 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("ScreenBase:rect_size")
+tracks/9/path = NodePath("ScreenBase:size")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 840 ) ]
 }
@@ -276,8 +276,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -292,8 +292,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.6 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true ]
 }
@@ -304,8 +304,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.6 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -316,8 +316,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -328,8 +328,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
@@ -340,32 +340,32 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.9 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("TopEdge:rect_position")
+tracks/5/path = NodePath("TopEdge:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 115 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("BottomEdge:rect_position")
+tracks/6/path = NodePath("BottomEdge:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 952 ) ]
 }
@@ -376,32 +376,32 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("ScreenBase:rect_position")
+tracks/8/path = NodePath("ScreenBase:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 121 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("ScreenBase:rect_size")
+tracks/9/path = NodePath("ScreenBase:size")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 840 ) ]
 }
@@ -412,8 +412,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -427,32 +427,32 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.9, 0.9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/path = NodePath("TopEdge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 115 ), Vector2( 0, 115 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/path = NodePath("BottomEdge:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 952 ), Vector2( 0, 952 ) ]
 }
@@ -463,8 +463,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.9 ]
 }
@@ -475,32 +475,32 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ScreenBase:rect_position")
+tracks/5/path = NodePath("ScreenBase:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 657 ), Vector2( 0, 657 ), Vector2( 0, 121 ), Vector2( 0, 121 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("ScreenBase:rect_size")
+tracks/6/path = NodePath("ScreenBase:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 0 ), Vector2( 1920, 0 ), Vector2( 1920, 840 ), Vector2( 1920, 840 ) ]
 }
@@ -511,8 +511,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, true ]
 }
@@ -523,8 +523,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ false, false ]
 }
@@ -535,8 +535,8 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 1 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "fade_in"
@@ -552,8 +552,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ "Gamepad Options" ]
 }
@@ -564,8 +564,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "grab_focus_if_control_menu"
@@ -578,8 +578,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -590,8 +590,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -602,8 +602,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -614,8 +614,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
@@ -626,8 +626,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -638,8 +638,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
@@ -650,8 +650,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
@@ -665,8 +665,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ "Keyboard Options" ]
 }
@@ -677,8 +677,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "grab_focus_if_control_menu"
@@ -691,8 +691,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -703,8 +703,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -715,8 +715,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -727,8 +727,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -739,8 +739,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -751,8 +751,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -763,8 +763,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -778,8 +778,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ "Autodetect Gamepad Skin: Off" ]
 }
@@ -790,8 +790,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
 }
@@ -802,20 +802,20 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 2, 0.5, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.6 ),
+"transitions": PackedFloat32Array( 2, 0.5, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../SwapConfirmCancel:rect_position")
+tracks/3/path = NodePath("../SwapConfirmCancel:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 0.5, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 0.5, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 513 ), Vector2( 0, 594 ) ]
 }
@@ -829,8 +829,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ "Autodetect Gamepad Skin: On" ]
 }
@@ -841,8 +841,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -853,20 +853,20 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 0.5, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 0.5, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../SwapConfirmCancel:rect_position")
+tracks/3/path = NodePath("../SwapConfirmCancel:position")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 2, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 2, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 594 ), Vector2( 0, 513 ) ]
 }
@@ -881,8 +881,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 2.8, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 2.8, 3 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 960, 122 ), Vector2( 960, 162 ), Vector2( 960, 920 ), Vector2( 960, 960 ) ]
 }
@@ -893,8 +893,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -905,8 +905,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 2.8, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 2.8, 3 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Rect2( 0, 0, 1920, 0 ), Rect2( 0, 0, 1920, 80 ), Rect2( 0, 705.714, 1920, 80 ), Rect2( 0, 760, 1920, 0 ) ]
 }
@@ -917,19 +917,19 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 1, 1.5, 2, 2.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0.1 ), Color( 1, 1, 1, 0.6 ), Color( 1, 1, 1, 0.3 ), Color( 1, 1, 1, 0.7 ), Color( 1, 1, 1, 0.2 ), Color( 1, 1, 1, 0.5 ) ]
 }
 
 [node name="OptionsMenuScreen" type="CanvasLayer"]
-pause_mode = 2
+process_mode = 3
 layer = 4
 script = ExtResource( 1 )
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [ PoolStringArray( "ColorsMenu" ), [ ExtResource( 13 ) ] ]
+resources = [ PackedStringArray( "ColorsMenu" ), [ ExtResource( 13 ) ] ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "open"
@@ -940,9 +940,9 @@ anims/open = SubResource( 4 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
-margin_top = -3.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_top = -3.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color( 0.247059, 0.054902, 0.156863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -950,9 +950,9 @@ __meta__ = {
 
 [node name="ScreenBase" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_top = 121.0
-margin_right = 1920.0
-margin_bottom = 961.0
+offset_top = 121.0
+offset_right = 1920.0
+offset_bottom = 961.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -962,24 +962,24 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0.9 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -275.0
-margin_top = 156.0
-margin_right = 285.0
-margin_bottom = 952.0
+offset_left = -275.0
+offset_top = 156.0
+offset_right = 285.0
+offset_bottom = 952.0
 mouse_filter = 0
 theme = ExtResource( 2 )
-custom_constants/separation = 25
+theme_override_constants/separation = 25
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="FullscreenOption" type="Button" parent="OptionsContainer"]
-margin_right = 560.0
-margin_bottom = 56.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../Control/OptionsExit")
-focus_neighbour_right = NodePath(".")
+offset_right = 560.0
+offset_bottom = 56.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Control/OptionsExit")
+focus_neighbor_right = NodePath(".")
 text = "Fullscreen: --"
 script = ExtResource( 3 )
 
@@ -987,64 +987,64 @@ script = ExtResource( 3 )
 
 [node name="BGM" type="Button" parent="OptionsContainer"]
 visible = false
-margin_top = 81.0
-margin_right = 560.0
-margin_bottom = 137.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 81.0
+offset_right = 560.0
+offset_bottom = 137.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "BGM: --"
 script = ExtResource( 5 )
 
 [node name="ArrowsIndicator" parent="OptionsContainer/BGM" instance=ExtResource( 4 )]
 
 [node name="BGM_volume" type="Button" parent="OptionsContainer"]
-margin_top = 81.0
-margin_right = 560.0
-margin_bottom = 137.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 81.0
+offset_right = 560.0
+offset_bottom = 137.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Music Volume: --"
 script = ExtResource( 6 )
 
 [node name="ArrowsIndicator" parent="OptionsContainer/BGM_volume" instance=ExtResource( 4 )]
 
 [node name="SfxVolume" type="Button" parent="OptionsContainer"]
-margin_top = 162.0
-margin_right = 560.0
-margin_bottom = 218.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 162.0
+offset_right = 560.0
+offset_bottom = 218.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Sounds Volume: --"
 script = ExtResource( 7 )
 
 [node name="ArrowsIndicator" parent="OptionsContainer/SfxVolume" instance=ExtResource( 4 )]
 
 [node name="EditControls" type="Button" parent="OptionsContainer"]
-margin_top = 243.0
-margin_right = 560.0
-margin_bottom = 299.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 243.0
+offset_right = 560.0
+offset_bottom = 299.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Edit Controls"
 script = ExtResource( 8 )
 pressed_sfx = "Confirm"
 
 [node name="EditColors" type="Button" parent="OptionsContainer"]
-margin_top = 324.0
-margin_right = 560.0
-margin_bottom = 380.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 324.0
+offset_right = 560.0
+offset_bottom = 380.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Edit Colors"
 script = ExtResource( 8 )
 pressed_sfx = "Confirm"
 
 [node name="ResetSave" type="Button" parent="OptionsContainer"]
-margin_top = 405.0
-margin_right = 560.0
-margin_bottom = 461.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 405.0
+offset_right = 560.0
+offset_bottom = 461.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Reset Save"
 script = ExtResource( 8 )
 pressed_sfx = "Confirm"
@@ -1052,47 +1052,47 @@ pressed_sfx = "Confirm"
 [node name="DebugMenu" type="VBoxContainer" parent="OptionsContainer"]
 visible = false
 modulate = Color( 1, 1, 1, 0.9 )
-margin_top = 486.0
-margin_right = 560.0
-margin_bottom = 607.0
+offset_top = 486.0
+offset_right = 560.0
+offset_bottom = 607.0
 mouse_filter = 0
-custom_constants/separation = 5
+theme_override_constants/separation = 5
 
 [node name="Restart" type="Button" parent="OptionsContainer/DebugMenu"]
-margin_right = 560.0
-margin_bottom = 37.0
-focus_neighbour_left = NodePath("../../ResetSave")
-focus_neighbour_right = NodePath(".")
+offset_right = 560.0
+offset_bottom = 37.0
+focus_neighbor_left = NodePath("../../ResetSave")
+focus_neighbor_right = NodePath(".")
 focus_mode = 0
-custom_fonts/font = ExtResource( 9 )
+theme_override_fonts/font = ExtResource( 9 )
 disabled = true
 text = "Restart"
 script = ExtResource( 8 )
 pressed_sfx = "Confirm"
 
 [node name="UnlockEverything" type="Button" parent="OptionsContainer/DebugMenu"]
-margin_top = 42.0
-margin_right = 560.0
-margin_bottom = 79.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../Invincibility")
+offset_top = 42.0
+offset_right = 560.0
+offset_bottom = 79.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Invincibility")
 focus_mode = 0
-custom_fonts/font = ExtResource( 9 )
+theme_override_fonts/font = ExtResource( 9 )
 disabled = true
 text = "Unlock Everything"
 script = ExtResource( 8 )
 pressed_sfx = "Confirm"
 
 [node name="Invincibility" type="Button" parent="OptionsContainer/DebugMenu"]
-margin_top = 84.0
-margin_right = 560.0
-margin_bottom = 121.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../../Control/OptionsExit")
+offset_top = 84.0
+offset_right = 560.0
+offset_bottom = 121.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../Control/OptionsExit")
 focus_mode = 0
-custom_fonts/font = ExtResource( 9 )
+theme_override_fonts/font = ExtResource( 9 )
 disabled = true
 text = "Invincible: --"
 script = ExtResource( 10 )
@@ -1100,9 +1100,9 @@ script = ExtResource( 10 )
 [node name="ArrowsIndicator" parent="OptionsContainer/DebugMenu/Invincibility" instance=ExtResource( 4 )]
 
 [node name="Control" type="Control" parent="OptionsContainer"]
-margin_top = 486.0
-margin_right = 560.0
-margin_bottom = 796.0
+offset_top = 486.0
+offset_right = 560.0
+offset_bottom = 796.0
 size_flags_vertical = 3
 
 [node name="OptionsExit" type="Button" parent="OptionsContainer/Control"]
@@ -1110,14 +1110,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -254.5
-margin_top = -84.0
-margin_right = 254.5
-margin_bottom = -28.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../../DebugMenu/Invincibility")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../../FullscreenOption")
+offset_left = -254.5
+offset_top = -84.0
+offset_right = 254.5
+offset_bottom = -28.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../DebugMenu/Invincibility")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../FullscreenOption")
 theme = ExtResource( 2 )
 text = "Exit Options"
 script = ExtResource( 8 )
@@ -1131,14 +1131,14 @@ visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -430.0
-margin_top = 156.0
-margin_right = 430.0
-margin_bottom = 952.0
+offset_left = -430.0
+offset_top = 156.0
+offset_right = 430.0
+offset_bottom = 952.0
 grow_horizontal = 2
 mouse_filter = 0
 theme = ExtResource( 2 )
-custom_constants/separation = 25
+theme_override_constants/separation = 25
 alignment = 1
 script = ExtResource( 20 )
 __meta__ = {
@@ -1146,11 +1146,11 @@ __meta__ = {
 }
 
 [node name="Type" type="Button" parent="ControlsContainer"]
-margin_right = 860.0
-margin_bottom = 56.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../Control/ControsMenuExit")
-focus_neighbour_right = NodePath(".")
+offset_right = 860.0
+offset_bottom = 56.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Control/ControsMenuExit")
+focus_neighbor_right = NodePath(".")
 text = "Gamepad Options"
 script = ExtResource( 16 )
 
@@ -1161,30 +1161,30 @@ anims/joypad_menu = SubResource( 5 )
 anims/keyboard_menu = SubResource( 6 )
 
 [node name="PromptsArea" type="MarginContainer" parent="ControlsContainer"]
-margin_top = 81.0
-margin_right = 860.0
-margin_bottom = 407.0
-custom_constants/margin_right = 0
-custom_constants/margin_top = 0
-custom_constants/margin_bottom = 30
+offset_top = 81.0
+offset_right = 860.0
+offset_bottom = 407.0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 30
 
 [node name="JoypadControls" type="VBoxContainer" parent="ControlsContainer/PromptsArea"]
-margin_right = 860.0
-margin_bottom = 296.0
-custom_constants/separation = 10
+offset_right = 860.0
+offset_bottom = 296.0
+theme_override_constants/separation = 10
 
 [node name="BoostLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/JoypadControls"]
-margin_right = 860.0
-margin_bottom = 70.0
-custom_constants/separation = 50
+offset_right = 860.0
+offset_bottom = 70.0
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="JoyBoost" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls/BoostLine"]
-margin_left = 184.0
-margin_right = 556.0
-margin_bottom = 70.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 184.0
+offset_right = 556.0
+offset_bottom = 70.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Jetpack Boost:"
 script = ExtResource( 8 )
 
@@ -1192,26 +1192,26 @@ script = ExtResource( 8 )
 script = ExtResource( 21 )
 
 [node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/BoostLine" instance=ExtResource( 14 )]
-margin_left = 606.0
-margin_right = 676.0
-margin_bottom = 70.0
-rect_min_size = Vector2( 70, 70 )
+offset_left = 606.0
+offset_right = 676.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2( 70, 70 )
 input_action = "boost"
 force_type = 2
 
 [node name="DashLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/JoypadControls"]
-margin_top = 80.0
-margin_right = 860.0
-margin_bottom = 150.0
-custom_constants/separation = 50
+offset_top = 80.0
+offset_right = 860.0
+offset_bottom = 150.0
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="JoyDash" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls/DashLine"]
-margin_left = 300.0
-margin_right = 439.0
-margin_bottom = 70.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 300.0
+offset_right = 439.0
+offset_bottom = 70.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Dash:"
 script = ExtResource( 8 )
 
@@ -1219,26 +1219,26 @@ script = ExtResource( 8 )
 script = ExtResource( 21 )
 
 [node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/DashLine" instance=ExtResource( 14 )]
-margin_left = 489.0
-margin_right = 559.0
-margin_bottom = 70.0
-rect_min_size = Vector2( 70, 70 )
+offset_left = 489.0
+offset_right = 559.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2( 70, 70 )
 input_action = "dash"
 force_type = 2
 
 [node name="ShootLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/JoypadControls"]
-margin_top = 160.0
-margin_right = 860.0
-margin_bottom = 230.0
-custom_constants/separation = 50
+offset_top = 160.0
+offset_right = 860.0
+offset_bottom = 230.0
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="JoyShoot" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls/ShootLine"]
-margin_left = 292.0
-margin_right = 447.0
-margin_bottom = 70.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 292.0
+offset_right = 447.0
+offset_bottom = 70.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Shoot:"
 script = ExtResource( 8 )
 
@@ -1246,114 +1246,114 @@ script = ExtResource( 8 )
 script = ExtResource( 21 )
 
 [node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/ShootLine" instance=ExtResource( 14 )]
-margin_left = 497.0
-margin_right = 567.0
-margin_bottom = 70.0
-rect_min_size = Vector2( 70, 70 )
+offset_left = 497.0
+offset_right = 567.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2( 70, 70 )
 input_action = "shoot"
 force_type = 2
 
 [node name="RestoreJoyDefaults" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls"]
-margin_top = 240.0
-margin_right = 860.0
-margin_bottom = 296.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 240.0
+offset_right = 860.0
+offset_bottom = 296.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Restore Defaults"
 script = ExtResource( 8 )
 
 [node name="KeyboardControls" type="VBoxContainer" parent="ControlsContainer/PromptsArea"]
 visible = false
-margin_right = 860.0
-margin_bottom = 296.0
-custom_constants/separation = 10
+offset_right = 860.0
+offset_bottom = 296.0
+theme_override_constants/separation = 10
 
 [node name="BoostLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-margin_right = 860.0
-margin_bottom = 70.0
-custom_constants/separation = 50
+offset_right = 860.0
+offset_bottom = 70.0
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="KeyBoost" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls/BoostLine"]
-margin_left = 184.0
-margin_right = 556.0
-margin_bottom = 70.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 184.0
+offset_right = 556.0
+offset_bottom = 70.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Jetpack Boost:"
 script = ExtResource( 8 )
 
 [node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/BoostLine" instance=ExtResource( 14 )]
-margin_left = 606.0
-margin_right = 676.0
-margin_bottom = 70.0
-rect_min_size = Vector2( 70, 70 )
+offset_left = 606.0
+offset_right = 676.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2( 70, 70 )
 input_action = "boost"
 force_type = 1
 
 [node name="DashLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-margin_top = 80.0
-margin_right = 860.0
-margin_bottom = 150.0
-custom_constants/separation = 50
+offset_top = 80.0
+offset_right = 860.0
+offset_bottom = 150.0
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="KeyDash" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls/DashLine"]
-margin_left = 300.0
-margin_right = 439.0
-margin_bottom = 70.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 300.0
+offset_right = 439.0
+offset_bottom = 70.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Dash:"
 script = ExtResource( 8 )
 
 [node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/DashLine" instance=ExtResource( 14 )]
-margin_left = 489.0
-margin_right = 559.0
-margin_bottom = 70.0
-rect_min_size = Vector2( 70, 70 )
+offset_left = 489.0
+offset_right = 559.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2( 70, 70 )
 input_action = "dash"
 force_type = 1
 
 [node name="ShootLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-margin_top = 160.0
-margin_right = 860.0
-margin_bottom = 230.0
-custom_constants/separation = 50
+offset_top = 160.0
+offset_right = 860.0
+offset_bottom = 230.0
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="KeyShoot" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls/ShootLine"]
-margin_left = 292.0
-margin_right = 447.0
-margin_bottom = 70.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 292.0
+offset_right = 447.0
+offset_bottom = 70.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Shoot:"
 script = ExtResource( 8 )
 
 [node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/ShootLine" instance=ExtResource( 14 )]
-margin_left = 497.0
-margin_right = 567.0
-margin_bottom = 70.0
-rect_min_size = Vector2( 70, 70 )
+offset_left = 497.0
+offset_right = 567.0
+offset_bottom = 70.0
+custom_minimum_size = Vector2( 70, 70 )
 input_action = "shoot"
 force_type = 1
 
 [node name="RestoreKeyDefaults" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-margin_top = 240.0
-margin_right = 860.0
-margin_bottom = 296.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 240.0
+offset_right = 860.0
+offset_bottom = 296.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Restore Defaults"
 script = ExtResource( 8 )
 
 [node name="AutodetectSkin" type="Button" parent="ControlsContainer"]
-margin_top = 432.0
-margin_right = 860.0
-margin_bottom = 488.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 432.0
+offset_right = 860.0
+offset_bottom = 488.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Autodetect Gamepad Skin: On"
 script = ExtResource( 17 )
 
@@ -1365,31 +1365,31 @@ anims/on = SubResource( 8 )
 
 [node name="PromptsSkin" type="Button" parent="ControlsContainer"]
 visible = false
-margin_top = 432.0
-margin_right = 860.0
-margin_bottom = 488.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 432.0
+offset_right = 860.0
+offset_bottom = 488.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Gamepad Skin: --"
 script = ExtResource( 18 )
 
 [node name="ArrowsIndicator" parent="ControlsContainer/PromptsSkin" instance=ExtResource( 4 )]
 
 [node name="SwapConfirmCancel" type="Button" parent="ControlsContainer"]
-margin_top = 513.0
-margin_right = 860.0
-margin_bottom = 569.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_top = 513.0
+offset_right = 860.0
+offset_bottom = 569.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 text = "Swap Menus Confirm/Cancel: --"
 script = ExtResource( 19 )
 
 [node name="ArrowsIndicator" parent="ControlsContainer/SwapConfirmCancel" instance=ExtResource( 4 )]
 
 [node name="Control" type="Control" parent="ControlsContainer"]
-margin_top = 594.0
-margin_right = 860.0
-margin_bottom = 796.0
+offset_top = 594.0
+offset_right = 860.0
+offset_bottom = 796.0
 size_flags_vertical = 3
 
 [node name="ControsMenuExit" type="Button" parent="ControlsContainer/Control"]
@@ -1397,14 +1397,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -254.5
-margin_top = -84.0
-margin_right = 254.5
-margin_bottom = -28.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../../SwapConfirmCancel")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../../Type")
+offset_left = -254.5
+offset_top = -84.0
+offset_right = 254.5
+offset_bottom = -28.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../SwapConfirmCancel")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../Type")
 theme = ExtResource( 2 )
 text = "Back"
 script = ExtResource( 8 )
@@ -1418,13 +1418,13 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
 position = Vector2( 960, 540.314 )
 texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1920, 840 )
 
-[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
 modulate = Color( 1, 1, 1, 0.1 )
 position = Vector2( 960, 960 )
 texture = ExtResource( 12 )
@@ -1436,15 +1436,15 @@ autoplay = "loop"
 anims/loop = SubResource( 9 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
-margin_top = 115.0
-margin_right = 1920.0
-margin_bottom = 130.0
+offset_top = 115.0
+offset_right = 1920.0
+offset_bottom = 130.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="BottomEdge" type="ColorRect" parent="."]
-margin_top = 952.0
-margin_right = 1920.0
-margin_bottom = 967.0
+offset_top = 952.0
+offset_right = 1920.0
+offset_bottom = 967.0
 color = Color( 0, 0.921569, 1, 1 )
 
 [node name="DebugButton" type="TextureButton" parent="."]
@@ -1452,13 +1452,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -200.0
-margin_top = -328.0
-margin_bottom = -128.0
-focus_neighbour_left = NodePath("../OptionsContainer/FullscreenOption")
-focus_neighbour_top = NodePath("../OptionsContainer/FullscreenOption")
-focus_neighbour_right = NodePath("../OptionsContainer/Control/OptionsExit")
-focus_neighbour_bottom = NodePath("../OptionsContainer/Control/OptionsExit")
+offset_left = -200.0
+offset_top = -328.0
+offset_bottom = -128.0
+focus_neighbor_left = NodePath("../OptionsContainer/FullscreenOption")
+focus_neighbor_top = NodePath("../OptionsContainer/FullscreenOption")
+focus_neighbor_right = NodePath("../OptionsContainer/Control/OptionsExit")
+focus_neighbor_bottom = NodePath("../OptionsContainer/Control/OptionsExit")
 focus_mode = 1
 mouse_default_cursor_shape = 6
 __meta__ = {

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/enemy_laser_charging.wav-55a6a644be6113bede9eb1a84e176924.sample"
+type="AudioStreamWAV"
+uid="uid://c1det11u5xoun"
+path="res://.godot/imported/enemy_laser_charging.wav-55a6a644be6113bede9eb1a84e176924.sample"
 
 [deps]
 
 source_file="res://CommonScenes/SoundManager/sfx/enemy_laser_charging.wav"
-dest_files=[ "res://.import/enemy_laser_charging.wav-55a6a644be6113bede9eb1a84e176924.sample" ]
+dest_files=["res://.godot/imported/enemy_laser_charging.wav-55a6a644be6113bede9eb1a84e176924.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

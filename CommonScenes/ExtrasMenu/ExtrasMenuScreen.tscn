@@ -2,35 +2,35 @@
 
 [ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.gd" type="Script" id=1]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Upgrade.tres" type="Theme" id=2]
-[ext_resource path="res://Fonts/OrbitronBlack60.font" type="BitmapFont" id=3]
+[ext_resource path="res://Fonts/OrbitronBlack60.font" type="FontFile" id=3]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=4]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=5]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=6]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=5]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=6]
 [ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=8]
-[ext_resource path="res://Fonts/OrbitronBold40.font" type="BitmapFont" id=9]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/mystery_@0.5x.png" type="Texture" id=10]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/change_the_universe_@0.5x.png" type="Texture" id=11]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/safety_first_@0.5x.png" type="Texture" id=12]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/infinite_jetpacker_@0.5x.png" type="Texture" id=13]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/slow_and_steady_@0.5x.png" type="Texture" id=14]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/all_highscores_@0.5x.png" type="Texture" id=15]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/mileage_points_@0.5x.png" type="Texture" id=16]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/for_a_world_without_barriers_@0.5x.png" type="Texture" id=17]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/safety_first_@0.5x.png" type="Texture" id=18]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/for_a_world_without_barriers_@0.5x.png" type="Texture" id=19]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/level_highscore_@0.5x.png" type="Texture" id=20]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/ok_shut_up_@0.5x.png" type="Texture" id=21]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/mileage_points_@0.5x.png" type="Texture" id=22]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/nothing_to_see_@0.5x.png" type="Texture" id=23]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/nothing_to_see_@0.5x.png" type="Texture" id=24]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/hear_the_scream_@0.5x.png" type="Texture" id=25]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/slow_and_steady_@0.5x.png" type="Texture" id=26]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/all_highscores_@0.5x.png" type="Texture" id=27]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/level_highscore_@0.5x.png" type="Texture" id=28]
+[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=8]
+[ext_resource path="res://Fonts/OrbitronBold40.font" type="FontFile" id=9]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/mystery_@0.5x.png" type="Texture2D" id=10]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/change_the_universe_@0.5x.png" type="Texture2D" id=11]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/safety_first_@0.5x.png" type="Texture2D" id=12]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/infinite_jetpacker_@0.5x.png" type="Texture2D" id=13]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/slow_and_steady_@0.5x.png" type="Texture2D" id=14]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/all_highscores_@0.5x.png" type="Texture2D" id=15]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/mileage_points_@0.5x.png" type="Texture2D" id=16]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/for_a_world_without_barriers_@0.5x.png" type="Texture2D" id=17]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/safety_first_@0.5x.png" type="Texture2D" id=18]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/for_a_world_without_barriers_@0.5x.png" type="Texture2D" id=19]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/level_highscore_@0.5x.png" type="Texture2D" id=20]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/ok_shut_up_@0.5x.png" type="Texture2D" id=21]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/mileage_points_@0.5x.png" type="Texture2D" id=22]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/nothing_to_see_@0.5x.png" type="Texture2D" id=23]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/nothing_to_see_@0.5x.png" type="Texture2D" id=24]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/hear_the_scream_@0.5x.png" type="Texture2D" id=25]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/slow_and_steady_@0.5x.png" type="Texture2D" id=26]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/achieved/all_highscores_@0.5x.png" type="Texture2D" id=27]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/level_highscore_@0.5x.png" type="Texture2D" id=28]
 [ext_resource path="res://CommonScenes/ExtrasMenu/achievements/AchievementDisplay.tscn" type="PackedScene" id=29]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/ok_shut_up_@0.5x.png" type="Texture" id=30]
-[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/infinite_jetpacker_@0.5x.png" type="Texture" id=31]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/ok_shut_up_@0.5x.png" type="Texture2D" id=30]
+[ext_resource path="res://CommonScenes/ExtrasMenu/achievements/unachieved/infinite_jetpacker_@0.5x.png" type="Texture2D" id=31]
 [ext_resource path="res://CommonScenes/ExtrasMenu/achievements/AchievementInfo.gd" type="Script" id=32]
 
 [sub_resource type="Animation" id=1]
@@ -43,32 +43,32 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/path = NodePath("TopEdge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 42 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/path = NodePath("BottomEdge:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 952 ) ]
 }
@@ -79,8 +79,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.9 ]
 }
@@ -91,32 +91,32 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame2:rect_position")
+tracks/5/path = NodePath("ColorFrame2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 54 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("ColorFrame2:rect_size")
+tracks/6/path = NodePath("ColorFrame2:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 910 ) ]
 }
@@ -127,8 +127,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"clips": PoolStringArray( "extras_menu" ),
-"times": PoolRealArray( 0 )
+"clips": PackedStringArray( "extras_menu" ),
+"times": PackedFloat32Array( 0 )
 }
 
 [sub_resource type="Animation" id=2]
@@ -141,32 +141,32 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/path = NodePath("TopEdge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( -2220, 652 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/path = NodePath("BottomEdge:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( -2220, 652 ) ]
 }
@@ -177,32 +177,32 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame2:rect_position")
+tracks/4/path = NodePath("ColorFrame2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 660 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame2:rect_size")
+tracks/5/path = NodePath("ColorFrame2:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 0 ) ]
 }
@@ -213,8 +213,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PackedFloat32Array(  ),
+"transitions": PackedFloat32Array(  ),
 "values": [  ]
 }
 tracks/7/type = "animation"
@@ -224,8 +224,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"clips": PoolStringArray( "base" ),
-"times": PoolRealArray( 0 )
+"clips": PackedStringArray( "base" ),
+"times": PackedFloat32Array( 0 )
 }
 
 [sub_resource type="Animation" id=3]
@@ -236,32 +236,32 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.9, 0.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/path = NodePath("TopEdge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 42 ), Vector2( 0, 42 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/path = NodePath("BottomEdge:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 952 ), Vector2( 0, 952 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
 }
@@ -272,8 +272,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -284,32 +284,32 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame2:rect_position")
+tracks/5/path = NodePath("ColorFrame2:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 54 ), Vector2( 0, 54 ), Vector2( 0, 660 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("ColorFrame2:rect_size")
+tracks/6/path = NodePath("ColorFrame2:size")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 910 ), Vector2( 1920, 910 ), Vector2( 1920, 0 ) ]
 }
@@ -320,8 +320,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "fade_out"
@@ -334,8 +334,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"clips": PoolStringArray( "close", "base" ),
-"times": PoolRealArray( 0, 0.3 )
+"clips": PackedStringArray( "close", "base" ),
+"times": PackedFloat32Array( 0, 0.3 )
 }
 
 [sub_resource type="Animation" id=4]
@@ -346,32 +346,32 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.9, 0.9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:rect_position")
+tracks/1/path = NodePath("TopEdge:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 42 ), Vector2( 0, 42 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:rect_position")
+tracks/2/path = NodePath("BottomEdge:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 952 ), Vector2( 0, 952 ) ]
 }
@@ -382,32 +382,32 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame2:rect_position")
+tracks/4/path = NodePath("ColorFrame2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 660 ), Vector2( 0, 660 ), Vector2( 0, 54 ), Vector2( 0, 54 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame2:rect_size")
+tracks/5/path = NodePath("ColorFrame2:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1920, 0 ), Vector2( 1920, 0 ), Vector2( 1920, 910 ), Vector2( 1920, 910 ) ]
 }
@@ -418,8 +418,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 1 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "fade_in"
@@ -432,8 +432,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"clips": PoolStringArray( "base", "extras_menu" ),
-"times": PoolRealArray( 0, 0.7 )
+"clips": PackedStringArray( "base", "extras_menu" ),
+"times": PackedFloat32Array( 0, 0.7 )
 }
 
 [sub_resource type="Animation" id=5]
@@ -446,8 +446,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -458,8 +458,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
@@ -470,8 +470,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "grab_focus"
@@ -484,8 +484,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -496,8 +496,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -511,8 +511,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -523,8 +523,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -535,8 +535,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -547,8 +547,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -562,8 +562,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -574,8 +574,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -586,8 +586,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ false ]
 }
@@ -598,8 +598,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ false ]
 }
@@ -613,8 +613,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.901961 ) ]
 }
@@ -625,8 +625,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 3,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -637,8 +637,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "grab_focus"
@@ -651,8 +651,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0.3 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.3 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -663,8 +663,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -679,8 +679,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 1, 1.5, 2, 2.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 0.1, 0.6, 0.3, 0.7, 0.6, 0.3 ]
 }
@@ -691,8 +691,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 2.8, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 2.8, 3 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 960, 50 ), Vector2( 960, 90 ), Vector2( 960, 930 ), Vector2( 960, 970 ) ]
 }
@@ -703,8 +703,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 2.8, 3 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 2.8, 3 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Rect2( 0, 0, 1920, 0 ), Rect2( 0, 0, 1920, 80 ), Rect2( 0, 1000, 1920, 80 ), Rect2( 0, 1000, 1920, 0 ) ]
 }
@@ -715,14 +715,14 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
 
 [node name="ExtrasMenuScreen" type="CanvasLayer"]
-pause_mode = 2
+process_mode = 3
 layer = 4
 script = ExtResource( 1 )
 credits_scene_path = "res://CommonScenes/CreditsScene/CreditsScene.tscn"
@@ -746,9 +746,9 @@ anims/extras_menu = SubResource( 8 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_top = -3.0
-margin_right = 1920.0
-margin_bottom = 1080.0
+offset_top = -3.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color( 0.247059, 0.054902, 0.156863, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -756,9 +756,9 @@ __meta__ = {
 
 [node name="ColorFrame2" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_top = 660.0
-margin_right = 1920.0
-margin_bottom = 660.0
+offset_top = 660.0
+offset_right = 1920.0
+offset_bottom = 660.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -770,78 +770,78 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -521.0
-margin_top = -459.0
-margin_right = 224.0
-margin_bottom = 148.0
-rect_scale = Vector2( 1.4, 1.4 )
+offset_left = -521.0
+offset_top = -459.0
+offset_right = 224.0
+offset_bottom = 148.0
+scale = Vector2( 1.4, 1.4 )
 mouse_filter = 0
 theme = ExtResource( 2 )
-custom_constants/separation = 15
+theme_override_constants/separation = 15
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="MenuContainer"]
-margin_right = 745.0
-margin_bottom = 71.0
+offset_right = 745.0
+offset_bottom = 71.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "EXTRAS"
 align = 1
 
 [node name="Achievements" type="Button" parent="MenuContainer"]
-margin_top = 86.0
-margin_right = 745.0
-margin_bottom = 135.0
-focus_neighbour_top = NodePath("../Back")
+offset_top = 86.0
+offset_right = 745.0
+offset_bottom = 135.0
+focus_neighbor_top = NodePath("../Back")
 text = "Achievements"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Credits" type="Button" parent="MenuContainer"]
-margin_top = 150.0
-margin_right = 745.0
-margin_bottom = 199.0
+offset_top = 150.0
+offset_right = 745.0
+offset_bottom = 199.0
 text = "Credits"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Intro" type="Button" parent="MenuContainer"]
-margin_top = 214.0
-margin_right = 745.0
-margin_bottom = 263.0
+offset_top = 214.0
+offset_right = 745.0
+offset_bottom = 263.0
 disabled = true
 text = "Intro Cutscene"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Level5" type="Button" parent="MenuContainer"]
-margin_top = 278.0
-margin_right = 745.0
-margin_bottom = 327.0
+offset_top = 278.0
+offset_right = 745.0
+offset_bottom = 327.0
 disabled = true
 text = "The Guardian Sees You"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Ending" type="Button" parent="MenuContainer"]
-margin_top = 342.0
-margin_right = 745.0
-margin_bottom = 391.0
+offset_top = 342.0
+offset_right = 745.0
+offset_bottom = 391.0
 disabled = true
 text = "Ending Cutscene"
 script = ExtResource( 4 )
 pressed_sfx = "Confirm"
 
 [node name="Back" type="Button" parent="MenuContainer"]
-margin_top = 558.0
-margin_right = 745.0
-margin_bottom = 607.0
-focus_neighbour_bottom = NodePath("../Achievements")
+offset_top = 558.0
+offset_right = 745.0
+offset_bottom = 607.0
+focus_neighbor_bottom = NodePath("../Achievements")
 size_flags_vertical = 10
 text = "Back"
 script = ExtResource( 4 )
@@ -853,38 +853,38 @@ modulate = Color( 1, 1, 1, 0 )
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_top = -459.0
-margin_bottom = 399.0
+offset_top = -459.0
+offset_bottom = 399.0
 mouse_filter = 0
 theme = ExtResource( 2 )
-custom_constants/separation = 60
+theme_override_constants/separation = 60
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="AchievementsMenu"]
-margin_right = 1920.0
-margin_bottom = 95.0
+offset_right = 1920.0
+offset_bottom = 95.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 8 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_fonts/font = ExtResource( 8 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Achievements"
 align = 1
 
 [node name="Line1" type="HBoxContainer" parent="AchievementsMenu"]
-margin_top = 155.0
-margin_right = 1920.0
-margin_bottom = 315.0
-custom_constants/separation = 60
+offset_top = 155.0
+offset_right = 1920.0
+offset_bottom = 315.0
+theme_override_constants/separation = 60
 alignment = 1
 
 [node name="SafetyFirst" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
-margin_left = 440.0
-margin_right = 600.0
-focus_neighbour_left = NodePath("../../Line2/Lasers")
-focus_neighbour_top = NodePath("../../BackToExtras")
+offset_left = 440.0
+offset_right = 600.0
+focus_neighbor_left = NodePath("../../Line2/Lasers")
+focus_neighbor_top = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Safety First"
 _description = "Complete the tutorial"
@@ -893,9 +893,9 @@ _achieved = ExtResource( 18 )
 _achievement_variable = "has_completed_safety_first"
 
 [node name="HearScream" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
-margin_left = 660.0
-margin_right = 820.0
-focus_neighbour_top = NodePath("../../BackToExtras")
+offset_left = 660.0
+offset_right = 820.0
+focus_neighbor_top = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Hear the Scream"
 _description = "Hear the Guardian's scream for the first time"
@@ -904,9 +904,9 @@ _achieved = ExtResource( 25 )
 _achievement_variable = "has_heard_the_scream"
 
 [node name="ChangeUniverse" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
-margin_left = 880.0
-margin_right = 1040.0
-focus_neighbour_top = NodePath("../../BackToExtras")
+offset_left = 880.0
+offset_right = 1040.0
+focus_neighbor_top = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Change the Universe"
 _description = "Beat the Game"
@@ -915,9 +915,9 @@ _achieved = ExtResource( 11 )
 _achievement_variable = "has_changed_the_univese"
 
 [node name="LevelHighscore" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
-margin_left = 1100.0
-margin_right = 1260.0
-focus_neighbour_top = NodePath("../../BackToExtras")
+offset_left = 1100.0
+offset_right = 1260.0
+focus_neighbor_top = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Level Highscore"
 _description = "Beat the highscore on any level"
@@ -926,10 +926,10 @@ _achieved = ExtResource( 20 )
 _achievement_variable = "has_any_highscore"
 
 [node name="AllHighscores" parent="AchievementsMenu/Line1" instance=ExtResource( 29 )]
-margin_left = 1320.0
-margin_right = 1480.0
-focus_neighbour_top = NodePath("../../BackToExtras")
-focus_neighbour_right = NodePath("../../Line2/SlowSteady")
+offset_left = 1320.0
+offset_right = 1480.0
+focus_neighbor_top = NodePath("../../BackToExtras")
+focus_neighbor_right = NodePath("../../Line2/SlowSteady")
 focus_mode = 2
 _title = "All Highscores"
 _description = "Beat the highscore in all story levels"
@@ -938,15 +938,15 @@ _achieved = ExtResource( 27 )
 _achievement_variable = "has_all_highscores"
 
 [node name="Line2" type="HBoxContainer" parent="AchievementsMenu"]
-margin_top = 375.0
-margin_right = 1920.0
-margin_bottom = 535.0
-custom_constants/separation = 60
+offset_top = 375.0
+offset_right = 1920.0
+offset_bottom = 535.0
+theme_override_constants/separation = 60
 alignment = 1
 
 [node name="SlowSteady" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
-focus_neighbour_left = NodePath("../../Line1/AllHighscores")
-focus_neighbour_bottom = NodePath("../../BackToExtras")
+focus_neighbor_left = NodePath("../../Line1/AllHighscores")
+focus_neighbor_bottom = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Slow and Steady"
 _description = "Complete the game on speedrun mode with any time record"
@@ -955,9 +955,9 @@ _achieved = ExtResource( 14 )
 _achievement_variable = "has_completed_speedrun"
 
 [node name="InfiniteJetpacker" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
-margin_left = 550.0
-margin_right = 710.0
-focus_neighbour_bottom = NodePath("../../BackToExtras")
+offset_left = 550.0
+offset_right = 710.0
+focus_neighbor_bottom = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Infinite Jetpacker"
 _description = "Complete at least 2 full laps on Arcade Mode"
@@ -966,9 +966,9 @@ _achieved = ExtResource( 13 )
 _achievement_variable = "has_completed_arcade"
 
 [node name="ShutUp" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
-margin_left = 770.0
-margin_right = 930.0
-focus_neighbour_bottom = NodePath("../../BackToExtras")
+offset_left = 770.0
+offset_right = 930.0
+focus_neighbor_bottom = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Ok, just shut up!"
 _description = "Hear the Guardian's scream 50 times"
@@ -978,9 +978,9 @@ _type = 1
 _achievement_variable = "has_heard_enough_screams"
 
 [node name="Mileage" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
-margin_left = 990.0
-margin_right = 1150.0
-focus_neighbour_bottom = NodePath("../../BackToExtras")
+offset_left = 990.0
+offset_right = 1150.0
+focus_neighbor_bottom = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "That's some mileage points!"
 _description = "Dodge 1000 tentacles"
@@ -990,9 +990,9 @@ _type = 1
 _achievement_variable = "has_enough_mileage"
 
 [node name="Bariers" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
-margin_left = 1210.0
-margin_right = 1370.0
-focus_neighbour_bottom = NodePath("../../BackToExtras")
+offset_left = 1210.0
+offset_right = 1370.0
+focus_neighbor_bottom = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "For a world without Barriers!"
 _description = "Clear 500 Barrier tentacles"
@@ -1002,10 +1002,10 @@ _type = 1
 _achievement_variable = "has_enough_broken_barriers"
 
 [node name="Lasers" parent="AchievementsMenu/Line2" instance=ExtResource( 29 )]
-margin_left = 1430.0
-margin_right = 1590.0
-focus_neighbour_right = NodePath("../../Line1/SafetyFirst")
-focus_neighbour_bottom = NodePath("../../BackToExtras")
+offset_left = 1430.0
+offset_right = 1590.0
+focus_neighbor_right = NodePath("../../Line1/SafetyFirst")
+focus_neighbor_bottom = NodePath("../../BackToExtras")
 focus_mode = 2
 _title = "Nothing to See here!"
 _description = "Dodge 250 lasers"
@@ -1015,43 +1015,43 @@ _type = 1
 _achievement_variable = "has_enough_laser_dodges"
 
 [node name="Info" type="VBoxContainer" parent="AchievementsMenu"]
-margin_top = 595.0
-margin_right = 1920.0
-margin_bottom = 730.0
-custom_constants/separation = 15
+offset_top = 595.0
+offset_right = 1920.0
+offset_bottom = 730.0
+theme_override_constants/separation = 15
 script = ExtResource( 32 )
 
 [node name="Title" type="Label" parent="AchievementsMenu/Info"]
-margin_right = 1920.0
-margin_bottom = 71.0
+offset_right = 1920.0
+offset_bottom = 71.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "For a world without Barriers!"
 align = 1
 autowrap = true
 
 [node name="Description" type="Label" parent="AchievementsMenu/Info"]
-margin_top = 86.0
-margin_right = 1920.0
-margin_bottom = 135.0
+offset_top = 86.0
+offset_right = 1920.0
+offset_bottom = 135.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 9 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_fonts/font = ExtResource( 9 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Complete the game on speedrun mode with any time record"
 align = 1
 autowrap = true
 
 [node name="BackToExtras" type="Button" parent="AchievementsMenu"]
-margin_top = 809.0
-margin_right = 1920.0
-margin_bottom = 858.0
-focus_neighbour_left = NodePath("../Line2/Lasers")
-focus_neighbour_top = NodePath("../Line2/SlowSteady")
-focus_neighbour_right = NodePath("../Line1/SafetyFirst")
-focus_neighbour_bottom = NodePath("../Line1/SafetyFirst")
+offset_top = 809.0
+offset_right = 1920.0
+offset_bottom = 858.0
+focus_neighbor_left = NodePath("../Line2/Lasers")
+focus_neighbor_top = NodePath("../Line2/SlowSteady")
+focus_neighbor_right = NodePath("../Line1/SafetyFirst")
+focus_neighbor_bottom = NodePath("../Line1/SafetyFirst")
 size_flags_vertical = 10
 text = "Back to Extras"
 script = ExtResource( 4 )
@@ -1063,13 +1063,13 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
 position = Vector2( 960, 505 )
 texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1920, 915 )
 
-[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
 modulate = Color( 1, 1, 1, 0.357656 )
 position = Vector2( 960, 317.416 )
 texture = ExtResource( 6 )
@@ -1082,20 +1082,20 @@ autoplay = "scanline loop"
 "anims/scanline loop" = SubResource( 9 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
-margin_left = -2220.0
-margin_top = 652.0
-margin_right = -300.0
-margin_bottom = 667.0
+offset_left = -2220.0
+offset_top = 652.0
+offset_right = -300.0
+offset_bottom = 667.0
 color = Color( 0, 0.921569, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BottomEdge" type="ColorRect" parent="."]
-margin_left = -2220.0
-margin_top = 652.0
-margin_right = -300.0
-margin_bottom = 667.0
+offset_left = -2220.0
+offset_top = 652.0
+offset_right = -300.0
+offset_bottom = 667.0
 color = Color( 0, 0.921569, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

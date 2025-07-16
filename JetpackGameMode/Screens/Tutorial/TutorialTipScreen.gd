@@ -2,9 +2,9 @@ extends Node2D
 
 # class member variables go here, for example:
 var game
-export(NodePath) var level_num
-export(NodePath) var level_title
-export(NodePath) var tip_selector
+@export var level_num: NodePath
+@export var level_title: NodePath
+@export var tip_selector: NodePath
 
 var tips_countdown = [0,3,7,2,9]
 var next_countdown = 0

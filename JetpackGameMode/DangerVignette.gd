@@ -1,11 +1,11 @@
 extends ColorRect
 
-onready var animator: AnimationPlayer = $AnimationPlayer
+@onready var animator: AnimationPlayer = $AnimationPlayer
 
 var current_duration: = -1
 
 func _ready():
-	Global.connect("start_danger", self, "_on_start_danger")
+	Global.connect("start_danger", Callable(self, "_on_start_danger"))
 
 
 func _on_start_danger(duration: int) -> void:

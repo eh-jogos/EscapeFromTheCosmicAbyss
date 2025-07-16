@@ -1,6 +1,6 @@
 extends Node2D
 
-export(String, FILE) var main_menu_path
+@export var main_menu_path # (String, FILE)
 
 var replay_btn
 var upgrade_btn
@@ -70,11 +70,11 @@ func _ready():
 	game_mode = game.game_mode
 #	replay_btn.grab_focus()
 	
-	if not upgrade_btn.is_connected("focus_entered",self,"_on_focus_enter"):
-		upgrade_btn.connect("focus_entered",self,"_on_focus_enter")
+	if not upgrade_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		upgrade_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
-		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
+	if not level_select_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		level_select_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
 	if game_mode == "story":
 		replay_btn.show()
@@ -95,8 +95,8 @@ func _ready():
 		time_results.hide()
 		laps_results.show()
 		
-		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
-		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
+		replay_btn.set_focus_neighbor(MARGIN_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbor(MARGIN_RIGHT, replay_btn.get_path())
 	elif game_mode == "speedrun":
 		replay_btn.show()
 		upgrade_btn.hide()
@@ -107,8 +107,8 @@ func _ready():
 		time_results.show()
 		laps_results.hide()
 		
-		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
-		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
+		replay_btn.set_focus_neighbor(MARGIN_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbor(MARGIN_RIGHT, replay_btn.get_path())
 
 
 func _unhandled_input(event) -> void:
@@ -223,7 +223,7 @@ func _on_upgrade_pressed():
 	var path = upgrade_path
 	last_focus = upgrade_btn
 	animator.play("fade out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)
@@ -234,7 +234,7 @@ func _on_focus_enter():
 	if not visible:
 		self.show()
 		animator.play_backwards("fade out")
-		yield(animator, "animation_finished")
+		await animator.animation_finished
 		
 		if not SoundManager.bgm_stream.is_playing():
 			SoundManager.pause_bgm()
@@ -248,7 +248,7 @@ func _on_LevelSelect_pressed():
 	var path = level_select_path
 	last_focus = level_select_btn
 	animator.play("fade out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)

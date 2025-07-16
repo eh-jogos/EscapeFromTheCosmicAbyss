@@ -1,18 +1,18 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium30.font" type="BitmapFont" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack60.font" type="BitmapFont" id=4]
-[ext_resource path="res://Fonts/OrbitronBlack72.font" type="BitmapFont" id=5]
-[ext_resource path="res://Fonts/OrbitronBlack30.font" type="BitmapFont" id=6]
+[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=2]
+[ext_resource path="res://Fonts/OrbitronMedium30.font" type="FontFile" id=3]
+[ext_resource path="res://Fonts/OrbitronBlack60.font" type="FontFile" id=4]
+[ext_resource path="res://Fonts/OrbitronBlack72.font" type="FontFile" id=5]
+[ext_resource path="res://Fonts/OrbitronBlack30.font" type="FontFile" id=6]
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=7]
-[ext_resource path="res://CommonScenes/Buttons/icons/home_icon.png" type="Texture" id=8]
+[ext_resource path="res://CommonScenes/Buttons/icons/home_icon.png" type="Texture2D" id=8]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=9]
 [ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=10]
-[ext_resource path="res://CommonScenes/Buttons/icons/upgrade_icon.png" type="Texture" id=11]
-[ext_resource path="res://CommonScenes/Buttons/icons/retry_icon.png" type="Texture" id=12]
-[ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture" id=13]
+[ext_resource path="res://CommonScenes/Buttons/icons/upgrade_icon.png" type="Texture2D" id=11]
+[ext_resource path="res://CommonScenes/Buttons/icons/retry_icon.png" type="Texture2D" id=12]
+[ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture2D" id=13]
 [ext_resource path="res://Shaders/text_horizontal_gradient_shader.tres" type="Material" id=14]
 [ext_resource path="res://Shaders/shader_text_anim.tres" type="Animation" id=15]
 [ext_resource path="res://JetpackGameMode/GameOverScreen/NotificationCircle.tscn" type="PackedScene" id=16]
@@ -27,8 +27,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -39,20 +39,20 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("GameOver:rect_position")
+tracks/2/path = NodePath("GameOver:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 335, 95 ) ]
 }
@@ -63,8 +63,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -75,8 +75,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -87,8 +87,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -99,8 +99,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -114,8 +114,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -129,8 +129,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
@@ -141,20 +141,20 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("GameOver:rect_position")
+tracks/2/path = NodePath("GameOver:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.2, 0.4, 0.6 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 335, -205 ), Vector2( 335, -205 ), Vector2( 335, -205 ), Vector2( 335, 145 ), Vector2( 335, 95 ) ]
 }
@@ -165,8 +165,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -177,8 +177,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.6, 0.9 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -189,8 +189,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.6, 0.9 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -201,14 +201,14 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
 
 [node name="GameOverScreen" type="Node2D"]
-pause_mode = 2
+process_mode = 3
 script = ExtResource( 1 )
 main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
@@ -219,115 +219,115 @@ anims/open = SubResource( 3 )
 
 [node name="ColorFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 1922.0
-margin_bottom = 1082.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 1922.0
+offset_bottom = 1082.0
 color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="GameOver" type="Label" parent="."]
-margin_left = 335.0
-margin_top = 95.0
-margin_right = 834.0
-margin_bottom = 190.0
-rect_scale = Vector2( 2.5, 2.5 )
+offset_left = 335.0
+offset_top = 95.0
+offset_right = 834.0
+offset_bottom = 190.0
+scale = Vector2( 2.5, 2.5 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.815686, 0.192157, 0.243137, 1 )
+theme_override_fonts/font = ExtResource( 2 )
+theme_override_colors/font_color = Color( 0.815686, 0.192157, 0.243137, 1 )
 text = "Game Over"
 align = 1
 valign = 1
 
 [node name="ResultsContainer" type="VBoxContainer" parent="."]
-margin_top = 330.0
-margin_right = 1920.0
-margin_bottom = 1006.0
+offset_top = 330.0
+offset_right = 1920.0
+offset_bottom = 1006.0
 mouse_filter = 0
-custom_constants/separation = 50
+theme_override_constants/separation = 50
 alignment = 2
 
 [node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
-margin_top = 198.0
-margin_right = 1920.0
-margin_bottom = 347.0
+offset_top = 198.0
+offset_right = 1920.0
+offset_bottom = 347.0
 mouse_filter = 0
-custom_constants/separation = 50
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="HighScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
-margin_left = 313.0
-margin_right = 739.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 426, 0 )
+offset_left = 313.0
+offset_right = 739.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 426, 0 )
 mouse_filter = 0
-custom_constants/separation = -2
+theme_override_constants/separation = -2
 
 [node name="PrevHighscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer"]
-margin_right = 426.0
-margin_bottom = 37.0
+offset_right = 426.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Score:"
 align = 1
 valign = 1
 
 [node name="Highscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer"]
-margin_top = 35.0
-margin_right = 426.0
-margin_bottom = 106.0
+offset_top = 35.0
+offset_right = 426.0
+offset_bottom = 106.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
 
 [node name="ScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
-margin_left = 789.0
-margin_right = 1205.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 416, 149 )
+offset_left = 789.0
+offset_right = 1205.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 416, 149 )
 mouse_filter = 0
-custom_constants/separation = -5
+theme_override_constants/separation = -5
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="YourScore" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
-margin_right = 416.0
-margin_bottom = 37.0
+offset_right = 416.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Scored:"
 align = 1
 valign = 1
 
 [node name="Score" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
-margin_top = 32.0
-margin_right = 416.0
-margin_bottom = 118.0
+offset_top = 32.0
+offset_right = 416.0
+offset_bottom = 118.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
 
 [node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
 material = ExtResource( 14 )
-margin_top = 113.0
-margin_right = 416.0
-margin_bottom = 149.0
+offset_top = 113.0
+offset_right = 416.0
+offset_bottom = 149.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 6 )
+theme_override_fonts/font = ExtResource( 6 )
 text = "IT'S A NEW HIGHSCORE!"
 align = 1
 valign = 1
@@ -337,117 +337,117 @@ autoplay = "shader_text_anim"
 anims/shader_text_anim = ExtResource( 15 )
 
 [node name="UpgradeContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
-margin_left = 1255.0
-margin_right = 1606.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 351, 0 )
+offset_left = 1255.0
+offset_right = 1606.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 351, 0 )
 mouse_filter = 0
-custom_constants/separation = -2
+theme_override_constants/separation = -2
 
 [node name="UpgradeText" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer"]
-margin_right = 351.0
-margin_bottom = 37.0
+offset_right = 351.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Upgrade Points:"
 align = 1
 valign = 1
 
 [node name="UpgradePoints" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer"]
-margin_top = 35.0
-margin_right = 351.0
-margin_bottom = 106.0
+offset_top = 35.0
+offset_right = 351.0
+offset_bottom = 106.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
 
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
-margin_top = 397.0
-margin_right = 1920.0
-margin_bottom = 546.0
+offset_top = 397.0
+offset_right = 1920.0
+offset_bottom = 546.0
 mouse_filter = 0
-custom_constants/separation = 50
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="HighTimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults"]
-margin_left = 514.0
-margin_right = 940.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 426, 149 )
+offset_left = 514.0
+offset_right = 940.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 426, 149 )
 mouse_filter = 0
-custom_constants/separation = -2
+theme_override_constants/separation = -2
 
 [node name="PrevHighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer"]
-margin_right = 426.0
-margin_bottom = 37.0
+offset_right = 426.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Time:"
 align = 1
 valign = 1
 
 [node name="HighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer"]
-margin_top = 35.0
-margin_right = 426.0
-margin_bottom = 106.0
+offset_top = 35.0
+offset_right = 426.0
+offset_bottom = 106.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
 
 [node name="TimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults"]
-margin_left = 990.0
-margin_right = 1406.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 416, 149 )
+offset_left = 990.0
+offset_right = 1406.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 416, 149 )
 mouse_filter = 0
-custom_constants/separation = -5
+theme_override_constants/separation = -5
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="YourTime" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
-margin_right = 416.0
-margin_bottom = 37.0
+offset_right = 416.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Time:"
 align = 1
 valign = 1
 
 [node name="Time" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
-margin_top = 32.0
-margin_right = 416.0
-margin_bottom = 118.0
+offset_top = 32.0
+offset_right = 416.0
+offset_bottom = 118.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "0000"
 align = 1
 valign = 1
 
 [node name="HightimeText" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
 material = ExtResource( 14 )
-margin_top = 113.0
-margin_right = 416.0
-margin_bottom = 149.0
+offset_top = 113.0
+offset_right = 416.0
+offset_bottom = 149.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 6 )
+theme_override_fonts/font = ExtResource( 6 )
 text = "IT'S A NEW RECORD!"
 align = 1
 valign = 1
@@ -458,74 +458,74 @@ anims/shader_text_anim = ExtResource( 15 )
 
 [node name="LapsResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false
-margin_top = 398.0
-margin_right = 1920.0
-margin_bottom = 547.0
+offset_top = 398.0
+offset_right = 1920.0
+offset_bottom = 547.0
 mouse_filter = 0
-custom_constants/separation = 50
+theme_override_constants/separation = 50
 alignment = 1
 
 [node name="HighLapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults"]
-margin_left = 514.0
-margin_right = 940.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 426, 149 )
+offset_left = 514.0
+offset_right = 940.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 426, 149 )
 mouse_filter = 0
-custom_constants/separation = -2
+theme_override_constants/separation = -2
 
 [node name="PrevHighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer"]
-margin_right = 426.0
-margin_bottom = 37.0
+offset_right = 426.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Best Laps"
 align = 1
 valign = 1
 
 [node name="HighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer"]
-margin_top = 35.0
-margin_right = 426.0
-margin_bottom = 106.0
+offset_top = 35.0
+offset_right = 426.0
+offset_bottom = 106.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
 
 [node name="LapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults"]
-margin_left = 990.0
-margin_right = 1406.0
-margin_bottom = 149.0
-rect_min_size = Vector2( 416, 149 )
+offset_left = 990.0
+offset_right = 1406.0
+offset_bottom = 149.0
+custom_minimum_size = Vector2( 416, 149 )
 mouse_filter = 0
-custom_constants/separation = -5
+theme_override_constants/separation = -5
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="YourLaps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
-margin_right = 416.0
-margin_bottom = 37.0
+offset_right = 416.0
+offset_bottom = 37.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
 text = "Laps:"
 align = 1
 valign = 1
 
 [node name="Laps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
-margin_top = 32.0
-margin_right = 416.0
-margin_bottom = 118.0
+offset_top = 32.0
+offset_right = 416.0
+offset_bottom = 118.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+theme_override_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
 text = "00"
 align = 1
 valign = 1
@@ -533,12 +533,12 @@ valign = 1
 [node name="HighlapsText" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
 visible = false
 material = ExtResource( 14 )
-margin_top = 113.0
-margin_right = 416.0
-margin_bottom = 149.0
+offset_top = 113.0
+offset_right = 416.0
+offset_bottom = 149.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 6 )
+theme_override_fonts/font = ExtResource( 6 )
 text = "IT'S A NEW RECORD!"
 align = 1
 valign = 1
@@ -547,39 +547,39 @@ valign = 1
 anims/shader_text_anim = ExtResource( 15 )
 
 [node name="Buttons" type="HBoxContainer" parent="ResultsContainer"]
-margin_top = 596.0
-margin_right = 1920.0
-margin_bottom = 676.0
-rect_min_size = Vector2( 0, 80 )
+offset_top = 596.0
+offset_right = 1920.0
+offset_bottom = 676.0
+custom_minimum_size = Vector2( 0, 80 )
 mouse_filter = 0
 theme = ExtResource( 7 )
 alignment = 1
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 342.0
-margin_right = 647.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 147, 79 )
+offset_left = 342.0
+offset_right = 647.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 147, 79 )
 text = "Main Menu"
 icon = ExtResource( 8 )
 script = ExtResource( 9 )
 pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 651.0
-margin_right = 1001.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 262, 79 )
+offset_left = 651.0
+offset_right = 1001.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 262, 79 )
 text = "Stage Select"
 icon = ExtResource( 13 )
 script = ExtResource( 9 )
 pressed_sfx = "Confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1005.0
-margin_right = 1264.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 192, 79 )
+offset_left = 1005.0
+offset_right = 1264.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 192, 79 )
 text = "Upgrade"
 icon = ExtResource( 11 )
 script = ExtResource( 9 )
@@ -588,10 +588,10 @@ pressed_sfx = "Confirm"
 [node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource( 16 )]
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-margin_left = 1268.0
-margin_right = 1578.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 228, 79 )
+offset_left = 1268.0
+offset_right = 1578.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 228, 79 )
 theme = ExtResource( 10 )
 text = "Play Again"
 icon = ExtResource( 12 )

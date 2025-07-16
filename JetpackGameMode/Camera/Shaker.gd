@@ -1,5 +1,5 @@
+@tool
 # Write your doc string for this file here
-tool
 class_name Shaker
 extends Node
 
@@ -12,17 +12,17 @@ extends Node
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 
-export var shake_target: NodePath = NodePath("..")
+@export var shake_target: NodePath = NodePath("..")
 
 # How quickly the shaking stops [0, 1].
-export var decay: float = 0.8  
+@export var decay: float = 0.8  
 # Maximum hor/ver shake in pixels.
-export var max_offset: Vector2 = Vector2(100, 75)  
+@export var max_offset: Vector2 = Vector2(100, 75)  
 # Maximum rotation in radians (use sparingly).
-export var max_roll: float = 0.1  
+@export var max_roll: float = 0.1  
 
 # Current shake strength.
-export var trauma: float = 0.0  
+@export var trauma: float = 0.0  
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 # Trauma exponent. Use [2, 3].
@@ -30,8 +30,8 @@ var _trauma_power: int = 2
 
 var _noise_y = 0
 
-onready var _noise = OpenSimplexNoise.new()
-onready var _target = get_node(shake_target)
+@onready var _noise = FastNoiseLite.new()
+@onready var _target = get_node(shake_target)
 
 ### -----------------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ func _ready():
 	randomize()
 	_noise.seed = randi()
 	_noise.period = 4
-	_noise.octaves = 2
+	_noise.fractal_octaves = 2
 
 
 func _process(delta):
@@ -72,10 +72,10 @@ func _shake():
 		_target.offset.y = max_offset.y * amount * _noise.get_noise_2d(_noise.seed*3, _noise_y)
 	elif _target is Control:
 		var control = _target as Control
-		control.rect_rotation = max_roll * amount * _noise.get_noise_2d(_noise.seed, _noise_y)
-		control.rect_pivot_offset.x = max_offset.x * amount \
+		control.rotation = max_roll * amount * _noise.get_noise_2d(_noise.seed, _noise_y)
+		control.pivot_offset.x = max_offset.x * amount \
 				* _noise.get_noise_2d(_noise.seed*2, _noise_y)
-		control.rect_pivot_offset.y = max_offset.y * amount \
+		control.pivot_offset.y = max_offset.y * amount \
 				* _noise.get_noise_2d(_noise.seed*3, _noise_y)
 
 ### -----------------------------------------------------------------------------------------------

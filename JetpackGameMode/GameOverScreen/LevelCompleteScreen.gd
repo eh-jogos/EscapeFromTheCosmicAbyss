@@ -1,6 +1,6 @@
 extends Node2D
 
-export(String, FILE) var main_menu_path
+@export var main_menu_path # (String, FILE)
 
 var replay_btn
 var next_level_btn
@@ -70,11 +70,11 @@ func _ready():
 	game = get_parent().get_parent()
 	game_mode = game.game_mode
 	
-	if not upgrade_btn.is_connected("focus_entered",self,"_on_focus_enter"):
-		upgrade_btn.connect("focus_entered",self,"_on_focus_enter")
+	if not upgrade_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		upgrade_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
-		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
+	if not level_select_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		level_select_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
 	
 	if game_mode == "story":
@@ -98,8 +98,8 @@ func _ready():
 		time_results.show()
 		unlock_results.hide()
 		
-		replay_btn.set_focus_neighbour(MARGIN_LEFT, quit_btn.get_path())
-		quit_btn.set_focus_neighbour(MARGIN_RIGHT, replay_btn.get_path())
+		replay_btn.set_focus_neighbor(MARGIN_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbor(MARGIN_RIGHT, replay_btn.get_path())
 
 
 func _unhandled_input(event) -> void:
@@ -254,7 +254,7 @@ func _on_upgrade_pressed():
 	var path = upgrade_path
 	last_focus = upgrade_btn
 	animator.play("fade_out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)
@@ -265,7 +265,7 @@ func _on_focus_enter():
 	if not self.visible:
 		self.show()
 		animator.play_backwards("fade_out")
-		yield(animator, "animation_finished")
+		await animator.animation_finished
 		
 		upgrade_points = Global.savedata["story"]["upgrade points"]
 		print_decimal(upgrade_points, label_upgrade)
@@ -276,7 +276,7 @@ func _on_LevelSelect_pressed():
 	var path = level_select_path
 	last_focus = level_select_btn
 	animator.play("fade_out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	ScreenManager.load_above(path, last_focus, self)

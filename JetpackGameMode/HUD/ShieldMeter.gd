@@ -4,7 +4,7 @@ var shield = preload("res://JetpackGameMode/HUD/ShiedIcon.tscn")
 
 
 func _ready():
-	Global.connect("shield_energy_updated_to", self, "_on_Global_shield_energy_updated_to")
+	Global.connect("shield_energy_updated_to", Callable(self, "_on_Global_shield_energy_updated_to"))
 
 
 func _on_Global_shield_energy_updated_to(amount):
@@ -12,7 +12,7 @@ func _on_Global_shield_energy_updated_to(amount):
 	if amount > current_shield_amount:
 		var limit = amount - current_shield_amount
 		for _index in range(limit):
-			var new_shield = shield.instance()
+			var new_shield = shield.instantiate()
 			add_child(new_shield, true)
 			new_shield.play_intro()
 	elif amount < current_shield_amount:

@@ -12,10 +12,10 @@ extends CanvasLayer
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
-onready var _content_root = $Content
-onready var _focus_button = $Content/MenuContainer/Steam
-onready var _back_button = $Content/MenuContainer/Back
-onready var _prompt = $PromptLegendConfirmCancel
+@onready var _content_root = $Content
+@onready var _focus_button = $Content/MenuContainer/Steam
+@onready var _back_button = $Content/MenuContainer/Back
+@onready var _prompt = $PromptLegendConfirmCancel
 
 ### -----------------------------------------------------------------------------------------------
 

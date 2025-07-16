@@ -1,6 +1,6 @@
 extends ParallaxBackground
 
-export var boss_dict: Dictionary = {
+@export var boss_dict: Dictionary = {
 	"BackRowBoss": NodePath(),
 	"MidBackRowBoss": NodePath(),
 	"MidFrontRowBoss": NodePath(),

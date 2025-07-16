@@ -8,7 +8,7 @@ extends TextureRect
 # public variables - order: export > normal var > onready 
 # private variables - order: export > normal var > onready 
 
-onready var _label: Label = $Label
+@onready var _label: Label = $Label
 ### ---------------------------------------
 
 

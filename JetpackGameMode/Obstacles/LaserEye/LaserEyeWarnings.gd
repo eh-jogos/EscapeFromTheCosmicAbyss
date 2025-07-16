@@ -1,6 +1,6 @@
-extends AnimatedSprite
+extends AnimatedSprite2D
 
-export(String, "warning1", "warning2", "warning3") var warning_level = "warning1"
+@export var warning_level = "warning1" # (String, "warning1", "warning2", "warning3")
 
 func _ready():
 	add_to_group("interactive_color")

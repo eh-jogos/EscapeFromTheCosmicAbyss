@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Fonts/OrbitronMedium30.font" type="BitmapFont" id=1]
+[ext_resource path="res://Fonts/OrbitronMedium30.font" type="FontFile" id=1]
 [ext_resource path="res://CommonScenes/PromptLegends/BaseLegend.tscn" type="PackedScene" id=2]
 [ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=3]
 [ext_resource path="res://CommonScenes/PromptLegends/LegendLevelSelect.gd" type="Script" id=4]
@@ -9,56 +9,56 @@
 script = ExtResource( 4 )
 
 [node name="BGStrip" parent="RootControl" index="0"]
-margin_top = -60.0
-margin_bottom = 3.8147e-06
+offset_top = -60.0
+offset_bottom = 3.8147e-06
 grow_vertical = 0
 
 [node name="LegendContainer" parent="RootControl" index="1"]
-margin_top = -61.0
-margin_right = -100.0
-margin_bottom = -0.999996
+offset_top = -61.0
+offset_right = -100.0
+offset_bottom = -0.999996
 grow_vertical = 0
-custom_constants/separation = 50
+theme_override_constants/separation = 50
 
 [node name="AcceptPrompt" type="HBoxContainer" parent="RootControl/LegendContainer" index="0"]
-margin_right = 193.0
-margin_bottom = 60.0
+offset_right = 193.0
+offset_bottom = 60.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Accept" parent="RootControl/LegendContainer/AcceptPrompt" index="0" instance=ExtResource( 3 )]
-margin_right = 60.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 60, 0 )
+offset_right = 60.0
+offset_bottom = 60.0
+custom_minimum_size = Vector2( 60, 0 )
 input_action = "ui_accept"
 
 [node name="Label" type="Label" parent="RootControl/LegendContainer/AcceptPrompt" index="1"]
-margin_left = 64.0
-margin_top = 11.0
-margin_right = 193.0
-margin_bottom = 48.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 64.0
+offset_top = 11.0
+offset_right = 193.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "Confirm"
 
 [node name="CancelPrompt" type="HBoxContainer" parent="RootControl/LegendContainer" index="1"]
-margin_left = 243.0
-margin_right = 424.0
-margin_bottom = 60.0
+offset_left = 243.0
+offset_right = 424.0
+offset_bottom = 60.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cancel" parent="RootControl/LegendContainer/CancelPrompt" index="0" instance=ExtResource( 3 )]
-margin_right = 60.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 60, 0 )
+offset_right = 60.0
+offset_bottom = 60.0
+custom_minimum_size = Vector2( 60, 0 )
 input_action = "ui_cancel"
 
 [node name="Label" type="Label" parent="RootControl/LegendContainer/CancelPrompt" index="1"]
-margin_left = 64.0
-margin_top = 11.0
-margin_right = 181.0
-margin_bottom = 48.0
-custom_fonts/font = ExtResource( 1 )
+offset_left = 64.0
+offset_top = 11.0
+offset_right = 181.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource( 1 )
 text = "Cancel"

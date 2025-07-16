@@ -17,12 +17,12 @@ enum MouseModes {
 }
 # constants
 # public variables - order: export > normal var > onready 
-export(MouseModes) var active_mouse_mode: = Input.MOUSE_MODE_VISIBLE setget set_active_mouse_mode
-export(MouseModes) var inactive_mouse_mode: = Input.MOUSE_MODE_CAPTURED setget set_inactive_mouse_mode
+@export var active_mouse_mode := Input.MOUSE_MODE_VISIBLE: set = set_active_mouse_mode
+@export var inactive_mouse_mode := Input.MOUSE_MODE_CAPTURED: set = set_inactive_mouse_mode
 
 # private variables - order: export > normal var > onready
-export var _should_log: = false
-onready var _timer: Timer = $MousePointerTimer
+@export var _should_log: = false
+@onready var _timer: Timer = $MousePointerTimer
 ### ---------------------------------------
 
 

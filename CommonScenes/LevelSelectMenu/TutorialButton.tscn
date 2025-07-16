@@ -1,15 +1,15 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_normal.png" type="Texture" id=1]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_pressed.png" type="Texture" id=2]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_hover.png" type="Texture" id=3]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_normal.png" type="Texture2D" id=1]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_pressed.png" type="Texture2D" id=2]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/tutorial_icon_hover.png" type="Texture2D" id=3]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.gd" type="Script" id=4]
 
 [sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0, 0.5, 1 )
-colors = PoolColorArray( 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0 )
+offsets = PackedFloat32Array( 0, 0.5, 1 )
+colors = PackedColorArray( 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0.909804, 0, 0.870588, 1, 0 )
 
-[sub_resource type="GradientTexture" id=2]
+[sub_resource type="GradientTexture2D" id=2]
 gradient = SubResource( 1 )
 
 [sub_resource type="Curve" id=3]
@@ -18,7 +18,7 @@ _data = [ Vector2( 0, 0.495454 ), 0.0, 0.236364, 0, 1, Vector2( 1, 0.731818 ), 0
 [sub_resource type="CurveTexture" id=4]
 curve = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="ParticleProcessMaterial" id=5]
 flag_disable_z = true
 direction = Vector3( 0, 0, 0 )
 spread = 0.0
@@ -30,10 +30,10 @@ scale_curve = SubResource( 4 )
 color_ramp = SubResource( 2 )
 
 [node name="TutorialButton" type="TextureButton"]
-margin_right = 48.0
-margin_bottom = 48.0
-focus_neighbour_top = NodePath("../../../Buttons/Upgrade")
-focus_neighbour_bottom = NodePath("../../../Buttons/Close")
+offset_right = 48.0
+offset_bottom = 48.0
+focus_neighbor_top = NodePath("../../../Buttons/Upgrade")
+focus_neighbor_bottom = NodePath("../../../Buttons/Close")
 focus_mode = 0
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
@@ -47,7 +47,7 @@ title_label = NodePath("../../LevelTitle")
 animator_path = NodePath("../../AnimationPlayer")
 menu_animator_path = NodePath("../../../AnimationPlayer")
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 show_behind_parent = true
 position = Vector2( 29, 48 )
 emitting = false

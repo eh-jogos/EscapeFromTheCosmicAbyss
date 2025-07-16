@@ -48,16 +48,16 @@ var current_barriers: = 0
 # 'Nothing to see here" achievement
 var current_lasers: = 0 
 # only used by SteamStatsSupport to make the implementation there easier
-var levels_with_highscores: = 0 setget , _get_levels_with_highscores
+var levels_with_highscores: = 0: get = _get_levels_with_highscores
 
 var arcade_highscore: = 0
 
 # private variables
-export var _version: = 1.0
-export var _dir_path: = "user://"
-export var _file_name: = ""
+@export var _version: = 1.0
+@export var _dir_path: = "user://"
+@export var _file_name: = ""
 
-var _directory = Directory.new()
+var _directory = DirAccess.new()
 var _file = File.new()
 var _full_path: = ""
 var _serialized_data = {}
@@ -77,7 +77,7 @@ func _ready():
 
 ### Public Methods ------------------------
 func reset_savefile():
-	if not _serialized_data.empty():
+	if not _serialized_data.is_empty():
 		_translate_serialized_data(_base_serialized_data)
 	save()
 
@@ -110,7 +110,7 @@ func read() -> void:
 	
 	_translate_serialized_data(_serialized_data)
 	if OS.is_debug_build():
-		printraw(var2str(_serialized_data))
+		printraw(var_to_str(_serialized_data))
 		printraw("\n")
 
 
@@ -204,7 +204,7 @@ func _build_serialized_data() -> Dictionary:
 	settings["current_lasers"] = current_lasers
 	settings["arcade_highscore"] = arcade_highscore
 	
-	settings["has_highscore_on"] = var2str(has_highscore_on)
+	settings["has_highscore_on"] = var_to_str(has_highscore_on)
 	
 	return settings
 
@@ -223,7 +223,7 @@ func _translate_serialized_data(data: Dictionary) -> void:
 	current_lasers = data["current_lasers"]
 	arcade_highscore = data["arcade_highscore"]
 	
-	has_highscore_on = str2var(data["has_highscore_on"])
+	has_highscore_on = str_to_var(data["has_highscore_on"])
 
 
 # Bellow Here things would go into the extended script if you change this to extend a Futur BaseSaveFile

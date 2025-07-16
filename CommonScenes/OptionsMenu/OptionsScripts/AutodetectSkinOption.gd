@@ -11,7 +11,7 @@ extends BaseArrowsButton
 var _is_on: = true
 
 # onready variables
-onready var animator = get_node("AutodetectSelector")
+@onready var animator = get_node("AutodetectSelector")
 
 ### ---------------------------------------
 

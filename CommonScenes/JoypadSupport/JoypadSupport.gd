@@ -37,9 +37,9 @@ enum Modes {
 # constants
 # export variables
 # public variables
-onready var prompts_keyboard: ResourcePreloader = get_node("Keyboard")
-onready var prompts_mouse: ResourcePreloader = get_node("Mouse")
-onready var prompts_joypad: ResourcePreloader = get_node("JoypadIdentifier/Xbox")
+@onready var prompts_keyboard: ResourcePreloader = get_node("Keyboard")
+@onready var prompts_mouse: ResourcePreloader = get_node("Mouse")
+@onready var prompts_joypad: ResourcePreloader = get_node("JoypadIdentifier/Xbox")
 
 # private variables
 var _listen_mode = Modes.NONE
@@ -53,9 +53,9 @@ var _swapped_accept_event = JS_InputMapAction.new("ui_accept",
 var _swapped_cancel_event = JS_InputMapAction.new("ui_cancel", 
 		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_DS_B)
 
-onready var _configs: JS_Config = get_node("Configs") as JS_Config
-onready var _joypad_identifier: JS_JoypadIdentifier = get_node("JoypadIdentifier")
-onready var _animator: AnimationPlayer = get_node("AnimationPlayer")
+@onready var _configs: JS_Config = get_node("Configs") as JS_Config
+@onready var _joypad_identifier: JS_JoypadIdentifier = get_node("JoypadIdentifier")
+@onready var _animator: AnimationPlayer = get_node("AnimationPlayer")
 
 ### ---------------------------------------
 
@@ -67,7 +67,7 @@ func _ready() -> void:
 		update_joypad_prompts_manually()
 	
 	set_process_input(false)
-	Input.connect("joy_connection_changed", self, "_on_Input_joy_connection_changed")
+	Input.connect("joy_connection_changed", Callable(self, "_on_Input_joy_connection_changed"))
 	var input_devices = Input.get_connected_joypads()
 	if input_devices.size() > 0:
 		_set_joypad(input_devices[0], true)
@@ -92,7 +92,7 @@ func _input(event) -> void:
 			event_type = JS_InputMapAction.Types.JOYPAD_AXIS
 	elif _listen_mode == Modes.KEYBOARD_AND_MOUSE:
 		if event is InputEventKey:
-			input_code = event.scancode
+			input_code = event.keycode
 			event_type = JS_InputMapAction.Types.KEY
 		elif event is InputEventMouseButton:
 			input_code = event.button_index
@@ -118,7 +118,7 @@ func listen_input_for(action_name: String, mode: int):
 	_listen_mode = mode
 	
 	set_process_input(true)
-	var new_input_dictionary: Dictionary = yield(_listen_input(), "completed")
+	var new_input_dictionary: Dictionary = await _listen_input().completed
 	set_process_input(false)
 	
 	var new_input_map_action: = JS_InputMapAction.new(action_name, 
@@ -211,7 +211,7 @@ func swap_ui_accept_and_cancel(was_manually_swapped: = false):
 
 func are_ui_accept_and_cancel_swapped() -> bool:
 	var are_swapped: = false
-	var event_list = InputMap.get_action_list("ui_accept")
+	var event_list = InputMap.action_get_events("ui_accept")
 	
 	for event in event_list:
 		if event is InputEventJoypadButton and event.button_index == JOY_DS_A:
@@ -221,18 +221,18 @@ func are_ui_accept_and_cancel_swapped() -> bool:
 	return are_swapped
 
 
-func get_joypad_button_prompt_for(button_index: String) -> Texture:
-	var prompt_texture: Texture = _get_prompt_for(prompts_joypad, button_index)
+func get_joypad_button_prompt_for(button_index: String) -> Texture2D:
+	var prompt_texture: Texture2D = _get_prompt_for(prompts_joypad, button_index)
 	return prompt_texture
 
 
-func get_keyboard_prompt_for(scancode: String) -> Texture:
-	var prompt_texture: Texture = _get_prompt_for(prompts_keyboard, scancode)
+func get_keyboard_prompt_for(keycode: String) -> Texture2D:
+	var prompt_texture: Texture2D = _get_prompt_for(prompts_keyboard, keycode)
 	return prompt_texture
 
 
-func get_mouse_prompt_for(button_index: String) -> Texture:
-	var prompt_texture: Texture = _get_prompt_for(prompts_mouse, button_index)
+func get_mouse_prompt_for(button_index: String) -> Texture2D:
+	var prompt_texture: Texture2D = _get_prompt_for(prompts_mouse, button_index)
 	return prompt_texture
 
 ### ---------------------------------------
@@ -242,8 +242,8 @@ func get_mouse_prompt_for(button_index: String) -> Texture:
 ### ---------------------------------------
 func _listen_input() -> Dictionary:
 	_animator.play("press_button")
-	yield(_animator, "animation_finished")
-	var input_dictionary: Dictionary = yield(self, "input_entered")
+	await _animator.animation_finished
+	var input_dictionary: Dictionary = await self.input_entered
 	_animator.play("base")
 	return input_dictionary
 
@@ -259,8 +259,8 @@ func _set_joypad(device: int, is_connected: bool) -> void:
 		emit_signal("joypad_disconnected")
 
 
-func _get_prompt_for(loader: ResourcePreloader, index: String) -> Texture:
-	var texture: Texture = StreamTexture.new()
+func _get_prompt_for(loader: ResourcePreloader, index: String) -> Texture2D:
+	var texture: Texture2D = CompressedTexture2D.new()
 	if loader.has_resource(index):
 		texture = loader.get_resource(index)
 		return texture
@@ -308,7 +308,7 @@ func _handle_swap_ui_accept_cancel():
 
 
 func _erase_all_event_type_from(action_name: String, new_event: InputEvent) -> void:
-	var event_list = InputMap.get_action_list(action_name)
+	var event_list = InputMap.action_get_events(action_name)
 	for event in event_list:
 		if (event is InputEventKey or event is InputEventMouseButton) \
 				and (new_event is InputEventKey or new_event is InputEventMouseButton):

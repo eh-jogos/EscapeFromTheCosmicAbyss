@@ -1,6 +1,6 @@
 extends TextureButton
 
-onready var animator = get_node("AnimationPlayer")
+@onready var animator = get_node("AnimationPlayer")
 
 func reset() -> void:
 	animator.play("base")

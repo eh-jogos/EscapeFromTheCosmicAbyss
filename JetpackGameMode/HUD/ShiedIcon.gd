@@ -8,7 +8,7 @@ func _ready():
 
 func use_shield():
 	animation.play_backwards("intro")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	self.queue_free()
 
 func play_intro():

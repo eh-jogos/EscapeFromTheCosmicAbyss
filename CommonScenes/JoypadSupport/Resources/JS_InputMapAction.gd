@@ -70,9 +70,9 @@ func _get_new_event_of_type(event_type: int, new_input_code:int, new_axis_value:
 	return new_event
 
 
-func _get_new_key_event(scancode: int) -> InputEventKey:
+func _get_new_key_event(keycode: int) -> InputEventKey:
 	var new_event: = InputEventKey.new()
-	new_event.scancode = scancode
+	new_event.keycode = keycode
 	return new_event
 
 

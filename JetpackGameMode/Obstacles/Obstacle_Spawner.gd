@@ -1,4 +1,4 @@
-extends Position2D
+extends Marker2D
 
 signal setup_laser_eye
 signal level_ready
@@ -7,17 +7,17 @@ signal update_visualization
 signal beat_spawned
 signal half_beat_spawned
 
-export(NodePath) var path_camera
-export(NodePath) var obstacle_parent
-export(NodePath) var obstacle_half_parent
-export(PackedScene) var none
-export(PackedScene) var pipe
-export(PackedScene) var double_pipe
-export(PackedScene) var triple_pipe
-export(PackedScene) var wall
-export(PackedScene) var laser_eye
-export(PackedScene) var shield_up
-export(PackedScene) var ammo_up
+@export var path_camera: NodePath
+@export var obstacle_parent: NodePath
+@export var obstacle_half_parent: NodePath
+@export var none: PackedScene
+@export var pipe: PackedScene
+@export var double_pipe: PackedScene
+@export var triple_pipe: PackedScene
+@export var wall: PackedScene
+@export var laser_eye: PackedScene
+@export var shield_up: PackedScene
+@export var ammo_up: PackedScene
 
 var obstacles = []
 
@@ -47,7 +47,7 @@ func _physics_process(_delta):
 
 
 func spawn(obstacle_num):
-	var obstacle = obstacles[obstacle_num].instance()
+	var obstacle = obstacles[obstacle_num].instantiate()
 	var position = self.get_global_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	obstacle.set_position(position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	obstacle_group.call_deferred("add_child", obstacle)
@@ -57,7 +57,7 @@ func spawn(obstacle_num):
 
 
 func half_spawn(obstacle_num):
-	var obstacle = obstacles[obstacle_num].instance()
+	var obstacle = obstacles[obstacle_num].instantiate()
 	var position = self.get_global_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	obstacle.set_position(position)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	half_group.call_deferred("add_child", obstacle)
@@ -102,6 +102,6 @@ func _on_HalfBeat_area_exit( area ):
 		emit_signal("update_visualization")
 
 func connect_tutorial_signal(object):
-	if not self.is_connected("update_visualization",object,"beat_countdown"):
-		self.connect("update_visualization",object,"beat_countdown")
+	if not self.is_connected("update_visualization", Callable(object, "beat_countdown")):
+		self.connect("update_visualization", Callable(object, "beat_countdown"))
 

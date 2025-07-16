@@ -1,5 +1,5 @@
 extends CenterContainer
 
-export(int) var offset_x = -20
-export(int) var offset_y = -13
+@export var offset_x: int = -20
+@export var offset_y: int = -13
 

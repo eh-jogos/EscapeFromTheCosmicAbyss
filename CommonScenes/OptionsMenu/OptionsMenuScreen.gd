@@ -3,9 +3,9 @@ extends CanvasLayer
 var fullscreen_btn
 var debug_count = 0
 
-onready var animator = $AnimationPlayer
-onready var options_menu = $OptionsContainer
-onready var controls_menu = $ControlsContainer
+@onready var animator = $AnimationPlayer
+@onready var options_menu = $OptionsContainer
+@onready var controls_menu = $ControlsContainer
 
 func _ready():
 	fullscreen_btn = get_node("OptionsContainer/FullscreenOption")
@@ -13,7 +13,7 @@ func _ready():
 	
 	animator.play("open")
 	
-	ScreenManager.connect("mid_transition_reached", self, "_on_ScreenManager_mid_transition_reached")
+	ScreenManager.connect("mid_transition_reached", Callable(self, "_on_ScreenManager_mid_transition_reached"))
 	
 	if OS.is_debug_build():
 		_toggle_debug_menu(true)
@@ -73,13 +73,13 @@ func _on_options_exit_pressed():
 	
 	animator.play("close")
 	SoundManager.play_sfx("Confirm")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	ScreenManager.clear_above()
 
 
 func _on_Restart_pressed():
-	get_tree().change_scene("res://CommonScenes/eh_jogos/SplashScreen.tscn")
+	get_tree().change_scene_to_file("res://CommonScenes/eh_jogos/SplashScreen.tscn")
 	ScreenManager.reset_above_below()
 
 

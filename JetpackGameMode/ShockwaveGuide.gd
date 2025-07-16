@@ -1,5 +1,5 @@
-tool
-extends Position2D
+@tool
+extends Marker2D
 
 
 signal position_changed(relative_position)
@@ -11,12 +11,12 @@ func _ready():
 	var relative_position = get_relative_position(position)
 	emit_signal("position_changed", relative_position)
 	
-	if not Engine.editor_hint:
+	if not Engine.is_editor_hint():
 		hide()
 
 
 func _draw():
-	draw_circle(Vector2.ZERO, 25, Color.white)
+	draw_circle(Vector2.ZERO, 25, Color.WHITE)
 
 
 func _process(_delta):

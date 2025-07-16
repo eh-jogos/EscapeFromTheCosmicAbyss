@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://JetpackGameMode/HUD/ShiedIcon.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/shield_icon.png" type="Texture" id=2]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/shield_icon.png" type="Texture2D" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -10,32 +10,32 @@ length = 0.01
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_min_size")
+tracks/0/path = NodePath(".:custom_minimum_size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TextureFrame:rect_scale")
+tracks/1/path = NodePath("TextureFrame:scale")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TextureFrame:rect_position")
+tracks/2/path = NodePath("TextureFrame:position")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 14, 20 ) ]
 }
@@ -44,8 +44,8 @@ tracks/3/path = NodePath("TextureFrame:modulate:a")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -57,32 +57,32 @@ length = 0.5
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_min_size")
+tracks/0/path = NodePath(".:custom_minimum_size")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 0.25, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 45, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TextureFrame:rect_scale")
+tracks/1/path = NodePath("TextureFrame:scale")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 0.25, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.5 ),
+"transitions": PackedFloat32Array( 1, 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TextureFrame:rect_position")
+tracks/2/path = NodePath("TextureFrame:position")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 0.25, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.5 ),
+"transitions": PackedFloat32Array( 1, 0.25, 1 ),
 "update": 0,
 "values": [ Vector2( 14, 20 ), Vector2( -2.9, -4 ), Vector2( 0, 0 ) ]
 }
@@ -91,23 +91,23 @@ tracks/3/path = NodePath("TextureFrame:modulate:a")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
 
 [node name="ShiedIcon" type="Control"]
 
-rect_min_size = Vector2( 45, 0 )
+custom_minimum_size = Vector2( 45, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags_horizontal = 1
 size_flags_vertical = 1
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 40.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 40.0
 script = ExtResource( 1 )
 mouse_filter = 0
 
@@ -129,10 +129,10 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags_horizontal = 1
 size_flags_vertical = 1
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 35.0
-margin_bottom = 40.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 35.0
+offset_bottom = 40.0
 texture = ExtResource( 2 )
 modulate = Color( 0, 0.960784, 1, 1 )
 stretch_mode = 0

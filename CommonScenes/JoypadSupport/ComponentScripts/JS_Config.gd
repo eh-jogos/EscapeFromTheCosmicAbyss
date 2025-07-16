@@ -18,15 +18,15 @@ var should_autodetect_joypad_skin: = true
 var was_ui_accept_manually_swapped: = false
 var actions: = {}
 
-onready var chosen_skin: int = JS_JoypadIdentifier.JoyPads.UNINDENTIFIED
+@onready var chosen_skin: int = JS_JoypadIdentifier.JoyPads.UNINDENTIFIED
 
 # private variables
-export var _version: = 1.0
-export var _dir_path: = "user://"
-export var _file_name: = ""
-export(Array, String) var _actions_to_save = []
+@export var _version: = 1.0
+@export var _dir_path: = "user://"
+@export var _file_name: = ""
+@export var _actions_to_save = [] # (Array, String)
 
-var _directory = Directory.new()
+var _directory = DirAccess.new()
 var _file = File.new()
 var _full_path: = ""
 var _serialized_data = {}
@@ -56,7 +56,7 @@ func check_savefile():
 
 
 func reset_savefile():
-	if not _serialized_data.empty():
+	if not _serialized_data.is_empty():
 		_translate_serialized_data(_base_serialized_data)
 	save()
 
@@ -90,7 +90,7 @@ func read() -> void:
 	
 	_translate_serialized_data(_serialized_data)
 	if OS.is_debug_build():
-		printraw(var2str(_serialized_data))
+		printraw(var_to_str(_serialized_data))
 		printraw("\n")
 	
 	# this call would go on the extended script from a Future BaseSaveFile
@@ -119,14 +119,14 @@ func _build_serialized_data() -> Dictionary:
 	var settings: = {}
 	settings["version"] = _version
 	
-	if actions.empty():
+	if actions.is_empty():
 		_build_actions_dictionary()
 	
 	settings["actions"] = {}
 	for action in actions:
 		settings["actions"][action] = []
 		for event in actions[action]:
-			settings["actions"][action].append(var2str(event))
+			settings["actions"][action].append(var_to_str(event))
 	
 	settings["was_ui_accept_manually_swapped"] = was_ui_accept_manually_swapped
 	settings["should_autodetect_joypad_skin"] = should_autodetect_joypad_skin
@@ -145,13 +145,13 @@ func _translate_serialized_data(data: Dictionary) -> void:
 	for action in data.actions:
 		actions[action] = []
 		for event_str in data.actions[action]:
-			actions[action].push_back(str2var(event_str))
+			actions[action].push_back(str_to_var(event_str))
 
 # Bellow Here things would go into the extended script if you change this to extend a Futur BaseSaveFile
 func _build_actions_dictionary() -> void:
 	for action in _actions_to_save:
 		actions[action] = []
-		for event in InputMap.get_action_list(action):
+		for event in InputMap.action_get_events(action):
 			actions[action].append(event)
 
 

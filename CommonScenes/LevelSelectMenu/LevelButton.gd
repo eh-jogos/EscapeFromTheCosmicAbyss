@@ -1,12 +1,12 @@
 extends TextureButton
 
-export(int) var level_num = 0
-export(String) var level_name = "title"
-export(NodePath) var number_label
-export(NodePath) var title_label
-export(NodePath) var animator_path
-export(NodePath) var menu_animator_path
-export(NodePath) var highscore_label_path = "../..//Highscore"
+@export var level_num: int = 0
+@export var level_name: String = "title"
+@export var number_label: NodePath
+@export var title_label: NodePath
+@export var animator_path: NodePath
+@export var menu_animator_path: NodePath
+@export var highscore_label_path: NodePath = "../..//Highscore"
 
 var level_number
 var level_title
@@ -17,16 +17,16 @@ var highscore_label
 var game_settings
 
 func _ready():
-	self.connect("mouse_entered",self,"_on_mouse_enter")
-	if not self.is_connected("focus_entered", self, "_on_focus_enter"):
-		self.connect("focus_entered", self, "_on_focus_enter")
+	self.connect("mouse_entered", Callable(self, "_on_mouse_enter"))
+	if not self.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		self.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
 	level_number = get_node(number_label)
 	level_title = get_node(title_label)
 	animator = get_node(animator_path)
 	menu_animator = get_node(menu_animator_path)
 	highscore_label = get_node(highscore_label_path)
-	particle_fx = get_node("Particles2D")
+	particle_fx = get_node("GPUParticles2D")
 	game_settings = Global.get_game_mode()
 	
 	if Global.achievements_handler.has_highscore_on.has(str(level_num)):
@@ -40,8 +40,8 @@ func _on_mouse_enter():
 	self.grab_focus()
 
 func _on_focus_enter():
-	if not self.is_connected("focus_exited", self, "_on_focus_exit"):
-		self.connect("focus_exited", self, "_on_focus_exit")
+	if not self.is_connected("focus_exited", Callable(self, "_on_focus_exit")):
+		self.connect("focus_exited", Callable(self, "_on_focus_exit"))
 
 
 func _on_focus_exit():
@@ -49,8 +49,8 @@ func _on_focus_exit():
 
 
 func _on_LevelButton_pressed():
-	if self.is_connected("focus_exited", self, "_on_focus_exit"):
-		self.disconnect("focus_exited", self, "_on_focus_exit")
+	if self.is_connected("focus_exited", Callable(self, "_on_focus_exit")):
+		self.disconnect("focus_exited", Callable(self, "_on_focus_exit"))
 	
 	SoundManager.play_sfx("Confirm")
 	
@@ -66,7 +66,7 @@ func set_level_and_close():
 	menu_animator.play("close")
 	if SoundManager.is_faded_out:
 		SoundManager.fade_in_start()
-	yield(menu_animator, "animation_finished")
+	await menu_animator.animation_finished
 	
 	var game = get_tree().get_root().get_node("JetpackGame")
 	game.game_start()
@@ -82,7 +82,7 @@ func set_level_and_reload():
 		SoundManager.fade_in_start()
 	menu_animator.play("close")
 	
-	yield(menu_animator, "animation_finished")
+	await menu_animator.animation_finished
 	ScreenManager.reset_above_below()
 
 func _on_LevelButton_focus_enter():

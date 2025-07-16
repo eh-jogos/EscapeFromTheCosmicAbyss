@@ -1,14 +1,14 @@
-tool
+@tool
 extends Area2D
 
-export var call_method_increase_energy: = {"text": "Increase Energy", "arguments": [3]}
-export var call_method_decrease_energy: = {"text": "Decrease Energy", "arguments": [3]}
+@export var call_method_increase_energy: = {"text": "Increase Energy", "arguments": [3]}
+@export var call_method_decrease_energy: = {"text": "Decrease Energy", "arguments": [3]}
 
 # node variables
 var player
 var shield_animator
 
-onready var shield_bubble = $ShieldBubble
+@onready var shield_bubble = $ShieldBubble
 
 # member variables
 var energy = 0
@@ -33,7 +33,7 @@ func modulate_shield(should_mute = false):
 	if energy == 0:
 		shield_animator.play("disabled")
 	
-	if not Engine.editor_hint:
+	if not Engine.is_editor_hint():
 		player.shield_energy = energy
 
 
@@ -48,7 +48,7 @@ func increase_energy(increment, should_mute = false):
 			shield_animator.play("open")
 			modulate_shield(should_mute)
 			shield_bubble.energy = energy
-			yield(shield_animator, "animation_finished")
+			await shield_animator.animation_finished
 		else:
 			Global.game._on_scored(5)
 
@@ -61,6 +61,6 @@ func decrease_energy(increment):
 			print("Shield Energy: %s | Incremet: %s"%[energy,increment])
 			
 			shield_animator.play("burst")
-			yield(shield_animator, "animation_finished")
+			await shield_animator.animation_finished
 			modulate_shield(true)
 			shield_bubble.energy = energy

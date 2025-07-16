@@ -1,8 +1,8 @@
 extends Node2D
 
-onready var animator: AnimationPlayer = get_node("AnimationPlayer")
-onready var legend_confirm_cancel = get_node("ColorsMenuLayer/MenuRoot/LegendConfirmCancel")
-onready var legend_color_picker = get_node("ColorsMenuLayer/MenuRoot/LegendColorPicker")
+@onready var animator: AnimationPlayer = get_node("AnimationPlayer")
+@onready var legend_confirm_cancel = get_node("ColorsMenuLayer/MenuRoot/LegendConfirmCancel")
+@onready var legend_color_picker = get_node("ColorsMenuLayer/MenuRoot/LegendColorPicker")
 
 func _ready() -> void:
 	var menu_block = get_node("ColorsMenuLayer/MenuRoot/MenusBlock")
@@ -11,8 +11,8 @@ func _ready() -> void:
 	legend_confirm_cancel.show()
 	legend_color_picker.hide()
 	
-	Global.connect("color_picker_opened", self, "_on_Global_color_picker_opened")
-	Global.connect("color_picker_closed", self, "_on_Global_color_picker_closed")
+	Global.connect("color_picker_opened", Callable(self, "_on_Global_color_picker_opened"))
+	Global.connect("color_picker_closed", Callable(self, "_on_Global_color_picker_closed"))
 
 
 func _unhandled_input(event) -> void:

@@ -6,7 +6,7 @@
 [ext_resource path="res://JetpackGameMode/Obstacles/LaserEye/LaseEyeSkin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_laser_loop.wav" type="AudioStream" id=5]
 [ext_resource path="res://CommonScenes/SoundManager/sfx/enemy_laser_charging.wav" type="AudioStream" id=6]
-[ext_resource path="res://JetpackGameMode/Obstacles/Fx/white_glowing_diamond.png" type="Texture" id=7]
+[ext_resource path="res://JetpackGameMode/Obstacles/Fx/white_glowing_diamond.png" type="Texture2D" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "charging"
@@ -18,8 +18,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1, 1.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -30,8 +30,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5, 1.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1.5, 1.9 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -42,8 +42,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1.9, 2.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1.9, 2.2 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -54,22 +54,22 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1.9 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 1.9 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "stop_tracking"
 } ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Root/Raycasts/Middle:cast_to")
+tracks/4/path = NodePath("Root/Raycasts/Middle:target_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ) ]
 }
@@ -80,8 +80,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 5, 3.83282 ) ]
 }
@@ -92,8 +92,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( -55, 3.83282 ) ]
 }
@@ -104,32 +104,32 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 65, 3.83282 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Root/Raycasts/Right:cast_to")
+tracks/8/path = NodePath("Root/Raycasts/Right:target_position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Root/Raycasts/Left:cast_to")
+tracks/9/path = NodePath("Root/Raycasts/Left:target_position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ) ]
 }
@@ -140,8 +140,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = false
 tracks/10/keys = {
-"times": PoolRealArray( 1.2, 1.6, 1.9 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 1.2, 1.6, 1.9 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 2,
 "values": [ "enemy_laser_charging", "enemy_laser_charging", "enemy_laser_charging" ]
 }
@@ -152,8 +152,8 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 1, 1.5, 1.9, 2.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1, 1.5, 1.9, 2.2 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true, true, false ]
 }
@@ -164,8 +164,8 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 1.5, 1.9, 2.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1.5, 1.9, 2.2 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1.1, 1.1, 1.1, 1 ), Color( 1.3, 1.3, 1.3, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1.8, 1.8, 1.8, 1 ) ]
 }
@@ -176,8 +176,8 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 1, 1.5, 1.9, 2.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 1, 1.5, 1.9, 2.2 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 2.0, 3.0, 5.0, 5.0 ]
 }
@@ -188,8 +188,8 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 2.1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 2.1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
@@ -203,8 +203,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, -150 ), Vector2( 0, 0 ) ]
 }
@@ -215,8 +215,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -227,8 +227,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
@@ -236,38 +236,38 @@ tracks/2/keys = {
 [sub_resource type="Animation" id=3]
 length = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("Root/OuterLaser:rect_size")
+tracks/0/path = NodePath("Root/OuterLaser:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 162, 40 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Root/OuterLaser:rect_position")
+tracks/1/path = NodePath("Root/OuterLaser:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( -76, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Root/OuterLaser/InnerLaser:rect_size")
+tracks/2/path = NodePath("Root/OuterLaser/InnerLaser:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 122, 40 ) ]
 }
@@ -278,8 +278,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, -150 ) ]
 }
@@ -290,8 +290,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -302,8 +302,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -314,8 +314,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -326,8 +326,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -338,8 +338,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 5, 4 ) ]
 }
@@ -350,8 +350,8 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( -55, 4 ) ]
 }
@@ -362,8 +362,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 65, 4 ) ]
 }
@@ -374,8 +374,8 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1.1, 1.1, 1.1, 1 ) ]
 }
@@ -386,8 +386,8 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -398,8 +398,8 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -410,8 +410,8 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
@@ -425,8 +425,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.6 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, -40 ), Vector2( 0, -150 ) ]
 }
@@ -437,8 +437,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 5, 4 ) ]
 }
@@ -449,8 +449,8 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( -55, 4 ) ]
 }
@@ -461,8 +461,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 65, 4 ) ]
 }
@@ -473,8 +473,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.6 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.6 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "_on_cycle_ended"
@@ -487,8 +487,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -499,8 +499,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.1, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.0 ]
 }
@@ -511,8 +511,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 1.0, 1.0, 0.0 ]
 }
@@ -520,38 +520,38 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=5]
 length = 0.7
 tracks/0/type = "value"
-tracks/0/path = NodePath("Root/OuterLaser:rect_size")
+tracks/0/path = NodePath("Root/OuterLaser:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 162, 40 ), Vector2( 162, 1106 ), Vector2( 162, 13 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Root/OuterLaser:rect_position")
+tracks/1/path = NodePath("Root/OuterLaser:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -81, 0 ), Vector2( -81, 0 ), Vector2( -81, 1093 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Root/OuterLaser/InnerLaser:rect_size")
+tracks/2/path = NodePath("Root/OuterLaser/InnerLaser:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 122, 40 ), Vector2( 122, 1106 ), Vector2( 122, 13 ) ]
 }
@@ -562,20 +562,20 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Root/Raycasts/Middle:cast_to")
+tracks/4/path = NodePath("Root/Raycasts/Middle:target_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ), Vector2( 0, 1105 ), Vector2( 0, 60 ) ]
 }
@@ -586,8 +586,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 5, 3.83282 ), Vector2( 5, 3.83282 ), Vector2( 5, 1084 ) ]
 }
@@ -598,20 +598,20 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -55, 3.83282 ), Vector2( -55, 3.83282 ), Vector2( -55, 1084 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Root/Raycasts/Left:cast_to")
+tracks/7/path = NodePath("Root/Raycasts/Left:target_position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ), Vector2( 0, 1105 ), Vector2( 0, 60 ) ]
 }
@@ -622,20 +622,20 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 65, 3.83282 ), Vector2( 65, 3.83282 ), Vector2( 65, 1084 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Root/Raycasts/Right:cast_to")
+tracks/9/path = NodePath("Root/Raycasts/Right:target_position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 60 ), Vector2( 0, 1105 ), Vector2( 0, 60 ) ]
 }
@@ -646,8 +646,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -658,8 +658,8 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -670,8 +670,8 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -682,8 +682,8 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = false
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 2,
 "values": [ "enemy_laser_shooting" ]
 }
@@ -694,8 +694,8 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ ExtResource( 5 ) ]
 }
@@ -706,20 +706,20 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.4 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Root/OuterLaser/InnerLaser:rect_position")
+tracks/16/path = NodePath("Root/OuterLaser/InnerLaser:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 20, 0 ) ]
 }
@@ -730,8 +730,8 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0.1, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0.1, 0.2, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "values": [ {
 "args": [  ],
 "method": "shake_camera"
@@ -759,10 +759,10 @@ corner_radius_bottom_right = 61
 corner_radius_bottom_left = 61
 
 [sub_resource type="Gradient" id=8]
-offsets = PoolRealArray( 0, 0.243386, 0.497355, 0.751323, 1 )
-colors = PoolColorArray( 1, 0.286275, 0.270588, 0, 1, 0.286275, 0.270588, 1, 0.917969, 0.168533, 0.361747, 1, 1, 0.286275, 0.270588, 1, 1, 0.286275, 0.270588, 0 )
+offsets = PackedFloat32Array( 0, 0.243386, 0.497355, 0.751323, 1 )
+colors = PackedColorArray( 1, 0.286275, 0.270588, 0, 1, 0.286275, 0.270588, 1, 0.917969, 0.168533, 0.361747, 1, 1, 0.286275, 0.270588, 1, 1, 0.286275, 0.270588, 0 )
 
-[sub_resource type="GradientTexture" id=9]
+[sub_resource type="GradientTexture2D" id=9]
 gradient = SubResource( 8 )
 
 [sub_resource type="Curve" id=10]
@@ -771,7 +771,7 @@ _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.495283, 1 ), 0.0, 0.0, 0, 
 [sub_resource type="CurveTexture" id=11]
 curve = SubResource( 10 )
 
-[sub_resource type="ParticlesMaterial" id=12]
+[sub_resource type="ParticleProcessMaterial" id=12]
 emission_shape = 1
 emission_sphere_radius = 128.0
 flag_disable_z = true
@@ -819,9 +819,9 @@ position = Vector2( 0, -150 )
 
 [node name="OuterLaser" type="ColorRect" parent="Root"]
 visible = false
-margin_left = -76.0
-margin_right = 86.0
-margin_bottom = 40.0
+offset_left = -76.0
+offset_right = 86.0
+offset_bottom = 40.0
 color = Color( 1.56, 0.22, 0.21, 1 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -833,18 +833,18 @@ modulate = Color( 1.3, 1.3, 1.3, 1 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -81.0
-margin_bottom = 81.0
-custom_styles/panel = SubResource( 6 )
+offset_top = -81.0
+offset_bottom = 81.0
+theme_override_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel2" type="Panel" parent="Root/OuterLaser"]
 anchor_right = 1.0
-margin_top = -81.0
-margin_bottom = 81.0
-custom_styles/panel = SubResource( 6 )
+offset_top = -81.0
+offset_bottom = 81.0
+theme_override_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -854,8 +854,8 @@ modulate = Color( 1.2, 1.2, 1.2, 1 )
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -61.0
-margin_right = 61.0
+offset_left = -61.0
+offset_right = 61.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -866,18 +866,18 @@ modulate = Color( 1.3, 1.3, 1.3, 1 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -61.0
-margin_bottom = 61.0
-custom_styles/panel = SubResource( 7 )
+offset_top = -61.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel2" type="Panel" parent="Root/OuterLaser/InnerLaser"]
 anchor_right = 1.0
-margin_top = -61.0
-margin_bottom = 61.0
-custom_styles/panel = SubResource( 7 )
+offset_top = -61.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -885,7 +885,7 @@ __meta__ = {
 [node name="LaseEyeSkin" parent="Root" instance=ExtResource( 4 )]
 position = Vector2( 0, 14 )
 
-[node name="ChargingParticles" type="Particles2D" parent="Root/LaseEyeSkin"]
+[node name="ChargingParticles" type="GPUParticles2D" parent="Root/LaseEyeSkin"]
 self_modulate = Color( 1.1, 1.1, 1.1, 1 )
 position = Vector2( 0, 72 )
 emitting = false
@@ -901,18 +901,18 @@ position = Vector2( -5, 0 )
 ]]
 position = Vector2( -55, 4 )
 enabled = true
-cast_to = Vector2( 0, 60 )
+target_position = Vector2( 0, 60 )
 
 [node name="Middle" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
 position = Vector2( 5, 4 )
 enabled = true
-cast_to = Vector2( 0, 60 )
+target_position = Vector2( 0, 60 )
 
 [node name="Right" type="RayCast2D" parent="Root/Raycasts" groups=[
 "enemy",
 ]]
 position = Vector2( 65, 4 )
 enabled = true
-cast_to = Vector2( 0, 60 )
+target_position = Vector2( 0, 60 )

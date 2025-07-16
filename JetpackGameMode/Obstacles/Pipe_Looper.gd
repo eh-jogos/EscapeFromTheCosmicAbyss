@@ -1,6 +1,6 @@
 extends Node2D
 
-export var point_value = 1
+@export var point_value = 1
 var game
 
 # warning-ignore:unused_signal

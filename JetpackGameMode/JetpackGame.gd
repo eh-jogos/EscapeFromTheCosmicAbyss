@@ -3,9 +3,9 @@ extends Node2D
 const MAX_SPEED_INCREMENT_PER_LAP = 1
 
 # Nodes this script will interact with
-export var path_player: NodePath = NodePath()
-export var path_final_boss: NodePath = NodePath()
-export var path_camera: NodePath = NodePath()
+@export var path_player: NodePath = NodePath()
+@export var path_final_boss: NodePath = NodePath()
+@export var path_camera: NodePath = NodePath()
 
 var score_label
 var points_label
@@ -31,12 +31,12 @@ var countdown
 var tutorial
 
 # Game Mode "Stats" and Variables?
-export var point_multiple = 5
-export var upgrade_multiple = 30
-export(String, FILE) var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
-export(String, FILE) var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
-export(String, "story", "arcade", "speedrun") var test_mode = "story"
-export(int) var test_level_or_points = 0
+@export var point_multiple = 5
+@export var upgrade_multiple = 30
+@export var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn" # (String, FILE)
+@export var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn" # (String, FILE)
+@export var test_mode = "story" # (String, "story", "arcade", "speedrun")
+@export var test_level_or_points: int = 0
 
 var game_settings = Global.get_game_mode()
 var game_mode = game_settings["game mode"]
@@ -104,8 +104,8 @@ func _ready():
 	player = self.get_node(path_player)
 	level_loader = self.get_node("LevelLoader")
 	camera = self.get_node(path_camera)
-	object_spawner = self.get_node("RawLayer/WorldVieport/Viewport/Obstaculos/ObstacleSpawner")
-	parallax_background = self.get_node("RawLayer/WorldVieport/Viewport/ParallaxBackground")
+	object_spawner = self.get_node("RawLayer/WorldVieport/SubViewport/Obstaculos/ObstacleSpawner")
+	parallax_background = self.get_node("RawLayer/WorldVieport/SubViewport/ParallaxBackground")
 	
 	show_pre_game()
 
@@ -165,7 +165,7 @@ func is_tutorial_completed():
 	return Global.savedata["story"]["tutorial beaten"]
 
 func load_upgrade_pregame():
-	if category.is_valid_integer():
+	if category.is_valid_int():
 		ScreenManager.load_above(upgrade_path, self, self)
 	else:
 		print("ERROR | Invalid sub-mode: %s"%[game_settings])
@@ -180,20 +180,20 @@ func game_start():
 	if level_intro_cutscene != null and not Global.is_retry:
 		set_game_state("Cutscene")
 		ScreenManager.black_transition(level_intro_cutscene, null, self)
-		if not ScreenManager.is_connected("scene_above_loaded", self, "_on_intro_cutscene_loaded"):
-			 ScreenManager.connect("scene_above_loaded", self, "_on_intro_cutscene_loaded", [], CONNECT_ONESHOT)
+		if not ScreenManager.is_connected("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded")):
+			 ScreenManager.connect("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded").bind(), CONNECT_ONE_SHOT)
 	else:
 		start_countdown()
 
 
 func _on_intro_cutscene_loaded(loaded_cutscene):
-	if not loaded_cutscene.is_connected("cutscene_ended", self, "_on_intro_cutscene_finished"):
-		loaded_cutscene.connect("cutscene_ended", self, "_on_intro_cutscene_finished", [], CONNECT_ONESHOT)
+	if not loaded_cutscene.is_connected("cutscene_ended", Callable(self, "_on_intro_cutscene_finished")):
+		loaded_cutscene.connect("cutscene_ended", Callable(self, "_on_intro_cutscene_finished").bind(), CONNECT_ONE_SHOT)
 
 
 func _on_intro_cutscene_finished():
-	if not ScreenManager.is_connected("transition_ended", self, "start_countdown"):
-		ScreenManager.connect("transition_ended", self, "start_countdown", [], CONNECT_ONESHOT)
+	if not ScreenManager.is_connected("transition_ended", Callable(self, "start_countdown")):
+		ScreenManager.connect("transition_ended", Callable(self, "start_countdown").bind(), CONNECT_ONE_SHOT)
 
 func start_countdown():
 	if is_tutorial:
@@ -299,8 +299,8 @@ func load_level(level_choice, load_all = false, loop = false):
 						key, laser_countdowns, animation_countdowns, animations, danger_duration)
 				
 			if boss_node != null:
-				if not object_spawner.is_connected("beat_spawned", boss_node, "_on_beat_spawned"):
-					object_spawner.connect("beat_spawned", boss_node, "_on_beat_spawned")
+				if not object_spawner.is_connected("beat_spawned", Callable(boss_node, "_on_beat_spawned")):
+					object_spawner.connect("beat_spawned", Callable(boss_node, "_on_beat_spawned"))
 				active_background_bosses.append(boss_node)
 	
 	if game_mode == "arcade":
@@ -402,8 +402,8 @@ func _on_ObstacleSpawner_level_end():
 		if level_end_cutscene != null:
 			set_game_state("Cutscene")
 			ScreenManager.black_transition(level_end_cutscene, null, self)
-			if not ScreenManager.is_connected("scene_above_loaded", self, "_on_end_cutscene_loaded"):
-				ScreenManager.connect("scene_above_loaded", self, "_on_end_cutscene_loaded", [], CONNECT_ONESHOT)
+			if not ScreenManager.is_connected("scene_above_loaded", Callable(self, "_on_end_cutscene_loaded")):
+				ScreenManager.connect("scene_above_loaded", Callable(self, "_on_end_cutscene_loaded").bind(), CONNECT_ONE_SHOT)
 		else:
 			level_completed()
 	elif game_mode == "speedrun":
@@ -417,14 +417,14 @@ func _on_ObstacleSpawner_level_end():
 
 
 func _on_end_cutscene_loaded(loaded_cutscene):
-	if not loaded_cutscene.is_connected("cutscene_ended", self, "_on_end_cutscene_finished"):
-		loaded_cutscene.connect("cutscene_ended", self, "_on_end_cutscene_finished", [], CONNECT_ONESHOT)
+	if not loaded_cutscene.is_connected("cutscene_ended", Callable(self, "_on_end_cutscene_finished")):
+		loaded_cutscene.connect("cutscene_ended", Callable(self, "_on_end_cutscene_finished").bind(), CONNECT_ONE_SHOT)
 	#print("JetpackGame.gd | CUTSCENE LOADED | END SIGNAL CONNECTED")
 
 
 func _on_end_cutscene_finished():
-	if not ScreenManager.is_connected("transition_ended", self, "level_completed"):
-		ScreenManager.connect("transition_ended", self, "level_completed", [], CONNECT_ONESHOT)
+	if not ScreenManager.is_connected("transition_ended", Callable(self, "level_completed")):
+		ScreenManager.connect("transition_ended", Callable(self, "level_completed").bind(), CONNECT_ONE_SHOT)
 	#print("JetpackGame.gd | CUTSCENE ENDED | TRANSITION SIGNAL CONNECTED")
 	player.gravity_force = 0
 	player.jetpack_force = 0
@@ -447,7 +447,7 @@ func player_reset_y():
 	var boost_timer = get_node("AutoBoost")
 	Input.action_press("boost")
 	boost_timer.start()
-	yield(boost_timer,"timeout")
+	await boost_timer.timeout
 	Input.action_release("boost")
 	
 func set_laps(lap_count):

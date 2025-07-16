@@ -20,7 +20,7 @@ func add_ammo():
 	if is_maxed_out(): 
 		return
 	
-	var instance = ammo_packed_scene.instance()
+	var instance = ammo_packed_scene.instantiate()
 	add_child(instance, true)
 
 

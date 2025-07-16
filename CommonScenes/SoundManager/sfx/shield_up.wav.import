@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/shield_up.wav-4eccfef154995fdccb1b7594ce5a8b1c.sample"
+type="AudioStreamWAV"
+uid="uid://c2hw3jqb5b5uv"
+path="res://.godot/imported/shield_up.wav-4eccfef154995fdccb1b7594ce5a8b1c.sample"
 
 [deps]
 
 source_file="res://CommonScenes/SoundManager/sfx/shield_up.wav"
-dest_files=[ "res://.import/shield_up.wav-4eccfef154995fdccb1b7594ce5a8b1c.sample" ]
+dest_files=["res://.godot/imported/shield_up.wav-4eccfef154995fdccb1b7594ce5a8b1c.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

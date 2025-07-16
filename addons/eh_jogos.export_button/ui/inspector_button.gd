@@ -1,4 +1,4 @@
-tool
+@tool
 extends Button
 class_name InspectorButton
 # Write your doc striing for this file here

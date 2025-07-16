@@ -6,14 +6,14 @@ var arrows_highlight
 func _ready():
 	set_process_input(false)
 	
-	if not self.is_connected("mouse_entered",self,"_on_mouse_enter"):
-		self.connect("mouse_entered",self,"_on_mouse_enter")
+	if not self.is_connected("mouse_entered", Callable(self, "_on_mouse_enter")):
+		self.connect("mouse_entered", Callable(self, "_on_mouse_enter"))
 	
-	if not self.is_connected("focus_entered",self,"_on_focus_enter"):
-		self.connect("focus_entered",self,"_on_focus_enter")
+	if not self.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		self.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not self.is_connected("focus_exited",self,"_on_focus_exit"):
-		self.connect("focus_exited",self,"_on_focus_exit")
+	if not self.is_connected("focus_exited", Callable(self, "_on_focus_exit")):
+		self.connect("focus_exited", Callable(self, "_on_focus_exit"))
 	
 	is_invincible = Global.is_invincible
 	

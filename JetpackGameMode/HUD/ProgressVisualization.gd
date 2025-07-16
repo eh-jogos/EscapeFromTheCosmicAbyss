@@ -1,10 +1,10 @@
 extends CenterContainer
 
-export(int) var player_icon_x_offset = -60
-export(int) var player_icon_finish_position = 1470
-export(int) var initial_margin = 80
-export(int) var ending_margin = 15
-export(PackedScene) var progress_barrier
+@export var player_icon_x_offset: int = -60
+@export var player_icon_finish_position: int = 1470
+@export var initial_margin: int = 80
+@export var ending_margin: int = 15
+@export var progress_barrier: PackedScene
 
 var progress_bar
 var icon
@@ -24,11 +24,11 @@ func _ready():
 	icon_position = icon.get_position()  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	
 	total_length = progress_bar.get_size().x - initial_margin - ending_margin
-	Global.connect("barrier_tentacle_killed", self, "_on_Global_barrier_tentacle_killed")
+	Global.connect("barrier_tentacle_killed", Callable(self, "_on_Global_barrier_tentacle_killed"))
 
 
 func create_barrier(step):
-	var barrier = progress_barrier.instance()
+	var barrier = progress_barrier.instantiate()
 	progress_bar.add_child(barrier, true)
 	var position_x = (step * increment)
 	var offset_x = barrier.offset_x
@@ -91,6 +91,6 @@ func _on_Global_barrier_tentacle_killed():
 		var tween = get_node("Tween")
 		tween.interpolate_property(barriers[0], "modulate:a", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
 		tween.start()
-		yield(tween, "tween_completed")
+		await tween.tween_completed
 		barriers[0].queue_free()
 		barriers.pop_front()

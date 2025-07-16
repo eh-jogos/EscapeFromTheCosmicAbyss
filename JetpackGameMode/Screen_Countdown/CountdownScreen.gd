@@ -29,7 +29,7 @@ func play(num, title):
 	level_title.set_text(title)
 	
 	animator.play("fade_in")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	set_process_input(true)
 
 func _input(event):
@@ -41,7 +41,7 @@ func _input(event):
 			game.set_game_state("Playing")
 		
 		animator.play_backwards("fade_in")
-		yield(animator, "animation_finished")
+		await animator.animation_finished
 		
 		if game.game_mode == "speedrun":
 			game.runtime_label.get_node("Timer").start()

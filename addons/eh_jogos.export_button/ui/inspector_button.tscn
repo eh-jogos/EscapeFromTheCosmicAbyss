@@ -15,11 +15,11 @@ bg_color = Color( 0.2, 0.227451, 0.309804, 1 )
 border_color = Color( 0, 0.529412, 1, 1 )
 
 [node name="Button" type="Button"]
-margin_right = 1920.0
-margin_bottom = 25.0
-rect_min_size = Vector2( 0, 25 )
-custom_styles/focus = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+offset_right = 1920.0
+offset_bottom = 25.0
+custom_minimum_size = Vector2( 0, 25 )
+theme_override_styles/focus = SubResource( 1 )
+theme_override_styles/normal = SubResource( 2 )
 text = "asdasdasdasdasdasdasd"
 script = ExtResource( 1 )
 __meta__ = {

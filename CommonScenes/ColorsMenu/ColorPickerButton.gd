@@ -3,46 +3,46 @@ extends ColorPickerButton
 var category = ""
 var selected_part = ""
 
-onready var back_panel = self.get_popup()
-onready var color_picker_container = back_panel.get_child(0)
+@onready var back_panel = self.get_popup()
+@onready var color_picker_container = back_panel.get_child(0)
 
-onready var color_choose_line = color_picker_container.get_child(0)
-onready var saturation_value_square = color_choose_line.get_child(0)
-onready var hue_slider = color_choose_line.get_child(1)
+@onready var color_choose_line = color_picker_container.get_child(0)
+@onready var saturation_value_square = color_choose_line.get_child(0)
+@onready var hue_slider = color_choose_line.get_child(1)
 
-onready var color_preview_line = color_picker_container.get_child(1)
-onready var color_preview = color_preview_line.get_child(0)
-onready var color_pick_button = color_preview_line.get_child(1)
+@onready var color_preview_line = color_picker_container.get_child(1)
+@onready var color_preview = color_preview_line.get_child(0)
+@onready var color_pick_button = color_preview_line.get_child(1)
 
-onready var separator1 = color_picker_container.get_child(3)
-onready var separator2 = color_picker_container.get_child(5)
+@onready var separator1 = color_picker_container.get_child(3)
+@onready var separator2 = color_picker_container.get_child(5)
 
-onready var sliders_container = color_picker_container.get_child(4)
-onready var red_slider_line = sliders_container.get_child(0)
-onready var green_slider_line = sliders_container.get_child(1)
-onready var blue_slider_line = sliders_container.get_child(2)
-onready var slider_separator_line = sliders_container.get_child(3)
-onready var options_line = sliders_container.get_child(4)
-onready var hsv_mode_option = options_line.get_child(0)
-onready var raw_mode_option = options_line.get_child(1)
-onready var toggle_output_button = options_line.get_child(2)
-onready var hex_code_line_edit = options_line.get_child(3)
+@onready var sliders_container = color_picker_container.get_child(4)
+@onready var red_slider_line = sliders_container.get_child(0)
+@onready var green_slider_line = sliders_container.get_child(1)
+@onready var blue_slider_line = sliders_container.get_child(2)
+@onready var slider_separator_line = sliders_container.get_child(3)
+@onready var options_line = sliders_container.get_child(4)
+@onready var hsv_mode_option = options_line.get_child(0)
+@onready var raw_mode_option = options_line.get_child(1)
+@onready var toggle_output_button = options_line.get_child(2)
+@onready var hex_code_line_edit = options_line.get_child(3)
 
-onready var presets_line = color_picker_container.get_child(7)
+@onready var presets_line = color_picker_container.get_child(7)
 
-onready var _button_area : Button = get_node("ButtonArea")
+@onready var _button_area : Button = get_node("ButtonArea")
 
 func _ready():
 	_name_color_picker_elements()
 	_set_color_picker_appearence()
 	
-	connect("color_changed", self, "_on_color_changed")
-	connect("focus_entered", self, "_on_focus_entered")
-	connect("focus_exited", self, "_on_focus_exited")
-	back_panel.connect("popup_hide", self, "_on_popup_hide")
-	back_panel.connect("visibility_changed", self, "_on_backpanel_visibility_changed")
+	connect("color_changed", Callable(self, "_on_color_changed"))
+	connect("focus_entered", Callable(self, "_on_focus_entered"))
+	connect("focus_exited", Callable(self, "_on_focus_exited"))
+	back_panel.connect("popup_hide", Callable(self, "_on_popup_hide"))
+	back_panel.connect("visibility_changed", Callable(self, "_on_backpanel_visibility_changed"))
 	
-	Global.connect("reset_color_pickers", self, "_on_Global_reset_color_pickers")
+	Global.connect("reset_color_pickers", Callable(self, "_on_Global_reset_color_pickers"))
 
 func set_current_color():
 	color = Global.savedata.colors[category][selected_part]
@@ -61,7 +61,7 @@ func _on_Global_reset_color_pickers():
 func _on_popup_hide():
 	_button_area.mouse_filter = Control.MOUSE_FILTER_STOP
 	$Cooldown.start()
-	yield(get_tree(), "idle_frame")
+	await get_tree().idle_frame
 	
 	SoundManager.play_sfx("Change")
 	
@@ -70,13 +70,13 @@ func _on_popup_hide():
 
 func _on_focus_entered():
 	var description = get_node("Description")
-	description.add_color_override("font_color", Color("ffffff"))
+	description.add_theme_color_override("font_color", Color("ffffff"))
 
 
 func _on_focus_exited():
 	SoundManager.play_sfx("Select")
 	var description = get_node("Description")
-	description.add_color_override("font_color", Color("00f5ff"))
+	description.add_theme_color_override("font_color", Color("00f5ff"))
 
 
 func _on_ButtonArea_mouse_enter():
@@ -158,7 +158,7 @@ func _set_color_picker_appearence() -> void:
 	separator2.hide()
 	
 	hue_slider.set_custom_minimum_size(Vector2(40,0))
-	back_panel.rect_min_size = Vector2.ONE * 400
+	back_panel.custom_minimum_size = Vector2.ONE * 400
 
 
 func _name_color_picker_elements() -> void:

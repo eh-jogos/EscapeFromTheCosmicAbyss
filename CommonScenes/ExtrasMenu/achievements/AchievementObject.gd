@@ -12,22 +12,22 @@ enum Type {
 # constants
 # public variables - order: export > normal var > onready 
 # private variables - order: export > normal var > onready
-export var _title : = "" 
-export var _description : = ""
-export var _unachieved : Texture = null
-export var _achieved : Texture = null
-export(Type) var _type : = Type.FLAG
-export var _achievement_variable : = ""
+@export var _title : = "" 
+@export var _description : = ""
+@export var _unachieved : Texture2D = null
+@export var _achieved : Texture2D = null
+@export var _type := Type.FLAG
+@export var _achievement_variable : = ""
 
-onready var _hightlight_panel = $Panel
+@onready var _hightlight_panel = $Panel
 ### ---------------------------------------
 
 
 ### Built in Engine Methods ---------------
 func _ready():
-	connect("focus_entered", self, "_on_focus_entered")
-	connect("focus_exited", self, "_on_focus_exited")
-	connect("mouse_entered", self, "_on_mouse_entered")
+	connect("focus_entered", Callable(self, "_on_focus_entered"))
+	connect("focus_exited", Callable(self, "_on_focus_exited"))
+	connect("mouse_entered", Callable(self, "_on_mouse_entered"))
 	_update_appearence()
 	_hightlight_panel.hide()
 

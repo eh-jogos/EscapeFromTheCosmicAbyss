@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/upgrade_slot.png" type="Texture" id=1]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/upgrade_slot.png" type="Texture2D" id=1]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeSlot.gd" type="Script" id=2]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/upgrade_pending.png" type="Texture" id=3]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/upgrade_applied.png" type="Texture" id=4]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/upgrade_pending.png" type="Texture2D" id=3]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/upgrade_applied.png" type="Texture2D" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -16,8 +16,8 @@ tracks/0/path = NodePath("Upgraded:modulate:a")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.0, 1.0 ]
 }
@@ -26,8 +26,8 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0.5 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.5 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "apply_upgrade"
@@ -45,8 +45,8 @@ tracks/0/path = NodePath("Pending:modulate:a")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -55,8 +55,8 @@ tracks/1/path = NodePath("Upgraded:modulate:a")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -72,8 +72,8 @@ tracks/0/path = NodePath("Pending:modulate:a")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -82,8 +82,8 @@ tracks/1/path = NodePath("Upgraded:modulate:a")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 1.0 ]
 }
@@ -99,8 +99,8 @@ tracks/0/path = NodePath("Pending:modulate:a")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.6, 1.0 ]
 }
@@ -109,23 +109,23 @@ tracks/1/path = NodePath("Upgraded:modulate:a")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 
-[node name="UpgradeSlot" type="Sprite"]
+[node name="UpgradeSlot" type="Sprite2D"]
 
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
-[node name="Pending" type="Sprite" parent="."]
+[node name="Pending" type="Sprite2D" parent="."]
 
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 3 )
 
-[node name="Upgraded" type="Sprite" parent="."]
+[node name="Upgraded" type="Sprite2D" parent="."]
 
 modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 4 )

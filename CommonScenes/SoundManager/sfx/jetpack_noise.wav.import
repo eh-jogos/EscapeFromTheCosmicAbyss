@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/jetpack_noise.wav-a1182492ce225aa1e1313b9c6a4c3f4d.sample"
+type="AudioStreamWAV"
+uid="uid://bi3vae4f5axad"
+path="res://.godot/imported/jetpack_noise.wav-a1182492ce225aa1e1313b9c6a4c3f4d.sample"
 
 [deps]
 
 source_file="res://CommonScenes/SoundManager/sfx/jetpack_noise.wav"
-dest_files=[ "res://.import/jetpack_noise.wav-a1182492ce225aa1e1313b9c6a4c3f4d.sample" ]
+dest_files=["res://.godot/imported/jetpack_noise.wav-a1182492ce225aa1e1313b9c6a4c3f4d.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=true
 edit/normalize=true
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

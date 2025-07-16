@@ -1,15 +1,15 @@
 extends Node
 
-export(NodePath) var position_range
-export(NodePath) var shield_icon
-export(int) var shield_increment
+@export var position_range: NodePath
+@export var shield_icon: NodePath
+@export var shield_increment: int
 
 func _ready():
-	var random_position = rand_range(0.0,1.0)
+	var random_position = randf_range(0.0,1.0)
 	shield_icon = get_node(shield_icon)
 	position_range = get_node(position_range)
 	
-	position_range.set_unit_offset(random_position)
+	position_range.set_progress_ratio(random_position)
 
 func _on_VisibilityNotifier2D_exit_screen():
 	#print("Kill")

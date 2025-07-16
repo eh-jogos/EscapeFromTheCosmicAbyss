@@ -23,8 +23,8 @@ enum ForceType {
 }
 # constants
 # export variables
-export var input_action: = "" setget _set_input_action
-export(ForceType) var force_type: = ForceType.NONE
+@export var input_action: = "": set = _set_input_action
+@export var force_type := ForceType.NONE
 
 # public variables
 # private variables
@@ -34,8 +34,8 @@ var _event_joybutton: String = ""
 var _event_joyaxis: String = ""
 
 # onready variables
-onready var _prompt: TextureRect = get_node("Prompt")
-onready var _fallback: Label = get_node("Fallback")
+@onready var _prompt: TextureRect = get_node("Prompt")
+@onready var _fallback: Label = get_node("Fallback")
 
 ### ---------------------------------------
 
@@ -55,10 +55,10 @@ func _ready():
 	
 	# Both call backs do the same thing here, but kept them separate to facilitade customization
 	# or expansion of each event separately
-	JoypadSupport.connect("joypad_connected", self, "_on_JoypadSupport_joypad_connected")
-	JoypadSupport.connect("joypad_disconnected", self, "_on_JoypadSupport_joypad_disconnected")
-	JoypadSupport.connect("joypad_manually_changed", self, "_on_JoypadSupport_joypad_manually_changed")
-	JoypadSupport.connect("input_remapped", self, "_on_JoypadSupport_input_remapped")
+	JoypadSupport.connect("joypad_connected", Callable(self, "_on_JoypadSupport_joypad_connected"))
+	JoypadSupport.connect("joypad_disconnected", Callable(self, "_on_JoypadSupport_joypad_disconnected"))
+	JoypadSupport.connect("joypad_manually_changed", Callable(self, "_on_JoypadSupport_joypad_manually_changed"))
+	JoypadSupport.connect("input_remapped", Callable(self, "_on_JoypadSupport_input_remapped"))
 
 ### ---------------------------------------
 
@@ -81,7 +81,7 @@ func _setup() -> void:
 		_setup_event_variables()
 		_setup_prompt_appearence()
 	else:
-		if not Engine.editor_hint:
+		if not Engine.is_editor_hint():
 			push_warning("Couldn't find %s in input map list: %s"%[input_action, actions_list])
 			assert(false)
 
@@ -94,11 +94,11 @@ func _reset_event_variables() -> void:
 
 
 func _setup_event_variables() -> void:
-	var event_list: = InputMap.get_action_list(input_action)
+	var event_list: = InputMap.action_get_events(input_action)
 	if event_list.size() > 0:
 		for event in event_list:
 			if event is InputEventKey and _event_keyboard == "":
-				_event_keyboard = str((event as InputEventKey).scancode)
+				_event_keyboard = str((event as InputEventKey).keycode)
 			elif event is InputEventMouseButton and _event_mouse == "":
 				_event_mouse = str((event as InputEventMouseButton).button_index)
 			elif event is InputEventJoypadButton and _event_joybutton == "":
@@ -107,7 +107,7 @@ func _setup_event_variables() -> void:
 				var event_axis = event as InputEventJoypadMotion
 				_event_joyaxis = "%s|%s"%[event_axis.axis, event_axis.axis_value]
 	else:
-		if not Engine.editor_hint:
+		if not Engine.is_editor_hint():
 			push_error("input map action has no events in it!" + \
 					" Register events for it in the Project Settings or through code")
 			assert(false)
@@ -150,7 +150,7 @@ func _set_prompt_texture() -> bool:
 
 
 func _set_prompt_for(string_index: String) -> bool:
-	var prompt_texture: Texture =  _get_prompt_texture_for(string_index)
+	var prompt_texture: Texture2D =  _get_prompt_texture_for(string_index)
 	var success = prompt_texture.resource_path != ""
 	
 	if success:
@@ -159,8 +159,8 @@ func _set_prompt_for(string_index: String) -> bool:
 	return success
 
 
-func _get_prompt_texture_for(string_index: String) -> Texture:
-	var prompt_texture: = StreamTexture.new()
+func _get_prompt_texture_for(string_index: String) -> Texture2D:
+	var prompt_texture: = CompressedTexture2D.new()
 	
 	match string_index:
 		_event_keyboard:
@@ -227,21 +227,21 @@ func _get_fallback_string_for(string_index: String) -> String:
 	
 	return fallback_string
 
-func _get_keyboard_string(scancode: int) -> String:
+func _get_keyboard_string(keycode: int) -> String:
 	var string = ""
-	match scancode:
+	match keycode:
 		KEY_TAB:
 			string = "Tab"
 		KEY_BACKTAB:
 			string = "Tab"
 		_:
-			string = OS.get_scancode_string(scancode)
+			string = OS.get_keycode_string(keycode)
 	
 	return string
 
 
 func push_match_event_variables_error() -> void:
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		return
 	
 	push_error("If you got here it's because the string index doesn't match any " + \
@@ -255,7 +255,7 @@ func push_match_event_variables_error() -> void:
 
 
 func _push_fallback_failed_error() -> void:
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		return
 	
 	push_error("Unable to set prompt or fallback text for any of the events in %s: "\

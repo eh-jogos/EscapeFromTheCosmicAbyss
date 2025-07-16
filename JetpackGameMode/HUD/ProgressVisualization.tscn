@@ -2,36 +2,36 @@
 
 [ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=1]
 [ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_base.png" type="Texture" id=3]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_fill.png" type="Texture" id=4]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/finish_line_block.png" type="Texture" id=5]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_outline.png" type="Texture" id=6]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/player_marker.png" type="Texture" id=7]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture" id=8]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_base.png" type="Texture2D" id=3]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_fill.png" type="Texture2D" id=4]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/finish_line_block.png" type="Texture2D" id=5]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_outline.png" type="Texture2D" id=6]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/player_marker.png" type="Texture2D" id=7]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture2D" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 53, 60 )
-margin_left = 20.0
-margin_right = 20.0
-margin_top = 20.0
-margin_bottom = 20.0
+offset_left = 20.0
+offset_right = 20.0
+offset_top = 20.0
+offset_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 49, 55 )
-margin_left = 20.0
-margin_right = 20.0
-margin_top = 20.0
-margin_bottom = 20.0
+offset_left = 20.0
+offset_right = 20.0
+offset_top = 20.0
+offset_bottom = 20.0
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 49, 56 )
-margin_left = 20.0
-margin_right = 20.0
-margin_top = 20.0
-margin_bottom = 20.0
+offset_left = 20.0
+offset_right = 20.0
+offset_top = 20.0
+offset_bottom = 20.0
 
 [sub_resource type="Animation" id=4]
 resource_name = "loop"
@@ -43,8 +43,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.4 ]
 }
@@ -52,15 +52,15 @@ tracks/0/keys = {
 [sub_resource type="StyleBoxTexture" id=5]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 49, 56 )
-margin_left = 20.0
-margin_right = 20.0
-margin_top = 20.0
-margin_bottom = 20.0
+offset_left = 20.0
+offset_right = 20.0
+offset_top = 20.0
+offset_bottom = 20.0
 
 [sub_resource type="Gradient" id=6]
-colors = PoolColorArray( 0, 0.956863, 1, 1, 0, 0.956863, 1, 0 )
+colors = PackedColorArray( 0, 0.956863, 1, 1, 0, 0.956863, 1, 0 )
 
-[sub_resource type="GradientTexture" id=7]
+[sub_resource type="GradientTexture2D" id=7]
 gradient = SubResource( 6 )
 
 [sub_resource type="Curve" id=8]
@@ -69,7 +69,7 @@ _data = [ Vector2( 0, 0.290909 ), 0.0, 0.709091, 0, 1, Vector2( 1, 1 ), 0.709091
 [sub_resource type="CurveTexture" id=9]
 curve = SubResource( 8 )
 
-[sub_resource type="ParticlesMaterial" id=10]
+[sub_resource type="ParticleProcessMaterial" id=10]
 flag_disable_z = true
 gravity = Vector3( 0, 0, 0 )
 orbit_velocity = 0.0
@@ -79,13 +79,13 @@ scale_curve = SubResource( 9 )
 color_ramp = SubResource( 7 )
 
 [node name="ProgressVisualization" type="CenterContainer"]
-pause_mode = 2
+process_mode = 3
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1920.0
-margin_top = 980.0
-margin_bottom = -14.0
+offset_left = -1920.0
+offset_top = 980.0
+offset_bottom = -14.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -98,35 +98,35 @@ progress_barrier = ExtResource( 2 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="BarBase" type="Panel" parent="."]
-margin_left = 200.0
-margin_top = 13.0
-margin_right = 1720.0
-margin_bottom = 73.0
-rect_min_size = Vector2( 1520, 60 )
+offset_left = 200.0
+offset_top = 13.0
+offset_right = 1720.0
+offset_bottom = 73.0
+custom_minimum_size = Vector2( 1520, 60 )
 mouse_filter = 1
-custom_styles/panel = SubResource( 1 )
+theme_override_styles/panel = SubResource( 1 )
 
 [node name="BarFill" type="Panel" parent="BarBase"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = -2.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
 mouse_filter = 1
-custom_styles/panel = SubResource( 2 )
+theme_override_styles/panel = SubResource( 2 )
 
 [node name="BarFinish" type="Panel" parent="BarBase"]
 modulate = Color( 1, 1, 1, 0.908755 )
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -60.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = -2.0
+offset_left = -60.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
 mouse_filter = 1
-custom_styles/panel = SubResource( 3 )
+theme_override_styles/panel = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarBase/BarFinish"]
 autoplay = "loop"
@@ -135,27 +135,27 @@ anims/loop = SubResource( 4 )
 [node name="BarOutline" type="Panel" parent="BarBase"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 2.0
-margin_top = 2.0
-margin_right = -2.0
-margin_bottom = -2.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
 mouse_filter = 1
-custom_styles/panel = SubResource( 5 )
+theme_override_styles/panel = SubResource( 5 )
 
 [node name="IconContainer" type="CenterContainer" parent="BarBase"]
 anchor_bottom = 1.0
-margin_left = 20.0
-margin_right = 60.0
+offset_left = 20.0
+offset_right = 60.0
 
 [node name="Icon" type="TextureRect" parent="BarBase/IconContainer"]
 modulate = Color( 0, 1, 1, 1 )
-margin_left = 9.0
-margin_top = 19.0
-margin_right = 31.0
-margin_bottom = 41.0
+offset_left = 9.0
+offset_top = 19.0
+offset_right = 31.0
+offset_bottom = 41.0
 texture = ExtResource( 7 )
 
-[node name="Particles2D" type="Particles2D" parent="BarBase/IconContainer/Icon"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BarBase/IconContainer/Icon"]
 show_behind_parent = true
 position = Vector2( 11, 11 )
 amount = 1

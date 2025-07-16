@@ -7,14 +7,14 @@ extends VBoxContainer
 # constants
 # public variables - order: export > normal var > onready 
 # private variables - order: export > normal var > onready 
-onready var _title = $Title
-onready var _description = $Description
+@onready var _title = $Title
+@onready var _description = $Description
 ### ---------------------------------------
 
 
 ### Built in Engine Methods ---------------
 func _ready():
-	Global.connect("achievement_info_sent", self, "_on_Global_achievement_info_sent")
+	Global.connect("achievement_info_sent", Callable(self, "_on_Global_achievement_info_sent"))
 ### ---------------------------------------
 
 

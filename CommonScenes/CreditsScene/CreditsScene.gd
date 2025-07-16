@@ -8,7 +8,7 @@ extends ColorRect
 const SPEED_MODIFIER = 10
 # public variables - order: export > normal var > onready 
 # private variables - order: export > normal var > onready 
-onready var _animator: AnimationPlayer = $AnimationPlayer
+@onready var _animator: AnimationPlayer = $AnimationPlayer
 ### ---------------------------------------
 
 

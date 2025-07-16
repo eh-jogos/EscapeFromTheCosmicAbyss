@@ -1,8 +1,8 @@
 extends Node2D
 
-export(String, FILE) var main_menu_path
-export(String, FILE) var options_path
-export(String, FILE) var level_select_path
+@export var main_menu_path # (String, FILE)
+@export var options_path # (String, FILE)
+@export var level_select_path # (String, FILE)
 
 # class member variables go here, for example:
 var resume_btn
@@ -27,11 +27,11 @@ func _ready():
 	
 	game = self.get_parent().get_parent()
 	
-	if not options_btn.is_connected("focus_entered",self,"_on_focus_enter"):
-		options_btn.connect("focus_entered",self,"_on_focus_enter")
+	if not options_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		options_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not level_select_btn.is_connected("focus_entered",self,"_on_focus_enter"):
-		level_select_btn.connect("focus_entered",self,"_on_focus_enter")
+	if not level_select_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		level_select_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
 	pass
 
@@ -58,7 +58,7 @@ func pause_game():
 		level_select_btn.focus_mode = Control.FOCUS_ALL
 	
 	animator.play_backwards("fade out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	resume_btn.grab_focus()
 	
@@ -73,7 +73,7 @@ func resume_game():
 		game.set_game_state("Playing")
 	
 	animator.play("fade out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	get_tree().set_pause(false)
@@ -88,7 +88,7 @@ func _on_resume_pressed():
 
 func _on_replay_pressed():
 	if game != null:
-		get_tree().change_scene("res://JetpackGameMode/JetpackGame.tscn")
+		get_tree().change_scene_to_file("res://JetpackGameMode/JetpackGame.tscn")
 		resume_game()
 
 
@@ -101,7 +101,7 @@ func _on_options_pressed():
 	last_focus = options_btn
 	
 	animator.play("fade out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	
@@ -117,7 +117,7 @@ func _on_focus_enter():
 	if not visible:
 		self.show()
 		animator.play_backwards("fade out")
-		yield(animator, "animation_finished")
+		await animator.animation_finished
 		
 		if not SoundManager.is_faded_out:
 			SoundManager.fade_out_start(true)
@@ -131,7 +131,7 @@ func _on_LevelSelect_pressed():
 	last_focus = level_select_btn
 	
 	animator.play("fade out")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	
 	self.hide()
 	

@@ -6,43 +6,43 @@
 [node name="LegendConfirmChangeCancel" instance=ExtResource( 2 )]
 
 [node name="AcceptPrompt" type="HBoxContainer" parent="RootControl/LegendContainer" index="0"]
-margin_right = 521.0
-margin_bottom = 80.0
+offset_right = 521.0
+offset_bottom = 80.0
 mouse_filter = 2
-custom_constants/separation = 10
+theme_override_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Prompt_ui_accept" parent="RootControl/LegendContainer/AcceptPrompt" index="0" instance=ExtResource( 3 )]
-margin_right = 80.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 80 )
+offset_right = 80.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 80, 80 )
 input_action = "ui_accept"
 
 [node name="ConfirmChange" type="Label" parent="RootControl/LegendContainer/AcceptPrompt" index="1"]
-margin_left = 90.0
-margin_top = 12.0
-margin_right = 521.0
-margin_bottom = 68.0
+offset_left = 90.0
+offset_top = 12.0
+offset_right = 521.0
+offset_bottom = 68.0
 text = "Confirm / Change"
 
 [node name="CancelPrompt" type="HBoxContainer" parent="RootControl/LegendContainer" index="1"]
-margin_left = 551.0
-margin_right = 813.0
-margin_bottom = 80.0
+offset_left = 551.0
+offset_right = 813.0
+offset_bottom = 80.0
 mouse_filter = 2
-custom_constants/separation = 10
+theme_override_constants/separation = 10
 
 [node name="Prompt_ui_accept" parent="RootControl/LegendContainer/CancelPrompt" index="0" instance=ExtResource( 3 )]
-margin_right = 80.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 80 )
+offset_right = 80.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 80, 80 )
 input_action = "ui_cancel"
 
 [node name="Cancel" type="Label" parent="RootControl/LegendContainer/CancelPrompt" index="1"]
-margin_left = 90.0
-margin_top = 12.0
-margin_right = 262.0
-margin_bottom = 68.0
+offset_left = 90.0
+offset_top = 12.0
+offset_right = 262.0
+offset_bottom = 68.0
 text = "Cancel"

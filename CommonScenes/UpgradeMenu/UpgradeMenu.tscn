@@ -1,28 +1,28 @@
 [gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeMenu.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" type="Texture" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium67.font" type="BitmapFont" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack72.font" type="BitmapFont" id=4]
-[ext_resource path="res://Fonts/OrbitronBlack67.font" type="BitmapFont" id=5]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" type="Texture2D" id=2]
+[ext_resource path="res://Fonts/OrbitronMedium67.font" type="FontFile" id=3]
+[ext_resource path="res://Fonts/OrbitronBlack72.font" type="FontFile" id=4]
+[ext_resource path="res://Fonts/OrbitronBlack67.font" type="FontFile" id=5]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Upgrade.tres" type="Theme" id=6]
-[ext_resource path="res://Fonts/OrbitronBold40.font" type="BitmapFont" id=7]
+[ext_resource path="res://Fonts/OrbitronBold40.font" type="FontFile" id=7]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Cooldown.gd" type="Script" id=8]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeSlot.tscn" type="PackedScene" id=9]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Minus.tscn" type="PackedScene" id=10]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Plus.tscn" type="PackedScene" id=11]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_cooldown.png" type="Texture" id=12]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_cooldown.png" type="Texture2D" id=12]
 [ext_resource path="res://CommonScenes/Buttons/ArrowsIndicator.tscn" type="PackedScene" id=13]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_StartSpeed.gd" type="Script" id=14]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_booster.png" type="Texture" id=15]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_booster.png" type="Texture2D" id=15]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_MaxSpeed.gd" type="Script" id=16]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Laser.gd" type="Script" id=17]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_laser.png" type="Texture" id=18]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_laser.png" type="Texture2D" id=18]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Ammo.gd" type="Script" id=19]
 [ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Shield.gd" type="Script" id=20]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" type="Texture" id=21]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=22]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=23]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" type="Texture2D" id=21]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=22]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=23]
 [ext_resource path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" type="Animation" id=24]
 [ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=25]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=26]
@@ -32,50 +32,50 @@
 [sub_resource type="Animation" id=1]
 length = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenBaseFrame:rect_position")
+tracks/0/path = NodePath("ScreenBaseFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 960, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBaseFrame:rect_size")
+tracks/1/path = NodePath("ScreenBaseFrame:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 1080 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 967, -1500 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 953, -1500 ) ]
 }
@@ -86,8 +86,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -98,8 +98,8 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -110,8 +110,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -122,82 +122,82 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=2]
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenBaseFrame:rect_position")
+tracks/0/path = NodePath("ScreenBaseFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, 0 ), Vector2( 60, 0 ), Vector2( 960, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBaseFrame:rect_size")
+tracks/1/path = NodePath("ScreenBaseFrame:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ), Vector2( 0, 1080 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ), Vector2( 967, -28 ), Vector2( 967, 150 ), Vector2( 967, -1500 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, -28 ), Vector2( 60, -28 ), Vector2( 953, -28 ), Vector2( 953, 150 ), Vector2( 953, -1500 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:rect_size")
+tracks/4/path = NodePath("ColorFrame1:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:rect_size")
+tracks/5/path = NodePath("ColorFrame3:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
@@ -208,8 +208,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -220,8 +220,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -232,8 +232,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -244,8 +244,8 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -256,8 +256,8 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.7, 0.0 ]
 }
@@ -265,74 +265,74 @@ tracks/10/keys = {
 [sub_resource type="Animation" id=3]
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenBaseFrame:rect_position")
+tracks/0/path = NodePath("ScreenBaseFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, 0 ), Vector2( 60, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBaseFrame:rect_size")
+tracks/1/path = NodePath("ScreenBaseFrame:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, -28 ), Vector2( 60, -28 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:rect_size")
+tracks/4/path = NodePath("ColorFrame1:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:rect_size")
+tracks/5/path = NodePath("ColorFrame3:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
@@ -343,8 +343,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -355,8 +355,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.9 ]
 }
@@ -367,8 +367,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -379,8 +379,8 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -401,8 +401,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -413,8 +413,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -429,8 +429,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -441,8 +441,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.2, 0.7 ]
 }
@@ -456,8 +456,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -468,8 +468,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -484,8 +484,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -496,8 +496,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.2, 0.7 ]
 }
@@ -511,8 +511,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -523,8 +523,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -539,8 +539,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -551,8 +551,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.2, 0.7 ]
 }
@@ -566,8 +566,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -578,8 +578,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -594,8 +594,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -606,8 +606,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.2, 0.7 ]
 }
@@ -621,8 +621,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -633,8 +633,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -649,8 +649,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -661,8 +661,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.2, 0.7 ]
 }
@@ -676,8 +676,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ false ]
 }
@@ -688,8 +688,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -704,8 +704,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 1,
 "values": [ true ]
 }
@@ -716,14 +716,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.2, 0.7 ]
 }
 
 [node name="UpgradeScreen" type="CanvasLayer"]
-pause_mode = 2
+process_mode = 3
 layer = 4
 script = ExtResource( 1 )
 
@@ -741,87 +741,87 @@ color = Color( 0.25098, 0.054902, 0.160784, 1 )
 
 [node name="ScreenBaseFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_left = 60.0
-margin_right = 1860.0
-margin_bottom = 1080.0
+offset_left = 60.0
+offset_right = 1860.0
+offset_bottom = 1080.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 
-[node name="AstronautDiagram" type="Sprite" parent="."]
+[node name="AstronautDiagram" type="Sprite2D" parent="."]
 position = Vector2( 453.902, 588.111 )
 texture = ExtResource( 2 )
 
 [node name="SectionLabels" type="Control" parent="."]
 modulate = Color( 1, 1, 1, 0.9 )
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Title" type="Label" parent="SectionLabels"]
-margin_left = 160.0
-margin_top = 25.0
-margin_right = 740.0
-margin_bottom = 108.0
+offset_left = 160.0
+offset_top = 25.0
+offset_right = 740.0
+offset_bottom = 108.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_fonts/font = ExtResource( 3 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "Upgrade Points:"
 
 [node name="PointsNumber" type="Label" parent="SectionLabels"]
-margin_left = 780.0
-margin_top = 5.0
-margin_right = 900.0
-margin_bottom = 91.0
-rect_scale = Vector2( 1.3, 1.3 )
+offset_left = 780.0
+offset_top = 5.0
+offset_right = 900.0
+offset_bottom = 91.0
+scale = Vector2( 1.3, 1.3 )
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_fonts/font = ExtResource( 4 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 text = "--"
 
 [node name="NextGroup" type="Control" parent="SectionLabels"]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Next" type="Label" parent="SectionLabels/NextGroup"]
-margin_left = 938.0
-margin_top = 25.0
-margin_right = 1139.0
-margin_bottom = 109.0
+offset_left = 938.0
+offset_top = 25.0
+offset_right = 1139.0
+offset_bottom = 109.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 1, 0.227451, 0.172549, 1 )
+theme_override_fonts/font = ExtResource( 5 )
+theme_override_colors/font_color = Color( 1, 0.227451, 0.172549, 1 )
 text = "Next:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="SectionLabels/NextGroup"]
-margin_left = 1152.0
-margin_top = 41.0
-margin_right = 1759.0
-margin_bottom = 102.0
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+offset_left = 1152.0
+offset_top = 41.0
+offset_right = 1759.0
+offset_bottom = 102.0
+theme_override_styles/fg = SubResource( 4 )
+theme_override_styles/bg = SubResource( 5 )
 step = 1.0
 value = 50.0
 percent_visible = false
 
 [node name="Cooldown" type="Button" parent="SectionLabels"]
-margin_left = 780.0
-margin_top = 138.0
-margin_right = 1209.0
-margin_bottom = 193.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../../Buttons/Confirm")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../StartSpeed")
+offset_left = 780.0
+offset_top = 138.0
+offset_right = 1209.0
+offset_bottom = 193.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../Buttons/Confirm")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../StartSpeed")
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "Jetpack Cooldown"
 align = 0
 script = ExtResource( 8 )
@@ -848,7 +848,7 @@ position = Vector2( 215, 0 )
 
 [node name="Plus" parent="SectionLabels/Cooldown" instance=ExtResource( 11 )]
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/Cooldown"]
+[node name="Highlight" type="Sprite2D" parent="SectionLabels/Cooldown"]
 modulate = Color( 1, 1, 1, 0.65 )
 position = Vector2( -493.595, 377.153 )
 texture = ExtResource( 12 )
@@ -862,17 +862,17 @@ anims/blink = SubResource( 7 )
 visible = false
 
 [node name="StartSpeed" type="Button" parent="SectionLabels"]
-margin_left = 780.0
-margin_top = 276.0
-margin_right = 1114.0
-margin_bottom = 325.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../Cooldown")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../MaxSpeed")
+offset_left = 780.0
+offset_top = 276.0
+offset_right = 1114.0
+offset_bottom = 325.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Cooldown")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../MaxSpeed")
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "Starting Speed"
 align = 0
 script = ExtResource( 14 )
@@ -932,7 +932,7 @@ position = Vector2( 600, 0 )
 [node name="UpgradeSlot17" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 635, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/StartSpeed"]
+[node name="Highlight" type="Sprite2D" parent="SectionLabels/StartSpeed"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -495.472, 348.888 )
@@ -951,17 +951,17 @@ anims/blink = SubResource( 9 )
 visible = false
 
 [node name="MaxSpeed" type="Button" parent="SectionLabels"]
-margin_left = 781.0
-margin_top = 419.0
-margin_right = 1028.0
-margin_bottom = 468.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../StartSpeed")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../LaserStrength")
+offset_left = 781.0
+offset_top = 419.0
+offset_right = 1028.0
+offset_bottom = 468.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../StartSpeed")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../LaserStrength")
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "Max Speed"
 align = 0
 script = ExtResource( 16 )
@@ -1021,7 +1021,7 @@ position = Vector2( 600, 0 )
 [node name="UpgradeSlot17" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 635, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/MaxSpeed"]
+[node name="Highlight" type="Sprite2D" parent="SectionLabels/MaxSpeed"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -496.472, 205.888 )
@@ -1040,17 +1040,17 @@ anims/blink = SubResource( 11 )
 visible = false
 
 [node name="LaserStrength" type="Button" parent="SectionLabels"]
-margin_left = 780.0
-margin_top = 551.0
-margin_right = 1117.0
-margin_bottom = 600.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../MaxSpeed")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../StartingAmmo")
+offset_left = 780.0
+offset_top = 551.0
+offset_right = 1117.0
+offset_bottom = 600.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../MaxSpeed")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../StartingAmmo")
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "Laser Strength"
 align = 0
 script = ExtResource( 17 )
@@ -1088,7 +1088,7 @@ position = Vector2( 355, 0 )
 [node name="UpgradeSlot10" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 390, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/LaserStrength"]
+[node name="Highlight" type="Sprite2D" parent="SectionLabels/LaserStrength"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -217.396, 5.6712 )
@@ -1107,17 +1107,17 @@ anims/blink = SubResource( 13 )
 visible = false
 
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
-margin_left = 780.0
-margin_top = 689.0
-margin_right = 1117.0
-margin_bottom = 738.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../LaserStrength")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../Shields")
+offset_left = 780.0
+offset_top = 689.0
+offset_right = 1117.0
+offset_bottom = 738.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../LaserStrength")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Shields")
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "Starting Ammo"
 align = 0
 script = ExtResource( 19 )
@@ -1134,7 +1134,7 @@ position = Vector2( 110, 0 )
 [node name="UpgradeSlot3" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/StartingAmmo"]
+[node name="Highlight" type="Sprite2D" parent="SectionLabels/StartingAmmo"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -217.396, -132.329 )
@@ -1153,17 +1153,17 @@ anims/blink = SubResource( 15 )
 visible = false
 
 [node name="Shields" type="Button" parent="SectionLabels"]
-margin_left = 780.0
-margin_top = 825.0
-margin_right = 944.0
-margin_bottom = 874.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("../StartingAmmo")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("../../Buttons/Confirm")
+offset_left = 780.0
+offset_top = 825.0
+offset_right = 944.0
+offset_bottom = 874.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../StartingAmmo")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../Buttons/Confirm")
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "Shields"
 align = 0
 script = ExtResource( 20 )
@@ -1180,7 +1180,7 @@ position = Vector2( 110, 0 )
 [node name="UpgradeSlot3" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
 position = Vector2( 145, 0 )
 
-[node name="Highlight" type="Sprite" parent="SectionLabels/Shields"]
+[node name="Highlight" type="Sprite2D" parent="SectionLabels/Shields"]
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( -337.933, -192.706 )
@@ -1205,7 +1205,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
 position = Vector2( 960, 540 )
 texture = ExtResource( 22 )
 region_enabled = true
@@ -1214,7 +1214,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
 modulate = Color( 1, 1, 1, 0.1 )
 position = Vector2( 960, 0 )
 texture = ExtResource( 23 )
@@ -1233,12 +1233,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -895.0
-margin_top = -90.0
-margin_right = -110.0
-margin_bottom = -30.0
+offset_left = -895.0
+offset_top = -90.0
+offset_right = -110.0
+offset_bottom = -30.0
 mouse_filter = 0
-custom_constants/separation = 15
+theme_override_constants/separation = 15
 alignment = 2
 __meta__ = {
 "_edit_group_": true,
@@ -1246,14 +1246,14 @@ __meta__ = {
 }
 
 [node name="Reset" type="Button" parent="Buttons"]
-margin_left = 169.0
-margin_right = 532.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 147, 0 )
-focus_neighbour_left = NodePath("../Confirm")
-focus_neighbour_top = NodePath("../../SectionLabels/Shields")
-focus_neighbour_right = NodePath("../Confirm")
-focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
+offset_left = 169.0
+offset_right = 532.0
+offset_bottom = 60.0
+custom_minimum_size = Vector2( 147, 0 )
+focus_neighbor_left = NodePath("../Confirm")
+focus_neighbor_top = NodePath("../../SectionLabels/Shields")
+focus_neighbor_right = NodePath("../Confirm")
+focus_neighbor_bottom = NodePath("../../SectionLabels/Cooldown")
 theme = ExtResource( 25 )
 text = "   Reset Changes"
 script = ExtResource( 26 )
@@ -1261,21 +1261,21 @@ script = ExtResource( 26 )
 [node name="ui_cancel" parent="Buttons/Reset" instance=ExtResource( 28 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 13.0
-margin_top = -25.0
-margin_right = 63.0
-margin_bottom = 25.0
+offset_left = 13.0
+offset_top = -25.0
+offset_right = 63.0
+offset_bottom = 25.0
 input_action = "ui_cancel"
 
 [node name="Confirm" type="Button" parent="Buttons"]
-margin_left = 547.0
-margin_right = 785.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 147, 0 )
-focus_neighbour_left = NodePath("../Reset")
-focus_neighbour_top = NodePath("../../SectionLabels/Shields")
-focus_neighbour_right = NodePath("../Reset")
-focus_neighbour_bottom = NodePath("../../SectionLabels/Cooldown")
+offset_left = 547.0
+offset_right = 785.0
+offset_bottom = 60.0
+custom_minimum_size = Vector2( 147, 0 )
+focus_neighbor_left = NodePath("../Reset")
+focus_neighbor_top = NodePath("../../SectionLabels/Shields")
+focus_neighbor_right = NodePath("../Reset")
+focus_neighbor_bottom = NodePath("../../SectionLabels/Cooldown")
 theme = ExtResource( 27 )
 text = "   Confirm"
 script = ExtResource( 26 )
@@ -1284,24 +1284,24 @@ pressed_sfx = "Confirm"
 [node name="PromptInputAction" parent="Buttons/Confirm" instance=ExtResource( 28 )]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = 13.0
-margin_top = -25.0
-margin_right = 63.0
-margin_bottom = 25.0
+offset_left = 13.0
+offset_top = -25.0
+offset_right = 63.0
+offset_bottom = 25.0
 input_action = "ui_accept"
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-margin_left = 1845.0
-margin_top = -28.0
-margin_right = 1860.0
-margin_bottom = 1086.0
+offset_left = 1845.0
+offset_top = -28.0
+offset_right = 1860.0
+offset_bottom = 1086.0
 color = Color( 0, 0.924107, 1, 1 )
 
 [node name="ColorFrame3" type="ColorRect" parent="."]
-margin_left = 60.0
-margin_top = -28.0
-margin_right = 75.0
-margin_bottom = 1086.0
+offset_left = 60.0
+offset_top = -28.0
+offset_right = 75.0
+offset_bottom = 1086.0
 color = Color( 0, 0.924107, 1, 1 )
 [connection signal="pressed" from="SectionLabels/Cooldown/Minus" to="SectionLabels/Cooldown" method="_on_Minus_pressed"]
 [connection signal="pressed" from="SectionLabels/Cooldown/Plus" to="SectionLabels/Cooldown" method="_on_Plus_pressed"]

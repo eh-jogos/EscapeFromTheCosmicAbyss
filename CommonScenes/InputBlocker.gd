@@ -8,7 +8,7 @@ extends CanvasLayer
 # public variables - order: export > normal var > onready 
 # private variables - order: export > normal var > onready 
 var _previous_focus: Control = null
-onready var _blocker = $Blocker
+@onready var _blocker = $Blocker
 ### ---------------------------------------
 
 
@@ -21,7 +21,7 @@ func _ready() -> void:
 
 ### Public Methods ------------------------
 func activate() -> void:
-	_previous_focus = _blocker.get_focus_owner()
+	_previous_focus = _blocker.get_viewport().gui_get_focus_owner()
 	_blocker.show()
 	_blocker.grab_focus()
 

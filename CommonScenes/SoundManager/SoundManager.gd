@@ -171,7 +171,7 @@ func fade_in_start(shoul_be_immediate: = false):
 	else:
 		var current_volume_db = AudioServer.get_bus_volume_db(bgm_bus)
 		# warning-ignore:narrowing_conversion
-		current_volume = db2linear(current_volume_db)
+		current_volume = db_to_linear(current_volume_db)
 		tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 0.5, 
 				Tween.TRANS_BACK, Tween.EASE_IN)
 		tween.start()
@@ -180,5 +180,5 @@ func fade_in_start(shoul_be_immediate: = false):
 func _get_volume_in_db(vol: int) -> float:
 	var float_vol: float = vol * 0.01
 	print("Float Vol: %s"%[float_vol])
-	var volume_db: float = linear2db(float_vol)
+	var volume_db: float = linear_to_db(float_vol)
 	return volume_db

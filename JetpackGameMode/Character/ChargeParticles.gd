@@ -1,8 +1,8 @@
-tool
-extends Particles2D
+@tool
+extends GPUParticles2D
 
 
-onready var animator: AnimationPlayer = $AnimationPlayer
+@onready var animator: AnimationPlayer = $AnimationPlayer
 
 
 func start_charge() -> void:

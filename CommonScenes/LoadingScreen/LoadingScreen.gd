@@ -30,7 +30,7 @@ var _loading_thread: Thread = Thread.new()
 
 func _ready():
 	animation = self.get_node("AnimationPlayer")
-	progress_bar = self.get_node("ColorRect/TextureProgress")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	progress_bar = self.get_node("ColorRect/TextureProgressBar")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	reset()
 
 func reset():
@@ -51,7 +51,7 @@ func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 	scenes_bellow.append(origin_scene)
 	previous_focuses.append(origin_focus_path)
 	
-	scene_above = node.instance()
+	scene_above = node.instantiate()
 	
 	emit_signal("scene_above_loaded", scene_above)
 	
@@ -65,7 +65,7 @@ func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 
 
 func background_loading(path):
-	var bg_loader = ResourceLoader.load_interactive(path)
+	var bg_loader = ResourceLoader.load_threaded_request(path)
 	var poll_results = bg_loader.poll()
 	while not poll_results == ERR_FILE_EOF:
 		if poll_results == OK:
@@ -135,8 +135,8 @@ func reset_above_below():
 
 func load_screen(path):
 	animation.play("fade_in")
-	yield(animation, "animation_finished")
-	loader = ResourceLoader.load_interactive(path)
+	await animation.animation_finished
+	loader = ResourceLoader.load_threaded_request(path)
 	if loader == null:
 #		show_error()
 		return
@@ -150,9 +150,9 @@ func load_screen_invisible(path):
 	if _loading_thread.is_active():
 		_loading_thread.wait_to_finish()
 	
-	var thread_status = _loading_thread.start(self, "background_loading", path)
+	var thread_status = _loading_thread.start(Callable(self, "background_loading").bind(path))
 	if thread_status == OK:
-		var results_dict: Dictionary = yield(self, "background_loading_finished")
+		var results_dict: Dictionary = await self.background_loading_finished
 		if results_dict.error == OK: 
 			set_new_scene(results_dict.scene)
 		else:
@@ -174,7 +174,7 @@ func _process(_delta):
 		set_process(false)
 		return
 	
-	var _t = OS.get_ticks_msec()
+	var _t = Time.get_ticks_msec()
 	if (animation_loaded or load_without_animation):
 		# poll your loader
 		var err = loader.poll()
@@ -190,7 +190,7 @@ func _process(_delta):
 			#show_error()
 			loader = null
 
-func update_progress(current_loader: ResourceInteractiveLoader):
+func update_progress(current_loader: ResourceLoader):
 	var stages_current: = current_loader.get_stage()
 	var stages_total: = current_loader.get_stage_count()
 	var progress = (float(stages_current) / stages_total)*100
@@ -203,16 +203,16 @@ func set_new_scene(scene_resource):
 	progress_bar.set_value(100)
 	if not animation_loaded:
 		animation.play("black_transition")
-		yield(animation, "animation_finished")
+		await animation.animation_finished
 	
 # warning-ignore:return_value_discarded
-	get_tree().change_scene_to(scene_resource)
+	get_tree().change_scene_to_packed(scene_resource)
 	
 	if animation_loaded:
 		animation.play("fade_out")
 	else:
 		animation.play("black_transition_out")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	reset()
 
 func animation_ready():
@@ -225,33 +225,33 @@ func black_transition(path, focus_path, origin_scene, path_is_node = false):
 	elif loading_path == path:
 		return
 	animation.play("black_transition")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	load_above(path, focus_path, origin_scene, path_is_node)
 	emit_signal("mid_transition_reached")
 	animation.play("black_transition_out")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	reset()
 	emit_signal("transition_ended")
 	loading_path = ""
 
 func black_transition_replace(path):
 	animation.play("black_transition")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	emit_signal("mid_transition_reached")
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(path)
+	get_tree().change_scene_to_file(path)
 	animation.play("black_transition_out")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	reset()
 	emit_signal("transition_ended")
 
 func black_transition_from_above():
 	animation.play("black_transition")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	clear_above()
 	emit_signal("mid_transition_reached")
 	animation.play("black_transition_out")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	reset()
 	emit_signal("transition_ended")
 

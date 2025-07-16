@@ -19,8 +19,8 @@ func _ready():
 	
 	_on_PipeTentacles_Reset()
 	
-	if not tentacle_trigger.is_connected("body_entered",self,"_on_TentacleTrigger"):
-		tentacle_trigger.connect("body_entered",self,"_on_TentacleTrigger")
+	if not tentacle_trigger.is_connected("body_entered", Callable(self, "_on_TentacleTrigger")):
+		tentacle_trigger.connect("body_entered", Callable(self, "_on_TentacleTrigger"))
 	
 	randomize()
 
@@ -40,13 +40,13 @@ func initialize_node_variables():
 func _on_TentacleTrigger( body ):
 	if body.is_in_group("pipes") and (body == collision_top or body == collision_bottom):
 		animation.play("spawn")
-		tentacle_position.set_unit_offset(rand_range(0.0,1.0))
+		tentacle_position.set_progress_ratio(randf_range(0.0,1.0))
 	pass
 
 
 func _on_PipeTentacles_Reset():
 	animation.play("hidden")
-	tentacle_position.set_unit_offset(0.5)
+	tentacle_position.set_progress_ratio(0.5)
 
 func _on_player_pass( body ):
 	if body.is_in_group("player"):
@@ -75,7 +75,7 @@ func _on_kill_player(body, offset_y):
 	dead_player.show()
 	
 	animation.play("kill_player")
-	yield(animation, "animation_finished")
+	await animation.animation_finished
 	tentacle_pipe._on_player_killed()
 
 func _on_PipeTentacles_Die():

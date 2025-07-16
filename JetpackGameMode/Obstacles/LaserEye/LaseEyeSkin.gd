@@ -1,9 +1,9 @@
-tool
+@tool
 extends Node2D
 
-export(float, 0.0, 1.0, 0.1) var warning_color_1 = 0.0 setget set_warning_color1
-export(float, 0.0, 1.0, 0.1) var warning_color_2 = 0.0 setget set_warning_color2
-export(float, 0.0, 1.0, 0.1) var warning_color_3 = 0.0 setget set_warning_color3
+@export var warning_color_1 = 0.0: set = set_warning_color1
+@export var warning_color_2 = 0.0: set = set_warning_color2
+@export var warning_color_3 = 0.0: set = set_warning_color3
 
 var warning_animator1
 var warning_animator2

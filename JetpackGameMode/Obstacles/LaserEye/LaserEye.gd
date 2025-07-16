@@ -2,7 +2,7 @@ extends Node2D
 
 const POSITION_Y = -472
 
-export(int) var point_value = 5
+@export var point_value: int = 5
 
 var is_tracking = true
 var animator

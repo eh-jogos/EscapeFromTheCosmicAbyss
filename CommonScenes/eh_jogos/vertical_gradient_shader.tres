@@ -1,11 +1,11 @@
 [gd_resource type="ShaderMaterial" load_steps=9 format=2]
 
-[sub_resource type="VisualShaderNodeVectorScalarMix" id=1]
+[sub_resource type="VisualShaderNodeMix" id=1]
 
-[sub_resource type="VisualShaderNodeColorUniform" id=2]
+[sub_resource type="VisualShaderNodeColorParameter" id=2]
 uniform_name = "Start"
 
-[sub_resource type="VisualShaderNodeColorUniform" id=3]
+[sub_resource type="VisualShaderNodeColorParameter" id=3]
 uniform_name = "End"
 
 [sub_resource type="VisualShaderNodeInput" id=4]
@@ -21,8 +21,8 @@ source = 2
 
 [sub_resource type="VisualShader" id=8]
 code = "shader_type canvas_item;
-uniform vec4 Start : hint_color;
-uniform vec4 End : hint_color;
+uniform vec4 Start : source_color;
+uniform vec4 End : source_color;
 
 
 
@@ -91,7 +91,7 @@ nodes/fragment/8/node = SubResource( 6 )
 nodes/fragment/8/position = Vector2( 120, 480 )
 nodes/fragment/9/node = SubResource( 7 )
 nodes/fragment/9/position = Vector2( 320, 480 )
-nodes/fragment/connections = PoolIntArray( 3, 0, 2, 0, 4, 0, 2, 1, 5, 0, 6, 0, 6, 1, 2, 2, 2, 0, 0, 0, 8, 0, 9, 2, 9, 1, 0, 1, 5, 0, 9, 0 )
+nodes/fragment/connections = PackedInt32Array( 3, 0, 2, 0, 4, 0, 2, 1, 5, 0, 6, 0, 6, 1, 2, 2, 2, 0, 0, 0, 8, 0, 9, 2, 9, 1, 0, 1, 5, 0, 9, 0 )
 
 [resource]
 shader = SubResource( 8 )

@@ -25,9 +25,9 @@ func _on_kill_player(offset_x, flip):
 	tentacle_position.set_offset(relative_pos)
 	
 	animator.play("kill_player")
-	yield(animator, "animation_finished")
+	await animator.animation_finished
 	darkwave._on_player_killed()
 	
-	tentacle_position.set_unit_offset(0)
+	tentacle_position.set_progress_ratio(0)
 	animator.play("inactive")
 

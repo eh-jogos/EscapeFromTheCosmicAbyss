@@ -7,18 +7,18 @@ extends HBoxContainer
 # constants
 # public variables - order: export > normal var > onready 
 # private variables - order: export > normal var > onready
-onready var _joypad_sv: HBoxContainer = $JoypadSaturationValue
-onready var _joypad_hue: HBoxContainer = $JoypadHue
-onready var _keyboard_sv: HBoxContainer = $keyboardSaturationValue
-onready var _keyboard_hue: HBoxContainer = $KeyboardHue
+@onready var _joypad_sv: HBoxContainer = $JoypadSaturationValue
+@onready var _joypad_hue: HBoxContainer = $JoypadHue
+@onready var _keyboard_sv: HBoxContainer = $keyboardSaturationValue
+@onready var _keyboard_hue: HBoxContainer = $KeyboardHue
 
 ### ---------------------------------------
 
 
 ### Built in Engine Methods ---------------
 func _ready():
-	JoypadSupport.connect("joypad_connected", self, "_onJoypadSupport_joypad_connected")
-	JoypadSupport.connect("joypad_disconnected", self, "_onJoypadSupport_joypad_disconnected")
+	JoypadSupport.connect("joypad_connected", Callable(self, "_onJoypadSupport_joypad_connected"))
+	JoypadSupport.connect("joypad_disconnected", Callable(self, "_onJoypadSupport_joypad_disconnected"))
 	
 	if JoypadSupport.get_joypad_type() == JS_JoypadIdentifier.JoyPads.NO_JOYPAD:
 		_onJoypadSupport_joypad_disconnected()

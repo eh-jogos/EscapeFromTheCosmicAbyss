@@ -1,4 +1,4 @@
-extends AnimatedSprite
+extends AnimatedSprite2D
 
 func _ready():
 	add_to_group("interactive_color")

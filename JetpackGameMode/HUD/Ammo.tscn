@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://JetpackGameMode/HUD/Ammo.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ammo.png" type="Texture" id=2]
+[ext_resource path="res://JetpackGameMode/HUD/pngs/ammo.png" type="Texture2D" id=2]
 
 [sub_resource type="Animation" id=1]
 
@@ -14,38 +14,38 @@ tracks/0/path = NodePath("Ammo:modulate")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Color( 0, 0.960784, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Ammo:rect_scale")
+tracks/1/path = NodePath("Ammo:scale")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Ammo:rect_position")
+tracks/2/path = NodePath("Ammo:position")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:rect_min_size")
+tracks/3/path = NodePath(".:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 26, 38 ) ]
 }
@@ -60,38 +60,38 @@ tracks/0/path = NodePath("Ammo:modulate")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0.960784, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Ammo:rect_position")
+tracks/1/path = NodePath("Ammo:position")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.1, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 3, 80 ), Vector2( 3, -12 ), Vector2( 3, 0 ), Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Ammo:rect_scale")
+tracks/2/path = NodePath("Ammo:scale")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.3, 1 ), Vector2( 0.3, 1 ), Vector2( 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:rect_min_size")
+tracks/3/path = NodePath(".:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 3.3, 38 ), Vector2( 3.3, 38 ), Vector2( 11, 38 ), Vector2( 26, 38 ) ]
 }
@@ -107,53 +107,53 @@ tracks/0/path = NodePath("Ammo:modulate")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Color( 0, 0.960784, 1, 1 ), Color( 1, 0.227451, 0.172549, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Ammo:rect_position")
+tracks/1/path = NodePath("Ammo:position")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 5, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Ammo:rect_scale")
+tracks/2/path = NodePath("Ammo:scale")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath(".:rect_min_size")
+tracks/3/path = NodePath(".:custom_minimum_size")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 26, 38 ), Vector2( 26, 38 ), Vector2( 0, 38 ) ]
 }
 
 [node name="AmmoRoot" type="Control"]
 
-rect_min_size = Vector2( 0, 38 )
+custom_minimum_size = Vector2( 0, 38 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags_horizontal = 1
 size_flags_vertical = 1
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 7.92
-margin_bottom = 38.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 7.92
+offset_bottom = 38.0
 script = ExtResource( 1 )
 mouse_filter = 1
 
@@ -172,15 +172,15 @@ autoplay = "intro"
 
 [node name="Ammo" type="TextureRect" parent="."]
 
-rect_scale = Vector2( 0, 1 )
+scale = Vector2( 0, 1 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags_horizontal = 1
 size_flags_vertical = 1
-margin_left = 5.0
-margin_top = 0.0
-margin_right = 16.0
-margin_bottom = 97.0
+offset_left = 5.0
+offset_top = 0.0
+offset_right = 16.0
+offset_bottom = 97.0
 texture = ExtResource( 2 )
 modulate = Color( 1, 0.227451, 0.172549, 1 )
 stretch_mode = 0

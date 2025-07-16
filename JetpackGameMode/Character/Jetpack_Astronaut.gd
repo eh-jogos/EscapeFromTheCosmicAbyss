@@ -1,9 +1,9 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 signal dashing(boolean)
 
-export(int) var min_speed = 4
-export(bool) var is_invincible = false
+@export var min_speed: int = 4
+@export var is_invincible: bool = false
 
 const OVERHEAT_THRESHOLD = 80
 
@@ -12,8 +12,8 @@ var bullet = preload("res://JetpackGameMode/Character/Bullet_RayCast.tscn")
 
 
 # Paths to Outer Nodes I'll interact with
-export var path_game: NodePath
-export var path_points_label: NodePath
+@export var path_game: NodePath
+@export var path_points_label: NodePath
 
 # Outer Nodes I'll interact with
 var game
@@ -23,8 +23,8 @@ var points_label
 var overheat_bar
 var overheat_bar_animator
 var jet_particles
-var dash_particles: Particles2D
-var charge_particles: Particles2D
+var dash_particles: GPUParticles2D
+var charge_particles: GPUParticles2D
 var jet_sfx
 var body_animator
 var arms_animator
@@ -90,7 +90,7 @@ func _ready():
 	set_physics_process(true)
 	set_process_input(true)
 	
-	Global.connect("update_invincibility", self, "_on_update_invincibility")
+	Global.connect("update_invincibility", Callable(self, "_on_update_invincibility"))
 	if OS.is_debug_build():
 		if Global.is_invincible:
 			is_invincible = Global.is_invincible
@@ -185,7 +185,9 @@ func _physics_process(delta):
 					speed.y *= -2
 					#print("Rising | speed.y: %s"%[speed.y])
 			
-			self.move_and_slide(final_motion)
+			self.set_velocity(final_motion)
+			self.move_and_slide()
+			self.velocity
 			
 		elif collider.is_in_group("enemy") and not is_dead and not is_invincible:
 			#print("Shield Energy at death: %s"%[shield_energy])
@@ -202,7 +204,9 @@ func _physics_process(delta):
 		else: 
 			var normal = collision.normal
 			motion = normal.slide(motion)
-			motion = self.move_and_slide(motion)
+			self.set_velocity(motion)
+			self.move_and_slide()
+			motion = self.velocity
 
 
 func handle_overheat_bar_color(heat): 
@@ -281,17 +285,17 @@ func _input(event):
 		game.ammunition.use_ammo()
 		arms_animator.play("shooting")
 		
-		var new_bullet = bullet.instance()
+		var new_bullet = bullet.instantiate()
 		bullet_spawn.add_child(new_bullet)
 		new_bullet.set_laser_strength(laser_strength)
 		
-		if not new_bullet.is_connected("laser_end",self, "stop_shooting"):
-			new_bullet.connect("laser_end", self, "stop_shooting")
+		if not new_bullet.is_connected("laser_end", Callable(self, "stop_shooting")):
+			new_bullet.connect("laser_end", Callable(self, "stop_shooting"))
 
 func stop_shooting():
 	shooting = false
 	arms_animator.play("reloading")
-	yield(arms_animator, "animation_finished")
+	await arms_animator.animation_finished
 	var current_anim = body_animator.assigned_animation
 	var current_anim_pos = body_animator.current_animation_position
 	

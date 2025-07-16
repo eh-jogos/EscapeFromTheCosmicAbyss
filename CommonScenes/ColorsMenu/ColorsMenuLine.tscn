@@ -8,11 +8,11 @@
 [node name="OptionBody" type="HBoxContainer"]
 light_mask = 1024
 use_parent_material = true
-margin_top = 76.0
-margin_right = 516.0
-margin_bottom = 126.0
+offset_top = 76.0
+offset_right = 516.0
+offset_bottom = 126.0
 mouse_filter = 0
-custom_constants/separation = 30
+theme_override_constants/separation = 30
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -21,13 +21,13 @@ __meta__ = {
 [node name="ColorPickerButton" type="ColorPickerButton" parent="."]
 light_mask = 1024
 use_parent_material = true
-margin_right = 50.0
-margin_bottom = 50.0
-rect_min_size = Vector2( 50, 50 )
-focus_neighbour_left = NodePath(".")
-focus_neighbour_top = NodePath("..")
-focus_neighbour_right = NodePath(".")
-focus_neighbour_bottom = NodePath("..")
+offset_right = 50.0
+offset_bottom = 50.0
+custom_minimum_size = Vector2( 50, 50 )
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("..")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("..")
 theme = ExtResource( 2 )
 toggle_mode = false
 align = 0
@@ -42,15 +42,15 @@ one_shot = true
 [node name="Description" type="Label" parent="ColorPickerButton"]
 light_mask = 1024
 use_parent_material = true
-margin_left = 80.0
-margin_right = 167.0
-margin_bottom = 50.0
-focus_neighbour_left = NodePath(".")
-focus_neighbour_right = NodePath(".")
+offset_left = 80.0
+offset_right = 167.0
+offset_bottom = 50.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
 mouse_filter = 0
 size_flags_vertical = 1
 theme = ExtResource( 4 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 1 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -60,7 +60,7 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 466.0
+offset_right = 466.0
 mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": false

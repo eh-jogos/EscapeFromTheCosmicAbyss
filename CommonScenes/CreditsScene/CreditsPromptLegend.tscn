@@ -9,64 +9,64 @@
 modulate = Color( 1, 1, 1, 0 )
 
 [node name="Scroll" type="HBoxContainer" parent="RootControl/LegendContainer" index="0"]
-margin_right = 521.0
-margin_bottom = 80.0
-custom_constants/separation = 10
+offset_right = 521.0
+offset_bottom = 80.0
+theme_override_constants/separation = 10
 
 [node name="Up" parent="RootControl/LegendContainer/Scroll" index="0" instance=ExtResource( 2 )]
-margin_right = 80.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 0 )
+offset_right = 80.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 80, 0 )
 input_action = "ui_up"
 
 [node name="Down" parent="RootControl/LegendContainer/Scroll" index="1" instance=ExtResource( 2 )]
-margin_left = 90.0
-margin_right = 170.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 0 )
+offset_left = 90.0
+offset_right = 170.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 80, 0 )
 input_action = "ui_down"
 
 [node name="Scroll" type="Label" parent="RootControl/LegendContainer/Scroll" index="2"]
-margin_left = 180.0
-margin_top = 12.0
-margin_right = 521.0
-margin_bottom = 68.0
+offset_left = 180.0
+offset_top = 12.0
+offset_right = 521.0
+offset_bottom = 68.0
 text = "Scroll Credits"
 
 [node name="Pause" type="HBoxContainer" parent="RootControl/LegendContainer" index="1"]
-margin_left = 551.0
-margin_right = 801.0
-margin_bottom = 80.0
-custom_constants/separation = 10
+offset_left = 551.0
+offset_right = 801.0
+offset_bottom = 80.0
+theme_override_constants/separation = 10
 
 [node name="Accept" parent="RootControl/LegendContainer/Pause" index="0" instance=ExtResource( 2 )]
-margin_right = 80.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 0 )
+offset_right = 80.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 80, 0 )
 input_action = "ui_accept"
 
 [node name="Pause" type="Label" parent="RootControl/LegendContainer/Pause" index="1"]
-margin_left = 90.0
-margin_top = 12.0
-margin_right = 250.0
-margin_bottom = 68.0
+offset_left = 90.0
+offset_top = 12.0
+offset_right = 250.0
+offset_bottom = 68.0
 text = "Pause"
 
 [node name="Skip" type="HBoxContainer" parent="RootControl/LegendContainer" index="2"]
-margin_left = 831.0
-margin_right = 1025.0
-margin_bottom = 80.0
-custom_constants/separation = 10
+offset_left = 831.0
+offset_right = 1025.0
+offset_bottom = 80.0
+theme_override_constants/separation = 10
 
 [node name="Cancel" parent="RootControl/LegendContainer/Skip" index="0" instance=ExtResource( 2 )]
-margin_right = 80.0
-margin_bottom = 80.0
-rect_min_size = Vector2( 80, 0 )
+offset_right = 80.0
+offset_bottom = 80.0
+custom_minimum_size = Vector2( 80, 0 )
 input_action = "ui_cancel"
 
 [node name="Skip" type="Label" parent="RootControl/LegendContainer/Skip" index="1"]
-margin_left = 90.0
-margin_top = 12.0
-margin_right = 194.0
-margin_bottom = 68.0
+offset_left = 90.0
+offset_top = 12.0
+offset_right = 194.0
+offset_bottom = 68.0
 text = "Skip"

@@ -9,15 +9,15 @@ extends BaseArrowsButton
 # public variables
 # private variables
 # onready variables
-onready var animator = $ControlTypeSelector
+@onready var animator = $ControlTypeSelector
 ### ---------------------------------------
 
 
 ### Built in Engine Methods ---------------
 
 func _ready():
-	JoypadSupport.connect("joypad_connected", self, "_on_JoypadSupport_joypad_connected")
-	JoypadSupport.connect("joypad_disconnected", self, "_on_JoypadSupport_joypad_disconnected")
+	JoypadSupport.connect("joypad_connected", Callable(self, "_on_JoypadSupport_joypad_connected"))
+	JoypadSupport.connect("joypad_disconnected", Callable(self, "_on_JoypadSupport_joypad_disconnected"))
 	
 	if JoypadSupport.get_joypad_type() == JS_JoypadIdentifier.JoyPads.NO_JOYPAD:
 		animator.play("keyboard_menu")

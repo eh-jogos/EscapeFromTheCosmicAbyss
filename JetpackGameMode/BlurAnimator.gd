@@ -1,6 +1,6 @@
 extends AnimationPlayer
 
 func _ready():
-	yield(owner, "ready")
+	await owner.ready
 	
 	play("base")

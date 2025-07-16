@@ -10,29 +10,29 @@ class_name BaseArrowsButton
 # public variables
 # private variables
 # onready variables
-onready var arrows_highlight = get_node("ArrowsIndicator")
+@onready var arrows_highlight = get_node("ArrowsIndicator")
 ### ---------------------------------------
 
 
 ### Built in Engine Methods ---------------
 func _ready() -> void:
-	if not self.is_connected("mouse_entered",self,"_on_mouse_enter"):
-		self.connect("mouse_entered",self,"_on_mouse_enter")
+	if not self.is_connected("mouse_entered", Callable(self, "_on_mouse_enter")):
+		self.connect("mouse_entered", Callable(self, "_on_mouse_enter"))
 	
-	if not self.is_connected("focus_entered",self,"_on_focus_enter"):
-		self.connect("focus_entered",self,"_on_focus_enter")
+	if not self.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		self.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not self.is_connected("focus_exited",self,"_on_focus_exit"):
-		self.connect("focus_exited",self,"_on_focus_exit")
+	if not self.is_connected("focus_exited", Callable(self, "_on_focus_exit")):
+		self.connect("focus_exited", Callable(self, "_on_focus_exit"))
 	
-	if not self.is_connected("gui_input", self, "_on_gui_input"):
-		self.connect("gui_input", self, "_on_gui_input")
+	if not self.is_connected("gui_input", Callable(self, "_on_gui_input")):
+		self.connect("gui_input", Callable(self, "_on_gui_input"))
 	
-	if not arrows_highlight.is_connected("right_pressed", self, "_on_arrows_highlight_right_pressed"):
-		arrows_highlight.connect("right_pressed", self, "_on_arrows_highlight_right_pressed")
+	if not arrows_highlight.is_connected("right_pressed", Callable(self, "_on_arrows_highlight_right_pressed")):
+		arrows_highlight.connect("right_pressed", Callable(self, "_on_arrows_highlight_right_pressed"))
 	
-	if not arrows_highlight.is_connected("left_pressed", self, "_on_arrows_highlight_left_pressed"):
-		arrows_highlight.connect("left_pressed", self, "_on_arrows_highlight_left_pressed")
+	if not arrows_highlight.is_connected("left_pressed", Callable(self, "_on_arrows_highlight_left_pressed")):
+		arrows_highlight.connect("left_pressed", Callable(self, "_on_arrows_highlight_left_pressed"))
 
 
 ### ---------------------------------------

@@ -1,89 +1,89 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture" id=2]
-[ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_Logo.png" type="Texture" id=3]
+[ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture2D" id=2]
+[ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_Logo.png" type="Texture2D" id=3]
 [ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=4]
 [ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
 [ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=6]
-[ext_resource path="res://Fonts/OrbitronBold30.font" type="BitmapFont" id=7]
+[ext_resource path="res://Fonts/OrbitronBold30.font" type="FontFile" id=7]
 [ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=10]
 [ext_resource path="res://CommonScenes/MainMenu/VersionLabel.gd" type="Script" id=11]
 
 [node name="MainMenuScreen" type="Node2D"]
-pause_mode = 2
+process_mode = 3
 script = ExtResource( 1 )
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [ PoolStringArray( "ExtrasMenuScreen", "OptionsMenuScreen" ), [ ExtResource( 9 ), ExtResource( 8 ) ] ]
+resources = [ PackedStringArray( "ExtrasMenuScreen", "OptionsMenuScreen" ), [ ExtResource( 9 ), ExtResource( 8 ) ] ]
 
 [node name="TextureFrame" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1856.0
-margin_bottom = 1016.0
+offset_right = 1856.0
+offset_bottom = 1016.0
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
-margin_left = 1276.0
-margin_top = 148.0
-margin_right = 1886.0
-margin_bottom = 927.0
-rect_min_size = Vector2( 509, 356 )
+offset_left = 1276.0
+offset_top = 148.0
+offset_right = 1886.0
+offset_bottom = 927.0
+custom_minimum_size = Vector2( 509, 356 )
 mouse_filter = 0
-custom_constants/separation = 5
+theme_override_constants/separation = 5
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Logo" type="TextureRect" parent="MenuContainer"]
-margin_right = 610.0
-margin_bottom = 287.0
+offset_right = 610.0
+offset_bottom = 287.0
 texture = ExtResource( 3 )
 
 [node name="MarginContainer" type="Control" parent="MenuContainer"]
-margin_top = 292.0
-margin_right = 610.0
-margin_bottom = 352.0
-rect_min_size = Vector2( 610, 60 )
+offset_top = 292.0
+offset_right = 610.0
+offset_bottom = 352.0
+custom_minimum_size = Vector2( 610, 60 )
 
 [node name="Continue" type="Button" parent="MenuContainer"]
-margin_top = 357.0
-margin_right = 610.0
-margin_bottom = 413.0
+offset_top = 357.0
+offset_right = 610.0
+offset_bottom = 413.0
 theme = ExtResource( 4 )
 text = "Continue"
 script = ExtResource( 5 )
 pressed_sfx = "Confirm"
 
 [node name="NewGame" type="Button" parent="MenuContainer"]
-margin_top = 418.0
-margin_right = 610.0
-margin_bottom = 474.0
+offset_top = 418.0
+offset_right = 610.0
+offset_bottom = 474.0
 theme = ExtResource( 4 )
 text = "New Game"
 script = ExtResource( 5 )
 pressed_sfx = "Confirm"
 
 [node name="ArcadeMode" type="Button" parent="MenuContainer"]
-margin_top = 479.0
-margin_right = 610.0
-margin_bottom = 535.0
+offset_top = 479.0
+offset_right = 610.0
+offset_bottom = 535.0
 theme = ExtResource( 4 )
 text = "Arcade Mode"
 script = ExtResource( 5 )
 
 [node name="SpeedrunMode" type="Button" parent="MenuContainer"]
-margin_top = 540.0
-margin_right = 610.0
-margin_bottom = 596.0
+offset_top = 540.0
+offset_right = 610.0
+offset_bottom = 596.0
 theme = ExtResource( 4 )
 text = "Speedrun Mode"
 script = ExtResource( 5 )
@@ -92,9 +92,9 @@ script = ExtResource( 5 )
 "categorymenu",
 ]]
 visible = false
-margin_top = 601.0
-margin_right = 610.0
-margin_bottom = 638.0
+offset_top = 601.0
+offset_right = 610.0
+offset_bottom = 638.0
 theme = ExtResource( 6 )
 text = "15 Upgrade Points"
 script = ExtResource( 5 )
@@ -104,9 +104,9 @@ pressed_sfx = "Confirm"
 "categorymenu",
 ]]
 visible = false
-margin_top = 643.0
-margin_right = 610.0
-margin_bottom = 680.0
+offset_top = 643.0
+offset_right = 610.0
+offset_bottom = 680.0
 theme = ExtResource( 6 )
 text = "30 Upgrade Points"
 script = ExtResource( 5 )
@@ -116,9 +116,9 @@ pressed_sfx = "Confirm"
 "categorymenu",
 ]]
 visible = false
-margin_top = 685.0
-margin_right = 610.0
-margin_bottom = 722.0
+offset_top = 685.0
+offset_right = 610.0
+offset_bottom = 722.0
 theme = ExtResource( 6 )
 text = "40 Upgrade Points"
 script = ExtResource( 5 )
@@ -128,9 +128,9 @@ pressed_sfx = "Confirm"
 "categorymenu",
 ]]
 visible = false
-margin_top = 727.0
-margin_right = 610.0
-margin_bottom = 764.0
+offset_top = 727.0
+offset_right = 610.0
+offset_bottom = 764.0
 theme = ExtResource( 6 )
 text = "Unlimited"
 script = ExtResource( 5 )
@@ -140,9 +140,9 @@ pressed_sfx = "Confirm"
 "categorymenu",
 ]]
 visible = false
-margin_top = 769.0
-margin_right = 610.0
-margin_bottom = 825.0
+offset_top = 769.0
+offset_right = 610.0
+offset_bottom = 825.0
 theme = ExtResource( 4 )
 text = "Back"
 script = ExtResource( 5 )
@@ -150,9 +150,9 @@ script = ExtResource( 5 )
 [node name="Options" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-margin_top = 601.0
-margin_right = 610.0
-margin_bottom = 657.0
+offset_top = 601.0
+offset_right = 610.0
+offset_bottom = 657.0
 theme = ExtResource( 4 )
 text = "Options"
 script = ExtResource( 5 )
@@ -161,9 +161,9 @@ pressed_sfx = "Confirm"
 [node name="Extras" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-margin_top = 662.0
-margin_right = 610.0
-margin_bottom = 718.0
+offset_top = 662.0
+offset_right = 610.0
+offset_bottom = 718.0
 theme = ExtResource( 4 )
 text = "Extras"
 script = ExtResource( 5 )
@@ -172,9 +172,9 @@ pressed_sfx = "Confirm"
 [node name="QuitGame" type="Button" parent="MenuContainer" groups=[
 "mainmenu",
 ]]
-margin_top = 723.0
-margin_right = 610.0
-margin_bottom = 779.0
+offset_top = 723.0
+offset_right = 610.0
+offset_bottom = 779.0
 theme = ExtResource( 4 )
 text = "Quit Game"
 script = ExtResource( 5 )
@@ -184,13 +184,13 @@ wait_time = 0.3
 one_shot = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 3.0
-margin_top = 1024.0
-margin_right = 1916.0
-margin_bottom = 1061.0
+offset_left = 3.0
+offset_top = 1024.0
+offset_right = 1916.0
+offset_bottom = 1061.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 7 )
+theme_override_fonts/font = ExtResource( 7 )
 text = "v0.00"
 align = 2
 script = ExtResource( 11 )
@@ -203,8 +203,8 @@ __meta__ = {
 [node name="RootControl" parent="PromptLegendConfirmCancel" index="1"]
 modulate = Color( 1, 1, 1, 0 )
 anchor_top = 0.0
-margin_top = 1034.0
-margin_bottom = -46.0
+offset_top = 1034.0
+offset_bottom = -46.0
 [connection signal="pressed" from="MenuContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="MenuContainer/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="MenuContainer/ArcadeMode" to="." method="_on_ArcadeMode_pressed"]

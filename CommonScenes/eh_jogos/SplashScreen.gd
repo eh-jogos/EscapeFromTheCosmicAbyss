@@ -2,7 +2,7 @@ extends ColorRect  #-- NOTE: Automatically converted by Godot 2 to 3 converter, 
 
 var next_screen_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
-func change_scene():
+func change_scene_to_file():
 	ScreenManager.load_screen_invisible(next_screen_path)
 	pass
 

@@ -2,7 +2,7 @@
 extends Node2D
 
 #Menu Paths
-export(String, FILE) var game_path
+@export var game_path # (String, FILE)
 
 var continue_btn
 var new_game_btn
@@ -17,9 +17,9 @@ var game_mode = "story"
 var last_focus
 var intro_cutscene = preload("res://Cutscenes/Cutscene1.tscn")
 
-onready var options_scene = $ResourcePreloader.get_resource("OptionsMenuScreen")
-onready var extras_scene = $ResourcePreloader.get_resource("ExtrasMenuScreen")
-onready var prompt_legend = $PromptLegendConfirmCancel
+@onready var options_scene = $ResourcePreloader.get_resource("OptionsMenuScreen")
+@onready var extras_scene = $ResourcePreloader.get_resource("ExtrasMenuScreen")
+@onready var prompt_legend = $PromptLegendConfirmCancel
 
 func _ready():
 	continue_btn = get_node("MenuContainer/Continue")
@@ -33,8 +33,8 @@ func _ready():
 	
 	toggle_menuitems(game_mode)
 	
-	Global.connect("update_main_menu", self, "_on_Global_update_main_menu")
-	ScreenManager.connect("scene_above_cleared", self, "_on_ScreenManager_scene_abovel_cleared")
+	Global.connect("update_main_menu", Callable(self, "_on_Global_update_main_menu"))
+	ScreenManager.connect("scene_above_cleared", Callable(self, "_on_ScreenManager_scene_abovel_cleared"))
 	
 	prompt_legend.fade_in()
 
@@ -71,7 +71,7 @@ func _on_Extras_pressed():
 func _on_quit_pressed():
 	var quit_timer = get_node("MenuContainer/QuitGame/Timer")
 	quit_timer.start()
-	yield(quit_timer, "timeout")
+	await quit_timer.timeout
 	Global.quit_game()
 
 func _on_Continue_pressed():
@@ -123,21 +123,21 @@ func toggle_menuitems(should_grab_focus = true):
 			if should_grab_focus:
 				continue_btn.grab_focus()
 			
-			continue_btn.set_focus_neighbour(MARGIN_TOP, quit_btn.get_path())
-			new_game_btn.set_focus_neighbour(MARGIN_TOP, "")
-			quit_btn.set_focus_neighbour(MARGIN_BOTTOM, continue_btn.get_path())
+			continue_btn.set_focus_neighbor(MARGIN_TOP, quit_btn.get_path())
+			new_game_btn.set_focus_neighbor(MARGIN_TOP, "")
+			quit_btn.set_focus_neighbor(MARGIN_BOTTOM, continue_btn.get_path())
 		else:
 			continue_btn.hide()
 			new_game_btn.show()
 			if should_grab_focus:
 				new_game_btn.grab_focus()
 			
-			continue_btn.set_focus_neighbour(MARGIN_TOP, "")
-			new_game_btn.set_focus_neighbour(MARGIN_TOP, quit_btn.get_path())
-			quit_btn.set_focus_neighbour(MARGIN_BOTTOM, new_game_btn.get_path())
+			continue_btn.set_focus_neighbor(MARGIN_TOP, "")
+			new_game_btn.set_focus_neighbor(MARGIN_TOP, quit_btn.get_path())
+			quit_btn.set_focus_neighbor(MARGIN_BOTTOM, new_game_btn.get_path())
 		
-		arcade_btn.set_focus_neighbour(MARGIN_TOP, "")
-		speedrun_btn.set_focus_neighbour(MARGIN_TOP, "")
+		arcade_btn.set_focus_neighbor(MARGIN_TOP, "")
+		speedrun_btn.set_focus_neighbor(MARGIN_TOP, "")
 		
 	elif game_mode == "arcade" or game_mode == "speedrun":
 		get_tree().call_group("categorymenu", "show")
@@ -147,14 +147,14 @@ func toggle_menuitems(should_grab_focus = true):
 			arcade_btn.show()
 			speedrun_btn.hide()
 			
-			arcade_btn.set_focus_neighbour(MARGIN_TOP, back_btn.get_path())
-			back_btn.set_focus_neighbour(MARGIN_BOTTOM, arcade_btn.get_path())
+			arcade_btn.set_focus_neighbor(MARGIN_TOP, back_btn.get_path())
+			back_btn.set_focus_neighbor(MARGIN_BOTTOM, arcade_btn.get_path())
 		else:
 			arcade_btn.hide()
 			speedrun_btn.show()
 			
-			speedrun_btn.set_focus_neighbour(MARGIN_TOP, back_btn.get_path())
-			back_btn.set_focus_neighbour(MARGIN_BOTTOM, speedrun_btn.get_path())
+			speedrun_btn.set_focus_neighbor(MARGIN_TOP, back_btn.get_path())
+			back_btn.set_focus_neighbor(MARGIN_BOTTOM, speedrun_btn.get_path())
 
 
 func _on_Category_pressed(upgrade_points):

@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 var end_point
 var camera
@@ -14,8 +14,8 @@ func _process(_delta):
 	#print("Global Pos: %s | Pos: %s"%[self.get_global_position(), self.get_position()])  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	if end_point.get_global_position().x < 0:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 		var new_pos = Vector2(self.get_position().x + (4*1920), self.get_position().y)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-		var flip_h = int(rand_range(0,2))
-		var flip_v = int(rand_range(0,2))
+		var flip_h = int(randf_range(0,2))
+		var flip_v = int(randf_range(0,2))
 		
 		self.set_position(new_pos)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 		

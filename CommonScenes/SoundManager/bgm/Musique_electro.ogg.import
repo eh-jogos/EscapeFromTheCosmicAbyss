@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/Musique_electro.ogg-3751eed8cf729024087b6f4e0d90867c.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1xy30g7cm6dn"
+path="res://.godot/imported/Musique_electro.ogg-3751eed8cf729024087b6f4e0d90867c.oggvorbisstr"
 
 [deps]
 
 source_file="res://CommonScenes/SoundManager/bgm/Musique_electro.ogg"
-dest_files=[ "res://.import/Musique_electro.ogg-3751eed8cf729024087b6f4e0d90867c.oggstr" ]
+dest_files=["res://.godot/imported/Musique_electro.ogg-3751eed8cf729024087b6f4e0d90867c.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

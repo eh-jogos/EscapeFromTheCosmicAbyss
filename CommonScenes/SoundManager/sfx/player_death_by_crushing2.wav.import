@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/player_death_by_crushing2.wav-8de8e6417e5dd8b995f0e29dcbff8cca.sample"
+type="AudioStreamWAV"
+uid="uid://ck0h11bjpffsi"
+path="res://.godot/imported/player_death_by_crushing2.wav-8de8e6417e5dd8b995f0e29dcbff8cca.sample"
 
 [deps]
 
 source_file="res://CommonScenes/SoundManager/sfx/player_death_by_crushing2.wav"
-dest_files=[ "res://.import/player_death_by_crushing2.wav-8de8e6417e5dd8b995f0e29dcbff8cca.sample" ]
+dest_files=["res://.godot/imported/player_death_by_crushing2.wav-8de8e6417e5dd8b995f0e29dcbff8cca.sample"]
 
 [params]
 
@@ -17,5 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
 compress/mode=0

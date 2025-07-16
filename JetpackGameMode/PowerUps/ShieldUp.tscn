@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://JetpackGameMode/PowerUps/ShieldBrain.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture" id=2]
-[ext_resource path="res://JetpackGameMode/PowerUps/ShieldBG.png" type="Texture" id=3]
+[ext_resource path="res://JetpackGameMode/Character/Fxs/Shield1.png" type="Texture2D" id=2]
+[ext_resource path="res://JetpackGameMode/PowerUps/ShieldBG.png" type="Texture2D" id=3]
 
 [sub_resource type="SegmentShape2D" id=1]
 
@@ -14,7 +14,7 @@ b = Vector2( 0, 700 )
 
 bake_interval = 5.0
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 219.084, -350.099, 0, 0, 0, 0, 219.295, 347.292 )
+"points": PackedVector2Array( 0, 0, 0, 0, 219.084, -350.099, 0, 0, 0, 0, 219.295, 347.292 )
 }
 
 [sub_resource type="CircleShape2D" id=3]
@@ -42,7 +42,7 @@ shield_increment = 1
 editor/display_folded = true
 position = Vector2( 388.933, -1080 )
 input_pickable = true
-gravity_vec = Vector2( 0, 1 )
+gravity_direction = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
@@ -54,7 +54,7 @@ audio_bus_name = "Master"
 position = Vector2( 0, -350 )
 shape = SubResource( 1 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="2"]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." index="2"]
 
 position = Vector2( 53, 0 )
 scale = Vector2( 17.35, 1.62407 )
@@ -80,14 +80,14 @@ lookahead = 4.0
 [node name="ShieldIcon" type="Area2D" parent="Path2D/PositionRange" index="0"]
 
 input_pickable = true
-gravity_vec = Vector2( 0, 1 )
+gravity_direction = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="Particles2D" type="Particles2D" parent="Path2D/PositionRange/ShieldIcon" index="0"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Path2D/PositionRange/ShieldIcon" index="0"]
 
 show_behind_parent = true
 scale = Vector2( 0.607119, 0.607119 )
@@ -110,14 +110,14 @@ normal_map = null
 h_frames = 1
 v_frames = 1
 
-[node name="Shield" type="Sprite" parent="Path2D/PositionRange/ShieldIcon" index="1"]
+[node name="Shield" type="Sprite2D" parent="Path2D/PositionRange/ShieldIcon" index="1"]
 
 modulate = Color( 0, 0.960784, 1, 1 )
 position = Vector2( 0.196438, 0.196438 )
 scale = Vector2( 0.607119, 0.607119 )
 texture = ExtResource( 2 )
 
-[node name="BG" type="Sprite" parent="Path2D/PositionRange/ShieldIcon/Shield" index="0"]
+[node name="BG" type="Sprite2D" parent="Path2D/PositionRange/ShieldIcon/Shield" index="0"]
 
 modulate = Color( 0, 0.956863, 1, 1 )
 show_behind_parent = true
@@ -129,7 +129,7 @@ texture = ExtResource( 3 )
 scale = Vector2( 2.6, 2.6 )
 shape = SubResource( 3 )
 
-[connection signal="screen_exited" from="VisibilityNotifier2D" to="ShieldBrain" method="_on_VisibilityNotifier2D_exit_screen"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="ShieldBrain" method="_on_VisibilityNotifier2D_exit_screen"]
 
 [connection signal="body_entered" from="Path2D/PositionRange/ShieldIcon" to="ShieldBrain" method="_on_ShieldIcon_body_enter"]
 

@@ -24,17 +24,17 @@
 [ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state11.tres" type="Animation" id=22]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state11_transition.tres" type="Animation" id=23]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state12.tres" type="Animation" id=24]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="BitmapFont" id=25]
-[ext_resource path="res://Fonts/OrbitronMedium67.font" type="BitmapFont" id=26]
-[ext_resource path="res://Fonts/OrbitronMedium45.font" type="BitmapFont" id=27]
-[ext_resource path="res://CommonScenes/pallet.png" type="Texture" id=28]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" type="Texture" id=29]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" type="Texture" id=30]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" type="Texture" id=31]
+[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=25]
+[ext_resource path="res://Fonts/OrbitronMedium67.font" type="FontFile" id=26]
+[ext_resource path="res://Fonts/OrbitronMedium45.font" type="FontFile" id=27]
+[ext_resource path="res://CommonScenes/pallet.png" type="Texture2D" id=28]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" type="Texture2D" id=29]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" type="Texture2D" id=30]
+[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" type="Texture2D" id=31]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/TutorialButton.tscn" type="PackedScene" id=32]
 [ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" type="PackedScene" id=33]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture" id=34]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture" id=35]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=34]
+[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=35]
 [ext_resource path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" type="Animation" id=36]
 [ext_resource path="res://CommonScenes/PromptLegends/LegendLevelSelect.tscn" type="PackedScene" id=37]
 [ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=38]
@@ -44,50 +44,50 @@
 [sub_resource type="Animation" id=1]
 length = 0.01
 tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:rect_position")
+tracks/0/path = NodePath("BaseColorFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 960, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:rect_size")
+tracks/1/path = NodePath("BaseColorFrame:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 1080 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 967, -1500 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 953, -1500 ) ]
 }
@@ -98,8 +98,8 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
@@ -110,82 +110,82 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ 0.0 ]
 }
 
 [sub_resource type="Animation" id=2]
 tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:rect_size")
+tracks/0/path = NodePath("BaseColorFrame:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ), Vector2( 0, 1080 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:rect_position")
+tracks/1/path = NodePath("BaseColorFrame:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, 0 ), Vector2( 60, 0 ), Vector2( 960, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ), Vector2( 967, -28 ), Vector2( 967, 150 ), Vector2( 967, -1500 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, -28 ), Vector2( 60, -28 ), Vector2( 953, -28 ), Vector2( 953, 150 ), Vector2( 953, -1500 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:rect_size")
+tracks/4/path = NodePath("ColorFrame1:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:rect_size")
+tracks/5/path = NodePath("ColorFrame3:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
@@ -196,8 +196,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -208,8 +208,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.0 ]
 }
@@ -220,8 +220,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "fade_out"
@@ -231,74 +231,74 @@ tracks/8/keys = {
 [sub_resource type="Animation" id=3]
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:rect_position")
+tracks/0/path = NodePath("BaseColorFrame:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, 0 ), Vector2( 60, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:rect_size")
+tracks/1/path = NodePath("BaseColorFrame:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 60, -28 ), Vector2( 60, -28 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:rect_size")
+tracks/4/path = NodePath("ColorFrame1:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:rect_size")
+tracks/5/path = NodePath("ColorFrame3:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ) ]
 }
@@ -309,8 +309,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 1.0, 0.0 ]
 }
@@ -321,8 +321,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.3 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ 0.9, 0.9 ]
 }
@@ -330,74 +330,74 @@ tracks/7/keys = {
 [sub_resource type="Animation" id=4]
 resource_name = "open"
 tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:rect_size")
+tracks/0/path = NodePath("BaseColorFrame:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 1080 ), Vector2( 0, 1080 ), Vector2( 1800, 1080 ), Vector2( 1800, 1080 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:rect_position")
+tracks/1/path = NodePath("BaseColorFrame:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 960, 0 ), Vector2( 960, 0 ), Vector2( 60, 0 ), Vector2( 60, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:rect_position")
+tracks/2/path = NodePath("ColorFrame1:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 967, -1500 ), Vector2( 967, -1500 ), Vector2( 967, 150 ), Vector2( 967, -28 ), Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:rect_position")
+tracks/3/path = NodePath("ColorFrame3:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 953, -1500 ), Vector2( 953, -1500 ), Vector2( 953, 150 ), Vector2( 953, -28 ), Vector2( 60, -28 ), Vector2( 60, -28 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:rect_size")
+tracks/4/path = NodePath("ColorFrame1:size")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ), Vector2( 15, 1114 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:rect_size")
+tracks/5/path = NodePath("ColorFrame3:size")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 1 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 15, 1114 ), Vector2( 15, 1114 ) ]
 }
@@ -408,8 +408,8 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 1.0 ]
 }
@@ -420,8 +420,8 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.9 ]
 }
@@ -432,8 +432,8 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0.7 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0.7 ),
+"transitions": PackedFloat32Array( 1 ),
 "values": [ {
 "args": [  ],
 "method": "fade_in"
@@ -446,14 +446,14 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PackedFloat32Array( 0, 0.7, 1 ),
+"transitions": PackedFloat32Array( 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="LevelSelect" type="CanvasLayer"]
-pause_mode = 2
+process_mode = 3
 layer = 4
 script = ExtResource( 1 )
 
@@ -466,17 +466,17 @@ anims/open = SubResource( 4 )
 
 [node name="BaseColorFrame" type="ColorRect" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-margin_left = 60.0
-margin_right = 1860.0
-margin_bottom = 1080.0
+offset_left = 60.0
+offset_right = 1860.0
+offset_bottom = 1080.0
 color = Color( 0.266667, 0.65098, 1, 0.6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Map" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Map"]
 anims/state01 = ExtResource( 2 )
@@ -505,14 +505,14 @@ anims/state12 = ExtResource( 24 )
 
 [node name="LevelNumber" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
-margin_left = 76.0
-margin_top = 40.0
-margin_right = 1846.0
-margin_bottom = 135.0
+offset_left = 76.0
+offset_top = 40.0
+offset_right = 1846.0
+offset_bottom = 135.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 25 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
+theme_override_fonts/font = ExtResource( 25 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
 text = "Stage 12"
 align = 1
 __meta__ = {
@@ -521,49 +521,49 @@ __meta__ = {
 
 [node name="LevelTitle" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
-margin_left = 76.0
-margin_top = 197.0
-margin_right = 1846.0
-margin_bottom = 280.0
+offset_left = 76.0
+offset_top = 197.0
+offset_right = 1846.0
+offset_bottom = 280.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 26 )
-custom_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
+theme_override_fonts/font = ExtResource( 26 )
+theme_override_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
 text = "WHatever, Wherever, whenever!"
 align = 1
 
 [node name="Highscore" type="Label" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
-margin_left = 75.0
-margin_top = 126.0
-margin_right = 1845.0
-margin_bottom = 182.0
+offset_left = 75.0
+offset_top = 126.0
+offset_right = 1845.0
+offset_bottom = 182.0
 mouse_filter = 1
 size_flags_vertical = 0
-custom_fonts/font = ExtResource( 27 )
-custom_colors/font_color = Color( 0.0117647, 0.87451, 0.917647, 0.8 )
+theme_override_fonts/font = ExtResource( 27 )
+theme_override_colors/font_color = Color( 0.0117647, 0.87451, 0.917647, 0.8 )
 text = "Highscore: %s"
 align = 1
 
-[node name="pallet" type="Sprite" parent="Map/Highscore"]
+[node name="pallet" type="Sprite2D" parent="Map/Highscore"]
 visible = false
 position = Vector2( 1090.42, 284.744 )
 texture = ExtResource( 28 )
 
-[node name="levels_path_bg" type="Sprite" parent="Map"]
+[node name="levels_path_bg" type="Sprite2D" parent="Map"]
 modulate = Color( 1, 1, 1, 0.9 )
 position = Vector2( 965, 660 )
 texture = ExtResource( 29 )
 region_enabled = true
 region_rect = Rect2( 240, 60, 1800, 720 )
 
-[node name="levels_path_locked" type="Sprite" parent="Map"]
+[node name="levels_path_locked" type="Sprite2D" parent="Map"]
 modulate = Color( 0.239216, 0.0784314, 0.298039, 1 )
 position = Vector2( 40, 365.868 )
 texture = ExtResource( 30 )
 centered = false
 
-[node name="levels_path_unlocked" type="Sprite" parent="Map"]
+[node name="levels_path_unlocked" type="Sprite2D" parent="Map"]
 modulate = Color( 0, 0.960784, 1, 1 )
 position = Vector2( 40, 365.868 )
 texture = ExtResource( 30 )
@@ -571,7 +571,7 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 146, 600 )
 
-[node name="level_8_path_fix" type="Sprite" parent="Map/levels_path_unlocked"]
+[node name="level_8_path_fix" type="Sprite2D" parent="Map/levels_path_unlocked"]
 visible = false
 modulate = Color( 0, 0.960784, 1, 1 )
 position = Vector2( 1037, 255 )
@@ -581,10 +581,10 @@ region_enabled = true
 region_rect = Rect2( 1036, 258, 128, 153 )
 
 [node name="LevelButtons" type="Control" parent="Map"]
-margin_left = 162.0
-margin_top = 507.0
-margin_right = 202.0
-margin_bottom = 547.0
+offset_left = 162.0
+offset_top = 507.0
+offset_right = 202.0
+offset_bottom = 547.0
 script = ExtResource( 40 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -592,154 +592,154 @@ __meta__ = {
 buy_game_button_path = NodePath("../../DemoButton")
 
 [node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 32 )]
-margin_left = -50.0
-margin_top = 220.0
-margin_right = 30.0
-margin_bottom = 312.0
-focus_neighbour_left = NodePath("../LevelButton12")
-focus_neighbour_top = NodePath("../LevelButton1")
-focus_neighbour_right = NodePath("../LevelButton1")
-focus_neighbour_bottom = NodePath("../LevelButton1")
+offset_left = -50.0
+offset_top = 220.0
+offset_right = 30.0
+offset_bottom = 312.0
+focus_neighbor_left = NodePath("../LevelButton12")
+focus_neighbor_top = NodePath("../LevelButton1")
+focus_neighbor_right = NodePath("../LevelButton1")
+focus_neighbor_bottom = NodePath("../LevelButton1")
 focus_mode = 2
 level_name = "How to Play"
 
 [node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-focus_neighbour_left = NodePath("../TutorialButton")
-focus_neighbour_top = NodePath("../TutorialButton")
-focus_neighbour_right = NodePath("../LevelButton2")
-focus_neighbour_bottom = NodePath("../TutorialButton")
+focus_neighbor_left = NodePath("../TutorialButton")
+focus_neighbor_top = NodePath("../TutorialButton")
+focus_neighbor_right = NodePath("../LevelButton2")
+focus_neighbor_bottom = NodePath("../TutorialButton")
 focus_mode = 2
 disabled = false
 level_num = 1
 level_name = "Jetpack for your life!"
 
 [node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 226.0
-margin_top = -116.0
-margin_right = 274.0
-margin_bottom = -68.0
-focus_neighbour_left = NodePath("../LevelButton1")
-focus_neighbour_right = NodePath("../LevelButton3")
-focus_neighbour_bottom = NodePath("../LevelButton3")
-enabled_focus_mode = 0
+offset_left = 226.0
+offset_top = -116.0
+offset_right = 274.0
+offset_bottom = -68.0
+focus_neighbor_left = NodePath("../LevelButton1")
+focus_neighbor_right = NodePath("../LevelButton3")
+focus_neighbor_bottom = NodePath("../LevelButton3")
+focus_mode = 0
 level_num = 2
 level_name = "Pew pew!"
 
 [node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 429.0
-margin_top = 196.0
-margin_right = 477.0
-margin_bottom = 244.0
-focus_neighbour_left = NodePath("../LevelButton2")
-focus_neighbour_top = NodePath("../LevelButton2")
-focus_neighbour_right = NodePath("../LevelButton4")
-enabled_focus_mode = 0
+offset_left = 429.0
+offset_top = 196.0
+offset_right = 477.0
+offset_bottom = 244.0
+focus_neighbor_left = NodePath("../LevelButton2")
+focus_neighbor_top = NodePath("../LevelButton2")
+focus_neighbor_right = NodePath("../LevelButton4")
+focus_mode = 0
 level_num = 3
 level_name = "Double Trouble!"
 
 [node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 507.0
-margin_top = 54.0
-margin_right = 555.0
-margin_bottom = 102.0
-focus_neighbour_left = NodePath("../LevelButton3")
-focus_neighbour_right = NodePath("../LevelButton5")
-enabled_focus_mode = 0
+offset_left = 507.0
+offset_top = 54.0
+offset_right = 555.0
+offset_bottom = 102.0
+focus_neighbor_left = NodePath("../LevelButton3")
+focus_neighbor_right = NodePath("../LevelButton5")
+focus_mode = 0
 level_num = 4
 level_name = "Triple Trouble!"
 
 [node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 653.0
-margin_top = 39.0
-margin_right = 701.0
-margin_bottom = 87.0
-focus_neighbour_left = NodePath("../LevelButton4")
-focus_neighbour_top = NodePath("../LevelButton6")
-focus_neighbour_right = NodePath("../LevelButton6")
-enabled_focus_mode = 0
+offset_left = 653.0
+offset_top = 39.0
+offset_right = 701.0
+offset_bottom = 87.0
+focus_neighbor_left = NodePath("../LevelButton4")
+focus_neighbor_top = NodePath("../LevelButton6")
+focus_neighbor_right = NodePath("../LevelButton6")
+focus_mode = 0
 level_num = 5
 level_name = "What was that sound?"
 
 [node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 832.0
-margin_top = -106.0
-margin_right = 880.0
-margin_bottom = -58.0
-focus_neighbour_left = NodePath("../LevelButton5")
-focus_neighbour_right = NodePath("../LevelButton7")
-focus_neighbour_bottom = NodePath("../LevelButton7")
-enabled_focus_mode = 0
+offset_left = 832.0
+offset_top = -106.0
+offset_right = 880.0
+offset_bottom = -58.0
+focus_neighbor_left = NodePath("../LevelButton5")
+focus_neighbor_right = NodePath("../LevelButton7")
+focus_neighbor_bottom = NodePath("../LevelButton7")
+focus_mode = 0
 level_num = 6
 level_name = "Dash like you mean it!"
 
 [node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 1029.0
-margin_top = 110.0
-margin_right = 1077.0
-margin_bottom = 158.0
-focus_neighbour_left = NodePath("../LevelButton6")
-focus_neighbour_top = NodePath("../LevelButton6")
-focus_neighbour_right = NodePath("../LevelButton8")
-focus_neighbour_bottom = NodePath("../LevelButton8")
-enabled_focus_mode = 0
+offset_left = 1029.0
+offset_top = 110.0
+offset_right = 1077.0
+offset_bottom = 158.0
+focus_neighbor_left = NodePath("../LevelButton6")
+focus_neighbor_top = NodePath("../LevelButton6")
+focus_neighbor_right = NodePath("../LevelButton8")
+focus_neighbor_bottom = NodePath("../LevelButton8")
+focus_mode = 0
 level_num = 7
 level_name = "I feel like I'm being watched!"
 
 [node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 963.0
-margin_top = 231.0
-margin_right = 1011.0
-margin_bottom = 279.0
-focus_neighbour_left = NodePath("../LevelButton7")
-focus_neighbour_top = NodePath("../LevelButton7")
-focus_neighbour_right = NodePath("../LevelButton9")
-enabled_focus_mode = 0
+offset_left = 963.0
+offset_top = 231.0
+offset_right = 1011.0
+offset_bottom = 279.0
+focus_neighbor_left = NodePath("../LevelButton7")
+focus_neighbor_top = NodePath("../LevelButton7")
+focus_neighbor_right = NodePath("../LevelButton9")
+focus_mode = 0
 level_num = 8
 level_name = "It's right behind me, isn't it?"
 
 [node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 1256.0
-margin_top = 213.0
-margin_right = 1304.0
-margin_bottom = 261.0
-focus_neighbour_left = NodePath("../LevelButton8")
-focus_neighbour_right = NodePath("../LevelButton10")
-focus_neighbour_bottom = NodePath("../LevelButton10")
-enabled_focus_mode = 0
+offset_left = 1256.0
+offset_top = 213.0
+offset_right = 1304.0
+offset_bottom = 261.0
+focus_neighbor_left = NodePath("../LevelButton8")
+focus_neighbor_right = NodePath("../LevelButton10")
+focus_neighbor_bottom = NodePath("../LevelButton10")
+focus_mode = 0
 level_num = 9
 level_name = "Almost there!"
 
 [node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 1244.0
-margin_top = 303.0
-margin_right = 1292.0
-margin_bottom = 351.0
-focus_neighbour_left = NodePath("../LevelButton9")
-focus_neighbour_top = NodePath("../LevelButton9")
-focus_neighbour_right = NodePath("../LevelButton11")
-enabled_focus_mode = 0
+offset_left = 1244.0
+offset_top = 303.0
+offset_right = 1292.0
+offset_bottom = 351.0
+focus_neighbor_left = NodePath("../LevelButton9")
+focus_neighbor_top = NodePath("../LevelButton9")
+focus_neighbor_right = NodePath("../LevelButton11")
+focus_mode = 0
 level_num = 10
 level_name = "Are we there yet?"
 
 [node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 1363.0
-margin_top = 385.0
-margin_right = 1411.0
-margin_bottom = 433.0
-focus_neighbour_left = NodePath("../LevelButton10")
-focus_neighbour_right = NodePath("../LevelButton12")
-enabled_focus_mode = 0
+offset_left = 1363.0
+offset_top = 385.0
+offset_right = 1411.0
+offset_bottom = 433.0
+focus_neighbor_left = NodePath("../LevelButton10")
+focus_neighbor_right = NodePath("../LevelButton12")
+focus_mode = 0
 level_num = 11
 level_name = "The Calm Before the Storm!"
 
 [node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 33 )]
-margin_left = 1467.0
-margin_top = 375.0
-margin_right = 1515.0
-margin_bottom = 423.0
-focus_neighbour_left = NodePath("../LevelButton11")
-focus_neighbour_right = NodePath("../TutorialButton")
-enabled_focus_mode = 0
+offset_left = 1467.0
+offset_top = 375.0
+offset_right = 1515.0
+offset_bottom = 423.0
+focus_neighbor_left = NodePath("../LevelButton11")
+focus_neighbor_right = NodePath("../TutorialButton")
+focus_mode = 0
 level_num = 12
 level_name = "If that was the 'Calm', what is the 'Storm'?!"
 
@@ -750,7 +750,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlineDark" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
 position = Vector2( 960, 540 )
 texture = ExtResource( 34 )
 region_enabled = true
@@ -759,7 +759,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="ScanlineBright" type="Sprite" parent="ScanlineFx"]
+[node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
 modulate = Color( 1, 1, 1, 0.2 )
 position = Vector2( 960, 20 )
 texture = ExtResource( 35 )
@@ -774,17 +774,17 @@ autoplay = "loop"
 anims/loop = ExtResource( 36 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-margin_left = 1845.0
-margin_top = -28.0
-margin_right = 1860.0
-margin_bottom = 1086.0
+offset_left = 1845.0
+offset_top = -28.0
+offset_right = 1860.0
+offset_bottom = 1086.0
 color = Color( 0, 0.924107, 1, 1 )
 
 [node name="ColorFrame3" type="ColorRect" parent="."]
-margin_left = 60.0
-margin_top = -28.0
-margin_right = 75.0
-margin_bottom = 1086.0
+offset_left = 60.0
+offset_top = -28.0
+offset_right = 75.0
+offset_bottom = 1086.0
 color = Color( 0, 0.924107, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -795,14 +795,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -206.0
-margin_top = -157.981
-margin_right = 206.0
-margin_bottom = -87.9813
-rect_min_size = Vector2( 0, 70 )
-focus_neighbour_left = NodePath("../Map/LevelButtons/TutorialButton")
-focus_neighbour_right = NodePath("../Map/LevelButtons/LevelButton5")
-focus_neighbour_bottom = NodePath("../Map/LevelButtons/LevelButton5")
+offset_left = -206.0
+offset_top = -157.981
+offset_right = 206.0
+offset_bottom = -87.9813
+custom_minimum_size = Vector2( 0, 70 )
+focus_neighbor_left = NodePath("../Map/LevelButtons/TutorialButton")
+focus_neighbor_right = NodePath("../Map/LevelButtons/LevelButton5")
+focus_neighbor_bottom = NodePath("../Map/LevelButtons/LevelButton5")
 theme = ExtResource( 38 )
 text = "Unlock Full Game"
 script = ExtResource( 39 )

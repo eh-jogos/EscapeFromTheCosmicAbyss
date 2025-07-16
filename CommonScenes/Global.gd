@@ -195,7 +195,7 @@ var base_savedata = {
 	"colors": {},
 }
 
-onready var achievements_handler: AchievementsHandler = $AchievementsHandler
+@onready var achievements_handler: AchievementsHandler = $AchievementsHandler
 
 func _ready():
 	base_savedata.colors = default_color_scheme.duplicate(true)
@@ -209,7 +209,7 @@ func check_savefile():
 	read()
 	
 	if savedata.has("options") and savedata["options"].has("fullscreen"):
-		OS.set_window_fullscreen(savedata["options"]["fullscreen"])
+		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (savedata["options"]["fullscreen"]) else Window.MODE_WINDOWED
 	else:
 		print("NO FULLSCREEN OPTION ON SAVE")
 	
@@ -248,7 +248,7 @@ func read():
 			savefile.close()
 	
 	if OS.is_debug_build():
-		printraw(var2str(savedata))
+		printraw(var_to_str(savedata))
 		printraw("\n")
 
 
