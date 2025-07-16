@@ -57,8 +57,8 @@ var arcade_highscore: = 0
 @export var _dir_path: = "user://"
 @export var _file_name: = ""
 
-var _directory = DirAccess.new()
-var _file = File.new()
+var _directory: DirAccess = null
+var _file: FileAccess = null
 var _full_path: = ""
 var _serialized_data = {}
 var _base_serialized_data = {}
@@ -68,7 +68,7 @@ var _base_serialized_data = {}
 
 ### Built in Engine Methods ---------------
 func _ready():
-	_full_path = _dir_path.plus_file(_file_name)
+	_full_path = _dir_path.path_join(_file_name)
 	_base_serialized_data = _build_serialized_data()
 	_check_savefile()
 
@@ -84,7 +84,8 @@ func reset_savefile():
 
 func save() -> void:
 	_serialized_data = _build_serialized_data()
-	var error = _file.open(_full_path,File.WRITE)
+	_file = FileAccess.open(_full_path, FileAccess.WRITE)
+	var error = _file.get_open_error()
 	if error != OK:
 		_push_reading_file_error(error)
 		return
@@ -94,7 +95,8 @@ func save() -> void:
 
 
 func read() -> void:
-	var error = _file.open(_full_path,File.READ)
+	_file = FileAccess.open(_full_path, FileAccess.READ)
+	var error = _file.get_open_error()
 	if error != OK:
 		_push_reading_file_error(error)
 		return

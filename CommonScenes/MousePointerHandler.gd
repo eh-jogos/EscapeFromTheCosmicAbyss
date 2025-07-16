@@ -29,13 +29,13 @@ enum MouseModes {
 ### Built in Engine Methods ---------------
 func _notification(what: int) -> void:
 	match what: 
-		MainLoop.NOTIFICATION_WM_MOUSE_EXIT:
+		NOTIFICATION_WM_MOUSE_EXIT:
 			if _should_log:
 				print("Mouse OUT!")
 			set_process_input(false)
 			if not _timer.is_stopped():
 				_timer.stop()
-		MainLoop.NOTIFICATION_WM_MOUSE_ENTER:
+		NOTIFICATION_WM_MOUSE_ENTER:
 			if _should_log:
 				print("Mouse IN!")
 			set_process_input(true)

@@ -63,7 +63,7 @@ const HIGHSCORE_LVL_10 = 220
 const HIGHSCORE_LVL_11 = 175
 const HIGHSCORE_LVL_12 = 340
 
-var savefile = File.new()
+var savefile: FileAccess = null
 var savepath = "user://savegame.save"
 var savedata = {}
 var version = 1.1
@@ -230,13 +230,13 @@ func reset_savefile():
 
 
 func save():
-	savefile.open(savepath,File.WRITE)
+	savefile = FileAccess.open(savepath,FileAccess.WRITE)
 	savefile.store_var(savedata)
 	savefile.close()
 
 
 func read():
-	savefile.open(savepath,File.READ)
+	savefile = FileAccess.open(savepath,FileAccess.READ)
 	var old_save = savefile.get_var()
 	
 	if old_save == null:
