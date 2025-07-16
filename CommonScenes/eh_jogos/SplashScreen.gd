@@ -1,4 +1,4 @@
-extends ColorRect  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+extends ColorRect
 
 var next_screen_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 

@@ -1,543 +1,57 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=3 uid="uid://cw2oqn0o2ay7f"]
 
-[ext_resource path="res://CommonScenes/eh_jogos/vertical_gradient_shader.tres" type="Material" id=1]
-[ext_resource path="res://CommonScenes/eh_jogos/SplashScreen.gd" type="Script" id=2]
-[ext_resource path="res://CommonScenes/eh_jogos/logos/logo_white.png" type="Texture2D" id=3]
-[ext_resource path="res://CommonScenes/eh_jogos/logos/godot_face_effect.png" type="Texture2D" id=4]
-[ext_resource path="res://CommonScenes/eh_jogos/logos/godot_logo.png" type="Texture2D" id=5]
-[ext_resource path="res://CommonScenes/eh_jogos/logos/horizontal_type_white.png" type="Texture2D" id=6]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=7]
+[ext_resource type="Material" uid="uid://bswemn0s34eu6" path="res://CommonScenes/eh_jogos/vertical_gradient_shader.tres" id="1"]
+[ext_resource type="Script" uid="uid://dashqivmtj82n" path="res://CommonScenes/eh_jogos/SplashScreen.gd" id="2"]
+[ext_resource type="Animation" uid="uid://6nfpgokul1fs" path="res://CommonScenes/eh_jogos/animations/main_animator/godot.tres" id="2_8e0ae"]
+[ext_resource type="Texture2D" uid="uid://5npaf4vinkox" path="res://CommonScenes/eh_jogos/logos/logo_white.png" id="3"]
+[ext_resource type="Animation" uid="uid://qvjlkcn1kd2j" path="res://CommonScenes/eh_jogos/animations/main_animator/loop.tres" id="3_it8mh"]
+[ext_resource type="Texture2D" uid="uid://byuqjre7ocxe6" path="res://CommonScenes/eh_jogos/logos/godot_face_effect.png" id="4"]
+[ext_resource type="Animation" uid="uid://diw4n77twq1pq" path="res://CommonScenes/eh_jogos/animations/main_animator/splash_screen.tres" id="4_p7sls"]
+[ext_resource type="Texture2D" uid="uid://ba6ho8xlk177" path="res://CommonScenes/eh_jogos/logos/godot_logo.png" id="5"]
+[ext_resource type="Animation" uid="uid://52jrkp8wbfvf" path="res://CommonScenes/eh_jogos/animations/main_animator/RESET.tres" id="5_ibe8l"]
+[ext_resource type="Texture2D" uid="uid://bb2s41cwofw7v" path="res://CommonScenes/eh_jogos/logos/horizontal_type_white.png" id="6"]
+[ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="7_isk43"]
+[ext_resource type="Animation" uid="uid://c1n7inumgb4fw" path="res://CommonScenes/eh_jogos/animations/eh_jogos_logo/RESET.tres" id="11_it8mh"]
+[ext_resource type="Animation" uid="uid://hg7nw6m1pqgy" path="res://CommonScenes/eh_jogos/animations/eh_jogos_logo/color_loop.tres" id="12_p7sls"]
+[ext_resource type="Animation" uid="uid://ddik0o0pjv0hh" path="res://CommonScenes/eh_jogos/animations/elipsis_loading/loop.tres" id="14_ibe8l"]
 
-[sub_resource type="Animation" id=1]
-resource_name = "base"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("eh_jogos_Logo:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "animation"
-tracks/1/path = NodePath("eh_jogos_Logo/ColorAnimation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"clips": PackedStringArray( "" ),
-"times": PackedFloat32Array( 0 )
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("GodotGroup/LogoType:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 0 ),
-"update": 0,
-"values": [ Vector2( 201, 82.0084 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("GodotGroup/LogoType:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("GodotGroup/LogoFace:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath(".:color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("GodotGroup/LogoFace:position")
-tracks/8/interp = 2
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 0 ),
-"update": 0,
-"values": [ Vector2( 296, 0 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Elipsis:modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_li8j2"]
+_data = {
+&"RESET": ExtResource("5_ibe8l"),
+&"godot": ExtResource("2_8e0ae"),
+&"loop": ExtResource("3_it8mh"),
+&"splash_screen": ExtResource("4_p7sls")
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "godot"
-length = 2.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("eh_jogos_Logo:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/1/type = "animation"
-tracks/1/path = NodePath("eh_jogos_Logo/ColorAnimation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"clips": PackedStringArray( "" ),
-"times": PackedFloat32Array( 0 )
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("GodotGroup/LogoType:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 1.3, 1.6, 1.8 ),
-"transitions": PackedFloat32Array( 0, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 201, 82.0084 ), Vector2( 201, 82.0084 ), Vector2( 408.877, 82.008 ), Vector2( 398.877, 82.0084 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("GodotGroup/LogoType:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 1.3, 1.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("GodotGroup/LogoFace:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.8, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath(".:color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 0.6, 0.7, 0.9, 1.3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("GodotGroup/LogoFace:position")
-tracks/8/interp = 2
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0, 1.3, 1.6, 1.8 ),
-"transitions": PackedFloat32Array( 0, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 296, 0 ), Vector2( 296, 0 ), Vector2( -10, 0 ), Vector2( 0, 0 ) ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_isk43"]
+_data = {
+&"RESET": ExtResource("11_it8mh"),
+&"color_loop": ExtResource("12_p7sls")
 }
 
-[sub_resource type="Animation" id=3]
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("eh_jogos_Logo:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/1/type = "animation"
-tracks/1/path = NodePath("eh_jogos_Logo/ColorAnimation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"clips": PackedStringArray( "color_loop" ),
-"times": PackedFloat32Array( 0 )
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("GodotGroup/LogoType:position")
-tracks/2/interp = 2
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 398.877, 82.0084 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("GodotGroup/LogoType:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("GodotGroup/LogoFace:self_modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath(".:color")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("GodotGroup/LogoFace:position")
-tracks/8/interp = 2
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Elipsis:modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("eh_jogos_Logo:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("GodotGroup/LogoType:position")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 398.877, 82.0084 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("GodotGroup/LogoType:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("GodotGroup/LogoFace:self_modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("GodotGroup/LogoFace/LogoFaceEffect:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath(".:color")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("GodotGroup/LogoFace:position")
-tracks/7/interp = 2
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/8/type = "animation"
-tracks/8/path = NodePath("eh_jogos_Logo/ColorAnimation")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"clips": PackedStringArray( "" ),
-"times": PackedFloat32Array( 0 )
-}
-tracks/9/type = "method"
-tracks/9/path = NodePath(".")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "change_scene_to_file"
-} ]
-}
-
-[sub_resource type="Animation" id=5]
-length = 1.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/End")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 0.266667, 0.490196, 1 ), Color( 1, 0.266667, 0.988542, 1 ), Color( 0.272396, 0.266667, 1, 1 ), Color( 0.266667, 1, 0.845313, 1 ), Color( 0.266667, 1, 0.295313, 1 ), Color( 0.977083, 1, 0.266667, 1 ), Color( 1, 0.507292, 0.266667, 1 ), Color( 0.988281, 0.073349, 0.073349, 1 ) ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "loop"
-length = 0.8
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:percent_visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 0 ),
-"update": 0,
-"values": [ 0.0, 1.0 ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l3ut7"]
+_data = {
+&"loop": ExtResource("14_ibe8l")
 }
 
 [node name="BackPanel" type="ColorRect"]
 offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
-color = Color( 0, 0, 0, 1 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0, 0, 0, 1)
+script = ExtResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "base"
-anims/base = SubResource( 1 )
-anims/godot = SubResource( 2 )
-anims/loop = SubResource( 3 )
-anims/splash_screen = SubResource( 4 )
-next/base = "godot"
-next/godot = "splash_screen"
-next/splash_screen = "loop"
+libraries = {
+&"": SubResource("AnimationLibrary_li8j2")
+}
+autoplay = "RESET"
+next/godot = &"splash_screen"
+next/splash_screen = &"loop"
 
 [node name="GodotGroup" type="Control" parent="."]
+custom_minimum_size = Vector2(928, 317)
+anchors_preset = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -546,59 +60,52 @@ offset_left = -464.0
 offset_top = -158.5
 offset_right = 464.0
 offset_bottom = 158.5
-custom_minimum_size = Vector2( 928, 317 )
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LogoType" type="TextureRect" parent="GodotGroup"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -65.123
+offset_left = -263.0
 offset_top = 82.0084
-offset_right = 461.877
+offset_right = 264.0
 offset_bottom = 296.01
 mouse_filter = 2
-texture = ExtResource( 6 )
+texture = ExtResource("6")
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LogoFace" type="TextureRect" parent="GodotGroup"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -464.0
+offset_left = -168.0
 offset_top = -158.5
-offset_right = -127.999
+offset_right = 168.001
 offset_bottom = 158.5
 mouse_filter = 2
-texture = ExtResource( 5 )
+texture = ExtResource("5")
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="LogoFaceEffect" type="TextureRect" parent="GodotGroup/LogoFace"]
-visible = false
+modulate = Color(1, 1, 1, 0)
 show_behind_parent = true
+layout_mode = 0
 offset_left = 21.0
 offset_top = 120.0
 offset_right = 316.0
 offset_bottom = 279.0
 mouse_filter = 2
-texture = ExtResource( 4 )
+texture = ExtResource("4")
 stretch_mode = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="eh_jogos_Logo" type="TextureRect" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-material = ExtResource( 1 )
+modulate = Color(1, 1, 1, 0)
+material = ExtResource("1")
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -608,16 +115,16 @@ offset_top = -136.5
 offset_right = 213.0
 offset_bottom = 136.5
 mouse_filter = 2
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture = ExtResource("3")
 
 [node name="ColorAnimation" type="AnimationPlayer" parent="eh_jogos_Logo"]
-anims/color_loop = SubResource( 5 )
+libraries = {
+&"": SubResource("AnimationLibrary_isk43")
+}
 
 [node name="Elipsis" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -626,13 +133,15 @@ offset_left = -54.5
 offset_top = 160.5
 offset_right = 54.5
 offset_bottom = 255.5
-theme_override_fonts/font = ExtResource( 7 )
-theme_override_colors/font_color = Color( 1, 1, 1, 1 )
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_isk43")
+theme_override_font_sizes/font_size = 80
 text = ". . ."
-__meta__ = {
-"_edit_use_anchors_": false
-}
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="LoadingAnimation" type="AnimationPlayer" parent="Elipsis"]
+libraries = {
+&"": SubResource("AnimationLibrary_l3ut7")
+}
 autoplay = "loop"
-anims/loop = SubResource( 6 )
