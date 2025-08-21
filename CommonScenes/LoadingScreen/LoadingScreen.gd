@@ -2,22 +2,19 @@ extends CanvasLayer
 
 signal mid_transition_reached
 signal transition_ended
-signal loading_started
 
 signal scene_above_loaded(scene_node)
 signal scene_above_cleared(scene_below)
 signal background_loading_finished(results_dict)
 
-# I learned this in this link 
-# http://docs.godotengine.org/en/stable/learning/features/misc/background_loading.html
+enum LoadingType {
+	NONE,
+	BACKRGROUND,
+	LOADING_SCREEN
+}
 
-var animation: AnimationPlayer
-var progress_bar
-
-var loader
 var animation_loaded = false
 var load_without_animation = false
-var time_max = 100 #msec
 
 var scene_above
 
@@ -26,17 +23,49 @@ var previous_focuses = []
 
 var loading_path = ""
 
-var _loading_thread: Thread = Thread.new()
+var _current_loading_path := ""
+var _current_type := LoadingType.NONE
 
-func _ready():
-	animation = self.get_node("AnimationPlayer")
-	progress_bar = self.get_node("ColorRect/TextureProgressBar")  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	reset()
+@onready var _animation := $AnimationPlayer as AnimationPlayer
+@onready var _progress_bar := $ColorRect/TextureProgressBar as TextureProgressBar
+
+
+func _ready() -> void:
+	set_process(false)
+	
+	if get_tree().current_scene == self:
+		_animation.play("fade_in")
+
+
+func _process(_delta):
+	if _current_type == LoadingType.NONE:
+		set_process(false)
+		return
+	
+	var progress := []
+	var err := ResourceLoader.load_threaded_get_status(_current_loading_path, progress)
+	if err == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+		_progress_bar.set_value(progress[0])
+	elif err == ResourceLoader.THREAD_LOAD_LOADED:
+		var scene: PackedScene = ResourceLoader.load_threaded_get(_current_loading_path)
+		if _current_type == LoadingType.LOADING_SCREEN:
+			set_new_scene(scene)
+		elif _current_type == LoadingType.BACKRGROUND:
+			background_loading_finished.emit({error = err, scene = scene})
+	else:
+		push_error("Failed loading scene | Error: %s | Path: %s"%[
+			err,
+			_current_loading_path
+		])
+		if _current_type == LoadingType.BACKRGROUND:
+			background_loading_finished.emit({error = err, scene = null})
+
 
 func reset():
-	progress_bar.set_value(0)
-	animation_loaded = false
+	_animation.play("RESET")
+	_current_type = LoadingType.NONE
 	load_without_animation = false
+
 
 func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 	if origin_scene in scenes_bellow:
@@ -64,23 +93,22 @@ func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 	])
 
 
-func background_loading(path):
-	var bg_loader = ResourceLoader.load_threaded_request(path)
-	var poll_results = bg_loader.poll()
-	while not poll_results == ERR_FILE_EOF:
-		if poll_results == OK:
-			update_progress(bg_loader)
-		else: # error during loading
-			print(poll_results)
-			#show_error()
-			loader = null
-			emit_signal("background_loading_finished", {error = poll_results, scene = null})
-			return 
-		
-		poll_results = bg_loader.poll()
-	
-	emit_signal("background_loading_finished", {error = OK, scene = bg_loader.get_resource()})
-	return
+func background_loading():
+	var error = ResourceLoader.load_threaded_request(_current_loading_path)
+	set_process(true)
+	#var poll_results = bg_loader.poll()
+	#while not poll_results == ERR_FILE_EOF:
+		#if poll_results == OK:
+			#update_progress(bg_loader)
+		#else: # error during loading
+			#print(poll_results)
+			#loader = null
+			#emit_signal("background_loading_finished", {error = poll_results, scene = null})
+			#return 
+		#
+		#poll_results = bg_loader.poll()
+	#
+	#emit_signal("background_loading_finished", {error = OK, scene = bg_loader.get_resource()})
 
 
 func clear_above():
@@ -133,125 +161,95 @@ func reset_above_below():
 	scenes_bellow = []
 	previous_focuses = []
 
-func load_screen(path):
-	animation.play("fade_in")
-	await animation.animation_finished
-	loader = ResourceLoader.load_threaded_request(path)
-	if loader == null:
-#		show_error()
+
+func load_screen(path: String):
+	var err = ResourceLoader.load_threaded_request(path)
+	if err != OK:
+		push_error("Failed to start loading path | Error: %s | Path: %s"%[err, path])
 		return
 	
+	_current_loading_path = path
+	_current_type = LoadingType.LOADING_SCREEN
+	
+	_animation.play("fade_in")
+	await _animation.animation_finished
+	
 	set_process(true)
 
 
-func load_screen_invisible(path):
-	load_without_animation = true
-	
-	if _loading_thread.is_active():
-		_loading_thread.wait_to_finish()
-	
-	var thread_status = _loading_thread.start(Callable(self, "background_loading").bind(path))
-	if thread_status == OK:
-		var results_dict: Dictionary = await self.background_loading_finished
-		if results_dict.error == OK: 
-			set_new_scene(results_dict.scene)
-		else:
-			push_error("Error while loading %s | Error: %s"%[path, results_dict.error])
-			assert(false)
-	else:
-		push_error("Error while starting thread for %s | Error: %s"%[path, thread_status])
-		assert(false)
-	
+func load_screen_invisible(path: String):
+	_current_type = LoadingType.BACKRGROUND
+	_current_loading_path = path
+	var error = ResourceLoader.load_threaded_request(_current_loading_path)
 	set_process(true)
+	
+	#var thread_status = _loading_thread.start(Callable(self, "background_loading").bind(path))
+	#if thread_status == OK:
+		#var results_dict: Dictionary = await self.background_loading_finished
+		#if results_dict.error == OK: 
+			#set_new_scene(results_dict.scene)
+		#else:
+			#push_error("Error while loading %s | Error: %s"%[path, results_dict.error])
+			#assert(false)
+	#else:
+		#push_error("Error while starting thread for %s | Error: %s"%[path, thread_status])
+		#assert(false)
 
 
 func reveal_invisible_loading_screen():
-	animation.play("fade_in")
+	_animation.play("fade_in")
 
 
-func _process(_delta):
-	if loader == null:
-		set_process(false)
-		return
+func set_new_scene(scene_resource: PackedScene):
+	_progress_bar.set_value(100)
+	if _current_type == LoadingType.BACKRGROUND:
+		_animation.play("black_transition")
+		await _animation.animation_finished
 	
-	var _t = Time.get_ticks_msec()
-	if (animation_loaded or load_without_animation):
-		# poll your loader
-		var err = loader.poll()
-		
-		if err == ERR_FILE_EOF: # load finished
-			var resource = loader.get_resource()
-			loader = null
-			set_new_scene(resource)
-		elif err == OK:
-			update_progress(loader)
-		else: # error during loading
-			print(err)
-			#show_error()
-			loader = null
-
-func update_progress(current_loader: ResourceLoader):
-	var stages_current: = current_loader.get_stage()
-	var stages_total: = current_loader.get_stage_count()
-	var progress = (float(stages_current) / stages_total)*100
-#	print("Loading is at: %s | Stage: %s | Total: %s"%[progress, stages_current, stages_total])
-	# update your progress bar?
-	progress_bar.set_value(progress)
-
-
-func set_new_scene(scene_resource):
-	progress_bar.set_value(100)
-	if not animation_loaded:
-		animation.play("black_transition")
-		await animation.animation_finished
-	
-# warning-ignore:return_value_discarded
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene_to_packed(scene_resource)
 	
-	if animation_loaded:
-		animation.play("fade_out")
+	if _animation.assigned_animation == "fade_in":
+		_animation.play("fade_out")
 	else:
-		animation.play("black_transition_out")
-	await animation.animation_finished
+		_animation.play("black_transition_out")
+	await _animation.animation_finished
 	reset()
 
-func animation_ready():
-	animation_loaded = true
-	emit_signal("loading_started")
 
 func black_transition(path, focus_path, origin_scene, path_is_node = false):
 	if loading_path == "":
 		loading_path = path
 	elif loading_path == path:
 		return
-	animation.play("black_transition")
-	await animation.animation_finished
+	_animation.play("black_transition")
+	await _animation.animation_finished
 	load_above(path, focus_path, origin_scene, path_is_node)
 	emit_signal("mid_transition_reached")
-	animation.play("black_transition_out")
-	await animation.animation_finished
+	_animation.play("black_transition_out")
+	await _animation.animation_finished
 	reset()
 	emit_signal("transition_ended")
 	loading_path = ""
 
 func black_transition_replace(path):
-	animation.play("black_transition")
-	await animation.animation_finished
+	_animation.play("black_transition")
+	await _animation.animation_finished
 	emit_signal("mid_transition_reached")
 # warning-ignore:return_value_discarded
 	get_tree().change_scene_to_file(path)
-	animation.play("black_transition_out")
-	await animation.animation_finished
+	_animation.play("black_transition_out")
+	await _animation.animation_finished
 	reset()
 	emit_signal("transition_ended")
 
 func black_transition_from_above():
-	animation.play("black_transition")
-	await animation.animation_finished
+	_animation.play("black_transition")
+	await _animation.animation_finished
 	clear_above()
 	emit_signal("mid_transition_reached")
-	animation.play("black_transition_out")
-	await animation.animation_finished
+	_animation.play("black_transition_out")
+	await _animation.animation_finished
 	reset()
 	emit_signal("transition_ended")
 
@@ -263,4 +261,3 @@ func _get_scenes_below_names():
 			names_array.append(scene.get_name())
 	
 	return names_array
-

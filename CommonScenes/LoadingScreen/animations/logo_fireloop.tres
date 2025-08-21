@@ -1,0 +1,17 @@
+[gd_resource type="Animation" format=3 uid="uid://dew142imivdcc"]
+
+[resource]
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoMask:material:shader_parameter/strength")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [4.0, 0.5, 4.0]
+}
