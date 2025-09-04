@@ -6,11 +6,7 @@ var track_list = {
 	"2" : bgm2,
 	"electro" : bgm3
 }
-var track_offset
-
-var bgm_stream
-var bgm_preview
-var sfx_list: Node
+var track_offset = 0
 
 var bgm_bus: int = AudioServer.get_bus_index("Bgm")
 var sfx_bus_ui: int = AudioServer.get_bus_index("UiSfx")
@@ -20,12 +16,15 @@ var initial_volume: int
 var current_volume: int
 var is_faded_out: bool = false
 
+@onready var bgm_stream := $BGMPlayer as AudioStreamPlayer
+@onready var bgm_preview := $PreviewPlayer as AudioStreamPlayer
+@onready var sfx_dict := {}
+
+var _tween_bgm: Tween
+
 func _ready():
-	bgm_stream = self.get_node("BGMPlayer")
-	bgm_preview = self.get_node("PreviewPlayer")
-	sfx_list = self.get_node("UiSfx")
-	
-	track_offset = 0
+	for node in $UiSfx.get_children():
+		sfx_dict[node.name] = node
 	
 	initial_volume = Global.savedata["options"]["bgm volume"]
 	current_volume = initial_volume
@@ -43,15 +42,15 @@ func play_sfx(sfx_name: String, is_unique: = false, reset_effects: = true) -> vo
 	if reset_effects:
 		reset_ui_bus_effects()
 	
-	if sfx_list.has_node(sfx_name):
-		var sfx: AudioStreamPlayer = sfx_list.get_node(sfx_name)
+	if sfx_name in sfx_dict:
+		var sfx: AudioStreamPlayer = sfx_dict[sfx_name]
 		sfx.play()
 		
 		if is_unique:
-			var other_sfx_list: Array = sfx_list.get_children()
-			other_sfx_list.erase(sfx)
-			for other_sfx in other_sfx_list:
-				other_sfx.stop()
+			for other in sfx_dict:
+				if other == sfx_name:
+					continue
+				sfx_dict[other].stop()
 	else:
 		push_warning("There is no %s in UI Sfx List"%[sfx_name])
 
@@ -63,9 +62,9 @@ func play_sfx_with_reverb(sfx_name: String, is_unique: = false) -> void:
 
 func play_bgm(chosen_track: String):
 	var track = chosen_track
-	
 	bgm_stream.set_stream(track_list[track])
 	bgm_stream.play(track_offset)
+
 
 func pause_bgm():
 	if not bgm_stream.playing:
@@ -74,8 +73,10 @@ func pause_bgm():
 		track_offset = bgm_stream.get_playback_position()
 		bgm_stream.stop()
 
+
 func stop_bgm():
 	bgm_stream.stop()
+
 
 func change_bgm_track():
 	var total_length = bgm_stream.stream.get_length()
@@ -88,13 +89,17 @@ func change_bgm_track():
 	total_length = bgm_stream.stream.get_length()
 	track_offset = percent*total_length
 
+
 func reset_track():
 	track_offset = 0
+
 
 func bgm_set_loop(boolean):
 	bgm_stream.stream.set_loop(boolean)
 
+
 func preview_bgm(track):
+	# TODO - Refactor to save audio volume valumes in float and use then in float througout here
 	var volume = float(Global.savedata["options"]["bgm volume"])/100
 #	print("Track: %s | Volume: %s"%[track, volume])
 	
@@ -103,24 +108,29 @@ func preview_bgm(track):
 	bgm_preview.set_stream(track_list[track])
 	bgm_preview.play()
 
+
 func preview_bgm_play():
 	if not bgm_preview.is_playing():
 		var track = "2"
-		self.preview_bgm(track)
+		preview_bgm(track)
+
 
 func stop_preview_bgm():
 	bgm_preview.stop()
 
-func change_bgm_volume(vol):
+
+# TODO - Refactor to save audio volume valumes in float and use then in float througout here
+func change_bgm_volume(vol: int):
 	current_volume = vol
 	
 	var vol_db = _get_volume_in_db(vol)
 	AudioServer.set_bus_volume_db(bgm_bus, vol_db)
 
 
-func change_sfx_volume(vol):
+# TODO - Refactor to save audio volume valumes in float and use then in float througout here
+func change_sfx_volume(vol: int):
 	current_volume = vol
-	print("Changing SFX volume")
+	#print("Changing SFX volume")
 	var vol_db = _get_volume_in_db(vol)
 	AudioServer.set_bus_volume_db(sfx_bus_game, vol_db)
 	AudioServer.set_bus_volume_db(sfx_bus_ui, vol_db)
@@ -136,49 +146,48 @@ func unmute_game_sfx():
 
 func fade_out_credits_bgm():
 	initial_volume = Global.savedata["options"]["bgm volume"]
-	var tween = $Tween
-	
-	tween.interpolate_method(self, "change_bgm_volume", initial_volume, 0, 3, 
-			Tween.TRANS_BACK, Tween.EASE_IN)
-	tween.start()
+	if _tween_bgm:
+		_tween_bgm.kill()
+	_tween_bgm = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	_tween_bgm.tween_method(change_bgm_volume, initial_volume, 0, 3.0)
+	_tween_bgm.start()
 
 
 func fade_out_start(shoul_be_immediate: = false):
 	is_faded_out = true
 	initial_volume = Global.savedata["options"]["bgm volume"]
 	var target_volume = max(initial_volume-30, 0)
-	var tween = $Tween
-	if tween.is_active():
-		tween.remove_all()
 	
 	if shoul_be_immediate:
 		change_bgm_volume(target_volume)
 	else:
-		tween.interpolate_method(self, "change_bgm_volume", initial_volume, target_volume, 0.5, 
-				Tween.TRANS_BACK, Tween.EASE_IN)
-		tween.start()
+		if _tween_bgm:
+			_tween_bgm.kill()
+		_tween_bgm = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+		_tween_bgm.tween_method(change_bgm_volume, initial_volume, target_volume, 0.5)
+		_tween_bgm.start()
 
 
 func fade_in_start(shoul_be_immediate: = false):
 	is_faded_out = false
 	initial_volume = Global.savedata["options"]["bgm volume"]
-	var tween = $Tween
-	if tween.is_active():
-		tween.remove_all()
 	
 	if shoul_be_immediate:
 		change_bgm_volume(initial_volume)
 	else:
-		var current_volume_db = AudioServer.get_bus_volume_db(bgm_bus)
-		# warning-ignore:narrowing_conversion
-		current_volume = db_to_linear(current_volume_db)
-		tween.interpolate_method(self, "change_bgm_volume", current_volume, initial_volume, 0.5, 
-				Tween.TRANS_BACK, Tween.EASE_IN)
-		tween.start()
+		var current_volume_db := AudioServer.get_bus_volume_db(bgm_bus)
+		# TODO - Refactor to save audio volume valumes in float and use then in float througout here
+		current_volume = int(db_to_linear(current_volume_db) * 100)
+		if _tween_bgm:
+			_tween_bgm.kill()
+		_tween_bgm = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+		_tween_bgm.tween_method(change_bgm_volume, current_volume, initial_volume, 0.5)
+		_tween_bgm.start()
 
-
+# TODO - Refactor to save audio volume valumes in float and use then in float througout here
 func _get_volume_in_db(vol: int) -> float:
+	# TODO - Refactor to save audio volume valumes in float and use then in float througout here
 	var float_vol: float = vol * 0.01
-	print("Float Vol: %s"%[float_vol])
+	#print("Float Vol: %s"%[float_vol])
 	var volume_db: float = linear_to_db(float_vol)
 	return volume_db
