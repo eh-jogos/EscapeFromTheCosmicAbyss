@@ -45,7 +45,7 @@ script = ExtResource("2")
 libraries = {
 &"": SubResource("AnimationLibrary_li8j2")
 }
-autoplay = "RESET"
+autoplay = "godot"
 next/godot = &"splash_screen"
 next/splash_screen = &"loop"
 
