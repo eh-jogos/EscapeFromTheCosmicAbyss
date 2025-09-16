@@ -203,7 +203,7 @@ func _ready():
 
 
 func check_savefile():
-	if not savefile.file_exists(savepath):
+	if not FileAccess.file_exists(savepath):
 		reset_savefile()
 	
 	read()

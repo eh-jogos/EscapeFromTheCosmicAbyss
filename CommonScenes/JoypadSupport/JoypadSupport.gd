@@ -45,13 +45,13 @@ enum Modes {
 var _listen_mode = Modes.NONE
 
 var _accept_event: = JS_InputMapAction.new("ui_accept", 
-		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_XBOX_A)
+		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_A)
 var _cancel_event: = JS_InputMapAction.new("ui_cancel", 
-		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_XBOX_B)
+		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_B)
 var _swapped_accept_event = JS_InputMapAction.new("ui_accept", 
-		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_DS_A)
+		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_B)
 var _swapped_cancel_event = JS_InputMapAction.new("ui_cancel", 
-		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_DS_B)
+		JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_A)
 
 @onready var _configs: JS_Config = get_node("Configs") as JS_Config
 @onready var _joypad_identifier: JS_JoypadIdentifier = get_node("JoypadIdentifier")
@@ -68,6 +68,7 @@ func _ready() -> void:
 	
 	set_process_input(false)
 	Input.connect("joy_connection_changed", Callable(self, "_on_Input_joy_connection_changed"))
+	
 	var input_devices = Input.get_connected_joypads()
 	if input_devices.size() > 0:
 		_set_joypad(input_devices[0], true)
@@ -114,11 +115,11 @@ func _input(event) -> void:
 
 
 ### Public Methods ------------------------
-func listen_input_for(action_name: String, mode: int):
+func listen_input_for(action_name: String, mode: Modes):
 	_listen_mode = mode
 	
 	set_process_input(true)
-	var new_input_dictionary: Dictionary = await _listen_input().completed
+	var new_input_dictionary: Dictionary = await _listen_input()
 	set_process_input(false)
 	
 	var new_input_map_action: = JS_InputMapAction.new(action_name, 
@@ -214,7 +215,7 @@ func are_ui_accept_and_cancel_swapped() -> bool:
 	var event_list = InputMap.action_get_events("ui_accept")
 	
 	for event in event_list:
-		if event is InputEventJoypadButton and event.button_index == JOY_DS_A:
+		if event is InputEventJoypadButton and event.button_index == JOY_BUTTON_B:
 			are_swapped = true
 			break
 	
@@ -243,13 +244,13 @@ func get_mouse_prompt_for(button_index: String) -> Texture2D:
 func _listen_input() -> Dictionary:
 	_animator.play("press_button")
 	await _animator.animation_finished
-	var input_dictionary: Dictionary = await self.input_entered
+	var input_dictionary: Dictionary = await input_entered
 	_animator.play("base")
 	return input_dictionary
 
 
-func _set_joypad(device: int, is_connected: bool) -> void:
-	if is_connected:
+func _set_joypad(device: int, p_is_connected: bool) -> void:
+	if p_is_connected:
 		_joypad_identifier.set_joypad_type_for(device)
 		_handle_swap_ui_accept_cancel()
 		prompts_joypad = _joypad_identifier.get_joypad_prompts()
@@ -318,6 +319,6 @@ func _erase_all_event_type_from(action_name: String, new_event: InputEvent) -> v
 			InputMap.action_erase_event(action_name, event)
 
 
-func _on_Input_joy_connection_changed(device: int, is_connected: bool) -> void:
-	print("Input device: %s, is_connected: %s"%[device, is_connected])
-	_set_joypad(device, is_connected)
+func _on_Input_joy_connection_changed(device: int, p_is_connected: bool) -> void:
+	print("Input device: %s, is_connected: %s"%[device, p_is_connected])
+	_set_joypad(device, p_is_connected)

@@ -12,9 +12,9 @@ var default_keyboard: Array = [
 ]
 
 var default_joypad = [
-	JS_InputMapAction.new("boost", JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_DPAD_UP),
-	JS_InputMapAction.new("dash", JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_DPAD_RIGHT),
-	JS_InputMapAction.new("shoot", JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_SONY_X),
+	JS_InputMapAction.new("boost", JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_DPAD_UP),
+	JS_InputMapAction.new("dash", JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_DPAD_RIGHT),
+	JS_InputMapAction.new("shoot", JS_InputMapAction.Types.JOYPAD_BUTTON, JOY_BUTTON_A),
 ]
 
 

@@ -57,7 +57,6 @@ var arcade_highscore: = 0
 @export var _dir_path: = "user://"
 @export var _file_name: = ""
 
-var _directory: DirAccess = null
 var _file: FileAccess = null
 var _full_path: = ""
 var _serialized_data = {}
@@ -164,10 +163,10 @@ func increment_screams_heard() -> void:
 
 ### Private Methods -----------------------
 func _check_savefile():
-	if not _directory.dir_exists(_dir_path):
-		_directory.make_dir_recursive(_dir_path)
+	if not DirAccess.dir_exists_absolute(_dir_path):
+		DirAccess.make_dir_recursive_absolute(_dir_path)
 	
-	if not _file.file_exists(_full_path):
+	if not FileAccess.file_exists(_full_path):
 		reset_savefile()
 	
 	read()

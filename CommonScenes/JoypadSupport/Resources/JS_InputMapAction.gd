@@ -95,5 +95,3 @@ func _get_new_joypad_axis_event(axis: int, axis_value: float) -> InputEventJoypa
 	return new_event
 
 ### ---------------------------------------
-
-

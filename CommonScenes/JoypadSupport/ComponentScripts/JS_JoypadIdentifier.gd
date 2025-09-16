@@ -106,5 +106,3 @@ func _get_prompt_for(type: int) -> ResourcePreloader:
 	return joypad_prompts
 
 ### ---------------------------------------
-
-

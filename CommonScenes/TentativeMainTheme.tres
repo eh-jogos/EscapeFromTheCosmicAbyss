@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dsbl7clxwhs5a"]
+
+[ext_resource type="FontFile" uid="uid://dryi7q7l5toou" path="res://Fonts/Orbitron-Regular.ttf" id="1_h8t7h"]
+[ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="1_xa0xr"]
+
+[resource]
+default_font = ExtResource("1_h8t7h")
+ThickText/base_type = &"Label"
+ThickText/font_sizes/font_size = 60
+ThickText/fonts/font = ExtResource("1_xa0xr")

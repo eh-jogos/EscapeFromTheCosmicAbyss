@@ -26,8 +26,6 @@ var actions: = {}
 @export var _file_name: = ""
 @export var _actions_to_save = [] # (Array, String)
 
-var _directory = DirAccess.new()
-var _file = File.new()
 var _full_path: = ""
 var _serialized_data = {}
 var _base_serialized_data = {}
@@ -37,7 +35,7 @@ var _base_serialized_data = {}
 
 ### Built in Engine Methods ---------------
 func _ready():
-	_full_path = _dir_path.plus_file(_file_name)
+	_full_path = _dir_path.path_join(_file_name)
 	_base_serialized_data = _build_serialized_data()
 	check_savefile()
 
@@ -46,10 +44,10 @@ func _ready():
 
 ### Public Methods ------------------------
 func check_savefile():
-	if not _directory.dir_exists(_dir_path):
-		_directory.make_dir_recursive(_dir_path)
+	if not DirAccess.dir_exists_absolute(_dir_path):
+		DirAccess.make_dir_recursive_absolute(_dir_path)
 	
-	if not _file.file_exists(_full_path):
+	if not FileAccess.file_exists(_full_path):
 		reset_savefile()
 	
 	read()
@@ -63,22 +61,24 @@ func reset_savefile():
 
 func save() -> void:
 	_serialized_data = _build_serialized_data()
-	var error = _file.open(_full_path,File.WRITE)
+	var file = FileAccess.open(_full_path,FileAccess.WRITE)
+	var error = FileAccess.get_open_error()
 	if error != OK:
 		_push_reading_file_error(error)
 		return
 	
-	_file.store_var(_serialized_data)
-	_file.close()
+	file.store_var(_serialized_data)
+	file.close()
 
 
 func read() -> void:
-	var error = _file.open(_full_path,File.READ)
+	var file = FileAccess.open(_full_path,FileAccess.READ)
+	var error = FileAccess.get_open_error()
 	if error != OK:
 		_push_reading_file_error(error)
 		return
 	
-	var old_settings = _file.get_var()
+	var old_settings = file.get_var()
 	
 	if old_settings.has("version") and old_settings["version"] >= _version:
 		_serialized_data = old_settings
@@ -86,7 +86,7 @@ func read() -> void:
 		push_error("Missing Methods to convert old save data")
 		assert(false)
 	
-	_file.close()
+	file.close()
 	
 	_translate_serialized_data(_serialized_data)
 	if OS.is_debug_build():
@@ -162,13 +162,3 @@ func _restore_actions() -> void:
 			InputMap.action_add_event(action, event)
 
 ### ---------------------------------------
-
-
-
-
-
-
-
-
-
-
