@@ -219,7 +219,7 @@ func _get_fallback_string_for(string_index: String) -> String:
 		_event_mouse:
 			fallback_string = "Mouse Button %s"%[index]
 		_event_joybutton:
-			fallback_string = Input.get_joy_button_string(index)
+			fallback_string = "Button %s"%[index]
 		_event_joyaxis:
 			fallback_string = "Axis %s"%[string_index]
 		_:

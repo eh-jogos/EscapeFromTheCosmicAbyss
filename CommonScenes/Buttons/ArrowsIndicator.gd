@@ -32,4 +32,3 @@ func _on_LeftArrow_mouse_entered():
 
 func _on_ArrowsIndicator_mouse_entered():
 	focus_parent()
-

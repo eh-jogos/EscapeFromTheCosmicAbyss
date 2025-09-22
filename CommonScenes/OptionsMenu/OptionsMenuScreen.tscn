@@ -1,965 +1,66 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=26 format=3 uid="uid://dga6yb7rwn806"]
 
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=2]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/FullscreenOption.gd" type="Script" id=3]
-[ext_resource path="res://CommonScenes/Buttons/ArrowsIndicator.tscn" type="PackedScene" id=4]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/BGMOption.gd" type="Script" id=5]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/BGM_VolumeOption.gd" type="Script" id=6]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/Sfx_VolumeOption.gd" type="Script" id=7]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=8]
-[ext_resource path="res://Fonts/OrbitronMedium30.font" type="FontFile" id=9]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/InvincibilityOption.gd" type="Script" id=10]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=11]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=12]
-[ext_resource path="res://CommonScenes/ColorsMenu/ColorsMenu.tscn" type="PackedScene" id=13]
-[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=14]
-[ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmChangeCancel.tscn" type="PackedScene" id=15]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/ControlTypeOption.gd" type="Script" id=16]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/AutodetectSkinOption.gd" type="Script" id=17]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/PromptsSkinOption.gd" type="Script" id=18]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsScripts/SwapConfirmCancelOption.gd" type="Script" id=19]
-[ext_resource path="res://CommonScenes/OptionsMenu/ControlsContainer.gd" type="Script" id=20]
-[ext_resource path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_JoypadMapButton.gd" type="Script" id=21]
+[ext_resource type="Script" uid="uid://c3qxtrok63mxk" path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.gd" id="1"]
+[ext_resource type="Script" uid="uid://xpjqt7g4ujds" path="res://CommonScenes/OptionsMenu/OptionsScripts/FullscreenOption.gd" id="3"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="3_egqm8"]
+[ext_resource type="AnimationLibrary" uid="uid://dp5aj7ihinj85" path="res://CommonScenes/OptionsMenu/animations/AnimationPlayer/main_library.tres" id="3_h0ov5"]
+[ext_resource type="PackedScene" path="res://CommonScenes/Buttons/ArrowsIndicator.tscn" id="4"]
+[ext_resource type="Script" uid="uid://dnlmertyf21ry" path="res://CommonScenes/OptionsMenu/OptionsScripts/BGMOption.gd" id="5"]
+[ext_resource type="Script" uid="uid://hrak005obns1" path="res://CommonScenes/OptionsMenu/OptionsScripts/BGM_VolumeOption.gd" id="6"]
+[ext_resource type="Script" uid="uid://dm4ubrxbycs3p" path="res://CommonScenes/OptionsMenu/OptionsScripts/Sfx_VolumeOption.gd" id="7"]
+[ext_resource type="Script" uid="uid://c612ii3cx5d1h" path="res://CommonScenes/Button.gd" id="8"]
+[ext_resource type="Script" uid="uid://ct8ppyavtc720" path="res://CommonScenes/OptionsMenu/OptionsScripts/InvincibilityOption.gd" id="10"]
+[ext_resource type="Texture2D" uid="uid://cu0f3ito8430n" path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bx61imqrsmlna" path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" id="12"]
+[ext_resource type="PackedScene" path="res://CommonScenes/ColorsMenu/ColorsMenu.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="14"]
+[ext_resource type="AnimationLibrary" uid="uid://da66mh4pduqkc" path="res://CommonScenes/OptionsMenu/animations/ControlTypeSelector/main_library.tres" id="14_h0ov5"]
+[ext_resource type="PackedScene" path="res://CommonScenes/PromptLegends/PromptLegendConfirmChangeCancel.tscn" id="15"]
+[ext_resource type="Script" uid="uid://xf8p8pt3vlym" path="res://CommonScenes/OptionsMenu/OptionsScripts/ControlTypeOption.gd" id="16"]
+[ext_resource type="Script" uid="uid://dsa2dvcg8wy8p" path="res://CommonScenes/OptionsMenu/OptionsScripts/AutodetectSkinOption.gd" id="17"]
+[ext_resource type="Script" uid="uid://egpu5paowjr7" path="res://CommonScenes/OptionsMenu/OptionsScripts/PromptsSkinOption.gd" id="18"]
+[ext_resource type="AnimationLibrary" uid="uid://cmlnmcce37tlw" path="res://CommonScenes/OptionsMenu/animations/AutoDetectSelector/default_library.tres" id="18_4a0aa"]
+[ext_resource type="Script" uid="uid://cg5vnobe76cu" path="res://CommonScenes/OptionsMenu/OptionsScripts/SwapConfirmCancelOption.gd" id="19"]
+[ext_resource type="Script" uid="uid://c8fo3e4slq2ap" path="res://CommonScenes/OptionsMenu/ControlsContainer.gd" id="20"]
+[ext_resource type="Script" uid="uid://c4gs38fv5x27t" path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_JoypadMapButton.gd" id="21"]
+[ext_resource type="Animation" uid="uid://ccehwr8jxu0v2" path="res://CommonScenes/OptionsMenu/animations/ScanlinePlayer/loop.tres" id="23_mgb42"]
 
-[sub_resource type="Animation" id=1]
-tracks/0/type = "value"
-tracks/0/path = NodePath("ColorFrame1:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.9, 0.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 115 ), Vector2( 0, 115 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 952 ), Vector2( 0, 952 ), Vector2( 0, 652 ), Vector2( 100, 652 ), Vector2( -2220, 652 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("OptionsContainer:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.0 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ScanlineFx:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ScreenBase:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 121 ), Vector2( 0, 121 ), Vector2( 0, 657 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("ScreenBase:size")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1920, 840 ), Vector2( 1920, 840 ), Vector2( 1920, 0 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("OptionsContainer:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("ControlsContainer:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
-}
-tracks/9/type = "method"
-tracks/9/path = NodePath("LegendConfirmChangeCancel")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "fade_out"
-} ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "go_to_controls"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath("OptionsContainer:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("OptionsContainer:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ControlsContainer:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ControlsContainer:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.6 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.9 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TopEdge:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 115 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("BottomEdge:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 952 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("ScreenBase:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 121 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("ScreenBase:size")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 1920, 840 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("DebugButton:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "go_to_menu"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath("OptionsContainer:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.6 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 1,
-"values": [ false, true, true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("OptionsContainer:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.6 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ControlsContainer:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ControlsContainer:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.9 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("TopEdge:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 115 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("BottomEdge:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 952 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 1.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("ScreenBase:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 121 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("ScreenBase:size")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 1920, 840 ) ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("DebugButton:visible")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/path = NodePath("ColorFrame1:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.9, 0.9 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TopEdge:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 115 ), Vector2( 0, 115 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("BottomEdge:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( -2220, 652 ), Vector2( -2220, 652 ), Vector2( 100, 652 ), Vector2( 0, 652 ), Vector2( 0, 952 ), Vector2( 0, 952 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("OptionsContainer:modulate:a")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.9 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ScanlineFx:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ScreenBase:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 657 ), Vector2( 0, 657 ), Vector2( 0, 121 ), Vector2( 0, 121 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("ScreenBase:size")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1920, 0 ), Vector2( 1920, 0 ), Vector2( 1920, 840 ), Vector2( 1920, 840 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("OptionsContainer:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("ControlsContainer:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
-}
-tracks/9/type = "method"
-tracks/9/path = NodePath("LegendConfirmChangeCancel")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 1 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "fade_in"
-} ]
-}
-
-[sub_resource type="Animation" id=5]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ "Gamepad Options" ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "grab_focus_if_control_menu"
-} ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../PromptsArea/JoypadControls:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../PromptsArea/KeyboardControls:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("../AutodetectSkin:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("../AutodetectSkin:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0.3 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 3,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("../SwapConfirmCancel:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("../SwapConfirmCancel:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0.3 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 3,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("../PromptsSkin:modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0.3 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 3,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=6]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ "Keyboard Options" ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "grab_focus_if_control_menu"
-} ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../PromptsArea/JoypadControls:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../PromptsArea/KeyboardControls:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("../AutodetectSkin:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("../AutodetectSkin:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0.3 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 3,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("../SwapConfirmCancel:visible")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("../SwapConfirmCancel:modulate")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0.3 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 3,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("../PromptsSkin:modulate")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0.3 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 3,
-"values": [ Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=7]
-length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ "Autodetect Gamepad Skin: Off" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../PromptsSkin:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../PromptsSkin:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.6 ),
-"transitions": PackedFloat32Array( 2, 0.5, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../SwapConfirmCancel:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 0.5, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 513 ), Vector2( 0, 594 ) ]
-}
-
-[sub_resource type="Animation" id=8]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ "Autodetect Gamepad Skin: On" ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../PromptsSkin:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../PromptsSkin:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 0.5, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../SwapConfirmCancel:position")
-tracks/3/interp = 2
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 2, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 594 ), Vector2( 0, 513 ) ]
-}
-
-[sub_resource type="Animation" id=9]
-length = 3.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("ScanlineBright:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.2, 2.8, 3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 960, 122 ), Vector2( 960, 162 ), Vector2( 960, 920 ), Vector2( 960, 960 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ScanlineBright:region_enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ScanlineBright:region_rect")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.2, 2.8, 3 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Rect2( 0, 0, 1920, 0 ), Rect2( 0, 0, 1920, 80 ), Rect2( 0, 705.714, 1920, 80 ), Rect2( 0, 760, 1920, 0 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ScanlineBright:modulate")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.5, 1, 1.5, 2, 2.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0.1 ), Color( 1, 1, 1, 0.6 ), Color( 1, 1, 1, 0.3 ), Color( 1, 1, 1, 0.7 ), Color( 1, 1, 1, 0.2 ), Color( 1, 1, 1, 0.5 ) ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4a0aa"]
+_data = {
+&"loop": ExtResource("23_mgb42")
 }
 
 [node name="OptionsMenuScreen" type="CanvasLayer"]
 process_mode = 3
 layer = 4
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [ PackedStringArray( "ColorsMenu" ), [ ExtResource( 13 ) ] ]
+resources = [PackedStringArray("ColorsMenu"), [ExtResource("13")]]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("3_h0ov5")
+}
 autoplay = "open"
-anims/close = SubResource( 1 )
-anims/go_to_controls = SubResource( 2 )
-anims/go_to_menu = SubResource( 3 )
-anims/open = SubResource( 4 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color(1, 1, 1, 0.9)
 offset_top = -3.0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color( 0.247059, 0.054902, 0.156863, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.247059, 0.054902, 0.156863, 1)
 
 [node name="ScreenBase" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.6 )
+modulate = Color(1, 1, 1, 0.6)
 offset_top = 121.0
 offset_right = 1920.0
 offset_bottom = 961.0
-color = Color( 0.266667, 0.65098, 1, 0.6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.266667, 0.65098, 1, 0.6)
 
 [node name="OptionsContainer" type="VBoxContainer" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color(1, 1, 1, 0.9)
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -275.0
@@ -967,145 +68,133 @@ offset_top = 156.0
 offset_right = 285.0
 offset_bottom = 952.0
 mouse_filter = 0
-theme = ExtResource( 2 )
+theme = ExtResource("3_egqm8")
 theme_override_constants/separation = 25
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="FullscreenOption" type="Button" parent="OptionsContainer"]
-offset_right = 560.0
-offset_bottom = 56.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../Control/OptionsExit")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Fullscreen: --"
-script = ExtResource( 3 )
+script = ExtResource("3")
 
-[node name="ArrowsIndicator" parent="OptionsContainer/FullscreenOption" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="OptionsContainer/FullscreenOption" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="BGM" type="Button" parent="OptionsContainer"]
 visible = false
-offset_top = 81.0
-offset_right = 560.0
-offset_bottom = 137.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "BGM: --"
-script = ExtResource( 5 )
+script = ExtResource("5")
 
-[node name="ArrowsIndicator" parent="OptionsContainer/BGM" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="OptionsContainer/BGM" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="BGM_volume" type="Button" parent="OptionsContainer"]
-offset_top = 81.0
-offset_right = 560.0
-offset_bottom = 137.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Music Volume: --"
-script = ExtResource( 6 )
+script = ExtResource("6")
 
-[node name="ArrowsIndicator" parent="OptionsContainer/BGM_volume" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="OptionsContainer/BGM_volume" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="SfxVolume" type="Button" parent="OptionsContainer"]
-offset_top = 162.0
-offset_right = 560.0
-offset_bottom = 218.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Sounds Volume: --"
-script = ExtResource( 7 )
+script = ExtResource("7")
 
-[node name="ArrowsIndicator" parent="OptionsContainer/SfxVolume" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="OptionsContainer/SfxVolume" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="EditControls" type="Button" parent="OptionsContainer"]
-offset_top = 243.0
-offset_right = 560.0
-offset_bottom = 299.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Edit Controls"
-script = ExtResource( 8 )
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="EditColors" type="Button" parent="OptionsContainer"]
-offset_top = 324.0
-offset_right = 560.0
-offset_bottom = 380.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Edit Colors"
-script = ExtResource( 8 )
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="ResetSave" type="Button" parent="OptionsContainer"]
-offset_top = 405.0
-offset_right = 560.0
-offset_bottom = 461.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Reset Save"
-script = ExtResource( 8 )
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="DebugMenu" type="VBoxContainer" parent="OptionsContainer"]
 visible = false
-modulate = Color( 1, 1, 1, 0.9 )
-offset_top = 486.0
-offset_right = 560.0
-offset_bottom = 607.0
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = 5
 
 [node name="Restart" type="Button" parent="OptionsContainer/DebugMenu"]
-offset_right = 560.0
-offset_bottom = 37.0
+layout_mode = 2
 focus_neighbor_left = NodePath("../../ResetSave")
 focus_neighbor_right = NodePath(".")
 focus_mode = 0
-theme_override_fonts/font = ExtResource( 9 )
+theme_type_variation = &"PureTextMinorButton"
 disabled = true
 text = "Restart"
-script = ExtResource( 8 )
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="UnlockEverything" type="Button" parent="OptionsContainer/DebugMenu"]
-offset_top = 42.0
-offset_right = 560.0
-offset_bottom = 79.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../Invincibility")
 focus_mode = 0
-theme_override_fonts/font = ExtResource( 9 )
+theme_type_variation = &"PureTextMinorButton"
 disabled = true
 text = "Unlock Everything"
-script = ExtResource( 8 )
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="Invincibility" type="Button" parent="OptionsContainer/DebugMenu"]
-offset_top = 84.0
-offset_right = 560.0
-offset_bottom = 121.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../Control/OptionsExit")
 focus_mode = 0
-theme_override_fonts/font = ExtResource( 9 )
+theme_type_variation = &"PureTextMinorButton"
 disabled = true
 text = "Invincible: --"
-script = ExtResource( 10 )
+script = ExtResource("10")
 
-[node name="ArrowsIndicator" parent="OptionsContainer/DebugMenu/Invincibility" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="OptionsContainer/DebugMenu/Invincibility" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="Control" type="Control" parent="OptionsContainer"]
-offset_top = 486.0
-offset_right = 560.0
-offset_bottom = 796.0
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="OptionsExit" type="Button" parent="OptionsContainer/Control"]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -1118,17 +207,14 @@ focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../../DebugMenu/Invincibility")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../FullscreenOption")
-theme = ExtResource( 2 )
+theme_type_variation = &"PureTextButton"
 text = "Exit Options"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="ControlsContainer" type="VBoxContainer" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -430.0
@@ -1137,262 +223,227 @@ offset_right = 430.0
 offset_bottom = 952.0
 grow_horizontal = 2
 mouse_filter = 0
-theme = ExtResource( 2 )
+theme = ExtResource("3_egqm8")
 theme_override_constants/separation = 25
 alignment = 1
-script = ExtResource( 20 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("20")
 
 [node name="Type" type="Button" parent="ControlsContainer"]
-offset_right = 860.0
-offset_bottom = 56.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../Control/ControsMenuExit")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Gamepad Options"
-script = ExtResource( 16 )
+script = ExtResource("16")
 
-[node name="ArrowsIndicator" parent="ControlsContainer/Type" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="ControlsContainer/Type" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="ControlTypeSelector" type="AnimationPlayer" parent="ControlsContainer/Type"]
-anims/joypad_menu = SubResource( 5 )
-anims/keyboard_menu = SubResource( 6 )
+libraries = {
+&"": ExtResource("14_h0ov5")
+}
 
 [node name="PromptsArea" type="MarginContainer" parent="ControlsContainer"]
-offset_top = 81.0
-offset_right = 860.0
-offset_bottom = 407.0
-theme_override_constants/margin_right = 0
+layout_mode = 2
 theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 30
 
 [node name="JoypadControls" type="VBoxContainer" parent="ControlsContainer/PromptsArea"]
-offset_right = 860.0
-offset_bottom = 296.0
+layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="BoostLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/JoypadControls"]
-offset_right = 860.0
-offset_bottom = 70.0
+layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="JoyBoost" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls/BoostLine"]
-offset_left = 184.0
-offset_right = 556.0
-offset_bottom = 70.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Jetpack Boost:"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="JoypadMapButton" type="Node" parent="ControlsContainer/PromptsArea/JoypadControls/BoostLine/JoyBoost"]
-script = ExtResource( 21 )
+script = ExtResource("21")
 
-[node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/BoostLine" instance=ExtResource( 14 )]
-offset_left = 606.0
-offset_right = 676.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 70, 70 )
+[node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/BoostLine" instance=ExtResource("14")]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
 input_action = "boost"
 force_type = 2
 
 [node name="DashLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/JoypadControls"]
-offset_top = 80.0
-offset_right = 860.0
-offset_bottom = 150.0
+layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="JoyDash" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls/DashLine"]
-offset_left = 300.0
-offset_right = 439.0
-offset_bottom = 70.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Dash:"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="JoypadMapButton" type="Node" parent="ControlsContainer/PromptsArea/JoypadControls/DashLine/JoyDash"]
-script = ExtResource( 21 )
+script = ExtResource("21")
 
-[node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/DashLine" instance=ExtResource( 14 )]
-offset_left = 489.0
-offset_right = 559.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 70, 70 )
+[node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/DashLine" instance=ExtResource("14")]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
 input_action = "dash"
 force_type = 2
 
 [node name="ShootLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/JoypadControls"]
-offset_top = 160.0
-offset_right = 860.0
-offset_bottom = 230.0
+layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="JoyShoot" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls/ShootLine"]
-offset_left = 292.0
-offset_right = 447.0
-offset_bottom = 70.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Shoot:"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="JoypadMapButton" type="Node" parent="ControlsContainer/PromptsArea/JoypadControls/ShootLine/JoyShoot"]
-script = ExtResource( 21 )
+script = ExtResource("21")
 
-[node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/ShootLine" instance=ExtResource( 14 )]
-offset_left = 497.0
-offset_right = 567.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 70, 70 )
+[node name="PromptBoost" parent="ControlsContainer/PromptsArea/JoypadControls/ShootLine" instance=ExtResource("14")]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
 input_action = "shoot"
 force_type = 2
 
 [node name="RestoreJoyDefaults" type="Button" parent="ControlsContainer/PromptsArea/JoypadControls"]
-offset_top = 240.0
-offset_right = 860.0
-offset_bottom = 296.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Restore Defaults"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="KeyboardControls" type="VBoxContainer" parent="ControlsContainer/PromptsArea"]
 visible = false
-offset_right = 860.0
-offset_bottom = 296.0
+layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="BoostLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-offset_right = 860.0
-offset_bottom = 70.0
+layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="KeyBoost" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls/BoostLine"]
-offset_left = 184.0
-offset_right = 556.0
-offset_bottom = 70.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
 text = "Jetpack Boost:"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
-[node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/BoostLine" instance=ExtResource( 14 )]
-offset_left = 606.0
-offset_right = 676.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 70, 70 )
+[node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/BoostLine" instance=ExtResource("14")]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
 input_action = "boost"
 force_type = 1
 
 [node name="DashLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-offset_top = 80.0
-offset_right = 860.0
-offset_bottom = 150.0
+layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="KeyDash" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls/DashLine"]
-offset_left = 300.0
-offset_right = 439.0
-offset_bottom = 70.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
 text = "Dash:"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
-[node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/DashLine" instance=ExtResource( 14 )]
-offset_left = 489.0
-offset_right = 559.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 70, 70 )
+[node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/DashLine" instance=ExtResource("14")]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
 input_action = "dash"
 force_type = 1
 
 [node name="ShootLine" type="HBoxContainer" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-offset_top = 160.0
-offset_right = 860.0
-offset_bottom = 230.0
+layout_mode = 2
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="KeyShoot" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls/ShootLine"]
-offset_left = 292.0
-offset_right = 447.0
-offset_bottom = 70.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
 text = "Shoot:"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
-[node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/ShootLine" instance=ExtResource( 14 )]
-offset_left = 497.0
-offset_right = 567.0
-offset_bottom = 70.0
-custom_minimum_size = Vector2( 70, 70 )
+[node name="PromptBoost" parent="ControlsContainer/PromptsArea/KeyboardControls/ShootLine" instance=ExtResource("14")]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
 input_action = "shoot"
 force_type = 1
 
 [node name="RestoreKeyDefaults" type="Button" parent="ControlsContainer/PromptsArea/KeyboardControls"]
-offset_top = 240.0
-offset_right = 860.0
-offset_bottom = 296.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
 text = "Restore Defaults"
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="AutodetectSkin" type="Button" parent="ControlsContainer"]
-offset_top = 432.0
-offset_right = 860.0
-offset_bottom = 488.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
-text = "Autodetect Gamepad Skin: On"
-script = ExtResource( 17 )
+theme_type_variation = &"PureTextButton"
+text = "Autodetect Gamepad Skin: Off"
+script = ExtResource("17")
 
-[node name="ArrowsIndicator" parent="ControlsContainer/AutodetectSkin" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="ControlsContainer/AutodetectSkin" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="AutodetectSelector" type="AnimationPlayer" parent="ControlsContainer/AutodetectSkin"]
-anims/off = SubResource( 7 )
-anims/on = SubResource( 8 )
+libraries = {
+&"": ExtResource("18_4a0aa")
+}
 
-[node name="PromptsSkin" type="Button" parent="ControlsContainer"]
-visible = false
-offset_top = 432.0
-offset_right = 860.0
-offset_bottom = 488.0
+[node name="MarginContainer" type="MarginContainer" parent="ControlsContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_top = -46
+
+[node name="PromptsSkin" type="Button" parent="ControlsContainer/MarginContainer"]
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Gamepad Skin: --"
-script = ExtResource( 18 )
+script = ExtResource("18")
 
-[node name="ArrowsIndicator" parent="ControlsContainer/PromptsSkin" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="ControlsContainer/MarginContainer/PromptsSkin" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="SwapConfirmCancel" type="Button" parent="ControlsContainer"]
-offset_top = 513.0
-offset_right = 860.0
-offset_bottom = 569.0
+layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_right = NodePath(".")
+theme_type_variation = &"PureTextButton"
 text = "Swap Menus Confirm/Cancel: --"
-script = ExtResource( 19 )
+script = ExtResource("19")
 
-[node name="ArrowsIndicator" parent="ControlsContainer/SwapConfirmCancel" instance=ExtResource( 4 )]
+[node name="ArrowsIndicator" parent="ControlsContainer/SwapConfirmCancel" instance=ExtResource("4")]
+anchors_preset = 0
 
 [node name="Control" type="Control" parent="ControlsContainer"]
-offset_top = 594.0
-offset_right = 860.0
-offset_bottom = 796.0
+layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ControsMenuExit" type="Button" parent="ControlsContainer/Control"]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -1405,49 +456,47 @@ focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../../SwapConfirmCancel")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../Type")
-theme = ExtResource( 2 )
+theme_type_variation = &"PureTextButton"
 text = "Back"
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("8")
 pressed_sfx = "Confirm"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
-position = Vector2( 960, 540.314 )
-texture = ExtResource( 11 )
+position = Vector2(960, 540.314)
+texture = ExtResource("11")
 region_enabled = true
-region_rect = Rect2( 0, 0, 1920, 840 )
+region_rect = Rect2(0, 0, 1920, 840)
 
 [node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
-modulate = Color( 1, 1, 1, 0.1 )
-position = Vector2( 960, 960 )
-texture = ExtResource( 12 )
+modulate = Color(1, 1, 1, 0.1)
+position = Vector2(960, 122)
+texture = ExtResource("12")
 region_enabled = true
-region_rect = Rect2( 0, 760, 1920, 0 )
+region_rect = Rect2(0, 0, 1920, 0)
 
 [node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
+libraries = {
+&"": SubResource("AnimationLibrary_4a0aa")
+}
 autoplay = "loop"
-anims/loop = SubResource( 9 )
 
 [node name="TopEdge" type="ColorRect" parent="."]
 offset_top = 115.0
 offset_right = 1920.0
 offset_bottom = 130.0
-color = Color( 0, 0.921569, 1, 1 )
+color = Color(0, 0.921569, 1, 1)
 
 [node name="BottomEdge" type="ColorRect" parent="."]
 offset_top = 952.0
 offset_right = 1920.0
 offset_bottom = 967.0
-color = Color( 0, 0.921569, 1, 1 )
+color = Color(0, 0.921569, 1, 1)
 
 [node name="DebugButton" type="TextureButton" parent="."]
+visible = false
+anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -1461,24 +510,20 @@ focus_neighbor_right = NodePath("../OptionsContainer/Control/OptionsExit")
 focus_neighbor_bottom = NodePath("../OptionsContainer/Control/OptionsExit")
 focus_mode = 1
 mouse_default_cursor_shape = 6
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="DebugTimer" type="Timer" parent="DebugButton"]
 wait_time = 3.0
 one_shot = true
 
 [node name="ColorRect" type="ColorRect" parent="DebugButton"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
-color = Color( 0.72549, 0.188235, 0.188235, 0 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.72549, 0.188235, 0.188235, 0)
 
-[node name="LegendConfirmChangeCancel" parent="." instance=ExtResource( 15 )]
+[node name="LegendConfirmChangeCancel" parent="." instance=ExtResource("15")]
+
 [connection signal="left_pressed" from="OptionsContainer/FullscreenOption/ArrowsIndicator" to="OptionsContainer/FullscreenOption" method="_on_ArrowsIndicator_left_pressed"]
 [connection signal="right_pressed" from="OptionsContainer/FullscreenOption/ArrowsIndicator" to="OptionsContainer/FullscreenOption" method="_on_ArrowsIndicator_right_pressed"]
 [connection signal="left_pressed" from="OptionsContainer/BGM/ArrowsIndicator" to="OptionsContainer/BGM" method="_on_ArrowsIndicator_left_pressed"]

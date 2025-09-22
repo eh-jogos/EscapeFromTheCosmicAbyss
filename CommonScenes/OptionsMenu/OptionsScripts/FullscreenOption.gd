@@ -73,4 +73,3 @@ func _on_ArrowsIndicator_right_pressed():
 
 func _on_ArrowsIndicator_left_pressed():
 	change_screen_mode()
-

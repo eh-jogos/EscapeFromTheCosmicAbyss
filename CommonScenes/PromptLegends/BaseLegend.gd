@@ -7,7 +7,6 @@ class_name BaseLegend
 # enums
 # constants
 # public variables - order: export > normal var > onready 
-var visible: = false
 
 # private variables - order: export > normal var > onready 
 @onready var _animator: AnimationPlayer = $AnimationPlayer
@@ -30,11 +29,11 @@ func fade_out() -> void:
 	_animator.play("fade_out")
 
 
-func show() -> void:
+func show_prompts() -> void:
 	_animator.play("editor")
 
 
-func hide() -> void:
+func hide_prompts() -> void:
 	_animator.play("base")
 
 ### ---------------------------------------
@@ -51,5 +50,3 @@ func _on_animator_animation_finished(anim_name: String) -> void:
 			push_error("Uregistered animation: %s"%[anim_name])
 			assert(false)
 ### ---------------------------------------
-
-

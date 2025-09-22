@@ -57,5 +57,3 @@ func _on_JoypadSupport_joypad_disconnected() -> void:
 	animator.play("keyboard_menu")
 
 ### ---------------------------------------
-
-

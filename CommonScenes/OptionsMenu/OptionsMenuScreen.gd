@@ -59,11 +59,11 @@ func _on_ScreenManager_mid_transition_reached():
 	if ScreenManager.scene_above == self:
 		animator.assigned_animation = "open"
 		animator.seek(animator.current_animation_length, true)
-		legend_confirm_cancel.show()
+		legend_confirm_cancel.show_prompts()
 	else:
 		animator.assigned_animation = "close"
 		animator.seek(animator.current_animation_length, true)
-		legend_confirm_cancel.hide()
+		legend_confirm_cancel.hide_prompts()
 
 
 func _on_options_exit_pressed():

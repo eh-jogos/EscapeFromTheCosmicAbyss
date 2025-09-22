@@ -1,183 +1,133 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://d23bd8ywccyf7"]
 
-[ext_resource path="res://CommonScenes/MainMenu/MainMenuScreen.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" type="Texture2D" id=2]
-[ext_resource path="res://CommonScenes/MainMenu/pngs/MainMenu_Logo.png" type="Texture2D" id=3]
-[ext_resource path="res://CommonScenes/Buttons/PureText.tres" type="Theme" id=4]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
-[ext_resource path="res://CommonScenes/Buttons/PureText_Minor.tres" type="Theme" id=6]
-[ext_resource path="res://Fonts/OrbitronBold30.font" type="FontFile" id=7]
-[ext_resource path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn" type="PackedScene" id=8]
-[ext_resource path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" type="PackedScene" id=9]
-[ext_resource path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" type="PackedScene" id=10]
-[ext_resource path="res://CommonScenes/MainMenu/VersionLabel.gd" type="Script" id=11]
+[ext_resource type="Script" uid="uid://c1h66nial5ely" path="res://CommonScenes/MainMenu/MainMenuScreen.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dabalvtxlmq1j" path="res://CommonScenes/MainMenu/pngs/MainMenu_SplashScreen.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dowkrdjreuvhy" path="res://CommonScenes/MainMenu/pngs/MainMenu_Logo.png" id="3"]
+[ext_resource type="Script" uid="uid://c612ii3cx5d1h" path="res://CommonScenes/Button.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://dga6yb7rwn806" path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" id="9"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="9_otl5t"]
+[ext_resource type="PackedScene" uid="uid://bxjd7yivg27c" path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" id="10"]
+[ext_resource type="Script" uid="uid://bcpf3x7y7xr4t" path="res://CommonScenes/MainMenu/VersionLabel.gd" id="11"]
 
 [node name="MainMenuScreen" type="Node2D"]
 process_mode = 3
-script = ExtResource( 1 )
+script = ExtResource("1")
 game_path = "res://JetpackGameMode/JetpackGame.tscn"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [ PackedStringArray( "ExtrasMenuScreen", "OptionsMenuScreen" ), [ ExtResource( 9 ), ExtResource( 8 ) ] ]
+resources = [PackedStringArray("ExtrasMenuScreen", "OptionsMenuScreen"), [ExtResource("9"), ExtResource("8")]]
 
 [node name="TextureFrame" type="TextureRect" parent="."]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 1856.0
 offset_bottom = 1016.0
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture = ExtResource("2")
 
 [node name="MenuContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(509, 356)
 offset_left = 1276.0
 offset_top = 148.0
 offset_right = 1886.0
 offset_bottom = 927.0
-custom_minimum_size = Vector2( 509, 356 )
 mouse_filter = 0
+theme = ExtResource("9_otl5t")
 theme_override_constants/separation = 5
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
 
 [node name="Logo" type="TextureRect" parent="MenuContainer"]
-offset_right = 610.0
-offset_bottom = 287.0
-texture = ExtResource( 3 )
+layout_mode = 2
+texture = ExtResource("3")
 
 [node name="MarginContainer" type="Control" parent="MenuContainer"]
-offset_top = 292.0
-offset_right = 610.0
-offset_bottom = 352.0
-custom_minimum_size = Vector2( 610, 60 )
+custom_minimum_size = Vector2(610, 60)
+layout_mode = 2
 
 [node name="Continue" type="Button" parent="MenuContainer"]
-offset_top = 357.0
-offset_right = 610.0
-offset_bottom = 413.0
-theme = ExtResource( 4 )
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Continue"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
 [node name="NewGame" type="Button" parent="MenuContainer"]
-offset_top = 418.0
-offset_right = 610.0
-offset_bottom = 474.0
-theme = ExtResource( 4 )
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "New Game"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
 [node name="ArcadeMode" type="Button" parent="MenuContainer"]
-offset_top = 479.0
-offset_right = 610.0
-offset_bottom = 535.0
-theme = ExtResource( 4 )
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Arcade Mode"
-script = ExtResource( 5 )
+script = ExtResource("5")
 
 [node name="SpeedrunMode" type="Button" parent="MenuContainer"]
-offset_top = 540.0
-offset_right = 610.0
-offset_bottom = 596.0
-theme = ExtResource( 4 )
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Speedrun Mode"
-script = ExtResource( 5 )
+script = ExtResource("5")
 
-[node name="Category15" type="Button" parent="MenuContainer" groups=[
-"categorymenu",
-]]
+[node name="Category15" type="Button" parent="MenuContainer" groups=["categorymenu"]]
 visible = false
-offset_top = 601.0
-offset_right = 610.0
-offset_bottom = 638.0
-theme = ExtResource( 6 )
+layout_mode = 2
+theme_type_variation = &"PureTextMinorButton"
 text = "15 Upgrade Points"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
-[node name="Category30" type="Button" parent="MenuContainer" groups=[
-"categorymenu",
-]]
+[node name="Category30" type="Button" parent="MenuContainer" groups=["categorymenu"]]
 visible = false
-offset_top = 643.0
-offset_right = 610.0
-offset_bottom = 680.0
-theme = ExtResource( 6 )
+layout_mode = 2
+theme_type_variation = &"PureTextMinorButton"
 text = "30 Upgrade Points"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
-[node name="Category40" type="Button" parent="MenuContainer" groups=[
-"categorymenu",
-]]
+[node name="Category40" type="Button" parent="MenuContainer" groups=["categorymenu"]]
 visible = false
-offset_top = 685.0
-offset_right = 610.0
-offset_bottom = 722.0
-theme = ExtResource( 6 )
+layout_mode = 2
+theme_type_variation = &"PureTextMinorButton"
 text = "40 Upgrade Points"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
-[node name="Unlimited" type="Button" parent="MenuContainer" groups=[
-"categorymenu",
-]]
+[node name="Unlimited" type="Button" parent="MenuContainer" groups=["categorymenu"]]
 visible = false
-offset_top = 727.0
-offset_right = 610.0
-offset_bottom = 764.0
-theme = ExtResource( 6 )
+layout_mode = 2
+theme_type_variation = &"PureTextMinorButton"
 text = "Unlimited"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
-[node name="Back" type="Button" parent="MenuContainer" groups=[
-"categorymenu",
-]]
+[node name="Back" type="Button" parent="MenuContainer" groups=["categorymenu"]]
 visible = false
-offset_top = 769.0
-offset_right = 610.0
-offset_bottom = 825.0
-theme = ExtResource( 4 )
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Back"
-script = ExtResource( 5 )
+script = ExtResource("5")
 
-[node name="Options" type="Button" parent="MenuContainer" groups=[
-"mainmenu",
-]]
-offset_top = 601.0
-offset_right = 610.0
-offset_bottom = 657.0
-theme = ExtResource( 4 )
+[node name="Options" type="Button" parent="MenuContainer" groups=["mainmenu"]]
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Options"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
-[node name="Extras" type="Button" parent="MenuContainer" groups=[
-"mainmenu",
-]]
-offset_top = 662.0
-offset_right = 610.0
-offset_bottom = 718.0
-theme = ExtResource( 4 )
+[node name="Extras" type="Button" parent="MenuContainer" groups=["mainmenu"]]
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Extras"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
-[node name="QuitGame" type="Button" parent="MenuContainer" groups=[
-"mainmenu",
-]]
-offset_top = 723.0
-offset_right = 610.0
-offset_bottom = 779.0
-theme = ExtResource( 4 )
+[node name="QuitGame" type="Button" parent="MenuContainer" groups=["mainmenu"]]
+layout_mode = 2
+theme_type_variation = &"PureTextButton"
 text = "Quit Game"
-script = ExtResource( 5 )
+script = ExtResource("5")
 
 [node name="Timer" type="Timer" parent="MenuContainer/QuitGame"]
 wait_time = 0.3
@@ -188,31 +138,30 @@ offset_left = 3.0
 offset_top = 1024.0
 offset_right = 1916.0
 offset_bottom = 1061.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 7 )
+mouse_filter = 1
+theme = ExtResource("9_otl5t")
+theme_type_variation = &"BoldText"
 text = "v0.00"
-align = 2
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
+script = ExtResource("11")
+metadata/_edit_use_anchors_ = true
 
-[node name="PromptLegendConfirmCancel" parent="." instance=ExtResource( 10 )]
+[node name="PromptLegendConfirmCancel" parent="." instance=ExtResource("10")]
 
-[node name="RootControl" parent="PromptLegendConfirmCancel" index="1"]
-modulate = Color( 1, 1, 1, 0 )
-anchor_top = 0.0
-offset_top = 1034.0
-offset_bottom = -46.0
+[node name="BGStrip" parent="PromptLegendConfirmCancel/RootControl" index="0"]
+offset_top = -148.0
+offset_bottom = -67.0
+
+[node name="LegendContainer" parent="PromptLegendConfirmCancel/RootControl" index="1"]
+offset_left = -588.0
+offset_top = -149.0
+offset_bottom = -69.0
+
 [connection signal="pressed" from="MenuContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="MenuContainer/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="MenuContainer/ArcadeMode" to="." method="_on_ArcadeMode_pressed"]
 [connection signal="pressed" from="MenuContainer/SpeedrunMode" to="." method="_on_SpeedrunMode_pressed"]
-[connection signal="pressed" from="MenuContainer/Category15" to="." method="_on_Category_pressed" binds= [ 15 ]]
-[connection signal="pressed" from="MenuContainer/Category30" to="." method="_on_Category_pressed" binds= [ 30 ]]
-[connection signal="pressed" from="MenuContainer/Category40" to="." method="_on_Category_pressed" binds= [ 40 ]]
-[connection signal="pressed" from="MenuContainer/Unlimited" to="." method="_on_Category_pressed" binds= [ 59 ]]
 [connection signal="pressed" from="MenuContainer/Back" to="." method="_on_Back_pressed"]
 [connection signal="pressed" from="MenuContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MenuContainer/Extras" to="." method="_on_Extras_pressed"]
