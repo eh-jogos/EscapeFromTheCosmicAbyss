@@ -448,7 +448,7 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PackedFloat32Array( 0.3 ),
 "transitions": PackedFloat32Array( 1 ),
-"update": 3,
+"update": 2,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
@@ -564,7 +564,7 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PackedFloat32Array( 0.3 ),
 "transitions": PackedFloat32Array( 1 ),
-"update": 3,
+"update": 2,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
@@ -576,7 +576,7 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PackedFloat32Array( 0.3 ),
 "transitions": PackedFloat32Array( 1 ),
-"update": 3,
+"update": 2,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
@@ -588,7 +588,7 @@ tracks/2/enabled = true
 tracks/2/keys = {
 "times": PackedFloat32Array( 0.3 ),
 "transitions": PackedFloat32Array( 1 ),
-"update": 3,
+"update": 2,
 "values": [ false ]
 }
 tracks/3/type = "value"
@@ -600,7 +600,7 @@ tracks/3/enabled = true
 tracks/3/keys = {
 "times": PackedFloat32Array( 0.3 ),
 "transitions": PackedFloat32Array( 1 ),
-"update": 3,
+"update": 2,
 "values": [ false ]
 }
 
@@ -627,7 +627,7 @@ tracks/1/enabled = true
 tracks/1/keys = {
 "times": PackedFloat32Array( 0.3 ),
 "transitions": PackedFloat32Array( 1 ),
-"update": 3,
+"update": 2,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "method"
