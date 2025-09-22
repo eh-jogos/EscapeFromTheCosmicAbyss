@@ -24,7 +24,7 @@ var actions: = {}
 @export var _version: = 1.0
 @export var _dir_path: = "user://"
 @export var _file_name: = ""
-@export var _actions_to_save = [] # (Array, String)
+@export var _actions_to_save: Array[String] = []
 
 var _full_path: = ""
 var _serialized_data = {}

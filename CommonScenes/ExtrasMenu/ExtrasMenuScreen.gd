@@ -1,9 +1,9 @@
 extends CanvasLayer
 
-@export var credits_scene_path # (String, FILE, "*.tscn")
-@export var cutscene_intro_path # (String, FILE, "*.tscn")
-@export var cutscene_level5_path # (String, FILE, "*.tscn")
-@export var cutscene_ending_path # (String, FILE, "*.tscn")
+@export_file("*.tscn") var credits_scene_path
+@export_file("*.tscn") var cutscene_intro_path
+@export_file("*.tscn") var cutscene_level5_path
+@export_file("*.tscn") var cutscene_ending_path
 
 # node variables
 var credits

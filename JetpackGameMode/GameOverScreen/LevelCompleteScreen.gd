@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var main_menu_path # (String, FILE)
+@export_file var main_menu_path
 
 var replay_btn
 var next_level_btn

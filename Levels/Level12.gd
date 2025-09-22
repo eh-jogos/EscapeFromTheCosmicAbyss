@@ -1,8 +1,8 @@
 extends Node
 
 @export var title: String = ""
-@export var intro_cutscene # (String, FILE)
-@export var end_cutscene # (String, FILE)
+@export_file var intro_cutscene
+@export_file var end_cutscene
 
 var tutorial = false
 var intro_beats = [0,0,0]

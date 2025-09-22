@@ -2,7 +2,7 @@
 extends Node2D
 
 #Menu Paths
-@export var game_path # (String, FILE)
+@export_file var game_path
 
 var continue_btn
 var new_game_btn
@@ -123,21 +123,21 @@ func toggle_menuitems(should_grab_focus = true):
 			if should_grab_focus:
 				continue_btn.grab_focus()
 			
-			continue_btn.set_focus_neighbor(MARGIN_TOP, quit_btn.get_path())
-			new_game_btn.set_focus_neighbor(MARGIN_TOP, "")
-			quit_btn.set_focus_neighbor(MARGIN_BOTTOM, continue_btn.get_path())
+			continue_btn.set_focus_neighbor(SIDE_TOP, quit_btn.get_path())
+			new_game_btn.set_focus_neighbor(SIDE_TOP, "")
+			quit_btn.set_focus_neighbor(SIDE_BOTTOM, continue_btn.get_path())
 		else:
 			continue_btn.hide()
 			new_game_btn.show()
 			if should_grab_focus:
 				new_game_btn.grab_focus()
 			
-			continue_btn.set_focus_neighbor(MARGIN_TOP, "")
-			new_game_btn.set_focus_neighbor(MARGIN_TOP, quit_btn.get_path())
-			quit_btn.set_focus_neighbor(MARGIN_BOTTOM, new_game_btn.get_path())
+			continue_btn.set_focus_neighbor(SIDE_TOP, "")
+			new_game_btn.set_focus_neighbor(SIDE_TOP, quit_btn.get_path())
+			quit_btn.set_focus_neighbor(SIDE_BOTTOM, new_game_btn.get_path())
 		
-		arcade_btn.set_focus_neighbor(MARGIN_TOP, "")
-		speedrun_btn.set_focus_neighbor(MARGIN_TOP, "")
+		arcade_btn.set_focus_neighbor(SIDE_TOP, "")
+		speedrun_btn.set_focus_neighbor(SIDE_TOP, "")
 		
 	elif game_mode == "arcade" or game_mode == "speedrun":
 		get_tree().call_group("categorymenu", "show")
@@ -147,14 +147,14 @@ func toggle_menuitems(should_grab_focus = true):
 			arcade_btn.show()
 			speedrun_btn.hide()
 			
-			arcade_btn.set_focus_neighbor(MARGIN_TOP, back_btn.get_path())
-			back_btn.set_focus_neighbor(MARGIN_BOTTOM, arcade_btn.get_path())
+			arcade_btn.set_focus_neighbor(SIDE_TOP, back_btn.get_path())
+			back_btn.set_focus_neighbor(SIDE_BOTTOM, arcade_btn.get_path())
 		else:
 			arcade_btn.hide()
 			speedrun_btn.show()
 			
-			speedrun_btn.set_focus_neighbor(MARGIN_TOP, back_btn.get_path())
-			back_btn.set_focus_neighbor(MARGIN_BOTTOM, speedrun_btn.get_path())
+			speedrun_btn.set_focus_neighbor(SIDE_TOP, back_btn.get_path())
+			back_btn.set_focus_neighbor(SIDE_BOTTOM, speedrun_btn.get_path())
 
 
 func _on_Category_pressed(upgrade_points):

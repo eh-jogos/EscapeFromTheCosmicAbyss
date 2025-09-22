@@ -33,9 +33,9 @@ var tutorial
 # Game Mode "Stats" and Variables?
 @export var point_multiple = 5
 @export var upgrade_multiple = 30
-@export var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn" # (String, FILE)
-@export var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn" # (String, FILE)
-@export var test_mode = "story" # (String, "story", "arcade", "speedrun")
+@export_file var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
+@export_file var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+@export_enum("story", "arcade", "speedrun") var test_mode = "story"
 @export var test_level_or_points: int = 0
 
 var game_settings = Global.get_game_mode()
@@ -128,8 +128,8 @@ func show_pre_game():
 			Global.savedata["state"]["sub-mode"] = "level selected"
 			Global.savedata["story"]["current level"] = test_level_or_points
 		else:
-			category = String(test_level_or_points)
-			Global.savedata["state"]["sub-mode"] = String(test_level_or_points)
+			category = str(test_level_or_points)
+			Global.savedata["state"]["sub-mode"] = str(test_level_or_points)
 			Global.reset_category_progress(Global.savedata.state)
 	
 	if game_mode == "story":
@@ -181,7 +181,7 @@ func game_start():
 		set_game_state("Cutscene")
 		ScreenManager.black_transition(level_intro_cutscene, null, self)
 		if not ScreenManager.is_connected("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded")):
-			 ScreenManager.connect("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded").bind(), CONNECT_ONE_SHOT)
+			ScreenManager.connect("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded").bind(), CONNECT_ONE_SHOT)
 	else:
 		start_countdown()
 

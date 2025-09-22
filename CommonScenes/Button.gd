@@ -1,7 +1,7 @@
 class_name BasicGameButton
 extends BaseButton
 
-@export var pressed_sfx = "Change" # (String, "Confirm", "Change")
+@export_enum("Confirm", "Change") var pressed_sfx = "Change"
 
 func _ready():
 	self.connect("mouse_entered", Callable(self, "_on_mouse_entered"))

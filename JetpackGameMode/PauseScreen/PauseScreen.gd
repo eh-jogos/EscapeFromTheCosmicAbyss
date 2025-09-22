@@ -1,8 +1,8 @@
 extends Node2D
 
-@export var main_menu_path # (String, FILE)
-@export var options_path # (String, FILE)
-@export var level_select_path # (String, FILE)
+@export_file var main_menu_path
+@export_file var options_path
+@export_file var level_select_path
 
 # class member variables go here, for example:
 var resume_btn
@@ -141,4 +141,3 @@ func _on_LevelSelect_pressed():
 func _on_QuitMainMenu_pressed():
 	SoundManager.stop_bgm()
 	ScreenManager.load_screen(main_menu_path)
-
