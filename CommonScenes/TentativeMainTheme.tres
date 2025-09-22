@@ -1,10 +1,30 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dsbl7clxwhs5a"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dsbl7clxwhs5a"]
 
+[ext_resource type="FontFile" uid="uid://bmlyf4q6msmkq" path="res://Fonts/Orbitron-Bold.ttf" id="1_g87uw"]
 [ext_resource type="FontFile" uid="uid://dryi7q7l5toou" path="res://Fonts/Orbitron-Regular.ttf" id="1_h8t7h"]
 [ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="1_xa0xr"]
+[ext_resource type="FontFile" uid="uid://6cy3fc4ouoca" path="res://Fonts/Orbitron-Medium.ttf" id="2_g7pfm"]
+[ext_resource type="StyleBox" uid="uid://ciafbsvbys0on" path="res://CommonScenes/default_style_box_empty.tres" id="3_g7pfm"]
 
 [resource]
 default_font = ExtResource("1_h8t7h")
+BoldText/base_type = &"Label"
+BoldText/font_sizes/font_size = 30
+BoldText/fonts/font = ExtResource("1_g87uw")
+PureTextButton/base_type = &"Button"
+PureTextButton/colors/font_color = Color(0, 0.956863, 1, 1)
+PureTextButton/colors/font_disabled_color = Color(0.898039, 0.898039, 0.898039, 0.2)
+PureTextButton/colors/font_focus_color = Color(1, 1, 1, 1)
+PureTextButton/colors/font_hover_color = Color(0.439216, 0.439216, 1, 1)
+PureTextButton/constants/h_separation = 2
+PureTextButton/font_sizes/font_size = 45
+PureTextButton/fonts/font = ExtResource("2_g7pfm")
+PureTextButton/styles/disabled = ExtResource("3_g7pfm")
+PureTextButton/styles/focus = ExtResource("3_g7pfm")
+PureTextButton/styles/hover = ExtResource("3_g7pfm")
+PureTextButton/styles/hover_pressed = ExtResource("3_g7pfm")
+PureTextButton/styles/normal = ExtResource("3_g7pfm")
+PureTextButton/styles/pressed = ExtResource("3_g7pfm")
 ThickText/base_type = &"Label"
 ThickText/font_sizes/font_size = 60
 ThickText/fonts/font = ExtResource("1_xa0xr")
