@@ -47,6 +47,7 @@ func _process(_delta):
 	if err == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
 		_progress_bar.set_value(progress[0])
 	elif err == ResourceLoader.THREAD_LOAD_LOADED:
+		set_process(false)
 		var scene: PackedScene = ResourceLoader.load_threaded_get(_current_loading_path)
 		if _current_type == LoadingType.LOADING_SCREEN:
 			set_new_scene(scene)
@@ -181,19 +182,21 @@ func load_screen_invisible(path: String):
 	_current_type = LoadingType.BACKRGROUND
 	_current_loading_path = path
 	var error = ResourceLoader.load_threaded_request(_current_loading_path)
-	set_process(true)
-	
-	#var thread_status = _loading_thread.start(Callable(self, "background_loading").bind(path))
-	#if thread_status == OK:
-		#var results_dict: Dictionary = await self.background_loading_finished
-		#if results_dict.error == OK: 
-			#set_new_scene(results_dict.scene)
-		#else:
-			#push_error("Error while loading %s | Error: %s"%[path, results_dict.error])
-			#assert(false)
-	#else:
-		#push_error("Error while starting thread for %s | Error: %s"%[path, thread_status])
-		#assert(false)
+	if error == OK:
+		set_process(true)
+		
+		var results_dict: Dictionary = await background_loading_finished
+		if results_dict.error == ResourceLoader.THREAD_LOAD_LOADED: 
+			set_new_scene(results_dict.scene)
+		else:
+			assert(
+					results_dict.error == ResourceLoader.THREAD_LOAD_LOADED, 
+					"Error while loading %s | Error: %s"%[path, results_dict.error]
+			)
+			reset()
+	else:
+		assert(error == OK, "Failed to create threated load. Error Code: %s"%[error])
+		reset()
 
 
 func reveal_invisible_loading_screen():

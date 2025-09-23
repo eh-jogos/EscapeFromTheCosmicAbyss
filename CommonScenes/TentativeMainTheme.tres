@@ -8,12 +8,18 @@
 
 [resource]
 default_font = ExtResource("1_h8t7h")
+Bold40Text/base_type = &"Label"
+Bold40Text/font_sizes/font_size = 40
+Bold40Text/fonts/font = ExtResource("1_g87uw")
 BoldText/base_type = &"Label"
 BoldText/font_sizes/font_size = 30
 BoldText/fonts/font = ExtResource("1_g87uw")
 HeaderLarge/colors/font_color = Color(0, 0.960784, 1, 1)
 HeaderLarge/font_sizes/font_size = 72
 HeaderLarge/fonts/font = ExtResource("1_xa0xr")
+HeaderMedium/colors/font_color = Color(0, 0.960784, 1, 1)
+HeaderMedium/font_sizes/font_size = 60
+HeaderMedium/fonts/font = ExtResource("1_xa0xr")
 MediumText/base_type = &"Label"
 MediumText/colors/font_color = Color(0, 0.960784, 1, 1)
 MediumText/font_sizes/font_size = 45

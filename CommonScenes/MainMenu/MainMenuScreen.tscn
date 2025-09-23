@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dowkrdjreuvhy" path="res://CommonScenes/MainMenu/pngs/MainMenu_Logo.png" id="3"]
 [ext_resource type="Script" uid="uid://c612ii3cx5d1h" path="res://CommonScenes/Button.gd" id="5"]
 [ext_resource type="PackedScene" uid="uid://dga6yb7rwn806" path="res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://bgjj8xibwxais" path="res://CommonScenes/ExtrasMenu/ExtrasMenuScreen.tscn" id="9"]
 [ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="9_otl5t"]
 [ext_resource type="PackedScene" uid="uid://bxjd7yivg27c" path="res://CommonScenes/PromptLegends/PromptLegendConfirmCancel.tscn" id="10"]
 [ext_resource type="Script" uid="uid://bcpf3x7y7xr4t" path="res://CommonScenes/MainMenu/VersionLabel.gd" id="11"]
