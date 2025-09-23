@@ -2794,7 +2794,6 @@ visible_characters_behavior = 3
 visible_ratio = 0.0
 
 [node name="Scene2" type="Control" parent="Scenes"]
-visible = false
 anchors_preset = 0
 anchor_left = 0.5
 anchor_top = 0.5
@@ -2856,6 +2855,7 @@ bbcode_enabled = true
 text = "[center]Okay, 
 [b]what[/b] do we
 have here?[/center]"
+visible_characters_behavior = 3
 
 [node name="Frame1" type="TextureRect" parent="Scenes/Scene2"]
 layout_mode = 0
@@ -3065,6 +3065,7 @@ theme = ExtResource("11")
 bbcode_enabled = true
 text = "[center]Time to call 
 central com-[/center]"
+visible_characters_behavior = 3
 
 [node name="Interruption" type="Control" parent="Scenes/Scene4/Frame1"]
 anchors_preset = 0
@@ -3154,6 +3155,7 @@ bbcode_enabled = true
 text = "[center][b]A5-tr0[/b], this is
 [b]Central Command.[/b] Do you
 copy? Over.[/center]"
+visible_characters_behavior = 3
 
 [node name="baloon2" type="NinePatchRect" parent="Scenes/Scene4/Frame2"]
 layout_mode = 0
@@ -3184,6 +3186,7 @@ bbcode_enabled = true
 text = "[center]Central Command, this is A5-tr0.
 I've just secured what should be 
 the [b]Orb of Knowlledge[/b]. Over.[/center]"
+visible_characters_behavior = 3
 
 [node name="Scene5" type="Control" parent="Scenes"]
 visible = false
@@ -3282,6 +3285,7 @@ We have just detected an
 energy spike coming towards
 your location.[/center]
 "
+visible_characters_behavior = 3
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="Scenes/Scene5/Frame1/baloon1"]
 layout_mode = 0
@@ -3295,6 +3299,7 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "[center]Something [b]massive[/b]
 is approaching you![/center]"
+visible_characters_behavior = 3
 
 [node name="Frame2" type="TextureRect" parent="Scenes/Scene5"]
 layout_mode = 0
@@ -3368,6 +3373,7 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "[center]Secure the orb and
 retreat immediately![/center]"
+visible_characters_behavior = 3
 
 [node name="Balloon2" type="TextureRect" parent="Scenes/Scene5/Frame2/Balloons"]
 layout_mode = 0
@@ -3393,6 +3399,7 @@ grow_vertical = 2
 mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]I REPEAT...[/b][/center]"
+visible_characters_behavior = 3
 
 [node name="Frame3" type="TextureRect" parent="Scenes/Scene5"]
 layout_mode = 0
@@ -3426,6 +3433,7 @@ scale = Vector2(1.1, 1.1)
 mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]...RETREAT IMMEDIATELY...[/b][/center]"
+visible_characters_behavior = 3
 
 [node name="Balloon2" type="TextureRect" parent="Scenes/Scene5/Frame3"]
 layout_mode = 0
@@ -3452,6 +3460,7 @@ mouse_filter = 2
 bbcode_enabled = true
 text = "[center][b]...AND DO NOT
 LOSE THE ORB![/b][/center]"
+visible_characters_behavior = 3
 
 [node name="Buttons" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 40)
