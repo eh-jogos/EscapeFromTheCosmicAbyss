@@ -10,7 +10,7 @@ var next_button
 
 # array of animations, 0 must always be "00_base" and 1 must always be "01_fade"
 # and the fade in step should only animate the opacity of the parent node so it can be used both for fade ins or outs
-var animator_steps
+var animator_steps: PackedStringArray
 var current_step
 
 func _ready():
@@ -40,6 +40,10 @@ func setup_next_scene_animator():
 	#print("Cutscenes.gd | Setup Next scene animator: %s"%current_scene)
 	current_animator = scenes[current_scene].get_node("AnimationPlayer")
 	animator_steps = current_animator.get_animation_list()
+	for index in range(animator_steps.size()-1, -1, -1):
+		var anim_name: StringName = animator_steps[index]
+		if anim_name == &"RESET":
+			animator_steps.remove_at(index)
 	current_step = 1
 	_play_current_animation()
 	#add 1 because the fade anmation automatically transitions to the next one

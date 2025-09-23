@@ -1,19 +1,20 @@
-[gd_resource type="Theme" load_steps=1 format=2]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://xlwhcwbg5mho"]
 
-[ext_resource path="res://Fonts/Cutscenes/Central/IBMPlexMono-SemiBold32.font" type="FontFile" id=1]
-[ext_resource path="res://Fonts/Cutscenes/Central/IBMPlexMono-Regular30.font" type="FontFile" id=2]
+[ext_resource type="FontFile" uid="uid://dk2tvwcpfgpyr" path="res://Fonts/Cutscenes/Central/IBMPlexMono-SemiBold.ttf" id="1_2ruho"]
+[ext_resource type="FontFile" uid="uid://byt44jeki5lxu" path="res://Fonts/Cutscenes/Central/IBMPlexMono-Regular.ttf" id="2_r5jvn"]
 
 [resource]
-
-RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
-RichTextLabel/colors/font_color_selected = Color( 1, 1, 1, 1 )
-RichTextLabel/colors/selection_color = Color( 0.1, 0.1, 1, 0.8 )
-RichTextLabel/constants/line_separation = 5
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_color_selected = Color(1, 1, 1, 1)
+RichTextLabel/colors/selection_color = Color(0.1, 0.1, 1, 0.8)
+RichTextLabel/constants/line_separation = -7
 RichTextLabel/constants/table_hseparation = 3
-RichTextLabel/constants/table_vseparation = 3
-RichTextLabel/fonts/bold_font = ExtResource( 1 )
+RichTextLabel/constants/table_vseparation = 4
+RichTextLabel/font_sizes/bold_font_size = 32
+RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/fonts/bold_font = ExtResource("1_2ruho")
 RichTextLabel/fonts/bold_italics_font = null
 RichTextLabel/fonts/italics_font = null
 RichTextLabel/fonts/mono_font = null
-RichTextLabel/fonts/normal_font = ExtResource( 2 )
+RichTextLabel/fonts/normal_font = ExtResource("2_r5jvn")
 RichTextLabel/styles/focus = null

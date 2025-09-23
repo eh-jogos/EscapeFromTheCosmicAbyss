@@ -1,19 +1,20 @@
-[gd_resource type="Theme" load_steps=1 format=2]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bwk0li6w0s0a3"]
 
-[ext_resource path="res://Fonts/Cutscenes/Astro/Kalam-Bold40.font" type="FontFile" id=1]
-[ext_resource path="res://Fonts/Cutscenes/Astro/Kalam-Regular40.font" type="FontFile" id=2]
+[ext_resource type="FontFile" uid="uid://w5g3lojyowqs" path="res://Fonts/Cutscenes/Astro/Kalam-Bold.ttf" id="1_ikvhk"]
+[ext_resource type="FontFile" uid="uid://dycsuyt4gmrom" path="res://Fonts/Cutscenes/Astro/Kalam-Regular.ttf" id="2_hyyle"]
 
 [resource]
-
-RichTextLabel/colors/default_color = Color( 1, 1, 1, 1 )
-RichTextLabel/colors/font_color_selected = Color( 1, 1, 1, 1 )
-RichTextLabel/colors/selection_color = Color( 0.1, 0.1, 1, 0.8 )
-RichTextLabel/constants/line_separation = 10
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_color_selected = Color(1, 1, 1, 1)
+RichTextLabel/colors/selection_color = Color(0.1, 0.1, 1, 0.8)
+RichTextLabel/constants/line_separation = -13
 RichTextLabel/constants/table_hseparation = 3
 RichTextLabel/constants/table_vseparation = 3
-RichTextLabel/fonts/bold_font = ExtResource( 1 )
+RichTextLabel/font_sizes/bold_font_size = 42
+RichTextLabel/font_sizes/normal_font_size = 40
+RichTextLabel/fonts/bold_font = ExtResource("1_ikvhk")
 RichTextLabel/fonts/bold_italics_font = null
 RichTextLabel/fonts/italics_font = null
 RichTextLabel/fonts/mono_font = null
-RichTextLabel/fonts/normal_font = ExtResource( 2 )
+RichTextLabel/fonts/normal_font = ExtResource("2_hyyle")
 RichTextLabel/styles/focus = null
