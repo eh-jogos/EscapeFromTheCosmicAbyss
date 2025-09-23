@@ -1,139 +1,182 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=3 uid="uid://dgngvk44sul5i"]
 
-[ext_resource path="res://Fonts/Cutscenes/Astro/Kalam-Regular40.font" type="FontFile" id=1]
-[ext_resource path="res://Fonts/OrbitronMedium45.font" type="FontFile" id=2]
-[ext_resource path="res://CommonScenes/CreditsScene/CreditsScene.gd" type="Script" id=3]
-[ext_resource path="res://Fonts/Orbitron-Black.ttf" type="FontFile" id=4]
-[ext_resource path="res://CommonScenes/eh_jogos/vertical_gradient_shader.tres" type="Material" id=5]
-[ext_resource path="res://CommonScenes/eh_jogos/logos/logo_white.png" type="Texture2D" id=6]
-[ext_resource path="res://CommonScenes/CreditsScene/CreditsPromptLegend.tscn" type="PackedScene" id=7]
+[ext_resource type="FontFile" uid="uid://dycsuyt4gmrom" path="res://Fonts/Cutscenes/Astro/Kalam-Regular.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://6cy3fc4ouoca" path="res://Fonts/Orbitron-Medium.ttf" id="2"]
+[ext_resource type="Script" uid="uid://di7ucficjfcp0" path="res://CommonScenes/CreditsScene/CreditsScene.gd" id="3"]
+[ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="4"]
+[ext_resource type="Material" uid="uid://bswemn0s34eu6" path="res://CommonScenes/eh_jogos/vertical_gradient_shader.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://5npaf4vinkox" path="res://CommonScenes/eh_jogos/logos/logo_white.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://crhchvn5nif0t" path="res://CommonScenes/CreditsScene/CreditsPromptLegend.tscn" id="7"]
 
-[sub_resource type="Theme" id=1]
-default_font = ExtResource( 2 )
+[sub_resource type="Theme" id="1"]
+default_font = ExtResource("2")
+default_font_size = 45
+SpecialMessage/base_type = &"Label"
+SpecialMessage/font_sizes/font_size = 40
+SpecialMessage/fonts/font = ExtResource("1")
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "credits"
 length = 61.0
 step = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("CreditsContainer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 5, 58, 61 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 5, 58, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ Vector2( 0, 52 ), Vector2( 0, 52 ), Vector2( 0, -5997 ), Vector2( 0, -5997 ) ]
+"values": [Vector2(0, 52), Vector2(0, 52), Vector2(0, -5997), Vector2(0, -5997)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("CreditsLegend/RootControl:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 5, 5.5, 57.5, 58, 61 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 5, 5.5, 57.5, 58, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("CreditsContainer:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0, 1, 60, 61 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 1, 60, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PackedFloat32Array( 5, 58, 61 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"values": [ {
-"args": [  ],
-"method": "_activate_navigation"
+"times": PackedFloat32Array(5, 58, 61),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"_activate_navigation"
 }, {
-"args": [  ],
-"method": "_fade_out_music"
+"args": [],
+"method": &"_fade_out_music"
 }, {
-"args": [  ],
-"method": "_exit_credits"
-} ]
+"args": [],
+"method": &"_exit_credits"
+}]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 resource_name = "editor"
 length = 0.001
 step = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath("CreditsContainer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector2( 0, 52 ) ]
+"values": [Vector2(0, 52)]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("CreditsLegend/RootControl:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("CreditsContainer:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="FontFile" id=4]
-size = 55
-use_filter = true
-font_data = ExtResource( 4 )
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bfs88"]
+_data = {
+&"credits": SubResource("2"),
+&"editor": SubResource("3")
+}
 
-[sub_resource type="FontFile" id=5]
-size = 40
-use_filter = true
-font_data = ExtResource( 4 )
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("4")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
 
-[sub_resource type="FontFile" id=6]
-size = 50
-use_filter = true
-font_data = ExtResource( 4 )
+[sub_resource type="FontFile" id="5"]
+fallbacks = Array[Font]([ExtResource("4")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
 
-[sub_resource type="FontFile" id=7]
-size = 80
-use_filter = true
-font_data = ExtResource( 4 )
+[sub_resource type="FontFile" id="6"]
+fallbacks = Array[Font]([ExtResource("4")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
+
+[sub_resource type="FontFile" id="7"]
+fallbacks = Array[Font]([ExtResource("4")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/45/0/ascent = 0.0
+cache/0/45/0/descent = 0.0
+cache/0/45/0/underline_position = 0.0
+cache/0/45/0/underline_thickness = 0.0
+cache/0/45/0/scale = 1.0
 
 [node name="CreditsScene" type="ColorRect"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 focus_neighbor_left = NodePath(".")
@@ -143,724 +186,506 @@ focus_neighbor_bottom = NodePath(".")
 focus_next = NodePath(".")
 focus_previous = NodePath(".")
 focus_mode = 2
-theme = SubResource( 1 )
-color = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme = SubResource("1")
+color = Color(0.0156863, 0.0784314, 0.0666667, 1)
+script = ExtResource("3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bfs88")
+}
 autoplay = "credits"
-anims/credits = SubResource( 2 )
-anims/editor = SubResource( 3 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 offset_top = 52.0
-offset_bottom = 6862.0
+offset_bottom = 6904.0
 theme_override_constants/separation = 300
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="MainCredits" type="VBoxContainer" parent="CreditsContainer"]
-offset_right = 1920.0
-offset_bottom = 980.0
+layout_mode = 2
 theme_override_constants/separation = 100
 
 [node name="Daniel" type="VBoxContainer" parent="CreditsContainer/MainCredits"]
-offset_left = 560.0
-offset_right = 1360.0
-offset_bottom = 400.0
-custom_minimum_size = Vector2( 800, 0 )
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="Name" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_right = 800.0
-offset_bottom = 56.0
-theme_override_fonts/font = SubResource( 4 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
 text = "Daniel Queiroz Porto"
 
 [node name="Name2" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_top = 60.0
-offset_right = 800.0
-offset_bottom = 100.0
-theme_override_fonts/font = SubResource( 5 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("5")
 text = "eh_jogos"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_top = 104.0
-offset_right = 800.0
-offset_bottom = 160.0
+layout_mode = 2
 text = "Programming"
-align = 2
+horizontal_alignment = 2
 
 [node name="Role2" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_top = 164.0
-offset_right = 800.0
-offset_bottom = 220.0
+layout_mode = 2
 text = "Game Art"
-align = 2
+horizontal_alignment = 2
 
 [node name="Role5" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_top = 224.0
-offset_right = 800.0
-offset_bottom = 280.0
+layout_mode = 2
 text = "Story"
-align = 2
+horizontal_alignment = 2
 
 [node name="Role3" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_top = 284.0
-offset_right = 800.0
-offset_bottom = 340.0
+layout_mode = 2
 text = "Design"
-align = 2
+horizontal_alignment = 2
 
 [node name="Role4" type="Label" parent="CreditsContainer/MainCredits/Daniel"]
-offset_top = 344.0
-offset_right = 800.0
-offset_bottom = 400.0
+layout_mode = 2
 text = "Animations"
-align = 2
+horizontal_alignment = 2
 
 [node name="Sam" type="VBoxContainer" parent="CreditsContainer/MainCredits"]
-offset_left = 660.0
-offset_top = 500.0
-offset_right = 1260.0
-offset_bottom = 720.0
-custom_minimum_size = Vector2( 600, 0 )
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="Name" type="Label" parent="CreditsContainer/MainCredits/Sam"]
-offset_right = 600.0
-offset_bottom = 56.0
-theme_override_fonts/font = SubResource( 4 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
 text = "Sam Oz"
 
 [node name="SamOzTwitter" type="LinkButton" parent="CreditsContainer/MainCredits/Sam"]
-offset_top = 60.0
-offset_right = 600.0
-offset_bottom = 100.0
+layout_mode = 2
 focus_mode = 1
-theme_override_fonts/font = SubResource( 5 )
-focus_mode = 1
+theme_override_fonts/font = SubResource("5")
 text = "@SamOz_official"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Sam"]
-offset_top = 104.0
-offset_right = 600.0
-offset_bottom = 160.0
+layout_mode = 2
 text = "Sound FXs"
-align = 2
+horizontal_alignment = 2
 
 [node name="Role2" type="Label" parent="CreditsContainer/MainCredits/Sam"]
-offset_top = 164.0
-offset_right = 600.0
-offset_bottom = 220.0
+layout_mode = 2
 text = "Music"
-align = 2
+horizontal_alignment = 2
 
 [node name="Madruga" type="VBoxContainer" parent="CreditsContainer/MainCredits"]
-offset_left = 660.0
-offset_top = 820.0
-offset_right = 1260.0
-offset_bottom = 980.0
-custom_minimum_size = Vector2( 600, 0 )
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
 size_flags_horizontal = 4
 
 [node name="Name" type="Label" parent="CreditsContainer/MainCredits/Madruga"]
-offset_right = 600.0
-offset_bottom = 56.0
-theme_override_fonts/font = SubResource( 4 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
 text = "Filipe Stonoga"
 
 [node name="MadrugaTwitter" type="LinkButton" parent="CreditsContainer/MainCredits/Madruga"]
-offset_top = 60.0
-offset_right = 600.0
-offset_bottom = 100.0
+layout_mode = 2
 focus_mode = 1
-theme_override_fonts/font = SubResource( 5 )
-focus_mode = 1
+theme_override_fonts/font = SubResource("5")
 text = "@artbycoltz"
 
 [node name="Role1" type="Label" parent="CreditsContainer/MainCredits/Madruga"]
-offset_top = 104.0
-offset_right = 600.0
-offset_bottom = 160.0
+layout_mode = 2
 text = "Cutscene Art"
-align = 2
+horizontal_alignment = 2
 
 [node name="Godot" type="VBoxContainer" parent="CreditsContainer"]
-offset_left = 420.0
-offset_top = 1280.0
-offset_right = 1500.0
-offset_bottom = 1691.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 15
 
 [node name="Name" type="Label" parent="CreditsContainer/Godot"]
-offset_right = 1080.0
-offset_bottom = 56.0
-custom_minimum_size = Vector2( 1080, 0 )
-theme_override_fonts/font = SubResource( 4 )
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
 text = "Made With Godot thanks to:"
 
 [node name="GodotTeamLink" type="LinkButton" parent="CreditsContainer/Godot"]
-offset_left = 620.0
-offset_top = 71.0
-offset_right = 1080.0
-offset_bottom = 127.0
-focus_mode = 1
+layout_mode = 2
 size_flags_horizontal = 8
-theme_override_constants/underline_spacing = 8
 focus_mode = 1
+theme_override_constants/underline_spacing = 8
 text = "Godot Engine team"
 
 [node name="GDQuest" type="LinkButton" parent="CreditsContainer/Godot"]
-offset_left = 615.0
-offset_top = 142.0
-offset_right = 1080.0
-offset_bottom = 198.0
-focus_mode = 1
+layout_mode = 2
 size_flags_horizontal = 8
-theme_override_constants/underline_spacing = 8
 focus_mode = 1
+theme_override_constants/underline_spacing = 8
 text = "GDQuest and team"
 
 [node name="GodotSteam" type="LinkButton" parent="CreditsContainer/Godot"]
-offset_left = 341.0
-offset_top = 213.0
-offset_right = 1080.0
-offset_bottom = 269.0
-focus_mode = 1
+layout_mode = 2
 size_flags_horizontal = 8
-theme_override_constants/underline_spacing = 8
 focus_mode = 1
+theme_override_constants/underline_spacing = 8
 text = "Godot Steam and contributors"
 
 [node name="GodorReddit" type="LinkButton" parent="CreditsContainer/Godot"]
-offset_left = 606.0
-offset_top = 284.0
-offset_right = 1080.0
-offset_bottom = 340.0
-focus_mode = 1
+layout_mode = 2
 size_flags_horizontal = 8
-theme_override_constants/underline_spacing = 8
 focus_mode = 1
+theme_override_constants/underline_spacing = 8
 text = "r/godot Community"
 
 [node name="Role1" type="Label" parent="CreditsContainer/Godot"]
-offset_top = 355.0
-offset_right = 1080.0
-offset_bottom = 411.0
+layout_mode = 2
 text = "And the Godot Community in  General!"
-align = 2
+horizontal_alignment = 2
 
 [node name="SpecialThanks" type="VBoxContainer" parent="CreditsContainer"]
-offset_left = 371.0
-offset_top = 1991.0
-offset_right = 1548.0
-offset_bottom = 6057.0
-custom_minimum_size = Vector2( 500, 0 )
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 0
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks"]
-offset_right = 1177.0
-offset_bottom = 56.0
-custom_minimum_size = Vector2( 1080, 0 )
-theme_override_fonts/font = SubResource( 4 )
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 2
+theme_override_fonts/font = SubResource("4")
 text = "Special Thanks to..."
 
 [node name="FamilyGroup" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
-offset_top = 56.0
-offset_right = 1177.0
-offset_bottom = 489.0
+layout_mode = 2
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_bottom = 150
 
 [node name="Family" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/FamilyGroup"]
-offset_top = 40.0
-offset_right = 1177.0
-offset_bottom = 283.0
+layout_mode = 2
 theme_override_constants/separation = 15
 
 [node name="Title2" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/FamilyGroup/Family"]
-offset_right = 1177.0
-offset_bottom = 101.0
+layout_mode = 2
 
 [node name="ChatMeninao" type="Label" parent="CreditsContainer/SpecialThanks/FamilyGroup/Family/Title2"]
-offset_right = 1177.0
-offset_bottom = 51.0
-theme_override_fonts/font = SubResource( 6 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
 text = "My Family"
-align = 1
+horizontal_alignment = 1
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/FamilyGroup/Family/Title2"]
-offset_top = 55.0
-offset_right = 1177.0
-offset_bottom = 101.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "Thank you all for your constant love and support"
-align = 1
+horizontal_alignment = 1
 
 [node name="Parens" type="Label" parent="CreditsContainer/SpecialThanks/FamilyGroup/Family"]
-offset_top = 116.0
-offset_right = 1177.0
-offset_bottom = 172.0
+layout_mode = 2
 text = "Mom and Dad"
-align = 2
+horizontal_alignment = 2
 
 [node name="Sisters" type="Label" parent="CreditsContainer/SpecialThanks/FamilyGroup/Family"]
-offset_top = 187.0
-offset_right = 1177.0
-offset_bottom = 243.0
+layout_mode = 2
 text = "My Sisters and families"
-align = 2
+horizontal_alignment = 2
 
 [node name="MeninGroup" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
-offset_top = 489.0
-offset_right = 1177.0
-offset_bottom = 1529.0
+layout_mode = 2
 theme_override_constants/margin_bottom = 150
 
 [node name="Meninão" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup"]
-offset_right = 1177.0
-offset_bottom = 890.0
+layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="Title" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão"]
-offset_right = 1177.0
-offset_bottom = 101.0
+layout_mode = 2
 
 [node name="ChatMeninao" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Title"]
-offset_right = 1177.0
-offset_bottom = 51.0
-theme_override_fonts/font = SubResource( 6 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
 text = "Everyone at \"Chat  do  Meniñ\":"
-align = 1
+horizontal_alignment = 1
 
 [node name="ThankYou3" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Title"]
-offset_top = 55.0
-offset_right = 1177.0
-offset_bottom = 101.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "In general, for being good encouraging friends but specifically:"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="Mutt" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão"]
-offset_top = 131.0
-offset_right = 1177.0
-offset_bottom = 237.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Mutt"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Bruno \"Mutt\" Arruda"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Mutt"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 106.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "Thanks for testing the game, helping out with controllers"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Cassio" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão"]
-offset_top = 267.0
-offset_right = 1177.0
-offset_bottom = 373.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Cassio"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Cassio Prates de Lima"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Cassio"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 106.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "Thanks for helping with the UI revamp"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Joao" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão"]
-offset_top = 403.0
-offset_right = 1177.0
-offset_bottom = 509.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Joao"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "João Brizzi"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Joao"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 106.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "For making a much better \"eh_jogos\" logo than I could ever"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Rafa" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão"]
-offset_top = 539.0
-offset_right = 1177.0
-offset_bottom = 694.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Rafa"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Rafael Arrivabene"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Rafa"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 155.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "You were my first customer when I wasn't 
 even seriously selling it! It meant a lot!"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Outros" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão"]
-offset_top = 724.0
-offset_right = 1177.0
-offset_bottom = 890.0
+layout_mode = 2
 
 [node name="Name2" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Outros"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Rhenan Dinardi"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou2" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Outros"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 106.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "(No, I'm not using your nickname here, no way)"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/MeninGroup/Meninão/Outros"]
-offset_top = 110.0
-offset_right = 1177.0
-offset_bottom = 166.0
+layout_mode = 2
 text = "Nicholas Bruggner Grassi"
-align = 2
+horizontal_alignment = 2
 
 [node name="ChucrutsGroup" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
-offset_top = 1529.0
-offset_right = 1177.0
-offset_bottom = 2431.0
+layout_mode = 2
 theme_override_constants/margin_bottom = 150
 
 [node name="Chucrutz" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ChucrutsGroup"]
-offset_right = 1177.0
-offset_bottom = 752.0
+layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="Title" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz"]
-offset_right = 1177.0
-offset_bottom = 101.0
+layout_mode = 2
 
 [node name="ChucrutzLabel" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Title"]
-offset_right = 1177.0
-offset_bottom = 51.0
-theme_override_fonts/font = SubResource( 6 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
 text = "Everyone at \"Clube da Baixa Autoestima\":"
-align = 1
+horizontal_alignment = 1
 
 [node name="ThankYou3" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Title"]
-offset_top = 55.0
-offset_right = 1177.0
-offset_bottom = 101.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "Again, for being good encouraging friends but specifically:"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="Bruno" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz"]
-offset_top = 131.0
-offset_right = 1177.0
-offset_bottom = 237.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Bruno"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Bruno Feltran"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Bruno"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 106.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "Thanks for some early testing and suggestions"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Raul" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz"]
-offset_top = 267.0
-offset_right = 1177.0
-offset_bottom = 422.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Raul"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Raul Alvez"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Raul"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 155.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "for encoraging me to finish this so we can 
 make the next game together"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Mari" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz"]
-offset_top = 452.0
-offset_right = 1177.0
-offset_bottom = 607.0
+layout_mode = 2
 
 [node name="Name" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Mari"]
-offset_right = 1177.0
-offset_bottom = 56.0
+layout_mode = 2
 text = "Mariana Marangoni"
-align = 2
+horizontal_alignment = 2
 
 [node name="ThankYou" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Mari"]
-offset_top = 60.0
-offset_right = 1177.0
-offset_bottom = 155.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = " for trading \"figurinhas\" and rants in our 
 designer2programmer journeys"
-align = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 2
 
 [node name="Outros" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz"]
-offset_top = 637.0
-offset_right = 1177.0
-offset_bottom = 752.0
+layout_mode = 2
 
 [node name="Name2" type="Label" parent="CreditsContainer/SpecialThanks/ChucrutsGroup/Chucrutz/Outros"]
-offset_right = 1177.0
-offset_bottom = 115.0
+layout_mode = 2
 text = "But really, everyone for 
 your encouragement and support"
-align = 2
+horizontal_alignment = 2
 
 [node name="LittleLeoGroup" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
-offset_top = 2431.0
-offset_right = 1177.0
-offset_bottom = 2884.0
+layout_mode = 2
 theme_override_constants/margin_bottom = 150
 
 [node name="Leo" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/LittleLeoGroup"]
-offset_right = 1177.0
-offset_bottom = 303.0
+layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="ExJavaryLabel" type="Label" parent="CreditsContainer/SpecialThanks/LittleLeoGroup/Leo"]
-offset_right = 1177.0
-offset_bottom = 51.0
-theme_override_fonts/font = SubResource( 6 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
 text = "Léo \"LittleLeo\" Castanho"
-align = 1
+horizontal_alignment = 1
 
 [node name="ThankYou3" type="Label" parent="CreditsContainer/SpecialThanks/LittleLeoGroup/Leo"]
-offset_top = 61.0
-offset_right = 1177.0
-offset_bottom = 303.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "It's always fun to talk with you, specially about games 
 and making games since we weren't programmers by graduation 
 and are learning as we go, with similar experiencies and difficulties! 
 Also I'm really looking forward to your game! Now, if only 
 you'd go back to using godot..."
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="ExJavaryGroup2" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
-offset_top = 2884.0
-offset_right = 1177.0
-offset_bottom = 3803.0
+layout_mode = 2
 theme_override_constants/margin_bottom = 150
 
 [node name="ExJavary" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2"]
-offset_right = 1177.0
-offset_bottom = 769.0
+layout_mode = 2
 theme_override_constants/separation = 30
 
 [node name="Title" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_right = 1177.0
-offset_bottom = 253.0
+layout_mode = 2
 
 [node name="ExJavaryLabel" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary/Title"]
-offset_right = 1177.0
-offset_bottom = 105.0
-theme_override_fonts/font = SubResource( 6 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
 text = "My current and ex coworkers 
 (and aggregates) at my day job!"
-align = 1
+horizontal_alignment = 1
 
 [node name="ThankYou3" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary/Title"]
-offset_top = 109.0
-offset_right = 1177.0
-offset_bottom = 253.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "I am learning and have learned a lot about 
 gamedev in general and godot in specific 
 with you all! Special Mentions:"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="Name1" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_top = 283.0
-offset_right = 1177.0
-offset_bottom = 339.0
+layout_mode = 2
 text = "Raniery Seles Nardy"
-align = 2
+horizontal_alignment = 2
 
 [node name="Name2" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_top = 369.0
-offset_right = 1177.0
-offset_bottom = 425.0
+layout_mode = 2
 text = "Cláudio \"Fitinho\" Domene"
-align = 2
+horizontal_alignment = 2
 
 [node name="Name3" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_top = 455.0
-offset_right = 1177.0
-offset_bottom = 511.0
+layout_mode = 2
 text = "Thiago Amendola"
-align = 2
+horizontal_alignment = 2
 
 [node name="Name4" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_top = 541.0
-offset_right = 1177.0
-offset_bottom = 597.0
+layout_mode = 2
 text = "Pedro Ciambra"
-align = 2
+horizontal_alignment = 2
 
 [node name="Name5" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_top = 627.0
-offset_right = 1177.0
-offset_bottom = 683.0
+layout_mode = 2
 text = "Jairo Honorio"
-align = 2
+horizontal_alignment = 2
 
 [node name="Name6" type="Label" parent="CreditsContainer/SpecialThanks/ExJavaryGroup2/ExJavary"]
-offset_top = 713.0
-offset_right = 1177.0
-offset_bottom = 769.0
+layout_mode = 2
 text = "George Marques"
-align = 2
+horizontal_alignment = 2
 
 [node name="Prompts" type="MarginContainer" parent="CreditsContainer/SpecialThanks"]
-offset_top = 3803.0
-offset_right = 1177.0
-offset_bottom = 4066.0
+layout_mode = 2
 theme_override_constants/margin_bottom = 100
 
 [node name="Leo" type="VBoxContainer" parent="CreditsContainer/SpecialThanks/Prompts"]
-offset_right = 1177.0
-offset_bottom = 163.0
+layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="ExJavaryLabel" type="Label" parent="CreditsContainer/SpecialThanks/Prompts/Leo"]
-offset_right = 1177.0
-offset_bottom = 51.0
-theme_override_fonts/font = SubResource( 6 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("6")
 text = "Nicolae Berbece "
-align = 1
+horizontal_alignment = 1
 
 [node name="ThankYou3" type="Label" parent="CreditsContainer/SpecialThanks/Prompts/Leo"]
-offset_top = 61.0
-offset_right = 1177.0
-offset_bottom = 107.0
-theme_override_fonts/font = ExtResource( 1 )
+layout_mode = 2
+theme_type_variation = &"SpecialMessage"
 text = "from Those Awesome Guys for the CC0 button prompts pack"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="OpenGameArt" type="LinkButton" parent="CreditsContainer/SpecialThanks/Prompts/Leo"]
-offset_left = 331.0
-offset_top = 117.0
-offset_right = 845.0
-offset_bottom = 163.0
-focus_mode = 1
+layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource( 1 )
 focus_mode = 1
+theme_override_fonts/font = ExtResource("1")
 text = "available at OpenGameArt.com"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CreditsContainer"]
-offset_top = 6357.0
-offset_right = 1920.0
-offset_bottom = 6810.0
+layout_mode = 2
 theme_override_constants/separation = 100
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ThankYouForPlaying" type="Label" parent="CreditsContainer/VBoxContainer"]
-offset_right = 1920.0
-offset_bottom = 80.0
-theme_override_fonts/font = SubResource( 7 )
+layout_mode = 2
+theme_override_fonts/font = SubResource("7")
 text = "...and YOU for playing!"
-align = 1
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CreditsContainer/VBoxContainer"]
-material = ExtResource( 5 )
-offset_top = 180.0
-offset_right = 1920.0
-offset_bottom = 453.0
-texture = ExtResource( 6 )
-stretch_mode = 6
+material = ExtResource("5")
+layout_mode = 2
+texture = ExtResource("6")
+stretch_mode = 5
 
-[node name="CreditsLegend" parent="." instance=ExtResource( 7 )]
+[node name="CreditsLegend" parent="." instance=ExtResource("7")]
+
 [connection signal="pressed" from="CreditsContainer/MainCredits/Sam/SamOzTwitter" to="." method="_on_SamOzTwitter_pressed"]
 [connection signal="pressed" from="CreditsContainer/MainCredits/Madruga/MadrugaTwitter" to="." method="_on_MadrugaTwitter_pressed"]
 [connection signal="pressed" from="CreditsContainer/Godot/GodotTeamLink" to="." method="_on_GodotTeamLink_pressed"]

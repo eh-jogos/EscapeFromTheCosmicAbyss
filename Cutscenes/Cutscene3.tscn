@@ -1,7 +1,6 @@
-[gd_scene load_steps=121 format=3 uid="uid://cu28yjxiyb63d"]
+[gd_scene load_steps=120 format=3 uid="uid://cu28yjxiyb63d"]
 
 [ext_resource type="Script" uid="uid://cmud3amsy5u0b" path="res://Cutscenes/Cutscene3.gd" id="1"]
-[ext_resource type="Theme" uid="uid://bkd6gpnoy2ca0" path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" id="2"]
 [ext_resource type="Texture2D" uid="uid://b0c64qmkgajsy" path="res://Cutscenes/pngs/Cutscene3/page1/frame1/img.png" id="3"]
 [ext_resource type="Theme" uid="uid://bwk0li6w0s0a3" path="res://Cutscenes/themes/astro.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://cixx4s8i3jem7" path="res://Cutscenes/pngs/Cutscene3/page1/frame1/ballons/balloon1_blank.png" id="5"]
@@ -2985,7 +2984,6 @@ process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource("2")
 color = Color(0, 0, 0, 1)
 
 [node name="Scenes" type="Control" parent="."]
@@ -2995,6 +2993,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Scene1" type="Control" parent="Scenes"]
 visible = false

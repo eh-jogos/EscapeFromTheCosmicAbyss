@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxjd7yivg27c"]
 
-[ext_resource type="PackedScene" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b5p7jvfyoos25" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="2"]
 [ext_resource type="Animation" path="res://CommonScenes/PromptLegends/Animations/anim_base_legend_base.tres" id="2_xuul8"]
 [ext_resource type="PackedScene" uid="uid://bhbrrdg0pyabl" path="res://CommonScenes/PromptLegends/BaseLegend.tscn" id="3"]
 [ext_resource type="Animation" path="res://CommonScenes/PromptLegends/Animations/anim_base_legend_editor.tres" id="3_kllqn"]
