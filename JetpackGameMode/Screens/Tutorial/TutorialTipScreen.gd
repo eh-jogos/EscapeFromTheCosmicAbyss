@@ -12,14 +12,16 @@ var countdown
 
 var is_showing_tip: = false
 
+@onready var _level_num = get_node(level_num)
+@onready var _level_title = get_node(level_title)
+@onready var _tip_selector = get_node(tip_selector)
+
+# TODO Fix Node errors
 func _ready():
 	game = self.get_parent().get_parent()
-	level_num = self.get_node(level_num)
-	level_title = self.get_node(level_title)
-	tip_selector = self.get_node(tip_selector)
 	
-	tip_selector.assigned_animation = "TipScreen_0"
-	tip_selector.seek(0, true)
+	_tip_selector.assigned_animation = "TipScreen_0"
+	_tip_selector.seek(0, true)
 	self.set_process_input(false)
 	
 
@@ -28,8 +30,8 @@ func play(num, title):
 	self.show()
 	#SoundManager.stop_bgm()
 	game.initialize_game_stats()
-	level_num.set_text(str(num))
-	level_title.set_text(title)
+	_level_num.set_text(str(num))
+	_level_title.set_text(title)
 	load_next_tip()
 
 func show_tip():
@@ -58,7 +60,7 @@ func beat_countdown():
 
 func load_next_tip():
 	is_showing_tip = true
-	tip_selector.play("TipScreen_%s"%[next_countdown])
+	_tip_selector.play("TipScreen_%s"%[next_countdown])
 	next_countdown += 1
 	
 	if next_countdown >= tips_countdown.size():

@@ -34,7 +34,7 @@ var shield
 # Player FLAGS?
 var overheated = false
 var undashable = false
-var dashing = false
+var is_dashing = false
 var is_dead = false
 var falling = true
 var shooting = false
@@ -69,16 +69,16 @@ func _ready():
 	# Inside Nodes
 	overheat_bar = get_node("OverheatBar")
 	overheat_bar_animator = get_node("OverheatBar/AnimationPlayer")
-	jet_particles = self.get_node("Skin/JetParticles")
+	jet_particles = get_node("Skin/JetParticles")
 	jet_sfx = jet_particles.get_node("SamplePlayer")
 	dash_particles = get_node("Skin/FinalSkin/DashParticles")
 	dash_particles.emitting = false
 	charge_particles = get_node("Skin/FinalSkin/ChargeParticles")
 	charge_particles.emitting = false
-	body_animator = self.get_node("BodyAnimator")
-	arms_animator = self.get_node("ArmsAnimator")
-	bullet_spawn = self.get_node("Skin/BulletSpawn")
-	shield = self.get_node("Shield")
+	body_animator = get_node("BodyAnimator")
+	arms_animator = get_node("ArmsAnimator")
+	bullet_spawn = get_node("Skin/BulletSpawn")
+	shield = get_node("Shield")
 	
 	falling = true
 	body_animator.play("falling")
@@ -105,14 +105,14 @@ func _physics_process(delta):
 	SoundManager.reset_ui_bus_effects()
 	
 	var heat = overheat_bar.get_value()
-	if not dashing:
+	if not is_dashing:
 		heat = max(heat-cooldown, 0)
 	
 	handle_overheat_bar_color(heat)
 	
 	speed.y += delta * gravity_force
 	
-	if Input.is_action_pressed("boost") and not overheated and not dashing:
+	if Input.is_action_pressed("boost") and not overheated and not is_dashing:
 		heat = handle_boost(delta, heat)
 	else:
 		jet_particles.set_emitting(false)
@@ -125,18 +125,18 @@ func _physics_process(delta):
 		if can_dash(heat):
 	#		print("DASH!")
 			heat = handle_dash(delta, dash_force, heat)
-		elif not overheated and not dashing:
+		elif not overheated and not is_dashing:
 			heat = handle_boost(delta, heat)
 	
-	if dashing:
+	if is_dashing:
 		if speed.x > speed_x*unit.x:
 			speed.x -= (dash_force/20)*delta
 #			print(speed.x)
 			speed.y = 0
 		else:
-			dashing = false
-			dash_particles.emitting = dashing
-			emit_signal("dashing", dashing)
+			is_dashing = false
+			dash_particles.emitting = is_dashing
+			emit_signal("dashing", is_dashing)
 			speed.x += speed_x*unit.x*delta
 			speed.x = clamp(speed.x, 0, speed_x*unit.x)
 	else:
@@ -160,7 +160,7 @@ func _physics_process(delta):
 	
 	var motion = speed * delta
 	#print("Motion: %s"%[motion])
-	var collision = self.move_and_collide(motion)
+	var collision = move_and_collide(motion)
 	
 	if collision != null:
 		
@@ -174,8 +174,8 @@ func _physics_process(delta):
 			var normal = collision.normal
 			var final_motion = motion.slide(normal)
 			
-			if collider.has_method("die"):
-				collider.die()
+			if collider.has_method("obstacle_killed"):
+				collider.obstacle_killed()
 			else:
 				if speed.y > 0:
 					speed.y *= -5
@@ -185,9 +185,8 @@ func _physics_process(delta):
 					speed.y *= -2
 					#print("Rising | speed.y: %s"%[speed.y])
 			
-			self.set_velocity(final_motion)
-			self.move_and_slide()
-			self.velocity
+			set_velocity(final_motion)
+			move_and_slide()
 			
 		elif collider.is_in_group("enemy") and not is_dead and not is_invincible:
 			#print("Shield Energy at death: %s"%[shield_energy])
@@ -195,18 +194,18 @@ func _physics_process(delta):
 			game.set_game_state("GameOver")
 			set_physics_process(false)
 			set_process_input(false)
-			self.hide()
+			hide()
 			
-			var offset = self.global_position
+			var offset = global_position
 			collider.kill_player(offset)
 #			queue_free()
 			
 		else: 
 			var normal = collision.normal
 			motion = normal.slide(motion)
-			self.set_velocity(motion)
-			self.move_and_slide()
-			motion = self.velocity
+			set_velocity(motion)
+			move_and_slide()
+			motion = velocity
 
 
 func handle_overheat_bar_color(heat): 
@@ -244,21 +243,21 @@ func handle_boost(delta, heat):
 	if heat >= 100:
 		heat = 100
 		overheated = true
-		dashing = false
-		dash_particles.emitting = dashing
+		is_dashing = false
+		dash_particles.emitting = is_dashing
 	
 	return heat
 
 
 func handle_dash(delta, dash_force, heat):
-	dashing = true
-	emit_signal("dashing", dashing)
+	is_dashing = true
+	emit_signal("dashing", is_dashing)
 	
 	var dash_sfx = $SfxLibrary/Dash
 	dash_sfx.play()
 	
 	speed.x = (10*unit.x)+(dash_force*delta)
-	#print("Node: %s | Speed.x: %s"%[self.get_name(), speed.x])
+	#print("Node: %s | Speed.x: %s"%[get_name(), speed.x])
 	speed.y = 0
 	
 	if not is_invincible:
@@ -267,9 +266,9 @@ func handle_dash(delta, dash_force, heat):
 	if heat >= 100:
 		heat = 100
 		overheated = true
-		dashing = false
+		is_dashing = false
 	
-	dash_particles.emitting = dashing
+	dash_particles.emitting = is_dashing
 	
 	return heat
 
@@ -322,7 +321,7 @@ func reset_y():
 
 
 func can_dash(heat):
-	return (not dashing or is_invincible) \
+	return (not is_dashing or is_invincible) \
 			and not overheated and heat <= OVERHEAT_THRESHOLD-dash_cost 
 
 
