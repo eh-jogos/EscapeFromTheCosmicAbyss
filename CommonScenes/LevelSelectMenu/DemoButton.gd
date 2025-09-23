@@ -22,6 +22,7 @@ extends BasicGameButton
 ### Built in Engine Methods -----------------------------------------------------------------------
 
 func _ready():
+	super()
 	if OS.has_feature("demo") or get_tree().get_current_scene() == owner:
 		show()
 		disabled = false

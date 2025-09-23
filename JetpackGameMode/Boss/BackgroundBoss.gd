@@ -23,14 +23,12 @@ func _ready():
 	up_down_count = randi()%2
 
 
-# warning-ignore:shadowed_variable
-# warning-ignore:shadowed_variable
-# warning-ignore:shadowed_variable
-func set_boss_data(laser_targets, animation_targets, animations, danger):
-	self.laser_targets = laser_targets
-	self.animation_targets = animation_targets
-	self.animations = animations
-	self.danger_durations = danger
+
+func set_boss_data(p_laser_targets, p_animation_targets, p_animations, p_danger):
+	laser_targets = p_laser_targets
+	animation_targets = p_animation_targets
+	animations = p_animations
+	danger_durations = p_danger
 	
 	set_current_laser()
 	set_current_animation_variables()

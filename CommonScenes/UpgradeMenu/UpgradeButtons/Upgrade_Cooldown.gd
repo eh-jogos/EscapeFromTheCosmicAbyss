@@ -164,4 +164,3 @@ func _on_focus_exit():
 	SoundManager.play_sfx("Select")
 	self.get_node("AnimationPlayer").play("base")
 	self.get_node("ArrowsIndicator").stop_highlight()
-

@@ -89,4 +89,3 @@ func go_to_crush():
 func _on_VisibilityNotifier2D_exit_screen():
 	#print("Kill")
 	tentacle_pipe.queue_free()
-

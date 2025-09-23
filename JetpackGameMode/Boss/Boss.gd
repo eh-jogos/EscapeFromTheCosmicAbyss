@@ -8,6 +8,7 @@ var collision_timer
 
 
 func _ready():
+	super()
 	raycasts = get_node("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts").get_children()
 	game = get_tree().get_root().get_node("JetpackGame")
 	collision_timer = get_node("CollisionTimer")

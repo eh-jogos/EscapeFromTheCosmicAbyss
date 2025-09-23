@@ -67,5 +67,3 @@ func start_fade_out_sfx():
 	tween.interpolate_property(loop, "volume_db", loop.volume_db, -40.0, 0.5, 
 			Tween.TRANS_LINEAR, Tween.EASE_IN)
 	tween.start()
-
-

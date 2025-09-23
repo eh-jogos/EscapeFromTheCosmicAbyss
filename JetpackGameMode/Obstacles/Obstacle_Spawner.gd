@@ -104,4 +104,3 @@ func _on_HalfBeat_area_exit( area ):
 func connect_tutorial_signal(object):
 	if not self.is_connected("update_visualization", Callable(object, "beat_countdown")):
 		self.connect("update_visualization", Callable(object, "beat_countdown"))
-

@@ -2,6 +2,7 @@ extends "res://JetpackGameMode/Boss/BackgroundBoss.gd"
 
 
 func _ready():
+	super()
 	add_to_group("interactive_color")
 	colors_changed()
 

@@ -30,4 +30,3 @@ func _on_kill_player(offset_x, flip):
 	
 	tentacle_position.set_progress_ratio(0)
 	animator.play("inactive")
-

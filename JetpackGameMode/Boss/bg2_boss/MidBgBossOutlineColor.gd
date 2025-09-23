@@ -8,4 +8,3 @@ func _ready():
 
 func colors_changed():
 	self_modulate = Global.savedata.colors.mid_bg_boss.outline
-

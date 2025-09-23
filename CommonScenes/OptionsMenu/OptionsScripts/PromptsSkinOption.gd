@@ -25,6 +25,7 @@ var _chosen_skin: int = -1
 ### Built in Engine Methods ---------------
 
 func _ready():
+	super()
 	_chosen_skin = JoypadSupport.get_chosen_skin()
 	_current_key = _translate_chosen_skin()
 	text = text_string%[_current_key]
@@ -84,5 +85,3 @@ func _on_arrows_highlight_left_pressed() -> void:
 	_set_option(-1)
 
 ### ---------------------------------------
-
-

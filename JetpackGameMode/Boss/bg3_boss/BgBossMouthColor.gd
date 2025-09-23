@@ -8,4 +8,3 @@ func _ready():
 
 func colors_changed():
 	self_modulate = Global.savedata.colors.bg_boss.mouth
-

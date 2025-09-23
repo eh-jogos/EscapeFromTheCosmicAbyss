@@ -90,5 +90,3 @@ func _on_JoypadSupport_joypad_disconnected() -> void:
 	_update_joypad_name()
 
 ### ---------------------------------------
-
-

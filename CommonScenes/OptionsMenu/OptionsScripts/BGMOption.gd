@@ -84,4 +84,3 @@ func _on_ArrowsIndicator_left_pressed():
 
 func _on_ArrowsIndicator_right_pressed():
 	change_bgm_track(true)
-

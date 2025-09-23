@@ -19,6 +19,7 @@ var _is_on: = true
 ### Built in Engine Methods ---------------
 
 func _ready():
+	super()
 	_is_on = JoypadSupport.get_autodetect()
 	_change_state_to(_is_on)
 
@@ -43,5 +44,3 @@ func _change_state_to(is_on) -> void:
 	else:
 		animator.play("off")
 ### ---------------------------------------
-
-

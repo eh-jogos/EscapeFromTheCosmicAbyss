@@ -95,8 +95,8 @@ func _ready():
 		time_results.hide()
 		laps_results.show()
 		
-		replay_btn.set_focus_neighbor(MARGIN_LEFT, quit_btn.get_path())
-		quit_btn.set_focus_neighbor(MARGIN_RIGHT, replay_btn.get_path())
+		replay_btn.set_focus_neighbor(SIDE_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbor(SIDE_RIGHT, replay_btn.get_path())
 	elif game_mode == "speedrun":
 		replay_btn.show()
 		upgrade_btn.hide()

@@ -57,5 +57,3 @@ func _update_stick_textures() -> void:
 				)
 		texture_rect.texture = stick_texture
 ### ---------------------------------------
-
-

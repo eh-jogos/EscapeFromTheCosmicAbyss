@@ -19,6 +19,7 @@ var _is_swapped: = false
 ### Built in Engine Methods ---------------
 
 func _ready():
+	super()
 	_is_swapped = JoypadSupport.was_ui_accept_manually_swapped()
 	_handle_text()
 
@@ -43,5 +44,3 @@ func _handle_text():
 		text = text_string%["Off"]
 
 ### ---------------------------------------
-
-

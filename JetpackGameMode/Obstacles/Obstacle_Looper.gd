@@ -21,4 +21,3 @@ func _process(_delta):
 		var new_pos = Vector2(self.get_position().x + (2*(790+790+790)), self.get_position().y)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 		self.set_position(new_pos)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 	pass
-

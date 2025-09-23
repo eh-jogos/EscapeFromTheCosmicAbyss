@@ -16,17 +16,17 @@ class_name BaseArrowsButton
 
 ### Built in Engine Methods ---------------
 func _ready() -> void:
-	if not self.is_connected("mouse_entered", Callable(self, "_on_mouse_enter")):
-		self.connect("mouse_entered", Callable(self, "_on_mouse_enter"))
+	if not is_connected("mouse_entered", Callable(self, "_on_mouse_enter")):
+		connect("mouse_entered", Callable(self, "_on_mouse_enter"))
 	
-	if not self.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
-		self.connect("focus_entered", Callable(self, "_on_focus_enter"))
+	if not is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not self.is_connected("focus_exited", Callable(self, "_on_focus_exit")):
-		self.connect("focus_exited", Callable(self, "_on_focus_exit"))
+	if not is_connected("focus_exited", Callable(self, "_on_focus_exit")):
+		connect("focus_exited", Callable(self, "_on_focus_exit"))
 	
-	if not self.is_connected("gui_input", Callable(self, "_on_gui_input")):
-		self.connect("gui_input", Callable(self, "_on_gui_input"))
+	if not is_connected("gui_input", Callable(self, "_on_gui_input")):
+		connect("gui_input", Callable(self, "_on_gui_input"))
 	
 	if not arrows_highlight.is_connected("right_pressed", Callable(self, "_on_arrows_highlight_right_pressed")):
 		arrows_highlight.connect("right_pressed", Callable(self, "_on_arrows_highlight_right_pressed"))
@@ -52,7 +52,7 @@ func _play_change_sfx() -> void:
 
 
 func _on_mouse_enter() -> void:
-	self.grab_focus()
+	grab_focus()
 
 
 func _on_focus_enter() -> void:
@@ -81,5 +81,3 @@ func _on_arrows_highlight_left_pressed() -> void:
 	change_option()
 
 ### ---------------------------------------
-
-

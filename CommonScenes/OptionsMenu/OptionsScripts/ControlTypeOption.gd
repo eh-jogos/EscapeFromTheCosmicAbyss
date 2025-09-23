@@ -16,6 +16,7 @@ extends BaseArrowsButton
 ### Built in Engine Methods ---------------
 
 func _ready():
+	super()
 	JoypadSupport.connect("joypad_connected", Callable(self, "_on_JoypadSupport_joypad_connected"))
 	JoypadSupport.connect("joypad_disconnected", Callable(self, "_on_JoypadSupport_joypad_disconnected"))
 	

@@ -12,6 +12,7 @@ extends BaseLegend
 
 ### Built in Engine Methods ---------------
 func _ready():
+	super()
 	ScreenManager.connect("scene_above_cleared", Callable(self, "_on_ScreenManager_scene_above_cleared"))
 	pass
 

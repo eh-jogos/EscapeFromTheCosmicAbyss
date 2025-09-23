@@ -48,5 +48,3 @@ func _on_JoypadSupport_joypad_disconnected() -> void:
 	deactivate_parent_button()
 
 ### ---------------------------------------
-
-

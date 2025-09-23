@@ -19,4 +19,3 @@ func base_slot():
 
 func confirm_upgrade():
 	animator.play("confirmed")
-
