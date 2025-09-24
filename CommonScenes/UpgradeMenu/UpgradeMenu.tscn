@@ -1,1234 +1,562 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=29 format=3 uid="uid://bpk3rkw4elod2"]
 
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeMenu.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" type="Texture2D" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium67.font" type="FontFile" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack72.font" type="FontFile" id=4]
-[ext_resource path="res://Fonts/OrbitronBlack67.font" type="FontFile" id=5]
-[ext_resource path="res://CommonScenes/Buttons/PureText_Upgrade.tres" type="Theme" id=6]
-[ext_resource path="res://Fonts/OrbitronBold40.font" type="FontFile" id=7]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Cooldown.gd" type="Script" id=8]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeSlot.tscn" type="PackedScene" id=9]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Minus.tscn" type="PackedScene" id=10]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Plus.tscn" type="PackedScene" id=11]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_cooldown.png" type="Texture2D" id=12]
-[ext_resource path="res://CommonScenes/Buttons/ArrowsIndicator.tscn" type="PackedScene" id=13]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_StartSpeed.gd" type="Script" id=14]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_booster.png" type="Texture2D" id=15]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_MaxSpeed.gd" type="Script" id=16]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Laser.gd" type="Script" id=17]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_laser.png" type="Texture2D" id=18]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Ammo.gd" type="Script" id=19]
-[ext_resource path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Shield.gd" type="Script" id=20]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" type="Texture2D" id=21]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=22]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=23]
-[ext_resource path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" type="Animation" id=24]
-[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=25]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=26]
-[ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=27]
-[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=28]
+[ext_resource type="Script" uid="uid://bj4twfquia84o" path="res://CommonScenes/UpgradeMenu/UpgradeMenu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://l1gtfa7owlqt" path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" id="2"]
+[ext_resource type="AnimationLibrary" uid="uid://ct67ii63rqsdj" path="res://CommonScenes/UpgradeMenu/animations/AnimationPlayer/default_library.tres" id="2_33wr7"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="3_4am07"]
+[ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="4"]
+[ext_resource type="Script" uid="uid://bjkgwnun84utb" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Cooldown.gd" id="8"]
+[ext_resource type="PackedScene" path="res://CommonScenes/UpgradeMenu/UpgradeSlot.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Minus.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Plus.tscn" id="11"]
+[ext_resource type="Texture2D" uid="uid://dcm0hbaai2mxd" path="res://CommonScenes/UpgradeMenu/sprites/highlight_cooldown.png" id="12"]
+[ext_resource type="PackedScene" path="res://CommonScenes/Buttons/ArrowsIndicator.tscn" id="13"]
+[ext_resource type="Script" uid="uid://cry6eeeueh3ks" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_StartSpeed.gd" id="14"]
+[ext_resource type="Texture2D" uid="uid://dvqbbu0lkh2lt" path="res://CommonScenes/UpgradeMenu/sprites/highlight_booster.png" id="15"]
+[ext_resource type="Script" uid="uid://btfkhd3aiw82m" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_MaxSpeed.gd" id="16"]
+[ext_resource type="Script" uid="uid://b3q40lmq1ihmx" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Laser.gd" id="17"]
+[ext_resource type="AnimationLibrary" uid="uid://ck5hi8awbwtd" path="res://CommonScenes/UpgradeMenu/animations/AnimationPlayer/upgrade_slot_library.tres" id="17_br1gy"]
+[ext_resource type="Texture2D" uid="uid://c7jht2fby1o6s" path="res://CommonScenes/UpgradeMenu/sprites/highlight_laser.png" id="18"]
+[ext_resource type="Script" uid="uid://o2d5cgqp7lhx" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Ammo.gd" id="19"]
+[ext_resource type="Script" uid="uid://cjuvrgfmayid1" path="res://CommonScenes/UpgradeMenu/UpgradeButtons/Upgrade_Shield.gd" id="20"]
+[ext_resource type="Texture2D" uid="uid://dh15pmjcm802i" path="res://CommonScenes/UpgradeMenu/sprites/highlight_shield.png" id="21"]
+[ext_resource type="Texture2D" uid="uid://cu0f3ito8430n" path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" id="22"]
+[ext_resource type="Texture2D" uid="uid://bx61imqrsmlna" path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" id="23"]
+[ext_resource type="Animation" path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" id="24"]
+[ext_resource type="Script" uid="uid://c612ii3cx5d1h" path="res://CommonScenes/Button.gd" id="26"]
+[ext_resource type="PackedScene" uid="uid://b5p7jvfyoos25" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="28"]
 
-[sub_resource type="Animation" id=1]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenBaseFrame:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 960, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBaseFrame:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 1080 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 967, -1500 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 953, -1500 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("SectionLabels:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ScanlineFx:modulate:a")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Buttons:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("AstronautDiagram:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gohap"]
+bg_color = Color(0.25098, 0.172549, 0.301961, 1)
 
-[sub_resource type="Animation" id=2]
-tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenBaseFrame:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, 0 ), Vector2( 60, 0 ), Vector2( 960, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBaseFrame:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ), Vector2( 0, 1080 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ), Vector2( 967, -28 ), Vector2( 967, 150 ), Vector2( 967, -1500 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, -28 ), Vector2( 60, -28 ), Vector2( 953, -28 ), Vector2( 953, 150 ), Vector2( 953, -1500 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("SectionLabels:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.0 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Buttons:modulate:a")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("AstronautDiagram:modulate:a")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("DarkScreen:modulate:a")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PackedFloat32Array( 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.7, 0.0 ]
-}
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_br1gy"]
+bg_color = Color(0.815686, 0.192157, 0.243137, 1)
 
-[sub_resource type="Animation" id=3]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("ScreenBaseFrame:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, 0 ), Vector2( 60, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("ScreenBaseFrame:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, -28 ), Vector2( 60, -28 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("SectionLabels:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.9 ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Buttons:modulate:a")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("AstronautDiagram:modulate:a")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.815686, 0.192157, 0.243137, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.25098, 0.172549, 0.301961, 1 )
-border_blend = true
-
-[sub_resource type="Animation" id=6]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=7]
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.2, 0.7 ]
-}
-
-[sub_resource type="Animation" id=8]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=9]
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.2, 0.7 ]
-}
-
-[sub_resource type="Animation" id=10]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=11]
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.2, 0.7 ]
-}
-
-[sub_resource type="Animation" id=12]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=13]
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.2, 0.7 ]
-}
-
-[sub_resource type="Animation" id=14]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=15]
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.2, 0.7 ]
-}
-
-[sub_resource type="Animation" id=16]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ false ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=17]
-length = 2.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Highlight:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 1,
-"values": [ true ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Highlight:modulate:a")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.2, 0.7 ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jbeqv"]
+_data = {
+&"loop": ExtResource("24")
 }
 
 [node name="UpgradeScreen" type="CanvasLayer"]
 process_mode = 3
 layer = 4
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("2_33wr7")
+}
 autoplay = "base"
-anims/base = SubResource( 1 )
-anims/close = SubResource( 2 )
-anims/fade = SubResource( 3 )
 
 [node name="DarkScreen" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.7 )
+modulate = Color(1, 1, 1, 0.7)
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.25098, 0.054902, 0.160784, 1 )
+color = Color(0.25098, 0.054902, 0.160784, 1)
 
 [node name="ScreenBaseFrame" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.6 )
+modulate = Color(1, 1, 1, 0.6)
 offset_left = 60.0
 offset_right = 1860.0
 offset_bottom = 1080.0
-color = Color( 0.266667, 0.65098, 1, 0.6 )
+color = Color(0.266667, 0.65098, 1, 0.6)
 
 [node name="AstronautDiagram" type="Sprite2D" parent="."]
-position = Vector2( 453.902, 588.111 )
-texture = ExtResource( 2 )
+position = Vector2(453.902, 588.111)
+texture = ExtResource("2")
 
 [node name="SectionLabels" type="Control" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("3_4am07")
 
 [node name="Title" type="Label" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 160.0
 offset_top = 25.0
 offset_right = 740.0
 offset_bottom = 108.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"TitleText"
 text = "Upgrade Points:"
 
 [node name="PointsNumber" type="Label" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 5.0
 offset_right = 900.0
 offset_bottom = 91.0
-scale = Vector2( 1.3, 1.3 )
-mouse_filter = 1
+scale = Vector2(1.3, 1.3)
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"HeaderLarge"
 text = "--"
 
 [node name="NextGroup" type="Control" parent="SectionLabels"]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Next" type="Label" parent="SectionLabels/NextGroup"]
+layout_mode = 0
 offset_left = 938.0
 offset_top = 25.0
 offset_right = 1139.0
 offset_bottom = 109.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 5 )
-theme_override_colors/font_color = Color( 1, 0.227451, 0.172549, 1 )
+mouse_filter = 1
+theme_type_variation = &"TitleText"
+theme_override_colors/font_color = Color(1, 0.227451, 0.172549, 1)
+theme_override_fonts/font = ExtResource("4")
 text = "Next:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ProgressBar" type="ProgressBar" parent="SectionLabels/NextGroup"]
+layout_mode = 0
 offset_left = 1152.0
-offset_top = 41.0
+offset_top = 24.0
 offset_right = 1759.0
-offset_bottom = 102.0
-theme_override_styles/fg = SubResource( 4 )
-theme_override_styles/bg = SubResource( 5 )
+offset_bottom = 85.0
+theme_override_styles/background = SubResource("StyleBoxFlat_gohap")
+theme_override_styles/fill = SubResource("StyleBoxFlat_br1gy")
 step = 1.0
 value = 50.0
-percent_visible = false
 
 [node name="Cooldown" type="Button" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 138.0
 offset_right = 1209.0
 offset_bottom = 193.0
+size_flags_vertical = 0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../../Buttons/Confirm")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../StartSpeed")
-size_flags_vertical = 0
-theme = ExtResource( 6 )
-theme_override_fonts/font = ExtResource( 7 )
+theme_type_variation = &"PureTextBoldButton"
 text = "Jetpack Cooldown"
-align = 0
-script = ExtResource( 8 )
+script = ExtResource("8")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Cooldown"]
-position = Vector2( 120, 97 )
+position = Vector2(120, 97)
 
-[node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 75, 0 )
+[node name="UpgradeSlot1" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(75, 0)
 
-[node name="UpgradeSlot2" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 110, 0 )
+[node name="UpgradeSlot2" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(110, 0)
 
-[node name="UpgradeSlot3" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 145, 0 )
+[node name="UpgradeSlot3" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(145, 0)
 
-[node name="UpgradeSlot4" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 180, 0 )
+[node name="UpgradeSlot4" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(180, 0)
 
-[node name="UpgradeSlot5" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 215, 0 )
+[node name="UpgradeSlot5" parent="SectionLabels/Cooldown/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(215, 0)
 
-[node name="Minus" parent="SectionLabels/Cooldown" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/Cooldown" instance=ExtResource("10")]
+layout_mode = 0
 
-[node name="Plus" parent="SectionLabels/Cooldown" instance=ExtResource( 11 )]
+[node name="Plus" parent="SectionLabels/Cooldown" instance=ExtResource("11")]
+layout_mode = 0
 
 [node name="Highlight" type="Sprite2D" parent="SectionLabels/Cooldown"]
-modulate = Color( 1, 1, 1, 0.65 )
-position = Vector2( -493.595, 377.153 )
-texture = ExtResource( 12 )
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-493.595, 377.153)
+texture = ExtResource("12")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Cooldown"]
+libraries = {
+&"": ExtResource("17_br1gy")
+}
 autoplay = "base"
-anims/base = SubResource( 6 )
-anims/blink = SubResource( 7 )
 
-[node name="ArrowsIndicator" parent="SectionLabels/Cooldown" instance=ExtResource( 13 )]
+[node name="ArrowsIndicator" parent="SectionLabels/Cooldown" instance=ExtResource("13")]
 visible = false
+anchors_preset = 0
 
 [node name="StartSpeed" type="Button" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 276.0
 offset_right = 1114.0
 offset_bottom = 325.0
+size_flags_vertical = 0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../Cooldown")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../MaxSpeed")
-size_flags_vertical = 0
-theme = ExtResource( 6 )
-theme_override_fonts/font = ExtResource( 7 )
+theme_type_variation = &"PureTextBoldButton"
 text = "Starting Speed"
-align = 0
-script = ExtResource( 14 )
+script = ExtResource("14")
 max_speed_path = NodePath("../MaxSpeed")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartSpeed"]
-position = Vector2( 120, 97 )
+position = Vector2(120, 97)
 
-[node name="UpgradeSlot1" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 75, 0 )
+[node name="UpgradeSlot1" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(75, 0)
 
-[node name="UpgradeSlot2" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 110, 0 )
+[node name="UpgradeSlot2" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(110, 0)
 
-[node name="UpgradeSlot3" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 145, 0 )
+[node name="UpgradeSlot3" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(145, 0)
 
-[node name="UpgradeSlot4" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 180, 0 )
+[node name="UpgradeSlot4" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(180, 0)
 
-[node name="UpgradeSlot5" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 215, 0 )
+[node name="UpgradeSlot5" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(215, 0)
 
-[node name="UpgradeSlot6" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 250, 0 )
+[node name="UpgradeSlot6" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(250, 0)
 
-[node name="UpgradeSlot7" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 285, 0 )
+[node name="UpgradeSlot7" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(285, 0)
 
-[node name="UpgradeSlot8" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 320, 0 )
+[node name="UpgradeSlot8" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(320, 0)
 
-[node name="UpgradeSlot9" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 355, 0 )
+[node name="UpgradeSlot9" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(355, 0)
 
-[node name="UpgradeSlot10" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 390, 0 )
+[node name="UpgradeSlot10" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(390, 0)
 
-[node name="UpgradeSlot11" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 425, 0 )
+[node name="UpgradeSlot11" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(425, 0)
 
-[node name="UpgradeSlot12" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 460, 0 )
+[node name="UpgradeSlot12" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(460, 0)
 
-[node name="UpgradeSlot13" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 495, 0 )
+[node name="UpgradeSlot13" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(495, 0)
 
-[node name="UpgradeSlot14" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 530, 0 )
+[node name="UpgradeSlot14" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(530, 0)
 
-[node name="UpgradeSlot15" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 565, 0 )
+[node name="UpgradeSlot15" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(565, 0)
 
-[node name="UpgradeSlot16" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 600, 0 )
+[node name="UpgradeSlot16" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(600, 0)
 
-[node name="UpgradeSlot17" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 635, 0 )
+[node name="UpgradeSlot17" parent="SectionLabels/StartSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(635, 0)
 
 [node name="Highlight" type="Sprite2D" parent="SectionLabels/StartSpeed"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -495.472, 348.888 )
-texture = ExtResource( 15 )
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-495.472, 348.888)
+texture = ExtResource("15")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartSpeed"]
+libraries = {
+&"": ExtResource("17_br1gy")
+}
 autoplay = "base"
-anims/base = SubResource( 8 )
-anims/blink = SubResource( 9 )
 
-[node name="Minus" parent="SectionLabels/StartSpeed" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/StartSpeed" instance=ExtResource("10")]
+layout_mode = 0
 
-[node name="Plus" parent="SectionLabels/StartSpeed" instance=ExtResource( 11 )]
+[node name="Plus" parent="SectionLabels/StartSpeed" instance=ExtResource("11")]
+layout_mode = 0
 
-[node name="ArrowsIndicator" parent="SectionLabels/StartSpeed" instance=ExtResource( 13 )]
+[node name="ArrowsIndicator" parent="SectionLabels/StartSpeed" instance=ExtResource("13")]
 visible = false
+anchors_preset = 0
 
 [node name="MaxSpeed" type="Button" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 781.0
 offset_top = 419.0
 offset_right = 1028.0
 offset_bottom = 468.0
+size_flags_vertical = 0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../StartSpeed")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../LaserStrength")
-size_flags_vertical = 0
-theme = ExtResource( 6 )
-theme_override_fonts/font = ExtResource( 7 )
+theme_type_variation = &"PureTextBoldButton"
 text = "Max Speed"
-align = 0
-script = ExtResource( 16 )
+script = ExtResource("16")
 start_speed_path = NodePath("../StartSpeed")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/MaxSpeed"]
-position = Vector2( 120, 97 )
+position = Vector2(120, 97)
 
-[node name="UpgradeSlot1" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 75, 0 )
+[node name="UpgradeSlot1" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(75, 0)
 
-[node name="UpgradeSlot2" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 110, 0 )
+[node name="UpgradeSlot2" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(110, 0)
 
-[node name="UpgradeSlot3" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 145, 0 )
+[node name="UpgradeSlot3" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(145, 0)
 
-[node name="UpgradeSlot4" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 180, 0 )
+[node name="UpgradeSlot4" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(180, 0)
 
-[node name="UpgradeSlot5" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 215, 0 )
+[node name="UpgradeSlot5" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(215, 0)
 
-[node name="UpgradeSlot6" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 250, 0 )
+[node name="UpgradeSlot6" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(250, 0)
 
-[node name="UpgradeSlot7" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 285, 0 )
+[node name="UpgradeSlot7" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(285, 0)
 
-[node name="UpgradeSlot8" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 320, 0 )
+[node name="UpgradeSlot8" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(320, 0)
 
-[node name="UpgradeSlot9" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 355, 0 )
+[node name="UpgradeSlot9" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(355, 0)
 
-[node name="UpgradeSlot10" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 390, 0 )
+[node name="UpgradeSlot10" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(390, 0)
 
-[node name="UpgradeSlot11" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 425, 0 )
+[node name="UpgradeSlot11" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(425, 0)
 
-[node name="UpgradeSlot12" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 460, 0 )
+[node name="UpgradeSlot12" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(460, 0)
 
-[node name="UpgradeSlot13" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 495, 0 )
+[node name="UpgradeSlot13" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(495, 0)
 
-[node name="UpgradeSlot14" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 530, 0 )
+[node name="UpgradeSlot14" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(530, 0)
 
-[node name="UpgradeSlot15" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 565, 0 )
+[node name="UpgradeSlot15" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(565, 0)
 
-[node name="UpgradeSlot16" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 600, 0 )
+[node name="UpgradeSlot16" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(600, 0)
 
-[node name="UpgradeSlot17" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 635, 0 )
+[node name="UpgradeSlot17" parent="SectionLabels/MaxSpeed/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(635, 0)
 
 [node name="Highlight" type="Sprite2D" parent="SectionLabels/MaxSpeed"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -496.472, 205.888 )
-texture = ExtResource( 15 )
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-496.472, 205.888)
+texture = ExtResource("15")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/MaxSpeed"]
+libraries = {
+&"": ExtResource("17_br1gy")
+}
 autoplay = "base"
-anims/base = SubResource( 10 )
-anims/blink = SubResource( 11 )
 
-[node name="Minus" parent="SectionLabels/MaxSpeed" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/MaxSpeed" instance=ExtResource("10")]
+layout_mode = 0
 
-[node name="Plus" parent="SectionLabels/MaxSpeed" instance=ExtResource( 11 )]
+[node name="Plus" parent="SectionLabels/MaxSpeed" instance=ExtResource("11")]
+layout_mode = 0
 
-[node name="ArrowsIndicator" parent="SectionLabels/MaxSpeed" instance=ExtResource( 13 )]
+[node name="ArrowsIndicator" parent="SectionLabels/MaxSpeed" instance=ExtResource("13")]
 visible = false
+anchors_preset = 0
 
 [node name="LaserStrength" type="Button" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 551.0
 offset_right = 1117.0
 offset_bottom = 600.0
+size_flags_vertical = 0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../MaxSpeed")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../StartingAmmo")
-size_flags_vertical = 0
-theme = ExtResource( 6 )
-theme_override_fonts/font = ExtResource( 7 )
+theme_type_variation = &"PureTextBoldButton"
 text = "Laser Strength"
-align = 0
-script = ExtResource( 17 )
+script = ExtResource("17")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/LaserStrength"]
-position = Vector2( 120, 97 )
+position = Vector2(120, 97)
 
-[node name="UpgradeSlot1" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 75, 0 )
+[node name="UpgradeSlot1" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(75, 0)
 
-[node name="UpgradeSlot2" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 110, 0 )
+[node name="UpgradeSlot2" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(110, 0)
 
-[node name="UpgradeSlot3" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 145, 0 )
+[node name="UpgradeSlot3" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(145, 0)
 
-[node name="UpgradeSlot4" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 180, 0 )
+[node name="UpgradeSlot4" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(180, 0)
 
-[node name="UpgradeSlot5" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 215, 0 )
+[node name="UpgradeSlot5" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(215, 0)
 
-[node name="UpgradeSlot6" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 250, 0 )
+[node name="UpgradeSlot6" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(250, 0)
 
-[node name="UpgradeSlot7" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 285, 0 )
+[node name="UpgradeSlot7" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(285, 0)
 
-[node name="UpgradeSlot8" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 320, 0 )
+[node name="UpgradeSlot8" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(320, 0)
 
-[node name="UpgradeSlot9" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 355, 0 )
+[node name="UpgradeSlot9" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(355, 0)
 
-[node name="UpgradeSlot10" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 390, 0 )
+[node name="UpgradeSlot10" parent="SectionLabels/LaserStrength/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(390, 0)
 
 [node name="Highlight" type="Sprite2D" parent="SectionLabels/LaserStrength"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -217.396, 5.6712 )
-texture = ExtResource( 18 )
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-217.396, 5.6712)
+texture = ExtResource("18")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/LaserStrength"]
+libraries = {
+&"": ExtResource("17_br1gy")
+}
 autoplay = "base"
-anims/base = SubResource( 12 )
-anims/blink = SubResource( 13 )
 
-[node name="Minus" parent="SectionLabels/LaserStrength" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/LaserStrength" instance=ExtResource("10")]
+layout_mode = 0
 
-[node name="Plus" parent="SectionLabels/LaserStrength" instance=ExtResource( 11 )]
+[node name="Plus" parent="SectionLabels/LaserStrength" instance=ExtResource("11")]
+layout_mode = 0
 
-[node name="ArrowsIndicator" parent="SectionLabels/LaserStrength" instance=ExtResource( 13 )]
+[node name="ArrowsIndicator" parent="SectionLabels/LaserStrength" instance=ExtResource("13")]
 visible = false
+anchors_preset = 0
 
 [node name="StartingAmmo" type="Button" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 689.0
 offset_right = 1117.0
 offset_bottom = 738.0
+size_flags_vertical = 0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../LaserStrength")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../Shields")
-size_flags_vertical = 0
-theme = ExtResource( 6 )
-theme_override_fonts/font = ExtResource( 7 )
+theme_type_variation = &"PureTextBoldButton"
 text = "Starting Ammo"
-align = 0
-script = ExtResource( 19 )
+script = ExtResource("19")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/StartingAmmo"]
-position = Vector2( 120, 97 )
+position = Vector2(120, 97)
 
-[node name="UpgradeSlot1" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 75, 0 )
+[node name="UpgradeSlot1" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(75, 0)
 
-[node name="UpgradeSlot2" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 110, 0 )
+[node name="UpgradeSlot2" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(110, 0)
 
-[node name="UpgradeSlot3" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 145, 0 )
+[node name="UpgradeSlot3" parent="SectionLabels/StartingAmmo/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(145, 0)
 
 [node name="Highlight" type="Sprite2D" parent="SectionLabels/StartingAmmo"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -217.396, -132.329 )
-texture = ExtResource( 18 )
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-217.396, -132.329)
+texture = ExtResource("18")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/StartingAmmo"]
+libraries = {
+&"": ExtResource("17_br1gy")
+}
 autoplay = "base"
-anims/base = SubResource( 14 )
-anims/blink = SubResource( 15 )
 
-[node name="Minus" parent="SectionLabels/StartingAmmo" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/StartingAmmo" instance=ExtResource("10")]
+layout_mode = 0
 
-[node name="Plus" parent="SectionLabels/StartingAmmo" instance=ExtResource( 11 )]
+[node name="Plus" parent="SectionLabels/StartingAmmo" instance=ExtResource("11")]
+layout_mode = 0
 
-[node name="ArrowsIndicator" parent="SectionLabels/StartingAmmo" instance=ExtResource( 13 )]
+[node name="ArrowsIndicator" parent="SectionLabels/StartingAmmo" instance=ExtResource("13")]
 visible = false
+anchors_preset = 0
 
 [node name="Shields" type="Button" parent="SectionLabels"]
+layout_mode = 0
 offset_left = 780.0
 offset_top = 825.0
 offset_right = 944.0
 offset_bottom = 874.0
+size_flags_vertical = 0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../StartingAmmo")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../Buttons/Confirm")
-size_flags_vertical = 0
-theme = ExtResource( 6 )
-theme_override_fonts/font = ExtResource( 7 )
+theme_type_variation = &"PureTextBoldButton"
 text = "Shields"
-align = 0
-script = ExtResource( 20 )
+script = ExtResource("20")
 
 [node name="UpgradeBar" type="Node2D" parent="SectionLabels/Shields"]
-position = Vector2( 120, 97 )
+position = Vector2(120, 97)
 
-[node name="UpgradeSlot1" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 75, 0 )
+[node name="UpgradeSlot1" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(75, 0)
 
-[node name="UpgradeSlot2" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 110, 0 )
+[node name="UpgradeSlot2" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(110, 0)
 
-[node name="UpgradeSlot3" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource( 9 )]
-position = Vector2( 145, 0 )
+[node name="UpgradeSlot3" parent="SectionLabels/Shields/UpgradeBar" instance=ExtResource("9")]
+position = Vector2(145, 0)
 
 [node name="Highlight" type="Sprite2D" parent="SectionLabels/Shields"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -337.933, -192.706 )
-texture = ExtResource( 21 )
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-337.933, -192.706)
+texture = ExtResource("21")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SectionLabels/Shields"]
+libraries = {
+&"": ExtResource("17_br1gy")
+}
 autoplay = "base"
-anims/base = SubResource( 16 )
-anims/blink = SubResource( 17 )
 
-[node name="Minus" parent="SectionLabels/Shields" instance=ExtResource( 10 )]
+[node name="Minus" parent="SectionLabels/Shields" instance=ExtResource("10")]
+layout_mode = 0
 
-[node name="Plus" parent="SectionLabels/Shields" instance=ExtResource( 11 )]
+[node name="Plus" parent="SectionLabels/Shields" instance=ExtResource("11")]
+layout_mode = 0
 
-[node name="ArrowsIndicator" parent="SectionLabels/Shields" instance=ExtResource( 13 )]
+[node name="ArrowsIndicator" parent="SectionLabels/Shields" instance=ExtResource("13")]
 visible = false
+anchors_preset = 0
 
 [node name="ScanlineFx" type="Node2D" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+modulate = Color(1, 1, 1, 0.9)
 
 [node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
-position = Vector2( 960, 540 )
-texture = ExtResource( 22 )
+position = Vector2(960, 540)
+texture = ExtResource("22")
 region_enabled = true
-region_rect = Rect2( 0, 0, 1800, 1080 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 1800, 1080)
 
 [node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
-modulate = Color( 1, 1, 1, 0.1 )
-position = Vector2( 960, 0 )
-texture = ExtResource( 23 )
+modulate = Color(1, 1, 1, 0.1)
+position = Vector2(960, 0)
+texture = ExtResource("23")
 region_enabled = true
-region_rect = Rect2( 0, 0, 1800, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 1800, 0)
 
 [node name="ScanlinePLayer" type="AnimationPlayer" parent="ScanlineFx"]
+libraries = {
+&"": SubResource("AnimationLibrary_jbeqv")
+}
 autoplay = "loop"
-anims/loop = ExtResource( 24 )
 
 [node name="Buttons" type="HBoxContainer" parent="."]
+anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -1238,27 +566,23 @@ offset_top = -90.0
 offset_right = -110.0
 offset_bottom = -30.0
 mouse_filter = 0
+theme = ExtResource("3_4am07")
 theme_override_constants/separation = 15
 alignment = 2
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
 
 [node name="Reset" type="Button" parent="Buttons"]
-offset_left = 169.0
-offset_right = 532.0
-offset_bottom = 60.0
-custom_minimum_size = Vector2( 147, 0 )
+custom_minimum_size = Vector2(147, 0)
+layout_mode = 2
 focus_neighbor_left = NodePath("../Confirm")
 focus_neighbor_top = NodePath("../../SectionLabels/Shields")
 focus_neighbor_right = NodePath("../Confirm")
 focus_neighbor_bottom = NodePath("../../SectionLabels/Cooldown")
-theme = ExtResource( 25 )
+theme_type_variation = &"Blue110Button"
 text = "   Reset Changes"
-script = ExtResource( 26 )
+script = ExtResource("26")
 
-[node name="ui_cancel" parent="Buttons/Reset" instance=ExtResource( 28 )]
+[node name="ui_cancel" parent="Buttons/Reset" instance=ExtResource("28")]
+layout_mode = 0
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 13.0
@@ -1268,20 +592,19 @@ offset_bottom = 25.0
 input_action = "ui_cancel"
 
 [node name="Confirm" type="Button" parent="Buttons"]
-offset_left = 547.0
-offset_right = 785.0
-offset_bottom = 60.0
-custom_minimum_size = Vector2( 147, 0 )
+custom_minimum_size = Vector2(147, 0)
+layout_mode = 2
 focus_neighbor_left = NodePath("../Reset")
 focus_neighbor_top = NodePath("../../SectionLabels/Shields")
 focus_neighbor_right = NodePath("../Reset")
 focus_neighbor_bottom = NodePath("../../SectionLabels/Cooldown")
-theme = ExtResource( 27 )
+theme_type_variation = &"Red110Button"
 text = "   Confirm"
-script = ExtResource( 26 )
+script = ExtResource("26")
 pressed_sfx = "Confirm"
 
-[node name="PromptInputAction" parent="Buttons/Confirm" instance=ExtResource( 28 )]
+[node name="PromptInputAction" parent="Buttons/Confirm" instance=ExtResource("28")]
+layout_mode = 0
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 13.0
@@ -1295,14 +618,15 @@ offset_left = 1845.0
 offset_top = -28.0
 offset_right = 1860.0
 offset_bottom = 1086.0
-color = Color( 0, 0.924107, 1, 1 )
+color = Color(0, 0.924107, 1, 1)
 
 [node name="ColorFrame3" type="ColorRect" parent="."]
 offset_left = 60.0
 offset_top = -28.0
 offset_right = 75.0
 offset_bottom = 1086.0
-color = Color( 0, 0.924107, 1, 1 )
+color = Color(0, 0.924107, 1, 1)
+
 [connection signal="pressed" from="SectionLabels/Cooldown/Minus" to="SectionLabels/Cooldown" method="_on_Minus_pressed"]
 [connection signal="pressed" from="SectionLabels/Cooldown/Plus" to="SectionLabels/Cooldown" method="_on_Plus_pressed"]
 [connection signal="pressed" from="SectionLabels/StartSpeed/Minus" to="SectionLabels/StartSpeed" method="_on_Minus_pressed"]

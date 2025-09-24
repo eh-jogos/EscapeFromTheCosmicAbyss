@@ -1,13 +1,48 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://dsbl7clxwhs5a"]
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://dsbl7clxwhs5a"]
 
 [ext_resource type="FontFile" uid="uid://bmlyf4q6msmkq" path="res://Fonts/Orbitron-Bold.ttf" id="1_g87uw"]
 [ext_resource type="FontFile" uid="uid://dryi7q7l5toou" path="res://Fonts/Orbitron-Regular.ttf" id="1_h8t7h"]
 [ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="1_xa0xr"]
+[ext_resource type="Texture2D" uid="uid://b1njixeyedu5v" path="res://CommonScenes/Buttons/textures/slanted_button_normal.png" id="2_a4liw"]
 [ext_resource type="FontFile" uid="uid://6cy3fc4ouoca" path="res://Fonts/Orbitron-Medium.ttf" id="2_g7pfm"]
 [ext_resource type="StyleBox" uid="uid://ciafbsvbys0on" path="res://CommonScenes/default_style_box_empty.tres" id="3_g7pfm"]
+[ext_resource type="Texture2D" uid="uid://dn2ieswv6astt" path="res://CommonScenes/Buttons/textures/slanted_button_hover.png" id="4_enl75"]
+[ext_resource type="Texture2D" uid="uid://bgbirj500je72" path="res://CommonScenes/Buttons/textures/slanted_button_pressed.png" id="5_yfvci"]
 [ext_resource type="Texture2D" uid="uid://ds6ejeu4exvnq" path="res://CommonScenes/Buttons/textures/slanted_red_button_normal.png" id="5_yhqg5"]
 [ext_resource type="Texture2D" uid="uid://dcdb48veefff" path="res://CommonScenes/Buttons/textures/slanted_red_button_hover.png" id="6_717ba"]
 [ext_resource type="Texture2D" uid="uid://d254vfg00fpl4" path="res://CommonScenes/Buttons/textures/slanted_red_button_pressed.png" id="7_6x406"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_th3od"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_a4liw")
+region_rect = Rect2(0, 0, 414, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1pun"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("4_enl75")
+region_rect = Rect2(0, 0, 414, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lo0gd"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_a4liw")
+region_rect = Rect2(0, 0, 414, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ifxat"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_yfvci")
+region_rect = Rect2(0, 0, 414, 110)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4liw"]
 content_margin_left = 40.0
@@ -43,6 +78,19 @@ region_rect = Rect2(0, 0, 498, 110)
 
 [resource]
 default_font = ExtResource("1_h8t7h")
+Blue110Button/base_type = &"Button"
+Blue110Button/colors/font_color = Color(0, 0.960784, 1, 1)
+Blue110Button/colors/font_disabled_color = Color(0, 0.960784, 1, 0.469922)
+Blue110Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Blue110Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Blue110Button/constants/h_separation = 15
+Blue110Button/font_sizes/font_size = 30
+Blue110Button/fonts/font = ExtResource("1_g87uw")
+Blue110Button/styles/disabled = SubResource("StyleBoxTexture_th3od")
+Blue110Button/styles/focus = ExtResource("3_g7pfm")
+Blue110Button/styles/hover = SubResource("StyleBoxTexture_n1pun")
+Blue110Button/styles/normal = SubResource("StyleBoxTexture_lo0gd")
+Blue110Button/styles/pressed = SubResource("StyleBoxTexture_ifxat")
 Bold40Text/base_type = &"Label"
 Bold40Text/font_sizes/font_size = 40
 Bold40Text/fonts/font = ExtResource("1_g87uw")
