@@ -1,269 +1,272 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://d11raokmrdi1k"]
 
-[ext_resource path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium67.font" type="FontFile" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack72.font" type="FontFile" id=4]
-[ext_resource path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" type="PackedScene" id=5]
+[ext_resource type="Script" uid="uid://bhi1tm152qaj7" path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.gd" id="1"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="2_hnycl"]
+[ext_resource type="PackedScene" uid="uid://b5p7jvfyoos25" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="5"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "base"
 length = 0.01
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("LevelNum:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector2( 0, 180 ) ]
+"values": [Vector2(0, 180)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("LevelNum:modulate:a")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("LevelTitle:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector2( 0, 282 ) ]
+"values": [Vector2(0, 282)]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("LevelTitle:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("HBoxContainer:self_modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 resource_name = "fade_in"
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [0.0, 1.0]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("LevelNum:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.6 ),
-"transitions": PackedFloat32Array( 1, 0.25, 1 ),
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 0.25, 1),
 "update": 0,
-"values": [ Vector2( -100, 180 ), Vector2( -100, 180 ), Vector2( 0, 180 ) ]
+"values": [Vector2(-100, 180), Vector2(-100, 180), Vector2(0, 180)]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("LevelNum:modulate:a")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.6 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [0.0, 0.0, 1.0]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("LevelTitle:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.8 ),
-"transitions": PackedFloat32Array( 0.25, 0.25, 1 ),
+"times": PackedFloat32Array(0, 0.5, 0.8),
+"transitions": PackedFloat32Array(0.25, 0.25, 1),
 "update": 0,
-"values": [ Vector2( -100, 282 ), Vector2( -100, 282 ), Vector2( 0, 282 ) ]
+"values": [Vector2(-100, 282), Vector2(-100, 282), Vector2(0, 282)]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("LevelTitle:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [0.0, 0.0, 1.0]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("HBoxContainer:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PackedFloat32Array( 0, 0.6, 1 ),
-"transitions": PackedFloat32Array( 1, 4, 1 ),
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 4, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/6/type = "animation"
+tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("HBoxContainer/AnimationPlayer")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
-"clips": PackedStringArray( "", "blinking" ),
-"times": PackedFloat32Array( 0, 1 )
+"clips": PackedStringArray("", "blinking"),
+"times": PackedFloat32Array(0, 1)
 }
 
-[sub_resource type="Animation" id=3]
-loop = true
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h4v3j"]
+_data = {
+&"base": SubResource("1"),
+&"fade_in": SubResource("2")
+}
+
+[sub_resource type="Animation" id="3"]
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.9 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.5, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.3 ), Color( 1, 1, 1, 1 ) ]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.3), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hnycl"]
+_data = {
+&"blinking": SubResource("3")
 }
 
 [node name="CountdownScreen" type="Node2D"]
 process_mode = 3
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h4v3j")
+}
 autoplay = "base"
-anims/base = SubResource( 1 )
-anims/fade_in = SubResource( 2 )
 
 [node name="ColorFrame" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.6 )
+modulate = Color(1, 1, 1, 0.6)
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color( 0.25098, 0.054902, 0.160784, 1 )
+color = Color(0.25098, 0.054902, 0.160784, 1)
 
 [node name="LevelNum" type="Label" parent="."]
 offset_top = 180.0
 offset_right = 1926.0
 offset_bottom = 275.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 2 )
+mouse_filter = 1
+theme = ExtResource("2_hnycl")
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
 text = "Level Num"
-align = 1
+horizontal_alignment = 1
 
 [node name="LevelTitle" type="Label" parent="."]
 offset_top = 282.0
 offset_right = 1923.0
 offset_bottom = 377.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
+mouse_filter = 1
+theme = ExtResource("2_hnycl")
+theme_type_variation = &"TitleText"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Level Title"
-align = 1
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-self_modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color(1, 1, 1, 0)
 offset_top = 454.0
 offset_right = 1920.0
 offset_bottom = 540.0
 size_flags_vertical = 0
+theme = ExtResource("2_hnycl")
 theme_override_constants/separation = 20
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false,
-"_editor_description_": ""
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer"]
-anims/blinking = SubResource( 3 )
-
-[node name="Label" type="Label" parent="HBoxContainer"]
-modulate = Color( 1, 1, 1, 1.1 )
-offset_left = 615.0
-offset_top = 7.0
-offset_right = 858.0
-offset_bottom = 93.0
-mouse_filter = 1
-theme_override_fonts/font = ExtResource( 4 )
-text = "Press"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
+libraries = {
+&"": SubResource("AnimationLibrary_hnycl")
 }
 
-[node name="PromptInputAction" parent="HBoxContainer" instance=ExtResource( 5 )]
-offset_left = 878.0
-offset_right = 978.0
-custom_minimum_size = Vector2( 100, 100 )
+[node name="Label" type="Label" parent="HBoxContainer"]
+modulate = Color(1, 1, 1, 1.1)
+layout_mode = 2
+mouse_filter = 1
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Press"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PromptInputAction" parent="HBoxContainer" instance=ExtResource("5")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
 input_action = "boost"
 
 [node name="Label2" type="Label" parent="HBoxContainer"]
-offset_left = 998.0
-offset_top = 7.0
-offset_right = 1304.0
-offset_bottom = 93.0
+layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource( 4 )
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "to start"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
+vertical_alignment = 1
