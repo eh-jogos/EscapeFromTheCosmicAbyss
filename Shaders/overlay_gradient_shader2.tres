@@ -127,6 +127,6 @@ nodes/fragment/connections = PackedInt32Array( 2, 0, 0, 0, 4, 0, 2, 1, 3, 0, 2, 
 
 [resource]
 shader = SubResource( 12 )
-shader_param/transparency = Color( 0, 0.956863, 1, 0 )
-shader_param/base_color = Color( 0, 0.96, 1, 0.6 )
-shader_param/strength = 2.74958
+shader_parameter/transparency = Color( 0, 0.956863, 1, 0 )
+shader_parameter/base_color = Color( 0, 0.96, 1, 0.6 )
+shader_parameter/strength = 2.74958

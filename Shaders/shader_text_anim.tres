@@ -5,7 +5,7 @@ resource_name = "text_anim"
 length = 1.1
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/start")
+tracks/0/path = NodePath(".:material:shader_parameter/start")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.819608, 0, 1 ), Color( 0.243137, 1, 0, 1 ), Color( 0.266667, 1, 1, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0.639216, 0, 1, 1 ), Color( 1, 0, 0.585938, 1 ), Color( 1, 0.678431, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:material:shader_param/end")
+tracks/1/path = NodePath(".:material:shader_parameter/end")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false

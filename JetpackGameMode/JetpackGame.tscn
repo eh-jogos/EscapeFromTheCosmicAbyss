@@ -611,11 +611,11 @@ tracks/10/keys = {
 
 [sub_resource type="ShaderMaterial" id=9]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0, 1 )
+shader_parameter/blur_scale = Vector2( 0, 1 )
 
 [sub_resource type="ShaderMaterial" id=10]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 1, 0 )
+shader_parameter/blur_scale = Vector2( 1, 0 )
 
 [sub_resource type="Animation" id=11]
 tracks/0/type = "value"
@@ -856,7 +856,7 @@ tracks/6/keys = {
 } ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_thickness")
+tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_thickness")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -868,7 +868,7 @@ tracks/7/keys = {
 "values": [ 0.051, 0.051, 0.274, 0.051 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_radius")
+tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_radius")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -880,7 +880,7 @@ tracks/8/keys = {
 "values": [ -0.1, -0.1, 1.5, -0.1 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_hardness")
+tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_hardness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -904,7 +904,7 @@ tracks/10/keys = {
 "values": [ Vector2( 943.191, 561.409 ), Vector2( 943.191, 561.409 ), Vector2( 888.037, 586.865 ), Vector2( 841.368, 534.539 ), Vector2( 841.368, 534.539 ), Vector2( -121, 534.539 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/11/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_hardness")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -916,7 +916,7 @@ tracks/11/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/12/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_thickness")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -928,7 +928,7 @@ tracks/12/keys = {
 "values": [ 0.051, 0.051, 0.274, 0.051 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_radius")
+tracks/13/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_radius")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
@@ -972,11 +972,11 @@ animations = [ {
 
 [sub_resource type="ShaderMaterial" id=16]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0, 0.7 )
+shader_parameter/blur_scale = Vector2( 0, 0.7 )
 
 [sub_resource type="ShaderMaterial" id=17]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0.7, 0 )
+shader_parameter/blur_scale = Vector2( 0.7, 0 )
 
 [sub_resource type="Animation" id=18]
 length = 0.01
@@ -1082,7 +1082,7 @@ tracks/5/keys = {
 "values": [ Vector2( -447, 602.324 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_thickness")
+tracks/6/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_thickness")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1094,7 +1094,7 @@ tracks/6/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_radius")
+tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_radius")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1106,7 +1106,7 @@ tracks/7/keys = {
 "values": [ -0.1, -0.1, 2.7, -0.1 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_hardness")
+tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_hardness")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1118,7 +1118,7 @@ tracks/8/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_hardness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -1130,7 +1130,7 @@ tracks/9/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/10/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_thickness")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -1142,7 +1142,7 @@ tracks/10/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_radius")
+tracks/11/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_radius")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -1176,11 +1176,11 @@ animations = [ {
 
 [sub_resource type="ShaderMaterial" id=21]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0, 0.4 )
+shader_parameter/blur_scale = Vector2( 0, 0.4 )
 
 [sub_resource type="ShaderMaterial" id=22]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0.4, 0 )
+shader_parameter/blur_scale = Vector2( 0.4, 0 )
 
 [sub_resource type="Animation" id=23]
 length = 0.01
@@ -1284,7 +1284,7 @@ tracks/4/keys = {
 } ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_thickness")
+tracks/5/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_thickness")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -1296,7 +1296,7 @@ tracks/5/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_radius")
+tracks/6/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_radius")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -1308,7 +1308,7 @@ tracks/6/keys = {
 "values": [ -0.1, -0.1, 2.9, -0.1 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_hardness")
+tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_hardness")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -1320,7 +1320,7 @@ tracks/7/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_hardness")
+tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_hardness")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -1332,7 +1332,7 @@ tracks/8/keys = {
 "values": [ 1.645, 1.645 ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_thickness")
+tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_thickness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -1344,7 +1344,7 @@ tracks/9/keys = {
 "values": [ 0.106, 0.106, 0.31, 0.106 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_radius")
+tracks/10/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_radius")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -1390,11 +1390,11 @@ animations = [ {
 
 [sub_resource type="ShaderMaterial" id=26]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0, 0 )
+shader_parameter/blur_scale = Vector2( 0, 0 )
 
 [sub_resource type="ShaderMaterial" id=27]
 shader = ExtResource( 82 )
-shader_param/blur_scale = Vector2( 0, 0 )
+shader_parameter/blur_scale = Vector2( 0, 0 )
 
 [sub_resource type="ViewportTexture" id=28]
 flags = 5
@@ -1402,21 +1402,21 @@ viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/P
 
 [sub_resource type="ShaderMaterial" id=29]
 shader = ExtResource( 76 )
-shader_param/torus_thickness = 0.106
-shader_param/torus_hardness = 1.645
-shader_param/torus_radius = -0.1
-shader_param/torus_invert = -1.0
-shader_param/torus_center = Vector2( 0.125723, 0.692514 )
-shader_param/torus_resolution = Vector2( 1.77778, 1 )
+shader_parameter/torus_thickness = 0.106
+shader_parameter/torus_hardness = 1.645
+shader_parameter/torus_radius = -0.1
+shader_parameter/torus_invert = -1.0
+shader_parameter/torus_center = Vector2( 0.125723, 0.692514 )
+shader_parameter/torus_resolution = Vector2( 1.77778, 1 )
 
 [sub_resource type="ShaderMaterial" id=30]
 shader = ExtResource( 76 )
-shader_param/torus_thickness = 0.106
-shader_param/torus_hardness = 1.645
-shader_param/torus_radius = -0.1
-shader_param/torus_invert = -1.0
-shader_param/torus_center = Vector2( 0.125723, 0.692514 )
-shader_param/torus_resolution = Vector2( 1.77778, 1 )
+shader_parameter/torus_thickness = 0.106
+shader_parameter/torus_hardness = 1.645
+shader_parameter/torus_radius = -0.1
+shader_parameter/torus_invert = -1.0
+shader_parameter/torus_center = Vector2( 0.125723, 0.692514 )
+shader_parameter/torus_resolution = Vector2( 1.77778, 1 )
 
 [sub_resource type="ViewportTexture" id=31]
 viewport_path = NodePath("RawLayer/MaskViewport/SubViewport")
@@ -1424,10 +1424,10 @@ viewport_path = NodePath("RawLayer/MaskViewport/SubViewport")
 [sub_resource type="ShaderMaterial" id=32]
 resource_local_to_scene = true
 shader = ExtResource( 75 )
-shader_param/displacement_amount = 0.09581
-shader_param/displacement_center = Vector2( 0.125723, 0.692514 )
-shader_param/screen_resolution = Vector2( 1.77778, 1 )
-shader_param/displacement_texture = SubResource( 31 )
+shader_parameter/displacement_amount = 0.09581
+shader_parameter/displacement_center = Vector2( 0.125723, 0.692514 )
+shader_parameter/screen_resolution = Vector2( 1.77778, 1 )
+shader_parameter/displacement_texture = SubResource( 31 )
 
 [sub_resource type="ViewportTexture" id=33]
 flags = 5
@@ -1435,14 +1435,14 @@ viewport_path = NodePath("RawLayer/WorldVieport/SubViewport")
 
 [sub_resource type="ShaderMaterial" id=34]
 shader = ExtResource( 85 )
-shader_param/cutoff = 0.0
-shader_param/smooth_size = 0.442
-shader_param/mask = ExtResource( 86 )
+shader_parameter/cutoff = 0.0
+shader_parameter/smooth_size = 0.442
+shader_parameter/mask = ExtResource( 86 )
 
 [sub_resource type="Animation" id=35]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/path = NodePath(".:material:shader_parameter/cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1457,7 +1457,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=36]
 length = 0.3
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/path = NodePath(".:material:shader_parameter/cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1472,7 +1472,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=37]
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/path = NodePath(".:material:shader_parameter/cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1487,7 +1487,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=38]
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/cutoff")
+tracks/0/path = NodePath(".:material:shader_parameter/cutoff")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1715,7 +1715,7 @@ tracks/1/keys = {
 "values": [ 0.0, 1.0, 1.0, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../UpgradeLabel:material:shader_param/start")
+tracks/2/path = NodePath("../UpgradeLabel:material:shader_parameter/start")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1727,7 +1727,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 0.819608, 0, 1 ), Color( 0.243137, 1, 0, 1 ), Color( 0, 1, 0.671875, 1 ), Color( 0.639216, 0, 1, 1 ), Color( 1, 0.678431, 0.266667, 1 ), Color( 1, 0.266667, 0.486275, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../UpgradeLabel:material:shader_param/end")
+tracks/3/path = NodePath("../UpgradeLabel:material:shader_parameter/end")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false

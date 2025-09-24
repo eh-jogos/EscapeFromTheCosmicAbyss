@@ -8,7 +8,7 @@
 [sub_resource type="Animation" id=1]
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/color")
+tracks/0/path = NodePath(".:material:shader_parameter/color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -23,7 +23,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=2]
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/color")
+tracks/0/path = NodePath(".:material:shader_parameter/color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -38,7 +38,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=3]
 length = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:material:shader_param/color")
+tracks/0/path = NodePath(".:material:shader_parameter/color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false

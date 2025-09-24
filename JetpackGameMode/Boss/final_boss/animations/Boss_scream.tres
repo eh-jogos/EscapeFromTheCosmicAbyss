@@ -125,7 +125,7 @@ tracks/9/keys = {
 "values": [ Vector2( 274.686, 678.941 ), Vector2( 274.686, 678.941 ), Vector2( 241.388, 747.915 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("../../../../../MaskViewport/SubViewport/TorusMask:material:shader_param/torus_radius")
+tracks/10/path = NodePath("../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_radius")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -137,7 +137,7 @@ tracks/10/keys = {
 "values": [ -0.1, -0.1, 1.83, -0.1, 1.83, -0.1, 1.83 ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_param/torus_radius")
+tracks/11/path = NodePath("../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_radius")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
