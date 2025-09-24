@@ -1,4 +1,4 @@
-[gd_scene load_steps=870 format=3 uid="uid://bwomdomdf8yos"]
+[gd_scene load_steps=872 format=3 uid="uid://bwomdomdf8yos"]
 
 [ext_resource type="Script" uid="uid://dt0urybtit0qy" path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="2"]
@@ -857,17 +857,15 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "value"
+tracks/8/type = "animation"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer:current_animation")
+tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 2,
-"values": ["", "blinking"]
+"clips": PackedStringArray("[stop]", "blinking"),
+"times": PackedFloat32Array(0, 1)
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1031,17 +1029,15 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "value"
+tracks/8/type = "animation"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer:current_animation")
+tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 2,
-"values": ["", "blinking"]
+"clips": PackedStringArray("[stop]", "blinking"),
+"times": PackedFloat32Array(0, 1)
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1205,17 +1201,15 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "value"
+tracks/8/type = "animation"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer:current_animation")
+tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 2,
-"values": ["", "blinking"]
+"clips": PackedStringArray("[stop]", "blinking"),
+"times": PackedFloat32Array(0, 1)
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1379,17 +1373,15 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "value"
+tracks/8/type = "animation"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer:current_animation")
+tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 2,
-"values": ["", "blinking"]
+"clips": PackedStringArray("[stop]", "blinking"),
+"times": PackedFloat32Array(0, 1)
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1553,17 +1545,15 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "value"
+tracks/8/type = "animation"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer:current_animation")
+tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 2,
-"values": ["", "blinking"]
+"clips": PackedStringArray("[stop]", "blinking"),
+"times": PackedFloat32Array(0, 1)
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -7485,7 +7475,7 @@ gradient = ExtResource("755")
 
 [sub_resource type="ShaderMaterial" id="82"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.011
+shader_parameter/torus_thickness = 0.0122743
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -7536,7 +7526,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="83"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0169477
+shader_parameter/torus_thickness = 0.0122743
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -7587,7 +7577,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="86"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0169477
+shader_parameter/torus_thickness = 0.0122743
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -10648,6 +10638,25 @@ _data = {
 &"blinking": SubResource("114")
 }
 
+[sub_resource type="Animation" id="Animation_qillt"]
+resource_name = "teste"
+step = 0.1
+tracks/0/type = "animation"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": PackedStringArray("[stop]", "blinking"),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_14h8p"]
+_data = {
+&"teste": SubResource("Animation_qillt")
+}
+
 [node name="TutorialTipScreen" type="Node2D"]
 process_mode = 3
 script = ExtResource("1")
@@ -10675,6 +10684,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -24.0
 offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LevelNum" type="Label" parent="Tip#0"]
 layout_mode = 0
@@ -10888,6 +10899,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -24.0
 offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label 2" type="Label" parent="Tip#1"]
 layout_mode = 0
@@ -11143,6 +11156,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -24.0
 offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tip#2"]
 layout_mode = 0
@@ -11448,6 +11463,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -24.0
 offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label 2" type="Label" parent="Tip#3"]
 layout_mode = 0
@@ -11916,6 +11933,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -24.0
 offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tip#4"]
 layout_mode = 0
@@ -12400,6 +12419,7 @@ layout_mode = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 382.0
+offset_top = 0.0
 offset_right = 421.0
 offset_bottom = 73.0
 
@@ -12423,7 +12443,7 @@ custom_minimum_size = Vector2(26, 38)
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-modulate = Color(1, 1, 1, 0.90616)
+modulate = Color(1, 1, 1, 0.00423147)
 offset_top = 990.0
 offset_right = 1537.0
 offset_bottom = 1060.0
@@ -12457,5 +12477,10 @@ theme_override_fonts/font = ExtResource("750")
 text = "to continue."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_14h8p")
+}
 
 [editable path="Tip#4/HUD1/AmmoRoot"]
