@@ -107,8 +107,8 @@ func _ready():
 		time_results.show()
 		laps_results.hide()
 		
-		replay_btn.set_focus_neighbor(MARGIN_LEFT, quit_btn.get_path())
-		quit_btn.set_focus_neighbor(MARGIN_RIGHT, replay_btn.get_path())
+		replay_btn.set_focus_neighbor(SIDE_LEFT, quit_btn.get_path())
+		quit_btn.set_focus_neighbor(SIDE_RIGHT, replay_btn.get_path())
 
 
 func _unhandled_input(event) -> void:

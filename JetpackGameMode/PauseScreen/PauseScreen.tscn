@@ -1,30 +1,34 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://b1agagp8llmhl"]
 
-[ext_resource path="res://JetpackGameMode/PauseScreen/PauseScreen.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/PauseScreen/pause_bg_gradient_2.png" type="Texture2D" id=2]
-[ext_resource path="res://Fonts/OrbitronBlack72.font" type="FontFile" id=3]
-[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=4]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=5]
+[ext_resource type="Script" uid="uid://b21l0ju3036pb" path="res://JetpackGameMode/PauseScreen/PauseScreen.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dnlbgdj1gb40l" path="res://JetpackGameMode/PauseScreen/pause_bg_gradient_2.png" id="2"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="3_4iq83"]
+[ext_resource type="Script" uid="uid://c612ii3cx5d1h" path="res://CommonScenes/Button.gd" id="5"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "fade out"
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdj3v"]
+_data = {
+&"fade out": SubResource("1")
 }
 
 [node name="PauseScreen" type="Node2D"]
 process_mode = 3
-script = ExtResource( 1 )
+script = ExtResource("1")
 main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
@@ -32,15 +36,16 @@ level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 [node name="TextureFrame" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+texture = ExtResource("2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-"anims/fade out" = SubResource( 1 )
+libraries = {
+&"": SubResource("AnimationLibrary_sdj3v")
+}
 
 [node name="ButtonsBlock" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
@@ -48,114 +53,107 @@ offset_left = 1282.0
 offset_top = 297.0
 offset_right = 1835.0
 offset_bottom = 297.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+theme = ExtResource("3_4iq83")
 
 [node name="Pause" type="Label" parent="ButtonsBlock"]
+layout_mode = 0
 offset_left = -14.0
 offset_top = -141.0
 offset_right = 277.0
 offset_bottom = -55.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0, 0.960784, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"HeaderLarge"
 text = "PAUSE"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Resume" type="Button" parent="ButtonsBlock"]
 process_mode = 3
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
 offset_right = 433.0
 offset_bottom = 80.0
-custom_minimum_size = Vector2( 0, 80 )
 focus_neighbor_top = NodePath("../Quit")
 focus_neighbor_bottom = NodePath("../Replay")
-theme = ExtResource( 4 )
+theme_type_variation = &"Blue110Button"
 text = "Resume"
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("5")
 
 [node name="Replay" type="Button" parent="ButtonsBlock"]
 process_mode = 3
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
 offset_left = 14.0
 offset_top = 103.0
 offset_right = 447.0
 offset_bottom = 183.0
-custom_minimum_size = Vector2( 0, 80 )
 focus_neighbor_top = NodePath("../Resume")
 focus_neighbor_bottom = NodePath("../LevelSelect")
-theme = ExtResource( 4 )
+theme_type_variation = &"Blue110Button"
 text = "Restart"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ButtonsBlock"]
 process_mode = 3
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
 offset_left = 29.0
 offset_top = 206.0
 offset_right = 462.0
 offset_bottom = 286.0
-custom_minimum_size = Vector2( 0, 80 )
 focus_neighbor_top = NodePath("../Replay")
 focus_neighbor_bottom = NodePath("../Options")
-theme = ExtResource( 4 )
+theme_type_variation = &"Blue110Button"
 text = "Stage Select"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
 [node name="Options" type="Button" parent="ButtonsBlock"]
 process_mode = 3
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
 offset_left = 46.0
 offset_top = 309.0
 offset_right = 479.0
 offset_bottom = 389.0
-custom_minimum_size = Vector2( 0, 80 )
 focus_neighbor_top = NodePath("../LevelSelect")
 focus_neighbor_bottom = NodePath("../QuitMainMenu")
-theme = ExtResource( 4 )
+theme_type_variation = &"Blue110Button"
 text = "Options"
-script = ExtResource( 5 )
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
 [node name="QuitMainMenu" type="Button" parent="ButtonsBlock"]
 process_mode = 3
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
 offset_left = 61.0
 offset_top = 412.0
 offset_right = 494.0
 offset_bottom = 492.0
-custom_minimum_size = Vector2( 0, 80 )
 focus_neighbor_top = NodePath("../Options")
 focus_neighbor_bottom = NodePath("../Quit")
-theme = ExtResource( 4 )
+theme_type_variation = &"Blue110Button"
 text = "Back to Main Menu"
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("5")
 pressed_sfx = "Confirm"
 
 [node name="Quit" type="Button" parent="ButtonsBlock"]
 process_mode = 3
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 0
 offset_left = 78.0
 offset_top = 515.0
 offset_right = 511.0
 offset_bottom = 595.0
-custom_minimum_size = Vector2( 0, 80 )
 focus_neighbor_top = NodePath("../QuitMainMenu")
 focus_neighbor_bottom = NodePath("../Resume")
-theme = ExtResource( 4 )
+theme_type_variation = &"Blue110Button"
 text = "Quit Game"
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("5")
+
 [connection signal="pressed" from="ButtonsBlock/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="ButtonsBlock/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="ButtonsBlock/LevelSelect" to="." method="_on_LevelSelect_pressed"]

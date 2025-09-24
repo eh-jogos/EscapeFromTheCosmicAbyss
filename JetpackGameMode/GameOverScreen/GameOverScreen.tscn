@@ -1,602 +1,554 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=18 format=3 uid="uid://clm413llsf4oj"]
 
-[ext_resource path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" type="Script" id=1]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=2]
-[ext_resource path="res://Fonts/OrbitronMedium30.font" type="FontFile" id=3]
-[ext_resource path="res://Fonts/OrbitronBlack60.font" type="FontFile" id=4]
-[ext_resource path="res://Fonts/OrbitronBlack72.font" type="FontFile" id=5]
-[ext_resource path="res://Fonts/OrbitronBlack30.font" type="FontFile" id=6]
-[ext_resource path="res://CommonScenes/Buttons/BlueScreen110Theme.tres" type="Theme" id=7]
-[ext_resource path="res://CommonScenes/Buttons/icons/home_icon.png" type="Texture2D" id=8]
-[ext_resource path="res://CommonScenes/Button.gd" type="Script" id=9]
-[ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=10]
-[ext_resource path="res://CommonScenes/Buttons/icons/upgrade_icon.png" type="Texture2D" id=11]
-[ext_resource path="res://CommonScenes/Buttons/icons/retry_icon.png" type="Texture2D" id=12]
-[ext_resource path="res://CommonScenes/Buttons/icons/stages_icon.png" type="Texture2D" id=13]
-[ext_resource path="res://Shaders/text_horizontal_gradient_shader.tres" type="Material" id=14]
-[ext_resource path="res://Shaders/shader_text_anim.tres" type="Animation" id=15]
-[ext_resource path="res://JetpackGameMode/GameOverScreen/NotificationCircle.tscn" type="PackedScene" id=16]
+[ext_resource type="Script" uid="uid://cgp3mveixlkg1" path="res://JetpackGameMode/GameOverScreen/GameOverScreen.gd" id="1"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="6_ewckv"]
+[ext_resource type="Texture2D" uid="uid://dhycp662dskcv" path="res://CommonScenes/Buttons/icons/home_icon.png" id="8"]
+[ext_resource type="Script" uid="uid://c612ii3cx5d1h" path="res://CommonScenes/Button.gd" id="9"]
+[ext_resource type="Texture2D" uid="uid://cvqb77o2xcxu2" path="res://CommonScenes/Buttons/icons/upgrade_icon.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://c4frrdb1hcfad" path="res://CommonScenes/Buttons/icons/retry_icon.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cn4qikxlir2g6" path="res://CommonScenes/Buttons/icons/stages_icon.png" id="13"]
+[ext_resource type="Material" uid="uid://cyip8q1bpwrfe" path="res://Shaders/text_horizontal_gradient_shader.tres" id="14"]
+[ext_resource type="Animation" path="res://Shaders/shader_text_anim.tres" id="15"]
+[ext_resource type="PackedScene" uid="uid://35mv0050uo3q" path="res://JetpackGameMode/GameOverScreen/NotificationCircle.tscn" id="16"]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id="1"]
 resource_name = "base"
 length = 0.01
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("GameOver:modulate:a")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("GameOver:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ Vector2( 335, 95 ) ]
+"values": [Vector2(335, 95)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("ResultsContainer/ScoreResults:modulate:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("ResultsContainer/TimeResults:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("ResultsContainer/LapsResults:modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("ResultsContainer/Buttons:modulate:a")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [ 0.0 ]
+"values": [0.0]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id="2"]
 length = 0.5
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 1.0, 0.0 ]
+"values": [1.0, 0.0]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id="3"]
 resource_name = "open"
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [0.0, 1.0]
 }
 tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("GameOver:modulate:a")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
 tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 0.0, 1.0 ]
+"values": [0.0, 1.0]
 }
 tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
 tracks/2/path = NodePath("GameOver:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
 tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.2, 0.4, 0.6 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.2, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [ Vector2( 335, -205 ), Vector2( 335, -205 ), Vector2( 335, -205 ), Vector2( 335, 145 ), Vector2( 335, 95 ) ]
+"values": [Vector2(335, -205), Vector2(335, -205), Vector2(335, -205), Vector2(335, 145), Vector2(335, 95)]
 }
 tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
 tracks/3/path = NodePath("ResultsContainer/ScoreResults:modulate:a")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
 tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.5, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [0.0, 0.0, 1.0]
 }
 tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
 tracks/4/path = NodePath("ResultsContainer/TimeResults:modulate:a")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
 tracks/4/keys = {
-"times": PackedFloat32Array( 0, 0.6, 0.9 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [0.0, 0.0, 1.0]
 }
 tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
 tracks/5/path = NodePath("ResultsContainer/LapsResults:modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
 tracks/5/keys = {
-"times": PackedFloat32Array( 0, 0.6, 0.9 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [0.0, 0.0, 1.0]
 }
 tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
 tracks/6/path = NodePath("ResultsContainer/Buttons:modulate:a")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
 tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
+"times": PackedFloat32Array(0, 0.7, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
+"values": [0.0, 0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2e6bk"]
+_data = {
+&"base": SubResource("1"),
+&"fade out": SubResource("2"),
+&"open": SubResource("3")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rsckw"]
+_data = {
+&"shader_text_anim": ExtResource("15")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cml1h"]
+_data = {
+&"shader_text_anim": ExtResource("15")
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hr5qk"]
+_data = {
+&"shader_text_anim": ExtResource("15")
 }
 
 [node name="GameOverScreen" type="Node2D"]
 process_mode = 3
-script = ExtResource( 1 )
+script = ExtResource("1")
 main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/base = SubResource( 1 )
-"anims/fade out" = SubResource( 2 )
-anims/open = SubResource( 3 )
+libraries = {
+&"": SubResource("AnimationLibrary_2e6bk")
+}
 
 [node name="ColorFrame" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.6 )
+modulate = Color(1, 1, 1, 0.6)
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 1922.0
 offset_bottom = 1082.0
-color = Color( 0.25098, 0.054902, 0.160784, 1 )
+color = Color(0.25098, 0.054902, 0.160784, 1)
 
 [node name="GameOver" type="Label" parent="."]
 offset_left = 335.0
 offset_top = 95.0
-offset_right = 834.0
+offset_right = 835.0
 offset_bottom = 190.0
-scale = Vector2( 2.5, 2.5 )
-mouse_filter = 1
+scale = Vector2(2.5, 2.5)
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 2 )
-theme_override_colors/font_color = Color( 0.815686, 0.192157, 0.243137, 1 )
+mouse_filter = 1
+theme = ExtResource("6_ewckv")
+theme_type_variation = &"HeaderExtraLarge"
+theme_override_colors/font_color = Color(0.815686, 0.192157, 0.243137, 1)
 text = "Game Over"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ResultsContainer" type="VBoxContainer" parent="."]
 offset_top = 330.0
 offset_right = 1920.0
 offset_bottom = 1006.0
 mouse_filter = 0
+theme = ExtResource("6_ewckv")
 theme_override_constants/separation = 50
 alignment = 2
 
 [node name="ScoreResults" type="HBoxContainer" parent="ResultsContainer"]
-offset_top = 198.0
-offset_right = 1920.0
-offset_bottom = 347.0
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="HighScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
-offset_left = 313.0
-offset_right = 739.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 426, 0 )
+custom_minimum_size = Vector2(426, 0)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -2
 
 [node name="PrevHighscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer"]
-offset_right = 426.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Best Score:"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Highscore" type="Label" parent="ResultsContainer/ScoreResults/HighScoreContainer"]
-offset_top = 35.0
-offset_right = 426.0
-offset_bottom = 106.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
 text = "0000"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ScoreContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
-offset_left = 789.0
-offset_right = 1205.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 416, 149 )
+custom_minimum_size = Vector2(416, 149)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -5
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="YourScore" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
-offset_right = 416.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Scored:"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Score" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
-offset_top = 32.0
-offset_right = 416.0
-offset_bottom = 118.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 5 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
+theme_override_font_sizes/font_size = 72
 text = "0000"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HighscoreText" type="Label" parent="ResultsContainer/ScoreResults/ScoreContainer"]
-material = ExtResource( 14 )
-offset_top = 113.0
-offset_right = 416.0
-offset_bottom = 149.0
-mouse_filter = 1
+material = ExtResource("14")
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 6 )
+mouse_filter = 1
+theme_type_variation = &"ThickWhiteText"
 text = "IT'S A NEW HIGHSCORE!"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/ScoreResults/ScoreContainer/HighscoreText"]
+libraries = {
+&"": SubResource("AnimationLibrary_rsckw")
+}
 autoplay = "shader_text_anim"
-anims/shader_text_anim = ExtResource( 15 )
 
 [node name="UpgradeContainer" type="VBoxContainer" parent="ResultsContainer/ScoreResults"]
-offset_left = 1255.0
-offset_right = 1606.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 351, 0 )
+custom_minimum_size = Vector2(351, 0)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -2
 
 [node name="UpgradeText" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer"]
-offset_right = 351.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Upgrade Points:"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="UpgradePoints" type="Label" parent="ResultsContainer/ScoreResults/UpgradeContainer"]
-offset_top = 35.0
-offset_right = 351.0
-offset_bottom = 106.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
 text = "00"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TimeResults" type="HBoxContainer" parent="ResultsContainer"]
-offset_top = 397.0
-offset_right = 1920.0
-offset_bottom = 546.0
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="HighTimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults"]
-offset_left = 514.0
-offset_right = 940.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 426, 149 )
+custom_minimum_size = Vector2(426, 149)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -2
 
 [node name="PrevHighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer"]
-offset_right = 426.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Best Time:"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HighTime" type="Label" parent="ResultsContainer/TimeResults/HighTimeContainer"]
-offset_top = 35.0
-offset_right = 426.0
-offset_bottom = 106.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
 text = "0000"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TimeContainer" type="VBoxContainer" parent="ResultsContainer/TimeResults"]
-offset_left = 990.0
-offset_right = 1406.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 416, 149 )
+custom_minimum_size = Vector2(416, 149)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -5
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="YourTime" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
-offset_right = 416.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Time:"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Time" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
-offset_top = 32.0
-offset_right = 416.0
-offset_bottom = 118.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 5 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
+theme_override_font_sizes/font_size = 72
 text = "0000"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HightimeText" type="Label" parent="ResultsContainer/TimeResults/TimeContainer"]
-material = ExtResource( 14 )
-offset_top = 113.0
-offset_right = 416.0
-offset_bottom = 149.0
-mouse_filter = 1
+material = ExtResource("14")
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 6 )
+mouse_filter = 1
+theme_type_variation = &"ThickWhiteText"
 text = "IT'S A NEW RECORD!"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/TimeResults/TimeContainer/HightimeText"]
+libraries = {
+&"": SubResource("AnimationLibrary_cml1h")
+}
 autoplay = "shader_text_anim"
-anims/shader_text_anim = ExtResource( 15 )
 
 [node name="LapsResults" type="HBoxContainer" parent="ResultsContainer"]
 visible = false
-offset_top = 398.0
-offset_right = 1920.0
-offset_bottom = 547.0
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = 50
 alignment = 1
 
 [node name="HighLapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults"]
-offset_left = 514.0
-offset_right = 940.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 426, 149 )
+custom_minimum_size = Vector2(426, 149)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -2
 
 [node name="PrevHighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer"]
-offset_right = 426.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Best Laps"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HighLaps" type="Label" parent="ResultsContainer/LapsResults/HighLapsContainer"]
-offset_top = 35.0
-offset_right = 426.0
-offset_bottom = 106.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 4 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
 text = "00"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LapsContainer" type="VBoxContainer" parent="ResultsContainer/LapsResults"]
-offset_left = 990.0
-offset_right = 1406.0
-offset_bottom = 149.0
-custom_minimum_size = Vector2( 416, 149 )
+custom_minimum_size = Vector2(416, 149)
+layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = -5
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="YourLaps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
-offset_right = 416.0
-offset_bottom = 37.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 3 )
-theme_override_colors/font_color = Color( 0.443137, 0.443137, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryTitle"
 text = "Laps:"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Laps" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
-offset_top = 32.0
-offset_right = 416.0
-offset_bottom = 118.0
-mouse_filter = 1
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 5 )
-theme_override_colors/font_color = Color( 0.266667, 0.65098, 1, 1 )
+mouse_filter = 1
+theme_type_variation = &"CategoryValue"
+theme_override_font_sizes/font_size = 72
 text = "00"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HighlapsText" type="Label" parent="ResultsContainer/LapsResults/LapsContainer"]
-visible = false
-material = ExtResource( 14 )
-offset_top = 113.0
-offset_right = 416.0
-offset_bottom = 149.0
-mouse_filter = 1
+material = ExtResource("14")
+layout_mode = 2
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 6 )
+mouse_filter = 1
+theme_type_variation = &"ThickWhiteText"
 text = "IT'S A NEW RECORD!"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsContainer/LapsResults/LapsContainer/HighlapsText"]
-anims/shader_text_anim = ExtResource( 15 )
+libraries = {
+&"": SubResource("AnimationLibrary_hr5qk")
+}
 
 [node name="Buttons" type="HBoxContainer" parent="ResultsContainer"]
-offset_top = 596.0
-offset_right = 1920.0
-offset_bottom = 676.0
-custom_minimum_size = Vector2( 0, 80 )
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
 mouse_filter = 0
-theme = ExtResource( 7 )
+theme = ExtResource("6_ewckv")
 alignment = 1
 
 [node name="Quit" type="Button" parent="ResultsContainer/Buttons"]
-offset_left = 342.0
-offset_right = 647.0
-offset_bottom = 80.0
-custom_minimum_size = Vector2( 147, 79 )
+custom_minimum_size = Vector2(147, 79)
+layout_mode = 2
+theme_type_variation = &"Blue110Button"
 text = "Main Menu"
-icon = ExtResource( 8 )
-script = ExtResource( 9 )
+icon = ExtResource("8")
+script = ExtResource("9")
 pressed_sfx = "Confirm"
 
 [node name="LevelSelect" type="Button" parent="ResultsContainer/Buttons"]
-offset_left = 651.0
-offset_right = 1001.0
-offset_bottom = 80.0
-custom_minimum_size = Vector2( 262, 79 )
+custom_minimum_size = Vector2(262, 79)
+layout_mode = 2
+theme_type_variation = &"Blue110Button"
 text = "Stage Select"
-icon = ExtResource( 13 )
-script = ExtResource( 9 )
+icon = ExtResource("13")
+script = ExtResource("9")
 pressed_sfx = "Confirm"
 
 [node name="Upgrade" type="Button" parent="ResultsContainer/Buttons"]
-offset_left = 1005.0
-offset_right = 1264.0
-offset_bottom = 80.0
-custom_minimum_size = Vector2( 192, 79 )
+custom_minimum_size = Vector2(192, 79)
+layout_mode = 2
+theme_type_variation = &"Blue110Button"
 text = "Upgrade"
-icon = ExtResource( 11 )
-script = ExtResource( 9 )
+icon = ExtResource("11")
+script = ExtResource("9")
 pressed_sfx = "Confirm"
 
-[node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource( 16 )]
+[node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource("16")]
+layout_mode = 0
+anchors_preset = 0
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
-offset_left = 1268.0
-offset_right = 1578.0
-offset_bottom = 80.0
-custom_minimum_size = Vector2( 228, 79 )
-theme = ExtResource( 10 )
+custom_minimum_size = Vector2(228, 79)
+layout_mode = 2
+theme_type_variation = &"Red110Button"
 text = "Play Again"
-icon = ExtResource( 12 )
-script = ExtResource( 9 )
+icon = ExtResource("12")
+script = ExtResource("9")
 pressed_sfx = "Confirm"
+
 [connection signal="pressed" from="ResultsContainer/Buttons/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/LevelSelect" to="." method="_on_LevelSelect_pressed"]
 [connection signal="pressed" from="ResultsContainer/Buttons/Upgrade" to="." method="_on_upgrade_pressed"]
