@@ -1,597 +1,193 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=41 format=3 uid="uid://4katwn7fyiaf"]
 
-[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelSelectMenu.gd" type="Script" id=1]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state01.tres" type="Animation" id=2]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state01_transition.tres" type="Animation" id=3]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state02.tres" type="Animation" id=4]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state02_transition.tres" type="Animation" id=5]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state03.tres" type="Animation" id=6]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state03_transition.tres" type="Animation" id=7]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state04.tres" type="Animation" id=8]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state04_transition.tres" type="Animation" id=9]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state05.tres" type="Animation" id=10]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state05_transition.tres" type="Animation" id=11]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state06.tres" type="Animation" id=12]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state06_transition.tres" type="Animation" id=13]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state07.tres" type="Animation" id=14]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state07_transition.tres" type="Animation" id=15]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state08.tres" type="Animation" id=16]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state08_transition.tres" type="Animation" id=17]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state09.tres" type="Animation" id=18]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state09_transition.tres" type="Animation" id=19]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state10.tres" type="Animation" id=20]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state10_transition.tres" type="Animation" id=21]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state11.tres" type="Animation" id=22]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state11_transition.tres" type="Animation" id=23]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/state_animations/state12.tres" type="Animation" id=24]
-[ext_resource path="res://Fonts/OrbitronBlack80.font" type="FontFile" id=25]
-[ext_resource path="res://Fonts/OrbitronMedium67.font" type="FontFile" id=26]
-[ext_resource path="res://Fonts/OrbitronMedium45.font" type="FontFile" id=27]
-[ext_resource path="res://CommonScenes/pallet.png" type="Texture2D" id=28]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" type="Texture2D" id=29]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" type="Texture2D" id=30]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" type="Texture2D" id=31]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/TutorialButton.tscn" type="PackedScene" id=32]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" type="PackedScene" id=33]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" type="Texture2D" id=34]
-[ext_resource path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" type="Texture2D" id=35]
-[ext_resource path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" type="Animation" id=36]
-[ext_resource path="res://CommonScenes/PromptLegends/LegendLevelSelect.tscn" type="PackedScene" id=37]
-[ext_resource path="res://CommonScenes/Buttons/RedScreen110Theme.tres" type="Theme" id=38]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/DemoButton.gd" type="Script" id=39]
-[ext_resource path="res://CommonScenes/LevelSelectMenu/LevelButtons.gd" type="Script" id=40]
+[ext_resource type="Script" uid="uid://bhfm057tkp2s3" path="res://CommonScenes/LevelSelectMenu/LevelSelectMenu.gd" id="1"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state01.tres" id="2"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="2_4t2ab"]
+[ext_resource type="AnimationLibrary" uid="uid://bbexgiuavvnr6" path="res://CommonScenes/LevelSelectMenu/animations/default_library.tres" id="2_evs55"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state01_transition.tres" id="3"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state02.tres" id="4"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state02_transition.tres" id="5"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state03.tres" id="6"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state03_transition.tres" id="7"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state04.tres" id="8"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state04_transition.tres" id="9"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state05.tres" id="10"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state05_transition.tres" id="11"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state06.tres" id="12"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state06_transition.tres" id="13"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state07.tres" id="14"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state07_transition.tres" id="15"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state08.tres" id="16"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state08_transition.tres" id="17"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state09.tres" id="18"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state09_transition.tres" id="19"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state10.tres" id="20"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state10_transition.tres" id="21"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state11.tres" id="22"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state11_transition.tres" id="23"]
+[ext_resource type="Animation" path="res://CommonScenes/LevelSelectMenu/animations/state_animations/state12.tres" id="24"]
+[ext_resource type="Texture2D" uid="uid://2ht2e63b7xu0" path="res://CommonScenes/pallet.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://b1oglffun832p" path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_bg.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://xkafg5cp27ay" path="res://CommonScenes/LevelSelectMenu/pngs/levels_path.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://cidpu3ym7cshh" path="res://CommonScenes/LevelSelectMenu/pngs/levels_path_8.png" id="31"]
+[ext_resource type="PackedScene" path="res://CommonScenes/LevelSelectMenu/TutorialButton.tscn" id="32"]
+[ext_resource type="PackedScene" path="res://CommonScenes/LevelSelectMenu/LevelButton.tscn" id="33"]
+[ext_resource type="Texture2D" uid="uid://cu0f3ito8430n" path="res://CommonScenes/UpgradeMenu/sprites/scanline_dark_colorburn.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://bx61imqrsmlna" path="res://CommonScenes/UpgradeMenu/sprites/scanline_bright_overlay.png" id="35"]
+[ext_resource type="Animation" path="res://CommonScenes/UpgradeMenu/1800x1080_scanline_animation.tres" id="36"]
+[ext_resource type="PackedScene" uid="uid://db84exjrnhbmt" path="res://CommonScenes/PromptLegends/LegendLevelSelect.tscn" id="37"]
+[ext_resource type="Script" uid="uid://cgkts326alf1j" path="res://CommonScenes/LevelSelectMenu/DemoButton.gd" id="39"]
+[ext_resource type="Script" uid="uid://tvhst83pc6tw" path="res://CommonScenes/LevelSelectMenu/LevelButtons.gd" id="40"]
 
-[sub_resource type="Animation" id=1]
-length = 0.01
-tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 960, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 1080 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 967, -1500 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 953, -1500 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("Map:modulate:a")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ScanlineFx:modulate:a")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ 0.0 ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a675l"]
+_data = {
+&"state01": ExtResource("2"),
+&"state01_transition": ExtResource("3"),
+&"state02": ExtResource("4"),
+&"state02_transition": ExtResource("5"),
+&"state03": ExtResource("6"),
+&"state03_transition": ExtResource("7"),
+&"state04": ExtResource("8"),
+&"state04_transition": ExtResource("9"),
+&"state05": ExtResource("10"),
+&"state05_transition": ExtResource("11"),
+&"state06": ExtResource("12"),
+&"state06_transition": ExtResource("13"),
+&"state07": ExtResource("14"),
+&"state07_transition": ExtResource("15"),
+&"state08": ExtResource("16"),
+&"state08_transition": ExtResource("17"),
+&"state09": ExtResource("18"),
+&"state09_transition": ExtResource("19"),
+&"state10": ExtResource("20"),
+&"state10_transition": ExtResource("21"),
+&"state11": ExtResource("22"),
+&"state11_transition": ExtResource("23"),
+&"state12": ExtResource("24")
 }
 
-[sub_resource type="Animation" id=2]
-tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ), Vector2( 0, 1080 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, 0 ), Vector2( 60, 0 ), Vector2( 960, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ), Vector2( 967, -28 ), Vector2( 967, 150 ), Vector2( 967, -1500 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3, 0.5, 0.7, 0.8 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, -28 ), Vector2( 60, -28 ), Vector2( 953, -28 ), Vector2( 953, 150 ), Vector2( 953, -1500 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Map:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.0 ]
-}
-tracks/8/type = "method"
-tracks/8/path = NodePath("LegendLevelSelect")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "fade_out"
-} ]
-}
-
-[sub_resource type="Animation" id=3]
-length = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, 0 ), Vector2( 60, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1800, 1080 ), Vector2( 1800, 1080 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 60, -28 ), Vector2( 60, -28 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0 ),
-"transitions": PackedFloat32Array( 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Map:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 1.0, 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 0.3 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ 0.9, 0.9 ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/path = NodePath("BaseColorFrame:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 1080 ), Vector2( 0, 1080 ), Vector2( 1800, 1080 ), Vector2( 1800, 1080 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("BaseColorFrame:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PackedFloat32Array( 0, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 960, 0 ), Vector2( 960, 0 ), Vector2( 60, 0 ), Vector2( 60, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("ColorFrame1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 967, -1500 ), Vector2( 967, -1500 ), Vector2( 967, 150 ), Vector2( 967, -28 ), Vector2( 1845, -28 ), Vector2( 1845, -28 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("ColorFrame3:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PackedFloat32Array( 0, 0.2, 0.3, 0.5, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 953, -1500 ), Vector2( 953, -1500 ), Vector2( 953, 150 ), Vector2( 953, -28 ), Vector2( 60, -28 ), Vector2( 60, -28 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("ColorFrame1:size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ), Vector2( 15, 1114 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("ColorFrame3:size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PackedFloat32Array( 0, 1 ),
-"transitions": PackedFloat32Array( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 15, 1114 ), Vector2( 15, 1114 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("Map:modulate:a")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PackedFloat32Array( 0, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 1.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("ScanlineFx:modulate:a")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PackedFloat32Array( 0, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0, 0.9 ]
-}
-tracks/8/type = "method"
-tracks/8/path = NodePath("LegendLevelSelect")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PackedFloat32Array( 0.7 ),
-"transitions": PackedFloat32Array( 1 ),
-"values": [ {
-"args": [  ],
-"method": "fade_in"
-} ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("DemoButton:modulate")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PackedFloat32Array( 0, 0.7, 1 ),
-"transitions": PackedFloat32Array( 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k431d"]
+_data = {
+&"loop": ExtResource("36")
 }
 
 [node name="LevelSelect" type="CanvasLayer"]
 process_mode = 3
 layer = 4
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": ExtResource("2_evs55")
+}
 autoplay = "base"
-anims/base = SubResource( 1 )
-anims/close = SubResource( 2 )
-anims/fade = SubResource( 3 )
-anims/open = SubResource( 4 )
 
 [node name="BaseColorFrame" type="ColorRect" parent="."]
-modulate = Color( 1, 1, 1, 0.6 )
-offset_left = 60.0
-offset_right = 1860.0
+modulate = Color(1, 1, 1, 0.6)
+offset_left = 960.0
+offset_right = 960.0
 offset_bottom = 1080.0
-color = Color( 0.266667, 0.65098, 1, 0.6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+color = Color(0.266667, 0.65098, 1, 0.6)
 
 [node name="Map" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = ExtResource("2_4t2ab")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Map"]
-anims/state01 = ExtResource( 2 )
-anims/state01_transition = ExtResource( 3 )
-anims/state02 = ExtResource( 4 )
-anims/state02_transition = ExtResource( 5 )
-anims/state03 = ExtResource( 6 )
-anims/state03_transition = ExtResource( 7 )
-anims/state04 = ExtResource( 8 )
-anims/state04_transition = ExtResource( 9 )
-anims/state05 = ExtResource( 10 )
-anims/state05_transition = ExtResource( 11 )
-anims/state06 = ExtResource( 12 )
-anims/state06_transition = ExtResource( 13 )
-anims/state07 = ExtResource( 14 )
-anims/state07_transition = ExtResource( 15 )
-anims/state08 = ExtResource( 16 )
-anims/state08_transition = ExtResource( 17 )
-anims/state09 = ExtResource( 18 )
-anims/state09_transition = ExtResource( 19 )
-anims/state10 = ExtResource( 20 )
-anims/state10_transition = ExtResource( 21 )
-anims/state11 = ExtResource( 22 )
-anims/state11_transition = ExtResource( 23 )
-anims/state12 = ExtResource( 24 )
+libraries = {
+&"": SubResource("AnimationLibrary_a675l")
+}
 
 [node name="LevelNumber" type="Label" parent="Map"]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 0
 offset_left = 76.0
 offset_top = 40.0
 offset_right = 1846.0
 offset_bottom = 135.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 25 )
-theme_override_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
+mouse_filter = 1
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 80
 text = "Stage 12"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+horizontal_alignment = 1
 
 [node name="LevelTitle" type="Label" parent="Map"]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 0
 offset_left = 76.0
 offset_top = 197.0
 offset_right = 1846.0
 offset_bottom = 280.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 26 )
-theme_override_colors/font_color = Color( 0, 0.960784, 1, 0.95 )
-text = "WHatever, Wherever, whenever!"
-align = 1
+mouse_filter = 1
+theme_type_variation = &"TitleText"
+text = "Whatever, Wherever, whenever!"
+horizontal_alignment = 1
 
 [node name="Highscore" type="Label" parent="Map"]
-modulate = Color( 1, 1, 1, 0.9 )
+modulate = Color(1, 1, 1, 0.9)
+layout_mode = 0
 offset_left = 75.0
 offset_top = 126.0
 offset_right = 1845.0
 offset_bottom = 182.0
-mouse_filter = 1
 size_flags_vertical = 0
-theme_override_fonts/font = ExtResource( 27 )
-theme_override_colors/font_color = Color( 0.0117647, 0.87451, 0.917647, 0.8 )
+mouse_filter = 1
+theme_type_variation = &"HeaderSmall"
 text = "Highscore: %s"
-align = 1
+horizontal_alignment = 1
 
 [node name="pallet" type="Sprite2D" parent="Map/Highscore"]
 visible = false
-position = Vector2( 1090.42, 284.744 )
-texture = ExtResource( 28 )
+position = Vector2(1090.42, 284.744)
+texture = ExtResource("28")
 
 [node name="levels_path_bg" type="Sprite2D" parent="Map"]
-modulate = Color( 1, 1, 1, 0.9 )
-position = Vector2( 965, 660 )
-texture = ExtResource( 29 )
+modulate = Color(1, 1, 1, 0.9)
+position = Vector2(965, 660)
+texture = ExtResource("29")
 region_enabled = true
-region_rect = Rect2( 240, 60, 1800, 720 )
+region_rect = Rect2(240, 60, 1800, 720)
 
 [node name="levels_path_locked" type="Sprite2D" parent="Map"]
-modulate = Color( 0.239216, 0.0784314, 0.298039, 1 )
-position = Vector2( 40, 365.868 )
-texture = ExtResource( 30 )
+modulate = Color(0.239216, 0.0784314, 0.298039, 1)
+position = Vector2(40, 365.868)
+texture = ExtResource("30")
 centered = false
 
 [node name="levels_path_unlocked" type="Sprite2D" parent="Map"]
-modulate = Color( 0, 0.960784, 1, 1 )
-position = Vector2( 40, 365.868 )
-texture = ExtResource( 30 )
+modulate = Color(0, 0.960784, 1, 1)
+position = Vector2(40, 365.868)
+texture = ExtResource("30")
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 146, 600 )
+region_rect = Rect2(0, 0, 146, 600)
 
 [node name="level_8_path_fix" type="Sprite2D" parent="Map/levels_path_unlocked"]
 visible = false
-modulate = Color( 0, 0.960784, 1, 1 )
-position = Vector2( 1037, 255 )
-texture = ExtResource( 31 )
+modulate = Color(0, 0.960784, 1, 1)
+position = Vector2(1037, 255)
+texture = ExtResource("31")
 centered = false
 region_enabled = true
-region_rect = Rect2( 1036, 258, 128, 153 )
+region_rect = Rect2(1036, 258, 128, 153)
 
 [node name="LevelButtons" type="Control" parent="Map"]
+anchors_preset = 0
 offset_left = 162.0
 offset_top = 507.0
 offset_right = 202.0
 offset_bottom = 547.0
-script = ExtResource( 40 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("40")
 buy_game_button_path = NodePath("../../DemoButton")
 
-[node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource( 32 )]
+[node name="TutorialButton" parent="Map/LevelButtons" instance=ExtResource("32")]
+layout_mode = 0
 offset_left = -50.0
 offset_top = 220.0
 offset_right = 30.0
@@ -603,7 +199,8 @@ focus_neighbor_bottom = NodePath("../LevelButton1")
 focus_mode = 2
 level_name = "How to Play"
 
-[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton1" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 focus_neighbor_left = NodePath("../TutorialButton")
 focus_neighbor_top = NodePath("../TutorialButton")
 focus_neighbor_right = NodePath("../LevelButton2")
@@ -613,7 +210,8 @@ disabled = false
 level_num = 1
 level_name = "Jetpack for your life!"
 
-[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton2" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 226.0
 offset_top = -116.0
 offset_right = 274.0
@@ -621,11 +219,11 @@ offset_bottom = -68.0
 focus_neighbor_left = NodePath("../LevelButton1")
 focus_neighbor_right = NodePath("../LevelButton3")
 focus_neighbor_bottom = NodePath("../LevelButton3")
-focus_mode = 0
 level_num = 2
 level_name = "Pew pew!"
 
-[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton3" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 429.0
 offset_top = 196.0
 offset_right = 477.0
@@ -633,22 +231,22 @@ offset_bottom = 244.0
 focus_neighbor_left = NodePath("../LevelButton2")
 focus_neighbor_top = NodePath("../LevelButton2")
 focus_neighbor_right = NodePath("../LevelButton4")
-focus_mode = 0
 level_num = 3
 level_name = "Double Trouble!"
 
-[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton4" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 507.0
 offset_top = 54.0
 offset_right = 555.0
 offset_bottom = 102.0
 focus_neighbor_left = NodePath("../LevelButton3")
 focus_neighbor_right = NodePath("../LevelButton5")
-focus_mode = 0
 level_num = 4
 level_name = "Triple Trouble!"
 
-[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton5" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 653.0
 offset_top = 39.0
 offset_right = 701.0
@@ -656,11 +254,11 @@ offset_bottom = 87.0
 focus_neighbor_left = NodePath("../LevelButton4")
 focus_neighbor_top = NodePath("../LevelButton6")
 focus_neighbor_right = NodePath("../LevelButton6")
-focus_mode = 0
 level_num = 5
 level_name = "What was that sound?"
 
-[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton6" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 832.0
 offset_top = -106.0
 offset_right = 880.0
@@ -668,11 +266,11 @@ offset_bottom = -58.0
 focus_neighbor_left = NodePath("../LevelButton5")
 focus_neighbor_right = NodePath("../LevelButton7")
 focus_neighbor_bottom = NodePath("../LevelButton7")
-focus_mode = 0
 level_num = 6
 level_name = "Dash like you mean it!"
 
-[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton7" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 1029.0
 offset_top = 110.0
 offset_right = 1077.0
@@ -681,11 +279,11 @@ focus_neighbor_left = NodePath("../LevelButton6")
 focus_neighbor_top = NodePath("../LevelButton6")
 focus_neighbor_right = NodePath("../LevelButton8")
 focus_neighbor_bottom = NodePath("../LevelButton8")
-focus_mode = 0
 level_num = 7
 level_name = "I feel like I'm being watched!"
 
-[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton8" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 963.0
 offset_top = 231.0
 offset_right = 1011.0
@@ -693,11 +291,11 @@ offset_bottom = 279.0
 focus_neighbor_left = NodePath("../LevelButton7")
 focus_neighbor_top = NodePath("../LevelButton7")
 focus_neighbor_right = NodePath("../LevelButton9")
-focus_mode = 0
 level_num = 8
 level_name = "It's right behind me, isn't it?"
 
-[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton9" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 1256.0
 offset_top = 213.0
 offset_right = 1304.0
@@ -705,11 +303,11 @@ offset_bottom = 261.0
 focus_neighbor_left = NodePath("../LevelButton8")
 focus_neighbor_right = NodePath("../LevelButton10")
 focus_neighbor_bottom = NodePath("../LevelButton10")
-focus_mode = 0
 level_num = 9
 level_name = "Almost there!"
 
-[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton10" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 1244.0
 offset_top = 303.0
 offset_right = 1292.0
@@ -717,80 +315,70 @@ offset_bottom = 351.0
 focus_neighbor_left = NodePath("../LevelButton9")
 focus_neighbor_top = NodePath("../LevelButton9")
 focus_neighbor_right = NodePath("../LevelButton11")
-focus_mode = 0
 level_num = 10
 level_name = "Are we there yet?"
 
-[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton11" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 1363.0
 offset_top = 385.0
 offset_right = 1411.0
 offset_bottom = 433.0
 focus_neighbor_left = NodePath("../LevelButton10")
 focus_neighbor_right = NodePath("../LevelButton12")
-focus_mode = 0
 level_num = 11
 level_name = "The Calm Before the Storm!"
 
-[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource( 33 )]
+[node name="LevelButton12" parent="Map/LevelButtons" instance=ExtResource("33")]
+layout_mode = 0
 offset_left = 1467.0
 offset_top = 375.0
 offset_right = 1515.0
 offset_bottom = 423.0
 focus_neighbor_left = NodePath("../LevelButton11")
 focus_neighbor_right = NodePath("../TutorialButton")
-focus_mode = 0
 level_num = 12
 level_name = "If that was the 'Calm', what is the 'Storm'?!"
 
 [node name="ScanlineFx" type="Node2D" parent="."]
-modulate = Color( 1, 1, 1, 0.9 )
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+modulate = Color(1, 1, 1, 0)
 
 [node name="ScanlineDark" type="Sprite2D" parent="ScanlineFx"]
-position = Vector2( 960, 540 )
-texture = ExtResource( 34 )
+position = Vector2(960, 540)
+texture = ExtResource("34")
 region_enabled = true
-region_rect = Rect2( 0, 0, 1800, 1080 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 1800, 1080)
 
 [node name="ScanlineBright" type="Sprite2D" parent="ScanlineFx"]
-modulate = Color( 1, 1, 1, 0.2 )
-position = Vector2( 960, 20 )
-texture = ExtResource( 35 )
+modulate = Color(1, 1, 1, 0.2)
+position = Vector2(960, 20)
+texture = ExtResource("35")
 region_enabled = true
-region_rect = Rect2( 0, 0, 1800, 40 )
-__meta__ = {
-"_edit_lock_": true
-}
+region_rect = Rect2(0, 0, 1800, 40)
 
 [node name="ScanlinePlayer" type="AnimationPlayer" parent="ScanlineFx"]
+libraries = {
+&"": SubResource("AnimationLibrary_k431d")
+}
 autoplay = "loop"
-anims/loop = ExtResource( 36 )
 
 [node name="ColorFrame1" type="ColorRect" parent="."]
-offset_left = 1845.0
-offset_top = -28.0
-offset_right = 1860.0
-offset_bottom = 1086.0
-color = Color( 0, 0.924107, 1, 1 )
+offset_left = 967.0
+offset_top = -1500.0
+offset_right = 982.0
+offset_bottom = -386.0
+color = Color(0, 0.924107, 1, 1)
 
 [node name="ColorFrame3" type="ColorRect" parent="."]
-offset_left = 60.0
-offset_top = -28.0
-offset_right = 75.0
-offset_bottom = 1086.0
-color = Color( 0, 0.924107, 1, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+offset_left = 953.0
+offset_top = -1500.0
+offset_right = 968.0
+offset_bottom = -386.0
+color = Color(0, 0.924107, 1, 1)
 
 [node name="DemoButton" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 70)
+anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -799,16 +387,13 @@ offset_left = -206.0
 offset_top = -157.981
 offset_right = 206.0
 offset_bottom = -87.9813
-custom_minimum_size = Vector2( 0, 70 )
 focus_neighbor_left = NodePath("../Map/LevelButtons/TutorialButton")
 focus_neighbor_right = NodePath("../Map/LevelButtons/LevelButton5")
 focus_neighbor_bottom = NodePath("../Map/LevelButtons/LevelButton5")
-theme = ExtResource( 38 )
+theme = ExtResource("2_4t2ab")
+theme_type_variation = &"Red110Button"
 text = "Unlock Full Game"
-script = ExtResource( 39 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("39")
 _prompt_path = NodePath("../LegendLevelSelect")
 
-[node name="LegendLevelSelect" parent="." instance=ExtResource( 37 )]
+[node name="LegendLevelSelect" parent="." instance=ExtResource("37")]

@@ -1,10 +1,45 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dsbl7clxwhs5a"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://dsbl7clxwhs5a"]
 
 [ext_resource type="FontFile" uid="uid://bmlyf4q6msmkq" path="res://Fonts/Orbitron-Bold.ttf" id="1_g87uw"]
 [ext_resource type="FontFile" uid="uid://dryi7q7l5toou" path="res://Fonts/Orbitron-Regular.ttf" id="1_h8t7h"]
 [ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="1_xa0xr"]
 [ext_resource type="FontFile" uid="uid://6cy3fc4ouoca" path="res://Fonts/Orbitron-Medium.ttf" id="2_g7pfm"]
 [ext_resource type="StyleBox" uid="uid://ciafbsvbys0on" path="res://CommonScenes/default_style_box_empty.tres" id="3_g7pfm"]
+[ext_resource type="Texture2D" uid="uid://ds6ejeu4exvnq" path="res://CommonScenes/Buttons/textures/slanted_red_button_normal.png" id="5_yhqg5"]
+[ext_resource type="Texture2D" uid="uid://dcdb48veefff" path="res://CommonScenes/Buttons/textures/slanted_red_button_hover.png" id="6_717ba"]
+[ext_resource type="Texture2D" uid="uid://d254vfg00fpl4" path="res://CommonScenes/Buttons/textures/slanted_red_button_pressed.png" id="7_6x406"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4liw"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_yhqg5")
+region_rect = Rect2(0, 0, 498, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enl75"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("6_717ba")
+region_rect = Rect2(0, 0, 498, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfvci"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("5_yhqg5")
+region_rect = Rect2(0, 0, 498, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4k0n"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("7_6x406")
+region_rect = Rect2(0, 0, 498, 110)
 
 [resource]
 default_font = ExtResource("1_h8t7h")
@@ -20,6 +55,9 @@ HeaderLarge/fonts/font = ExtResource("1_xa0xr")
 HeaderMedium/colors/font_color = Color(0, 0.960784, 1, 1)
 HeaderMedium/font_sizes/font_size = 60
 HeaderMedium/fonts/font = ExtResource("1_xa0xr")
+HeaderSmall/colors/font_color = Color(0.0117647, 0.87451, 0.917647, 0.8)
+HeaderSmall/font_sizes/font_size = 45
+HeaderSmall/fonts/font = ExtResource("2_g7pfm")
 MediumText/base_type = &"Label"
 MediumText/colors/font_color = Color(0, 0.960784, 1, 1)
 MediumText/font_sizes/font_size = 45
@@ -66,6 +104,23 @@ PureTextMinorButton/styles/hover = ExtResource("3_g7pfm")
 PureTextMinorButton/styles/hover_pressed = ExtResource("3_g7pfm")
 PureTextMinorButton/styles/normal = ExtResource("3_g7pfm")
 PureTextMinorButton/styles/pressed = ExtResource("3_g7pfm")
+Red110Button/base_type = &"Button"
+Red110Button/colors/font_color = Color(0, 0.960784, 1, 1)
+Red110Button/colors/font_disabled_color = Color(1, 0.227451, 0.172549, 0.47)
+Red110Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Red110Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Red110Button/constants/h_separation = 15
+Red110Button/font_sizes/font_size = 30
+Red110Button/fonts/font = ExtResource("1_g87uw")
+Red110Button/styles/disabled = SubResource("StyleBoxTexture_a4liw")
+Red110Button/styles/focus = ExtResource("3_g7pfm")
+Red110Button/styles/hover = SubResource("StyleBoxTexture_enl75")
+Red110Button/styles/normal = SubResource("StyleBoxTexture_yfvci")
+Red110Button/styles/pressed = SubResource("StyleBoxTexture_c4k0n")
 ThickText/base_type = &"Label"
 ThickText/font_sizes/font_size = 60
 ThickText/fonts/font = ExtResource("1_xa0xr")
+TitleText/base_type = &"Label"
+TitleText/colors/font_color = Color(0, 0.960784, 1, 0.95)
+TitleText/font_sizes/font_size = 67
+TitleText/fonts/font = ExtResource("2_g7pfm")
