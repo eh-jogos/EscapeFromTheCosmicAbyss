@@ -26,6 +26,54 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BodyOutline:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fall_to_rise"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"falling"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-480, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BodyOutline:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-480, 0)]
+}
 
 [sub_resource type="Animation" id="53"]
 length = 0.1
@@ -62,8 +110,8 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -86,8 +134,8 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -161,8 +209,8 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["fall_to_rise"]
+"update": 1,
+"values": [&"fall_to_rise"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -173,8 +221,8 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["fall_to_rise"]
+"update": 1,
+"values": [&"fall_to_rise"]
 }
 
 [sub_resource type="Animation" id="55"]
@@ -214,8 +262,8 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -238,8 +286,8 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -256,7 +304,6 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="56"]
 length = 0.2
-capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -314,8 +361,8 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rise_to_fall"]
+"update": 1,
+"values": [&"rise_to_fall"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -326,20 +373,8 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rise_to_fall"]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = false
-tracks/6/path = NodePath("BodyAnimator:playback/play")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"update": 2,
-"values": ["[stop]"]
+"update": 1,
+"values": [&"rise_to_fall"]
 }
 
 [sub_resource type="Animation" id="57"]
@@ -402,8 +437,8 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rising"]
+"update": 1,
+"values": [&"rising"]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -414,8 +449,8 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rising"]
+"update": 1,
+"values": [&"rising"]
 }
 
 [resource]

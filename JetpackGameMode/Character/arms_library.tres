@@ -38,6 +38,54 @@ tracks/2/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BodyOutline/ArmBackOutline:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"falling"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BodyOutline/ArmFrontOutline:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"falling"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Body/ArmBack:animation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"falling"]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/ArmFront:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"falling"]
+}
 
 [sub_resource type="Animation" id="58"]
 length = 0.1
@@ -146,8 +194,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -158,8 +206,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -170,8 +218,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -182,8 +230,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 
 [sub_resource type="Animation" id="59"]
@@ -293,8 +341,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["fall_to_rise"]
+"update": 1,
+"values": [&"fall_to_rise"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -305,8 +353,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["fall_to_rise"]
+"update": 1,
+"values": [&"fall_to_rise"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -317,8 +365,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["fall_to_rise"]
+"update": 1,
+"values": [&"fall_to_rise"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -329,8 +377,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["fall_to_rise"]
+"update": 1,
+"values": [&"fall_to_rise"]
 }
 
 [sub_resource type="Animation" id="60"]
@@ -441,8 +489,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -453,8 +501,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -465,8 +513,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -477,8 +525,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["falling"]
+"update": 1,
+"values": [&"falling"]
 }
 
 [sub_resource type="Animation" id="61"]
@@ -588,8 +636,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["reloading"]
+"update": 1,
+"values": [&"reloading"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -600,8 +648,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["reloading"]
+"update": 1,
+"values": [&"reloading"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -612,8 +660,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["reloading"]
+"update": 1,
+"values": [&"reloading"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -624,8 +672,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["reloading"]
+"update": 1,
+"values": [&"reloading"]
 }
 
 [sub_resource type="Animation" id="62"]
@@ -735,8 +783,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rise_to_fall"]
+"update": 1,
+"values": [&"rise_to_fall"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -747,8 +795,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rise_to_fall"]
+"update": 1,
+"values": [&"rise_to_fall"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -759,8 +807,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rise_to_fall"]
+"update": 1,
+"values": [&"rise_to_fall"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -771,8 +819,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rise_to_fall"]
+"update": 1,
+"values": [&"rise_to_fall"]
 }
 
 [sub_resource type="Animation" id="63"]
@@ -883,8 +931,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rising"]
+"update": 1,
+"values": [&"rising"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -895,8 +943,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rising"]
+"update": 1,
+"values": [&"rising"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -907,8 +955,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rising"]
+"update": 1,
+"values": [&"rising"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -919,8 +967,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["rising"]
+"update": 1,
+"values": [&"rising"]
 }
 
 [sub_resource type="Animation" id="64"]
@@ -1031,8 +1079,8 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["shooting"]
+"update": 1,
+"values": [&"shooting"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -1043,8 +1091,8 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["shooting"]
+"update": 1,
+"values": [&"shooting"]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -1055,8 +1103,8 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["shooting"]
+"update": 1,
+"values": [&"shooting"]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -1067,8 +1115,8 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": ["shooting"]
+"update": 1,
+"values": [&"shooting"]
 }
 
 [resource]
