@@ -70,25 +70,25 @@ func _get_new_event_of_type(event_type: int, new_input_code:int, new_axis_value:
 	return new_event
 
 
-func _get_new_key_event(keycode: int) -> InputEventKey:
+func _get_new_key_event(keycode: Key) -> InputEventKey:
 	var new_event: = InputEventKey.new()
 	new_event.keycode = keycode
 	return new_event
 
 
-func _get_new_mouse_button_event(button_index: int) -> InputEventMouseButton:
+func _get_new_mouse_button_event(button_index: MouseButton) -> InputEventMouseButton:
 	var new_event: = InputEventMouseButton.new()
 	new_event.button_index = button_index
 	return new_event
 
 
-func _get_new_joypad_button_event(button_index: int) -> InputEventJoypadButton:
+func _get_new_joypad_button_event(button_index: JoyButton) -> InputEventJoypadButton:
 	var new_event: = InputEventJoypadButton.new()
 	new_event.button_index = button_index
 	return new_event
 
 
-func _get_new_joypad_axis_event(axis: int, axis_value: float) -> InputEventJoypadMotion:
+func _get_new_joypad_axis_event(axis: JoyAxis, axis_value: float) -> InputEventJoypadMotion:
 	var new_event: = InputEventJoypadMotion.new()
 	new_event.axis = axis
 	new_event.axis_value = axis_value

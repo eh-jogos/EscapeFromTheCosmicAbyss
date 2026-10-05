@@ -49,14 +49,14 @@ func _input(event):
 
 ### Public Methods ------------------------
 
-func set_active_mouse_mode(value: int) -> void:
+func set_active_mouse_mode(value: Input.MouseMode) -> void:
 	if is_valid_mouse_moude(value):
 		active_mouse_mode = value
 	else:
 		push_invalid_mouse_mode_error(value)
 
 
-func set_inactive_mouse_mode(value: int) -> void:
+func set_inactive_mouse_mode(value: Input.MouseMode) -> void:
 	if is_valid_mouse_moude(value):
 		inactive_mouse_mode = value
 	else:
