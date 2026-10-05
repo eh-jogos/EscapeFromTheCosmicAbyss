@@ -1,8 +1,8 @@
-[gd_scene load_steps=861 format=3 uid="uid://bwomdomdf8yos"]
+[gd_scene load_steps=859 format=3 uid="uid://bwomdomdf8yos"]
 
 [ext_resource type="Script" uid="uid://dt0urybtit0qy" path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="2"]
 [ext_resource type="AnimationLibrary" uid="uid://br6213xdjbhnb" path="res://JetpackGameMode/Screens/Tutorial/tip_selector_library.tres" id="2_208pd"]
+[ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="3_ue60i"]
 [ext_resource type="FontFile" uid="uid://6cy3fc4ouoca" path="res://Fonts/Orbitron-Medium.ttf" id="4"]
 [ext_resource type="Texture2D" uid="uid://dkinmxn65feal" path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/Body/rise_to_fall_body_outline0000.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://mivvd5ssnudn" path="res://JetpackGameMode/Character/OutlineAnimations/Rise_to_Fall/Body/rise_to_fall_body_outline0001.png" id="6"]
@@ -750,7 +750,6 @@
 [ext_resource type="Texture2D" uid="uid://dsawdklecd7do" path="res://JetpackGameMode/HUD/pngs/player_marker.png" id="747"]
 [ext_resource type="Texture2D" uid="uid://dbgp50cnvl1cx" path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" id="748"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/HUD/BarrierContainer.tscn" id="749"]
-[ext_resource type="FontFile" uid="uid://bmlyf4q6msmkq" path="res://Fonts/Orbitron-Bold.ttf" id="750"]
 [ext_resource type="Texture2D" uid="uid://d08qjaw8sgobu" path="res://JetpackGameMode/Character/Fxs/jetpack_particle.png" id="751"]
 [ext_resource type="Material" uid="uid://daql6e02ue18d" path="res://JetpackGameMode/Screens/Tutorial/tutorial_jetpack_particles.tres" id="752"]
 [ext_resource type="PackedScene" uid="uid://b5p7jvfyoos25" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="753"]
@@ -758,6 +757,7 @@
 [ext_resource type="Gradient" path="res://JetpackGameMode/Character/Fxs/shield_dissolve_linear_gradient.tres" id="755"]
 [ext_resource type="Shader" uid="uid://dygs7vnmqnt7d" path="res://Shaders/shield.gdshader" id="756"]
 [ext_resource type="Script" uid="uid://b7yib52p7yhag" path="res://JetpackGameMode/Character/Shield.gd" id="757"]
+[ext_resource type="AnimationLibrary" uid="uid://bvhx21jj6dnf4" path="res://JetpackGameMode/Screens/Tutorial/prompt_library.tres" id="758_208pd"]
 
 [sub_resource type="Curve2D" id="46"]
 _data = {
@@ -4705,7 +4705,7 @@ gradient = ExtResource("755")
 
 [sub_resource type="ShaderMaterial" id="82"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.011
+shader_parameter/torus_thickness = 0.013541
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4756,7 +4756,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="83"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.011
+shader_parameter/torus_thickness = 0.013541
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4807,7 +4807,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="86"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.011
+shader_parameter/torus_thickness = 0.013541
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -8006,33 +8006,13 @@ _data = {
 &"shoot": SubResource("Animation_65cph")
 }
 
-[sub_resource type="Animation" id="114"]
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate:a")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0, 0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_n2ncv"]
-_data = {
-&"blinking": SubResource("114")
-}
-
 [node name="TutorialTipScreen" type="Node2D"]
 process_mode = 3
 script = ExtResource("1")
 level_num = NodePath("Tip#0/LevelNum")
 level_title = NodePath("Tip#0/LevelTitle")
 tip_selector = NodePath("TipSelector")
-_debug_tip_number = 4
+_debug_tip_number = 1
 
 [node name="TipSelector" type="AnimationPlayer" parent="."]
 libraries = {
@@ -8055,6 +8035,7 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_ue60i")
 
 [node name="LevelNum" type="Label" parent="Tip#0"]
 layout_mode = 0
@@ -8063,7 +8044,8 @@ offset_right = 1920.0
 offset_bottom = 123.0
 size_flags_vertical = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("2")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 80
 text = "Level Num"
 horizontal_alignment = 1
 
@@ -8074,7 +8056,7 @@ offset_right = 1920.0
 offset_bottom = 225.0
 size_flags_vertical = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("4")
+theme_type_variation = &"TitleText"
 text = "Level Title"
 horizontal_alignment = 1
 
@@ -8089,7 +8071,7 @@ alignment = 1
 [node name="Label 2" type="Label" parent="Tip#0/HBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("4")
+theme_type_variation = &"MediumText"
 text = "Press"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -8103,7 +8085,7 @@ input_action = "boost"
 [node name="Label 3" type="Label" parent="Tip#0/HBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("4")
+theme_type_variation = &"MediumText"
 text = "to use your jetpack. "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -8113,13 +8095,14 @@ max_lines_visible = 10
 layout_mode = 0
 offset_left = 71.0
 offset_top = 847.0
-offset_right = 1857.0
+offset_right = 1876.0
 offset_bottom = 987.0
 size_flags_vertical = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("4")
+theme_type_variation = &"MediumText"
 text = " Try to fly around a bit without falling or rising too much, avoiding the waves at the top and at the bottom"
 horizontal_alignment = 1
+autowrap_mode = 3
 max_lines_visible = 10
 
 [node name="Path2D" type="Path2D" parent="Tip#0"]
@@ -8266,6 +8249,7 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_ue60i")
 
 [node name="Label 2" type="Label" parent="Tip#1"]
 layout_mode = 0
@@ -8275,7 +8259,7 @@ offset_right = 1857.0
 offset_bottom = 136.0
 size_flags_vertical = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("4")
+theme_type_variation = &"MediumText"
 text = "The Lord of the Abyss will try to capture you by summoning tentacles periodically."
 horizontal_alignment = 1
 max_lines_visible = 10
@@ -8288,7 +8272,7 @@ offset_right = 1857.0
 offset_bottom = 1019.0
 size_flags_vertical = 0
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("4")
+theme_type_variation = &"MediumText"
 text = "Try to avoid the next 3 tentacles."
 horizontal_alignment = 1
 max_lines_visible = 10
@@ -8521,6 +8505,7 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_ue60i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tip#2"]
 layout_mode = 0
@@ -8815,8 +8800,8 @@ offset_right = 464.0
 offset_bottom = 172.0
 size_flags_vertical = 0
 mouse_filter = 1
+theme_type_variation = &"MediumText"
 theme_override_colors/font_color = Color(0, 0.960784, 1, 1)
-theme_override_fonts/font = ExtResource("4")
 text = "0000"
 
 [node name="Tip#3" type="Control" parent="."]
@@ -8830,6 +8815,7 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_ue60i")
 
 [node name="Label 2" type="Label" parent="Tip#3"]
 layout_mode = 0
@@ -9296,6 +9282,7 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_ue60i")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Tip#4"]
 layout_mode = 0
@@ -9824,18 +9811,13 @@ offset_right = 1537.0
 offset_bottom = 1060.0
 scale = Vector2(1.25, 1.25)
 size_flags_vertical = 0
+theme = ExtResource("3_ue60i")
 alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer"]
-libraries = {
-&"": SubResource("AnimationLibrary_n2ncv")
-}
-autoplay = "blinking"
 
 [node name="Press" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("750")
+theme_type_variation = &"Bold40Text"
 text = "Press"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -9848,10 +9830,16 @@ input_action = "boost"
 [node name="Continue" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 mouse_filter = 1
-theme_override_fonts/font = ExtResource("750")
+theme_type_variation = &"Bold40Text"
 text = "to continue."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HBoxContainer"]
+libraries = {
+&"": ExtResource("758_208pd")
+}
+autoplay = "blinking"
 
 [editable path="Tip#2/Mask/Path2D/PathFollow2D/Player/OverheatBar"]
 [editable path="Tip#3/Mask/Path2D/PathFollow2D/Player/OverheatBar1"]

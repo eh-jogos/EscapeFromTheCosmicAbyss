@@ -18,11 +18,13 @@ var is_showing_tip: = false
 @onready var _level_num = get_node(level_num)
 @onready var _level_title = get_node(level_title)
 @onready var _tip_selector := get_node(tip_selector) as AnimationPlayer
+@onready var _promtp_animator: AnimationPlayer = $HBoxContainer/AnimationPlayer
 
 # TODO Fix Node errors
 func _ready():
 	game = get_parent().get_parent()
 	
+	#_promtp_animator.play("blinking")
 	_tip_selector.assigned_animation = "TipScreen_0"
 	_tip_selector.seek(0, true)
 	set_process_input(false)
@@ -46,6 +48,7 @@ func show_tip():
 	show()
 	game.hud_animator.play("fade_out")
 	load_next_tip()
+
 
 func _input(event):
 	if event.is_action_pressed("boost"):

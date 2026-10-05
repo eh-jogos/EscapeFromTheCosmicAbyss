@@ -100,23 +100,13 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "animation"
+tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/8/path = NodePath("Tip#0/Path2D/Tip#0Animator")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"clips": PackedStringArray("[stop]", "blinking"),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Tip#0/Path2D/Tip#0Animator")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -124,10 +114,24 @@ tracks/9/keys = {
 "method": &"play"
 }]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"stop"
+}]
+}
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/10/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -141,7 +145,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
+tracks/11/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -155,24 +159,10 @@ tracks/11/keys = {
 tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
+tracks/12/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"stop"
-}]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -281,23 +271,13 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "animation"
+tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/8/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"clips": PackedStringArray("[stop]", "blinking"),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -305,10 +285,24 @@ tracks/9/keys = {
 "method": &"play"
 }]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tip#0/Path2D/Tip#0Animator")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"stop"
+}]
+}
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Tip#0/Path2D/Tip#0Animator")
+tracks/10/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -322,7 +316,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
+tracks/11/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -336,24 +330,10 @@ tracks/11/keys = {
 tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
+tracks/12/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"stop"
-}]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -462,23 +442,13 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "animation"
+tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/8/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"clips": PackedStringArray("[stop]", "blinking"),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -486,10 +456,24 @@ tracks/9/keys = {
 "method": &"play"
 }]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"stop"
+}]
+}
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/10/path = NodePath("Tip#0/Path2D/Tip#0Animator")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -503,7 +487,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Tip#0/Path2D/Tip#0Animator")
+tracks/11/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -517,24 +501,10 @@ tracks/11/keys = {
 tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
+tracks/12/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"stop"
-}]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -643,23 +613,13 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "animation"
+tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/8/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"clips": PackedStringArray("[stop]", "blinking"),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -667,10 +627,24 @@ tracks/9/keys = {
 "method": &"play"
 }]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"stop"
+}]
+}
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/10/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -684,7 +658,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
+tracks/11/path = NodePath("Tip#0/Path2D/Tip#0Animator")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -698,24 +672,10 @@ tracks/11/keys = {
 tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Tip#0/Path2D/Tip#0Animator")
+tracks/12/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"stop"
-}]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -824,23 +784,13 @@ tracks/7/keys = {
 "update": 0,
 "values": [0.0, 0.0]
 }
-tracks/8/type = "animation"
+tracks/8/type = "method"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("HBoxContainer/AnimationPlayer")
+tracks/8/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"clips": PackedStringArray("[stop]", "blinking"),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/9/type = "method"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("Tip#4/Mask/Path2D/Tip#4Animator")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -848,10 +798,24 @@ tracks/9/keys = {
 "method": &"play"
 }]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [false],
+"method": &"stop"
+}]
+}
 tracks/10/type = "method"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Tip#1/Mask/Path2D/Tip#1Animator")
+tracks/10/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -865,7 +829,7 @@ tracks/10/keys = {
 tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Tip#2/Mask/Path2D/Tip#2Animator")
+tracks/11/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
@@ -879,24 +843,10 @@ tracks/11/keys = {
 tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Tip#3/Mask/Path2D/Tip#3Animator")
+tracks/12/path = NodePath("Tip#0/Path2D/Tip#0Animator")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [false],
-"method": &"stop"
-}]
-}
-tracks/13/type = "method"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("Tip#0/Path2D/Tip#0Animator")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
