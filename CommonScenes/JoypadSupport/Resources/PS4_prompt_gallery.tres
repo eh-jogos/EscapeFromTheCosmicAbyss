@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="PromptGalleryJoypad" load_steps=28 format=3 uid="uid://cel2sy4gde8u6"]
+
+[ext_resource type="Texture2D" uid="uid://btkq00o7bx3af" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick.png" id="1_any8k"]
+[ext_resource type="Texture2D" uid="uid://bssluvcmw1oyv" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick.png" id="2_jm2vm"]
+[ext_resource type="Texture2D" uid="uid://l3dys2byt2k3" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Down.png" id="3_vo8b1"]
+[ext_resource type="Texture2D" uid="uid://cyregljtdkkva" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Left.png" id="4_1ubw3"]
+[ext_resource type="Texture2D" uid="uid://dg4eebyhtnqqe" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Right.png" id="5_knif5"]
+[ext_resource type="Texture2D" uid="uid://bbwwftlfqkjno" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Up.png" id="6_4ci0v"]
+[ext_resource type="Texture2D" uid="uid://b7m52w2bx4tqh" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Down.png" id="7_u1vxp"]
+[ext_resource type="Texture2D" uid="uid://eholi6sl5vlv" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Left.png" id="8_tx8gk"]
+[ext_resource type="Texture2D" uid="uid://cp5nvcbyfk4pg" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Right.png" id="9_7rojq"]
+[ext_resource type="Texture2D" uid="uid://670vn0r450os" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Up.png" id="10_ya7xl"]
+[ext_resource type="Texture2D" uid="uid://djifusal1herf" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad.png" id="11_jwj8d"]
+[ext_resource type="Texture2D" uid="uid://b8nmc88riqaj7" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Touch_Pad.png" id="12_41c7q"]
+[ext_resource type="Texture2D" uid="uid://5hrt2gauoims" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Cross.png" id="13_w5cbm"]
+[ext_resource type="Texture2D" uid="uid://c2wkq4mwtbdbs" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Circle.png" id="14_jwlr3"]
+[ext_resource type="Texture2D" uid="uid://n00tnvmlgsck" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Share.png" id="15_8cu77"]
+[ext_resource type="Texture2D" uid="uid://dgx2r6ucpfbsg" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Down.png" id="16_ck850"]
+[ext_resource type="Texture2D" uid="uid://besyite15j1j8" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Left.png" id="17_nlq3a"]
+[ext_resource type="Texture2D" uid="uid://b0xgvveemelev" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Right.png" id="18_45s4q"]
+[ext_resource type="Texture2D" uid="uid://b8m5o6h5bfj76" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Up.png" id="19_ge5ir"]
+[ext_resource type="Texture2D" uid="uid://dgob8x30dpkdp" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Options.png" id="20_e3wox"]
+[ext_resource type="Texture2D" uid="uid://c4g7k8rx3imv0" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Square.png" id="21_a17y6"]
+[ext_resource type="Texture2D" uid="uid://d32kexat17c6x" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Triangle.png" id="22_xb74b"]
+[ext_resource type="Texture2D" uid="uid://dxeavuhcgmaqc" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_L1.png" id="24_fdq8g"]
+[ext_resource type="Texture2D" uid="uid://bi23jkmb4q23j" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_R1.png" id="25_yafb8"]
+[ext_resource type="Texture2D" uid="uid://bbcdfafb3t4nx" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_L2.png" id="26_wng1y"]
+[ext_resource type="Script" uid="uid://dsf0s7g468qe2" path="res://CommonScenes/JoypadSupport/Resources/PromptGalleryJoypad.gd" id="27_any8k"]
+[ext_resource type="Texture2D" uid="uid://dhhgdjovhwpsj" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_R2.png" id="27_f3x4m"]
+
+[resource]
+script = ExtResource("27_any8k")
+_face_button_a = ExtResource("13_w5cbm")
+_face_button_b = ExtResource("14_jwlr3")
+_face_button_x = ExtResource("21_a17y6")
+_face_button_y = ExtResource("22_xb74b")
+_face_button_dpad_up = ExtResource("19_ge5ir")
+_face_button_dpad_right = ExtResource("18_45s4q")
+_face_button_dpad_down = ExtResource("16_ck850")
+_face_button_dpad_left = ExtResource("17_nlq3a")
+_face_button_back = ExtResource("15_8cu77")
+_face_button_start = ExtResource("20_e3wox")
+_face_button_touchpad = ExtResource("12_41c7q")
+_shoulder_button_left = ExtResource("24_fdq8g")
+_shoulder_trigger_left = ExtResource("26_wng1y")
+_shoulder_button_right = ExtResource("25_yafb8")
+_shoulder_trigger_right = ExtResource("27_f3x4m")
+_analog_button_left = ExtResource("1_any8k")
+_analog_button_right = ExtResource("2_jm2vm")
+_analog_left_stick_up = ExtResource("6_4ci0v")
+_analog_left_stick_right = ExtResource("5_knif5")
+_analog_left_stick_down = ExtResource("3_vo8b1")
+_analog_left_stick_left = ExtResource("4_1ubw3")
+_analog_right_stick_up = ExtResource("10_ya7xl")
+_analog_right_stick_right = ExtResource("9_7rojq")
+_analog_right_stick_down = ExtResource("7_u1vxp")
+_analog_right_stick_left = ExtResource("8_tx8gk")
+_extra_dpad = ExtResource("11_jwj8d")
+metadata/_custom_type_script = "uid://dsf0s7g468qe2"
