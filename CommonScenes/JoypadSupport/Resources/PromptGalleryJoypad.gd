@@ -1,7 +1,7 @@
 class_name PromptGalleryJoypad
-extends Resource
+extends PromptGallery
 
-enum ExtraPrompts {
+enum CustomPrompts {
 	DPAD_NEUTRAL,
 	LEFT_STICK_UP,
 	LEFT_STICK_RIGHT,
@@ -51,19 +51,27 @@ enum ExtraPrompts {
 @export var _extra_dpad: Texture2D = null
 
 
-var JOY_AXIS_MAP: Dictionary[int, Texture2D] = {
-	JOY_AXIS_LEFT_X = Texture2D.new(),
-	JOY_AXIS_LEFT_Y = Texture2D.new(),
-	JOY_AXIS_RIGHT_X = Texture2D.new(),
-	JOY_AXIS_RIGHT_Y = Texture2D.new(),
-	JOY_AXIS_TRIGGER_LEFT = Texture2D.new(),
-	JOY_AXIS_TRIGGER_RIGHT = Texture2D.new(),
-}
+func get_texture_for(event: InputEvent) -> Texture2D:
+	var value: Texture2D = null
+	if event is InputEventJoypadButton:
+		value = _get_button_texture_for(event)
+	elif event is InputEventJoypadMotion:
+		value = _get_axis_texture_for(event)
+	else:
+		push_error("This PromptGallery can't handle events of type: %s | gallery file: %s"%[
+			event, resource_path
+		])
+	return value
 
 
-func get_button_texture_for(joypad_code: int) -> Texture2D:
+func get_texture_for_custom_prompt(custom_key: CustomPrompts) -> Texture2D:
+	var value: Texture2D = _get_customized_texture_for(custom_key)
+	return value
+
+
+func _get_button_texture_for(event: InputEventJoypadButton) -> Texture2D:
 	var value: Texture2D
-	match joypad_code:
+	match event.button_index:
 		JOY_BUTTON_A:
 			value = _face_button_a
 		JOY_BUTTON_B:
@@ -97,14 +105,16 @@ func get_button_texture_for(joypad_code: int) -> Texture2D:
 		JOY_BUTTON_TOUCHPAD:
 			value = _face_button_touchpad
 		_:
-			push_error("Unindentfied JOY_BUTTON_ constant: %s"%[joypad_code])
+			push_error("Unindentfied JOY_BUTTON_ constant: %s | gallery file: %s"%[
+					event.button_index, resource_path
+			])
 	return value
 
 
-func get_axis_texture_for(axis_event: InputEventJoypadMotion) -> Texture2D:
+func _get_axis_texture_for(event: InputEventJoypadMotion) -> Texture2D:
 	var value: Texture2D = null
-	var direction: int = signi(axis_event.axis_value)
-	match axis_event.axis:
+	var direction: int = signi(int(event.axis_value))
+	match event.axis:
 		JOY_AXIS_LEFT_X:
 			if direction == 1:
 				value = _analog_left_stick_right
@@ -138,32 +148,36 @@ func get_axis_texture_for(axis_event: InputEventJoypadMotion) -> Texture2D:
 		JOY_AXIS_TRIGGER_RIGHT:
 			value = _shoulder_trigger_right
 		_:
-			push_error("Unindentfied JOY_AXIS_ constant: %s"%[axis_event.axis])
+			push_error("Unindentfied JOY_AXIS_ constant: %s | gallery file: %s"%[
+					event.axis, resource_path
+			])
 	return value
 
 
-func get_extra_texture_for(extra_code: ExtraPrompts) -> Texture2D:
+func _get_customized_texture_for(custom_code: CustomPrompts) -> Texture2D:
 	var value: Texture2D = null
-	match extra_code:
-		ExtraPrompts.DPAD_NEUTRAL:
+	match custom_code:
+		CustomPrompts.DPAD_NEUTRAL:
 			value = _extra_dpad
-		ExtraPrompts.LEFT_STICK_UP:
+		CustomPrompts.LEFT_STICK_UP:
 			value = _analog_left_stick_up
-		ExtraPrompts.LEFT_STICK_RIGHT:
+		CustomPrompts.LEFT_STICK_RIGHT:
 			value = _analog_left_stick_right
-		ExtraPrompts.LEFT_STICK_DOWN:
+		CustomPrompts.LEFT_STICK_DOWN:
 			value = _analog_left_stick_down
-		ExtraPrompts.LEFT_STICK_LEFT:
+		CustomPrompts.LEFT_STICK_LEFT:
 			value = _analog_left_stick_left
-		ExtraPrompts.RIGHT_STICK_UP:
+		CustomPrompts.RIGHT_STICK_UP:
 			value = _analog_right_stick_up
-		ExtraPrompts.RIGHT_STICK_RIGHT:
+		CustomPrompts.RIGHT_STICK_RIGHT:
 			value = _analog_right_stick_right
-		ExtraPrompts.RIGHT_STICK_DOWN:
+		CustomPrompts.RIGHT_STICK_DOWN:
 			value = _analog_right_stick_down
-		ExtraPrompts.RIGHT_STICK_LEFT:
+		CustomPrompts.RIGHT_STICK_LEFT:
 			value = _analog_right_stick_left
 		_:
-			push_error("Unindentfied ExtraPrompt enum value: %s"%[extra_code])
+			push_error("Unindentfied ExtraPrompt enum value: %s | gallery file: %s"%[
+					custom_code, resource_path
+			])
 	return value
 	
