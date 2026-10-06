@@ -38,10 +38,11 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		_handle_mouse_input(event)
 	
-	if event is InputEventJoypadButton and event.is_pressed():
-		_handle_joypad_button_input(event)
-
-
+	if (
+			event is InputEventJoypadButton and event.is_pressed()
+			or event is InputEventJoypadMotion and event.is_pressed()
+	):
+		_handle_joypad_input(event)
 
 ### ---------------------------------------
 
@@ -60,8 +61,16 @@ func _handle_mouse_input(mouse_event: InputEventMouseButton) -> void:
 	_show_prompt_or_text(JoypadSupport.prompts_mouse, mouse_event.button_index)
 
 
-func _handle_joypad_button_input(pad_event: InputEventJoypadButton) -> void:
-	_show_prompt_or_text(JoypadSupport.prompts_joypad, pad_event.button_index)
+func _handle_joypad_input(pad_event: InputEvent) -> void:
+	_show_prompt_or_text_using_gallery(JoypadSupport.gallery_joypad, pad_event)
+
+
+func _show_prompt_or_text_using_gallery(gallery: PromptGallery, event: InputEvent) -> void:
+	_instruction_label.hide()
+	_test_prompt.texture = gallery.get_texture_for(event)
+	_test_label.text = ""
+	if _test_prompt.texture == null:
+		_test_label.text = JoypadSupport.get_fallback_string_for(event)
 
 
 func _show_prompt_or_text(prompts: ResourcePreloader, keycode: int) -> void:

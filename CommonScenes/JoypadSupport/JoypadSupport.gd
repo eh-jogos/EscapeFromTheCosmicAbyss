@@ -39,9 +39,9 @@ enum Modes {
 # public variables
 @onready var prompts_keyboard: ResourcePreloader = get_node("Keyboard")
 @onready var prompts_mouse: ResourcePreloader = get_node("Mouse")
-@onready var prompts_joypad: ResourcePreloader = get_node("JoypadIdentifier/Xbox")
+var gallery_joypad: PromptGalleryJoypad = null
 
-# private variables
+# privat variables
 var _listen_mode = Modes.NONE
 
 var _accept_event: = JS_InputMapAction.new("ui_accept", 
@@ -63,6 +63,8 @@ var _swapped_cancel_event = JS_InputMapAction.new("ui_cancel",
 ### Built in Engine Methods ---------------
 
 func _ready() -> void:
+	gallery_joypad = _joypad_identifier.get_fallback_joypad_gallery()
+	
 	if not get_autodetect():
 		update_joypad_prompts_manually()
 	
@@ -193,7 +195,7 @@ func was_ui_accept_manually_swapped() -> bool:
 
 func update_joypad_prompts_manually() -> void:
 	_handle_swap_ui_accept_cancel()
-	prompts_joypad = _joypad_identifier.get_joypad_prompts()
+	gallery_joypad = _joypad_identifier.get_joypad_promp_gallery()
 	emit_signal("joypad_manually_changed")
 
 
@@ -222,8 +224,27 @@ func are_ui_accept_and_cancel_swapped() -> bool:
 	return are_swapped
 
 
-func get_joypad_button_prompt_for(button_index: String) -> Texture2D:
-	var prompt_texture: Texture2D = _get_prompt_for(prompts_joypad, button_index)
+func get_fallback_string_for(event: InputEvent) -> String:
+	var fallback_string: = ""
+	
+	if event is InputEventKey:
+		fallback_string = OS.get_keycode_string(event.key_label)
+	elif event is InputEventMouseButton:
+		fallback_string = "Mouse Button %s"%[event.button_index]
+	elif event is InputEventJoypadButton:
+		fallback_string = "Button %s"%[event.button_index]
+	elif event is InputEventJoypadMotion:
+		fallback_string = "Axis %s"%[event.axis]
+	else:
+		var msg: String = "unsupported input event: %s"%[event]
+		push_error(msg)
+	
+	return fallback_string
+
+
+
+func get_joypad_button_prompt_for(event: InputEvent) -> Texture2D:
+	var prompt_texture: Texture2D = _get_prompt_texture_for(gallery_joypad, event)
 	return prompt_texture
 
 
@@ -253,11 +274,18 @@ func _set_joypad(device: int, p_is_connected: bool) -> void:
 	if p_is_connected:
 		_joypad_identifier.set_joypad_type_for(device)
 		_handle_swap_ui_accept_cancel()
-		prompts_joypad = _joypad_identifier.get_joypad_prompts()
+		gallery_joypad = _joypad_identifier.get_joypad_prompt_gallery()
 		emit_signal("joypad_connected")
 	else:
 		_joypad_identifier.reset_joypad_type()
 		emit_signal("joypad_disconnected")
+
+
+func _get_prompt_texture_for(gallery: PromptGallery, event: InputEvent) -> Texture2D:
+	var texture: Texture2D = gallery.get_texture_for(event)
+	if texture == null:
+		push_error("Can't find texture for event %s in %s"%[event,gallery.resource_path])
+	return texture
 
 
 func _get_prompt_for(loader: ResourcePreloader, index: String) -> Texture2D:

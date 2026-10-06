@@ -1,10 +1,13 @@
-[gd_scene load_steps=178 format=3 uid="uid://cp20rmg6cov8t"]
+[gd_scene load_steps=104 format=3 uid="uid://cp20rmg6cov8t"]
 
 [ext_resource type="Texture2D" uid="uid://bylt87j1e8nk7" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_6.png" id="1"]
 [ext_resource type="Script" uid="uid://mpdqdh0h71ph" path="res://CommonScenes/JoypadSupport/PressAnyInput.gd" id="2"]
 [ext_resource type="Script" uid="uid://5ngnvv3wog38" path="res://CommonScenes/JoypadSupport/JoypadSupport.gd" id="3"]
+[ext_resource type="Resource" uid="uid://cel2sy4gde8u6" path="res://CommonScenes/JoypadSupport/Resources/PS4_prompt_gallery.tres" id="3_owwjy"]
 [ext_resource type="Texture2D" uid="uid://cjsyfof30uuth" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_0.png" id="4"]
+[ext_resource type="Resource" uid="uid://suudij0gjmtu" path="res://CommonScenes/JoypadSupport/Resources/XOne_prompt_gallery.tres" id="4_4jx41"]
 [ext_resource type="Texture2D" uid="uid://bf1ngl7uqlwoq" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_1.png" id="5"]
+[ext_resource type="Resource" uid="uid://y8ofpvf6iiu0" path="res://CommonScenes/JoypadSupport/Resources/switch_prompt_gallery.tres" id="5_58dc1"]
 [ext_resource type="Texture2D" uid="uid://cptpxk3nkh8wc" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_2.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://csuhffm2oj7mo" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_3.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://bu25fkik0mm8m" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_4.png" id="8"]
@@ -90,87 +93,10 @@
 [ext_resource type="Texture2D" uid="uid://bduolmeoxbyk7" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_Y.png" id="90"]
 [ext_resource type="Texture2D" uid="uid://b1enlf1rdawhv" path="res://CommonScenes/JoypadSupport/Prompts/Keyboard/Keyboard_Black_Z.png" id="91"]
 [ext_resource type="Texture2D" uid="uid://d0hbrtrtslpro" path="res://CommonScenes/JoypadSupport/Prompts/Mouse/Keyboard_Black_Mouse_Right.png" id="92"]
-[ext_resource type="Texture2D" uid="uid://h3w075ymnvrh" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_X.png" id="93"]
-[ext_resource type="Texture2D" uid="uid://b0xgvveemelev" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Right.png" id="94"]
-[ext_resource type="Texture2D" uid="uid://dguhyuwhc4kji" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Square.png" id="95"]
-[ext_resource type="Texture2D" uid="uid://d1c6a6wity0c3" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Y.png" id="96"]
 [ext_resource type="Script" uid="uid://cdke1ykkf7ao4" path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_JoypadIdentifier.gd" id="97"]
-[ext_resource type="Texture2D" uid="uid://bce4qcb8p4ag0" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick.png" id="98"]
-[ext_resource type="Texture2D" uid="uid://c7vdnwrv8m8gh" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LT.png" id="99"]
-[ext_resource type="Texture2D" uid="uid://lt2e21kp7pi6" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Minus.png" id="100"]
-[ext_resource type="Texture2D" uid="uid://4iudbwwnowft" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Plus.png" id="101"]
-[ext_resource type="Texture2D" uid="uid://dqq0vgoai3nst" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_RB.png" id="102"]
 [ext_resource type="Script" uid="uid://dnx32ulybb8l6" path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_InputMapProfiles.gd" id="103"]
-[ext_resource type="Texture2D" uid="uid://bpt03h7f60yh8" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick.png" id="104"]
-[ext_resource type="Texture2D" uid="uid://c4gnad8t7x4f" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_RT.png" id="105"]
-[ext_resource type="Texture2D" uid="uid://djoaocu21n2fb" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_LB.png" id="106"]
-[ext_resource type="Texture2D" uid="uid://btkq00o7bx3af" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick.png" id="107"]
-[ext_resource type="Texture2D" uid="uid://dgob8x30dpkdp" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Options.png" id="108"]
-[ext_resource type="Texture2D" uid="uid://bu0njaqk8pk45" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick.png" id="109"]
-[ext_resource type="Texture2D" uid="uid://1fjrkuthfbv1" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Right.png" id="110"]
-[ext_resource type="Texture2D" uid="uid://b8m5o6h5bfj76" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Up.png" id="111"]
-[ext_resource type="Texture2D" uid="uid://dhw8tqfhq6i33" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Up.png" id="112"]
-[ext_resource type="Texture2D" uid="uid://bwkf2rujnbc7p" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad.png" id="113"]
-[ext_resource type="Texture2D" uid="uid://dfxcullj8o2ni" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Left.png" id="114"]
-[ext_resource type="Texture2D" uid="uid://c2wkq4mwtbdbs" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Circle.png" id="115"]
-[ext_resource type="Texture2D" uid="uid://bi23jkmb4q23j" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_R1.png" id="116"]
-[ext_resource type="Texture2D" uid="uid://cxmulxkkqntxh" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_A.png" id="117"]
-[ext_resource type="Texture2D" uid="uid://t21q4fpwo3a5" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Up.png" id="118"]
-[ext_resource type="Texture2D" uid="uid://ddc406ckngunt" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Y.png" id="119"]
-[ext_resource type="Texture2D" uid="uid://d2t3gqonf86ok" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Menu.png" id="120"]
-[ext_resource type="Texture2D" uid="uid://dfbe7gg3jjg41" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_RB.png" id="121"]
-[ext_resource type="Texture2D" uid="uid://cuao5kus8b8vq" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_RT.png" id="122"]
-[ext_resource type="Texture2D" uid="uid://bssluvcmw1oyv" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick.png" id="123"]
-[ext_resource type="Texture2D" uid="uid://cphuyatfs32vk" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Left.png" id="124"]
-[ext_resource type="Texture2D" uid="uid://bhqeyu85sihh2" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Windows.png" id="125"]
-[ext_resource type="Texture2D" uid="uid://dqkcbjds87gva" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick.png" id="126"]
-[ext_resource type="Texture2D" uid="uid://chhl5un1f8mi" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_X.png" id="127"]
 [ext_resource type="Script" uid="uid://okq1clkeuekk" path="res://CommonScenes/JoypadSupport/ComponentScripts/JS_Config.gd" id="128"]
-[ext_resource type="Texture2D" uid="uid://bbwwftlfqkjno" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Up.png" id="129"]
-[ext_resource type="Texture2D" uid="uid://b4n6onstevijy" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LB.png" id="130"]
-[ext_resource type="Texture2D" uid="uid://d32kexat17c6x" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Triangle.png" id="131"]
-[ext_resource type="Texture2D" uid="uid://7tm1j0xwr622" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_B.png" id="132"]
-[ext_resource type="Texture2D" uid="uid://dyk3r0h6mejhi" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad.png" id="133"]
-[ext_resource type="Texture2D" uid="uid://dhhgdjovhwpsj" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_R2.png" id="134"]
-[ext_resource type="Texture2D" uid="uid://cwj36a2qufriw" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Down.png" id="135"]
-[ext_resource type="Texture2D" uid="uid://ckshcnqv2dwrj" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_LT.png" id="136"]
-[ext_resource type="Texture2D" uid="uid://c4g7k8rx3imv0" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Square.png" id="137"]
-[ext_resource type="Texture2D" uid="uid://besyite15j1j8" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Left.png" id="138"]
-[ext_resource type="Texture2D" uid="uid://dgx2r6ucpfbsg" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad_Down.png" id="139"]
-[ext_resource type="Texture2D" uid="uid://bhd6ghf0qo5hp" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Right.png" id="140"]
-[ext_resource type="Texture2D" uid="uid://b8nmc88riqaj7" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Touch_Pad.png" id="141"]
-[ext_resource type="Texture2D" uid="uid://djifusal1herf" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Dpad.png" id="142"]
-[ext_resource type="Texture2D" uid="uid://dxeavuhcgmaqc" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_L1.png" id="143"]
-[ext_resource type="Texture2D" uid="uid://eholi6sl5vlv" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Left.png" id="144"]
-[ext_resource type="Texture2D" uid="uid://bbcdfafb3t4nx" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_L2.png" id="145"]
-[ext_resource type="Texture2D" uid="uid://bg3wo0l6itpo4" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_B.png" id="146"]
-[ext_resource type="Texture2D" uid="uid://5hrt2gauoims" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Cross.png" id="147"]
-[ext_resource type="Texture2D" uid="uid://n00tnvmlgsck" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Share.png" id="148"]
-[ext_resource type="Texture2D" uid="uid://sjmfy1jno53m" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Down.png" id="149"]
-[ext_resource type="Texture2D" uid="uid://c6sqr3jt534j5" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_A.png" id="150"]
-[ext_resource type="Texture2D" uid="uid://l3dys2byt2k3" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Down.png" id="152"]
-[ext_resource type="Texture2D" uid="uid://b7m52w2bx4tqh" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Down.png" id="153"]
-[ext_resource type="Texture2D" uid="uid://cyregljtdkkva" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Left.png" id="154"]
-[ext_resource type="Texture2D" uid="uid://670vn0r450os" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Up.png" id="155"]
-[ext_resource type="Texture2D" uid="uid://dg4eebyhtnqqe" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Left_Stick_Right.png" id="156"]
-[ext_resource type="Texture2D" uid="uid://cp5nvcbyfk4pg" path="res://CommonScenes/JoypadSupport/Prompts/PS4/PS4_Right_Stick_Right.png" id="157"]
-[ext_resource type="Texture2D" uid="uid://4ubrsun14lko" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Left.png" id="158"]
-[ext_resource type="Texture2D" uid="uid://db87svryhnfno" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Right.png" id="159"]
-[ext_resource type="Texture2D" uid="uid://cub3pl1gljljv" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Left.png" id="160"]
-[ext_resource type="Texture2D" uid="uid://de1gtwuynp4hs" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Left.png" id="161"]
-[ext_resource type="Texture2D" uid="uid://bh13yuwl2e8d" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Left.png" id="162"]
-[ext_resource type="Texture2D" uid="uid://jo5mqeoj1gug" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Up.png" id="163"]
-[ext_resource type="Texture2D" uid="uid://boigclaaj0sft" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Up.png" id="164"]
-[ext_resource type="Texture2D" uid="uid://b0i0fx4k07bp5" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Right.png" id="165"]
-[ext_resource type="Texture2D" uid="uid://dic7dof3uj067" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Right.png" id="166"]
-[ext_resource type="Texture2D" uid="uid://bem6fb1ifg0lo" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Down.png" id="167"]
-[ext_resource type="Texture2D" uid="uid://cg18172fmtxi1" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Down.png" id="168"]
-[ext_resource type="Texture2D" uid="uid://clridc6dmvm0w" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Down.png" id="169"]
-[ext_resource type="Texture2D" uid="uid://wdb8q63xwh3i" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Up.png" id="170"]
-[ext_resource type="Texture2D" uid="uid://ck0pv6xktys51" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Up.png" id="171"]
-[ext_resource type="Texture2D" uid="uid://bk0fuiobw5n5k" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Down.png" id="172"]
 [ext_resource type="Theme" uid="uid://dsbl7clxwhs5a" path="res://CommonScenes/TentativeMainTheme.tres" id="172_4jx41"]
-[ext_resource type="Texture2D" uid="uid://u1g86e38a1rn" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Right.png" id="173"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "base"
@@ -294,18 +220,6 @@ _data = {
 layer = 100
 script = ExtResource("3")
 
-[node name="JoypadIdentifier" type="Node" parent="."]
-script = ExtResource("97")
-
-[node name="Playstation" type="ResourcePreloader" parent="JoypadIdentifier"]
-resources = [PackedStringArray("0", "0|-1", "0|1", "1", "10", "11", "12", "13", "14", "15", "1|-1", "1|1", "2", "2|-1", "2|1", "3", "3|-1", "3|1", "4", "5", "6", "6|1", "7", "7|1", "8", "9", "Dpad", "Screenshot"), [ExtResource("147"), ExtResource("154"), ExtResource("156"), ExtResource("115"), ExtResource("141"), ExtResource("108"), ExtResource("111"), ExtResource("139"), ExtResource("138"), ExtResource("94"), ExtResource("129"), ExtResource("152"), ExtResource("137"), ExtResource("144"), ExtResource("157"), ExtResource("131"), ExtResource("155"), ExtResource("153"), ExtResource("143"), ExtResource("116"), ExtResource("145"), ExtResource("145"), ExtResource("134"), ExtResource("134"), ExtResource("107"), ExtResource("123"), ExtResource("142"), ExtResource("148")]]
-
-[node name="Xbox" type="ResourcePreloader" parent="JoypadIdentifier"]
-resources = [PackedStringArray("0", "0|-1", "0|1", "1", "10", "11", "12", "13", "14", "15", "1|-1", "1|1", "2", "2|-1", "2|1", "3", "3|-1", "3|1", "4", "5", "6", "6|1", "7", "7|1", "8", "9", "Dpad"), [ExtResource("150"), ExtResource("162"), ExtResource("159"), ExtResource("132"), ExtResource("125"), ExtResource("120"), ExtResource("112"), ExtResource("135"), ExtResource("124"), ExtResource("110"), ExtResource("170"), ExtResource("172"), ExtResource("93"), ExtResource("161"), ExtResource("165"), ExtResource("119"), ExtResource("164"), ExtResource("168"), ExtResource("106"), ExtResource("121"), ExtResource("136"), ExtResource("136"), ExtResource("122"), ExtResource("122"), ExtResource("126"), ExtResource("109"), ExtResource("133")]]
-
-[node name="Nintendo" type="ResourcePreloader" parent="JoypadIdentifier"]
-resources = [PackedStringArray("0", "0|-1", "0|1", "1", "10", "11", "12", "13", "14", "15", "1|-1", "1|1", "2", "2|-1", "2|1", "3", "3|-1", "3|1", "4", "5", "6", "6|1", "7", "7|1", "8", "9", "Dpad", "Screenshot"), [ExtResource("146"), ExtResource("158"), ExtResource("173"), ExtResource("117"), ExtResource("100"), ExtResource("101"), ExtResource("118"), ExtResource("149"), ExtResource("114"), ExtResource("140"), ExtResource("171"), ExtResource("167"), ExtResource("96"), ExtResource("160"), ExtResource("166"), ExtResource("127"), ExtResource("163"), ExtResource("169"), ExtResource("130"), ExtResource("102"), ExtResource("99"), ExtResource("99"), ExtResource("105"), ExtResource("105"), ExtResource("98"), ExtResource("104"), ExtResource("113"), ExtResource("95")]]
-
 [node name="ControlProfiles" type="Node" parent="."]
 script = ExtResource("103")
 
@@ -314,6 +228,12 @@ script = ExtResource("128")
 _dir_path = "user://config/"
 _file_name = "joypad_settings.save"
 _actions_to_save = Array[String](["boost", "dash", "shoot"])
+
+[node name="JoypadIdentifier" type="Node" parent="."]
+script = ExtResource("97")
+_input_images_ps = ExtResource("3_owwjy")
+_input_images_xbox = ExtResource("4_4jx41")
+_input_images_nintendo = ExtResource("5_58dc1")
 
 [node name="Keyboard" type="ResourcePreloader" parent="."]
 resources = [PackedStringArray("126", "32", "34", "4194305", "4194306", "4194308", "4194309", "4194310", "4194311", "4194312", "4194314", "4194317", "4194318", "4194319", "4194320", "4194321", "4194322", "4194323", "4194324", "4194325", "4194326", "4194328", "4194329", "4194330", "4194332", "4194333", "4194334", "4194335", "4194336", "4194337", "4194338", "4194339", "4194340", "4194341", "4194342", "4194343", "4194433", "4194434", "4194435", "4194437", "4194438", "4194439", "4194440", "4194441", "4194442", "4194443", "4194444", "4194445", "4194446", "4194447", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "59", "61", "63", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90", "91", "92", "93"), [ExtResource("84"), ExtResource("81"), ExtResource("74"), ExtResource("37"), ExtResource("83"), ExtResource("24"), ExtResource("35"), ExtResource("36"), ExtResource("55"), ExtResource("32"), ExtResource("71"), ExtResource("53"), ExtResource("34"), ExtResource("19"), ExtResource("21"), ExtResource("20"), ExtResource("18"), ExtResource("68"), ExtResource("67"), ExtResource("78"), ExtResource("30"), ExtResource("17"), ExtResource("28"), ExtResource("64"), ExtResource("38"), ExtResource("39"), ExtResource("40"), ExtResource("41"), ExtResource("42"), ExtResource("43"), ExtResource("44"), ExtResource("45"), ExtResource("46"), ExtResource("47"), ExtResource("48"), ExtResource("49"), ExtResource("22"), ExtResource("80"), ExtResource("62"), ExtResource("70"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("1"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("69"), ExtResource("60"), ExtResource("62"), ExtResource("61"), ExtResource("80"), ExtResource("4"), ExtResource("5"), ExtResource("6"), ExtResource("7"), ExtResource("8"), ExtResource("9"), ExtResource("1"), ExtResource("10"), ExtResource("11"), ExtResource("12"), ExtResource("77"), ExtResource("69"), ExtResource("73"), ExtResource("16"), ExtResource("23"), ExtResource("27"), ExtResource("31"), ExtResource("33"), ExtResource("50"), ExtResource("51"), ExtResource("52"), ExtResource("54"), ExtResource("56"), ExtResource("57"), ExtResource("58"), ExtResource("59"), ExtResource("63"), ExtResource("65"), ExtResource("66"), ExtResource("72"), ExtResource("75"), ExtResource("76"), ExtResource("82"), ExtResource("85"), ExtResource("86"), ExtResource("87"), ExtResource("89"), ExtResource("90"), ExtResource("91"), ExtResource("25"), ExtResource("13"), ExtResource("26")]]
@@ -336,7 +256,6 @@ anchor_bottom = 1.0
 color = Color(0.19, 0.1, 0.2, 0.4)
 
 [node name="PressAnyInput" type="Label" parent="BackPanel"]
-modulate = Color(1, 1, 1, 0.423245)
 layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5

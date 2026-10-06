@@ -28,10 +28,10 @@ enum ForceType {
 
 # public variables
 # private variables
-var _event_keyboard: String = ""
-var _event_mouse: String = ""
-var _event_joybutton: String = ""
-var _event_joyaxis: String = ""
+var _event_keyboard: InputEventKey = null
+var _event_mouse: InputEventMouseButton = null
+var _event_joybutton: InputEventJoypadButton = null
+var _event_joyaxis: InputEventJoypadMotion = null
 
 # onready variables
 @onready var _prompt: TextureRect = get_node("Prompt")
@@ -87,25 +87,24 @@ func _setup() -> void:
 
 
 func _reset_event_variables() -> void:
-	_event_keyboard = ""
-	_event_mouse = ""
-	_event_joybutton = ""
-	_event_joyaxis = ""
+	_event_keyboard = null
+	_event_mouse = null
+	_event_joybutton = null
+	_event_joyaxis = null
 
 
 func _setup_event_variables() -> void:
 	var event_list: = InputMap.action_get_events(input_action)
 	if event_list.size() > 0:
 		for event in event_list:
-			if event is InputEventKey and _event_keyboard == "":
-				_event_keyboard = str((event as InputEventKey).keycode)
-			elif event is InputEventMouseButton and _event_mouse == "":
-				_event_mouse = str((event as InputEventMouseButton).button_index)
-			elif event is InputEventJoypadButton and _event_joybutton == "":
-				_event_joybutton = str((event as InputEventJoypadButton).button_index)
-			elif event is InputEventJoypadMotion and _event_joyaxis == "":
-				var event_axis = event as InputEventJoypadMotion
-				_event_joyaxis = "%s|%s"%[event_axis.axis, event_axis.axis_value]
+			if event is InputEventKey and _event_keyboard == null:
+				_event_keyboard = event
+			elif event is InputEventMouseButton and _event_mouse == null:
+				_event_mouse = event
+			elif event is InputEventJoypadButton and _event_joybutton == null:
+				_event_joybutton = event
+			elif event is InputEventJoypadMotion and _event_joyaxis == null:
+				_event_joyaxis = event
 	else:
 		if not Engine.is_editor_hint():
 			push_error("input map action has no events in it!" + \
@@ -130,27 +129,34 @@ func _setup_prompt_appearence() -> void:
 func _set_prompt_texture() -> bool:
 	var success: = false
 	
-	if (JoypadSupport.get_joypad_type() != JS_JoypadIdentifier.JoyPads.NO_JOYPAD \
-			or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
-		if _event_joybutton != "":
+	if (_has_valid_joypad() and not force_type == ForceType.KEYBOARD):
+		if _event_joybutton != null:
 			success = _set_prompt_for(_event_joybutton)
-		elif _event_joyaxis != "":
+		elif _event_joyaxis != null:
 			success = _set_prompt_for(_event_joyaxis)
-		elif _event_keyboard != "":
+		elif _event_keyboard != null:
 			success = _set_prompt_for(_event_keyboard)
-		elif _event_mouse != "":
+		elif _event_mouse != null:
 			success = _set_prompt_for(_event_mouse)
 	else:
-		if _event_keyboard != "":
+		if _event_keyboard != null:
 			success = _set_prompt_for(_event_keyboard)
-		elif _event_mouse != "":
+		elif _event_mouse != null:
 			success = _set_prompt_for(_event_mouse)
 	
 	return success
 
 
-func _set_prompt_for(string_index: String) -> bool:
-	var prompt_texture: Texture2D =  _get_prompt_texture_for(string_index)
+func _has_valid_joypad() -> bool:
+	var value: bool = (
+			JoypadSupport.get_joypad_type() != JS_JoypadIdentifier.JoyPads.NO_JOYPAD 
+			or force_type == ForceType.JOYPAD
+	)
+	return value
+
+
+func _set_prompt_for(event: InputEvent) -> bool:
+	var prompt_texture: Texture2D =  _get_prompt_texture_for(event)
 	var success = prompt_texture.resource_path != ""
 	
 	if success:
@@ -159,85 +165,49 @@ func _set_prompt_for(string_index: String) -> bool:
 	return success
 
 
-func _get_prompt_texture_for(string_index: String) -> Texture2D:
-	var prompt_texture: = CompressedTexture2D.new()
-	
-	match string_index:
-		_event_keyboard:
-			prompt_texture = JoypadSupport.get_keyboard_prompt_for(_event_keyboard)
-		_event_mouse:
-			prompt_texture = JoypadSupport.get_mouse_prompt_for(_event_mouse)
-		_event_joybutton:
-			prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joybutton)
-		_event_joyaxis:
-			prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joyaxis)
-		_:
-			push_match_event_variables_error()
-	
-	return prompt_texture
-
-
 func _set_fallback_label() -> bool:
 	var success: = false
 	
-	if (JoypadSupport.get_joypad_type() != JS_JoypadIdentifier.JoyPads.NO_JOYPAD \
-	or (force_type == ForceType.JOYPAD)) and not force_type == ForceType.KEYBOARD:
-		if _event_joybutton != "":
+	if _has_valid_joypad() and not force_type == ForceType.KEYBOARD:
+		if _event_joybutton != null:
 			success = _set_fallback_for(_event_joybutton)
-		elif _event_joyaxis != "":
+		elif _event_joyaxis != null:
 			success = _set_fallback_for(_event_joyaxis)
-		elif _event_keyboard != "":
+		elif _event_keyboard != null:
 			success = _set_fallback_for(_event_keyboard)
-		elif _event_mouse != "":
+		elif _event_mouse != null:
 			success = _set_fallback_for(_event_mouse)
 	else:
-		if _event_keyboard != "":
+		if _event_keyboard != null:
 			success = _set_fallback_for(_event_keyboard)
-		elif _event_mouse != "":
+		elif _event_mouse != null:
 			success = _set_fallback_for(_event_mouse)
 	
 	return success
 
 
-func _set_fallback_for(string_index: String) -> bool:
-	var fallback_string: = _get_fallback_string_for(string_index)
-	var success = fallback_string != ""
-	
-	if success:
-		_fallback.text = fallback_string
-	
+func _set_fallback_for(event: InputEvent) -> bool:
+	_fallback.text = JoypadSupport.get_fallback_string_for(event)
+	var success = _fallback.text != ""
 	return success
 
 
-func _get_fallback_string_for(string_index: String) -> String:
-	var index: = int(string_index)
-	var fallback_string: = ""
+func _get_prompt_texture_for(event: InputEvent) -> Texture2D:
+	var prompt_texture: = CompressedTexture2D.new()
 	
-	match string_index:
-		_event_keyboard:
-			fallback_string = _get_keyboard_string(index)
-		_event_mouse:
-			fallback_string = "Mouse Button %s"%[index]
-		_event_joybutton:
-			fallback_string = "Button %s"%[index]
-		_event_joyaxis:
-			fallback_string = "Axis %s"%[string_index]
-		_:
-			push_match_event_variables_error()
+	#TODO convert keyboard and mouse prompts to new prompt gallery thingy
+	if event is InputEventKey:
+		prompt_texture = JoypadSupport.get_keyboard_prompt_for(str(_event_keyboard.keycode))
+	elif event is InputEventMouseButton:
+		prompt_texture = JoypadSupport.get_mouse_prompt_for(str(_event_mouse.button_index))
+	elif event is InputEventJoypadButton:
+		prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joybutton)
+	elif event is InputEventJoypadMotion:
+		prompt_texture = JoypadSupport.get_joypad_button_prompt_for(_event_joyaxis)
+	else:
+		push_match_event_variables_error()
 	
-	return fallback_string
-
-func _get_keyboard_string(keycode: int) -> String:
-	var string = ""
-	match keycode:
-		KEY_TAB:
-			string = "Tab"
-		KEY_BACKTAB:
-			string = "Tab"
-		_:
-			string = OS.get_keycode_string(keycode)
-	
-	return string
+	return prompt_texture
 
 
 func push_match_event_variables_error() -> void:
@@ -251,7 +221,6 @@ func push_match_event_variables_error() -> void:
 			"here. Anyway, I hope this helps in debugging."
 	)
 	assert(false)
-	
 
 
 func _push_fallback_failed_error() -> void:
@@ -277,17 +246,15 @@ func _on_JoypadSupport_joypad_disconnected() -> void:
 
 
 func _on_JoypadSupport_joypad_manually_changed() -> void:
-	if force_type == ForceType.KEYBOARD \
-	or force_type == ForceType.NONE and Input.get_connected_joypads().size() == 0:
-		return
-	
-	_setup()
+	if (
+			force_type != ForceType.KEYBOARD
+			or force_type != ForceType.NONE and Input.get_connected_joypads().size() > 0
+	):
+		_setup()
 
 
 func _on_JoypadSupport_input_remapped(action_name: String) -> void:
-	if input_action != action_name:
-		return
-	
-	_setup()
+	if input_action == action_name:
+		_setup()
 
 ### ---------------------------------------
