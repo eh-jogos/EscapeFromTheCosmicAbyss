@@ -1,6 +1,15 @@
 extends Node2D
 
 const MAX_SPEED_INCREMENT_PER_LAP = 1
+const STATE = {
+	"Playing": 0,
+	"Start": 1,
+	"Pause": 2,
+	"Tutorial": 3,
+	"GameOver": 4,
+	"Cutscene": 5
+}
+
 
 # Nodes this script will interact with
 @export var path_player: NodePath = NodePath()
@@ -38,9 +47,6 @@ var tutorial
 @export_enum("story", "arcade", "speedrun") var test_mode = "story"
 @export var test_level_or_points: int = 0
 
-var game_settings = Global.get_game_mode()
-var game_mode = game_settings["game mode"]
-var category = game_settings["sub-mode"]
 var last_level_choice
 var points = 0
 var points_level = 0
@@ -68,17 +74,11 @@ var levels_unlocked
 var cooldown
 var multiplyer = 1
 
-const STATE = {
-	"Playing": 0,
-	"Start": 1,
-	"Pause": 2,
-	"Tutorial": 3,
-	"GameOver": 4,
-	"Cutscene": 5
-}
-
 var current_state = STATE["Start"]
 
+@onready var game_settings = Global.get_game_mode()
+@onready var game_mode = game_settings["game mode"]
+@onready var category = game_settings["sub-mode"]
 
 func _init():
 	Global.game = self

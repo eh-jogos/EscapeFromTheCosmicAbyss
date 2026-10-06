@@ -2532,7 +2532,6 @@ offset_left = 2.24487
 offset_right = 2.24487
 mouse_filter = 2
 texture = SubResource("33")
-flip_v = true
 script = ExtResource("79")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]

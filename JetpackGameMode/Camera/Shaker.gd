@@ -41,7 +41,7 @@ var _noise_y = 0
 func _ready():
 	randomize()
 	_noise.seed = randi()
-	_noise.period = 4
+	_noise.frequency = 4
 	_noise.fractal_octaves = 2
 
 
