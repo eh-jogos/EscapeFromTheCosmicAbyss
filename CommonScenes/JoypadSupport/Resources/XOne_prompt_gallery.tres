@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="PromptGalleryJoypad" load_steps=27 format=3 uid="uid://suudij0gjmtu"]
+
+[ext_resource type="Texture2D" uid="uid://dqkcbjds87gva" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick.png" id="1_rlxi6"]
+[ext_resource type="Texture2D" uid="uid://bu0njaqk8pk45" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick.png" id="2_anbyr"]
+[ext_resource type="Texture2D" uid="uid://bk0fuiobw5n5k" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Down.png" id="3_tbjya"]
+[ext_resource type="Texture2D" uid="uid://bh13yuwl2e8d" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Left.png" id="4_vxctw"]
+[ext_resource type="Texture2D" uid="uid://db87svryhnfno" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Right.png" id="5_210pu"]
+[ext_resource type="Texture2D" uid="uid://wdb8q63xwh3i" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Left_Stick_Up.png" id="6_j8yn2"]
+[ext_resource type="Texture2D" uid="uid://cg18172fmtxi1" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Down.png" id="7_7tap1"]
+[ext_resource type="Texture2D" uid="uid://de1gtwuynp4hs" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Left.png" id="8_fmb3m"]
+[ext_resource type="Texture2D" uid="uid://b0i0fx4k07bp5" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Right.png" id="9_2wxmv"]
+[ext_resource type="Texture2D" uid="uid://boigclaaj0sft" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Right_Stick_Up.png" id="10_lrq4v"]
+[ext_resource type="Texture2D" uid="uid://dyk3r0h6mejhi" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad.png" id="11_y66wd"]
+[ext_resource type="Texture2D" uid="uid://c6sqr3jt534j5" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_A.png" id="12_5kaao"]
+[ext_resource type="Texture2D" uid="uid://7tm1j0xwr622" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_B.png" id="13_6sduh"]
+[ext_resource type="Texture2D" uid="uid://bhqeyu85sihh2" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Windows.png" id="14_sgwxk"]
+[ext_resource type="Texture2D" uid="uid://cwj36a2qufriw" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Down.png" id="15_2q0wi"]
+[ext_resource type="Texture2D" uid="uid://cphuyatfs32vk" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Left.png" id="16_b6bdu"]
+[ext_resource type="Texture2D" uid="uid://1fjrkuthfbv1" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Right.png" id="17_0tdxd"]
+[ext_resource type="Texture2D" uid="uid://dhw8tqfhq6i33" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Dpad_Up.png" id="18_6m4je"]
+[ext_resource type="Texture2D" uid="uid://d2t3gqonf86ok" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Menu.png" id="19_cvg17"]
+[ext_resource type="Texture2D" uid="uid://h3w075ymnvrh" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_X.png" id="20_2s00n"]
+[ext_resource type="Texture2D" uid="uid://ddc406ckngunt" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_Y.png" id="21_c1j4e"]
+[ext_resource type="Texture2D" uid="uid://djoaocu21n2fb" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_LB.png" id="22_y8wsx"]
+[ext_resource type="Texture2D" uid="uid://dfbe7gg3jjg41" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_RB.png" id="23_yns56"]
+[ext_resource type="Texture2D" uid="uid://ckshcnqv2dwrj" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_LT.png" id="24_ot2s7"]
+[ext_resource type="Texture2D" uid="uid://cuao5kus8b8vq" path="res://CommonScenes/JoypadSupport/Prompts/Xbox One/XboxOne_RT.png" id="25_amky8"]
+[ext_resource type="Script" uid="uid://dsf0s7g468qe2" path="res://CommonScenes/JoypadSupport/Resources/PromptGalleryJoypad.gd" id="26_6rovw"]
+
+[resource]
+script = ExtResource("26_6rovw")
+_face_button_a = ExtResource("12_5kaao")
+_face_button_b = ExtResource("13_6sduh")
+_face_button_x = ExtResource("20_2s00n")
+_face_button_y = ExtResource("21_c1j4e")
+_face_button_dpad_up = ExtResource("18_6m4je")
+_face_button_dpad_right = ExtResource("17_0tdxd")
+_face_button_dpad_down = ExtResource("15_2q0wi")
+_face_button_dpad_left = ExtResource("16_b6bdu")
+_face_button_back = ExtResource("14_sgwxk")
+_face_button_start = ExtResource("19_cvg17")
+_shoulder_button_left = ExtResource("22_y8wsx")
+_shoulder_trigger_left = ExtResource("24_ot2s7")
+_shoulder_button_right = ExtResource("23_yns56")
+_shoulder_trigger_right = ExtResource("25_amky8")
+_analog_button_left = ExtResource("1_rlxi6")
+_analog_button_right = ExtResource("2_anbyr")
+_analog_left_stick_up = ExtResource("6_j8yn2")
+_analog_left_stick_right = ExtResource("5_210pu")
+_analog_left_stick_down = ExtResource("3_tbjya")
+_analog_left_stick_left = ExtResource("4_vxctw")
+_analog_right_stick_up = ExtResource("10_lrq4v")
+_analog_right_stick_right = ExtResource("9_2wxmv")
+_analog_right_stick_down = ExtResource("7_7tap1")
+_analog_right_stick_left = ExtResource("8_fmb3m")
+_extra_dpad = ExtResource("11_y66wd")
+metadata/_custom_type_script = "uid://dsf0s7g468qe2"

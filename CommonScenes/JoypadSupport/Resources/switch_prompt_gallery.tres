@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="PromptGalleryJoypad" load_steps=27 format=3 uid="uid://y8ofpvf6iiu0"]
+
+[ext_resource type="Texture2D" uid="uid://bce4qcb8p4ag0" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick.png" id="1_kl2kc"]
+[ext_resource type="Script" uid="uid://dsf0s7g468qe2" path="res://CommonScenes/JoypadSupport/Resources/PromptGalleryJoypad.gd" id="1_trxqn"]
+[ext_resource type="Texture2D" uid="uid://bpt03h7f60yh8" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick.png" id="2_241yx"]
+[ext_resource type="Texture2D" uid="uid://bem6fb1ifg0lo" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Down.png" id="3_5y0lo"]
+[ext_resource type="Texture2D" uid="uid://4ubrsun14lko" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Left.png" id="4_7j1mo"]
+[ext_resource type="Texture2D" uid="uid://u1g86e38a1rn" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Right.png" id="5_xtrum"]
+[ext_resource type="Texture2D" uid="uid://ck0pv6xktys51" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Left_Stick_Up.png" id="6_26ut2"]
+[ext_resource type="Texture2D" uid="uid://clridc6dmvm0w" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Down.png" id="7_4lld3"]
+[ext_resource type="Texture2D" uid="uid://cub3pl1gljljv" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Left.png" id="8_rpy8i"]
+[ext_resource type="Texture2D" uid="uid://dic7dof3uj067" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Right.png" id="9_r5qsy"]
+[ext_resource type="Texture2D" uid="uid://jo5mqeoj1gug" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Right_Stick_Up.png" id="10_c3qce"]
+[ext_resource type="Texture2D" uid="uid://bwkf2rujnbc7p" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad.png" id="11_xvysm"]
+[ext_resource type="Texture2D" uid="uid://bg3wo0l6itpo4" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_B.png" id="12_2x58x"]
+[ext_resource type="Texture2D" uid="uid://cxmulxkkqntxh" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_A.png" id="13_rtep5"]
+[ext_resource type="Texture2D" uid="uid://lt2e21kp7pi6" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Minus.png" id="14_h4whc"]
+[ext_resource type="Texture2D" uid="uid://sjmfy1jno53m" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Down.png" id="15_v7n6g"]
+[ext_resource type="Texture2D" uid="uid://dfxcullj8o2ni" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Left.png" id="16_nsbw6"]
+[ext_resource type="Texture2D" uid="uid://bhd6ghf0qo5hp" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Right.png" id="17_d55qp"]
+[ext_resource type="Texture2D" uid="uid://t21q4fpwo3a5" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Dpad_Up.png" id="18_wnaqe"]
+[ext_resource type="Texture2D" uid="uid://4iudbwwnowft" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Plus.png" id="19_0bk7j"]
+[ext_resource type="Texture2D" uid="uid://d1c6a6wity0c3" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_Y.png" id="20_hbo3w"]
+[ext_resource type="Texture2D" uid="uid://chhl5un1f8mi" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_X.png" id="21_ow8n6"]
+[ext_resource type="Texture2D" uid="uid://b4n6onstevijy" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LB.png" id="22_gim25"]
+[ext_resource type="Texture2D" uid="uid://dqq0vgoai3nst" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_RB.png" id="23_tbwwq"]
+[ext_resource type="Texture2D" uid="uid://c7vdnwrv8m8gh" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_LT.png" id="24_yd0qu"]
+[ext_resource type="Texture2D" uid="uid://c4gnad8t7x4f" path="res://CommonScenes/JoypadSupport/Prompts/Switch/Switch_RT.png" id="25_gvk5o"]
+
+[resource]
+script = ExtResource("1_trxqn")
+_face_button_a = ExtResource("12_2x58x")
+_face_button_b = ExtResource("13_rtep5")
+_face_button_x = ExtResource("20_hbo3w")
+_face_button_y = ExtResource("21_ow8n6")
+_face_button_dpad_up = ExtResource("18_wnaqe")
+_face_button_dpad_right = ExtResource("17_d55qp")
+_face_button_dpad_down = ExtResource("15_v7n6g")
+_face_button_dpad_left = ExtResource("16_nsbw6")
+_face_button_back = ExtResource("14_h4whc")
+_face_button_start = ExtResource("19_0bk7j")
+_shoulder_button_left = ExtResource("22_gim25")
+_shoulder_trigger_left = ExtResource("24_yd0qu")
+_shoulder_button_right = ExtResource("23_tbwwq")
+_shoulder_trigger_right = ExtResource("25_gvk5o")
+_analog_button_left = ExtResource("1_kl2kc")
+_analog_button_right = ExtResource("2_241yx")
+_analog_left_stick_up = ExtResource("6_26ut2")
+_analog_left_stick_right = ExtResource("5_xtrum")
+_analog_left_stick_down = ExtResource("3_5y0lo")
+_analog_left_stick_left = ExtResource("4_7j1mo")
+_analog_right_stick_up = ExtResource("10_c3qce")
+_analog_right_stick_right = ExtResource("9_r5qsy")
+_analog_right_stick_down = ExtResource("7_4lld3")
+_analog_right_stick_left = ExtResource("8_rpy8i")
+_extra_dpad = ExtResource("11_xvysm")
+metadata/_custom_type_script = "uid://dsf0s7g468qe2"

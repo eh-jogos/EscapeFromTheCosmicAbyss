@@ -1490,7 +1490,7 @@ shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(0.189324, 1.20051)
+shader_parameter/torus_center = Vector2(120.694, 373.957)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1499,7 +1499,7 @@ shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(0.189324, 1.20051)
+shader_parameter/torus_center = Vector2(120.694, 373.957)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1510,7 +1510,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(0.189324, 1.20051)
+shader_parameter/displacement_center = Vector2(120.694, 373.957)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
