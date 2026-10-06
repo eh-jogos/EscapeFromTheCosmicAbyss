@@ -198,7 +198,7 @@ func _on_intro_cutscene_finished():
 
 func start_countdown():
 	# TODO: Enable tutorial again once it's working
-	if is_tutorial and false:
+	if is_tutorial:
 		set_game_state("Tutorial")
 		tutorial.play(level_num, level_title)
 		object_spawner.connect_tutorial_signal(tutorial)
