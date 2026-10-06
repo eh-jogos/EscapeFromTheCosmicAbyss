@@ -86,26 +86,26 @@ func _init():
 
 func _ready():
 	#TODO? - Change the nodes according to game mode?
-	tutorial = self.get_node("AboveScreen/TutorialTipScreen")
-	game_over_screen = self.get_node("AboveScreen/GameOverScreen")
-	level_complete_screen = self.get_node("AboveScreen/LevelCompleteScreen")
+	tutorial = get_node("AboveScreen/TutorialTipScreen")
+	game_over_screen = get_node("AboveScreen/GameOverScreen")
+	level_complete_screen = get_node("AboveScreen/LevelCompleteScreen")
 	
 	# Nodes
-	countdown = self.get_node("AboveScreen/CountdownScreen")
-	ammunition = self.get_node("HUD/Meters/Ammunition")
-	score_label = self.get_node("HUD/CenterArea/Score")
-	points_label = self.get_node("HUD/CenterArea/Points")
-	time_laps_label = self.get_node("HUD/CenterArea/TimeLaps")
-	runtime_label = self.get_node("HUD/CenterArea/RunTime")
-	upgrade_label = self.get_node("HUD/UpgradeLabel")
-	upgrade_messager = self.get_node("HUD/UpgradeLabel/Messager")
-	speed_messager = self.get_node("HUD/SpeedLabel")
-	hud_animator = self.get_node("HUD/AnimationPlayer")
-	player = self.get_node(path_player)
-	level_loader = self.get_node("LevelLoader")
-	camera = self.get_node(path_camera)
-	object_spawner = self.get_node("RawLayer/WorldVieport/SubViewport/Obstaculos/ObstacleSpawner")
-	parallax_background = self.get_node("RawLayer/WorldVieport/SubViewport/ParallaxBackground")
+	countdown = get_node("AboveScreen/CountdownScreen")
+	ammunition = get_node("HUD/Meters/Ammunition")
+	score_label = get_node("HUD/CenterArea/Score")
+	points_label = get_node("HUD/CenterArea/Points")
+	time_laps_label = get_node("HUD/CenterArea/TimeLaps")
+	runtime_label = get_node("HUD/CenterArea/RunTime")
+	upgrade_label = get_node("HUD/UpgradeLabel")
+	upgrade_messager = get_node("HUD/UpgradeLabel/Messager")
+	speed_messager = get_node("HUD/SpeedLabel")
+	hud_animator = get_node("HUD/AnimationPlayer")
+	player = get_node(path_player)
+	level_loader = get_node("LevelLoader")
+	camera = get_node(path_camera)
+	object_spawner = get_node("RawLayer/WorldVieport/SubViewport/Obstaculos/ObstacleSpawner")
+	parallax_background = get_node("RawLayer/WorldVieport/SubViewport/ParallaxBackground")
 	
 	show_pre_game()
 
@@ -170,6 +170,7 @@ func load_upgrade_pregame():
 	else:
 		print("ERROR | Invalid sub-mode: %s"%[game_settings])
 
+
 func game_start():
 	initialize_game_stats()
 	setup_game_mode_level()
@@ -196,7 +197,8 @@ func _on_intro_cutscene_finished():
 		ScreenManager.connect("transition_ended", Callable(self, "start_countdown").bind(), CONNECT_ONE_SHOT)
 
 func start_countdown():
-	if is_tutorial:
+	# TODO: Enable tutorial again once it's working
+	if is_tutorial and false:
 		set_game_state("Tutorial")
 		tutorial.play(level_num, level_title)
 		object_spawner.connect_tutorial_signal(tutorial)
@@ -232,6 +234,7 @@ func initialize_game_stats():
 		max_speed = 4 + Global.savedata[game_mode]["max speed"]
 		laser_strength = Global.savedata[game_mode]["laser strength"]
 		cooldown = Global.savedata[game_mode]["cooldown"]
+
 
 func setup_game_mode_level():
 	if game_mode == "story":
@@ -320,14 +323,18 @@ func set_game_state(string):
 func get_game_state():
 	return current_state
 
+
 func get_score():
 	return points
+
 
 func get_laps():
 	return arcade_laps
 
+
 func get_time():
 	return runtime_label.run_time
+
 
 func game_over():
 	if game_mode == "story":
@@ -335,6 +342,7 @@ func game_over():
 	hud_animator.play("fade_out")
 	game_over_screen.open()
 	get_tree().set_pause(true)
+
 
 func _on_scored(num):
 	var last_point_level = points_level
@@ -386,16 +394,16 @@ func _on_scored(num):
 	update_score()
 	pass # replace with function body
 
+
 func update_score():
 	var points_str = "%04d"%[points]
 	points_label.set_text(points_str)
+
 
 func dash_score():
 	points -= 5
 	update_score()
 
-func tutorial_start():
-	tutorial.play()
 
 func _on_ObstacleSpawner_level_end():
 	if game_mode == "story":
