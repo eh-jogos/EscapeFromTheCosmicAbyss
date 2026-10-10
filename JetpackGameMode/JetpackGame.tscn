@@ -19,9 +19,9 @@
 [ext_resource type="Script" uid="uid://cusg7srb0uaq7" path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" id="17"]
 [ext_resource type="PackedScene" uid="uid://c566dtf0tf257" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="18"]
 [ext_resource type="PackedScene" uid="uid://d2uaxlo5t8bfp" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="19"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" id="20"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" id="21"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://4liovbej1qaj" path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" id="20"]
+[ext_resource type="PackedScene" uid="uid://dn3bel8ngky0n" path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://bx8isl7pyt1uj" path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" id="22"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeMarker.tscn" id="23"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/PowerUps/ShieldUp.tscn" id="24"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" id="25"]
@@ -52,7 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://v5r5an0q7afo" path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" id="50"]
 [ext_resource type="Script" uid="uid://xb8xh28uv8kr" path="res://JetpackGameMode/BG/BG_LooperH2.gd" id="51"]
 [ext_resource type="PackedScene" uid="uid://b7xrxqixd3t11" path="res://JetpackGameMode/Character/Player.tscn" id="52"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="53"]
+[ext_resource type="PackedScene" uid="uid://b3qnrrqypfnj7" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="53"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" id="54"]
 [ext_resource type="Texture2D" uid="uid://2ht2e63b7xu0" path="res://CommonScenes/pallet.png" id="55"]
 [ext_resource type="Script" uid="uid://rfy2u8b1mwvy" path="res://JetpackGameMode/HUD/ShieldMeter.gd" id="56"]
@@ -61,7 +61,7 @@
 [ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="59"]
 [ext_resource type="Script" uid="uid://ry4gxcai5bi1" path="res://JetpackGameMode/HUD/SpeedrunTime.gd" id="60"]
 [ext_resource type="Script" uid="uid://bvgnhuof4480s" path="res://JetpackGameMode/HUD/SpeedMessager.gd" id="61"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/HUD/ProgressVisualization.tscn" id="62"]
+[ext_resource type="PackedScene" uid="uid://c3hqujul88nf5" path="res://JetpackGameMode/HUD/ProgressVisualization.tscn" id="62"]
 [ext_resource type="PackedScene" uid="uid://ceerfm3jbmu0d" path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" id="63"]
 [ext_resource type="PackedScene" uid="uid://d11raokmrdi1k" path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" id="64"]
 [ext_resource type="PackedScene" uid="uid://b1agagp8llmhl" path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" id="65"]
@@ -1862,7 +1862,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 2
+test_level_or_points = 4
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -2654,7 +2654,6 @@ bus = &"GameSfx"
 
 [node name="ProgressVisualization" parent="HUD" instance=ExtResource("62")]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = 11
 offset_top = 986.0
 offset_bottom = 8.0
 
