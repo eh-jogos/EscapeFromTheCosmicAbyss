@@ -1,15 +1,15 @@
 extends Node
 
-var level = {}
-var level_info
+var level: Dictionary = {}
+var level_info: Node
 
-func load_level(num, load_all, loop):
-	if load_all:
+func load_level(level_index: int, should_load_all: bool, should_loop: bool):
+	if should_load_all:
 		level["beats"] = []
 		level["half_beats"] = []
 		level["bosses_nodes"] = {}
 		
-		for x in range(num, self.get_max_levels()):
+		for x in range(level_index, get_max_levels()):
 			level_info = get_child(x)
 			if level_info.boss.boss_node != null:
 				level["bosses_nodes"][level_info.boss.boss_node] = {
@@ -24,18 +24,18 @@ func load_level(num, load_all, loop):
 			
 			build_level_procedurally()
 			
-			if x != self.get_max_levels()-1:
+			if x != get_max_levels()-1:
 				level["half_beats"].append(0)
 				level["beats"].append(6)
 				level["half_beats"].append(0)
-			elif x == self.get_max_levels()-1 and loop:
+			elif x == get_max_levels()-1 and should_loop:
 				level["half_beats"].append(0)
 				level["beats"].append(6)
 		level["beats_count"] = level["beats"].size()
 		level["half_count"] = level["half_beats"].size()
 		level["total_count"] = level["beats"].size() + level["half_beats"].size()
 	else:
-		level_info = get_child(num)
+		level_info = get_child(level_index)
 		level["title"] = level_info.title
 		level["tutorial"] = level_info.tutorial
 		level["intro_cutscene"] = level_info.intro_cutscene
@@ -90,7 +90,7 @@ func build_level_procedurally():
 
 
 func sum_all_beats_and_halfs():
-	var total_count = level_info.intro_beats.size() + level_info.intro_halfs.size()
+	var total_count: int = level_info.intro_beats.size() + level_info.intro_halfs.size()
 	
 	if level_info.boss["scream"]:
 		for array in level_info.boss["sequence_beats"]:
@@ -164,8 +164,8 @@ func laser_eye_draw_step(level_array, beats_pool, half_beats_pool):
 	return duplicate_level
 
 
-func draw_laser_eye(level_array, obstacle_pool, initial_slot):
-	var available_slots
+func draw_laser_eye(level_array: Array, obstacle_pool: Array, initial_slot: int):
+	var available_slots: Array = []
 	
 	var level_name = level_info.get_name()
 	print("LevelLoader | Level name: %s"%[level_name])
@@ -191,13 +191,13 @@ func draw_laser_eye(level_array, obstacle_pool, initial_slot):
 			for index in range(initial_pos, end_pos):
 				if level_array[index] == key_translator("laser_eye"):
 					is_another_laser_eye_close_by = true
-					available_slots.remove(random_integer)
+					available_slots.remove_at(random_integer)
 					continue
 			
 			if not is_another_laser_eye_close_by:
 				level_array[level_position] = key_translator("laser_eye")
 				obstacle_pool.erase(key_translator("laser_eye"))
-				available_slots.remove(random_integer)
+				available_slots.remove_at(random_integer)
 		else:
 			break
 	
@@ -248,8 +248,8 @@ func tentacle_barrier_draw_step(level_array, beats_pool, half_beats_pool):
 	return duplicate_level
 
 
-func draw_tentacle_barrier(level_array, obstacle_pool, initial_slot):
-	var available_slots = build_available_slots_array(level_array, initial_slot)
+func draw_tentacle_barrier(level_array: Array, obstacle_pool: Array, initial_slot: int):
+	var available_slots: Array = build_available_slots_array(level_array, initial_slot)
 	
 	for _x in range(available_slots.size()):
 		if obstacle_pool.has(key_translator("wall")):
@@ -267,7 +267,7 @@ func draw_tentacle_barrier(level_array, obstacle_pool, initial_slot):
 			if level_position % 10 >= wall_count:
 				level_array[level_position] = key_translator("wall")
 				obstacle_pool.erase(key_translator("wall"))
-				available_slots.remove(random_integer)
+				available_slots.remove_at(random_integer)
 		else:
 			break
 	
@@ -304,8 +304,8 @@ func standard_draw_step(level_array, beats_pool, half_beats_pool):
 	return duplicate_level
 
 
-func draw_obstacles(level_array, obstacle_pool, initial_slot):
-	var available_slots = build_available_slots_array(level_array, initial_slot)
+func draw_obstacles(level_array: Array, obstacle_pool: Array, initial_slot: int):
+	var available_slots: Array = build_available_slots_array(level_array, initial_slot)
 	
 	for _x in range(available_slots.size()):
 		if obstacle_pool.size() > 0:
@@ -314,15 +314,15 @@ func draw_obstacles(level_array, obstacle_pool, initial_slot):
 			
 			var random_obstacle = randi()%obstacle_pool.size()
 			level_array[level_position] = obstacle_pool[random_obstacle]
-			obstacle_pool.remove(random_obstacle)
-			available_slots.remove(random_integer)
+			obstacle_pool.remove_at(random_obstacle)
+			available_slots.remove_at(random_integer)
 		else:
 			break
 	
 	return level_array
 
 
-func build_available_slots_array(level_array, initial_slot):
+func build_available_slots_array(level_array: Array, initial_slot: int):
 	var available_slots = range(initial_slot, level_array.size(), 2)
 	var slots_to_remove = []
 	for slot in available_slots:
@@ -371,4 +371,4 @@ func key_translator(string):
 		return "ERROR"
 
 func get_max_levels():
-	return self.get_child_count()
+	return get_child_count()

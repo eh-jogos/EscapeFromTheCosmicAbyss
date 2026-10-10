@@ -1,112 +1,94 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=3 uid="uid://c3hqujul88nf5"]
 
-[ext_resource path="res://JetpackGameMode/HUD/ProgressVisualization.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_base.png" type="Texture2D" id=3]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_fill.png" type="Texture2D" id=4]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/finish_line_block.png" type="Texture2D" id=5]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_outline.png" type="Texture2D" id=6]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/player_marker.png" type="Texture2D" id=7]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" type="Texture2D" id=8]
+[ext_resource type="Script" uid="uid://dhr7fw1hdacg" path="res://JetpackGameMode/HUD/ProgressVisualization.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://be2udfpodr4kd" path="res://JetpackGameMode/HUD/BarrierContainer.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://deaghdhpg7rb1" path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_base.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://cy6sb5ka85sj4" path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_fill.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c0e115tc77485" path="res://JetpackGameMode/HUD/pngs/finish_line_block.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://dh5v105ux0ic0" path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_outline.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dsawdklecd7do" path="res://JetpackGameMode/HUD/pngs/player_marker.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://dbgp50cnvl1cx" path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" id="8"]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 53, 60 )
-offset_left = 20.0
-offset_right = 20.0
-offset_top = 20.0
-offset_bottom = 20.0
+[sub_resource type="StyleBoxTexture" id="1"]
+texture = ExtResource("3")
+region_rect = Rect2(0, 0, 53, 60)
 
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 49, 55 )
-offset_left = 20.0
-offset_right = 20.0
-offset_top = 20.0
-offset_bottom = 20.0
+[sub_resource type="StyleBoxTexture" id="2"]
+texture = ExtResource("4")
+region_rect = Rect2(0, 0, 49, 55)
 
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 49, 56 )
-offset_left = 20.0
-offset_right = 20.0
-offset_top = 20.0
-offset_bottom = 20.0
+[sub_resource type="StyleBoxTexture" id="3"]
+texture = ExtResource("5")
+region_rect = Rect2(0, 0, 49, 56)
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id="4"]
 resource_name = "loop"
-loop = true
+loop_mode = 1
 tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
 tracks/0/path = NodePath(".:modulate:a")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
 tracks/0/keys = {
-"times": PackedFloat32Array( 0, 0.5 ),
-"transitions": PackedFloat32Array( 1, 1 ),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [ 1.0, 0.4 ]
+"values": [1.0, 0.4]
 }
 
-[sub_resource type="StyleBoxTexture" id=5]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 49, 56 )
-offset_left = 20.0
-offset_right = 20.0
-offset_top = 20.0
-offset_bottom = 20.0
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0tem3"]
+_data = {
+&"loop": SubResource("4")
+}
 
-[sub_resource type="Gradient" id=6]
-colors = PackedColorArray( 0, 0.956863, 1, 1, 0, 0.956863, 1, 0 )
+[sub_resource type="StyleBoxTexture" id="5"]
+texture = ExtResource("6")
+region_rect = Rect2(0, 0, 49, 56)
 
-[sub_resource type="GradientTexture2D" id=7]
-gradient = SubResource( 6 )
+[sub_resource type="Gradient" id="6"]
+colors = PackedColorArray(0, 0.956863, 1, 1, 0, 0.956863, 1, 0)
 
-[sub_resource type="Curve" id=8]
-_data = [ Vector2( 0, 0.290909 ), 0.0, 0.709091, 0, 1, Vector2( 1, 1 ), 0.709091, 0.0, 1, 0 ]
+[sub_resource type="GradientTexture2D" id="7"]
+gradient = SubResource("6")
 
-[sub_resource type="CurveTexture" id=9]
-curve = SubResource( 8 )
+[sub_resource type="Curve" id="8"]
+_data = [Vector2(0, 0.290909), 0.0, 0.709091, 0, 1, Vector2(1, 1), 0.709091, 0.0, 1, 0]
+point_count = 2
 
-[sub_resource type="ParticleProcessMaterial" id=10]
-flag_disable_z = true
-gravity = Vector3( 0, 0, 0 )
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-scale = 1.8
-scale_curve = SubResource( 9 )
-color_ramp = SubResource( 7 )
+[sub_resource type="CurveTexture" id="9"]
+curve = SubResource("8")
+
+[sub_resource type="ParticleProcessMaterial" id="10"]
+gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_max = 0.0
+scale_curve = SubResource("9")
+color_ramp = SubResource("7")
 
 [node name="ProgressVisualization" type="CenterContainer"]
 process_mode = 3
+anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1920.0
 offset_top = 980.0
 offset_bottom = -14.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("1")
 player_icon_x_offset = -80
 initial_margin = 100
 ending_margin = 0
-progress_barrier = ExtResource( 2 )
-
-[node name="Tween" type="Tween" parent="."]
+progress_barrier = ExtResource("2")
 
 [node name="BarBase" type="Panel" parent="."]
-offset_left = 200.0
-offset_top = 13.0
-offset_right = 1720.0
-offset_bottom = 73.0
-custom_minimum_size = Vector2( 1520, 60 )
+custom_minimum_size = Vector2(1520, 60)
+layout_mode = 2
 mouse_filter = 1
-theme_override_styles/panel = SubResource( 1 )
+theme_override_styles/panel = SubResource("1")
 
 [node name="BarFill" type="Panel" parent="BarBase"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0
@@ -114,10 +96,11 @@ offset_top = 2.0
 offset_right = -2.0
 offset_bottom = -2.0
 mouse_filter = 1
-theme_override_styles/panel = SubResource( 2 )
+theme_override_styles/panel = SubResource("2")
 
 [node name="BarFinish" type="Panel" parent="BarBase"]
-modulate = Color( 1, 1, 1, 0.908755 )
+modulate = Color(1, 1, 1, 0.908755)
+layout_mode = 0
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -126,13 +109,16 @@ offset_top = 2.0
 offset_right = -2.0
 offset_bottom = -2.0
 mouse_filter = 1
-theme_override_styles/panel = SubResource( 3 )
+theme_override_styles/panel = SubResource("3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="BarBase/BarFinish"]
+libraries = {
+&"": SubResource("AnimationLibrary_0tem3")
+}
 autoplay = "loop"
-anims/loop = SubResource( 4 )
 
 [node name="BarOutline" type="Panel" parent="BarBase"]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 2.0
@@ -140,26 +126,23 @@ offset_top = 2.0
 offset_right = -2.0
 offset_bottom = -2.0
 mouse_filter = 1
-theme_override_styles/panel = SubResource( 5 )
+theme_override_styles/panel = SubResource("5")
 
 [node name="IconContainer" type="CenterContainer" parent="BarBase"]
+layout_mode = 0
 anchor_bottom = 1.0
 offset_left = 20.0
 offset_right = 60.0
 
 [node name="Icon" type="TextureRect" parent="BarBase/IconContainer"]
-modulate = Color( 0, 1, 1, 1 )
-offset_left = 9.0
-offset_top = 19.0
-offset_right = 31.0
-offset_bottom = 41.0
-texture = ExtResource( 7 )
+modulate = Color(0, 1, 1, 1)
+layout_mode = 2
+texture = ExtResource("7")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="BarBase/IconContainer/Icon"]
 show_behind_parent = true
-position = Vector2( 11, 11 )
+position = Vector2(11, 11)
 amount = 1
+texture = ExtResource("8")
 lifetime = 0.5
-local_coords = false
-process_material = SubResource( 10 )
-texture = ExtResource( 8 )
+process_material = SubResource("10")

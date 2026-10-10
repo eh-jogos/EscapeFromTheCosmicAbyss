@@ -4,7 +4,7 @@ var animator
 var darkwave
 var deadplayer 
 var deadplayer_outline
-var tentacle_position
+var tentacle_position: PathFollow2D
 
 func _ready():
 	darkwave = self.get_parent()
@@ -19,10 +19,10 @@ func _on_kill_player(offset_x, flip):
 	deadplayer.set_flip_v(flip)
 	deadplayer_outline.set_flip_v(flip)
 	
-	var relative_pos = offset_x - tentacle_position.get_global_position().x  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	#print("Offset X: %s | tentacle position: %s | Relative Pos: %s | Unit Relative Pos? %s"%[offset_x, tentacle_position.get_global_position().x, relative_pos, relative_pos/(790*3)])  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	var relative_pos = offset_x - tentacle_position.get_global_position().x 
+	#print("Offset X: %s | tentacle position: %s | Relative Pos: %s | Unit Relative Pos? %s"%[offset_x, tentacle_position.get_global_position().x, relative_pos, relative_pos/(790*3)])
 	
-	tentacle_position.set_offset(relative_pos)
+	tentacle_position.progress = relative_pos
 	
 	animator.play("kill_player")
 	await animator.animation_finished

@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=138 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/LevelLoader.gd" id="2"]
@@ -15,13 +15,13 @@
 [ext_resource type="Script" uid="uid://bqxck8s2tblfk" path="res://Levels/Level10.gd" id="13"]
 [ext_resource type="Script" uid="uid://dh74piwxck3b4" path="res://Levels/Level11.gd" id="14"]
 [ext_resource type="Script" uid="uid://dck8ghxuua6r5" path="res://Levels/Level12.gd" id="15"]
-[ext_resource type="Script" uid="uid://dp8ihtihiryx1" path="res://JetpackGameMode/Camera/Camera.gd" id="16"]
+[ext_resource type="PackedScene" uid="uid://ubsi237osaus" path="res://JetpackGameMode/Camera/gameplay_camera.tscn" id="16_mhwsq"]
 [ext_resource type="Script" uid="uid://cusg7srb0uaq7" path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" id="17"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="18"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="19"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" id="20"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" id="21"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://c566dtf0tf257" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://d2uaxlo5t8bfp" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://4liovbej1qaj" path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" id="20"]
+[ext_resource type="PackedScene" uid="uid://dn3bel8ngky0n" path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" id="21"]
+[ext_resource type="PackedScene" uid="uid://bx8isl7pyt1uj" path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" id="22"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeMarker.tscn" id="23"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/PowerUps/ShieldUp.tscn" id="24"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" id="25"]
@@ -52,7 +52,7 @@
 [ext_resource type="Texture2D" uid="uid://v5r5an0q7afo" path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" id="50"]
 [ext_resource type="Script" uid="uid://xb8xh28uv8kr" path="res://JetpackGameMode/BG/BG_LooperH2.gd" id="51"]
 [ext_resource type="PackedScene" uid="uid://b7xrxqixd3t11" path="res://JetpackGameMode/Character/Player.tscn" id="52"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="53"]
+[ext_resource type="PackedScene" uid="uid://b3qnrrqypfnj7" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="53"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" id="54"]
 [ext_resource type="Texture2D" uid="uid://2ht2e63b7xu0" path="res://CommonScenes/pallet.png" id="55"]
 [ext_resource type="Script" uid="uid://rfy2u8b1mwvy" path="res://JetpackGameMode/HUD/ShieldMeter.gd" id="56"]
@@ -61,7 +61,7 @@
 [ext_resource type="FontFile" uid="uid://b28h8ar0m2tch" path="res://Fonts/Orbitron-Black.ttf" id="59"]
 [ext_resource type="Script" uid="uid://ry4gxcai5bi1" path="res://JetpackGameMode/HUD/SpeedrunTime.gd" id="60"]
 [ext_resource type="Script" uid="uid://bvgnhuof4480s" path="res://JetpackGameMode/HUD/SpeedMessager.gd" id="61"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/HUD/ProgressVisualization.tscn" id="62"]
+[ext_resource type="PackedScene" uid="uid://c3hqujul88nf5" path="res://JetpackGameMode/HUD/ProgressVisualization.tscn" id="62"]
 [ext_resource type="PackedScene" uid="uid://ceerfm3jbmu0d" path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" id="63"]
 [ext_resource type="PackedScene" uid="uid://d11raokmrdi1k" path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" id="64"]
 [ext_resource type="PackedScene" uid="uid://b1agagp8llmhl" path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" id="65"]
@@ -87,11 +87,6 @@
 [ext_resource type="Shader" uid="uid://cqjmu82kqdb3d" path="res://Shaders/transition.gdshader" id="85"]
 [ext_resource type="Texture2D" uid="uid://cya8twlusrqr1" path="res://JetpackGameMode/Obstacles/Fx/danger_vignette.png" id="86"]
 [ext_resource type="Script" uid="uid://dk6ntox0mr7y6" path="res://JetpackGameMode/DangerVignette.gd" id="87"]
-[ext_resource type="Script" uid="uid://dyga8kf2debfl" path="res://JetpackGameMode/Camera/Shaker.gd" id="88"]
-
-[sub_resource type="SegmentShape2D" id="1"]
-a = Vector2(-50, 0)
-b = Vector2(1970, 0)
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(20, 1258.71)
@@ -1490,7 +1485,7 @@ shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(120.694, 373.957)
+shader_parameter/torus_center = Vector2(0.190369, 1.43005)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1499,7 +1494,7 @@ shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(120.694, 373.957)
+shader_parameter/torus_center = Vector2(0.190369, 1.43005)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1510,7 +1505,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(120.694, 373.957)
+shader_parameter/displacement_center = Vector2(0.190369, 1.43005)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1866,8 +1861,8 @@ script = ExtResource("1")
 path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
-test_mode = "speedrun"
-test_level_or_points = 10
+force_test_mode = true
+test_level_or_points = 4
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -1944,49 +1939,13 @@ handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="RawLayer/WorldVieport/SubViewport"]
+[node name="Camera2D" parent="RawLayer/WorldVieport/SubViewport" instance=ExtResource("16_mhwsq")]
 position = Vector2(960, 540)
-limit_left = 0
-limit_top = 0
-limit_bottom = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 25.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.0
-drag_top_margin = 1.0
-drag_right_margin = 0.0
-drag_bottom_margin = 1.0
-script = ExtResource("16")
-path_player = NodePath("../Player")
-
-[node name="Shaker" type="Node" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
-script = ExtResource("88")
-
-[node name="Tween" type="Tween" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
-
-[node name="Limites" type="StaticBody2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
-position = Vector2(-960, -540)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/Limites"]
-shape = SubResource("1")
-
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/Limites"]
-position = Vector2(0, 1080)
-shape = SubResource("1")
 
 [node name="TentacleTrigger" type="Area2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
 position = Vector2(650, 0)
+collision_layer = 0
+collision_mask = 4
 
 [node name="Collision" type="CollisionShape2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/TentacleTrigger"]
 position = Vector2(230, 0)
@@ -2076,12 +2035,12 @@ next/warning = &"base"
 
 [node name="Guardian" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(1331.09, -33.4312)
+position = Vector2(1331.09, -213.431)
 texture = ExtResource("27")
 
 [node name="Astro" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(504.4, 198.177)
+position = Vector2(504.4, 18.1768)
 texture = ExtResource("28")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="RawLayer/WorldVieport/SubViewport"]
@@ -2695,7 +2654,6 @@ bus = &"GameSfx"
 
 [node name="ProgressVisualization" parent="HUD" instance=ExtResource("62")]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = 11
 offset_top = 986.0
 offset_bottom = 8.0
 

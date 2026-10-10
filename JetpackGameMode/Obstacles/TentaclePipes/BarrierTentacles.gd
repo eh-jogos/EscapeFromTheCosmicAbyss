@@ -11,13 +11,12 @@ extends "res://JetpackGameMode/Obstacles/Pipe_Looper.gd"
 
 
 ### Built in Engine Methods ---------------
-func _ready():
-	pass
 
 ### ---------------------------------------
 
 
 ### Public Methods ------------------------
+
 func scored():
 	game._on_scored(point_value)
 	Global.achievements_handler.current_barriers += 1

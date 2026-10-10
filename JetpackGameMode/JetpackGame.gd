@@ -44,6 +44,7 @@ var tutorial
 @export var upgrade_multiple = 30
 @export_file var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
 @export_file var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+@export var force_test_mode := false
 @export_enum("story", "arcade", "speedrun") var test_mode = "story"
 @export var test_level_or_points: int = 0
 
@@ -119,7 +120,7 @@ func _input(event):
 func show_pre_game():
 	print("JetpackGame.gd | Game Mode: %s | Is Retry: %s"%[game_mode, Global.is_retry])
 	
-	if game_mode == "test_mode":
+	if force_test_mode:
 		print("JetpackGame.gd | Test Mode: %s | Test Sub: %s"%[test_mode, test_level_or_points])
 		game_mode = test_mode
 		Global.savedata["state"]["game mode"] = test_mode

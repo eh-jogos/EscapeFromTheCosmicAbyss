@@ -42,13 +42,13 @@ var is_bouncing = false
 
 
 # "Stats" Variables?
-var gravity = 1200.0
-var speed_y = -900.0
-var dash_modifier = 90.0
-var base_dash_cost = 50
-var dash_cost_decrement = 6.4 # so that at max upgrade, dash cost is 18
-var dash_cost
-var speed_x 
+var gravity: float = 1200.0
+var speed_y: float = -900.0
+var dash_modifier: float = 90.0
+var base_dash_cost: float = 50.0
+var dash_cost_decrement: float = 6.4 # so that at max upgrade, dash cost is 18
+var dash_cost: float
+var speed_x: float
 var shield_energy
 var laser_strength
 var cooldown
@@ -59,7 +59,7 @@ var unit = Vector2(97.0,89.0)
 var gravity_force = 40.0*unit.y
 var jetpack_force = -90.0*unit.y
 
-var speed = Vector2(0, 0)
+var speed: Vector2 = Vector2(0, 0)
 
 func _ready():
 	# Outer Nodes
@@ -98,7 +98,7 @@ func _ready():
 		is_invincible = Global.is_invincible
 
 
-func _physics_process(delta):
+func _physics_process(delta: float):
 	if game.get_game_state() != game.STATE.Playing and game.get_game_state() != game.STATE.Tutorial:
 		return
 	
@@ -158,20 +158,20 @@ func _physics_process(delta):
 		if not shooting:
 			arms_animator.play("rise_to_fall")
 	
-	var motion = speed * delta
+	var motion: Vector2 = speed * delta
 	#print("Motion: %s"%[motion])
-	var collision = move_and_collide(motion)
+	var collision: = move_and_collide(motion)
 	
 	if collision != null:
 		
-		motion = collision.remainder
-		var collider = collision.collider
+		motion = collision.get_remainder()
+		var collider: Node2D = collision.get_collider()
 		#print(collider.get_name())
 		if collider.is_in_group("enemy") and not is_dead and shield_energy > 0:
 			#print("Shield Protected")
 			take_hit()
 			
-			var normal = collision.normal
+			var normal = collision.get_normal()
 			var final_motion = motion.slide(normal)
 			
 			if collider.has_method("obstacle_killed"):
@@ -201,7 +201,7 @@ func _physics_process(delta):
 #			queue_free()
 			
 		else: 
-			var normal = collision.normal
+			var normal = collision.get_normal()
 			motion = normal.slide(motion)
 			set_velocity(motion)
 			move_and_slide()

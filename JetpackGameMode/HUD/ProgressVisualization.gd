@@ -15,7 +15,9 @@ var increment
 var total_count
 var progress_count = 0
 
-var barriers = []
+var barriers: Array[CenterContainer] = []
+
+var _tween: Tween = null
 
 func _ready():
 	progress_bar = get_node("BarBase")
@@ -28,12 +30,12 @@ func _ready():
 
 
 func create_barrier(step):
-	var barrier = progress_barrier.instantiate()
+	var barrier: CenterContainer = progress_barrier.instantiate()
 	progress_bar.add_child(barrier, true)
 	var position_x = (step * increment)
 	var offset_x = barrier.offset_x
 	var offset_y = barrier.offset_y
-	barrier.set_position(Vector2(position_x + offset_x, offset_y))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
+	barrier.position = Vector2(position_x + offset_x, offset_y)
 	barriers.append(barrier)
 
 
@@ -88,9 +90,13 @@ func update_progress():
 
 func _on_Global_barrier_tentacle_killed():
 	if barriers.size() > 0:
-		var tween = get_node("Tween")
-		tween.interpolate_property(barriers[0], "modulate:a", 1.0, 0.0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN)
-		tween.start()
-		await tween.tween_completed
-		barriers[0].queue_free()
-		barriers.pop_front()
+		var current_barrier: CenterContainer = barriers.pop_front()
+		if _tween:
+			if _tween.is_running():
+				await _tween.finished
+			_tween.kill()
+		
+		_tween = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
+		_tween.tween_property(current_barrier, "modulate:a", 0.0, 0.3)
+		await _tween.finished
+		current_barrier.queue_free()
