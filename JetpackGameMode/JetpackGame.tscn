@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=138 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/LevelLoader.gd" id="2"]
@@ -15,10 +15,10 @@
 [ext_resource type="Script" uid="uid://bqxck8s2tblfk" path="res://Levels/Level10.gd" id="13"]
 [ext_resource type="Script" uid="uid://dh74piwxck3b4" path="res://Levels/Level11.gd" id="14"]
 [ext_resource type="Script" uid="uid://dck8ghxuua6r5" path="res://Levels/Level12.gd" id="15"]
-[ext_resource type="Script" uid="uid://dp8ihtihiryx1" path="res://JetpackGameMode/Camera/Camera.gd" id="16"]
+[ext_resource type="PackedScene" uid="uid://ubsi237osaus" path="res://JetpackGameMode/Camera/gameplay_camera.tscn" id="16_mhwsq"]
 [ext_resource type="Script" uid="uid://cusg7srb0uaq7" path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" id="17"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="18"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="19"]
+[ext_resource type="PackedScene" uid="uid://c566dtf0tf257" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://d2uaxlo5t8bfp" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="19"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/DoubleTentacles.tscn" id="20"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/TripleTentacles.tscn" id="21"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" id="22"]
@@ -87,11 +87,6 @@
 [ext_resource type="Shader" uid="uid://cqjmu82kqdb3d" path="res://Shaders/transition.gdshader" id="85"]
 [ext_resource type="Texture2D" uid="uid://cya8twlusrqr1" path="res://JetpackGameMode/Obstacles/Fx/danger_vignette.png" id="86"]
 [ext_resource type="Script" uid="uid://dk6ntox0mr7y6" path="res://JetpackGameMode/DangerVignette.gd" id="87"]
-[ext_resource type="Script" uid="uid://dyga8kf2debfl" path="res://JetpackGameMode/Camera/Shaker.gd" id="88"]
-
-[sub_resource type="SegmentShape2D" id="1"]
-a = Vector2(-50, 0)
-b = Vector2(1970, 0)
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(20, 1258.71)
@@ -1490,7 +1485,7 @@ shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(120.694, 373.957)
+shader_parameter/torus_center = Vector2(0.190369, 1.43005)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1499,7 +1494,7 @@ shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(120.694, 373.957)
+shader_parameter/torus_center = Vector2(0.190369, 1.43005)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1510,7 +1505,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(120.694, 373.957)
+shader_parameter/displacement_center = Vector2(0.190369, 1.43005)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1866,8 +1861,8 @@ script = ExtResource("1")
 path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
-test_mode = "speedrun"
-test_level_or_points = 10
+force_test_mode = true
+test_level_or_points = 2
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -1944,49 +1939,13 @@ handle_input_locally = false
 size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="RawLayer/WorldVieport/SubViewport"]
+[node name="Camera2D" parent="RawLayer/WorldVieport/SubViewport" instance=ExtResource("16_mhwsq")]
 position = Vector2(960, 540)
-limit_left = 0
-limit_top = 0
-limit_bottom = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 25.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.0
-drag_top_margin = 1.0
-drag_right_margin = 0.0
-drag_bottom_margin = 1.0
-script = ExtResource("16")
-path_player = NodePath("../Player")
-
-[node name="Shaker" type="Node" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
-script = ExtResource("88")
-
-[node name="Tween" type="Tween" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
-
-[node name="Limites" type="StaticBody2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
-position = Vector2(-960, -540)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/Limites"]
-shape = SubResource("1")
-
-[node name="CollisionShape2D1" type="CollisionShape2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/Limites"]
-position = Vector2(0, 1080)
-shape = SubResource("1")
 
 [node name="TentacleTrigger" type="Area2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
 position = Vector2(650, 0)
+collision_layer = 0
+collision_mask = 4
 
 [node name="Collision" type="CollisionShape2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/TentacleTrigger"]
 position = Vector2(230, 0)
@@ -2076,12 +2035,12 @@ next/warning = &"base"
 
 [node name="Guardian" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(1331.09, -33.4312)
+position = Vector2(1331.09, -213.431)
 texture = ExtResource("27")
 
 [node name="Astro" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(504.4, 198.177)
+position = Vector2(504.4, 18.1768)
 texture = ExtResource("28")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="RawLayer/WorldVieport/SubViewport"]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://ubsi237osaus"]
+
+[ext_resource type="Script" uid="uid://dp8ihtihiryx1" path="res://JetpackGameMode/Camera/Camera.gd" id="1_2w85u"]
+[ext_resource type="Script" uid="uid://dyga8kf2debfl" path="res://JetpackGameMode/Camera/Shaker.gd" id="2_nxn4s"]
+
+[sub_resource type="SegmentShape2D" id="1"]
+a = Vector2(-50, 0)
+b = Vector2(1970, 0)
+
+[node name="Camera2D" type="Camera2D"]
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 25.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 1.0
+drag_right_margin = 0.0
+drag_bottom_margin = 1.0
+script = ExtResource("1_2w85u")
+path_player = NodePath("../Player")
+
+[node name="Shaker" type="Node" parent="."]
+script = ExtResource("2_nxn4s")
+
+[node name="Tween" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
+script = null
+
+[node name="Limites" type="StaticBody2D" parent="."]
+position = Vector2(-960, -540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites"]
+shape = SubResource("1")
+
+[node name="CollisionShape2D1" type="CollisionShape2D" parent="Limites"]
+position = Vector2(0, 1080)
+shape = SubResource("1")
