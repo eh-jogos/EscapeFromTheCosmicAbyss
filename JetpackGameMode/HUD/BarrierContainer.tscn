@@ -1,41 +1,36 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://be2udfpodr4kd"]
 
-[ext_resource path="res://JetpackGameMode/HUD/BarrierContainer.gd" type="Script" id=1]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tentacle_marker_outline.png" type="Texture2D" id=2]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierIconSilhouette.gd" type="Script" id=3]
-[ext_resource path="res://JetpackGameMode/HUD/pngs/tentacle_marker_fill.png" type="Texture2D" id=4]
-[ext_resource path="res://JetpackGameMode/HUD/BarrierIconBody.gd" type="Script" id=5]
+[ext_resource type="Script" uid="uid://djvjsn3ijkrnm" path="res://JetpackGameMode/HUD/BarrierContainer.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://bi1octvpk2kih" path="res://JetpackGameMode/HUD/pngs/tentacle_marker_outline.png" id="2"]
+[ext_resource type="Script" uid="uid://cg7qclvdkhsi3" path="res://JetpackGameMode/HUD/BarrierIconSilhouette.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://dj4fylthlp5n5" path="res://JetpackGameMode/HUD/pngs/tentacle_marker_fill.png" id="4"]
+[ext_resource type="Script" uid="uid://btulfrrk1xhpk" path="res://JetpackGameMode/HUD/BarrierIconBody.gd" id="5"]
 
 [node name="BarrierContainer" type="CenterContainer"]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -20.0
 offset_top = -13.0
 offset_right = -1901.0
 offset_bottom = -1007.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("1")
 offset_x = 20
 
 [node name="BarrierIconSilhouette" type="TextureRect" parent="."]
-self_modulate = Color( 0.0156863, 0.0784314, 0.0666667, 1 )
-offset_right = 39.0
-offset_bottom = 86.0
-texture = ExtResource( 2 )
-script = ExtResource( 3 )
+self_modulate = Color(0.0156863, 0.0784314, 0.0666667, 1)
+layout_mode = 2
+texture = ExtResource("2")
+script = ExtResource("3")
 
 [node name="BarrierIconBody" type="TextureRect" parent="BarrierIconSilhouette"]
-self_modulate = Color( 0.121569, 0.392157, 0.356863, 1 )
+self_modulate = Color(0.121569, 0.392157, 0.356863, 1)
+layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -16.0
 offset_right = 17.0
-texture = ExtResource( 4 )
+texture = ExtResource("4")
 stretch_mode = 6
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource("5")

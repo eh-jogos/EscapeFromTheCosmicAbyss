@@ -749,7 +749,7 @@
 [ext_resource type="Texture2D" uid="uid://dh5v105ux0ic0" path="res://JetpackGameMode/HUD/pngs/tilted_rounded_retangle_outline.png" id="746"]
 [ext_resource type="Texture2D" uid="uid://dsawdklecd7do" path="res://JetpackGameMode/HUD/pngs/player_marker.png" id="747"]
 [ext_resource type="Texture2D" uid="uid://dbgp50cnvl1cx" path="res://JetpackGameMode/HUD/pngs/ProgressIcon.png" id="748"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/HUD/BarrierContainer.tscn" id="749"]
+[ext_resource type="PackedScene" uid="uid://be2udfpodr4kd" path="res://JetpackGameMode/HUD/BarrierContainer.tscn" id="749"]
 [ext_resource type="Texture2D" uid="uid://d08qjaw8sgobu" path="res://JetpackGameMode/Character/Fxs/jetpack_particle.png" id="751"]
 [ext_resource type="Material" uid="uid://daql6e02ue18d" path="res://JetpackGameMode/Screens/Tutorial/tutorial_jetpack_particles.tres" id="752"]
 [ext_resource type="PackedScene" uid="uid://b5p7jvfyoos25" path="res://CommonScenes/JoypadSupport/Prompts/PromptInputAction.tscn" id="753"]
@@ -4705,7 +4705,7 @@ gradient = ExtResource("755")
 
 [sub_resource type="ShaderMaterial" id="82"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.017318
+shader_parameter/torus_thickness = 0.0126476
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4756,7 +4756,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="83"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.017318
+shader_parameter/torus_thickness = 0.0126476
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4807,7 +4807,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="86"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.017318
+shader_parameter/torus_thickness = 0.0126476
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
