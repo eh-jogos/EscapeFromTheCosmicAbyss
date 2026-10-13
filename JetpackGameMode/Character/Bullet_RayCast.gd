@@ -13,6 +13,9 @@ var is_looping_sfx = false
 
 signal laser_end
 
+var _tween: Tween = null
+@onready var _loop: AudioStreamPlayer = $SfxLibrary/Loop
+
 func _ready():
 	#print("Bullet Ready")
 	raycast_top = get_node("TopRaycast")
@@ -62,8 +65,10 @@ func play_loop_sfx():
 
 
 func start_fade_out_sfx():
-	var tween = $Tween
-	var loop = $SfxLibrary/Loop
-	tween.interpolate_property(loop, "volume_db", loop.volume_db, -40.0, 0.5, 
-			Tween.TRANS_LINEAR, Tween.EASE_IN)
-	tween.start()
+	const SILENCE_VALUE = -40.0
+	const DURATION = 0.5
+	
+	if _tween:
+		_tween.kill()
+	_tween = create_tween().set_ease(Tween.EASE_IN)
+	_tween.tween_property(_loop, "volume_db", SILENCE_VALUE, DURATION)

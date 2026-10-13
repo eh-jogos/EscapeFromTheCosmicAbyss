@@ -223,7 +223,7 @@
 [ext_resource type="Texture2D" uid="uid://gia55gqa5w8g" path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" id="221"]
 [ext_resource type="Animation" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles_KillPlayerAnim.tres" id="222"]
 [ext_resource type="Script" uid="uid://cjuur4ekys5py" path="res://JetpackGameMode/Boss/final_boss/FinalBossOutlineColor.gd" id="223"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="224"]
+[ext_resource type="PackedScene" uid="uid://b3qnrrqypfnj7" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="224"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" id="225"]
 [ext_resource type="Texture2D" uid="uid://dtkqawpoyvjnm" path="res://CommonScenes/ColorsMenu/colors_menu_bg_gradient.png" id="226"]
 [ext_resource type="Script" uid="uid://c4ke5d3j4rxkr" path="res://CommonScenes/ColorsMenu/EnemyMenusNavigation.gd" id="228"]
@@ -9956,18 +9956,6 @@ offset_right = 960.0
 offset_bottom = -201.0
 script = ExtResource("228")
 
-[node name="Tween" type="Tween" parent="ColorsMenuLayer/MenuRoot/MenusBlock"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
-
 [node name="EnemyMenus" type="HBoxContainer" parent="ColorsMenuLayer/MenuRoot/MenusBlock"]
 light_mask = 1024
 use_parent_material = true
@@ -10013,12 +10001,12 @@ theme_override_constants/separation = 20
 
 [node name="OptionOutline" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuWaves/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Outline"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuWaves/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Body"
 waves_part = "body"
 
@@ -10056,14 +10044,14 @@ theme_override_constants/separation = 20
 
 [node name="OptionOutline" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuTentacles/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Outline"
 category = "tentacles"
 selected_part = "tentacles_part"
 
 [node name="OptionBody" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuTentacles/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Body"
 category = "tentacles"
 tentacles_part = "body"
@@ -10103,7 +10091,7 @@ theme_override_constants/separation = 20
 
 [node name="OptionOutline" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Outline"
 category = "laser_eye"
 selected_part = "laser_eye_part"
@@ -10154,7 +10142,7 @@ selected_part = "laser_eye_part"
 [node name="OptionLaserCore" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuLaserEye/List/Buttons" instance=ExtResource("231")]
 visible = false
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Laser Core"
 category = "laser_eye"
 laser_eye_part = "laser_core"
@@ -10194,7 +10182,7 @@ theme_override_constants/separation = 20
 
 [node name="OptionEye" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuBgBoss/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Eye"
 category = "bg_boss"
 selected_part = "bg_boss_part"
@@ -10215,7 +10203,7 @@ selected_part = "bg_boss_part"
 
 [node name="OptionTeeth" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuBgBoss/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Teeth"
 category = "bg_boss"
 bg_boss_part = "teeth"
@@ -10255,7 +10243,7 @@ theme_override_constants/separation = 20
 
 [node name="OptionOutline" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuMidBoss/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Outline"
 category = "mid_bg_boss"
 selected_part = "mid_bg_boss_part"
@@ -10283,7 +10271,7 @@ selected_part = "mid_bg_boss_part"
 
 [node name="OptionIris" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuMidBoss/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Iris"
 category = "mid_bg_boss"
 mid_bg_boss_part = "iris"
@@ -10323,7 +10311,7 @@ theme_override_constants/separation = 20
 
 [node name="OptionOutline" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuFinalBoss/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Outline"
 category = "final_boss"
 selected_part = "final_boss_part"
@@ -10365,7 +10353,7 @@ selected_part = "final_boss_part"
 
 [node name="OptionGum" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuFinalBoss/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Gum"
 category = "final_boss"
 final_boss_part = "gengiva"
@@ -10419,7 +10407,7 @@ selected_part = "final_boss_part"
 
 [node name="OptionWarning3" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuFinalBoss1/List/Buttons" instance=ExtResource("231")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_bottom = NodePath("../../../../../../NavButtons/Exit")
 description = "Warning 3"
 category = "final_boss"
 final_boss_part = "warning3"
@@ -10428,7 +10416,7 @@ selected_part = "final_boss_part"
 [node name="OptionLaserBorders" parent="ColorsMenuLayer/MenuRoot/MenusBlock/EnemyMenus/MenuFinalBoss1/List/Buttons" instance=ExtResource("231")]
 visible = false
 layout_mode = 2
-focus_neighbor_top = NodePath("../../../../../NavButtons/Exit")
+focus_neighbor_top = NodePath("../../../../../../NavButtons/Exit")
 description = "Laser Borders"
 category = "final_boss"
 final_boss_part = "laser_outline"

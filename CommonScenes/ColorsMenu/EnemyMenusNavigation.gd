@@ -3,7 +3,8 @@ extends Control
 @export var current_menu: int = 0: set = _set_current_menu
 
 @onready var container_menus = get_node("EnemyMenus")
-@onready var tween = get_node("Tween")
+
+var _tween: Tween = null
 
 # fix for using Global on tool
 var Global = null
@@ -26,6 +27,7 @@ func _input(event):
 
 
 func _set_current_menu(value):
+	const DURATION: float = 0.3
 	if container_menus == null:
 		return
 	
@@ -35,11 +37,11 @@ func _set_current_menu(value):
 	var menu_position = menu_node.position
 	menu_position.x *= -1
 	
-	tween.remove_all()
-	tween.interpolate_property(container_menus, "position", 
-			container_menus.position, menu_position, 0.3, 
-			Tween.TRANS_CUBIC, Tween.EASE_OUT)
-	tween.start()
+	if _tween:
+		_tween.kill()
+	
+	_tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	_tween.tween_property(container_menus, "position", menu_position, DURATION)
 	
 	if not Engine.is_editor_hint():
 		previous_menu_node.deactivate()

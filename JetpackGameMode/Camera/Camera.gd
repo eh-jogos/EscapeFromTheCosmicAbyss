@@ -9,8 +9,9 @@ var base_offset = 0
 var player_position
 
 @onready var player = get_node(path_player)
-@onready var tween = get_node("Tween")
 @onready var shaker: Shaker = $Shaker
+
+var _tween: Tween = null
 
 func _ready():
 	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
@@ -23,12 +24,17 @@ func _physics_process(_delta):  #-- NOTE: Automatically converted by Godot 2 to 
 
 
 func set_camera_offset_x(value, seconds, easing = Tween.EASE_IN):
+	const STARTING_VALUE: float = 0.01
+	
 	base_offset = camera_offset_x
 	target_offset_x = (abs(base_offset) + value)
+	
+	if _tween:
+		_tween.kill()
+	
+	_tween = create_tween().set_trans(Tween.TRANS_SINE).set_ease(easing)
 	#print("base: %s | target: %s"%[base_offset, target_offset_x])
-	tween.interpolate_method(self,"animate_camera_horizontally", 0.01, 1.00, 
-			seconds, Tween.TRANS_SINE, easing)
-	tween.start()
+	_tween.tween_method(animate_camera_horizontally,STARTING_VALUE,1.00,seconds)
 
 
 func animate_camera_horizontally(progress):
