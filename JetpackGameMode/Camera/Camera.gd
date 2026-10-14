@@ -9,7 +9,7 @@ var base_offset = 0
 var player_position
 
 @onready var player = get_node(path_player)
-@onready var shaker: Shaker = $Shaker
+@onready var shaker: eh_Shaker2D = $Shaker
 
 var _tween: Tween = null
 
