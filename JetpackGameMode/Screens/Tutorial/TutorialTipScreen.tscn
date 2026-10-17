@@ -738,7 +738,7 @@
 [ext_resource type="Texture2D" uid="uid://l0fwjj4bx4en" path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0050.png" id="734"]
 [ext_resource type="Texture2D" uid="uid://gia55gqa5w8g" path="res://JetpackGameMode/Character/OutlineAnimations/Die/Armature_dying_outline0051.png" id="735"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Character/OverheatBar.tscn" id="736"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/HUD/ShiedIcon.tscn" id="738"]
+[ext_resource type="PackedScene" uid="uid://c2u80tbpdf0bp" path="res://JetpackGameMode/HUD/ShiedIcon.tscn" id="738"]
 [ext_resource type="Texture2D" uid="uid://dx0ctrb1bnpdb" path="res://JetpackGameMode/PowerUps/ShieldBG.png" id="739"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/HUD/Ammo.tscn" id="740"]
 [ext_resource type="Texture2D" uid="uid://bjpelr646dy80" path="res://JetpackGameMode/Character/Fxs/FullLaser.png" id="741"]
@@ -4705,7 +4705,7 @@ gradient = ExtResource("755")
 
 [sub_resource type="ShaderMaterial" id="82"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0126476
+shader_parameter/torus_thickness = 0.0132811
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4756,7 +4756,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="83"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0126476
+shader_parameter/torus_thickness = 0.0132811
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4807,7 +4807,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="86"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0126476
+shader_parameter/torus_thickness = 0.0132811
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -9765,6 +9765,7 @@ process_material = SubResource("113")
 
 [node name="BarrierContainer" parent="Tip#4/Mask/Cena2/HUD/ProgressVisualization2/BarBase" instance=ExtResource("749")]
 layout_mode = 0
+anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 382.0
