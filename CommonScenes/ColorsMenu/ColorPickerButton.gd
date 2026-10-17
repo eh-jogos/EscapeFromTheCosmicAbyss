@@ -61,7 +61,7 @@ func _on_Global_reset_color_pickers():
 func _on_popup_hide():
 	_button_area.mouse_filter = Control.MOUSE_FILTER_STOP
 	$Cooldown.start()
-	await get_tree().idle_frame
+	await get_tree().process_frame
 	
 	SoundManager.play_sfx("Change")
 	

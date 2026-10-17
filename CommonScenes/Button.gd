@@ -36,7 +36,7 @@ func _on_pressed():
 		SoundManager.play_sfx(pressed_sfx)
 	else:
 		SoundManager.play_sfx(pressed_sfx, true)
-		await get_tree().idle_frame
+		await get_tree().process_frame
 		if not is_connected("focus_exited", Callable(self, "_on_focus_exited")):
 			connect("focus_exited", Callable(self, "_on_focus_exited"))
 	
