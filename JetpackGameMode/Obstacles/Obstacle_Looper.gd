@@ -9,7 +9,7 @@ func _ready():
 	
 #	print(game.camera.get_name())
 	
-	set_process(true)
+	set_process(false) ## UNDO
 	pass
 
 func _process(_delta):

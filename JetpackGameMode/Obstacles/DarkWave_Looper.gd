@@ -11,7 +11,7 @@ func _ready():
 	
 #	print(game.camera.get_name())
 	
-	set_process(true)
+	set_process(false) ## UNDO
 	pass
 
 func _process(_delta):
@@ -37,7 +37,7 @@ func kill_player(offset):
 
 
 func shake_camera() -> void:
-	Global.emit_signal("shake_trauma_added", 6.0)
+	Global.emit_signal("shake_trauma_added", 0.8)
 
 
 func _on_player_killed():
