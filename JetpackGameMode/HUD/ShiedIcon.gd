@@ -1,15 +1,14 @@
 extends Control
 
-var animation
+@onready var animator: AnimationPlayer = $AnimationPlayer
 
 func _ready():
-	animation = self.get_node("AnimationPlayer")
 	pass
 
 func use_shield():
-	animation.play_backwards("intro")
-	await animation.animation_finished
-	self.queue_free()
+	animator.play_backwards("intro")
+	await animator.animation_finished
+	queue_free()
 
 func play_intro():
-	animation.play("intro")
+	animator.play("intro")
