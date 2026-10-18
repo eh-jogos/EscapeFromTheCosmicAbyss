@@ -1461,7 +1461,7 @@ shader_parameter/torus_resolution = Vector2(1.77778, 1)
 [node name="RawLayer" type="CanvasLayer" node_paths=PackedStringArray("laser_eye")]
 layer = -10
 script = ExtResource("1_cbidd")
-play_laser_eye = null
+shaky_camera_active = null
 laser_eye = NodePath("WorldVieport/SubViewport/Camera2D/LaserEye")
 
 [node name="WorldVieport" type="SubViewportContainer" parent="."]
