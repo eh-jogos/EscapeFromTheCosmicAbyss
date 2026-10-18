@@ -24,6 +24,7 @@ extends Node
 ### Member Variables and Dependencies -------------------------------------------------------------
 #--- signals --------------------------------------------------------------------------------------
 
+signal trauma_started
 signal trauma_ended
 
 #--- enums ----------------------------------------------------------------------------------------
@@ -92,7 +93,7 @@ func _process(delta):
 	else:
 		_update_base_values()
 		set_process(false)
-		emit_signal("trauma_ended")
+		trauma_ended.emit()
 
 
 # I'm still doing this "advanced" exports instead of using @export notations because
@@ -137,6 +138,7 @@ func add_trauma(amount: float, direction := Vector2.ZERO):
 	
 	if not is_processing() and _trauma > 0:
 		set_process(true)
+		trauma_started.emit()
 
 ### -----------------------------------------------------------------------------------------------
 

@@ -30,8 +30,13 @@ drag_bottom_margin = 1.0
 script = ExtResource("1_2w85u")
 path_player = NodePath("../Player")
 
+[node name="ShakyCamera" type="Camera2D" parent="."]
+ignore_rotation = false
+enabled = false
+
 [node name="Shaker" type="Node" parent="."]
 script = ExtResource("2_2w85u")
+shake_target = NodePath("../ShakyCamera")
 max_roll = 5.0
 _noise_texture = SubResource("NoiseTexture2D_nxn4s")
 _test_trauma = 0.0
