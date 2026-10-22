@@ -9,6 +9,15 @@ var current_level: int = 1
 			_play_laser_eye()
 			await get_tree().create_timer(0.5).timeout
 			value = false
+
+@export_range(0.0,10.0,0.1,"or_greater") var trauma_test_value: float = 0.8
+@export var shake_camera: bool = false:
+	set(value):
+		if value:
+			Global.emit_signal("shake_trauma_added", trauma_test_value)
+			await get_tree().create_timer(0.5).timeout
+			value = false
+
 @export var shaky_camera_active: bool = false:
 	set(value):
 		shaky_camera_active = value

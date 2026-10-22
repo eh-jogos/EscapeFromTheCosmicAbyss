@@ -1,6 +1,6 @@
 [gd_scene load_steps=84 format=3 uid="uid://da5br1aiivqdn"]
 
-[ext_resource type="Script" uid="uid://c3jsa88typuqo" path="res://raw_layer_test.gd" id="1_cbidd"]
+[ext_resource type="Script" uid="uid://c3jsa88typuqo" path="res://debug_sandboxes/raw_layer_explorer/raw_layer_test.gd" id="1_cbidd"]
 [ext_resource type="PackedScene" uid="uid://ubsi237osaus" path="res://JetpackGameMode/Camera/gameplay_camera.tscn" id="1_wa63a"]
 [ext_resource type="PackedScene" uid="uid://55b6hr3tyyca" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" id="2_cbidd"]
 [ext_resource type="PackedScene" uid="uid://cft781k1bnot0" path="res://JetpackGameMode/Boss/FinalBoss.tscn" id="3_puyeo"]
@@ -37,6 +37,7 @@
 [ext_resource type="Script" uid="uid://bu8q0j0yya110" path="res://JetpackGameMode/BG/BG_LooperH.gd" id="34_n5dfq"]
 [ext_resource type="Texture2D" uid="uid://v5r5an0q7afo" path="res://JetpackGameMode/BG/JetpackGame_Parallax_0.png" id="35_sqxsg"]
 [ext_resource type="Script" uid="uid://xb8xh28uv8kr" path="res://JetpackGameMode/BG/BG_LooperH2.gd" id="36_y1frw"]
+[ext_resource type="PackedScene" uid="uid://cye0nc3ukt5cx" path="res://debug_sandboxes/player_marker.tscn" id="38_cbidd"]
 [ext_resource type="Script" uid="uid://cusg7srb0uaq7" path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" id="38_wnbat"]
 [ext_resource type="PackedScene" uid="uid://c566dtf0tf257" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="39_me4id"]
 [ext_resource type="PackedScene" uid="uid://d2uaxlo5t8bfp" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="40_upkx2"]
@@ -1437,9 +1438,6 @@ shader_parameter/blur_scale = Vector2(0, 0)
 shader = ExtResource("8_fja3s")
 shader_parameter/blur_scale = Vector2(0, 0)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_j5ehc"]
-viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b6elm"]
 shader = ExtResource("48_cggs8")
 shader_parameter/torus_thickness = 0.051
@@ -1461,7 +1459,7 @@ shader_parameter/torus_resolution = Vector2(1.77778, 1)
 [node name="RawLayer" type="CanvasLayer" node_paths=PackedStringArray("laser_eye")]
 layer = -10
 script = ExtResource("1_cbidd")
-shaky_camera_active = null
+trauma_test_value = 2.4
 laser_eye = NodePath("WorldVieport/SubViewport/Camera2D/LaserEye")
 
 [node name="WorldVieport" type="SubViewportContainer" parent="."]
@@ -1583,6 +1581,8 @@ texture = ExtResource("5_g6c5x")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="WorldVieport/SubViewport"]
 layer = -2
+offset = Vector2(960, 540)
+transform = Transform2D(1, 0, 0, 1, 960, 540)
 scroll_base_offset = Vector2(-960, 0)
 scroll_ignore_camera_zoom = true
 script = ExtResource("6_y5rkv")
@@ -1599,10 +1599,12 @@ libraries = {
 script = ExtResource("7_ohyqe")
 
 [node name="Parallax3" type="ParallaxLayer" parent="WorldVieport/SubViewport/ParallaxBackground"]
+position = Vector2(-960, -540)
 motion_scale = Vector2(0.25, 1)
 motion_offset = Vector2(-480, 0)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax3"]
+position = Vector2(960, 450)
 remote_path = NodePath("../../Parallax3Viewport/SubViewport/BlurX/SubViewport/RemoteParallax3")
 
 [node name="Parallax3Viewport" type="SubViewportContainer" parent="WorldVieport/SubViewport/ParallaxBackground"]
@@ -1610,8 +1612,12 @@ material = SubResource("ShaderMaterial_ufr35")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -920.0
+offset_bottom = -500.0
+grow_horizontal = 2
+grow_vertical = 2
 stretch = true
 script = ExtResource("9_uv46y")
 
@@ -1652,6 +1658,7 @@ bus = &"GameSfx"
 [node name="BackRowBossSkin" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss" instance=ExtResource("12_yuvjo")]
 
 [node name="RemoteParallax3" type="Node2D" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport"]
+position = Vector2(0, -90)
 
 [node name="Sprite0" type="AnimatedSprite2D" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/RemoteParallax3"]
 position = Vector2(1010, 540)
@@ -1684,10 +1691,12 @@ offset = Vector2(0, 321)
 color = Color(0.654902, 0.596078, 0.839216, 1)
 
 [node name="Parallax2" type="ParallaxLayer" parent="WorldVieport/SubViewport/ParallaxBackground"]
+position = Vector2(-960, -540)
 motion_scale = Vector2(0.4, 1)
 motion_offset = Vector2(-192, 0)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax2"]
+position = Vector2(960, 540)
 remote_path = NodePath("../../Parallax2Viewport/SubViewport/BlurX/SubViewport/RemoteParallax2")
 
 [node name="Parallax2Viewport" type="SubViewportContainer" parent="WorldVieport/SubViewport/ParallaxBackground"]
@@ -1695,8 +1704,10 @@ material = SubResource("ShaderMaterial_u4beh")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -920.0
+offset_bottom = -500.0
 stretch = true
 script = ExtResource("9_uv46y")
 blur_amount = 0.7
@@ -1776,9 +1787,11 @@ color = Color(1, 0.764706, 0.945098, 1)
 
 [node name="Parallax1" type="ParallaxLayer" parent="WorldVieport/SubViewport/ParallaxBackground"]
 z_as_relative = false
+position = Vector2(-960, -540)
 motion_scale = Vector2(0.5, 1)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax1"]
+position = Vector2(960, 540)
 remote_path = NodePath("../../Parallax1Viewport/SubViewport/BlurX/SubViewport/RemoteParallax1")
 
 [node name="Parallax1Viewport" type="SubViewportContainer" parent="WorldVieport/SubViewport/ParallaxBackground"]
@@ -1786,8 +1799,10 @@ material = SubResource("ShaderMaterial_btkv5")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -920.0
+offset_bottom = -500.0
 stretch = true
 script = ExtResource("9_uv46y")
 blur_amount = 0.4
@@ -1856,10 +1871,12 @@ color = Color(1, 0.92549, 0.862745, 1)
 
 [node name="Parallax0" type="ParallaxLayer" parent="WorldVieport/SubViewport/ParallaxBackground"]
 z_as_relative = false
+position = Vector2(-960, -540)
 motion_scale = Vector2(0.75, 1)
 motion_offset = Vector2(480, 0)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax0"]
+position = Vector2(960, 540)
 remote_path = NodePath("../../Parallax0Viewport/SubViewport/BlurX/SubViewport/RemoteParallax0")
 
 [node name="Parallax0Viewport" type="SubViewportContainer" parent="WorldVieport/SubViewport/ParallaxBackground"]
@@ -1868,8 +1885,10 @@ material = SubResource("ShaderMaterial_g3x6m")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -920.0
+offset_bottom = -500.0
 stretch = true
 script = ExtResource("9_uv46y")
 blur_amount = 0.0
@@ -1909,13 +1928,9 @@ position = Vector2(960, 540)
 
 [node name="CanvasModulate5" type="CanvasModulate" parent="WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport/BlurX/SubViewport"]
 
-[node name="TextureRect" type="TextureRect" parent="WorldVieport/SubViewport/ParallaxBackground"]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = SubResource("ViewportTexture_j5ehc")
-
-[node name="PlayerMarker" type="Marker2D" parent="WorldVieport/SubViewport"]
+[node name="PlayerMarker" parent="WorldVieport/SubViewport" instance=ExtResource("38_cbidd")]
 position = Vector2(961, 554)
+max_speed = 2500.0
 
 [node name="Obstaculos" type="Node2D" parent="WorldVieport/SubViewport"]
 
