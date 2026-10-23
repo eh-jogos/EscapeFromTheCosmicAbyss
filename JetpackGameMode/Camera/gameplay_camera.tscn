@@ -32,7 +32,16 @@ path_player = NodePath("../Player")
 
 [node name="ShakyCamera" type="Camera2D" parent="."]
 ignore_rotation = false
-enabled = false
+limit_left = 0
+limit_top = 0
+limit_bottom = 0
+position_smoothing_speed = 25.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 1.0
+drag_right_margin = 0.0
+drag_bottom_margin = 1.0
 
 [node name="Shaker" type="Node" parent="."]
 script = ExtResource("2_2w85u")
@@ -40,7 +49,7 @@ shake_target = NodePath("../ShakyCamera")
 max_roll = 0.0
 _noise_texture = SubResource("NoiseTexture2D_nxn4s")
 _test_trauma = 0.0
-_test_direction = Vector2(-1, 0)
+_test_direction = Vector2(0, 0)
 
 [node name="Limites" type="StaticBody2D" parent="."]
 position = Vector2(-960, -540)

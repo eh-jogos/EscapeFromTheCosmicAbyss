@@ -3,6 +3,8 @@ extends eh_Shaker2D
 
 var _shaky_camera: Camera2D
 
+@onready var _main_camera: Camera2D = get_parent()
+
 func _ready() -> void:
 	super()
 	_shaky_camera = _target as Camera2D
@@ -12,12 +14,13 @@ func _ready() -> void:
 
 func _on_trauma_started() -> void:
 	if not _shaky_camera.is_current():
-		_shaky_camera.enabled = true
 		_shaky_camera.make_current()
+		_main_camera.position_smoothing_enabled = false
 
 
 func _on_trauma_ended() -> void:
-	_shaky_camera.enabled = false
+	_main_camera.make_current()
+	_main_camera.position_smoothing_enabled = true
 
 
 #region eh_Shaker2D overrides ---------------------------------------------------------------------
