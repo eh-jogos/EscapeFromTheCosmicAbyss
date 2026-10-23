@@ -138,6 +138,7 @@ position = Vector2(0, 72)
 emitting = false
 amount = 16
 texture = ExtResource("7")
+local_coords = true
 process_material = SubResource("12")
 
 [node name="Raycasts" type="Node2D" parent="Root"]
