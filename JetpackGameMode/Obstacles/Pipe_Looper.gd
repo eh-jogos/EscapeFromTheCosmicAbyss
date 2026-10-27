@@ -19,4 +19,5 @@ func scored():
 
 
 func shake_camera() -> void:
-	Global.emit_signal("shake_trauma_added", 0.8)
+	const BIG_TRAUMA = 0.8
+	Global.shake_trauma_added.emit(BIG_TRAUMA)

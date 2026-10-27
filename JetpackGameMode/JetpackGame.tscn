@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qvo1ivscuo4" path="res://Cutscenes/pngs/IngameCutscene/a5tr0.png" id="28"]
 [ext_resource type="Script" uid="uid://duwvct61jl07q" path="res://JetpackGameMode/Boss/ParallaxBackground.gd" id="29"]
 [ext_resource type="Script" uid="uid://bgdco4awc5qja" path="res://JetpackGameMode/Boss/BackgroundBoss.gd" id="30"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" id="31"]
+[ext_resource type="PackedScene" uid="uid://hfonf8i405ih" path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" id="31"]
 [ext_resource type="Texture2D" uid="uid://cnf7bygcju4oo" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" id="32"]
 [ext_resource type="Texture2D" uid="uid://p0yugpmk6o0x" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" id="33"]
 [ext_resource type="Texture2D" uid="uid://c8x21l4a5vboh" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" id="34"]
@@ -958,17 +958,22 @@ tracks/14/keys = {
 "clips": PackedStringArray("back_row_boss_end"),
 "times": PackedFloat32Array(0.6)
 }
-tracks/15/type = "value"
+tracks/15/type = "method"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("../../../../../../Camera2D/Shaker:_trauma")
+tracks/15/path = NodePath(".")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.1, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0.0, 1.0, 1.2, 0.0]
+"times": PackedFloat32Array(0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1.0],
+"method": &"shake_camera"
+}, {
+"args": [1.2],
+"method": &"shake_camera"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7o2yg"]
@@ -1484,7 +1489,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 1.02206)
+shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1493,7 +1498,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 1.02206)
+shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1504,7 +1509,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0954259, 1.02206)
+shader_parameter/displacement_center = Vector2(-0.0954259, 1.06908)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]

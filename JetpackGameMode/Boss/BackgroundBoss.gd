@@ -56,6 +56,10 @@ func restart_count():
 	animator.play("base")
 
 
+func shake_camera(trauma: float) -> void:
+	Global.shake_trauma_added.emit(trauma)
+
+
 func _on_beat_spawned():
 	count += 1
 	if count == current_animation_target:

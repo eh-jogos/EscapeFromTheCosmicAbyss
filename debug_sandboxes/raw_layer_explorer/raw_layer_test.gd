@@ -14,7 +14,7 @@ var current_level: int = 1
 @export var shake_camera: bool = false:
 	set(value):
 		if value:
-			Global.emit_signal("shake_trauma_added", trauma_test_value)
+			Global.shake_trauma_added.emit(trauma_test_value)
 			await get_tree().create_timer(0.5).timeout
 			value = false
 

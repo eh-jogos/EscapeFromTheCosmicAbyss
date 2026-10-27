@@ -75,7 +75,6 @@ position = Vector2(0, -150)
 
 [node name="OuterLaser" type="ColorRect" parent="Root"]
 visible = false
-anchors_preset = -1
 offset_left = -81.0
 offset_right = 81.0
 offset_bottom = 40.0

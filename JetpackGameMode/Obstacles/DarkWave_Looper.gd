@@ -37,7 +37,8 @@ func kill_player(offset):
 
 
 func shake_camera() -> void:
-	Global.emit_signal("shake_trauma_added", 6.0)
+	const BIG_TRAUMA = 0.8
+	Global.shake_trauma_added.emit(BIG_TRAUMA)
 
 
 func _on_player_killed():
