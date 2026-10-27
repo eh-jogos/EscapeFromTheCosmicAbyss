@@ -11,4 +11,3 @@ func _process(_delta):
 		var new_pos = Vector2(self.position.x + (2*2020), self.position.y)
 		self.position = new_pos
 	pass
-

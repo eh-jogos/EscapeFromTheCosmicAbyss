@@ -22,4 +22,3 @@ func set_background_bosses(
 		assert(false)
 	
 	return boss_node
-

@@ -150,7 +150,6 @@ func fade_out_credits_bgm():
 		_tween_bgm.kill()
 	_tween_bgm = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	_tween_bgm.tween_method(change_bgm_volume, initial_volume, 0, 3.0)
-	_tween_bgm.start()
 
 
 func fade_out_start(shoul_be_immediate: = false):
@@ -165,7 +164,6 @@ func fade_out_start(shoul_be_immediate: = false):
 			_tween_bgm.kill()
 		_tween_bgm = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 		_tween_bgm.tween_method(change_bgm_volume, initial_volume, target_volume, 0.5)
-		_tween_bgm.start()
 
 
 func fade_in_start(shoul_be_immediate: = false):
@@ -182,7 +180,7 @@ func fade_in_start(shoul_be_immediate: = false):
 			_tween_bgm.kill()
 		_tween_bgm = create_tween().set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 		_tween_bgm.tween_method(change_bgm_volume, current_volume, initial_volume, 0.5)
-		_tween_bgm.start()
+
 
 # TODO - Refactor to save audio volume valumes in float and use then in float througout here
 func _get_volume_in_db(vol: int) -> float:

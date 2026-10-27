@@ -9,13 +9,13 @@ var base_offset = 0
 var player_position
 
 @onready var player = get_node(path_player)
-@onready var shaker: Shaker = $Shaker
+@onready var shaker: eh_Shaker2D = $Shaker
 
 var _tween: Tween = null
 
 func _ready():
 	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	Global.connect("shake_trauma_added", Callable(self, "_on_Global_shake_trauma_added"))
+	Global.shake_trauma_added.connect(_on_Global_shake_trauma_added)
 
 
 func _physics_process(_delta):  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review

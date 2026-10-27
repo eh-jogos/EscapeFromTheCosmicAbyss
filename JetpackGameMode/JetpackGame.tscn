@@ -24,13 +24,13 @@
 [ext_resource type="PackedScene" uid="uid://bx8isl7pyt1uj" path="res://JetpackGameMode/Obstacles/TentaclePipes/BarrierTentacles.tscn" id="22"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEyeMarker.tscn" id="23"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/PowerUps/ShieldUp.tscn" id="24"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" id="25"]
+[ext_resource type="PackedScene" uid="uid://55b6hr3tyyca" path="res://JetpackGameMode/Obstacles/LaserEye/LaserEye.tscn" id="25"]
 [ext_resource type="PackedScene" uid="uid://cft781k1bnot0" path="res://JetpackGameMode/Boss/FinalBoss.tscn" id="26"]
 [ext_resource type="Texture2D" uid="uid://ipda1fmursl6" path="res://Cutscenes/pngs/IngameCutscene/monster.png" id="27"]
 [ext_resource type="Texture2D" uid="uid://c2qvo1ivscuo4" path="res://Cutscenes/pngs/IngameCutscene/a5tr0.png" id="28"]
 [ext_resource type="Script" uid="uid://duwvct61jl07q" path="res://JetpackGameMode/Boss/ParallaxBackground.gd" id="29"]
 [ext_resource type="Script" uid="uid://bgdco4awc5qja" path="res://JetpackGameMode/Boss/BackgroundBoss.gd" id="30"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" id="31"]
+[ext_resource type="PackedScene" uid="uid://hfonf8i405ih" path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" id="31"]
 [ext_resource type="Texture2D" uid="uid://cnf7bygcju4oo" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" id="32"]
 [ext_resource type="Texture2D" uid="uid://p0yugpmk6o0x" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" id="33"]
 [ext_resource type="Texture2D" uid="uid://c8x21l4a5vboh" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" id="34"]
@@ -778,7 +778,6 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="14"]
 length = 4.0
-capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -824,7 +823,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.6),
 "transitions": PackedFloat32Array(1),
-"update": 2,
+"update": 1,
 "values": ["warning"]
 }
 tracks/4/type = "value"
@@ -836,7 +835,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 2,
+"update": 1,
 "values": ["angry_loop", "to_scream", "first_scream"]
 }
 tracks/5/type = "value"
@@ -959,17 +958,22 @@ tracks/14/keys = {
 "clips": PackedStringArray("back_row_boss_end"),
 "times": PackedFloat32Array(0.6)
 }
-tracks/15/type = "value"
+tracks/15/type = "method"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("../../../../../../Camera2D/Shaker:trauma")
+tracks/15/path = NodePath(".")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.1, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0.0, 1.0, 1.2, 0.0]
+"times": PackedFloat32Array(0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1.0],
+"method": &"shake_camera"
+}, {
+"args": [1.2],
+"method": &"shake_camera"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7o2yg"]
@@ -1481,20 +1485,20 @@ viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/P
 
 [sub_resource type="ShaderMaterial" id="29"]
 shader = ExtResource("76")
-shader_parameter/torus_thickness = 0.106
+shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(0.190369, 1.43005)
+shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
 shader = ExtResource("76")
-shader_parameter/torus_thickness = 0.106
+shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(0.190369, 1.43005)
+shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1505,7 +1509,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(0.190369, 1.43005)
+shader_parameter/displacement_center = Vector2(-0.0954259, 1.06908)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1862,7 +1866,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 4
+test_level_or_points = 5
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -1941,6 +1945,7 @@ render_target_update_mode = 4
 
 [node name="Camera2D" parent="RawLayer/WorldVieport/SubViewport" instance=ExtResource("16_mhwsq")]
 position = Vector2(960, 540)
+ignore_rotation = false
 
 [node name="TentacleTrigger" type="Area2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
 position = Vector2(650, 0)
@@ -2035,12 +2040,12 @@ next/warning = &"base"
 
 [node name="Guardian" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(1331.09, -213.431)
+position = Vector2(1331.09, -33.4312)
 texture = ExtResource("27")
 
 [node name="Astro" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(504.4, 18.1768)
+position = Vector2(504.4, 198.177)
 texture = ExtResource("28")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="RawLayer/WorldVieport/SubViewport"]
@@ -2494,7 +2499,7 @@ texture = SubResource("33")
 script = ExtResource("79")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]
-position = Vector2(241.388, 747.915)
+position = Vector2(-121, 534.539)
 script = ExtResource("77")
 
 [node name="DangerVignette" type="ColorRect" parent="ProcessedLayer"]

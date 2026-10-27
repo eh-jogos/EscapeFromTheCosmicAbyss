@@ -5,7 +5,6 @@ const POSITION_Y = -472
 @export var point_value: int = 5
 
 var is_tracking = true
-var animator
 var game
 
 var raycast_left
@@ -14,15 +13,16 @@ var raycast_right
 
 var should_score = true
 
+@onready var animator: AnimationPlayer = $AnimationPlayer
+
 func _ready():
 	position = Vector2(0, POSITION_Y)
-	animator = get_node("AnimationPlayer")
 	game = get_tree().get_root().get_node("JetpackGame")
 	
 	set_physics_process(false)
 	
 	animator.assigned_animation = "hidden"
-	animator.seek(0,true)
+	animator.seek.call_deferred(0, true)
 	
 	raycast_left = get_node("Root/Raycasts/Left")
 	raycast_middle = get_node("Root/Raycasts/Middle")
@@ -74,7 +74,8 @@ func kill_player(_offset):
 
 
 func shake_camera() -> void:
-	Global.emit_signal("shake_trauma_added", 0.3)
+	const SMALL_TRAUMA = 0.3
+	Global.shake_trauma_added.emit(SMALL_TRAUMA)
 
 
 func _on_player_killed():
