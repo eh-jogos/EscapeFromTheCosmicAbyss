@@ -30,6 +30,9 @@ enum BossTypes {
 
 #--- constants ------------------------------------------------------------------------------------
 
+const BEAT_GROUP_PREFIX := "on_beat_"
+const HALF_GROUP_PREFIX := "on_half_"
+
 #--- public variables - order: export > normal var > onready --------------------------------------
 
 @export var title: String = ""
@@ -45,45 +48,27 @@ enum BossTypes {
 @export var intro_halfs: Array[ObstacleTypes] = []
 @export var end_beat: ObstacleTypes = ObstacleTypes.WALL_TENTACLE
 
-@export_group("On Beat Obstacles", "on_beat_")
 @export_storage var beats: Dictionary = {
 	"none": 0,
 	"tentacles": 0,
-	"double_pipe": 0,
-	"triple_pipe": 0,
-	"wall": 0,
+	"double_tentacle": 0,
+	"triple_tentacle": 0,
+	"wall_tentacle": 0,
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
 }
-@export_range(0, 1, 1, "or_greater") var on_beat_none: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_double_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_triple_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_wall_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_laser_eye: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_shield_up: int = 0
-@export_range(0, 1, 1, "or_greater") var on_beat_ammo_up: int = 0
 
-@export_group("On Half Beat Obstacles", "on_half_")
 @export_storage var half_beats: Dictionary = {
 	"none": 0,
 	"tentacles": 0,
-	"double_pipe": 0,
-	"triple_pipe": 0,
-	"wall": 0,
+	"double_tentacle": 0,
+	"triple_tentacle": 0,
+	"wall_tentacle": 0,
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
 }
-@export_range(0, 1, 1, "or_greater") var on_half_none: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_double_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_triple_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_wall_tentacles: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_laser_eye: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_shield_up: int = 0
-@export_range(0, 1, 1, "or_greater") var on_half_ammo_up: int = 0
 
 var is_boss_level: bool = false:
 	set(value):
@@ -126,9 +111,44 @@ var scream_sequence_halfs: Array[Array] = []
 
 func _get_property_list() -> Array[Dictionary]:
 	var value: Array[Dictionary] = []
+	var ordered_keys := ObstacleTypes.keys().map(
+			func(element: String): return element.to_snake_case()
+	)
+	
+	value.append(_get_group_dict("On Beat Obstacles", BEAT_GROUP_PREFIX))
+	_add_obstacles_properties_to(value, ordered_keys, BEAT_GROUP_PREFIX)
+	
+	value.append(_get_group_dict("On Half Beat Obstacles", HALF_GROUP_PREFIX))
+	_add_obstacles_properties_to(value, ordered_keys, HALF_GROUP_PREFIX)
+	
 	_add_boss_settings_properties_to(value)
+	return value
+
+
+func _get(property: StringName) -> Variant:
+	var value: Variant = null
+	
+	if property.begins_with(BEAT_GROUP_PREFIX):
+		var sanitized_key := property.trim_prefix(BEAT_GROUP_PREFIX)
+		value = beats[sanitized_key]
+	elif property.begins_with(HALF_GROUP_PREFIX):
+		var sanitized_key := property.trim_prefix(HALF_GROUP_PREFIX)
+		value = half_beats[sanitized_key]
 	
 	return value
+
+
+func _set(property: StringName, value: Variant) -> bool:
+	var has_changed := false
+	
+	if property.begins_with(BEAT_GROUP_PREFIX):
+		var sanitized_key := property.trim_prefix(BEAT_GROUP_PREFIX)
+		beats[sanitized_key] = value
+	elif property.begins_with(HALF_GROUP_PREFIX):
+		var sanitized_key := property.trim_prefix(HALF_GROUP_PREFIX)
+		half_beats[sanitized_key] = value
+	
+	return has_changed
 
 #endregion Built in Engine Methods ----------------------------------------------------------------
 
@@ -139,6 +159,23 @@ func _get_property_list() -> Array[Dictionary]:
 
 
 #region Private Methods ---------------------------------------------------------------------------
+
+func _add_obstacles_properties_to(
+		property_list: Array[Dictionary], 
+		p_from: Array, 
+		p_prefix: String
+) -> void:
+	for key in p_from:
+		var prop_dict := _get_property_dict(
+				"%s%s"%[p_prefix, key], 
+				TYPE_INT, 
+				PROPERTY_HINT_RANGE, 
+				"0,1,1,or_greater", 
+				"", 
+				PROPERTY_USAGE_EDITOR
+		)
+		property_list.append(prop_dict)
+
 
 func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 	property_list.append(_get_category_dict("Boss Settings"))
