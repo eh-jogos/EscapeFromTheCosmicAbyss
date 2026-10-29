@@ -12,9 +12,9 @@ signal half_beat_spawned
 @export var obstacle_half_parent: NodePath
 @export var none: PackedScene
 @export var pipe: PackedScene
-@export var double_pipe: PackedScene
-@export var triple_pipe: PackedScene
-@export var wall: PackedScene
+@export var double_tentacle: PackedScene
+@export var triple_tentacle: PackedScene
+@export var wall_tentacle: PackedScene
 @export var laser_eye: PackedScene
 @export var shield_up: PackedScene
 @export var ammo_up: PackedScene
@@ -34,9 +34,9 @@ func _ready():
 	obstacles = [
 		none, #0
 		pipe, #1
-		double_pipe, #2
-		triple_pipe, #3
-		wall, #4
+		double_tentacle, #2
+		triple_tentacle, #3
+		wall_tentacle, #4
 		laser_eye, #5
 		shield_up, #6
 		ammo_up #7

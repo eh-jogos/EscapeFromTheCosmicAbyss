@@ -1,7 +1,7 @@
 extends Node
 
 var level: Dictionary = {}
-var level_info: Node
+var level_node: Node
 
 func load_level(level_index: int, should_load_all: bool, should_loop: bool):
 	if should_load_all:
@@ -10,16 +10,16 @@ func load_level(level_index: int, should_load_all: bool, should_loop: bool):
 		level["bosses_nodes"] = {}
 		
 		for x in range(level_index, get_max_levels()):
-			level_info = get_child(x)
-			if level_info.boss.boss_node != null:
-				level["bosses_nodes"][level_info.boss.boss_node] = {
-					"is_a_boss_level" : level_info.boss.boss_level,
-					"animations" : level_info.boss.animations,
+			level_node = get_child(x)
+			if level_node.boss.boss_node != null:
+				level["bosses_nodes"][level_node.boss.boss_node] = {
+					"is_a_boss_level" : level_node.boss.boss_level,
+					"animations" : level_node.boss.animations,
 					"animation_countdowns" : shift_countdowns_by(
-								level_info.boss.animations_countdowns.duplicate(), level["beats"].size()),
+								level_node.boss.animations_countdowns.duplicate(), level["beats"].size()),
 					"laser_countdowns" : shift_countdowns_by(
-								level_info.boss.laser_countdowns.duplicate(),level["beats"].size()),
-					"danger_durations" : level_info.boss.danger_durations,
+								level_node.boss.laser_countdowns.duplicate(),level["beats"].size()),
+					"danger_durations" : level_node.boss.danger_durations,
 				}
 			
 			build_level_procedurally()
@@ -35,22 +35,22 @@ func load_level(level_index: int, should_load_all: bool, should_loop: bool):
 		level["half_count"] = level["half_beats"].size()
 		level["total_count"] = level["beats"].size() + level["half_beats"].size()
 	else:
-		level_info = get_child(level_index)
-		level["title"] = level_info.title
-		level["tutorial"] = level_info.tutorial
-		level["intro_cutscene"] = level_info.intro_cutscene
-		level["end_cutscene"] = level_info.end_cutscene
+		level_node = get_child(level_index)
+		level["title"] = level_node.title
+		level["tutorial"] = level_node.tutorial
+		level["intro_cutscene"] = level_node.intro_cutscene
+		level["end_cutscene"] = level_node.end_cutscene
 		level["beats"] = []
 		level["half_beats"] = []
 		level["bosses_nodes"] = {}
 		
-		if level_info.boss.boss_node != null:
-			level["bosses_nodes"][level_info.boss.boss_node] = {
-				"is_a_boss_level" : level_info.boss.boss_level,
-				"animations" : level_info.boss.animations,
-				"animation_countdowns" : level_info.boss.animations_countdowns,
-				"laser_countdowns" : level_info.boss.laser_countdowns,
-				"danger_durations" : level_info.boss.danger_durations,
+		if level_node.boss.boss_node != null:
+			level["bosses_nodes"][level_node.boss.boss_node] = {
+				"is_a_boss_level" : level_node.boss.boss_level,
+				"animations" : level_node.boss.animations,
+				"animation_countdowns" : level_node.boss.animations_countdowns,
+				"laser_countdowns" : level_node.boss.laser_countdowns,
+				"danger_durations" : level_node.boss.danger_durations,
 			}
 		
 		build_level_procedurally()
@@ -75,8 +75,8 @@ func build_level_procedurally():
 	
 	complete_level = add_fixed_sections_step(complete_level)
 	
-	var beat_obstacles_pool = build_obstacle_pool(level_info["beats"])
-	var half_obstacles_pool = build_obstacle_pool(level_info["half_beats"])
+	var beat_obstacles_pool = build_obstacle_pool(level_node["beats"])
+	var half_obstacles_pool = build_obstacle_pool(level_node["half_beats"])
 	complete_level = laser_eye_draw_step(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	complete_level = tentacle_barrier_draw_step(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	complete_level = standard_draw_step(complete_level, beat_obstacles_pool, half_obstacles_pool)
@@ -90,21 +90,21 @@ func build_level_procedurally():
 
 
 func sum_all_beats_and_halfs():
-	var total_count: int = level_info.intro_beats.size() + level_info.intro_halfs.size()
+	var total_count: int = level_node.intro_beats.size() + level_node.intro_halfs.size()
 	
-	if level_info.boss["scream"]:
-		for array in level_info.boss["sequence_beats"]:
+	if level_node.boss["scream"]:
+		for array in level_node.boss["sequence_beats"]:
 			total_count += array.size()
-		for array in level_info.boss["sequence_halfs"]:
+		for array in level_node.boss["sequence_halfs"]:
 			total_count += array.size()
 	
-	for key in level_info.beats:
-		if level_info.beats[key]>0:
-			total_count += level_info.beats[key]
+	for key in level_node.beats:
+		if level_node.beats[key]>0:
+			total_count += level_node.beats[key]
 	
-	for key in level_info.half_beats:
-		if level_info.half_beats[key]>0:
-			total_count += level_info.half_beats[key]
+	for key in level_node.half_beats:
+		if level_node.half_beats[key]>0:
+			total_count += level_node.half_beats[key]
 	
 	#add 1 for the end beat
 	total_count += 1
@@ -114,24 +114,24 @@ func sum_all_beats_and_halfs():
 
 func add_fixed_sections_step(level_array):
 	var duplicate_level = [] + level_array
-	var intro_beats =  [] + level_info.intro_beats
-	var intro_halfs =  [] + level_info.intro_halfs
+	var intro_beats =  [] + level_node.intro_beats
+	var intro_halfs =  [] + level_node.intro_halfs
 	
 	add_fixed_section(duplicate_level, intro_beats, 0)
 	add_fixed_section(duplicate_level, intro_halfs, 1)
 	
-	if level_info.boss.scream:
-		var boss_scream_beats =  [] + level_info.boss["sequence_beats"].duplicate(true)
-		var boss_scream_halfs =  [] + level_info.boss["sequence_halfs"].duplicate(true)
+	if level_node.boss.scream:
+		var boss_scream_beats =  [] + level_node.boss["sequence_beats"].duplicate(true)
+		var boss_scream_halfs =  [] + level_node.boss["sequence_halfs"].duplicate(true)
 		
-		for scream_iteration in range(level_info.boss.countdown.size()):
-			var starting_beat = level_info.boss.countdown[scream_iteration] * 2
+		for scream_iteration in range(level_node.boss.countdown.size()):
+			var starting_beat = level_node.boss.countdown[scream_iteration] * 2
 			var starting_half_beat = starting_beat + 1
 			
 			add_fixed_section(duplicate_level, boss_scream_beats[scream_iteration], starting_beat)
 			add_fixed_section(duplicate_level, boss_scream_halfs[scream_iteration], starting_half_beat)
 	
-	duplicate_level[-1] = level_info.end_beat
+	duplicate_level[-1] = level_node.end_beat
 	
 	return duplicate_level
 
@@ -146,17 +146,17 @@ func add_fixed_section(target_array, fixed_section, starting_pos):
 
 
 func laser_eye_draw_step(level_array, beats_pool, half_beats_pool):
-	if level_info.beats.laser_eye == 0 and level_info.half_beats.laser_eye == 0:
+	if level_node.beats.laser_eye == 0 and level_node.half_beats.laser_eye == 0:
 		return level_array
 	
 	var duplicate_level = [] + level_array
 	
-	if level_info.beats.laser_eye > 0:
+	if level_node.beats.laser_eye > 0:
 		duplicate_level = draw_laser_eye(duplicate_level, beats_pool, 0)
 		if beats_pool.has(key_translator("laser_eye")):
 			replace_remaining_laser_eyes(beats_pool)
 	
-	if level_info.beats.laser_eye > 0:
+	if level_node.beats.laser_eye > 0:
 		duplicate_level = draw_laser_eye(duplicate_level, half_beats_pool, 1)
 		if half_beats_pool.has(key_translator("laser_eye")):
 			replace_remaining_laser_eyes(half_beats_pool)
@@ -167,7 +167,7 @@ func laser_eye_draw_step(level_array, beats_pool, half_beats_pool):
 func draw_laser_eye(level_array: Array, obstacle_pool: Array, initial_slot: int):
 	var available_slots: Array = []
 	
-	var level_name = level_info.get_name()
+	var level_name = level_node.get_name()
 	print("LevelLoader | Level name: %s"%[level_name])
 	if level_name == "Level5":
 		available_slots = get_available_slots_on_laser_eye_introductory_level(level_array)
@@ -206,7 +206,7 @@ func draw_laser_eye(level_array: Array, obstacle_pool: Array, initial_slot: int)
 
 func get_available_slots_on_laser_eye_introductory_level(level_array):
 	var available_slots
-	available_slots = build_available_slots_array(level_array, level_info.boss.animations_countdowns[1]+1)
+	available_slots = build_available_slots_array(level_array, level_node.boss.animations_countdowns[1]+1)
 	
 	return available_slots
 
@@ -223,26 +223,26 @@ func replace_remaining_laser_eyes(obstacle_pool):
 		if last_index == -1:
 			break
 		
-		#replace laser eye that was not drawn by a double_pipe
-		obstacle_pool[last_index] = key_translator("double_pipe")
+		#replace laser eye that was not drawn by a double_tentacle
+		obstacle_pool[last_index] = key_translator("double_tentacle")
 	
 	print("LevelLoader.gd | replace_remaining_laser_eyes | obstacle_pool: %s | drop_count: %s"%[obstacle_pool, drop_count])
 
 
 func tentacle_barrier_draw_step(level_array, beats_pool, half_beats_pool):
-	if level_info.beats.wall == 0 and level_info.half_beats.wall == 0:
+	if level_node.beats.wall_tentacle == 0 and level_node.half_beats.wall_tentacle == 0:
 		return level_array
 	
 	var duplicate_level = [] + level_array
 	
-	if level_info.beats.wall > 0:
+	if level_node.beats.wall_tentacle > 0:
 		duplicate_level = draw_tentacle_barrier(duplicate_level, beats_pool, 0)
-		if beats_pool.has(key_translator("wall")):
+		if beats_pool.has(key_translator("wall_tentacle")):
 			replace_remaining_tentacle_barriers(beats_pool)
 	
-	if level_info.beats.wall > 0:
+	if level_node.beats.wall_tentacle > 0:
 		duplicate_level = draw_tentacle_barrier(duplicate_level, half_beats_pool, 1)
-		if half_beats_pool.has(key_translator("wall")):
+		if half_beats_pool.has(key_translator("wall_tentacle")):
 			replace_remaining_tentacle_barriers(half_beats_pool)
 	
 	return duplicate_level
@@ -252,7 +252,7 @@ func draw_tentacle_barrier(level_array: Array, obstacle_pool: Array, initial_slo
 	var available_slots: Array = build_available_slots_array(level_array, initial_slot)
 	
 	for _x in range(available_slots.size()):
-		if obstacle_pool.has(key_translator("wall")):
+		if obstacle_pool.has(key_translator("wall_tentacle")):
 			var random_integer = randi()%available_slots.size()
 			var level_position = available_slots[random_integer]
 			var end_position = min(level_position+10, level_array.size())
@@ -261,12 +261,12 @@ func draw_tentacle_barrier(level_array: Array, obstacle_pool: Array, initial_slo
 			for position in range(end_position):
 				if position == level_position:
 					wall_count +=1
-				elif level_array[position] == key_translator("wall"):
+				elif level_array[position] == key_translator("wall_tentacle"):
 					wall_count +=1
 			
 			if level_position % 10 >= wall_count:
-				level_array[level_position] = key_translator("wall")
-				obstacle_pool.erase(key_translator("wall"))
+				level_array[level_position] = key_translator("wall_tentacle")
+				obstacle_pool.erase(key_translator("wall_tentacle"))
 				available_slots.remove_at(random_integer)
 		else:
 			break
@@ -278,15 +278,15 @@ func replace_remaining_tentacle_barriers(obstacle_pool):
 	var drop_count = 0
 	var last_index = 0
 	print("LevelLoader.gd | replace_remaining_tentacle_barriers | obstacle_pool: %s"%[obstacle_pool])
-	while obstacle_pool.has(key_translator("wall")):
+	while obstacle_pool.has(key_translator("wall_tentacle")):
 		drop_count += 1
-		last_index = obstacle_pool.find(key_translator("wall"), last_index)
+		last_index = obstacle_pool.find(key_translator("wall_tentacle"), last_index)
 		
 		# if it doesn't find a laser eye, it shouldn't even be in this while, but as a safeguard I'm checking for it
 		if last_index == -1:
 			break
 		
-		#replace laser eye that was not drawn by a double_pipe
+		#replace laser eye that was not drawn by a double_tentacle
 		obstacle_pool[last_index] = key_translator("tentacles")
 	
 	print("LevelLoader.gd | replace_remaining_tentacle_barriers | obstacle_pool: %s | drop_count: %s"%[obstacle_pool, drop_count])
@@ -355,11 +355,11 @@ func key_translator(string):
 		return 0
 	elif string == "tentacles":
 		return 1
-	elif string == "double_pipe":
+	elif string == "double_tentacle":
 		return 2
-	elif string == "triple_pipe":
+	elif string == "triple_tentacle":
 		return 3
-	elif string == "wall":
+	elif string == "wall_tentacle":
 		return 4
 	elif string == "laser_eye":
 		return 5

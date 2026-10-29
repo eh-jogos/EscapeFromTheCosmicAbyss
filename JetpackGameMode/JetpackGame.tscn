@@ -1489,7 +1489,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
+shader_parameter/torus_center = Vector2(-0.0954259, 0.637114)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1498,7 +1498,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
+shader_parameter/torus_center = Vector2(-0.0954259, 0.637114)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1509,7 +1509,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0954259, 1.06908)
+shader_parameter/displacement_center = Vector2(-0.0954259, 0.637114)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1878,7 +1878,7 @@ script = ExtResource("2")
 [node name="Level0" type="Node" parent="LevelLoader"]
 script = ExtResource("3")
 title = "How to Play"
-intro_cutscene = "res://Cutscenes/Cutscene1.tscn"
+intro_cutscene = "uid://bmqejrykk3kf0"
 
 [node name="Level1" type="Node" parent="LevelLoader"]
 script = ExtResource("4")
@@ -2402,9 +2402,9 @@ obstacle_parent = NodePath("../../Obstaculos/ObstacleBeat")
 obstacle_half_parent = NodePath("../../Obstaculos/ObstacleHalfBeat")
 none = ExtResource("18")
 pipe = ExtResource("19")
-double_pipe = ExtResource("20")
-triple_pipe = ExtResource("21")
-wall = ExtResource("22")
+double_tentacle = ExtResource("20")
+triple_tentacle = ExtResource("21")
+wall_tentacle = ExtResource("22")
 laser_eye = ExtResource("23")
 shield_up = ExtResource("24")
 

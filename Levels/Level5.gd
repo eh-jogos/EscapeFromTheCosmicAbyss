@@ -25,9 +25,9 @@ var boss = {
 var beats = {
 	"none": 0,
 	"tentacles": 20,
-	"double_pipe": 10,
-	"triple_pipe": 8,
-	"wall": 5,
+	"double_tentacle": 10,
+	"triple_tentacle": 8,
+	"wall_tentacle": 5,
 	"laser_eye": 2,
 	"shield_up": 0,
 	"ammo_up": 0
@@ -36,9 +36,9 @@ var beats = {
 var half_beats = {
 	"none": 35,
 	"tentacles": 5,
-	"double_pipe": 4,
-	"triple_pipe": 0,
-	"wall": 0,
+	"double_tentacle": 4,
+	"triple_tentacle": 0,
+	"wall_tentacle": 0,
 	"laser_eye": 0,
 	"shield_up": 1,
 	"ammo_up": 0
