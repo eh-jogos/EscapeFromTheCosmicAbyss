@@ -57,7 +57,10 @@ const HALF_GROUP_PREFIX := "on_half_"
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
-}
+}:
+	set(value):
+		beats = value
+		_sanitize_obstacle_keys(beats)
 
 @export_storage var half_beats: Dictionary = {
 	"none": 0,
@@ -68,7 +71,10 @@ const HALF_GROUP_PREFIX := "on_half_"
 	"laser_eye": 0,
 	"shield_up": 0,
 	"ammo_up": 0
-}
+}:
+	set(value):
+		half_beats = value
+		_sanitize_obstacle_keys(half_beats)
 
 var is_boss_level: bool = false:
 	set(value):
@@ -109,17 +115,75 @@ var scream_sequence_halfs: Array[Array] = []
 
 #region Built in Engine Methods -------------------------------------------------------------------
 
+#endregion Built in Engine Methods ----------------------------------------------------------------
+
+
+#region Public Methods ----------------------------------------------------------------------------
+
+
+func validate_level() -> void:
+	assert(not title.is_empty(), "Title for level must not be empty | @:%s"%[resource_path])
+	var total_beats: int = beats.values().reduce(_sum_array)
+	var total_halfs: int = half_beats.values().reduce(_sum_array)
+	assert(
+		total_beats == total_halfs, 
+		"Amount of obstacles in beats must be the same as in half beats"
+	)
+	assert(
+		scream_countdowns.size() == scream_sequence_beats.size() 
+		and scream_countdowns.size() == scream_sequence_halfs.size(),
+		"We need to have one array of beats/half beats sequences per countdown. "\
+		+"| Countdowns: %s, beats sequences: %s, half beats sequences: %s"%[
+			scream_countdowns.size(), scream_sequence_beats.size(), scream_sequence_halfs.size()
+		]
+	)
+	for index in scream_countdowns.size():
+		assert(
+			scream_sequence_beats[index].size() == scream_sequence_halfs[index].size(),
+			"For a same scream sequence, size of beats and half beats must be equal."
+	)
+
+
+#endregion Public Methods -------------------------------------------------------------------------
+
+
+#region Private Methods ---------------------------------------------------------------------------
+
+func _sanitize_obstacle_keys(p_dict: Dictionary) -> void:
+	var valid_keys := ObstacleTypes.keys().map(_map_to_snake_case)
+	for key in p_dict.keys():
+		if not key in valid_keys:
+			p_dict.erase(key)
+	
+	for key in valid_keys:
+		if not p_dict.has(key):
+			p_dict[key] = 0
+
+#endregion Private Methods ------------------------------------------------------------------------
+
+#region Advanced Exports --------------------------------------------------------------------------
+
 func _get_property_list() -> Array[Dictionary]:
 	var value: Array[Dictionary] = []
-	var ordered_keys := ObstacleTypes.keys().map(
-			func(element: String): return element.to_snake_case()
-	)
+	var ordered_keys := ObstacleTypes.keys().map(_map_to_snake_case)
 	
 	value.append(_get_group_dict("On Beat Obstacles", BEAT_GROUP_PREFIX))
 	_add_obstacles_properties_to(value, ordered_keys, BEAT_GROUP_PREFIX)
+	value.append(
+		_get_property_dict(
+			"%s%s"%[BEAT_GROUP_PREFIX, "total"],TYPE_INT,PROPERTY_HINT_NONE,
+			"", "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_READ_ONLY
+		)
+	)
 	
 	value.append(_get_group_dict("On Half Beat Obstacles", HALF_GROUP_PREFIX))
 	_add_obstacles_properties_to(value, ordered_keys, HALF_GROUP_PREFIX)
+	value.append(
+		_get_property_dict(
+			"%s%s"%[HALF_GROUP_PREFIX, "total"],TYPE_INT,PROPERTY_HINT_NONE,
+			"", "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_READ_ONLY
+		)
+	)
 	
 	_add_boss_settings_properties_to(value)
 	return value
@@ -130,10 +194,16 @@ func _get(property: StringName) -> Variant:
 	
 	if property.begins_with(BEAT_GROUP_PREFIX):
 		var sanitized_key := property.trim_prefix(BEAT_GROUP_PREFIX)
-		value = beats[sanitized_key]
+		if sanitized_key == "total":
+			value = beats.values().reduce(_sum_array)
+		else:
+			value = beats[sanitized_key]
 	elif property.begins_with(HALF_GROUP_PREFIX):
 		var sanitized_key := property.trim_prefix(HALF_GROUP_PREFIX)
-		value = half_beats[sanitized_key]
+		if sanitized_key == "total":
+			value = half_beats.values().reduce(_sum_array)
+		else:
+			value = half_beats[sanitized_key]
 	
 	return value
 
@@ -146,19 +216,55 @@ func _set(property: StringName, value: Variant) -> bool:
 		beats[sanitized_key] = value
 	elif property.begins_with(HALF_GROUP_PREFIX):
 		var sanitized_key := property.trim_prefix(HALF_GROUP_PREFIX)
-		half_beats[sanitized_key] = value
+		if sanitized_key in half_beats:
+			half_beats[sanitized_key] = value
 	
 	return has_changed
 
-#endregion Built in Engine Methods ----------------------------------------------------------------
+
+func _property_can_revert(property: StringName) -> bool:
+	const BOSS_PROPERTIES := [
+		"is_boss_level", "boss_type", "has_boss_laser", "laser_countdowns", "boss_animations",
+		"boss_animations_countdowns", "danger_durations", "has_boss_scream",
+		"scream_sequence_beats", "scream_sequence_halfs"
+	]
+	var value := false
+	
+	if property.begins_with(BEAT_GROUP_PREFIX) or property.begins_with(HALF_GROUP_PREFIX):
+		value = true
+	elif property in BOSS_PROPERTIES:
+		value = true
+	
+	return value
 
 
-#region Public Methods ----------------------------------------------------------------------------
+func _property_get_revert(property: StringName) -> Variant:
+	var value: Variant = null
+	
+	if property.begins_with(BEAT_GROUP_PREFIX):
+		value = 0
+	elif property.begins_with(HALF_GROUP_PREFIX):
+		value = 0
+	else:
+		match property:
+			"is_boss_level", "has_boss_laser", "has_boss_scream":
+				value = false
+			"boss_type":
+				value = BossTypes.NONE
+			"laser_countdowns", "boss_animations", "boss_animations_countdowns",\
+			"danger_durations","scream_sequence_beats","scream_sequence_halfs":
+				value = []
+	
+	return value
 
-#endregion Public Methods -------------------------------------------------------------------------
+
+func _sum_array(p_total: int, p_current: int) -> int:
+	return p_total + p_current
 
 
-#region Private Methods ---------------------------------------------------------------------------
+func _map_to_snake_case(p_string: String) -> String:
+	return p_string.to_snake_case()
+
 
 func _add_obstacles_properties_to(
 		property_list: Array[Dictionary], 
@@ -172,7 +278,7 @@ func _add_obstacles_properties_to(
 				PROPERTY_HINT_RANGE, 
 				"0,1,1,or_greater", 
 				"", 
-				PROPERTY_USAGE_EDITOR
+				PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_UPDATE_ALL_IF_MODIFIED
 		)
 		property_list.append(prop_dict)
 
@@ -226,6 +332,14 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 		
 		property_list.append(_get_property_dict("has_boss_scream", TYPE_BOOL))
 		if has_boss_scream:
+			property_list.append(
+				_get_property_dict(
+					"scream_countdowns",
+					TYPE_ARRAY,
+					PROPERTY_HINT_ARRAY_TYPE, 
+					"int"
+				)
+			)
 			property_list.append(
 				_get_property_dict(
 					"scream_sequence_beats",
@@ -286,4 +400,4 @@ static func _get_group_dict(p_name: String, hint_string: String = "") -> Diction
 	)
 	return value
 
-#endregion Private Methods ------------------------------------------------------------------------
+#endregion Advanced Exports -----------------------------------------------------------------------
