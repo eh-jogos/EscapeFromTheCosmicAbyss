@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://cy7xfkeruq4fi"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_7cggk"]
+
+[resource]
+script = ExtResource("1_7cggk")
+title = "What was that sound?"
+intro_cutscene = ""
+end_cutscene = "uid://cb6grgirskuof"
+is_tutorial = false
+intro_beats = Array[int]([1, 1, 2, 1, 3])
+intro_halfs = Array[int]([0, 0, 0, 0, 0])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 10,
+"laser_eye": 2,
+"none": 0,
+"shield_up": 0,
+"tentacle": 20,
+"triple_tentacle": 8,
+"wall_tentacle": 5
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 4,
+"laser_eye": 0,
+"none": 35,
+"shield_up": 1,
+"tentacle": 5,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+is_boss_level = false
+boss_type = 1
+has_boss_laser = false
+boss_animations = Array[String](["awaken", "get_angry", "scream"])
+boss_animations_countdowns = Array[int]([8, 15, 25])
+danger_durations = Array[int]([0, 0, 7])
+has_boss_scream = true
+scream_countdowns = Array[int]([25])
+scream_sequence_beats = Array[Array]([[2, 3, 4, 2, 3, 2, 3]])
+scream_sequence_halfs = Array[Array]([[3, 2, 3, 6, 5, 4, 2]])
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"

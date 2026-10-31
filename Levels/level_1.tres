@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://he28pwf5lhw5"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_rovgj"]
+
+[resource]
+script = ExtResource("1_rovgj")
+title = ""
+intro_cutscene = ""
+end_cutscene = ""
+is_tutorial = false
+intro_beats = Array[int]([])
+intro_halfs = Array[int]([])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_pipe": 0,
+"double_tentacles": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacles": 0,
+"triple_pipe": 0,
+"triple_tentacles": 0,
+"wall": 0,
+"wall_tentacles": 0
+}
+half_beats = {
+"ammo_up": 0,
+"double_pipe": 0,
+"double_tentacles": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacles": 0,
+"triple_pipe": 0,
+"triple_tentacles": 0,
+"wall": 0,
+"wall_tentacles": 0
+}
+is_boss_level = false
+boss_type = 0
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"
