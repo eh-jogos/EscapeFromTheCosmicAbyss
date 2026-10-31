@@ -120,11 +120,10 @@ var scream_sequence_halfs: Array[Array] = []
 
 #region Public Methods ----------------------------------------------------------------------------
 
-
 func validate_level() -> void:
 	assert(not title.is_empty(), "Title for level must not be empty | @:%s"%[resource_path])
-	var total_beats: int = beats.values().reduce(_sum_array)
-	var total_halfs: int = half_beats.values().reduce(_sum_array)
+	var total_beats: int = beats.values().reduce(Utilities.sum_array)
+	var total_halfs: int = half_beats.values().reduce(Utilities.sum_array)
 	assert(
 		total_beats == total_halfs, 
 		"Amount of obstacles in beats must be the same as in half beats"
@@ -143,6 +142,9 @@ func validate_level() -> void:
 			"For a same scream sequence, size of beats and half beats must be equal."
 	)
 
+
+func has_boss() -> bool:
+	return boss_type != BossTypes.NONE
 
 #endregion Public Methods -------------------------------------------------------------------------
 
@@ -195,13 +197,13 @@ func _get(property: StringName) -> Variant:
 	if property.begins_with(BEAT_GROUP_PREFIX):
 		var sanitized_key := property.trim_prefix(BEAT_GROUP_PREFIX)
 		if sanitized_key == "total":
-			value = beats.values().reduce(_sum_array)
+			value = beats.values().reduce(Utilities.sum_array)
 		else:
 			value = beats[sanitized_key]
 	elif property.begins_with(HALF_GROUP_PREFIX):
 		var sanitized_key := property.trim_prefix(HALF_GROUP_PREFIX)
 		if sanitized_key == "total":
-			value = half_beats.values().reduce(_sum_array)
+			value = half_beats.values().reduce(Utilities.sum_array)
 		else:
 			value = half_beats[sanitized_key]
 	
@@ -256,10 +258,6 @@ func _property_get_revert(property: StringName) -> Variant:
 				value = []
 	
 	return value
-
-
-func _sum_array(p_total: int, p_current: int) -> int:
-	return p_total + p_current
 
 
 func _map_to_snake_case(p_string: String) -> String:
