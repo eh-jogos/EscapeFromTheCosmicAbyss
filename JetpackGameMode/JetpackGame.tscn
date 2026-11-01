@@ -1,8 +1,9 @@
-[gd_scene load_steps=138 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=139 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/LevelLoader.gd" id="2"]
 [ext_resource type="Script" uid="uid://lepxr4q4nc3y" path="res://Levels/Level0.gd" id="3"]
+[ext_resource type="Resource" uid="uid://cy7xfkeruq4fi" path="res://Levels/level_5.tres" id="3_oyo55"]
 [ext_resource type="Script" uid="uid://db67sxxqm7lv4" path="res://Levels/Level1.gd" id="4"]
 [ext_resource type="Script" uid="uid://dvp71ckfava6b" path="res://Levels/Level2.gd" id="5"]
 [ext_resource type="Script" uid="uid://bnmj7lx4qx6do" path="res://Levels/Level3.gd" id="6"]
@@ -1489,7 +1490,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 0.637114)
+shader_parameter/torus_center = Vector2(-0.0935808, 0.637114)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1498,7 +1499,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 0.637114)
+shader_parameter/torus_center = Vector2(-0.0935808, 0.637114)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1509,7 +1510,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0954259, 0.637114)
+shader_parameter/displacement_center = Vector2(-0.0935808, 0.637114)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1874,6 +1875,7 @@ one_shot = true
 
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("2")
+_test_level = ExtResource("3_oyo55")
 
 [node name="Level0" type="Node" parent="LevelLoader"]
 script = ExtResource("3")

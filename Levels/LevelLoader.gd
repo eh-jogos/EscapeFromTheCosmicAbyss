@@ -3,6 +3,17 @@ extends Node
 var level: Dictionary = {}
 var level_node: Node
 
+var _d_level: Level = null
+
+@export var _test_level: LevelData = null
+
+func _ready() -> void:
+	_test_level.validate_level()
+	_d_level = Level.new()
+	_d_level.initialize_single_level(_test_level)
+	breakpoint
+
+
 func load_level(level_index: int, should_load_all: bool, should_loop: bool):
 	if should_load_all:
 		level["beats"] = []
