@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/LevelLoader.gd" id="2"]
 [ext_resource type="Script" uid="uid://lepxr4q4nc3y" path="res://Levels/Level0.gd" id="3"]
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="3_c33xn"]
 [ext_resource type="Resource" uid="uid://cy7xfkeruq4fi" path="res://Levels/level_5.tres" id="3_oyo55"]
 [ext_resource type="Script" uid="uid://db67sxxqm7lv4" path="res://Levels/Level1.gd" id="4"]
 [ext_resource type="Script" uid="uid://dvp71ckfava6b" path="res://Levels/Level2.gd" id="5"]
 [ext_resource type="Script" uid="uid://bnmj7lx4qx6do" path="res://Levels/Level3.gd" id="6"]
 [ext_resource type="Script" uid="uid://d3h7ntkk750a0" path="res://Levels/Level4.gd" id="7"]
-[ext_resource type="Script" uid="uid://bo5yb4sfcwpio" path="res://Levels/Level5.gd" id="8"]
 [ext_resource type="Script" uid="uid://b78rlpun5by5d" path="res://Levels/Level6.gd" id="9"]
 [ext_resource type="Script" uid="uid://vp543qwx4axh" path="res://Levels/Level7.gd" id="10"]
 [ext_resource type="Script" uid="uid://dtm7orlb2pp2s" path="res://Levels/Level8.gd" id="11"]
@@ -1490,7 +1490,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0935808, 0.637114)
+shader_parameter/torus_center = Vector2(-0.0855728, 0.637114)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1499,7 +1499,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0935808, 0.637114)
+shader_parameter/torus_center = Vector2(-0.0855728, 0.637114)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1510,7 +1510,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0935808, 0.637114)
+shader_parameter/displacement_center = Vector2(-0.0855728, 0.637114)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1867,7 +1867,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 5
+test_level_or_points = 6
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -1875,7 +1875,7 @@ one_shot = true
 
 [node name="LevelLoader" type="Node" parent="."]
 script = ExtResource("2")
-_test_level = ExtResource("3_oyo55")
+levels = Array[ExtResource("3_c33xn")]([ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55"), ExtResource("3_oyo55")])
 
 [node name="Level0" type="Node" parent="LevelLoader"]
 script = ExtResource("3")
@@ -1897,11 +1897,6 @@ title = "Double Trouble!"
 [node name="Level4" type="Node" parent="LevelLoader"]
 script = ExtResource("7")
 title = "Triple Trouble!"
-
-[node name="Level5" type="Node" parent="LevelLoader"]
-script = ExtResource("8")
-title = "What was that sound?"
-end_cutscene = "res://Cutscenes/Cutscene2.tscn"
 
 [node name="Level6" type="Node" parent="LevelLoader"]
 script = ExtResource("9")

@@ -32,7 +32,6 @@ half_beats = {
 "triple_tentacle": 0,
 "wall_tentacle": 0
 }
-is_boss_level = false
 boss_type = 1
 has_boss_laser = false
 boss_animations = Array[String](["awaken", "get_angry", "scream"])
