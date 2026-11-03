@@ -24,7 +24,7 @@ var obstacles = []
 var camera
 var obstacle_group
 var half_group
-var level
+var level: Level
 var half_countdown = 4
 
 func _ready():
@@ -84,8 +84,8 @@ func next_half_beat():
 		#print(level)
 
 
-func set_level(level_dict):
-	level = level_dict
+func set_level(p_level: Level) -> void:
+	level = p_level
 	print("Obstacle_Spawner.gd | Level: %s"%[level])
 	
 	emit_signal("level_ready", level)
