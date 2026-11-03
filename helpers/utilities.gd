@@ -9,4 +9,8 @@ extends RefCounted
 static func sum_array(p_total: int, p_current: int) -> int:
 	return p_total + p_current
 
+
+static func capitalize_array(p_element: String) -> String:
+	return p_element.capitalize()
+
 #endregion Array Helpers --------------------------------------------------------------------------

@@ -212,7 +212,6 @@ func game_start():
 
 
 func start_countdown():
-	# TODO: Enable tutorial again once it's working
 	if current_level.is_tutorial:
 		set_game_state("Tutorial")
 		tutorial.play(current_level_index, current_level.title)

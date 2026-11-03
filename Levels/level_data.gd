@@ -281,7 +281,8 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 	property_list.append(_get_category_dict("Boss Settings"))
 	property_list.append(
 		_get_property_dict(
-			"boss_type", TYPE_INT, PROPERTY_HINT_ENUM, ",".join(BossTypes.keys())
+			"boss_type", TYPE_INT, PROPERTY_HINT_ENUM, 
+			",".join(BossTypes.keys().map(Utilities.capitalize_array))
 		)
 	)
 	
@@ -333,6 +334,8 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 					"int"
 				)
 			)
+			
+			var obstacles_hint: String = ",".join(ObstacleTypes.keys().map(Utilities.capitalize_array))
 			property_list.append(
 				_get_property_dict(
 					"scream_sequence_beats",
@@ -342,7 +345,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 							TYPE_ARRAY, 
 							TYPE_INT, 
 							PROPERTY_HINT_ENUM, 
-							",".join(ObstacleTypes.keys())
+							obstacles_hint
 					]
 				)
 			)
@@ -355,7 +358,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 							TYPE_ARRAY, 
 							TYPE_INT, 
 							PROPERTY_HINT_ENUM, 
-							",".join(ObstacleTypes.keys())
+							obstacles_hint
 					]
 				)
 			)

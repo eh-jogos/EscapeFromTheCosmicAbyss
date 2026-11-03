@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://6pwslvjo4ig8"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_7cggk"]
+
+[resource]
+resource_name = "tutorial"
+script = ExtResource("1_7cggk")
+title = "How to Play"
+intro_cutscene = "uid://bmqejrykk3kf0"
+end_cutscene = ""
+is_tutorial = true
+intro_beats = Array[int]([0, 0, 1, 1, 1, 1, 6, 1, 1, 1, 0])
+intro_halfs = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacle": 0,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacle": 0,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+boss_type = 0
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"

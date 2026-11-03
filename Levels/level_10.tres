@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://bol3bv3xv06nx"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_ghov4"]
+
+[resource]
+resource_name = "Level10"
+script = ExtResource("1_ghov4")
+title = "Are we there yet?"
+intro_cutscene = ""
+end_cutscene = ""
+is_tutorial = false
+intro_beats = Array[int]([3, 2, 5, 1, 4])
+intro_halfs = Array[int]([1, 0, 0, 1, 6])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 25,
+"laser_eye": 3,
+"none": 0,
+"shield_up": 3,
+"tentacle": 14,
+"triple_tentacle": 15,
+"wall_tentacle": 4
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 14,
+"laser_eye": 0,
+"none": 30,
+"shield_up": 1,
+"tentacle": 13,
+"triple_tentacle": 6,
+"wall_tentacle": 0
+}
+boss_type = 3
+has_boss_laser = false
+boss_animations = Array[String](["scream"])
+boss_animations_countdowns = Array[int]([34])
+danger_durations = Array[int]([15])
+has_boss_scream = true
+scream_countdowns = Array[int]([35])
+scream_sequence_beats = Array[Array]([[3, 2, 2, 4, 3, 6, 5, 2, 3, 2, 5, 3, 2, 6, 2]])
+scream_sequence_halfs = Array[Array]([[2, 4, 5, 2, 2, 3, 2, 4, 6, 2, 3, 2, 2, 3, 4]])
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"

@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://ck1omlp5i738v"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_qaq8h"]
+
+[resource]
+resource_name = "Level12"
+script = ExtResource("1_qaq8h")
+title = "If that was the 'Calm', what is the 'Storm'?!"
+intro_cutscene = ""
+end_cutscene = ""
+is_tutorial = false
+intro_beats = Array[int]([0, 0, 0])
+intro_halfs = Array[int]([0, 0, 0])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacle": 0,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacle": 0,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+boss_type = 4
+has_boss_laser = true
+laser_countdowns = Array[int]([10, 15, 32, 50, 70, 85, 90])
+boss_animations = Array[String](["entrance", "to_angry", "scream", "to_angry", "scream", "to_angry", "scream", "to_angry", "last_scream", "tired_retreat"])
+boss_animations_countdowns = Array[int]([2, 19, 24, 39, 44, 59, 64, 74, 79, 95])
+danger_durations = Array[int]([10, 0, 10, 0, 10, 0, 10, 0, 10, 0])
+has_boss_scream = true
+scream_countdowns = Array[int]([3, 25, 45, 65, 80])
+scream_sequence_beats = Array[Array]([[5, 2, 3, 6, 2, 3, 3, 5, 2, 2], [3, 6, 5, 2, 3, 2, 4, 3, 2, 6], [4, 3, 5, 3, 6, 3, 3, 5, 2, 3], [5, 2, 3, 4, 2, 3, 3, 2, 2, 4], [3, 2, 3, 6, 2, 3, 4, 5, 3, 6]])
+scream_sequence_halfs = Array[Array]([[1, 2, 2, 4, 2, 2, 4, 2, 3, 6], [2, 4, 3, 2, 4, 5, 2, 3, 3, 4], [2, 2, 2, 2, 4, 2, 4, 2, 3, 2], [4, 3, 3, 6, 2, 5, 4, 3, 2, 2], [4, 2, 5, 4, 3, 2, 2, 2, 3, 6]])
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"
