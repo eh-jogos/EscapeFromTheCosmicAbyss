@@ -259,10 +259,10 @@ func _add_laser_eyes_to(
 		if beats_pool.laser_eye > 0:
 			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacle")
 	
-	if beats_pool.laser_eye > 0:
+	if half_beats_pool.laser_eye > 0:
 		_draw_laser_eye(level_array, half_beats_pool, 1)
 		if half_beats_pool.laser_eye > 0:
-			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacle")
+			_replace_remaining_obstacle_by(half_beats_pool, "laser_eye", "double_tentacle")
 
 
 func _draw_laser_eye(level_array: Array, obstacle_pool: Dictionary, initial_slot: int) -> void:
