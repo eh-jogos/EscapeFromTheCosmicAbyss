@@ -160,13 +160,15 @@ func _sum_all_beats_and_halfs() -> int:
 func _build_available_slots_array(level_array: Array, initial_slot: int) -> Array[int]:
 	var available_slots: Array[int] = \
 			Array(range(initial_slot, level_array.size(), 2),TYPE_INT, "", null)
-	var slots_to_remove = []
+	var slots_to_remove: Array[int] = []
 	for index in available_slots.size():
 		var level_index: int = available_slots[index]
+		
 		if level_array[level_index] > -1:
 			slots_to_remove.append(index)
 	
-	for slot_index in slots_to_remove:
+	for index in range(slots_to_remove.size()-1, -1, -1):
+		var slot_index := slots_to_remove[index]
 		available_slots.remove_at(slot_index)
 	
 	return available_slots
@@ -196,6 +198,9 @@ func _draw_random_obstacle(obstacle_pool: Dictionary) -> String:
 func _fill_empty_beats_on_free_slots(level_array: Array[int]) -> void:
 	for index in level_array.size():
 		if level_array[index] == -1:
+			push_warning(
+					"There shouldn't be any remaining unused slots, replacing with empty obstacle"
+			)
 			level_array[index] = 0
 
 
@@ -302,7 +307,7 @@ func _draw_laser_eye(level_array: Array, obstacle_pool: Dictionary, initial_slot
 
 func _get_available_slots_after_first_boss_appears(level_array: Array[int]):
 	var available_slots: Array[int] = _build_available_slots_array(
-			level_array, _level_data.boss_animations_countdowns[1]+1
+			level_array, _level_data.boss_animations_countdowns[2]+1
 	)
 	return available_slots
 
@@ -328,7 +333,7 @@ func _add_tentacle_barriers_to(
 
 
 func _draw_wall_tentacles(level_array: Array, obstacle_pool: Dictionary, initial_slot: int) -> void:
-	const BEATS_TO_GET_AMMO := 10.0
+	const BEATS_TO_GET_AMMO := 5.0
 	var available_slots: Array[int] = _build_available_slots_array(level_array, initial_slot)
 	
 	while obstacle_pool.wall_tentacle > 0 and not available_slots.is_empty():
