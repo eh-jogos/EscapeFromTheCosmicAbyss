@@ -12,12 +12,7 @@ extends RefCounted
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 
-var title: String = "":
-	get():
-		var value := ""
-		if _level_data:
-			value = _level_data.title
-		return value
+var title: String = ""
 
 var intro_cutscene: String = "":
 	get():
@@ -65,6 +60,7 @@ var _level_data: LevelData = null
 func initialize_single_level(p_level_data: LevelData) -> void:
 	_reset_base_properties()
 	_level_data = p_level_data
+	title = _level_data.title
 	
 	if _level_data.boss_type != LevelData.BossTypes.NONE:
 		var boss_data: BossData = BossData.new(_level_data, beats.size())
