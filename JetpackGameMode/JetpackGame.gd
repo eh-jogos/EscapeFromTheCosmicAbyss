@@ -59,7 +59,7 @@ var level_intro_cutscene = null
 var level_end_cutscene = null
 var is_tutorial = false
 
-var current_level
+var current_level_index: int = -1
 var highscore
 var highlaps
 var hightime

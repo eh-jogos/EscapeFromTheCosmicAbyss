@@ -4,7 +4,7 @@ func _process(_delta):
 	#print("Global Pos: %s | Pos: %s"%[global_position, position])
 	if end_point.global_position.x < 0: 
 		#print("Move Sprite!")
-		if get_owner().current_level == 5:
+		if get_owner().current_level_index == 5:
 			frame = 5
 		else:
 			frame = get_random_frame()
