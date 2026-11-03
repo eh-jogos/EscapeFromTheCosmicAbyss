@@ -66,8 +66,9 @@ func initialize_single_level(p_level_data: LevelData) -> void:
 	_reset_base_properties()
 	_level_data = p_level_data
 	
-	var boss_data: BossData = BossData.new(_level_data, beats.size())
-	bosses.append(boss_data)
+	if _level_data.boss_type != LevelData.BossTypes.NONE:
+		var boss_data: BossData = BossData.new(_level_data, beats.size())
+		bosses.append(boss_data)
 	_build_level_procedurally()
 	
 	_set_count_properties()
@@ -79,8 +80,9 @@ func initialize_multiple_levels(p_data_array: Array[LevelData], should_loop: boo
 	for index: int in p_data_array.size():
 		_level_data = p_data_array[index]
 		
-		var boss_data: BossData = BossData.new(_level_data, beats.size())
-		bosses.append(boss_data)
+		if _level_data.boss_type != LevelData.BossTypes.NONE:
+			var boss_data: BossData = BossData.new(_level_data, beats.size())
+			bosses.append(boss_data)
 		_build_level_procedurally()
 		
 		if index <= p_data_array.size()-1:

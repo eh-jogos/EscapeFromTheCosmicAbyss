@@ -14,22 +14,22 @@ intro_halfs = Array[int]([0, 0, 0])
 end_beat = 4
 beats = {
 "ammo_up": 0,
-"double_tentacle": 0,
-"laser_eye": 0,
+"double_tentacle": 20,
+"laser_eye": 2,
 "none": 0,
-"shield_up": 0,
+"shield_up": 2,
 "tentacle": 0,
-"triple_tentacle": 0,
-"wall_tentacle": 0
+"triple_tentacle": 18,
+"wall_tentacle": 2
 }
 half_beats = {
 "ammo_up": 0,
-"double_tentacle": 0,
+"double_tentacle": 20,
 "laser_eye": 0,
-"none": 0,
+"none": 10,
 "shield_up": 0,
-"tentacle": 0,
-"triple_tentacle": 0,
+"tentacle": 6,
+"triple_tentacle": 8,
 "wall_tentacle": 0
 }
 boss_type = 4
