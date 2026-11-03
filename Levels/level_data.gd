@@ -76,10 +76,6 @@ const HALF_GROUP_PREFIX := "on_half_"
 		half_beats = value
 		_sanitize_obstacle_keys(half_beats)
 
-var is_boss_level: bool = false:
-	set(value):
-		is_boss_level = value
-		notify_property_list_changed()
 var boss_type: BossTypes = BossTypes.NONE:
 	set(value):
 		boss_type = value
@@ -226,7 +222,7 @@ func _set(property: StringName, value: Variant) -> bool:
 
 func _property_can_revert(property: StringName) -> bool:
 	const BOSS_PROPERTIES := [
-		"is_boss_level", "boss_type", "has_boss_laser", "laser_countdowns", "boss_animations",
+		"boss_type", "has_boss_laser", "laser_countdowns", "boss_animations",
 		"boss_animations_countdowns", "danger_durations", "has_boss_scream",
 		"scream_sequence_beats", "scream_sequence_halfs"
 	]
@@ -249,7 +245,7 @@ func _property_get_revert(property: StringName) -> Variant:
 		value = 0
 	else:
 		match property:
-			"is_boss_level", "has_boss_laser", "has_boss_scream":
+			"has_boss_laser", "has_boss_scream":
 				value = false
 			"boss_type":
 				value = BossTypes.NONE
@@ -283,7 +279,6 @@ func _add_obstacles_properties_to(
 
 func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 	property_list.append(_get_category_dict("Boss Settings"))
-	property_list.append(_get_property_dict("is_boss_level", TYPE_BOOL))
 	property_list.append(
 		_get_property_dict(
 			"boss_type", TYPE_INT, PROPERTY_HINT_ENUM, ",".join(BossTypes.keys())

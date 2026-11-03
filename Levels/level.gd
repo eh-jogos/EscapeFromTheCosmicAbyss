@@ -42,7 +42,7 @@ var is_tutorial: bool = false:
 
 var beats: Array[int] = []
 var half_beats: Array[int] = []
-var boss_nodes: Array[int] = []
+var bosses: Array[BossData] = []
 
 var count_beats: int = 0
 var count_half_beats: int = 0
@@ -63,21 +63,55 @@ var _level_data: LevelData = null
 #region Public Methods ----------------------------------------------------------------------------
 
 func initialize_single_level(p_level_data: LevelData) -> void:
+	_reset_base_properties()
 	_level_data = p_level_data
-	beats.clear()
-	half_beats.clear()
-	boss_nodes.clear()
 	
+	var boss_data: BossData = BossData.new(_level_data, beats.size())
+	bosses.append(boss_data)
 	_build_level_procedurally()
 	
-	count_beats = beats.size()
-	count_half_beats = half_beats.size()
-	count_total = count_beats + count_half_beats
+	_set_count_properties()
+
+
+func initialize_multiple_levels(p_data_array: Array[LevelData], should_loop: bool = false) -> void:
+	_reset_base_properties()
+	
+	for index: int in p_data_array.size():
+		_level_data = p_data_array[index]
+		
+		var boss_data: BossData = BossData.new(_level_data, beats.size())
+		bosses.append(boss_data)
+		_build_level_procedurally()
+		
+		if index <= p_data_array.size()-1:
+			half_beats.append(LevelData.ObstacleTypes.NONE)
+			beats.append(LevelData.ObstacleTypes.SHIELD_UP)
+			half_beats.append(LevelData.ObstacleTypes.NONE)
+		elif index == p_data_array.size()-1 and should_loop:
+			half_beats.append(LevelData.ObstacleTypes.NONE)
+			beats.append(LevelData.ObstacleTypes.SHIELD_UP)
+	
+	_set_count_properties()
 
 #endregion Public Methods -------------------------------------------------------------------------
 
 
 #region Private Methods ---------------------------------------------------------------------------
+
+func _reset_base_properties() -> void:
+	beats.clear()
+	half_beats.clear()
+	bosses.clear()
+	count_beats = 0
+	count_half_beats = 0
+	count_total = 0
+
+
+func _set_count_properties() -> void:
+	count_beats = beats.size()
+	count_half_beats = half_beats.size()
+	count_total = count_beats + count_half_beats
+
 
 func _build_level_procedurally() -> void:
 	var total_count: int = _sum_all_beats_and_halfs()

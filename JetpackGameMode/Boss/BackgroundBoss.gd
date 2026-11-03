@@ -6,16 +6,14 @@ var count = 0
 
 var laser_index = 0
 var animation_index = 0
-var laser_targets = []
-var animation_targets = []
-var animations = []
-var danger_durations = []
 
-var current_laser_target
-var current_animation_target
-var current_animation
-var current_danger_duration
+var current_laser_target: int = -1
+var current_animation_target: int = -1
+var current_animation: String = ""
+var current_danger_duration: int = -1
 var up_down_count = 0
+
+var _boss_data: BossData = null
 
 
 func _ready():
@@ -24,27 +22,23 @@ func _ready():
 
 
 
-func set_boss_data(p_laser_targets, p_animation_targets, p_animations, p_danger):
-	laser_targets = p_laser_targets
-	animation_targets = p_animation_targets
-	animations = p_animations
-	danger_durations = p_danger
-	
+func set_boss_data(p_boss_data: BossData):
+	_boss_data = p_boss_data
 	set_current_laser()
 	set_current_animation_variables()
 
 
 func set_current_laser():
-	if laser_targets.size() > 0:
-		current_laser_target = laser_targets[laser_index]
+	if _boss_data.laser_countdown.size() > 0:
+		current_laser_target = _boss_data.laser_countdown[laser_index]
 	else:
-		current_laser_target = null
+		current_laser_target = -1
 
 
 func set_current_animation_variables():
-	current_animation_target = animation_targets[animation_index]
-	current_animation = animations[animation_index]
-	current_danger_duration = danger_durations[animation_index]
+	current_animation_target = _boss_data.animation_countdowns[animation_index]
+	current_animation = _boss_data.animation_names[animation_index]
+	current_danger_duration = _boss_data.danger_durations[animation_index]
 
 
 func restart_count():
@@ -72,9 +66,9 @@ func _on_beat_spawned():
 			assert(false)
 		
 		animation_index += 1
-		if animation_index < animation_targets.size():
+		if animation_index < _boss_data.animation_countdowns.size():
 			set_current_animation_variables()
-	elif current_laser_target != null and count == current_laser_target:
+	elif current_laser_target > 0 and count == current_laser_target:
 		var is_up = up_down_count % 2
 		if is_up:
 			animator.play("laser_charge_up")
@@ -83,7 +77,7 @@ func _on_beat_spawned():
 		
 		up_down_count += 1
 		laser_index += 1
-		if laser_index < laser_targets.size():
+		if laser_index < _boss_data.laser_countdown.size():
 			set_current_laser()
 		
 		print("BackgroundBoss | _on_beat_spawned | LASER! | is_up: %s"%[is_up])

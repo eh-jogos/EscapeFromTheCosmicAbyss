@@ -282,25 +282,18 @@ func restart_background_bosses_count():
 
 
 func load_level(level_choice, load_all = false, loop = false):
-	var level = level_loader.load_level(level_choice, load_all, loop)
+	var level: Level = level_loader.load_level(level_choice, load_all, loop)
 	object_spawner.set_level(level)
 	
 	reset_background_bosses_list()
-	if level.has("bosses_nodes") and level.bosses_nodes.keys().size() > 0:
-		for key in level.bosses_nodes.keys():
-			var boss_node
-			var laser_countdowns = level.bosses_nodes[key].laser_countdowns
-			var animation_countdowns = level.bosses_nodes[key].animation_countdowns
-			var animations = level.bosses_nodes[key].animations
-			var danger_duration = level.bosses_nodes[key].danger_durations
-			
-			if level.bosses_nodes[key].is_a_boss_level:
+	if level.bosses.size() > 0:
+		var boss_node: Node2D = null
+		for boss_data: BossData in level.bosses:
+			if boss_data.boss_type == LevelData.BossTypes.Boss:
 				boss_node = get_node(path_final_boss)
-				boss_node.set_boss_data(laser_countdowns, animation_countdowns, 
-						animations, danger_duration)
+				boss_node.set_boss_data(boss_data)
 			else:
-				boss_node = parallax_background.set_background_bosses(\
-						key, laser_countdowns, animation_countdowns, animations, danger_duration)
+				boss_node = parallax_background.set_background_bosses(boss_data)
 				
 			if boss_node != null:
 				if not object_spawner.is_connected("beat_spawned", Callable(boss_node, "_on_beat_spawned")):
