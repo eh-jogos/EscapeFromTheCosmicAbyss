@@ -29,12 +29,15 @@ func _ready() -> void:
 ## it, and returns it. When loading "arcade" or "speedrun" game modes, [param level_index] 
 ## doesn't matter, use [param should_load_all] and [param should_loop] accordingly.
 func load_level(level_index: int, should_load_all: bool, should_loop: bool) -> Level:
+	_level = Level.new()
 	if should_load_all:
-		pass
+		var level_selection := _levels.duplicate()
+		# Remove tutorial level
+		level_selection.remove_at(0)
+		_level.initialize_multiple_levels(level_selection, should_loop)
 	else:
 		assert(level_index >= 0 and level_index < _levels.size(), "Invalid level index")
 		var level_data := _levels[level_index]
-		_level = Level.new()
 		_level.initialize_single_level(level_data)
 	
 	return _level

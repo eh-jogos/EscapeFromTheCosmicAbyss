@@ -1867,7 +1867,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 5
+test_level_or_points = 7
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1

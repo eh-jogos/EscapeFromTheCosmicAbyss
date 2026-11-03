@@ -285,7 +285,7 @@ func restart_background_bosses_count():
 		boss.restart_count()
 
 
-func load_level(level_choice, load_all = false, loop = false):
+func load_level(level_choice: int, load_all = false, loop = false):
 	var level: Level = level_handler.load_level(level_choice, load_all, loop)
 	object_spawner.set_level(level)
 	

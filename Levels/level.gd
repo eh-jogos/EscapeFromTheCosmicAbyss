@@ -85,7 +85,7 @@ func initialize_multiple_levels(p_data_array: Array[LevelData], should_loop: boo
 			bosses.append(boss_data)
 		_build_level_procedurally()
 		
-		if index <= p_data_array.size()-1:
+		if index < p_data_array.size()-1:
 			half_beats.append(LevelData.ObstacleTypes.NONE)
 			beats.append(LevelData.ObstacleTypes.SHIELD_UP)
 			half_beats.append(LevelData.ObstacleTypes.NONE)
@@ -261,12 +261,12 @@ func _add_laser_eyes_to(
 	if beats_pool.laser_eye > 0:
 		_draw_laser_eye(level_array, beats_pool, 0)
 		if beats_pool.laser_eye > 0:
-			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacles")
+			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacle")
 	
 	if beats_pool.laser_eye > 0:
 		_draw_laser_eye(level_array, half_beats_pool, 1)
 		if half_beats_pool.laser_eye > 0:
-			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacles")
+			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacle")
 
 
 func _draw_laser_eye(level_array: Array, obstacle_pool: Dictionary, initial_slot: int) -> void:
@@ -308,9 +308,16 @@ func _draw_laser_eye(level_array: Array, obstacle_pool: Dictionary, initial_slot
 
 
 func _get_available_slots_after_first_boss_appears(level_array: Array[int]):
-	var available_slots: Array[int] = _build_available_slots_array(
-			level_array, _level_data.boss_animations_countdowns[2]+1
-	)
+	# index 2 is after Boss screams, index 1 is after it gets angry but hasn't screamed yet.
+	# +1 because we want laser eyes to be available at least 1 beat after the scream
+	var offset: int = _level_data.boss_animations_countdowns[2]+1
+	
+	if beats.size() > 0:
+		#This should only be true when playing in Arcade or Speedrun modes, which glue together
+		#multiple levels.
+		offset -= beats.size()
+	
+	var available_slots: Array[int] = _build_available_slots_array(level_array, offset)
 	return available_slots
 
 #endregion Laser Eye Handling ---------------------------------------------------------------------
