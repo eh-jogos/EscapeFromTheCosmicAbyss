@@ -67,7 +67,7 @@ func pause_game():
 
 
 func resume_game():
-	if game.is_tutorial:
+	if game.current_level.is_tutorial:
 		game.set_game_state("Tutorial")
 	else:
 		game.set_game_state("Playing")

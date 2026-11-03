@@ -117,7 +117,7 @@ func _unhandled_input(event) -> void:
 			focus_button.grab_focus()
 
 
-func open(level_number, level_name):
+func open(level_number: int, level_name: String):
 	if game.get_game_state() == 3:
 		Global.tutorial_completed()
 	
