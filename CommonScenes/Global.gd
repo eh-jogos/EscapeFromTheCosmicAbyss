@@ -10,6 +10,7 @@ signal barrier_tentacle_killed
 signal shield_energy_updated_to(energy)
 
 # Color Menu Signals
+#TODO: Probably move this signals into Color Menu?
 # warning-ignore:unused_signal
 signal page_updated(first_button, last_button)
 # warning-ignore:unused_signal
@@ -24,6 +25,7 @@ signal color_picker_opened
 signal color_picker_closed
 
 #Achievements Menu Signals
+#TODO: Probably move this signals into Achievement Menu?
 # warning-ignore:unused_signal
 signal achievement_info_sent(title, description)
 

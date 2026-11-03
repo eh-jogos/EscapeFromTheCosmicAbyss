@@ -60,7 +60,7 @@ func _on_beat_spawned():
 		if animator.has_animation(current_animation):
 			print("BackgroundBoss | _on_beat_spawned | Animation! | key: %s"%[current_animation])
 			animator.play(current_animation)
-			Global.emit_signal("start_danger", current_danger_duration)
+			Global.start_danger.emit(current_danger_duration)
 		else:
 			print("BackgroundBoss | _on_beat_spawned | Invalid animation key: %s"%[current_animation])
 			assert(false)

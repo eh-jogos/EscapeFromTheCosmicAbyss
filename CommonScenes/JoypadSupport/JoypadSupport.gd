@@ -104,7 +104,7 @@ func _input(event) -> void:
 	get_viewport().set_input_as_handled()
 	
 	if input_code != -1:
-		emit_signal("input_entered", 
+		input_entered.emit(
 			{
 				event_type = event_type, 
 				input_code = input_code, 
@@ -137,7 +137,7 @@ func change_action_event_type(input_map_action: JS_InputMapAction):
 	var event = input_map_action.event
 	_erase_all_event_type_from(action_name, event)
 	InputMap.action_add_event(action_name, event)
-	emit_signal("input_remapped", action_name)
+	input_remapped.emit(action_name)
 	_configs.rebuild_actions()
 	_configs.save()
 
@@ -196,7 +196,7 @@ func was_ui_accept_manually_swapped() -> bool:
 func update_joypad_prompts_manually() -> void:
 	_handle_swap_ui_accept_cancel()
 	gallery_joypad = _joypad_identifier.get_joypad_promp_gallery()
-	emit_signal("joypad_manually_changed")
+	joypad_manually_changed.emit()
 
 
 func swap_ui_accept_and_cancel(was_manually_swapped: = false):
@@ -208,7 +208,7 @@ func swap_ui_accept_and_cancel(was_manually_swapped: = false):
 		change_action_event_type(_swapped_cancel_event)
 	
 	if was_manually_swapped != was_ui_accept_manually_swapped():
-		emit_signal("joypad_manually_changed")
+		joypad_manually_changed.emit()
 		set_was_ui_accept_manually_swapped(was_manually_swapped)
 
 
@@ -275,10 +275,10 @@ func _set_joypad(device: int, p_is_connected: bool) -> void:
 		_joypad_identifier.set_joypad_type_for(device)
 		_handle_swap_ui_accept_cancel()
 		gallery_joypad = _joypad_identifier.get_joypad_prompt_gallery()
-		emit_signal("joypad_connected")
+		joypad_connected.emit()
 	else:
 		_joypad_identifier.reset_joypad_type()
-		emit_signal("joypad_disconnected")
+		joypad_disconnected.emit()
 
 
 func _get_prompt_texture_for(gallery: PromptGallery, event: InputEvent) -> Texture2D:

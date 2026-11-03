@@ -15,9 +15,8 @@ func activate():
 	
 	first_button.grab_focus()
 	
-	Global.emit_signal("page_updated", first_button, last_button)
-	
-	emit_signal("activated")
+	Global.page_updated.emit(first_button, last_button)
+	activated.emit()
 
 
 func deactivate():

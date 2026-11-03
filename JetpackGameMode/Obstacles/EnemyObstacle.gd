@@ -1,3 +1,4 @@
+class_name EnemyObstacle
 extends StaticBody2D
 
 var pipe_brain
@@ -13,4 +14,4 @@ func kill_player(offset):
 	pipe_brain._on_kill_player(self, offset_y)
 
 func obstacle_killed():
-	emit_signal("die")
+	die.emit()

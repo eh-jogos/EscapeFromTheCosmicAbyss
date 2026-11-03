@@ -41,7 +41,7 @@ func _ready():
 
 ### Private Methods -----------------------
 func _on_focus_entered() -> void:
-	Global.emit_signal("achievement_info_sent", _title, _description)
+	Global.achievement_info_sent.emit(_title, _description)
 	_hightlight_panel.show()
 
 

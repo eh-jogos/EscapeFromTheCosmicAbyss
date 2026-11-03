@@ -42,13 +42,13 @@ func close() -> void:
 
 func _on_Reset_pressed() -> void:
 	Global.read()
-	Global.emit_signal("reset_color_pickers")
+	Global.reset_color_pickers.emit()
 	get_tree().call_group("interactive_color", "colors_changed")
 
 
 func _on_ResetDefaults_pressed() -> void:
 	Global.reset_colors()
-	Global.emit_signal("reset_color_pickers")
+	Global.reset_color_pickers.emit()
 	get_tree().call_group("interactive_color", "colors_changed")
 
 

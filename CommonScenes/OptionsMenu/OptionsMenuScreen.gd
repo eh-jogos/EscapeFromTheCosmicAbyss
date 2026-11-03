@@ -85,7 +85,7 @@ func _on_Restart_pressed():
 
 func _on_ResetSave_pressed():
 	Global.reset_savefile()
-	Global.emit_signal("update_main_menu")
+	Global.update_main_menu.emit()
 
 
 func _on_UnlockEverything_pressed():
@@ -94,7 +94,7 @@ func _on_UnlockEverything_pressed():
 	Global.set_current_story_level(12)
 	Global.tutorial_completed()
 	Global.story_completed()
-	Global.emit_signal("update_main_menu")
+	Global.update_main_menu.emit()
 
 
 func _on_DebugButton_pressed():

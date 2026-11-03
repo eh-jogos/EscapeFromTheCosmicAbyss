@@ -85,9 +85,9 @@ func _on_ButtonArea_mouse_enter():
 
 func _on_ColorPickerButton_gui_input( event ):
 	if event.is_action_pressed("ui_right"):
-		Global.emit_signal("navigated_to_right")
+		Global.navigated_to_right.emit()
 	elif event.is_action_pressed("ui_left"):
-		Global.emit_signal("navigated_to_left")
+		Global.navigated_to_left.emit()
 
 
 func _process(_delta):
@@ -101,7 +101,7 @@ func _process(_delta):
 	has_color_changed = _handle_color_input("value")
 	
 	if has_color_changed:
-		emit_signal("color_changed", color)
+		color_changed.emit()
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		back_panel.hide()
@@ -185,6 +185,6 @@ func _name_color_picker_elements() -> void:
 
 func _on_backpanel_visibility_changed():
 	if back_panel.visible:
-		Global.emit_signal("color_picker_opened")
+		Global.color_picker_opened.emit()
 	else:
-		Global.emit_signal("color_picker_closed")
+		Global.color_picker_closed.emit()

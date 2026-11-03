@@ -6,14 +6,14 @@ var arrows_highlight
 func _ready():
 	set_process_input(false)
 	
-	if not self.is_connected("mouse_entered", Callable(self, "_on_mouse_enter")):
-		self.connect("mouse_entered", Callable(self, "_on_mouse_enter"))
+	if not is_connected("mouse_entered", Callable(self, "_on_mouse_enter")):
+		connect("mouse_entered", Callable(self, "_on_mouse_enter"))
 	
-	if not self.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
-		self.connect("focus_entered", Callable(self, "_on_focus_enter"))
+	if not is_connected("focus_entered", Callable(self, "_on_focus_enter")):
+		connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	if not self.is_connected("focus_exited", Callable(self, "_on_focus_exit")):
-		self.connect("focus_exited", Callable(self, "_on_focus_exit"))
+	if not is_connected("focus_exited", Callable(self, "_on_focus_exit")):
+		connect("focus_exited", Callable(self, "_on_focus_exit"))
 	
 	is_invincible = Global.is_invincible
 	
@@ -33,10 +33,10 @@ func toggle_invincibility():
 	Global.is_invincible = !Global.is_invincible
 	is_invincible = Global.is_invincible
 	_update_text()
-	Global.emit_signal("update_invincibility")
+	Global.update_invincibility.emit()
 
 func _on_mouse_enter():
-	self.grab_focus()
+	grab_focus()
 
 func _on_focus_enter():
 	#print("FOCUS GRABBED")
@@ -52,9 +52,9 @@ func _on_focus_exit():
 
 func _update_text():
 	if is_invincible:
-		self.set_text("Invincible: On")
+		set_text("Invincible: On")
 	else:
-		self.set_text("Invincible: Off")
+		set_text("Invincible: Off")
 
 func _on_ArrowsIndicator_right_pressed():
 	toggle_invincibility()

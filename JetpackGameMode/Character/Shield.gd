@@ -42,7 +42,7 @@ func increase_energy(increment, should_mute = false):
 		energy = min(energy + 1, MAX_SHIELD)
 		
 		if shield_bubble.energy != energy:
-			Global.emit_signal("shield_energy_updated_to", energy)
+			Global.shield_energy_updated_to.emit(energy)
 			print("Shield Energy: %s | Incremet: %s"%[energy,increment])
 			
 			shield_animator.play("open")
@@ -57,7 +57,7 @@ func decrease_energy(increment):
 		energy = max(energy - 1, 0)
 		
 		if shield_bubble.energy != energy:
-			Global.emit_signal("shield_energy_updated_to", energy)
+			Global.shield_energy_updated_to.emit(energy)
 			print("Shield Energy: %s | Incremet: %s"%[energy,increment])
 			
 			shield_animator.play("burst")

@@ -82,8 +82,7 @@ func load_above(path, origin_focus_path, origin_scene, path_is_node = false):
 	previous_focuses.append(origin_focus_path)
 	
 	scene_above = node.instantiate()
-	
-	emit_signal("scene_above_loaded", scene_above)
+	scene_above_loaded.emit(scene_above)
 	
 	get_tree().get_root().call_deferred("add_child",scene_above)
 	#scene_above.set_position(scenes_bellow.get_global_position())  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
@@ -104,12 +103,12 @@ func background_loading():
 		#else: # error during loading
 			#print(poll_results)
 			#loader = null
-			#emit_signal("background_loading_finished", {error = poll_results, scene = null})
+			#background_loading_finished.emit({error = poll_results, scene = null})
 			#return 
 		#
 		#poll_results = bg_loader.poll()
 	#
-	#emit_signal("background_loading_finished", {error = OK, scene = bg_loader.get_resource()})
+	#background_loading_finished.emit({error = OK, scene = bg_loader.get_resource()})
 
 
 func clear_above():
@@ -141,7 +140,7 @@ func clear_above():
 	if previous_focus != null and previous_focus.has_method("grab_focus"):
 		previous_focus.grab_focus()
 	
-	emit_signal("scene_above_cleared", scene_below)
+	scene_above_cleared.emit(scenes_bellow)
 	print("Scenes Below: %s | Scene Below: %s | Previous Focus: %s "%[
 			_get_scenes_below_names(),
 			scene_below.get_name(),
@@ -228,33 +227,33 @@ func black_transition(path, focus_path, origin_scene, path_is_node = false):
 	_animation.play("black_transition")
 	await _animation.animation_finished
 	load_above(path, focus_path, origin_scene, path_is_node)
-	emit_signal("mid_transition_reached")
+	mid_transition_reached.emit()
 	_animation.play("black_transition_out")
 	await _animation.animation_finished
 	reset()
-	emit_signal("transition_ended")
+	transition_ended.emit()
 	loading_path = ""
 
 func black_transition_replace(path):
 	_animation.play("black_transition")
 	await _animation.animation_finished
-	emit_signal("mid_transition_reached")
-# warning-ignore:return_value_discarded
+	mid_transition_reached.emit()
+	# warning-ignore:return_value_discarded
 	get_tree().change_scene_to_file(path)
 	_animation.play("black_transition_out")
 	await _animation.animation_finished
 	reset()
-	emit_signal("transition_ended")
+	transition_ended.emit()
 
 func black_transition_from_above():
 	_animation.play("black_transition")
 	await _animation.animation_finished
 	clear_above()
-	emit_signal("mid_transition_reached")
+	mid_transition_reached.emit()
 	_animation.play("black_transition_out")
 	await _animation.animation_finished
 	reset()
-	emit_signal("transition_ended")
+	transition_ended.emit()
 
 
 func _get_scenes_below_names():

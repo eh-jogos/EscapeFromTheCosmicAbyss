@@ -14,7 +14,9 @@ var is_looping_sfx = false
 signal laser_end
 
 var _tween: Tween = null
+
 @onready var _loop: AudioStreamPlayer = $SfxLibrary/Loop
+@onready var _fire: AudioStreamPlayer = $SfxLibrary/Fire
 
 func _ready():
 	#print("Bullet Ready")
@@ -22,7 +24,7 @@ func _ready():
 	raycast_bottom = get_node("BottomRaycast")
 	raycasts = [raycast_top, raycast_bottom]
 	
-	animator = self.get_node("AnimationPlayer")
+	animator = get_node("AnimationPlayer")
 	animator.play("fire")
 	
 	set_physics_process(true)
@@ -31,36 +33,36 @@ func _ready():
 func set_laser_strength(duration):
 	var new_height = Vector2(1,1)
 	new_height.y += duration
-	self.set_scale(new_height)
+	set_scale(new_height)
 
 
 func _physics_process(_delta):
 	for raycast in raycasts:
 		if raycast.is_colliding():
-			var collider = raycast.get_collider()
+			var collider: EnemyObstacle = raycast.get_collider()
 			#print(collider.get_name())
-			if collider.is_in_group("pipes"):
+			if collider != null:
 				#print("Bullet HIT")
-				collider.emit_signal("die")
+				collider.obstacle_killed()
 	
-	if is_looping_sfx and not $SfxLibrary/Loop.playing:
-		$SfxLibrary/Loop.play()
+	if is_looping_sfx and not _loop.playing:
+		_loop.play()
 		pass
 
 
 func _on_AnimationPlayer_fadeout_finished():
-	emit_signal("laser_end")
+	laser_end.emit()
 	#print("Bullet Fade")
-	self.queue_free()
+	queue_free()
 
 
 func play_fire_sfx():
-	$SfxLibrary/Fire.play()
+	_fire.play()
 	pass
 
 
 func play_loop_sfx():
-	$SfxLibrary/Loop.play()
+	_loop.play()
 	is_looping_sfx = true
 
 

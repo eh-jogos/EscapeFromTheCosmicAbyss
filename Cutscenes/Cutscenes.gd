@@ -95,7 +95,7 @@ func has_more_scenes():
 
 func close():
 	get_tree().set_pause(false)
-	emit_signal("cutscene_ended")
+	cutscene_ended.emit()
 	if get_tree().get_current_scene() == self:
 		for child in get_children():
 			child.hide()

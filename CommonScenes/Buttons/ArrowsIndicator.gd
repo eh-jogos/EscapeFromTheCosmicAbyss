@@ -11,11 +11,11 @@ func stop_highlight():
 	get_node("ArrowAnimator").play("disabled")
 
 func _on_RightArrow_pressed():
-	emit_signal("right_pressed")
+	right_pressed.emit()
 
 
 func _on_LeftArrow_pressed():
-	emit_signal("left_pressed")
+	left_pressed.emit()
 
 
 func focus_parent():

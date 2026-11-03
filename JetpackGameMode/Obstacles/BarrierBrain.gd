@@ -80,7 +80,7 @@ func _on_PipeTentacles_Die():
 		tentacle_pipe.scored()
 		animation.play("crush_backwards")
 		
-		Global.emit_signal("barrier_tentacle_killed")
+		Global.barrier_tentacle_killed.emit()
 
 func go_to_crush():
 	animation.play("crush")

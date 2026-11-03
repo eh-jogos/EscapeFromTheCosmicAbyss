@@ -9,7 +9,7 @@ var _old_position: Vector2
 
 func _ready():
 	var relative_position = get_relative_position(position)
-	emit_signal("position_changed", relative_position)
+	position_changed.emit(relative_position)
 	
 	if not Engine.is_editor_hint():
 		hide()
@@ -22,7 +22,7 @@ func _draw():
 func _process(_delta):
 	if position != _old_position:
 		var relative_position = get_relative_position(position)
-		emit_signal("position_changed", relative_position)
+		position_changed.emit(relative_position)
 	
 	_old_position = position
 

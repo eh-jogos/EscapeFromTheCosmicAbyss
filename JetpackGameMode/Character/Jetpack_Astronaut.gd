@@ -136,7 +136,7 @@ func _physics_process(delta: float):
 		else:
 			is_dashing = false
 			dash_particles.emitting = is_dashing
-			emit_signal("dashing", is_dashing)
+			dashing.emit(is_dashing)
 			speed.x += speed_x*unit.x*delta
 			speed.x = clamp(speed.x, 0, speed_x*unit.x)
 	else:
@@ -251,7 +251,7 @@ func handle_boost(delta, heat):
 
 func handle_dash(delta, dash_force, heat):
 	is_dashing = true
-	emit_signal("dashing", is_dashing)
+	dashing.emit(is_dashing)
 	
 	var dash_sfx = $SfxLibrary/Dash
 	dash_sfx.play()
