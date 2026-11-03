@@ -39,8 +39,8 @@ func create_barrier(step):
 	barriers.append(barrier)
 
 
-func generate_visualization(level_data):
-	total_count = level_data["total_count"]
+func generate_visualization(p_level: Level):
+	total_count = p_level.count_total
 	progress_count = 0
 	increment = float(total_length)/total_count
 	
@@ -53,21 +53,21 @@ func generate_visualization(level_data):
 	
 	var addition = 1
 	var step = 0
-	var limit = level_data["half_beats"].size()
+	var limit = p_level.count_half_beats
 	for x in range(0, limit):
 		step = x + addition
-		if level_data["beats"][x] == 4:
+		if p_level.beats[x] == LevelData.ObstacleTypes.WALL_TENTACLE:
 			create_barrier(step)
 		
 		addition += 1
 		step = x + addition
-		if level_data["half_beats"][x] == 4:
+		if p_level.half_beats[x] == LevelData.ObstacleTypes.WALL_TENTACLE:
 			create_barrier(step)
 		
 		if x == limit-1:
 			x = limit
 			step = x + addition
-			if level_data["beats"][x] == 4:
+			if p_level.beats[x] == LevelData.ObstacleTypes.WALL_TENTACLE:
 				create_barrier(step)
 	
 	icon_position.x = initial_margin + player_icon_x_offset

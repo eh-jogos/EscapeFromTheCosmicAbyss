@@ -18,24 +18,37 @@ func _ready():
 	
 
 
-func play(num, title):
-	self.show()
-	#SoundManager.stop_bgm()
-	game.set_game_state("Start")
-	var stage_text = ""
-	if num is int:
-		stage_text = "%02d"%[num]
+func set_story_text(num: int, title: String) -> void:
+	var stage_text = "%02d"%[num]
 	level_num.set_text(stage_text)
 	level_title.set_text(title)
-	
+
+
+func set_arcade_text(title: String) -> void:
+	const STAGE_TEXT := "Arcade Arena!"
+	level_num.set_text(STAGE_TEXT)
+	level_title.set_text(title)
+
+
+func set_speedrun_text(title: String) -> void:
+	const STAGE_TEXT := "Speedrun Track!"
+	level_num.set_text(STAGE_TEXT)
+	level_title.set_text(title)
+
+
+func play():
+	show()
+	#SoundManager.stop_bgm()
+	game.set_game_state("Start")
 	animator.play("fade_in")
 	await animator.animation_finished
 	set_process_input(true)
 
+
 func _input(event):
 	if event.is_action_pressed("boost"):
 		self.set_process_input(false)
-		if game.is_tutorial:
+		if game.current_level.is_tutorial:
 			game.set_game_state("Tutorial")
 		else:
 			game.set_game_state("Playing")

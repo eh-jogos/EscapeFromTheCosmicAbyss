@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://ck4hiitlpnif5"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_fkpfw"]
+
+[resource]
+resource_name = "Level9"
+script = ExtResource("1_fkpfw")
+title = "Almost there!"
+intro_cutscene = ""
+end_cutscene = ""
+is_tutorial = false
+intro_beats = Array[int]([1, 2, 1, 2, 1])
+intro_halfs = Array[int]([1, 0, 1, 0, 1])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 12,
+"laser_eye": 2,
+"none": 0,
+"shield_up": 2,
+"tentacle": 18,
+"triple_tentacle": 8,
+"wall_tentacle": 6
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 9,
+"laser_eye": 0,
+"none": 21,
+"shield_up": 0,
+"tentacle": 12,
+"triple_tentacle": 5,
+"wall_tentacle": 1
+}
+boss_type = 0
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"

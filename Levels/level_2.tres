@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://b4ef7o7rkcni4"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_h3rs5"]
+
+[resource]
+resource_name = "Level2"
+script = ExtResource("1_h3rs5")
+title = "Pew pew!"
+intro_cutscene = ""
+end_cutscene = ""
+is_tutorial = false
+intro_beats = Array[int]([1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1])
+intro_halfs = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 0,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacle": 16,
+"triple_tentacle": 0,
+"wall_tentacle": 2
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 0,
+"laser_eye": 0,
+"none": 10,
+"shield_up": 0,
+"tentacle": 8,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+boss_type = 0
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"

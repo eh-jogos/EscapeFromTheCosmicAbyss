@@ -1,21 +1,22 @@
-[gd_scene load_steps=138 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=139 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
-[ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/LevelLoader.gd" id="2"]
-[ext_resource type="Script" uid="uid://lepxr4q4nc3y" path="res://Levels/Level0.gd" id="3"]
-[ext_resource type="Script" uid="uid://db67sxxqm7lv4" path="res://Levels/Level1.gd" id="4"]
-[ext_resource type="Script" uid="uid://dvp71ckfava6b" path="res://Levels/Level2.gd" id="5"]
-[ext_resource type="Script" uid="uid://bnmj7lx4qx6do" path="res://Levels/Level3.gd" id="6"]
-[ext_resource type="Script" uid="uid://d3h7ntkk750a0" path="res://Levels/Level4.gd" id="7"]
-[ext_resource type="Script" uid="uid://bo5yb4sfcwpio" path="res://Levels/Level5.gd" id="8"]
-[ext_resource type="Script" uid="uid://b78rlpun5by5d" path="res://Levels/Level6.gd" id="9"]
-[ext_resource type="Script" uid="uid://vp543qwx4axh" path="res://Levels/Level7.gd" id="10"]
-[ext_resource type="Script" uid="uid://dtm7orlb2pp2s" path="res://Levels/Level8.gd" id="11"]
-[ext_resource type="Script" uid="uid://byiikoesfw54l" path="res://Levels/Level9.gd" id="12"]
-[ext_resource type="Script" uid="uid://bqxck8s2tblfk" path="res://Levels/Level10.gd" id="13"]
-[ext_resource type="Script" uid="uid://dh74piwxck3b4" path="res://Levels/Level11.gd" id="14"]
-[ext_resource type="Script" uid="uid://dck8ghxuua6r5" path="res://Levels/Level12.gd" id="15"]
+[ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/level_handler.gd" id="2"]
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="3_c33xn"]
+[ext_resource type="Resource" uid="uid://cy7xfkeruq4fi" path="res://Levels/level_5.tres" id="3_oyo55"]
+[ext_resource type="Resource" uid="uid://he28pwf5lhw5" path="res://Levels/level_1.tres" id="4_7o2yg"]
+[ext_resource type="Resource" uid="uid://6pwslvjo4ig8" path="res://Levels/level_0.tres" id="4_g6ew6"]
+[ext_resource type="Resource" uid="uid://b4ef7o7rkcni4" path="res://Levels/level_2.tres" id="6_ihlg8"]
+[ext_resource type="Resource" uid="uid://bkcsu6y1qmoy3" path="res://Levels/level_3.tres" id="7_wbw2r"]
+[ext_resource type="Resource" uid="uid://s54d63sqjio4" path="res://Levels/level_4.tres" id="8_ml625"]
+[ext_resource type="Resource" uid="uid://gboxiqedev4t" path="res://Levels/level_6.tres" id="10_3opas"]
+[ext_resource type="Resource" uid="uid://ce4g632eu33h1" path="res://Levels/level_7.tres" id="11_7xxxc"]
+[ext_resource type="Resource" uid="uid://chk4eo4qat0v" path="res://Levels/level_8.tres" id="12_8henu"]
+[ext_resource type="Resource" uid="uid://ck4hiitlpnif5" path="res://Levels/level_9.tres" id="13_rw4fg"]
+[ext_resource type="Resource" uid="uid://bol3bv3xv06nx" path="res://Levels/level_10.tres" id="14_iucr0"]
+[ext_resource type="Resource" uid="uid://bwuu5yuohqqcm" path="res://Levels/level_11.tres" id="15_cb82u"]
 [ext_resource type="PackedScene" uid="uid://ubsi237osaus" path="res://JetpackGameMode/Camera/gameplay_camera.tscn" id="16_mhwsq"]
+[ext_resource type="Resource" uid="uid://ck1omlp5i738v" path="res://Levels/level_12.tres" id="16_wxis1"]
 [ext_resource type="Script" uid="uid://cusg7srb0uaq7" path="res://JetpackGameMode/Obstacles/Obstacle_Spawner.gd" id="17"]
 [ext_resource type="PackedScene" uid="uid://c566dtf0tf257" path="res://JetpackGameMode/Obstacles/TentaclePipes/Empty.tscn" id="18"]
 [ext_resource type="PackedScene" uid="uid://d2uaxlo5t8bfp" path="res://JetpackGameMode/Obstacles/TentaclePipes/PipeTentacles.tscn" id="19"]
@@ -1489,7 +1490,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
+shader_parameter/torus_center = Vector2(-0.0836213, 1.06908)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
@@ -1498,7 +1499,7 @@ shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0954259, 1.06908)
+shader_parameter/torus_center = Vector2(-0.0836213, 1.06908)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1509,7 +1510,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0954259, 1.06908)
+shader_parameter/displacement_center = Vector2(-0.0836213, 1.06908)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1866,68 +1867,15 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 5
+test_level_or_points = 7
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
 
-[node name="LevelLoader" type="Node" parent="."]
+[node name="LevelHandler" type="Node" parent="."]
 script = ExtResource("2")
-
-[node name="Level0" type="Node" parent="LevelLoader"]
-script = ExtResource("3")
-title = "How to Play"
-intro_cutscene = "res://Cutscenes/Cutscene1.tscn"
-
-[node name="Level1" type="Node" parent="LevelLoader"]
-script = ExtResource("4")
-title = "Jetpack for Your Life!"
-
-[node name="Level2" type="Node" parent="LevelLoader"]
-script = ExtResource("5")
-title = "Pew pew!"
-
-[node name="Level3" type="Node" parent="LevelLoader"]
-script = ExtResource("6")
-title = "Double Trouble!"
-
-[node name="Level4" type="Node" parent="LevelLoader"]
-script = ExtResource("7")
-title = "Triple Trouble!"
-
-[node name="Level5" type="Node" parent="LevelLoader"]
-script = ExtResource("8")
-title = "What was that sound?"
-end_cutscene = "res://Cutscenes/Cutscene2.tscn"
-
-[node name="Level6" type="Node" parent="LevelLoader"]
-script = ExtResource("9")
-title = "Dash like you mean it!"
-
-[node name="Level7" type="Node" parent="LevelLoader"]
-script = ExtResource("10")
-title = "I feel like I'm being watched!"
-
-[node name="Level8" type="Node" parent="LevelLoader"]
-script = ExtResource("11")
-title = "It's right behind me, isn't it?"
-
-[node name="Level9" type="Node" parent="LevelLoader"]
-script = ExtResource("12")
-title = "Almost there!"
-
-[node name="Level10" type="Node" parent="LevelLoader"]
-script = ExtResource("13")
-title = "Are we there yet?"
-
-[node name="Level11" type="Node" parent="LevelLoader"]
-script = ExtResource("14")
-title = "The Calm Before the Storm!"
-
-[node name="Level12" type="Node" parent="LevelLoader"]
-script = ExtResource("15")
-title = "If that was the 'Calm', what is the 'Storm'?!"
+_levels = Array[ExtResource("3_c33xn")]([ExtResource("4_g6ew6"), ExtResource("4_7o2yg"), ExtResource("6_ihlg8"), ExtResource("7_wbw2r"), ExtResource("8_ml625"), ExtResource("3_oyo55"), ExtResource("10_3opas"), ExtResource("11_7xxxc"), ExtResource("12_8henu"), ExtResource("13_rw4fg"), ExtResource("14_iucr0"), ExtResource("15_cb82u"), ExtResource("16_wxis1")])
 
 [node name="RawLayer" type="CanvasLayer" parent="."]
 layer = -10
@@ -2402,9 +2350,9 @@ obstacle_parent = NodePath("../../Obstaculos/ObstacleBeat")
 obstacle_half_parent = NodePath("../../Obstaculos/ObstacleHalfBeat")
 none = ExtResource("18")
 pipe = ExtResource("19")
-double_pipe = ExtResource("20")
-triple_pipe = ExtResource("21")
-wall = ExtResource("22")
+double_tentacle = ExtResource("20")
+triple_tentacle = ExtResource("21")
+wall_tentacle = ExtResource("22")
 laser_eye = ExtResource("23")
 shield_up = ExtResource("24")
 

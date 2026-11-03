@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://bkcsu6y1qmoy3"]
+
+[ext_resource type="Script" uid="uid://dtvx8gbac3nc3" path="res://Levels/level_data.gd" id="1_m5i8c"]
+
+[resource]
+resource_name = "Level3"
+script = ExtResource("1_m5i8c")
+title = "Double Trouble!"
+intro_cutscene = ""
+end_cutscene = ""
+is_tutorial = false
+intro_beats = Array[int]([1, 1, 1, 1, 2])
+intro_halfs = Array[int]([0, 0, 0, 0, 0])
+end_beat = 4
+beats = {
+"ammo_up": 0,
+"double_tentacle": 8,
+"laser_eye": 0,
+"none": 0,
+"shield_up": 0,
+"tentacle": 18,
+"triple_tentacle": 0,
+"wall_tentacle": 2
+}
+half_beats = {
+"ammo_up": 0,
+"double_tentacle": 5,
+"laser_eye": 0,
+"none": 13,
+"shield_up": 0,
+"tentacle": 10,
+"triple_tentacle": 0,
+"wall_tentacle": 0
+}
+boss_type = 0
+metadata/_custom_type_script = "uid://dtvx8gbac3nc3"
