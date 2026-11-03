@@ -196,10 +196,8 @@ func open(level_number: int, level_name: String):
 	Global.achievements_handler.save()
 
 
+## Called at the end of "open" animation
 func play_unlock_animations():
-	"""
-	Called at the end of "open" animation
-	"""
 	if game.is_last_stage() and not Global.is_story_completed():
 		Global.story_completed()
 		var unlock_animator = get_node("ResultsContainer/ModeUnlock/AnimationPlayer")

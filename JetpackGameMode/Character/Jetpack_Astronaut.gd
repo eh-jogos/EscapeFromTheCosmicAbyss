@@ -279,7 +279,6 @@ func _input(event):
 		return
 	
 	if event.is_action_pressed("shoot") and game.ammunition.has_ammo() and not shooting:
-		#game.dash_score()
 		shooting = true
 		game.ammunition.use_ammo()
 		arms_animator.play("shooting")

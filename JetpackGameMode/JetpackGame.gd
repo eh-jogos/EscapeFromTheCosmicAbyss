@@ -1,4 +1,14 @@
+class_name Game
 extends Node2D
+
+## Main Game Scene and script.
+
+#region Member Variables and Dependencies ---------------------------------------------------------
+#--- signals --------------------------------------------------------------------------------------
+
+#--- enums ----------------------------------------------------------------------------------------
+
+#--- constants ------------------------------------------------------------------------------------
 
 const MAX_SPEED_INCREMENT_PER_LAP = 1
 const STATE = {
@@ -10,11 +20,23 @@ const STATE = {
 	"Cutscene": 5
 }
 
+#--- public variables - order: export > normal var > onready --------------------------------------
 
 # Nodes this script will interact with
 @export var path_player: NodePath = NodePath()
 @export var path_final_boss: NodePath = NodePath()
 @export var path_camera: NodePath = NodePath()
+
+# Game Mode "Stats" and Variables?
+@export var point_multiple = 5
+@export var upgrade_multiple = 30
+@export_file var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
+@export_file var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
+
+@export_category("Editor Debug")
+@export var force_test_mode := false
+@export_enum("story", "arcade", "speedrun") var test_mode = "story"
+@export var test_level_or_points: int = 0
 
 var score_label
 var points_label
@@ -31,21 +53,11 @@ var object_spawner
 var parallax_background
 var active_background_bosses = []
 
-
 # Other "Game Screens"
 var game_over_screen
 var level_complete_screen
 var countdown
 var tutorial
-
-# Game Mode "Stats" and Variables?
-@export var point_multiple = 5
-@export var upgrade_multiple = 30
-@export_file var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
-@export_file var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
-@export var force_test_mode := false
-@export_enum("story", "arcade", "speedrun") var test_mode = "story"
-@export var test_level_or_points: int = 0
 
 var last_level_choice
 var points = 0
@@ -77,6 +89,13 @@ var current_state = STATE["Start"]
 @onready var game_mode = game_settings["game mode"]
 @onready var category = game_settings["sub-mode"]
 @onready var level_handler: LevelHandler = $LevelHandler
+
+#--- private variables - order: export > normal var > onready -------------------------------------
+
+#endregion Member Variables and Dependencies ------------------------------------------------------
+
+
+#region Built in Engine Methods -------------------------------------------------------------------
 
 func _init():
 	Global.game = self
@@ -112,6 +131,10 @@ func _input(event):
 			and OS.is_debug_build():
 		level_completed()
 
+#endregion Built in Engine Methods ----------------------------------------------------------------
+
+
+#region Public Methods ----------------------------------------------------------------------------
 
 func show_pre_game():
 	print("JetpackGame.gd | Game Mode: %s | Is Retry: %s"%[game_mode, Global.is_retry])
@@ -146,6 +169,7 @@ func show_pre_game():
 	
 	self.get_tree().set_pause(true)
 
+
 func load_story_pregame():
 	#if not is_tutorial_completed():
 	#	Global.set_current_story_level(0)
@@ -158,8 +182,10 @@ func load_story_pregame():
 	else:
 		print("ERROR | Invalid sub-mode: %s"%[game_settings])
 
+
 func is_tutorial_completed():
 	return Global.savedata["story"]["tutorial beaten"]
+
 
 func load_upgrade_pregame():
 	if category.is_valid_int():
@@ -179,20 +205,11 @@ func game_start():
 	if not current_level.intro_cutscene.is_empty() and not Global.is_retry:
 		set_game_state("Cutscene")
 		ScreenManager.black_transition(current_level.intro_cutscene, null, self)
-		if not ScreenManager.is_connected("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded")):
-			ScreenManager.connect("scene_above_loaded", Callable(self, "_on_intro_cutscene_loaded").bind(), CONNECT_ONE_SHOT)
+		if not ScreenManager.scene_above_loaded.is_connected(_on_intro_cutscene_loaded):
+			ScreenManager.scene_above_loaded.connect(_on_intro_cutscene_loaded, CONNECT_ONE_SHOT)
 	else:
 		start_countdown()
 
-
-func _on_intro_cutscene_loaded(loaded_cutscene):
-	if not loaded_cutscene.is_connected("cutscene_ended", Callable(self, "_on_intro_cutscene_finished")):
-		loaded_cutscene.connect("cutscene_ended", Callable(self, "_on_intro_cutscene_finished").bind(), CONNECT_ONE_SHOT)
-
-
-func _on_intro_cutscene_finished():
-	if not ScreenManager.is_connected("transition_ended", Callable(self, "start_countdown")):
-		ScreenManager.connect("transition_ended", Callable(self, "start_countdown").bind(), CONNECT_ONE_SHOT)
 
 func start_countdown():
 	# TODO: Enable tutorial again once it's working
@@ -255,8 +272,9 @@ func setup_game_mode_level():
 		current_level = load_level(1, true)
 		current_level.title = "Gotta Go Fast!"
 
-func valid_level_choice(level_to_check):
-	return level_to_check < level_handler.get_levels_count()
+
+func valid_level_choice(p_index: int):
+	return p_index >= 0 and p_index < level_handler.get_levels_count()
 
 
 func reset_background_bosses_list():
@@ -325,6 +343,58 @@ func game_over():
 	get_tree().set_pause(true)
 
 
+func update_score():
+	var points_str = "%04d"%[points]
+	points_label.set_text(points_str)
+
+
+func level_completed():
+	const SPEEDRUN_TITLE = "Speedrun Track"
+	if game_mode == "story":
+		Global.update_story_next_upgrade(next_upgrade)
+	hud_animator.play("fade_out")
+	if game_mode == "story":
+		level_complete_screen.open(current_level_index, current_level.title)
+	elif game_mode == "speedrun":
+		level_complete_screen.open(-1, SPEEDRUN_TITLE)
+
+
+func player_reset_y():
+	hud_animator.play_backwards("fade_out")
+	player.reset_y()
+	
+	var boost_timer = get_node("AutoBoost")
+	Input.action_press("boost")
+	boost_timer.start()
+	await boost_timer.timeout
+	Input.action_release("boost")
+
+
+func set_laps(lap_count):
+	time_laps_label.set_text("Laps: %s"%[lap_count])
+
+
+func is_last_stage():
+	if current_level_index == level_handler.get_levels_count()-1:
+		return true
+	else:
+		return false
+
+#endregion Public Methods -------------------------------------------------------------------------
+
+
+#region Private Methods ---------------------------------------------------------------------------
+
+func _on_intro_cutscene_loaded(loaded_cutscene: Cutscene):
+	if not loaded_cutscene.cutscene_ended.is_connected(_on_intro_cutscene_finished):
+		loaded_cutscene.cutscene_ended.connect(_on_intro_cutscene_finished, CONNECT_ONE_SHOT)
+
+
+func _on_intro_cutscene_finished():
+	if not ScreenManager.transition_ended.is_connected(start_countdown):
+		ScreenManager.transition_ended.connect(start_countdown, CONNECT_ONE_SHOT)
+
+
 func _on_scored(num):
 	var last_point_level = points_level
 	#print("LPL: %s | LML: %s"%[last_point_level, last_multiple_level])
@@ -376,23 +446,13 @@ func _on_scored(num):
 	pass # replace with function body
 
 
-func update_score():
-	var points_str = "%04d"%[points]
-	points_label.set_text(points_str)
-
-
-func dash_score():
-	points -= 5
-	update_score()
-
-
 func _on_ObstacleSpawner_level_end():
 	if game_mode == "story":
 		if not current_level.end_cutscene.is_empty():
 			set_game_state("Cutscene")
 			ScreenManager.black_transition(current_level.end_cutscene, null, self)
-			if not ScreenManager.is_connected("scene_above_loaded", Callable(self, "_on_end_cutscene_loaded")):
-				ScreenManager.connect("scene_above_loaded", Callable(self, "_on_end_cutscene_loaded").bind(), CONNECT_ONE_SHOT)
+			if not ScreenManager.scene_above_loaded.is_connected(_on_end_cutscene_loaded):
+				ScreenManager.scene_above_loaded.connect(_on_end_cutscene_loaded, CONNECT_ONE_SHOT)
 		else:
 			level_completed()
 	elif game_mode == "speedrun":
@@ -405,48 +465,17 @@ func _on_ObstacleSpawner_level_end():
 		printerr("ERROR | Invalid Game Mode: %s"%[game_settings])
 
 
-func _on_end_cutscene_loaded(loaded_cutscene):
-	if not loaded_cutscene.is_connected("cutscene_ended", Callable(self, "_on_end_cutscene_finished")):
-		loaded_cutscene.connect("cutscene_ended", Callable(self, "_on_end_cutscene_finished").bind(), CONNECT_ONE_SHOT)
+func _on_end_cutscene_loaded(loaded_cutscene: Cutscene):
+	if not loaded_cutscene.cutscene_ended.is_connected(_on_end_cutscene_finished):
+		loaded_cutscene.cutscene_ended.connect(_on_end_cutscene_finished, CONNECT_ONE_SHOT) 
 	#print("JetpackGame.gd | CUTSCENE LOADED | END SIGNAL CONNECTED")
 
 
 func _on_end_cutscene_finished():
-	if not ScreenManager.is_connected("transition_ended", Callable(self, "level_completed")):
-		ScreenManager.connect("transition_ended", Callable(self, "level_completed").bind(), CONNECT_ONE_SHOT)
+	if not ScreenManager.transition_ended.is_connected(level_completed):
+		ScreenManager.transition_ended.connect(level_completed, CONNECT_ONE_SHOT)
 	#print("JetpackGame.gd | CUTSCENE ENDED | TRANSITION SIGNAL CONNECTED")
 	player.gravity_force = 0
 	player.jetpack_force = 0
 
-
-func level_completed():
-	const SPEEDRUN_TITLE = "Speedrun Track"
-	if game_mode == "story":
-		Global.update_story_next_upgrade(next_upgrade)
-	hud_animator.play("fade_out")
-	if game_mode == "story":
-		level_complete_screen.open(current_level_index, current_level.title)
-	elif game_mode == "speedrun":
-		level_complete_screen.open(-1, SPEEDRUN_TITLE)
-
-
-func player_reset_y():
-	hud_animator.play_backwards("fade_out")
-	player.reset_y()
-	
-	var boost_timer = get_node("AutoBoost")
-	Input.action_press("boost")
-	boost_timer.start()
-	await boost_timer.timeout
-	Input.action_release("boost")
-
-
-func set_laps(lap_count):
-	time_laps_label.set_text("Laps: %s"%[lap_count])
-
-
-func is_last_stage():
-	if current_level_index == level_handler.get_levels_count()-1:
-		return true
-	else:
-		return false
+#endregion Private Methods ------------------------------------------------------------------------

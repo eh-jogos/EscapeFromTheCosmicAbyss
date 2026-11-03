@@ -1,3 +1,4 @@
+class_name Cutscene
 extends CanvasLayer
 
 signal cutscene_ended
