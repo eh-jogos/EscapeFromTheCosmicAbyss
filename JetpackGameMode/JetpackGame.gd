@@ -26,7 +26,6 @@ var speed_messager
 var ammunition
 var hud_animator
 var player
-var level_loader
 var camera
 var object_spawner
 var parallax_background
@@ -77,6 +76,7 @@ var current_state = STATE["Start"]
 @onready var game_settings = Global.get_game_mode()
 @onready var game_mode = game_settings["game mode"]
 @onready var category = game_settings["sub-mode"]
+@onready var level_handler: LevelHandler = $LevelHandler
 
 func _init():
 	Global.game = self
@@ -100,7 +100,6 @@ func _ready():
 	speed_messager = get_node("HUD/SpeedLabel")
 	hud_animator = get_node("HUD/AnimationPlayer")
 	player = get_node(path_player)
-	level_loader = get_node("LevelLoader")
 	camera = get_node(path_camera)
 	object_spawner = get_node("RawLayer/WorldVieport/SubViewport/Obstaculos/ObstacleSpawner")
 	parallax_background = get_node("RawLayer/WorldVieport/SubViewport/ParallaxBackground")
@@ -246,7 +245,7 @@ func setup_game_mode_level():
 		print("JetpackGame.gd | current level: %s"%current_level_index)
 		if not valid_level_choice(current_level_index):
 			print("ERROR | LEVEL OUT OF RANGE")
-			current_level_index = level_loader.get_max_levels()-1
+			current_level_index = level_handler.get_levels_count()-1
 		
 		current_level = load_level(current_level_index)
 	elif game_mode == "arcade":
@@ -257,7 +256,7 @@ func setup_game_mode_level():
 		current_level.title = "Gotta Go Fast!"
 
 func valid_level_choice(level_to_check):
-	return level_to_check < level_loader.get_max_levels()
+	return level_to_check < level_handler.get_levels_count()
 
 
 func reset_background_bosses_list():
@@ -270,7 +269,7 @@ func restart_background_bosses_count():
 
 
 func load_level(level_choice, load_all = false, loop = false):
-	var level: Level = level_loader.load_level(level_choice, load_all, loop)
+	var level: Level = level_handler.load_level(level_choice, load_all, loop)
 	object_spawner.set_level(level)
 	
 	reset_background_bosses_list()
@@ -447,7 +446,7 @@ func set_laps(lap_count):
 
 
 func is_last_stage():
-	if current_level_index == level_loader.get_max_levels()-1:
+	if current_level_index == level_handler.get_levels_count()-1:
 		return true
 	else:
 		return false

@@ -150,7 +150,7 @@ func open(level_number: int, level_name: String):
 		print_decimal(upgrade_points, label_upgrade)
 		notification_circle.set_notification_points(upgrade_points)
 		
-		var last_level = game.level_loader.get_max_levels()-1
+		var last_level = game.level_handler.get_levels_count()-1
 		var current_level = Global.savedata["story"]["current level"]
 		var unlocked_levels = Global.savedata["story"]["levels unlocked"]
 		
