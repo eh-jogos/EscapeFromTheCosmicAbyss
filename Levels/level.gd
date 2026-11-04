@@ -124,6 +124,7 @@ func _build_level_procedurally() -> void:
 	var half_obstacles_pool: Dictionary = _level_data.half_beats.duplicate()
 	_add_laser_eyes_to(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	_add_tentacle_barriers_to(complete_level, beat_obstacles_pool, half_obstacles_pool)
+	_add_shield_ups_to(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	_add_standard_obstacles_to(complete_level, beat_obstacles_pool, half_obstacles_pool)
 	_fill_empty_beats_on_free_slots(complete_level)
 	
@@ -202,6 +203,26 @@ func _fill_empty_beats_on_free_slots(level_array: Array[int]) -> void:
 			level_array[index] = 0
 
 
+func _add_obstacle_to(
+		level_array: Array[int], 
+		draw_callable: Callable,
+		obstacle_name: String, 
+		obstacle_fallback: String, 
+		beats_pool: Dictionary, 
+		half_beats_pool: Dictionary
+) -> void:
+	if beats_pool[obstacle_name] == 0 and half_beats_pool[obstacle_name] == 0:
+		return
+	
+	var offset := 0
+	for pool: Dictionary in [beats_pool, half_beats_pool]:
+		if pool[obstacle_name] > 0:
+			draw_callable.call(level_array, pool, offset)
+			if pool[obstacle_name] > 0:
+				_replace_remaining_obstacle_by(pool, obstacle_name, obstacle_fallback)
+		offset += 1
+
+
 func _replace_remaining_obstacle_by(
 		obstacle_pool: Dictionary, to_remove: String, to_add: String
 ) -> void:
@@ -251,18 +272,9 @@ func _add_fixed_section(target_array: Array, fixed_section: Array, starting_pos:
 func _add_laser_eyes_to(
 		level_array: Array[int], beats_pool: Dictionary, half_beats_pool: Dictionary
 ) -> void:
-	if beats_pool.laser_eye == 0 and half_beats_pool.laser_eye == 0:
-		return
-	
-	if beats_pool.laser_eye > 0:
-		_draw_laser_eye(level_array, beats_pool, 0)
-		if beats_pool.laser_eye > 0:
-			_replace_remaining_obstacle_by(beats_pool, "laser_eye", "double_tentacle")
-	
-	if half_beats_pool.laser_eye > 0:
-		_draw_laser_eye(level_array, half_beats_pool, 1)
-		if half_beats_pool.laser_eye > 0:
-			_replace_remaining_obstacle_by(half_beats_pool, "laser_eye", "double_tentacle")
+	var obstacle := LevelData.get_snake_case_obstacle(LevelData.ObstacleTypes.LASER_EYE)
+	var fallback := LevelData.get_snake_case_obstacle(LevelData.ObstacleTypes.DOUBLE_TENTACLE)
+	_add_obstacle_to(level_array, _draw_laser_eye, obstacle, fallback, beats_pool, half_beats_pool)
 
 
 func _draw_laser_eye(level_array: Array, obstacle_pool: Dictionary, initial_slot: int) -> void:
@@ -323,18 +335,11 @@ func _get_available_slots_after_first_boss_appears(level_array: Array[int]):
 func _add_tentacle_barriers_to(
 		level_array: Array[int], beats_pool: Dictionary, half_beats_pool: Dictionary
 ) -> void:
-	if beats_pool.wall_tentacle == 0 and half_beats_pool.wall_tentacle == 0:
-		return
-	
-	if beats_pool.wall_tentacle > 0:
-		_draw_wall_tentacles(level_array, beats_pool, 0)
-		if beats_pool.wall_tentacle > 0:
-			_replace_remaining_obstacle_by(beats_pool, "wall_tentacle", "tentacles")
-	
-	if half_beats_pool.wall_tentacle > 0:
-		_draw_wall_tentacles(level_array, half_beats_pool, 1)
-		if half_beats_pool.wall_tentacle > 0:	
-			_replace_remaining_obstacle_by(beats_pool, "wall_tentacle", "tentacles")
+	var obstacle := LevelData.get_snake_case_obstacle(LevelData.ObstacleTypes.WALL_TENTACLE)
+	var fallback := LevelData.get_snake_case_obstacle(LevelData.ObstacleTypes.TENTACLE)
+	_add_obstacle_to(
+			level_array, _draw_wall_tentacles, obstacle, fallback, beats_pool, half_beats_pool
+	)
 
 
 func _draw_wall_tentacles(level_array: Array, obstacle_pool: Dictionary, initial_slot: int) -> void:
@@ -361,6 +366,59 @@ func _draw_wall_tentacles(level_array: Array, obstacle_pool: Dictionary, initial
 			break
 
 #endregion Tentacle Wall Handling -----------------------------------------------------------------
+
+#region Shields Up Handling -----------------------------------------------------------------------
+
+func _add_shield_ups_to(
+		level_array: Array[int], beats_pool: Dictionary, half_beats_pool: Dictionary
+) -> void:
+	var obstacle_name := LevelData.get_snake_case_obstacle(LevelData.ObstacleTypes.SHIELD_UP)
+	var fallback := LevelData.get_snake_case_obstacle(LevelData.ObstacleTypes.NONE)
+	var total_shield_ups: int = beats_pool[obstacle_name] + half_beats_pool[obstacle_name]
+	
+	# Capture any shield ups that were added in "fixed" parts like intro or boss screams
+	for obstacle: int in level_array:
+		if obstacle == LevelData.ObstacleTypes.SHIELD_UP:
+			total_shield_ups += 1
+	
+	_add_obstacle_to(
+			level_array, 
+			_draw_shield_ups.bind(total_shield_ups), 
+			obstacle_name, fallback, beats_pool, half_beats_pool
+	)
+
+
+func _draw_shield_ups(
+		level_array: Array, obstacle_pool: Dictionary, initial_slot: int, total_shield_ups: int
+) -> void:
+	const TOLERANCE_MARGIN := 1.0-0.3
+	@warning_ignore("integer_division")
+	var shield_spacing: int = roundi((level_array.size() / total_shield_ups) * TOLERANCE_MARGIN)
+	var available_slots: Array[int] = _build_available_slots_array(level_array, initial_slot)
+	
+	while obstacle_pool.shield_up > 0 and not available_slots.is_empty():
+		var random_index = randi()%available_slots.size()
+		var level_position = available_slots[random_index]
+		
+		var is_another_shield_up_close_by = false
+		var initial_pos = max(level_position - shield_spacing, 0)
+		var end_pos = min(level_position + shield_spacing, level_array.size())
+		
+		for index in range(initial_pos, end_pos):
+			if level_array[index] == LevelData.ObstacleTypes.SHIELD_UP:
+				is_another_shield_up_close_by = true
+				available_slots.remove_at(random_index)
+				continue
+		
+		if not is_another_shield_up_close_by:
+			level_array[level_position] = LevelData.ObstacleTypes.SHIELD_UP
+			obstacle_pool.shield_up -= 1
+			available_slots.remove_at(random_index)
+			for position in range(initial_pos, end_pos):
+				if available_slots.has(position):
+					available_slots.erase(position)
+
+#endregion Shields Up Handling --------------------------------------------------------------------
 
 #region Standard Obstacles Handling ---------------------------------------------------------------
 

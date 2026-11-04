@@ -142,6 +142,11 @@ func validate_level() -> void:
 func has_boss() -> bool:
 	return boss_type != BossTypes.NONE
 
+
+static func get_snake_case_obstacle(p_obstacle: ObstacleTypes) -> String:
+	var value: String = (ObstacleTypes.keys()[p_obstacle] as String).to_snake_case()
+	return value
+
 #endregion Public Methods -------------------------------------------------------------------------
 
 
