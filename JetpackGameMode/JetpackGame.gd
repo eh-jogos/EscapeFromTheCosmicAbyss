@@ -139,7 +139,7 @@ func _input(event):
 func show_pre_game():
 	print("JetpackGame.gd | Game Mode: %s | Is Retry: %s"%[game_mode, Global.is_retry])
 	
-	if force_test_mode:
+	if force_test_mode and OS.has_feature("editor"):
 		print("JetpackGame.gd | Test Mode: %s | Test Sub: %s"%[test_mode, test_level_or_points])
 		game_mode = test_mode
 		Global.savedata["state"]["game mode"] = test_mode
