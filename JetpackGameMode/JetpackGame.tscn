@@ -1195,17 +1195,22 @@ tracks/11/keys = {
 "update": 0,
 "values": [-0.1, -0.1, 2.7, -0.1]
 }
-tracks/12/type = "value"
+tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("../../../../../../Camera2D/Shaker:trauma")
+tracks/12/path = NodePath(".")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.1, 3.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0.0, 1.0, 1.2, 0.0]
+"times": PackedFloat32Array(0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1.0],
+"method": &"shake_camera"
+}, {
+"args": [1.2],
+"method": &"shake_camera"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ftv2y"]
@@ -1431,17 +1436,22 @@ tracks/11/keys = {
 "update": 1,
 "values": [Vector2(2620, 678.941)]
 }
-tracks/12/type = "value"
+tracks/12/type = "method"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("../../../../../../Camera2D/Shaker:trauma")
+tracks/12/path = NodePath(".")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 1.1, 1.4, 3.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0.0, 1.0, 1.2, 0.0]
+"times": PackedFloat32Array(1.1, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1.0],
+"method": &"shake_camera"
+}, {
+"args": [1.2],
+"method": &"shake_camera"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_svjg3"]
@@ -1486,20 +1496,20 @@ viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/P
 
 [sub_resource type="ShaderMaterial" id="29"]
 shader = ExtResource("76")
-shader_parameter/torus_thickness = 0.051
+shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0898293, 0.637114)
+shader_parameter/torus_center = Vector2(-0.331849, 0.717907)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ShaderMaterial" id="30"]
 shader = ExtResource("76")
-shader_parameter/torus_thickness = 0.051
+shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0898293, 0.637114)
+shader_parameter/torus_center = Vector2(-0.331849, 0.717907)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="31"]
@@ -1510,7 +1520,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0898293, 0.637114)
+shader_parameter/displacement_center = Vector2(-0.331849, 0.717907)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1923,54 +1933,50 @@ z_index = 1
 position = Vector2(-992, 0)
 
 [node name="Boss" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss" groups=["boss"] instance=ExtResource("26")]
-
-[node name="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss" index="0"]
-blend_times = [&"entrance", &"idle", 0.05, &"laser_charge_down", &"laser_shot_down", 0.05, &"laser_charge_up", &"laser_shot_down", 0.05, &"laser_shot_down", &"idle", 0.05, &"last_scream", &"idle", 0.05, &"scream", &"idle", 0.05, &"tired_retreat", &"base", 0.05]
+visible = false
+position = Vector2(-500, 0)
 
 [node name="Scream" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/BossSfxLibrary" index="0"]
 volume_db = -6.0
 
 [node name="BodyOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="1"]
-animation = &"scream"
 frame = 0
 
 [node name="FaceOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="2"]
-animation = &"scream"
 frame = 0
 
-[node name="EyeOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="0"]
-position = Vector2(632, 603)
-rotation = -0.0110522
+[node name="CastingParticles" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/LaserMargins" index="3"]
+emitting = false
+
+[node name="BeamParticles2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/LaserMargins" index="4"]
+emitting = false
 
 [node name="IrisOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/Eye" index="3"]
-position = Vector2(289, 20)
-rotation = 0.0383973
+position = Vector2(291, 15)
+rotation = 0.0
 
 [node name="Tongue" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="1"]
-animation = &"scream"
-frame = 2
+frame = 0
 
 [node name="Teeth" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="2"]
-position = Vector2(659.182, 836.19)
-animation = &"scream"
-frame = 2
+frame = 0
 
 [node name="Gengiva" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="3"]
-animation = &"scream"
-frame = 2
+frame = 0
 
 [node name="Body" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="4"]
-animation = &"scream"
 frame = 0
 
 [node name="MouthLines" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="5"]
-position = Vector2(672.153, 873.54)
-animation = &"scream"
+position = Vector2(658.153, 857.54)
+frame = 0
+
+[node name="Perdigotos" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="6"]
+position = Vector2(716.634, 919.854)
 frame = 0
 
 [node name="EyeLines" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="7"]
-position = Vector2(559, 487)
-animation = &"scream"
+position = Vector2(561, 489)
 frame = 0
 
 [node name="WarningCutscene" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
@@ -2049,7 +2055,9 @@ size = Vector2i(2000, 1160)
 render_target_update_mode = 4
 
 [node name="BackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport" groups=["boss"]]
-position = Vector2(-130, 490)
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(650, 540)
 script = ExtResource("30")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss"]
@@ -2139,7 +2147,8 @@ size = Vector2i(2000, 1160)
 render_target_update_mode = 4
 
 [node name="MidBackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport/BlurX/SubViewport" groups=["boss"]]
-position = Vector2(2695, 620)
+visible = false
+position = Vector2(-430, 620)
 script = ExtResource("30")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport/BlurX/SubViewport/MidBackRowBoss"]
@@ -2232,7 +2241,8 @@ size = Vector2i(2000, 1160)
 render_target_update_mode = 4
 
 [node name="MidFrontRowBoss" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport" groups=["boss"]]
-position = Vector2(-1428, 540)
+visible = false
+position = Vector2(2600, 540)
 script = ExtResource("30")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport/MidFrontRowBoss"]
@@ -2446,7 +2456,7 @@ texture = SubResource("33")
 script = ExtResource("79")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]
-position = Vector2(-121, 534.539)
+position = Vector2(-447, 602.324)
 script = ExtResource("77")
 
 [node name="DangerVignette" type="ColorRect" parent="ProcessedLayer"]
@@ -2585,8 +2595,8 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -200.0
-offset_bottom = -114.0
+offset_top = 50.0
+offset_bottom = 136.0
 size_flags_vertical = 0
 mouse_filter = 1
 theme_override_fonts/font = ExtResource("59")

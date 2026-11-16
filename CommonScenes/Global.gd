@@ -32,6 +32,8 @@ signal achievement_info_sent(title, description)
 # Camera Shake Signal
 # warning-ignore:unused_signal
 signal shake_trauma_added(trauma)
+signal continuous_shake_started(trauma)
+signal continuous_shake_ended
 
 #Boss signals
 # warning-ignore:unused_signal

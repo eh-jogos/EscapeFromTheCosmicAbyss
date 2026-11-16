@@ -1,5 +1,15 @@
 extends Node2D
 
+
+#region Member Variables and Dependencies ---------------------------------------------------------
+#--- signals --------------------------------------------------------------------------------------
+
+#--- enums ----------------------------------------------------------------------------------------
+
+#--- constants ------------------------------------------------------------------------------------
+
+#--- public variables - order: export > normal var > onready --------------------------------------
+
 var animator
 
 var count = 0
@@ -13,14 +23,22 @@ var current_animation: String = ""
 var current_danger_duration: int = -1
 var up_down_count = 0
 
+#--- private variables - order: export > normal var > onready -------------------------------------
+
 var _boss_data: BossData = null
 
+#endregion Member Variables and Dependencies ------------------------------------------------------
+
+#region Built in Engine Methods -------------------------------------------------------------------
 
 func _ready():
 	animator = get_node("AnimationPlayer")
 	up_down_count = randi()%2
 
+#endregion Built in Engine Methods ----------------------------------------------------------------
 
+
+#region Public Methods ----------------------------------------------------------------------------
 
 func set_boss_data(p_boss_data: BossData):
 	_boss_data = p_boss_data
@@ -54,6 +72,18 @@ func shake_camera(trauma: float) -> void:
 	Global.shake_trauma_added.emit(trauma)
 
 
+func start_continuous_shake(trauma: float) -> void:
+	Global.continuous_shake_started.emit(trauma)
+
+
+func end_continuous_shake() -> void:
+	Global.continuous_shake_ended.emit()
+
+#endregion Public Methods -------------------------------------------------------------------------
+
+
+#region Private Methods ---------------------------------------------------------------------------
+
 func _on_beat_spawned():
 	count += 1
 	if count == current_animation_target:
@@ -85,3 +115,5 @@ func _on_beat_spawned():
 
 func _check_scream_achievement():
 	Global.achievements_handler.increment_screams_heard()
+
+#endregion Private Methods ------------------------------------------------------------------------

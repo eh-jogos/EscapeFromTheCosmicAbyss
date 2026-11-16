@@ -56,4 +56,5 @@ func _on_ObstacleSpawner_setup_laser_eye():
 
 
 func _on_Global_shake_trauma_added(trauma: float) -> void:
-	shaker.add_trauma(trauma)
+	if shaker.decay > 0.0:
+		shaker.add_trauma(trauma)

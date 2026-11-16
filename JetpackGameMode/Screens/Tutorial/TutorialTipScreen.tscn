@@ -4705,7 +4705,7 @@ gradient = ExtResource("755")
 
 [sub_resource type="ShaderMaterial" id="82"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0132811
+shader_parameter/torus_thickness = 0.0118287
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4756,7 +4756,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="83"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0132811
+shader_parameter/torus_thickness = 0.0118287
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -4807,7 +4807,7 @@ _data = {
 
 [sub_resource type="ShaderMaterial" id="86"]
 shader = ExtResource("756")
-shader_parameter/torus_thickness = 0.0132811
+shader_parameter/torus_thickness = 0.0118287
 shader_parameter/torus_radius = 0.367
 shader_parameter/torus_center = Vector2(0.5, 0.5)
 shader_parameter/torus_resolution = Vector2(1, 1)
@@ -9265,7 +9265,6 @@ text = "0000"
 
 [node name="ShiedIcon3" parent="Tip#3/Mask/Cena2/HUD" instance=ExtResource("738")]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = 0
 offset_left = 56.0
 offset_top = 692.0
 offset_right = 101.0
