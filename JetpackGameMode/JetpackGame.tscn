@@ -1503,7 +1503,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.0292261, 0.891436)
+shader_parameter/displacement_center = Vector2(-0.0292261, 1.51707)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1917,6 +1917,8 @@ position = Vector2(-992, 0)
 
 [node name="Boss" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss" groups=["boss"] instance=ExtResource("26")]
 position = Vector2(-500, 0)
+scream_shockwave1 = ExtResource("64_c33xn")
+scream_shockwave2 = ExtResource("66_7o2yg")
 
 [node name="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss" index="0"]
 blend_times = [&"entrance", &"idle", 0.05, &"laser_charge_down", &"laser_shot_down", 0.05, &"laser_charge_up", &"laser_shot_down", 0.05, &"laser_shot_down", &"idle", 0.05, &"last_scream", &"idle", 0.05, &"scream", &"idle", 0.05, &"tired_retreat", &"base", 0.05]
@@ -1925,10 +1927,10 @@ blend_times = [&"entrance", &"idle", 0.05, &"laser_charge_down", &"laser_shot_do
 volume_db = -6.0
 
 [node name="BodyOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="1"]
-frame = 1
+frame = 0
 
 [node name="FaceOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="2"]
-frame = 1
+frame = 0
 
 [node name="CastingParticles" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/LaserMargins" index="3"]
 emitting = false
@@ -1937,23 +1939,24 @@ emitting = false
 emitting = false
 
 [node name="IrisOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/Eye" index="3"]
-position = Vector2(288.962, 19.9238)
-rotation = 0.0378123
+position = Vector2(290.615, 13.6568)
+rotation = -0.0103169
 
 [node name="Tongue" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="1"]
-frame = 1
+frame = 0
 
 [node name="Teeth" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="2"]
-frame = 1
+frame = 0
 
 [node name="Gengiva" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="3"]
-frame = 1
+frame = 0
 
 [node name="Body" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="4"]
-frame = 1
+frame = 0
 
 [node name="MouthLines" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="5"]
-frame = 1
+position = Vector2(658.153, 857.54)
+frame = 0
 
 [node name="Perdigotos" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="6"]
 position = Vector2(716.634, 919.854)
@@ -1961,7 +1964,8 @@ animation = &"default"
 frame = 0
 
 [node name="EyeLines" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="7"]
-frame = 1
+position = Vector2(561, 489)
+frame = 0
 
 [node name="WarningCutscene" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
 z_index = 2

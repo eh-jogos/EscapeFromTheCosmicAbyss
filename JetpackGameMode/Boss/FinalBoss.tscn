@@ -1,9 +1,11 @@
-[gd_scene load_steps=224 format=3 uid="uid://cft781k1bnot0"]
+[gd_scene load_steps=226 format=3 uid="uid://cft781k1bnot0"]
 
 [ext_resource type="Script" uid="uid://bcruwj1fr4uau" path="res://JetpackGameMode/Boss/Boss.gd" id="1"]
 [ext_resource type="Script" uid="uid://cu6kadyyrmfun" path="res://CommonScenes/SoundManager/SfxPlayer.gd" id="2"]
+[ext_resource type="Material" uid="uid://b6aso12t3r51c" path="res://JetpackGameMode/vfx/scream_shockwave1.tres" id="2_ecec5"]
 [ext_resource type="AnimationLibrary" uid="uid://bl67t87a1r7qx" path="res://JetpackGameMode/Boss/final_boss/animations/final_boss_library.tres" id="2_hcioa"]
 [ext_resource type="Script" uid="uid://cgujawi2t2rs1" path="res://JetpackGameMode/Boss/FinalBossSkin.gd" id="3"]
+[ext_resource type="Material" uid="uid://dnylwjmd3rcjq" path="res://JetpackGameMode/vfx/scream_shockwave2.tres" id="3_jmgmr"]
 [ext_resource type="Texture2D" uid="uid://do8am82qk2m38" path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_01.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://72841po1rwq" path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_02.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://bu4mfww5neoa0" path="res://JetpackGameMode/Boss/final_boss/body_silhouette/body_silhouette_idle_03.png" id="6"]
@@ -4590,8 +4592,9 @@ scale_curve = SubResource("53")
 color_ramp = SubResource("51")
 
 [node name="Boss" type="Node2D"]
-position = Vector2(-90, 100)
 script = ExtResource("1")
+scream_shockwave1 = ExtResource("2_ecec5")
+scream_shockwave2 = ExtResource("3_jmgmr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -4613,7 +4616,7 @@ blend_times = [&"entrance", &"idle", 0.05, &"laser_charge_down", &"laser_shot_do
 
 [node name="Scream" type="AudioStreamPlayer" parent="BossSfxLibrary"]
 stream = ExtResource("171")
-volume_db = -23.0
+volume_db = -6.0
 bus = &"GameSfx"
 script = ExtResource("2")
 
@@ -4654,8 +4657,7 @@ next/to_scream = &"first_scream"
 modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 position = Vector2(0, -900)
 sprite_frames = SubResource("21")
-animation = &"scream"
-frame = 3
+animation = &"idle"
 centered = false
 script = ExtResource("30")
 
@@ -4663,16 +4665,14 @@ script = ExtResource("30")
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 position = Vector2(0, -901)
 sprite_frames = SubResource("22")
-animation = &"scream"
-frame = 3
+animation = &"idle"
 centered = false
 script = ExtResource("30")
 
 [node name="EyeOutline" type="Sprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 show_behind_parent = true
-position = Vector2(632, 603)
-rotation = -0.0110522
+position = Vector2(472.251, 741.535)
 texture = ExtResource("57")
 centered = false
 offset = Vector2(-40, -162)
@@ -4767,6 +4767,7 @@ target_position = Vector2(0, 10)
 [node name="CastingParticles" type="GPUParticles2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 modulate = Color(1.1, 1.1, 1.1, 1)
 position = Vector2(334.79, 122.898)
+emitting = false
 texture = ExtResource("173")
 lifetime = 0.5
 process_material = SubResource("30")
@@ -4774,6 +4775,7 @@ process_material = SubResource("30")
 [node name="BeamParticles2D" type="GPUParticles2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 modulate = Color(1.3, 1.3, 1.3, 1)
 position = Vector2(0, 130)
+emitting = false
 amount = 100
 texture = ExtResource("173")
 lifetime = 0.8
@@ -4827,8 +4829,8 @@ libraries = {
 
 [node name="IrisOutline" type="Sprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color(0.12549, 0.0745098, 0.180392, 1)
-position = Vector2(289, 20)
-rotation = 0.0383972
+position = Vector2(288.394, 10.0152)
+rotation = -0.0382896
 texture = ExtResource("68")
 script = ExtResource("30")
 
@@ -4847,20 +4849,16 @@ script = ExtResource("30")
 [node name="Tongue" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.780392, 0.223529, 0.211765, 1)
 show_behind_parent = true
-position = Vector2(476, 982)
+position = Vector2(473, 982)
 sprite_frames = SubResource("43")
-animation = &"scream"
-frame = 3
 centered = false
 script = ExtResource("77")
 
 [node name="Teeth" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0, 1, 0.764706, 1)
 show_behind_parent = true
-position = Vector2(659.182, 836.19)
+position = Vector2(450.182, 1088.19)
 sprite_frames = SubResource("44")
-animation = &"scream"
-frame = 3
 centered = false
 script = ExtResource("84")
 
@@ -4869,8 +4867,6 @@ self_modulate = Color(0.152941, 0.309804, 0.270588, 1)
 show_behind_parent = true
 position = Vector2(597.804, 843.095)
 sprite_frames = SubResource("45")
-animation = &"scream"
-frame = 3
 centered = false
 script = ExtResource("88")
 
@@ -4878,35 +4874,30 @@ script = ExtResource("88")
 self_modulate = Color(0.137255, 0.4, 0.364706, 1)
 position = Vector2(8, 9)
 sprite_frames = SubResource("46")
-animation = &"scream"
-frame = 3
+animation = &"idle"
 centered = false
 script = ExtResource("116")
 
 [node name="MouthLines" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
-position = Vector2(654.153, 866.54)
+position = Vector2(589.153, 1144.54)
 sprite_frames = SubResource("47")
-animation = &"scream"
-frame = 3
+animation = &"idle"
 centered = false
 script = ExtResource("30")
 
 [node name="Perdigotos" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0, 1, 0.764706, 1)
-position = Vector2(753.634, 943.854)
+position = Vector2(677, 979)
 sprite_frames = SubResource("48")
-animation = &"scream"
-frame = 3
 centered = false
 script = ExtResource("84")
 
 [node name="EyeLines" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
-position = Vector2(559, 492)
+position = Vector2(505, 602)
 sprite_frames = SubResource("49")
-animation = &"scream"
-frame = 3
+animation = &"idle"
 centered = false
 script = ExtResource("30")
 

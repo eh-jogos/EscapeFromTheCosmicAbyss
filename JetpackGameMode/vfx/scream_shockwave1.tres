@@ -3,10 +3,11 @@
 [ext_resource type="Shader" uid="uid://bguc7kp5ueekq" path="res://Shaders/donut_mask.gdshader" id="1_3hm7i"]
 
 [resource]
+resource_name = "Torus 1"
 shader = ExtResource("1_3hm7i")
 shader_parameter/torus_thickness = 0.106
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.0292261, 0.891436)
+shader_parameter/torus_center = Vector2(-0.0292261, 1.51707)
 shader_parameter/torus_resolution = Vector2(1.77778, 1)
