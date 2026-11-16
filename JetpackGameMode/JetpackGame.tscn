@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=138 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/level_handler.gd" id="2"]
@@ -65,8 +65,10 @@
 [ext_resource type="PackedScene" uid="uid://c3hqujul88nf5" path="res://JetpackGameMode/HUD/ProgressVisualization.tscn" id="62"]
 [ext_resource type="PackedScene" uid="uid://ceerfm3jbmu0d" path="res://JetpackGameMode/GameOverScreen/LevelCompleteScreen.tscn" id="63"]
 [ext_resource type="PackedScene" uid="uid://d11raokmrdi1k" path="res://JetpackGameMode/Screen_Countdown/CountdownScreen.tscn" id="64"]
+[ext_resource type="Material" uid="uid://b6aso12t3r51c" path="res://JetpackGameMode/vfx/scream_shockwave1.tres" id="64_c33xn"]
 [ext_resource type="PackedScene" uid="uid://b1agagp8llmhl" path="res://JetpackGameMode/PauseScreen/PauseScreen.tscn" id="65"]
 [ext_resource type="PackedScene" uid="uid://clm413llsf4oj" path="res://JetpackGameMode/GameOverScreen/GameOverScreen.tscn" id="66"]
+[ext_resource type="Material" uid="uid://dnylwjmd3rcjq" path="res://JetpackGameMode/vfx/scream_shockwave2.tres" id="66_7o2yg"]
 [ext_resource type="PackedScene" uid="uid://bwomdomdf8yos" path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" id="67"]
 [ext_resource type="Script" uid="uid://nby31bhb2hbr" path="res://JetpackGameMode/BG/BG_LooperH_Bg2.gd" id="68"]
 [ext_resource type="Texture2D" uid="uid://bfmqniweaaph7" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_5.png" id="69"]
@@ -76,18 +78,17 @@
 [ext_resource type="AudioStream" uid="uid://duc4j17pawg7i" path="res://CommonScenes/SoundManager/sfx/upgrade_point.wav" id="73"]
 [ext_resource type="AudioStream" uid="uid://p2c531yrarao" path="res://CommonScenes/SoundManager/sfx/speed_up_message.wav" id="74"]
 [ext_resource type="Shader" uid="uid://cnjbisruchh28" path="res://Shaders/shockwave.gdshader" id="75"]
-[ext_resource type="Shader" uid="uid://bguc7kp5ueekq" path="res://Shaders/donut_mask.gdshader" id="76"]
-[ext_resource type="Script" uid="uid://b3nltaa3yf4ix" path="res://JetpackGameMode/ShockwaveGuide.gd" id="77"]
-[ext_resource type="Script" uid="uid://qalx30a3b6cy" path="res://JetpackGameMode/TorusMask.gd" id="78"]
-[ext_resource type="Script" uid="uid://85ikx1xv0l8b" path="res://JetpackGameMode/PostProcessedGame.gd" id="79"]
+[ext_resource type="Script" uid="uid://b3nltaa3yf4ix" path="res://JetpackGameMode/vfx/ShockwaveGuide.gd" id="77"]
+[ext_resource type="Script" uid="uid://qalx30a3b6cy" path="res://JetpackGameMode/vfx/TorusMask.gd" id="78"]
+[ext_resource type="Script" uid="uid://85ikx1xv0l8b" path="res://JetpackGameMode/vfx/PostProcessedGame.gd" id="79"]
 [ext_resource type="Texture2D" uid="uid://ceiebohc0di86" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_lava.png" id="80"]
 [ext_resource type="Texture2D" uid="uid://v12jo02ha8e0" path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_lava.png" id="81"]
 [ext_resource type="Shader" uid="uid://shbux3k33p5o" path="res://Shaders/gaussian_blur_gles3.gdshader" id="82"]
-[ext_resource type="Script" uid="uid://fh6ky34u22lx" path="res://JetpackGameMode/BlurViewport.gd" id="83"]
-[ext_resource type="Script" uid="uid://cackjwswsmekf" path="res://JetpackGameMode/BlurAnimator.gd" id="84"]
+[ext_resource type="Script" uid="uid://fh6ky34u22lx" path="res://JetpackGameMode/vfx/BlurViewport.gd" id="83"]
+[ext_resource type="Script" uid="uid://cackjwswsmekf" path="res://JetpackGameMode/vfx/BlurAnimator.gd" id="84"]
 [ext_resource type="Shader" uid="uid://cqjmu82kqdb3d" path="res://Shaders/transition.gdshader" id="85"]
 [ext_resource type="Texture2D" uid="uid://cya8twlusrqr1" path="res://JetpackGameMode/Obstacles/Fx/danger_vignette.png" id="86"]
-[ext_resource type="Script" uid="uid://dk6ntox0mr7y6" path="res://JetpackGameMode/DangerVignette.gd" id="87"]
+[ext_resource type="Script" uid="uid://dk6ntox0mr7y6" path="res://JetpackGameMode/vfx/DangerVignette.gd" id="87"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(20, 1258.71)
@@ -1494,24 +1495,6 @@ shader_parameter/blur_scale = Vector2(0, 0)
 [sub_resource type="ViewportTexture" id="28"]
 viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport")
 
-[sub_resource type="ShaderMaterial" id="29"]
-shader = ExtResource("76")
-shader_parameter/torus_thickness = 0.106
-shader_parameter/torus_hardness = 1.645
-shader_parameter/torus_radius = -0.1
-shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.331849, 0.717907)
-shader_parameter/torus_resolution = Vector2(1.77778, 1)
-
-[sub_resource type="ShaderMaterial" id="30"]
-shader = ExtResource("76")
-shader_parameter/torus_thickness = 0.106
-shader_parameter/torus_hardness = 1.645
-shader_parameter/torus_radius = -0.1
-shader_parameter/torus_invert = -1.0
-shader_parameter/torus_center = Vector2(-0.331849, 0.717907)
-shader_parameter/torus_resolution = Vector2(1.77778, 1)
-
 [sub_resource type="ViewportTexture" id="31"]
 viewport_path = NodePath("RawLayer/MaskViewport/SubViewport")
 
@@ -1520,7 +1503,7 @@ resource_local_to_scene = true
 shader = ExtResource("75")
 shader_parameter/displacement_texture = SubResource("31")
 shader_parameter/displacement_amount = 0.09581
-shader_parameter/displacement_center = Vector2(-0.331849, 0.717907)
+shader_parameter/displacement_center = Vector2(-0.0292261, 0.891436)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
@@ -1933,17 +1916,19 @@ z_index = 1
 position = Vector2(-992, 0)
 
 [node name="Boss" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss" groups=["boss"] instance=ExtResource("26")]
-visible = false
 position = Vector2(-500, 0)
+
+[node name="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss" index="0"]
+blend_times = [&"entrance", &"idle", 0.05, &"laser_charge_down", &"laser_shot_down", 0.05, &"laser_charge_up", &"laser_shot_down", 0.05, &"laser_shot_down", &"idle", 0.05, &"last_scream", &"idle", 0.05, &"scream", &"idle", 0.05, &"tired_retreat", &"base", 0.05]
 
 [node name="Scream" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/BossSfxLibrary" index="0"]
 volume_db = -6.0
 
 [node name="BodyOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="1"]
-frame = 0
+frame = 1
 
 [node name="FaceOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin" index="2"]
-frame = 0
+frame = 1
 
 [node name="CastingParticles" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/LaserMargins" index="3"]
 emitting = false
@@ -1952,32 +1937,31 @@ emitting = false
 emitting = false
 
 [node name="IrisOutline" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline/EyeOutline/Eye" index="3"]
-position = Vector2(291, 15)
-rotation = 0.0
+position = Vector2(288.962, 19.9238)
+rotation = 0.0378123
 
 [node name="Tongue" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="1"]
-frame = 0
+frame = 1
 
 [node name="Teeth" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="2"]
-frame = 0
+frame = 1
 
 [node name="Gengiva" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="3"]
-frame = 0
+frame = 1
 
 [node name="Body" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="4"]
-frame = 0
+frame = 1
 
 [node name="MouthLines" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="5"]
-position = Vector2(658.153, 857.54)
-frame = 0
+frame = 1
 
 [node name="Perdigotos" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="6"]
 position = Vector2(716.634, 919.854)
+animation = &"default"
 frame = 0
 
 [node name="EyeLines" parent="RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss/FinalBossSkin/FaceOutline" index="7"]
-position = Vector2(561, 489)
-frame = 0
+frame = 1
 
 [node name="WarningCutscene" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D"]
 z_index = 2
@@ -2424,7 +2408,7 @@ offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
 [node name="TorusMask" type="ColorRect" parent="RawLayer/MaskViewport/SubViewport"]
-material = SubResource("29")
+material = ExtResource("64_c33xn")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2433,7 +2417,7 @@ offset_bottom = 40.0
 script = ExtResource("78")
 
 [node name="TorusMask2" type="ColorRect" parent="RawLayer/MaskViewport/SubViewport"]
-material = SubResource("30")
+material = ExtResource("66_7o2yg")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -2456,7 +2440,7 @@ texture = SubResource("33")
 script = ExtResource("79")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]
-position = Vector2(-447, 602.324)
+position = Vector2(-37.7893, 747.915)
 script = ExtResource("77")
 
 [node name="DangerVignette" type="ColorRect" parent="ProcessedLayer"]

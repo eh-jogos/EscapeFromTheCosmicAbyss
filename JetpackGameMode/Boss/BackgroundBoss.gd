@@ -25,6 +25,9 @@ var up_down_count = 0
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
+@export var scream_shockwave1: ShaderMaterial = null
+@export var scream_shockwave2: ShaderMaterial = null
+
 var _boss_data: BossData = null
 
 #endregion Member Variables and Dependencies ------------------------------------------------------

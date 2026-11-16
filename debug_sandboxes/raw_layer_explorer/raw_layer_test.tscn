@@ -7,12 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://ipda1fmursl6" path="res://Cutscenes/pngs/IngameCutscene/monster.png" id="4_8cvsw"]
 [ext_resource type="Texture2D" uid="uid://c2qvo1ivscuo4" path="res://Cutscenes/pngs/IngameCutscene/a5tr0.png" id="5_g6c5x"]
 [ext_resource type="Script" uid="uid://duwvct61jl07q" path="res://JetpackGameMode/Boss/ParallaxBackground.gd" id="6_y5rkv"]
-[ext_resource type="Script" uid="uid://cackjwswsmekf" path="res://JetpackGameMode/BlurAnimator.gd" id="7_ohyqe"]
+[ext_resource type="Script" uid="uid://cackjwswsmekf" path="res://JetpackGameMode/vfx/BlurAnimator.gd" id="7_ohyqe"]
 [ext_resource type="Shader" uid="uid://shbux3k33p5o" path="res://Shaders/gaussian_blur_gles3.gdshader" id="8_fja3s"]
-[ext_resource type="Script" uid="uid://fh6ky34u22lx" path="res://JetpackGameMode/BlurViewport.gd" id="9_uv46y"]
+[ext_resource type="Script" uid="uid://fh6ky34u22lx" path="res://JetpackGameMode/vfx/BlurViewport.gd" id="9_uv46y"]
 [ext_resource type="Script" uid="uid://bgdco4awc5qja" path="res://JetpackGameMode/Boss/BackgroundBoss.gd" id="10_1kpaw"]
 [ext_resource type="AudioStream" uid="uid://c1mfsmcs15r6d" path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" id="11_34lfk"]
-[ext_resource type="PackedScene" path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" id="12_yuvjo"]
+[ext_resource type="PackedScene" uid="uid://hfonf8i405ih" path="res://JetpackGameMode/Boss/bg3_boss/BackRowBossSkin.tscn" id="12_yuvjo"]
 [ext_resource type="Texture2D" uid="uid://cnf7bygcju4oo" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_0.png" id="13_vcnj6"]
 [ext_resource type="Texture2D" uid="uid://p0yugpmk6o0x" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" id="14_m20ub"]
 [ext_resource type="Texture2D" uid="uid://c8x21l4a5vboh" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" id="15_4vgac"]
@@ -49,7 +49,8 @@
 [ext_resource type="PackedScene" uid="uid://b3qnrrqypfnj7" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimitsOutlines.tscn" id="46_qpil8"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Obstacles/ScreenLimits/ScreenLimits.tscn" id="47_cat4x"]
 [ext_resource type="Shader" uid="uid://bguc7kp5ueekq" path="res://Shaders/donut_mask.gdshader" id="48_cggs8"]
-[ext_resource type="Script" uid="uid://qalx30a3b6cy" path="res://JetpackGameMode/TorusMask.gd" id="49_rfct6"]
+[ext_resource type="Script" uid="uid://qalx30a3b6cy" path="res://JetpackGameMode/vfx/TorusMask.gd" id="49_rfct6"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5x1ax"]
 size = Vector2(20, 1258.71)

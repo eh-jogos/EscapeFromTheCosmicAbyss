@@ -1,0 +1,7 @@
+[gd_resource type="World" load_steps=2 format=2]
+
+[ext_resource type="Environment" path="res://JetpackGameMode/vfx/JetpackGameEnvironment.tres" id="1"]
+
+
+[resource]
+environment = ExtResource( 1 )
