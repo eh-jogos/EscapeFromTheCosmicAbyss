@@ -39,7 +39,8 @@ func set_laser_strength(duration):
 func _physics_process(_delta):
 	for raycast in raycasts:
 		if raycast.is_colliding():
-			var collider: EnemyObstacle = raycast.get_collider()
+			var collider = raycast.get_collider()
+			assert(collider is EnemyObstacle, "Collider is not EnemyObstacle? %s"%[collider])
 			#print(collider.get_name())
 			if collider != null:
 				#print("Bullet HIT")
