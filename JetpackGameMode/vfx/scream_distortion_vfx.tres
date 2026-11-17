@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://c0fvk5ysbb0l"]
+
+[ext_resource type="Shader" uid="uid://cnjbisruchh28" path="res://Shaders/shockwave.gdshader" id="1_bmgnm"]
+
+[sub_resource type="ViewportTexture" id="31"]
+viewport_path = NodePath("RawLayer/MaskViewport/SubViewport")
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_bmgnm")
+shader_parameter/displacement_texture = SubResource("31")
+shader_parameter/displacement_amount = 0.09581
+shader_parameter/displacement_center = Vector2(-0.0292261, 0.891436)
+shader_parameter/screen_resolution = Vector2(1.77778, 1)

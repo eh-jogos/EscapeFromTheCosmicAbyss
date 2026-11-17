@@ -1,4 +1,4 @@
-[gd_scene load_steps=226 format=3 uid="uid://cft781k1bnot0"]
+[gd_scene load_steps=228 format=3 uid="uid://cft781k1bnot0"]
 
 [ext_resource type="Script" uid="uid://bcruwj1fr4uau" path="res://JetpackGameMode/Boss/Boss.gd" id="1"]
 [ext_resource type="Script" uid="uid://cu6kadyyrmfun" path="res://CommonScenes/SoundManager/SfxPlayer.gd" id="2"]
@@ -175,6 +175,8 @@
 [ext_resource type="AudioStream" uid="uid://c1det11u5xoun" path="res://CommonScenes/SoundManager/sfx/enemy_laser_charging.wav" id="170"]
 [ext_resource type="AudioStream" uid="uid://c1mfsmcs15r6d" path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" id="171"]
 [ext_resource type="Texture2D" uid="uid://d4kdt0lcb18gm" path="res://JetpackGameMode/Obstacles/Fx/white_glowing_diamond.png" id="173"]
+[ext_resource type="Script" uid="uid://cn8sjtltin80s" path="res://JetpackGameMode/Boss/shockwave_origin_helper.gd" id="176_jmgmr"]
+[ext_resource type="Material" uid="uid://c0fvk5ysbb0l" path="res://JetpackGameMode/vfx/scream_distortion_vfx.tres" id="177_3df5n"]
 
 [sub_resource type="Animation" id="10"]
 length = 0.24
@@ -4657,7 +4659,7 @@ next/to_scream = &"first_scream"
 modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 position = Vector2(0, -900)
 sprite_frames = SubResource("21")
-animation = &"idle"
+animation = &"scream"
 centered = false
 script = ExtResource("30")
 
@@ -4665,14 +4667,15 @@ script = ExtResource("30")
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 position = Vector2(0, -901)
 sprite_frames = SubResource("22")
-animation = &"idle"
+animation = &"scream"
 centered = false
 script = ExtResource("30")
 
 [node name="EyeOutline" type="Sprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 show_behind_parent = true
-position = Vector2(472.251, 741.535)
+position = Vector2(632, 603)
+rotation = -0.0110522
 texture = ExtResource("57")
 centered = false
 offset = Vector2(-40, -162)
@@ -4829,8 +4832,7 @@ libraries = {
 
 [node name="IrisOutline" type="Sprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color(0.12549, 0.0745098, 0.180392, 1)
-position = Vector2(288.394, 10.0152)
-rotation = -0.0382896
+position = Vector2(291, 15)
 texture = ExtResource("68")
 script = ExtResource("30")
 
@@ -4849,16 +4851,18 @@ script = ExtResource("30")
 [node name="Tongue" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.780392, 0.223529, 0.211765, 1)
 show_behind_parent = true
-position = Vector2(473, 982)
+position = Vector2(476, 982)
 sprite_frames = SubResource("43")
+animation = &"scream"
 centered = false
 script = ExtResource("77")
 
 [node name="Teeth" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0, 1, 0.764706, 1)
 show_behind_parent = true
-position = Vector2(450.182, 1088.19)
+position = Vector2(659.182, 836.19)
 sprite_frames = SubResource("44")
+animation = &"scream"
 centered = false
 script = ExtResource("84")
 
@@ -4867,6 +4871,7 @@ self_modulate = Color(0.152941, 0.309804, 0.270588, 1)
 show_behind_parent = true
 position = Vector2(597.804, 843.095)
 sprite_frames = SubResource("45")
+animation = &"scream"
 centered = false
 script = ExtResource("88")
 
@@ -4874,30 +4879,31 @@ script = ExtResource("88")
 self_modulate = Color(0.137255, 0.4, 0.364706, 1)
 position = Vector2(8, 9)
 sprite_frames = SubResource("46")
-animation = &"idle"
+animation = &"scream"
 centered = false
 script = ExtResource("116")
 
 [node name="MouthLines" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
-position = Vector2(589.153, 1144.54)
+position = Vector2(658.153, 857.54)
 sprite_frames = SubResource("47")
-animation = &"idle"
+animation = &"scream"
 centered = false
 script = ExtResource("30")
 
 [node name="Perdigotos" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0, 1, 0.764706, 1)
-position = Vector2(677, 979)
+position = Vector2(716.634, 919.854)
 sprite_frames = SubResource("48")
+animation = &"scream"
 centered = false
 script = ExtResource("84")
 
 [node name="EyeLines" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
-position = Vector2(505, 602)
+position = Vector2(561, 489)
 sprite_frames = SubResource("49")
-animation = &"idle"
+animation = &"scream"
 centered = false
 script = ExtResource("30")
 
@@ -4909,5 +4915,14 @@ emitting = false
 amount = 16
 texture = ExtResource("173")
 process_material = SubResource("54")
+
+[node name="ShockwaveOrigin" type="Marker2D" parent="FinalBossSkin"]
+position = Vector2(656, 260)
+script = ExtResource("176_jmgmr")
+wave1_radius = null
+wave2_radius = null
+_shockwave1 = ExtResource("2_ecec5")
+_shockwave2 = ExtResource("3_jmgmr")
+_displacement_vfx = ExtResource("177_3df5n")
 
 [connection signal="timeout" from="CollisionTimer" to="." method="_on_CollisionTimer_timeout"]

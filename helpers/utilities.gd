@@ -13,4 +13,8 @@ static func sum_array(p_total: int, p_current: int) -> int:
 static func capitalize_array(p_element: String) -> String:
 	return p_element.capitalize()
 
+
+static func is_not_null(p_element: Variant) -> bool:
+	return p_element != null
+
 #endregion Array Helpers --------------------------------------------------------------------------
