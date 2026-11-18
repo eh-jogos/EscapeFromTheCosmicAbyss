@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://nh22g071h6fv" path="res://debug_sandboxes/screen_coordinates_test.gd" id="1_j44se"]
 [ext_resource type="Texture2D" uid="uid://l1gtfa7owlqt" path="res://CommonScenes/UpgradeMenu/sprites/astronaut_diagram2.png" id="2_arxkj"]
 
-[node name="Node2D" type="Node2D" node_paths=PackedStringArray("label")]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("label", "sprite")]
+position = Vector2(-500, 0)
 script = ExtResource("1_j44se")
 label = NodePath("HUD/Control/Label")
+sprite = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2000, 550)
@@ -24,5 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="HUD/Control"]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 24

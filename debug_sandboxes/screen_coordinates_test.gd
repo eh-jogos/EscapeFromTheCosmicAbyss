@@ -1,11 +1,11 @@
 extends Node2D
 
 @export var label: Label = null
-
+@export var sprite: Sprite2D = null
 
 func _process(_delta: float) -> void:
 	var msg := ""
-	var mouse_position: Vector2 = get_local_mouse_position()
+	var mouse_position: Vector2 = sprite.position
 	msg += "Mouse Position: %s \n"%[mouse_position]
 	
 	var screen_size: Vector2 = get_viewport_rect().size

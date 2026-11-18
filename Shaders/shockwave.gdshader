@@ -9,12 +9,12 @@ void fragment(){
 	float mask = texture(displacement_texture, UV).r;
 	vec2 direction_from_center = (UV - displacement_center) * screen_resolution;
 	vec2 screen_quadrants = sign(direction_from_center);
-	
+
 	float total_displacement = mask * displacement_amount;
 	vec2 displaced_uv = vec2(UV.x + total_displacement * screen_quadrants.x, UV.y + total_displacement * screen_quadrants.y);
 	//vec2 displaced_uv = vec2(UV.x + total_displacement, UV.y + total_displacement);
-	
+
 	vec4 distored_color = texture(TEXTURE, displaced_uv);
-	
+
 	COLOR = distored_color;
 }

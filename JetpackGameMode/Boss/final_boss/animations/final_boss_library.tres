@@ -6,6 +6,33 @@
 [ext_resource type="Animation" uid="uid://csbdlkdw184mr" path="res://JetpackGameMode/Boss/final_boss/animations/Boss_last_scream.tres" id="4_ac6mq"]
 [ext_resource type="Animation" uid="uid://bon1rhy10w85a" path="res://JetpackGameMode/Boss/final_boss/animations/Boss_scream.tres" id="5_wfdjn"]
 
+[sub_resource type="Animation" id="Animation_lt2x6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FinalBossSkin/ShockwaveOrigin:wave2_radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.83]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FinalBossSkin/ShockwaveOrigin:wave1_radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.83]
+}
+
 [sub_resource type="Animation" id="1"]
 resource_name = "base"
 length = 0.01
@@ -1125,9 +1152,6 @@ tracks/13/keys = {
 "update": 1,
 "values": [false]
 }
-
-[sub_resource type="Animation" id="Animation_lt2x6"]
-length = 0.001
 
 [resource]
 _data = {

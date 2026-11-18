@@ -1,11 +1,25 @@
 extends "res://JetpackGameMode/Boss/BackgroundBoss.gd"
 
+#region Member Variables and Dependencies ---------------------------------------------------------
+#--- signals --------------------------------------------------------------------------------------
+
+#--- enums ----------------------------------------------------------------------------------------
+
+#--- constants ------------------------------------------------------------------------------------
+
+#--- public variables - order: export > normal var > onready --------------------------------------
+
 var has_killed_player = false
 var raycasts
 
 var game
 var collision_timer
 
+#--- private variables - order: export > normal var > onready -------------------------------------
+
+#endregion Member Variables and Dependencies ------------------------------------------------------
+
+#region Built in Engine Methods -------------------------------------------------------------------
 
 func _ready():
 	super()
@@ -16,6 +30,9 @@ func _ready():
 	animator.play("base")
 	animator.seek(0, true)
 	set_physics_process(true)
+	
+	if get_tree().current_scene == self:
+		animator.play("entrance")
 
 
 func _physics_process(_delta):
@@ -23,6 +40,10 @@ func _physics_process(_delta):
 		if raycast.is_colliding():
 			handle_collision(raycast)
 
+#endregion Built in Engine Methods ----------------------------------------------------------------
+
+
+#region Public Methods ----------------------------------------------------------------------------
 
 func increment_laser_count() -> void:
 	Global.achievements_handler.current_lasers +=1
@@ -47,6 +68,9 @@ func kill_player(_player_global_position):
 	#at the end of that animation, either from a signal or by calling it directly, call _on_player_killed
 	_on_player_killed()
 
+#endregion Public Methods -------------------------------------------------------------------------
+
+#region Private Methods ---------------------------------------------------------------------------
 
 func _on_player_killed():
 	if not has_killed_player:
@@ -55,3 +79,5 @@ func _on_player_killed():
 
 func _on_CollisionTimer_timeout():
 	set_physics_process(true)
+
+#endregion Private Methods ------------------------------------------------------------------------

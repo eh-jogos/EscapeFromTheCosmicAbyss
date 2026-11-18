@@ -39,7 +39,7 @@ const PARAM_RADIUS = "torus_radius"
 		if Engine.is_editor_hint():
 			queue_redraw()
 		elif is_inside_tree() and _shockwave2 != null:
-			_shockwave2.set_shader_parameter(PARAM_RADIUS, wave1_radius)
+			_shockwave2.set_shader_parameter(PARAM_RADIUS, wave2_radius)
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
@@ -112,7 +112,7 @@ func _draw():
 #region Private Methods ---------------------------------------------------------------------------
 
 func _get_screen_relative_position() -> Vector2:
-	var screen_position := get_global_transform_with_canvas() * position
+	var screen_position := get_global_transform_with_canvas().origin
 	var value := screen_position / get_viewport_rect().size
 	return value
 
