@@ -3,13 +3,13 @@
 [resource]
 resource_name = "scream"
 length = 4.0
-step = 0.08
+step = 0.01
 capture_included = true
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
+tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.32, 0.8, 3.6, 4),
@@ -116,38 +116,38 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/9/path = NodePath("FinalBossSkin/ShockwaveOrigin:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0, 0.32, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(274.686, 678.941), Vector2(274.686, 678.941), Vector2(241.388, 747.915)]
+"values": [Vector2(693, 165), Vector2(693, 165), Vector2(913, 118)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath(".:scream_shockwave1:shader_parameter/torus_radius")
+tracks/10/path = NodePath("FinalBossSkin/ShockwaveOrigin:wave1_radius")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.32, 1.12, 1.2, 2, 2.08, 2.88),
-"transitions": PackedFloat32Array(1, 0.5, 0, 0.5, 0, 0.5, 0),
+"times": PackedFloat32Array(0, 0.32, 1.12, 1.2, 2, 2.08, 2.88, 2.96),
+"transitions": PackedFloat32Array(1, 0.5, 0, 0.5, 0, 0.5, 0, 0),
 "update": 0,
-"values": [-0.1, -0.1, 1.83, -0.1, 1.83, -0.1, 1.83]
+"values": [-0.1, -0.1, 1.83, -0.1, 1.83, -0.1, 1.83, -0.1]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath(".:scream_shockwave2:shader_parameter/torus_radius")
+tracks/11/path = NodePath("FinalBossSkin/ShockwaveOrigin:wave2_radius")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.72, 1.52, 1.6, 2.4),
-"transitions": PackedFloat32Array(1, 0.5, 0, 0.5, 0),
+"times": PackedFloat32Array(0, 0.72, 1.52, 1.6, 2.4, 2.48),
+"transitions": PackedFloat32Array(1, 0.5, 0, 0.5, 0, 0),
 "update": 0,
-"values": [-0.1, -0.1, 1.83, -0.1, 1.83]
+"values": [-0.1, -0.1, 1.83, -0.1, 1.83, -0.1]
 }
 tracks/12/type = "method"
 tracks/12/imported = false
@@ -173,5 +173,22 @@ tracks/12/keys = {
 }, {
 "args": [0.8],
 "method": &"shake_camera"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("FinalBossSkin/ShockwaveOrigin")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"set_process"
+}, {
+"args": [false],
+"method": &"set_process"
 }]
 }
