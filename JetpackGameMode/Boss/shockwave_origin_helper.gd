@@ -82,6 +82,7 @@ func _process(_delta: float) -> void:
 func _draw():
 	const TORUS_THICKNESS_PREVIEW := 200.0
 	if Engine.is_editor_hint():
+		draw_circle(Vector2.ZERO, 15.0, Color.WHITE)
 		var viewport_size := get_viewport_rect().size
 		if wave1_radius > 0.0:
 			draw_circle(

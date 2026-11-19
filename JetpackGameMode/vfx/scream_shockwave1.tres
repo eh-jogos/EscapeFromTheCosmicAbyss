@@ -5,7 +5,7 @@
 [resource]
 resource_name = "Torus 1"
 shader = ExtResource("1_3hm7i")
-shader_parameter/torus_thickness = 0.106
+shader_parameter/torus_thickness = 0.051
 shader_parameter/torus_hardness = 1.645
 shader_parameter/torus_radius = -0.1
 shader_parameter/torus_invert = -1.0
