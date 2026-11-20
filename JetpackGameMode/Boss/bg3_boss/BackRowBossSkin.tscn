@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://hfonf8i405ih"]
+[gd_scene load_steps=12 format=3 uid="uid://hfonf8i405ih"]
 
 [ext_resource type="AnimationLibrary" uid="uid://v5oll835vxvt" path="res://JetpackGameMode/Boss/bg3_boss/backrow_boss_skin_anim_library.tres" id="1_qke76"]
+[ext_resource type="Script" uid="uid://76ctvigktfv6" path="res://JetpackGameMode/Boss/bg3_boss/mid_boss_skin.gd" id="2_les4a"]
 [ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/eye_shape_sprite_frames.tres" id="2_uk77l"]
 [ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/iris_sprite_frames.tres" id="4_les4a"]
 [ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/mouth_shape_spirite_frames.tres" id="6_t4x8w"]
@@ -11,8 +12,10 @@
 [ext_resource type="Script" uid="uid://c6c8neemyhxvs" path="res://JetpackGameMode/Boss/bg3_boss/BgBossMouthColor.gd" id="75"]
 [ext_resource type="Script" uid="uid://iy7fvjasvy7t" path="res://JetpackGameMode/Boss/bg3_boss/BgBossTeethColor.gd" id="100"]
 
-
-[node name="BackRowBossSkin" type="Node2D"]
+[node name="BackRowBossSkin" type="Node2D" node_paths=PackedStringArray("_animator")]
+script = ExtResource("2_les4a")
+_animator = NodePath("AnimationPlayer")
+current_animation = "RESET"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -27,16 +30,14 @@ next/to_scream = &"first_scream"
 [node name="EyeShape" type="AnimatedSprite2D" parent="Eye"]
 self_modulate = Color(0, 1, 0.764706, 1)
 sprite_frames = ExtResource("2_uk77l")
-animation = &"to_scream"
-frame = 4
+animation = &"idle"
 script = ExtResource("25")
 
 [node name="Iris" type="AnimatedSprite2D" parent="Eye"]
 self_modulate = Color(0.780392, 0.223529, 0.211765, 1)
-position = Vector2(1.91187, 5.78522)
+position = Vector2(2.0007, 8.53972)
 sprite_frames = ExtResource("4_les4a")
-animation = &"to_scream"
-frame = 4
+animation = &"idle"
 script = ExtResource("50")
 
 [node name="Mouth" type="Node2D" parent="."]
@@ -45,15 +46,13 @@ position = Vector2(6.70447, 47.9854)
 [node name="MouthShape" type="AnimatedSprite2D" parent="Mouth"]
 self_modulate = Color(0.152941, 0.309804, 0.270588, 1)
 sprite_frames = ExtResource("6_t4x8w")
-animation = &"to_scream"
-frame = 4
+animation = &"idle"
 script = ExtResource("75")
 
 [node name="Teeth" type="AnimatedSprite2D" parent="Mouth"]
 self_modulate = Color(0, 1, 0.764706, 1)
 sprite_frames = ExtResource("8_4356q")
-animation = &"to_scream"
-frame = 4
+animation = &"idle"
 script = ExtResource("100")
 
 [node name="Saliva" type="AnimatedSprite2D" parent="Mouth"]

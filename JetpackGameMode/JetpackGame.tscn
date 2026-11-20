@@ -102,11 +102,11 @@ size = Vector2(110.85, 4449.02)
 
 [sub_resource type="ShaderMaterial" id="9"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 1)
+shader_parameter/blur_scale = Vector2(0, 0)
 
 [sub_resource type="ShaderMaterial" id="10"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(1, 0)
+shader_parameter/blur_scale = Vector2(0, 0)
 
 [sub_resource type="SpriteFrames" id="15"]
 animations = [{
@@ -136,11 +136,11 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="16"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0.7)
+shader_parameter/blur_scale = Vector2(0, 0.4)
 
 [sub_resource type="ShaderMaterial" id="17"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0.7, 0)
+shader_parameter/blur_scale = Vector2(0.4, 0)
 
 [sub_resource type="SpriteFrames" id="20"]
 animations = [{
@@ -167,11 +167,11 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="21"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0.4)
+shader_parameter/blur_scale = Vector2(0, 1)
 
 [sub_resource type="ShaderMaterial" id="22"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0.4, 0)
+shader_parameter/blur_scale = Vector2(1, 0)
 
 [sub_resource type="SpriteFrames" id="25"]
 animations = [{
@@ -198,11 +198,11 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="26"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0)
+shader_parameter/blur_scale = Vector2(0, 1)
 
 [sub_resource type="ShaderMaterial" id="27"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0)
+shader_parameter/blur_scale = Vector2(1, 0)
 
 [sub_resource type="ViewportTexture" id="28"]
 viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport")
@@ -563,12 +563,12 @@ next/warning = &"base"
 
 [node name="Guardian" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(1331.09, -213.431)
+position = Vector2(901.091, -213.431)
 texture = ExtResource("27")
 
 [node name="Astro" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(504.4, 18.1768)
+position = Vector2(924.4, 18.1768)
 texture = ExtResource("28")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="RawLayer/WorldVieport/SubViewport"]
@@ -606,6 +606,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 stretch = true
 script = ExtResource("83")
+blur_amount = 0.0
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport"]
 handle_input_locally = false
@@ -642,22 +643,7 @@ volume_db = -6.0
 bus = &"GameSfx"
 
 [node name="BackRowBossSkin" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss" instance=ExtResource("31")]
-
-[node name="EyeShape" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss/BackRowBossSkin/Eye" index="0"]
-animation = &"idle"
-frame = 3
-
-[node name="Iris" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss/BackRowBossSkin/Eye" index="1"]
-animation = &"idle"
-frame = 3
-
-[node name="MouthShape" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss/BackRowBossSkin/Mouth" index="0"]
-animation = &"idle"
-frame = 3
-
-[node name="Teeth" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss/BackRowBossSkin/Mouth" index="1"]
-animation = &"idle"
-frame = 3
+current_animation = "idle"
 
 [node name="ScreamPositionHelper" type="Marker2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss"]
 position = Vector2(11.0001, 56)
@@ -679,7 +665,7 @@ script = ExtResource("37")
 position = Vector2(1010, 540)
 
 [node name="Lava" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/RemoteParallax3/Sprite0"]
-self_modulate = Color(1.4, 1.4, 1.4, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
 texture = ExtResource("80")
 offset = Vector2(0, 321)
 
@@ -694,12 +680,11 @@ visible = false
 position = Vector2(1010, 540)
 
 [node name="Lava" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/RemoteParallax3/Sprite1"]
-self_modulate = Color(1.4, 1.4, 1.4, 1)
+self_modulate = Color(1.2, 1.2, 1.2, 1)
 texture = ExtResource("80")
 offset = Vector2(0, 321)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport"]
-color = Color(0.654902, 0.596078, 0.839216, 1)
 
 [node name="Parallax2" type="ParallaxLayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 motion_scale = Vector2(0.4, 1)
@@ -718,7 +703,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
 script = ExtResource("83")
-blur_amount = 0.7
+blur_amount = 0.4
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport"]
 transparent_bg = true
@@ -794,7 +779,7 @@ texture = ExtResource("81")
 offset = Vector2(0, 405)
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport/BlurX/SubViewport"]
-color = Color(1, 0.764706, 0.945098, 1)
+color = Color(0.788235, 0.678431, 0.639216, 1)
 
 [node name="Parallax1" type="ParallaxLayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 z_as_relative = false
@@ -813,7 +798,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
 script = ExtResource("83")
-blur_amount = 0.4
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport"]
 transparent_bg = true
@@ -878,7 +862,7 @@ visible = false
 position = Vector2(1010, 540)
 
 [node name="CanvasModulate3" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport"]
-color = Color(1, 0.92549, 0.862745, 1)
+color = Color(0.776471, 0.596078, 0.733333, 1)
 
 [node name="Parallax0" type="ParallaxLayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 z_as_relative = false
@@ -899,7 +883,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
 script = ExtResource("83")
-blur_amount = 0.0
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport"]
 transparent_bg = true
@@ -935,6 +918,7 @@ visible = false
 position = Vector2(960, 540)
 
 [node name="CanvasModulate5" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport/BlurX/SubViewport"]
+color = Color(0.654902, 0.596078, 0.839216, 1)
 
 [node name="TextureRect" type="TextureRect" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 visible = false
@@ -1000,6 +984,7 @@ position = Vector2(2370, 61)
 scale = Vector2(1, -1)
 
 [node name="CanvasModulate4" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport"]
+color = Color(0.639216, 0.537255, 0.8, 1)
 
 [node name="MaskViewport" type="SubViewportContainer" parent="RawLayer"]
 anchors_preset = 15
@@ -1244,5 +1229,3 @@ visible = false
 [connection signal="update_visualization" from="RawLayer/WorldVieport/SubViewport/Obstaculos/ObstacleSpawner" to="HUD/ProgressVisualization" method="update_progress"]
 [connection signal="sort_children" from="HUD/Meters/Ammunition" to="HUD/Meters/Ammunition" method="_on_Ammunition_sort_children"]
 [connection signal="timeout" from="HUD/CenterArea/RunTime/Timer" to="HUD/CenterArea/RunTime" method="_on_Timer_timeout"]
-
-[editable path="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss/BackRowBossSkin"]
