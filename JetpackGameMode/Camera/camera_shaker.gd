@@ -8,6 +8,9 @@ var _decay_backup: float = 0.0
 @onready var _main_camera: Camera2D = get_parent()
 
 func _ready() -> void:
+	if Engine.is_editor_hint():
+		return
+	
 	super()
 	_decay_backup = decay
 	_shaky_camera = _target as Camera2D
