@@ -170,19 +170,19 @@ func _get_property_list() -> Array[Dictionary]:
 	var value: Array[Dictionary] = []
 	var ordered_keys := ObstacleTypes.keys().map(_map_to_snake_case)
 	
-	value.append(_get_group_dict("On Beat Obstacles", BEAT_GROUP_PREFIX))
+	value.append(Utilities.get_group_dict("On Beat Obstacles", BEAT_GROUP_PREFIX))
 	_add_obstacles_properties_to(value, ordered_keys, BEAT_GROUP_PREFIX)
 	value.append(
-		_get_property_dict(
+		Utilities.get_property_dict(
 			"%s%s"%[BEAT_GROUP_PREFIX, "total"],TYPE_INT,PROPERTY_HINT_NONE,
 			"", "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_READ_ONLY
 		)
 	)
 	
-	value.append(_get_group_dict("On Half Beat Obstacles", HALF_GROUP_PREFIX))
+	value.append(Utilities.get_group_dict("On Half Beat Obstacles", HALF_GROUP_PREFIX))
 	_add_obstacles_properties_to(value, ordered_keys, HALF_GROUP_PREFIX)
 	value.append(
-		_get_property_dict(
+		Utilities.get_property_dict(
 			"%s%s"%[HALF_GROUP_PREFIX, "total"],TYPE_INT,PROPERTY_HINT_NONE,
 			"", "", PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_READ_ONLY
 		)
@@ -271,7 +271,7 @@ func _add_obstacles_properties_to(
 		p_prefix: String
 ) -> void:
 	for key in p_from:
-		var prop_dict := _get_property_dict(
+		var prop_dict := Utilities.get_property_dict(
 				"%s%s"%[p_prefix, key], 
 				TYPE_INT, 
 				PROPERTY_HINT_RANGE, 
@@ -283,19 +283,19 @@ func _add_obstacles_properties_to(
 
 
 func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
-	property_list.append(_get_category_dict("Boss Settings"))
+	property_list.append(Utilities.get_category_dict("Boss Settings"))
 	property_list.append(
-		_get_property_dict(
+		Utilities.get_property_dict(
 			"boss_type", TYPE_INT, PROPERTY_HINT_ENUM, 
 			",".join(BossTypes.keys().map(Utilities.capitalize_array))
 		)
 	)
 	
 	if boss_type != BossTypes.NONE:
-		property_list.append(_get_property_dict("has_boss_laser", TYPE_BOOL))
+		property_list.append(Utilities.get_property_dict("has_boss_laser", TYPE_BOOL))
 		if has_boss_laser:
 			property_list.append(
-				_get_property_dict(
+				Utilities.get_property_dict(
 					"laser_countdowns", 
 					TYPE_ARRAY, 
 					PROPERTY_HINT_ARRAY_TYPE,
@@ -304,7 +304,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 			)
 		
 		property_list.append(
-			_get_property_dict(
+			Utilities.get_property_dict(
 				"boss_animations", 
 				TYPE_ARRAY, 
 				PROPERTY_HINT_ARRAY_TYPE,
@@ -313,7 +313,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 		)
 		if boss_animations.size() > 0:
 			property_list.append(
-				_get_property_dict(
+				Utilities.get_property_dict(
 					"boss_animations_countdowns",
 					TYPE_ARRAY,
 					PROPERTY_HINT_TYPE_STRING,
@@ -321,7 +321,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 				)
 			)
 			property_list.append(
-				_get_property_dict(
+				Utilities.get_property_dict(
 					"danger_durations",
 					TYPE_ARRAY,
 					PROPERTY_HINT_TYPE_STRING,
@@ -329,10 +329,10 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 				)
 			)
 		
-		property_list.append(_get_property_dict("has_boss_scream", TYPE_BOOL))
+		property_list.append(Utilities.get_property_dict("has_boss_scream", TYPE_BOOL))
 		if has_boss_scream:
 			property_list.append(
-				_get_property_dict(
+				Utilities.get_property_dict(
 					"scream_countdowns",
 					TYPE_ARRAY,
 					PROPERTY_HINT_ARRAY_TYPE, 
@@ -342,7 +342,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 			
 			var obstacles_hint: String = ",".join(ObstacleTypes.keys().map(Utilities.capitalize_array))
 			property_list.append(
-				_get_property_dict(
+				Utilities.get_property_dict(
 					"scream_sequence_beats",
 					TYPE_ARRAY, 
 					PROPERTY_HINT_TYPE_STRING, 
@@ -355,7 +355,7 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 				)
 			)
 			property_list.append(
-				_get_property_dict(
+				Utilities.get_property_dict(
 					"scream_sequence_halfs",
 					TYPE_ARRAY, 
 					PROPERTY_HINT_TYPE_STRING, 
@@ -367,38 +367,5 @@ func _add_boss_settings_properties_to(property_list: Array[Dictionary]) -> void:
 					]
 				)
 			)
-
-
-static func _get_property_dict(
-		p_name: String, 
-		p_type: Variant.Type,
-		p_hint: int = PROPERTY_HINT_NONE,
-		p_hint_string: String  = "",
-		p_class_name: String = "",
-		p_usage: int = PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_SCRIPT_VARIABLE
-) -> Dictionary:
-	var value := {
-		"name": p_name,
-		"class_name": p_class_name,
-		"type": p_type,
-		"hint": p_hint,
-		"hint_string": p_hint_string,
-		"usage": p_usage,
-	}
-	return value
-
-
-static func _get_category_dict(p_name: String) -> Dictionary:
-	var value := _get_property_dict(
-			p_name, TYPE_NIL, PROPERTY_HINT_NONE, "", "", PROPERTY_USAGE_CATEGORY
-	)
-	return value
-
-
-static func _get_group_dict(p_name: String, hint_string: String = "") -> Dictionary:
-	var value := _get_property_dict(
-			p_name, TYPE_NIL, PROPERTY_HINT_NONE, hint_string, "", PROPERTY_USAGE_GROUP
-	)
-	return value
 
 #endregion Advanced Exports -----------------------------------------------------------------------
