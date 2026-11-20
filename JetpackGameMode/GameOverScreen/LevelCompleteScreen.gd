@@ -1,4 +1,14 @@
 extends Node2D
+## Write your doc string for this file here
+
+#region Member Variables and Dependencies ---------------------------------------------------------
+#--- signals --------------------------------------------------------------------------------------
+
+#--- enums ----------------------------------------------------------------------------------------
+
+#--- constants ------------------------------------------------------------------------------------
+
+#--- public variables - order: export > normal var > onready --------------------------------------
 
 @export_file var main_menu_path
 
@@ -35,6 +45,13 @@ var time_congrats
 var options_path = "res://CommonScenes/OptionsMenu/OptionsMenuScreen.tscn"
 var upgrade_path = "res://CommonScenes/UpgradeMenu/UpgradeMenu.tscn"
 var level_select_path = "res://CommonScenes/LevelSelectMenu/LevelSelectMenu.tscn"
+
+#--- private variables - order: export > normal var > onready -------------------------------------
+
+#endregion Member Variables and Dependencies ------------------------------------------------------
+
+
+#region Built in Engine Methods -------------------------------------------------------------------
 
 func _ready():
 	replay_btn = $ResultsContainer/Buttons/Replay
@@ -116,6 +133,10 @@ func _unhandled_input(event) -> void:
 		else:
 			focus_button.grab_focus()
 
+#endregion Built in Engine Methods ----------------------------------------------------------------
+
+
+#region Public Methods ----------------------------------------------------------------------------
 
 func open(level_number: int, level_name: String):
 	if game.get_game_state() == 3:
@@ -248,6 +269,11 @@ func print_time(runtime, label):
 	
 	label.set_text("%s:%s"%[minutes,seconds])
 
+#endregion Public Methods -------------------------------------------------------------------------
+
+
+#region Private Methods ---------------------------------------------------------------------------
+
 func _on_upgrade_pressed():
 	var path = upgrade_path
 	last_focus = upgrade_btn
@@ -295,3 +321,5 @@ func _on_NextLevel_pressed():
 func _on_WatchEnding_pressed() -> void:
 	var ending_path: = "res://Cutscenes/Cutscene3.tscn"
 	ScreenManager.black_transition(ending_path, null, self)
+
+#endregion Private Methods ------------------------------------------------------------------------
