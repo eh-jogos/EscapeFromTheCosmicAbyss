@@ -14,7 +14,7 @@ extends Node2D
 
 
 var game: Game
-var game_mode: String = ""
+var game_mode: String = "": set = _set_game_mode
 
 var score_results
 var label_score
@@ -76,40 +76,20 @@ func _ready():
 	time_congrats = time_results.get_node("TimeContainer/HightimeText")
 	time_congrats.hide()
 	
-	await owner.ready
-	game = get_parent().get_parent()
-	game_mode = game.game_mode
-	
 	if not _upgrade_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
 		_upgrade_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
 	if not _level_select_btn.is_connected("focus_entered", Callable(self, "_on_focus_enter")):
 		_level_select_btn.connect("focus_entered", Callable(self, "_on_focus_enter"))
 	
-	
-	if game_mode == "story":
-		_replay_btn.show()
-		_upgrade_btn.show()
-		_next_level_btn.show()
-		_level_select_btn.show()
-		_quit_btn.show()
-		
-		score_results.show()
-		unlock_results.show()
-		time_results.hide()
-	elif game_mode == "speedrun":
-		_replay_btn.show()
-		_upgrade_btn.hide()
-		_level_select_btn.hide()
-		_next_level_btn.hide()
-		_quit_btn.show()
-		
-		score_results.show()
-		time_results.show()
-		unlock_results.hide()
-		
-		_replay_btn.set_focus_neighbor(SIDE_LEFT, _quit_btn.get_path())
-		_quit_btn.set_focus_neighbor(SIDE_RIGHT, _replay_btn.get_path())
+	if get_tree().current_scene == self:
+		game_mode = "story"
+		_animator.play("open")
+		_quit_btn.grab_focus()
+	else:
+		await owner.ready
+		game = get_parent().get_parent()
+		game_mode = game.game_mode
 
 
 func _unhandled_input(event) -> void:
@@ -214,6 +194,9 @@ func open(level_number: int, level_name: String):
 
 ## Called at the end of "open" animation
 func play_unlock_animations():
+	if get_tree().current_scene == self:
+		return
+	
 	if game.is_last_stage() and not Global.is_story_completed():
 		Global.story_completed()
 		var unlock_animator = get_node("ResultsContainer/ModeUnlock/AnimationPlayer")
@@ -261,6 +244,32 @@ func print_time(runtime, label):
 
 
 #region Private Methods ---------------------------------------------------------------------------
+
+func _set_game_mode(p_value: String) -> void:
+	if game_mode == "story":
+		_replay_btn.show()
+		_upgrade_btn.show()
+		_next_level_btn.show()
+		_level_select_btn.show()
+		_quit_btn.show()
+		
+		score_results.show()
+		unlock_results.show()
+		time_results.hide()
+	elif game_mode == "speedrun":
+		_replay_btn.show()
+		_upgrade_btn.hide()
+		_level_select_btn.hide()
+		_next_level_btn.hide()
+		_quit_btn.show()
+		
+		score_results.show()
+		time_results.show()
+		unlock_results.hide()
+		
+		_replay_btn.set_focus_neighbor(SIDE_LEFT, _quit_btn.get_path())
+		_quit_btn.set_focus_neighbor(SIDE_RIGHT, _replay_btn.get_path())
+
 
 func _on_replay_pressed():
 	Global.is_retry = true
