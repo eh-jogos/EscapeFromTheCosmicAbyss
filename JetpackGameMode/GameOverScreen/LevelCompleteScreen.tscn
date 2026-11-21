@@ -529,7 +529,10 @@ _data = {
 [node name="LevelCompleteScreen" type="Node2D"]
 process_mode = 3
 script = ExtResource("1")
-main_menu_path = "res://CommonScenes/MainMenu/MainMenuScreen.tscn"
+_main_menu_path = "uid://d23bd8ywccyf7"
+_options_path = "uid://dga6yb7rwn806"
+_upgrade_path = "uid://bpk3rkw4elod2"
+_level_select_path = "uid://4katwn7fyiaf"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -551,6 +554,8 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 offset_right = 1920.0
 offset_bottom = 515.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("8_y7c5v")
 
 [node name="ClearedSmear" type="TextureRect" parent="StageClearedContainer"]
@@ -899,6 +904,13 @@ pressed_sfx = "Confirm"
 [node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource("23")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 55.0
+offset_bottom = 55.0
+grow_horizontal = 1
 
 [node name="NextLevel" type="Button" parent="ResultsContainer/Buttons"]
 custom_minimum_size = Vector2(192, 0)

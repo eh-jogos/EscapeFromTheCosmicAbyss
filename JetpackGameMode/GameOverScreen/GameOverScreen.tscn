@@ -539,6 +539,13 @@ pressed_sfx = "Confirm"
 [node name="NotificationCircle" parent="ResultsContainer/Buttons/Upgrade" instance=ExtResource("16")]
 layout_mode = 0
 anchors_preset = 0
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 55.0
+offset_bottom = 55.0
+grow_horizontal = 1
 
 [node name="Replay" type="Button" parent="ResultsContainer/Buttons"]
 custom_minimum_size = Vector2(228, 79)
