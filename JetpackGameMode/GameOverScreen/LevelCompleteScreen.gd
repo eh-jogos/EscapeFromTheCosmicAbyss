@@ -158,6 +158,7 @@ func open(level_number: int, level_name: String):
 	else:
 		score_congrats.hide()
 	
+	var to_focus: BasicGameButton = null
 	if game_mode == "story":
 		upgrade_container.show()
 		upgrade_points = game.upgrade_points
@@ -174,11 +175,11 @@ func open(level_number: int, level_name: String):
 				Global.update_story_unlocks(unlocked_levels)
 				if unlocked_levels == 1:
 					Global.update_story_last_unlock(unlocked_levels)
-			_next_level_btn.grab_focus()
+			to_focus = _next_level_btn
 		else:
 			_next_level_btn.hide()
 			_watch_ending_btn.show()
-			_watch_ending_btn.grab_focus()
+			to_focus = _watch_ending_btn
 	elif game_mode == "speedrun":
 		upgrade_container.hide()
 		_upgrade_btn.hide()
@@ -196,8 +197,9 @@ func open(level_number: int, level_name: String):
 		else:
 			time_congrats.hide()
 		
-		_replay_btn.grab_focus()
+		to_focus = _replay_btn
 	
+	to_focus.grab_focus()
 	show()
 	if level_number > 0:
 		_stage_number.set_text("STAGE %02d"%[level_number])
