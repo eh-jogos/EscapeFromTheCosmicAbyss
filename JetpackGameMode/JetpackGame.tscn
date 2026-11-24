@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=119 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/level_handler.gd" id="2"]
@@ -77,13 +77,14 @@
 [ext_resource type="Material" uid="uid://dnylwjmd3rcjq" path="res://JetpackGameMode/vfx/scream_shockwave2.tres" id="66_7o2yg"]
 [ext_resource type="PackedScene" uid="uid://bwomdomdf8yos" path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" id="67"]
 [ext_resource type="Script" uid="uid://nby31bhb2hbr" path="res://JetpackGameMode/BG/BG_LooperH_Bg2.gd" id="68"]
-[ext_resource type="Material" uid="uid://c0fvk5ysbb0l" path="res://JetpackGameMode/vfx/scream_distortion_vfx.tres" id="68_7o2yg"]
 [ext_resource type="Texture2D" uid="uid://bfmqniweaaph7" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_5.png" id="69"]
 [ext_resource type="Animation" path="res://Shaders/shader_text_pop_up.tres" id="70"]
 [ext_resource type="AudioStream" uid="uid://c1mfsmcs15r6d" path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" id="71"]
 [ext_resource type="Material" uid="uid://cyip8q1bpwrfe" path="res://Shaders/text_horizontal_gradient_shader.tres" id="72"]
 [ext_resource type="AudioStream" uid="uid://duc4j17pawg7i" path="res://CommonScenes/SoundManager/sfx/upgrade_point.wav" id="73"]
+[ext_resource type="Shader" uid="uid://cnjbisruchh28" path="res://Shaders/shockwave.gdshader" id="73_wb2nq"]
 [ext_resource type="AudioStream" uid="uid://p2c531yrarao" path="res://CommonScenes/SoundManager/sfx/speed_up_message.wav" id="74"]
+[ext_resource type="Texture2D" uid="uid://c018gaxghmmm7" path="res://new_viewport_texture.tres" id="74_gk527"]
 [ext_resource type="AnimationLibrary" uid="uid://crltxv8gs0ncm" path="res://JetpackGameMode/vfx/danger_vignette_anim_library.tres" id="76_tlai4"]
 [ext_resource type="Texture2D" uid="uid://ceiebohc0di86" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_lava.png" id="80"]
 [ext_resource type="Texture2D" uid="uid://v12jo02ha8e0" path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_lava.png" id="81"]
@@ -102,11 +103,11 @@ size = Vector2(110.85, 4449.02)
 
 [sub_resource type="ShaderMaterial" id="9"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0)
+shader_parameter/blur_scale = Vector2(0, 1)
 
 [sub_resource type="ShaderMaterial" id="10"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0)
+shader_parameter/blur_scale = Vector2(1, 0)
 
 [sub_resource type="SpriteFrames" id="15"]
 animations = [{
@@ -136,11 +137,11 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="16"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 0.4)
+shader_parameter/blur_scale = Vector2(0, 0.7)
 
 [sub_resource type="ShaderMaterial" id="17"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0.4, 0)
+shader_parameter/blur_scale = Vector2(0.7, 0)
 
 [sub_resource type="SpriteFrames" id="20"]
 animations = [{
@@ -167,11 +168,11 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="21"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 1)
+shader_parameter/blur_scale = Vector2(0, 0.4)
 
 [sub_resource type="ShaderMaterial" id="22"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(1, 0)
+shader_parameter/blur_scale = Vector2(0.4, 0)
 
 [sub_resource type="SpriteFrames" id="25"]
 animations = [{
@@ -198,14 +199,22 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="26"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(0, 1)
+shader_parameter/blur_scale = Vector2(0, 0)
 
 [sub_resource type="ShaderMaterial" id="27"]
 shader = ExtResource("82")
-shader_parameter/blur_scale = Vector2(1, 0)
+shader_parameter/blur_scale = Vector2(0, 0)
 
 [sub_resource type="ViewportTexture" id="28"]
 viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7hit"]
+resource_local_to_scene = true
+shader = ExtResource("73_wb2nq")
+shader_parameter/displacement_texture = ExtResource("74_gk527")
+shader_parameter/displacement_amount = 0.096
+shader_parameter/displacement_center = Vector2(-0.0292261, 0.891436)
+shader_parameter/screen_resolution = Vector2(1.77778, 1)
 
 [sub_resource type="ViewportTexture" id="33"]
 viewport_path = NodePath("RawLayer/WorldVieport/SubViewport")
@@ -491,7 +500,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 12
+test_level_or_points = 5
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -606,7 +615,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 stretch = true
 script = ExtResource("83")
-blur_amount = 0.0
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport"]
 handle_input_locally = false
@@ -648,9 +656,12 @@ current_animation = "idle"
 [node name="ScreamPositionHelper" type="Marker2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/BackRowBoss"]
 position = Vector2(11.0001, 56)
 script = ExtResource("29_mhwsq")
+wave1_thickness = 0.051
+wave1_hardness = 1.645
+wave2_thickness = 0.051
+wave2_hardness = 1.645
 _shockwave1 = ExtResource("64_c33xn")
 _shockwave2 = ExtResource("66_7o2yg")
-_displacement_vfx = ExtResource("68_7o2yg")
 metadata/_custom_type_script = "uid://cn8sjtltin80s"
 
 [node name="RemoteParallax3" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport"]
@@ -665,7 +676,7 @@ script = ExtResource("37")
 position = Vector2(1010, 540)
 
 [node name="Lava" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/RemoteParallax3/Sprite0"]
-self_modulate = Color(1.2, 1.2, 1.2, 1)
+self_modulate = Color(1.4, 1.4, 1.4, 1)
 texture = ExtResource("80")
 offset = Vector2(0, 321)
 
@@ -680,11 +691,12 @@ visible = false
 position = Vector2(1010, 540)
 
 [node name="Lava" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport/RemoteParallax3/Sprite1"]
-self_modulate = Color(1.2, 1.2, 1.2, 1)
+self_modulate = Color(1.4, 1.4, 1.4, 1)
 texture = ExtResource("80")
 offset = Vector2(0, 321)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport"]
+color = Color(0.654902, 0.596078, 0.839216, 1)
 
 [node name="Parallax2" type="ParallaxLayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 motion_scale = Vector2(0.4, 1)
@@ -694,7 +706,6 @@ motion_offset = Vector2(-192, 0)
 remote_path = NodePath("../../Parallax2Viewport/SubViewport/BlurX/SubViewport/RemoteParallax2")
 
 [node name="Parallax2Viewport" type="SubViewportContainer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
-visible = false
 material = SubResource("16")
 anchors_preset = 15
 anchor_right = 1.0
@@ -703,13 +714,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
 script = ExtResource("83")
-blur_amount = 0.4
+blur_amount = 0.7
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1960, 1120)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="BlurX" type="SubViewportContainer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport"]
 material = SubResource("17")
@@ -727,8 +738,7 @@ size = Vector2i(2000, 1160)
 render_target_update_mode = 4
 
 [node name="MidBackRowBoss" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport/BlurX/SubViewport" groups=["boss"]]
-visible = false
-position = Vector2(-430, 620)
+position = Vector2(2695, 620)
 script = ExtResource("30")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport/BlurX/SubViewport/MidBackRowBoss"]
@@ -779,7 +789,7 @@ texture = ExtResource("81")
 offset = Vector2(0, 405)
 
 [node name="CanvasModulate2" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax2Viewport/SubViewport/BlurX/SubViewport"]
-color = Color(0.788235, 0.678431, 0.639216, 1)
+color = Color(1, 0.764706, 0.945098, 1)
 
 [node name="Parallax1" type="ParallaxLayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 z_as_relative = false
@@ -789,7 +799,6 @@ motion_scale = Vector2(0.5, 1)
 remote_path = NodePath("../../Parallax1Viewport/SubViewport/BlurX/SubViewport/RemoteParallax1")
 
 [node name="Parallax1Viewport" type="SubViewportContainer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
-visible = false
 material = SubResource("21")
 anchors_preset = 15
 anchor_right = 1.0
@@ -798,12 +807,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
 script = ExtResource("83")
+blur_amount = 0.4
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1960, 1120)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="BlurX" type="SubViewportContainer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport"]
 material = SubResource("22")
@@ -862,7 +872,7 @@ visible = false
 position = Vector2(1010, 540)
 
 [node name="CanvasModulate3" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport"]
-color = Color(0.776471, 0.596078, 0.733333, 1)
+color = Color(1, 0.92549, 0.862745, 1)
 
 [node name="Parallax0" type="ParallaxLayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
 z_as_relative = false
@@ -873,7 +883,6 @@ motion_offset = Vector2(480, 0)
 remote_path = NodePath("../../Parallax0Viewport/SubViewport/BlurX/SubViewport/RemoteParallax0")
 
 [node name="Parallax0Viewport" type="SubViewportContainer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
-visible = false
 self_modulate = Color(1, 1, 1, 0)
 material = SubResource("26")
 anchors_preset = 15
@@ -883,12 +892,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 stretch = true
 script = ExtResource("83")
+blur_amount = 0.0
 
 [node name="SubViewport" type="SubViewport" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1960, 1120)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="BlurX" type="SubViewportContainer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport"]
 material = SubResource("27")
@@ -918,10 +928,8 @@ visible = false
 position = Vector2(960, 540)
 
 [node name="CanvasModulate5" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport/BlurX/SubViewport"]
-color = Color(0.654902, 0.596078, 0.839216, 1)
 
 [node name="TextureRect" type="TextureRect" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground"]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("28")
@@ -984,7 +992,6 @@ position = Vector2(2370, 61)
 scale = Vector2(1, -1)
 
 [node name="CanvasModulate4" type="CanvasModulate" parent="RawLayer/WorldVieport/SubViewport"]
-color = Color(0.639216, 0.537255, 0.8, 1)
 
 [node name="MaskViewport" type="SubViewportContainer" parent="RawLayer"]
 anchors_preset = 15
@@ -1026,7 +1033,7 @@ offset_bottom = 40.0
 layer = 0
 
 [node name="PostProcessedGame" type="TextureRect" parent="ProcessedLayer"]
-material = ExtResource("68_7o2yg")
+material = SubResource("ShaderMaterial_p7hit")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1036,7 +1043,7 @@ mouse_filter = 2
 texture = SubResource("33")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]
-position = Vector2(943.191, 561.409)
+position = Vector2(-447, 602.324)
 
 [node name="DangerVignette" type="ColorRect" parent="ProcessedLayer"]
 material = SubResource("34")

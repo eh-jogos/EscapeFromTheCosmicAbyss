@@ -19,27 +19,41 @@ extends Marker2D
 
 #--- constants ------------------------------------------------------------------------------------
 
-const PARAM_RADIUS = "torus_radius"
+const _PARAM_RADIUS = "torus_radius"
+const _PARAM_THICKNESS = "torus_thickness"
+const _PARAM_HARDNESS = "torus_hardness"
 
 #--- public variables - order: export > normal var > onready --------------------------------------
 
+@export_group("Scream Wave 1", "wave1_")
 ## Radius for first torus of scream shockwave effect.
 @export_range(-0.1,3.0,0.01) var wave1_radius: float = -0.1:
 	set(value):
 		wave1_radius = value
-		if Engine.is_editor_hint():
-			queue_redraw()
-		elif is_inside_tree() and _shockwave1 != null:
-			_shockwave1.set_shader_parameter(PARAM_RADIUS, wave1_radius)
+		_update_shader_param(_shockwave1, _PARAM_RADIUS, value)
+@export_range(0.001,1.0,0.001) var wave1_thickness: float = 0.5:
+	set(value):
+		wave1_thickness = value
+		_update_shader_param(_shockwave1, _PARAM_THICKNESS, value)
+@export_range(0.0,8.0,0.001) var wave1_hardness: float = 1.0:
+	set(value):
+		wave1_hardness = value
+		_update_shader_param(_shockwave1, _PARAM_HARDNESS, value)
 
+@export_group("Scream Wave 2", "wave2_")
 ## Radius for second torus of scream shockwave effect.
 @export_range(-0.1,3.0,0.01) var wave2_radius: float = -0.1:
 	set(value):
 		wave2_radius = value
-		if Engine.is_editor_hint():
-			queue_redraw()
-		elif is_inside_tree() and _shockwave2 != null:
-			_shockwave2.set_shader_parameter(PARAM_RADIUS, wave2_radius)
+		_update_shader_param(_shockwave2, _PARAM_RADIUS, value)
+@export_range(0.001,1.0,0.001) var wave2_thickness: float = 0.5:
+	set(value):
+		wave2_thickness = value
+		_update_shader_param(_shockwave2, _PARAM_THICKNESS, value)
+@export_range(0.0,8.0,0.001) var wave2_hardness: float = 1.0:
+	set(value):
+		wave2_hardness = value
+		_update_shader_param(_shockwave2, _PARAM_HARDNESS, value)
 
 #--- private variables - order: export > normal var > onready -------------------------------------
 
@@ -51,7 +65,7 @@ const PARAM_RADIUS = "torus_radius"
 ## game's post processing layer.
 @export var _displacement_vfx: ShaderMaterial = null
 
-var _materials: Array[ShaderMaterial] = []
+var _materials: Array[Resource] = []
 
 #endregion Member Variables and Dependencies ------------------------------------------------------
 
@@ -80,7 +94,6 @@ func _process(_delta: float) -> void:
 
 
 func _draw():
-	const TORUS_THICKNESS_PREVIEW := 200.0
 	if Engine.is_editor_hint():
 		draw_circle(Vector2.ZERO, 15.0, Color.WHITE)
 		var viewport_size := get_viewport_rect().size
@@ -90,7 +103,7 @@ func _draw():
 					wave1_radius * viewport_size.x, 
 					Color.FIREBRICK, 
 					false, 
-					TORUS_THICKNESS_PREVIEW
+					wave1_thickness * viewport_size.x
 			)
 		
 		if wave2_radius > 0.0:
@@ -99,7 +112,7 @@ func _draw():
 					wave2_radius * viewport_size.x, 
 					Color.REBECCA_PURPLE, 
 					false, 
-					TORUS_THICKNESS_PREVIEW
+					wave2_thickness * viewport_size.x
 			)
 
 #endregion Built in Engine Methods ----------------------------------------------------------------
@@ -111,6 +124,13 @@ func _draw():
 
 
 #region Private Methods ---------------------------------------------------------------------------
+
+func _update_shader_param(p_material: ShaderMaterial, p_param: String, p_value: Variant) -> void:
+	if Engine.is_editor_hint():
+		queue_redraw()
+	elif is_inside_tree() and p_material != null:
+		p_material.set_shader_parameter(p_param, p_value)
+
 
 func _get_screen_relative_position() -> Vector2:
 	var screen_position := get_global_transform_with_canvas().origin

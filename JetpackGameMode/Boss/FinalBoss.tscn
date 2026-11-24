@@ -1,4 +1,4 @@
-[gd_scene load_steps=228 format=3 uid="uid://cft781k1bnot0"]
+[gd_scene load_steps=227 format=3 uid="uid://cft781k1bnot0"]
 
 [ext_resource type="Script" uid="uid://bcruwj1fr4uau" path="res://JetpackGameMode/Boss/Boss.gd" id="1"]
 [ext_resource type="Script" uid="uid://cu6kadyyrmfun" path="res://CommonScenes/SoundManager/SfxPlayer.gd" id="2"]
@@ -176,7 +176,6 @@
 [ext_resource type="AudioStream" uid="uid://c1mfsmcs15r6d" path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" id="171"]
 [ext_resource type="Texture2D" uid="uid://d4kdt0lcb18gm" path="res://JetpackGameMode/Obstacles/Fx/white_glowing_diamond.png" id="173"]
 [ext_resource type="Script" uid="uid://cn8sjtltin80s" path="res://JetpackGameMode/Boss/shockwave_origin_helper.gd" id="176_jmgmr"]
-[ext_resource type="Material" uid="uid://c0fvk5ysbb0l" path="res://JetpackGameMode/vfx/scream_distortion_vfx.tres" id="177_3df5n"]
 
 [sub_resource type="Animation" id="10"]
 length = 0.24
@@ -4926,6 +4925,5 @@ wave1_radius = 1.83
 wave2_radius = 1.83
 _shockwave1 = ExtResource("2_ecec5")
 _shockwave2 = ExtResource("3_jmgmr")
-_displacement_vfx = ExtResource("177_3df5n")
 
 [connection signal="timeout" from="CollisionTimer" to="." method="_on_CollisionTimer_timeout"]
