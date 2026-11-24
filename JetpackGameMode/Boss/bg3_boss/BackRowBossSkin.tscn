@@ -5,7 +5,7 @@
 [ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/iris_sprite_frames.tres" id="4_les4a"]
 [ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/mouth_shape_spirite_frames.tres" id="6_t4x8w"]
 [ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/teeth_sprite_frames.tres" id="8_4356q"]
-[ext_resource type="SpriteFrames" path="res://JetpackGameMode/Boss/bg3_boss/saliva_sprite_frames.tres" id="10_q6js7"]
+[ext_resource type="SpriteFrames" uid="uid://c3ty5qjd1ey2r" path="res://JetpackGameMode/Boss/bg3_boss/saliva_sprite_frames.tres" id="10_q6js7"]
 [ext_resource type="Script" uid="uid://7mf06fl65peu" path="res://JetpackGameMode/Boss/BgBossEyeColor.gd" id="25"]
 [ext_resource type="Script" uid="uid://da8yj8pspfewq" path="res://JetpackGameMode/Boss/bg3_boss/BgBossIrisColor.gd" id="50"]
 [ext_resource type="Script" uid="uid://c6c8neemyhxvs" path="res://JetpackGameMode/Boss/bg3_boss/BgBossMouthColor.gd" id="75"]

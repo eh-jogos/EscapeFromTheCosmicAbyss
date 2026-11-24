@@ -246,6 +246,7 @@ func print_time(runtime, label):
 #region Private Methods ---------------------------------------------------------------------------
 
 func _set_game_mode(p_value: String) -> void:
+	game_mode = p_value
 	if game_mode == "story":
 		_replay_btn.show()
 		_upgrade_btn.show()
