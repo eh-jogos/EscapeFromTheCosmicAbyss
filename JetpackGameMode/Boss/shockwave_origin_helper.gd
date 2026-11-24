@@ -61,9 +61,9 @@ const _PARAM_HARDNESS = "torus_hardness"
 @export var _shockwave1: ShaderMaterial = null
 ## [ShaderMaterial] responsible for second torus of scream shockwave effect.
 @export var _shockwave2: ShaderMaterial = null
-## [ShaderMaterial] responsible for distortion effect layering the torus mask on top of the 
-## game's post processing layer.
-@export var _displacement_vfx: ShaderMaterial = null
+## [SharedVector2] resource responsible for passing the center position of the scream shockwave 
+## to all relevant places that are synced with it.
+@export var _shockwave_center: SharedVector2 = null
 
 var _materials: Array[Resource] = []
 
@@ -77,12 +77,11 @@ func _ready() -> void:
 		return
 	
 	set_process(false)
-	_materials = [_shockwave1, _shockwave2, _displacement_vfx]
+	_materials = [_shockwave1, _shockwave2, _shockwave_center]
 
 
 func _process(_delta: float) -> void:
 	const PARAM_TORUS := "torus_center"
-	const PARAM_VFX := "displacement_center"
 	if Engine.is_editor_hint():
 		return
 	
@@ -90,7 +89,7 @@ func _process(_delta: float) -> void:
 		var relative_position := _get_screen_relative_position()
 		_shockwave1.set_shader_parameter(PARAM_TORUS, relative_position)
 		_shockwave2.set_shader_parameter(PARAM_TORUS, relative_position)
-		_displacement_vfx.set_shader_parameter(PARAM_VFX, relative_position)
+		_shockwave_center.value = relative_position
 
 
 func _draw():

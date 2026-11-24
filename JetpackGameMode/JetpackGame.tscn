@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=120 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/level_handler.gd" id="2"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://p0yugpmk6o0x" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_1.png" id="33"]
 [ext_resource type="Texture2D" uid="uid://c8x21l4a5vboh" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_2.png" id="34"]
 [ext_resource type="Texture2D" uid="uid://va1kj3h2a0sp" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_3.png" id="35"]
+[ext_resource type="Resource" uid="uid://dktqquypo0ug8" path="res://JetpackGameMode/Boss/scream_center.tres" id="35_wb2nq"]
 [ext_resource type="Texture2D" uid="uid://b3bqheemsjf27" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_4.png" id="36"]
 [ext_resource type="Script" uid="uid://cj1eb23ko4eqs" path="res://JetpackGameMode/BG/BG_LooperH_Bg3.gd" id="37"]
 [ext_resource type="PackedScene" path="res://JetpackGameMode/Boss/MidRowsBossSkin.tscn" id="38"]
@@ -84,7 +85,6 @@
 [ext_resource type="AudioStream" uid="uid://duc4j17pawg7i" path="res://CommonScenes/SoundManager/sfx/upgrade_point.wav" id="73"]
 [ext_resource type="Shader" uid="uid://cnjbisruchh28" path="res://Shaders/shockwave.gdshader" id="73_wb2nq"]
 [ext_resource type="AudioStream" uid="uid://p2c531yrarao" path="res://CommonScenes/SoundManager/sfx/speed_up_message.wav" id="74"]
-[ext_resource type="Texture2D" uid="uid://c018gaxghmmm7" path="res://new_viewport_texture.tres" id="74_gk527"]
 [ext_resource type="AnimationLibrary" uid="uid://crltxv8gs0ncm" path="res://JetpackGameMode/vfx/danger_vignette_anim_library.tres" id="76_tlai4"]
 [ext_resource type="Texture2D" uid="uid://ceiebohc0di86" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_lava.png" id="80"]
 [ext_resource type="Texture2D" uid="uid://v12jo02ha8e0" path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_lava.png" id="81"]
@@ -208,10 +208,13 @@ shader_parameter/blur_scale = Vector2(0, 0)
 [sub_resource type="ViewportTexture" id="28"]
 viewport_path = NodePath("RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax0Viewport/SubViewport")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_w6r1l"]
+viewport_path = NodePath("RawLayer/MaskViewport/SubViewport")
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_p7hit"]
 resource_local_to_scene = true
 shader = ExtResource("73_wb2nq")
-shader_parameter/displacement_texture = ExtResource("74_gk527")
+shader_parameter/displacement_texture = SubResource("ViewportTexture_w6r1l")
 shader_parameter/displacement_amount = 0.096
 shader_parameter/displacement_center = Vector2(-0.0292261, 0.891436)
 shader_parameter/screen_resolution = Vector2(1.77778, 1)
@@ -662,6 +665,7 @@ wave2_thickness = 0.051
 wave2_hardness = 1.645
 _shockwave1 = ExtResource("64_c33xn")
 _shockwave2 = ExtResource("66_7o2yg")
+_shockwave_center = ExtResource("35_wb2nq")
 metadata/_custom_type_script = "uid://cn8sjtltin80s"
 
 [node name="RemoteParallax3" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax3Viewport/SubViewport/BlurX/SubViewport"]

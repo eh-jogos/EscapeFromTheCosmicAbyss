@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SharedVector2" load_steps=2 format=3 uid="uid://dktqquypo0ug8"]
+
+[ext_resource type="Script" uid="uid://d0ejqv6l7c8ni" path="res://helpers/shared_vector2.gd" id="1_igfgn"]
+
+[resource]
+script = ExtResource("1_igfgn")
+reset_on_runtime = true
+value = Vector2(0, 0)
+default_value = Vector2(0, 0)
+metadata/_custom_type_script = "uid://d0ejqv6l7c8ni"
