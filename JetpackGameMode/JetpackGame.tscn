@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=3 uid="uid://dj56xwjjfbw5l"]
+[gd_scene load_steps=121 format=3 uid="uid://dj56xwjjfbw5l"]
 
 [ext_resource type="Script" uid="uid://dgb4qoq25ok8c" path="res://JetpackGameMode/JetpackGame.gd" id="1"]
 [ext_resource type="Script" uid="uid://0agsalmnb0bk" path="res://Levels/level_handler.gd" id="2"]
@@ -85,6 +85,7 @@
 [ext_resource type="AudioStream" uid="uid://duc4j17pawg7i" path="res://CommonScenes/SoundManager/sfx/upgrade_point.wav" id="73"]
 [ext_resource type="Shader" uid="uid://cnjbisruchh28" path="res://Shaders/shockwave.gdshader" id="73_wb2nq"]
 [ext_resource type="AudioStream" uid="uid://p2c531yrarao" path="res://CommonScenes/SoundManager/sfx/speed_up_message.wav" id="74"]
+[ext_resource type="Script" uid="uid://c11wqh6tdfqy6" path="res://JetpackGameMode/vfx/post_processed_game.gd" id="74_wb2nq"]
 [ext_resource type="AnimationLibrary" uid="uid://crltxv8gs0ncm" path="res://JetpackGameMode/vfx/danger_vignette_anim_library.tres" id="76_tlai4"]
 [ext_resource type="Texture2D" uid="uid://ceiebohc0di86" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_lava.png" id="80"]
 [ext_resource type="Texture2D" uid="uid://v12jo02ha8e0" path="res://JetpackGameMode/BG/JetpackGame_Parallax_2_lava.png" id="81"]
@@ -503,7 +504,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 5
+test_level_or_points = 12
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -1045,6 +1046,8 @@ offset_left = 2.24487
 offset_right = 2.24487
 mouse_filter = 2
 texture = SubResource("33")
+script = ExtResource("74_wb2nq")
+_scream_center = ExtResource("35_wb2nq")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]
 position = Vector2(-447, 602.324)
