@@ -504,7 +504,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 8
+test_level_or_points = 10
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -849,7 +849,7 @@ size = Vector2i(2000, 1160)
 render_target_update_mode = 4
 
 [node name="MidFrontRowBoss" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport" groups=["boss"]]
-position = Vector2(-1428, 540)
+position = Vector2(2600, 540)
 script = ExtResource("30")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport/MidFrontRowBoss"]
@@ -865,6 +865,17 @@ bus = &"GameSfx"
 [node name="MidRowsBossSkin" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport/MidFrontRowBoss" instance=ExtResource("38")]
 position = Vector2(400, -50)
 scale = Vector2(0.9, 0.9)
+
+[node name="ScreamPositionHelper" type="Marker2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport/MidFrontRowBoss"]
+script = ExtResource("29_mhwsq")
+wave1_thickness = 0.106
+wave1_hardness = 1.645
+wave2_thickness = 0.106
+wave2_hardness = 1.645
+_shockwave1 = ExtResource("64_c33xn")
+_shockwave2 = ExtResource("66_7o2yg")
+_shockwave_center = ExtResource("35_wb2nq")
+metadata/_custom_type_script = "uid://cn8sjtltin80s"
 
 [node name="RemoteParallax1" type="Node2D" parent="RawLayer/WorldVieport/SubViewport/ParallaxBackground/Parallax1Viewport/SubViewport/BlurX/SubViewport"]
 
@@ -1062,7 +1073,7 @@ script = ExtResource("74_wb2nq")
 _scream_center = ExtResource("35_wb2nq")
 
 [node name="ShockwaveGuide" type="Marker2D" parent="ProcessedLayer"]
-position = Vector2(-447, 602.324)
+position = Vector2(2620, 678.941)
 
 [node name="DangerVignette" type="ColorRect" parent="ProcessedLayer"]
 material = SubResource("34")

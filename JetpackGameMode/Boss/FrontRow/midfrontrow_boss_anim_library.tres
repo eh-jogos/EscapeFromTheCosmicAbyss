@@ -1,4 +1,4 @@
-[gd_resource type="AnimationLibrary" load_steps=3 format=3 uid="uid://cvwpjtoolnpy5"]
+[gd_resource type="AnimationLibrary" load_steps=4 format=3 uid="uid://cvwpjtoolnpy5"]
 
 [sub_resource type="Animation" id="23"]
 length = 0.01
@@ -105,7 +105,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_thickness")
+tracks/5/path = NodePath("ScreamPositionHelper:wave1_thickness")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -117,7 +117,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_radius")
+tracks/6/path = NodePath("ScreamPositionHelper:wave1_radius")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -129,7 +129,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask:material:shader_parameter/torus_hardness")
+tracks/7/path = NodePath("ScreamPositionHelper:wave1_hardness")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -141,7 +141,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_hardness")
+tracks/8/path = NodePath("ScreamPositionHelper:wave2_hardness")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
@@ -153,7 +153,7 @@ tracks/8/keys = {
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_thickness")
+tracks/9/path = NodePath("ScreamPositionHelper:wave2_thickness")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -165,7 +165,7 @@ tracks/9/keys = {
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("../../../../../../../../MaskViewport/SubViewport/TorusMask2:material:shader_parameter/torus_radius")
+tracks/10/path = NodePath("ScreamPositionHelper:wave2_radius")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
@@ -174,25 +174,13 @@ tracks/10/keys = {
 "update": 0,
 "values": [-0.1, -0.1, 2.9, -0.1]
 }
-tracks/11/type = "value"
+tracks/11/type = "method"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("../../../../../../../../../ProcessedLayer/ShockwaveGuide:position")
+tracks/11/path = NodePath(".")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2620, 678.941)]
-}
-tracks/12/type = "method"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath(".")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
 "times": PackedFloat32Array(1.1, 1.4),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
@@ -203,9 +191,54 @@ tracks/12/keys = {
 "method": &"shake_camera"
 }]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ScreamPositionHelper:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(38.4401, 165)]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ScreamPositionHelper")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"set_process"
+}, {
+"args": [false],
+"method": &"set_process"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_g6ufc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScreamPositionHelper:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [resource]
 _data = {
+&"RESET": SubResource("Animation_g6ufc"),
 &"base": SubResource("23"),
 &"scream": SubResource("24")
 }
