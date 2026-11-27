@@ -79,7 +79,7 @@
 [ext_resource type="PackedScene" uid="uid://bwomdomdf8yos" path="res://JetpackGameMode/Screens/Tutorial/TutorialTipScreen.tscn" id="67"]
 [ext_resource type="Script" uid="uid://nby31bhb2hbr" path="res://JetpackGameMode/BG/BG_LooperH_Bg2.gd" id="68"]
 [ext_resource type="Texture2D" uid="uid://bfmqniweaaph7" path="res://JetpackGameMode/BG/JetpackGame_Parallax_3_5.png" id="69"]
-[ext_resource type="Animation" path="res://Shaders/shader_text_pop_up.tres" id="70"]
+[ext_resource type="Animation" uid="uid://vxwjv6cnsh7l" path="res://Shaders/shader_text_pop_up.tres" id="70"]
 [ext_resource type="AudioStream" uid="uid://c1mfsmcs15r6d" path="res://CommonScenes/SoundManager/sfx/boss_scream.wav" id="71"]
 [ext_resource type="Material" uid="uid://cyip8q1bpwrfe" path="res://Shaders/text_horizontal_gradient_shader.tres" id="72"]
 [ext_resource type="AudioStream" uid="uid://duc4j17pawg7i" path="res://CommonScenes/SoundManager/sfx/upgrade_point.wav" id="73"]

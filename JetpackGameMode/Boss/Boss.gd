@@ -60,12 +60,13 @@ func handle_collision(raycast):
 		elif not collider.is_dead:
 			var player_global_position = collider.global_position
 			has_killed_player = true
-			kill_player(player_global_position)
+			kill_player(collider, player_global_position)
 
 
-func kill_player(_player_global_position):
+func kill_player(p_player: Player, _player_global_position: Vector2) -> void:
 	#play player killing animation here in the future, if you want/have to
 	#at the end of that animation, either from a signal or by calling it directly, call _on_player_killed
+	p_player.take_hit()
 	_on_player_killed()
 
 #endregion Public Methods -------------------------------------------------------------------------

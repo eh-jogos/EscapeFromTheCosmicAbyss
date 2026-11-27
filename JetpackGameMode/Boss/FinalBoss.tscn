@@ -4594,6 +4594,7 @@ scale_curve = SubResource("53")
 color_ramp = SubResource("51")
 
 [node name="Boss" type="Node2D"]
+position = Vector2(0, 350)
 script = ExtResource("1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -4628,7 +4629,7 @@ script = ExtResource("2")
 
 [node name="LaserLoop" type="AudioStreamPlayer" parent="BossSfxLibrary"]
 stream = ExtResource("169")
-volume_db = -40.0
+volume_db = -18.0
 bus = &"GameSfx"
 script = ExtResource("2")
 
@@ -4639,6 +4640,9 @@ one_shot = true
 show_behind_parent = true
 position = Vector2(-520, 0)
 script = ExtResource("3")
+warning_color_1 = 1.0
+warning_color_2 = 1.0
+warning_color_3 = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="FinalBossSkin"]
 libraries = {
@@ -4657,7 +4661,8 @@ next/to_scream = &"first_scream"
 modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 position = Vector2(0, -900)
 sprite_frames = SubResource("21")
-animation = &"to_laser"
+animation = &"idle_laser"
+frame = 4
 centered = false
 script = ExtResource("30")
 metadata/_edit_group_ = true
@@ -4667,7 +4672,8 @@ metadata/_edit_lock_ = true
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 position = Vector2(0, -901)
 sprite_frames = SubResource("22")
-animation = &"to_laser"
+animation = &"idle_laser"
+frame = 4
 centered = false
 script = ExtResource("30")
 metadata/_edit_lock_ = true
@@ -4676,7 +4682,8 @@ metadata/_edit_group_ = true
 [node name="EyeOutline" type="Sprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
 show_behind_parent = true
-position = Vector2(471.3, 742.87)
+position = Vector2(488.484, 706.484)
+scale = Vector2(1.15, 1.15)
 texture = ExtResource("57")
 centered = false
 offset = Vector2(-40, -162)
@@ -4771,15 +4778,13 @@ target_position = Vector2(0, 10)
 [node name="CastingParticles" type="GPUParticles2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 modulate = Color(1.1, 1.1, 1.1, 1)
 position = Vector2(334.79, 122.898)
-emitting = false
 texture = ExtResource("173")
 lifetime = 0.5
 process_material = SubResource("30")
 
 [node name="BeamParticles2D" type="GPUParticles2D" parent="FinalBossSkin/FaceOutline/EyeOutline/LaserMargins"]
 modulate = Color(1.3, 1.3, 1.3, 1)
-position = Vector2(965, 130)
-emitting = false
+position = Vector2(0, 130)
 amount = 100
 texture = ExtResource("173")
 lifetime = 0.8
@@ -4796,6 +4801,8 @@ script = ExtResource("59")
 [node name="ColorChange1" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color(0.78125, 1, 0, 1)
 sprite_frames = SubResource("36")
+animation = &"change_color"
+frame = 5
 centered = false
 offset = Vector2(-30, -152)
 script = ExtResource("67")
@@ -4808,6 +4815,8 @@ libraries = {
 [node name="ColorChange2" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color(1, 0.515625, 0, 1)
 sprite_frames = SubResource("36")
+animation = &"change_color"
+frame = 5
 centered = false
 offset = Vector2(-30, -152)
 script = ExtResource("67")
@@ -4821,6 +4830,8 @@ libraries = {
 [node name="ColorChange3" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
 self_modulate = Color(1, 0, 0.254902, 1)
 sprite_frames = SubResource("36")
+animation = &"change_color"
+frame = 5
 centered = false
 offset = Vector2(-30, -152)
 script = ExtResource("67")
@@ -4832,7 +4843,7 @@ libraries = {
 }
 
 [node name="IrisOutline" type="Sprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye"]
-self_modulate = Color(0.12549, 0.0745098, 0.180392, 1)
+self_modulate = Color(0.28125, 0.28125, 0.28125, 1)
 position = Vector2(291, 15)
 texture = ExtResource("68")
 script = ExtResource("30")
@@ -4844,7 +4855,7 @@ offset = Vector2(3, 0)
 script = ExtResource("70")
 
 [node name="Pupil" type="Sprite2D" parent="FinalBossSkin/FaceOutline/EyeOutline/Eye/IrisOutline/Iris"]
-self_modulate = Color(0.12549, 0.0745098, 0.180392, 1)
+self_modulate = Color(0.28125, 0.28125, 0.28125, 1)
 position = Vector2(22, 0)
 texture = ExtResource("71")
 script = ExtResource("30")
@@ -4860,7 +4871,7 @@ script = ExtResource("77")
 [node name="Teeth" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0, 1, 0.764706, 1)
 show_behind_parent = true
-position = Vector2(457.182, 1081.19)
+position = Vector2(463.182, 1083.19)
 sprite_frames = SubResource("44")
 centered = false
 script = ExtResource("84")
@@ -4877,15 +4888,17 @@ script = ExtResource("88")
 self_modulate = Color(0.137255, 0.4, 0.364706, 1)
 position = Vector2(8, 9)
 sprite_frames = SubResource("46")
-animation = &"to_laser"
+animation = &"idle_laser"
+frame = 4
 centered = false
 script = ExtResource("116")
 
 [node name="MouthLines" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
-position = Vector2(587.153, 1130.54)
+position = Vector2(497.153, 1103.54)
 sprite_frames = SubResource("47")
-animation = &"to_angry"
+animation = &"idle_angry"
+frame = 4
 centered = false
 script = ExtResource("30")
 
@@ -4898,9 +4911,10 @@ script = ExtResource("84")
 
 [node name="EyeLines" type="AnimatedSprite2D" parent="FinalBossSkin/FaceOutline"]
 self_modulate = Color(0.0235294, 0.0823529, 0.0627451, 1)
-position = Vector2(505, 602)
+position = Vector2(478, 615)
 sprite_frames = SubResource("49")
-animation = &"to_laser"
+animation = &"idle_laser"
+frame = 4
 centered = false
 script = ExtResource("30")
 
