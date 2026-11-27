@@ -1,5 +1,20 @@
 [gd_resource type="AnimationLibrary" load_steps=4 format=3 uid="uid://cvwpjtoolnpy5"]
 
+[sub_resource type="Animation" id="Animation_g6ufc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScreamPositionHelper:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="23"]
 length = 0.01
 capture_included = true
@@ -219,21 +234,6 @@ tracks/13/keys = {
 "args": [false],
 "method": &"set_process"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_g6ufc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ScreamPositionHelper:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
 }
 
 [resource]

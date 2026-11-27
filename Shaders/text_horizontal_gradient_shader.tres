@@ -85,5 +85,5 @@ nodes/fragment/connections = PackedInt32Array(5, 0, 0, 0, 3, 0, 5, 0, 4, 0, 5, 1
 [resource]
 resource_local_to_scene = true
 shader = SubResource("9")
-shader_parameter/start = Color(1, 0.819608, 0, 1)
-shader_parameter/end = Color(1, 0.266667, 0.486275, 1)
+shader_parameter/start = Color(1, 0.266667, 0.486275, 1)
+shader_parameter/end = Color(1, 0.678431, 0.266667, 1)

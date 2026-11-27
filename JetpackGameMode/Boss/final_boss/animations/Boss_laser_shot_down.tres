@@ -24,7 +24,7 @@ tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 2, 2.32),
-"transitions": PackedFloat32Array(1, 1, 1),
+"transitions": PackedFloat32Array(0, 1, 1),
 "update": 0,
 "values": [Vector2(0, 350), Vector2(0, 350), Vector2(0, 0)]
 }
@@ -43,7 +43,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:rect_size")
+tracks/3/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -55,7 +55,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:rect_position")
+tracks/4/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -67,7 +67,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:cast_to")
+tracks/5/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D1:target_position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -79,7 +79,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:cast_to")
+tracks/6/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D2:target_position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -91,7 +91,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:cast_to")
+tracks/7/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D3:target_position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -103,7 +103,7 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:cast_to")
+tracks/8/path = NodePath("FinalBossSkin/FaceOutline/EyeOutline/LaserMargins/LaserCenter/Raycasts/RayCast2D4:target_position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {

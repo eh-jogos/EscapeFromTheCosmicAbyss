@@ -504,7 +504,7 @@ path_player = NodePath("RawLayer/WorldVieport/SubViewport/Player")
 path_final_boss = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D/FinalBoss/Boss")
 path_camera = NodePath("RawLayer/WorldVieport/SubViewport/Camera2D")
 force_test_mode = true
-test_level_or_points = 10
+test_level_or_points = 12
 
 [node name="AutoBoost" type="Timer" parent="."]
 wait_time = 0.1
@@ -576,12 +576,12 @@ next/warning = &"base"
 
 [node name="Guardian" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(901.091, -213.431)
+position = Vector2(1331.09, -213.431)
 texture = ExtResource("27")
 
 [node name="Astro" type="Sprite2D" parent="RawLayer/WorldVieport/SubViewport/Camera2D/WarningCutscene"]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(924.4, 18.1768)
+position = Vector2(504.4, 18.1768)
 texture = ExtResource("28")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="RawLayer/WorldVieport/SubViewport"]
@@ -1107,7 +1107,6 @@ position = Vector2(959.021, 1335.47)
 texture = ExtResource("55")
 
 [node name="Meters" type="HBoxContainer" parent="HUD"]
-modulate = Color(1, 1, 1, 0)
 offset_left = 205.0
 offset_top = 954.0
 offset_right = 500.0
@@ -1128,7 +1127,6 @@ theme_override_constants/separation = 0
 script = ExtResource("57")
 
 [node name="CenterArea" type="VBoxContainer" parent="HUD"]
-modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(750, 150)
 anchors_preset = 5
 anchor_left = 0.5
@@ -1213,8 +1211,8 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 50.0
-offset_bottom = 136.0
+offset_top = -200.0
+offset_bottom = -114.0
 size_flags_vertical = 0
 mouse_filter = 1
 theme_override_fonts/font = ExtResource("59")
@@ -1233,7 +1231,6 @@ stream = ExtResource("74")
 bus = &"GameSfx"
 
 [node name="ProgressVisualization" parent="HUD" instance=ExtResource("62")]
-modulate = Color(1, 1, 1, 0)
 offset_top = 986.0
 offset_bottom = 8.0
 
