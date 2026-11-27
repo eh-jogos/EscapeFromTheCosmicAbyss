@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=20 format=3 uid="uid://dsbl7clxwhs5a"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://dsbl7clxwhs5a"]
 
 [ext_resource type="FontFile" uid="uid://bmlyf4q6msmkq" path="res://Fonts/Orbitron-Bold.ttf" id="1_g87uw"]
 [ext_resource type="FontFile" uid="uid://dryi7q7l5toou" path="res://Fonts/Orbitron-Regular.ttf" id="1_h8t7h"]
@@ -18,6 +18,14 @@ content_margin_top = 0.0
 content_margin_right = 40.0
 content_margin_bottom = 0.0
 texture = ExtResource("2_a4liw")
+region_rect = Rect2(0, 0, 414, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enl75"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("4_enl75")
 region_rect = Rect2(0, 0, 414, 110)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1pun"]
@@ -52,7 +60,15 @@ content_margin_bottom = 0.0
 texture = ExtResource("5_yhqg5")
 region_rect = Rect2(0, 0, 498, 110)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_enl75"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1o2wf"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+texture = ExtResource("6_717ba")
+region_rect = Rect2(0, 0, 498, 110)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nd2rg"]
 content_margin_left = 40.0
 content_margin_top = 0.0
 content_margin_right = 40.0
@@ -87,7 +103,7 @@ Blue110Button/constants/h_separation = 15
 Blue110Button/font_sizes/font_size = 30
 Blue110Button/fonts/font = ExtResource("1_g87uw")
 Blue110Button/styles/disabled = SubResource("StyleBoxTexture_th3od")
-Blue110Button/styles/focus = ExtResource("3_g7pfm")
+Blue110Button/styles/focus = SubResource("StyleBoxTexture_enl75")
 Blue110Button/styles/hover = SubResource("StyleBoxTexture_n1pun")
 Blue110Button/styles/normal = SubResource("StyleBoxTexture_lo0gd")
 Blue110Button/styles/pressed = SubResource("StyleBoxTexture_ifxat")
@@ -181,8 +197,8 @@ Red110Button/constants/h_separation = 15
 Red110Button/font_sizes/font_size = 30
 Red110Button/fonts/font = ExtResource("1_g87uw")
 Red110Button/styles/disabled = SubResource("StyleBoxTexture_a4liw")
-Red110Button/styles/focus = ExtResource("3_g7pfm")
-Red110Button/styles/hover = SubResource("StyleBoxTexture_enl75")
+Red110Button/styles/focus = SubResource("StyleBoxTexture_1o2wf")
+Red110Button/styles/hover = SubResource("StyleBoxTexture_nd2rg")
 Red110Button/styles/normal = SubResource("StyleBoxTexture_yfvci")
 Red110Button/styles/pressed = SubResource("StyleBoxTexture_c4k0n")
 ThickText/base_type = &"Label"
